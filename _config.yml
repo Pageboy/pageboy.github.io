@@ -18,24 +18,24 @@ defaults:
     type: posts
   values:
     layout: post
-    header_feature_image:
-    caption:
-    flickr_album:
+    header_feature_image: 
+    caption: 
+    flickr_album: 
 - scope:
     path: ''
     type: pages
   values:
     layout: page
-    header_feature_image:
-    caption:
-    flickr_album:
+    header_feature_image: 
+    caption: 
+    flickr_album: 
 - scope:
     path: ''
     type: projects
   values:
     layout: project
-    header_feature_image:
-    caption:
+    header_feature_image: 
+    caption: 
     flickr_album: 
 baseurl: ''
 url: https://pageboy.github.io
@@ -47,29 +47,29 @@ flickr_id: 55648661@N00
 twitter_username: pageboy
 lang: en_gb
 gridlayout: false
-header_text:
-header_feature_image:
+header_text: 
+header_feature_image: 
 footer_text: Copyright 2019 Chris Jennings
 rss: false
-email_address:
-facebook:
+email_address: 
+facebook: 
 flickr: chrisjennings
-google_plus:
+google_plus: 
 instagram: pagebuoy
-linkedin:
-pinterest:
-soundcloud:
+linkedin: 
+pinterest: 
+soundcloud: 
 twitter: pageboy
 youtube: PublishaDigitalPublishingHub
 share_buttons:
   facebook: true
   twitter: true
-  tumblr:
-  pinterest:
-  linkedin:
+  tumblr: 
+  pinterest: 
+  linkedin: 
   email: true
-google_analytics:
-disqus_shortname:
+google_analytics: 
+disqus_shortname: 
 str_follow_on: Follow on
 str_rss_follow: Follow RSS feed
 str_share_on: Share on
