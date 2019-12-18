@@ -4,6 +4,10 @@ permalink: "/about/"
 layout: page
 subtitle: All about me and my stuff
 header_feature_image: images/watersedge.jpg
+<<<<<<< HEAD
+=======
+description: 
+>>>>>>> 4294a8d018fb23c162bf8a589d51a6c2196c0380
 ---
 
 Yes I am. Chris Jennings and I live in Oxford, UK.
