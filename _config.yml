@@ -23,12 +23,20 @@ defaults:
     flickr_album:
 - scope:
     path: ''
+    type: pages
+  values:
+    layout: page
+    header_feature_image:
+    caption:
+    flickr_album:
+- scope:
+    path: ''
     type: projects
   values:
     layout: project
     header_feature_image:
     caption:
-    flickr_album:
+    flickr_album: 
 baseurl: ''
 url: https://pageboy.github.io
 description: Projects past and present
