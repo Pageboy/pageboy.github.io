@@ -8,7 +8,7 @@ layout: default
         {% include post_info.html post=page %}
   </header>
   <section class="post-content">
-      {{ content }}
+      {{ content | replace: "_uploads", "uploads" }}
       {% if page.flickr_album %}
                 <div class="gallerycontainer content">
                         <p class="info">Click each image here for an enlarged view. | <a href="https://www.flickr.com/photos/chrisjennings/albums/{{page.flickr_album}}">See this gallery on Flickr</a></p>

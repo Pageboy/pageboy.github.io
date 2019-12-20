@@ -4,12 +4,13 @@
     {%- for project in items limit:30 -%}
     <div class="post-teaser">
         {% if project.header_feature_image %}
+        {% assign image_url = project.header_feature_image | replace: "_uploads", "uploads" -%}
         <div class="post-img">
             <a aria-label="{{ project.title }}" href="{{ project.url | relative_url }}">
               {%- if project.caption -%}
-                <img alt="{{ project.caption }}" src="{{ project.header_feature_image | relative_url }}">
+                <img alt="{{ project.caption }}" src="{{ image_url | relative_url }}">
               {%- else -%}
-                <img alt="{{ project.title }}" src="{{ project.header_feature_image | relative_url }}">
+                <img alt="{{ project.title }}" src="{{ image_url | relative_url }}">
               {%- endif -%}
 
             </a>
