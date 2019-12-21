@@ -18,25 +18,25 @@ defaults:
     type: posts
   values:
     layout: post
-    header_feature_image: 
-    caption: 
-    flickr_album: 
+    header_feature_image:
+    caption:
+    flickr_album:
 - scope:
     path: ''
     type: pages
   values:
     layout: page
-    header_feature_image: 
-    caption: 
-    flickr_album: 
+    header_feature_image:
+    caption:
+    flickr_album:
 - scope:
     path: ''
     type: projects
   values:
     layout: project
-    header_feature_image: 
-    caption: 
-    flickr_album: 
+    header_feature_image:
+    caption:
+    flickr_album:
 baseurl: ''
 url: https://pageboy.github.io
 description: Projects past and present
@@ -47,29 +47,29 @@ flickr_id: 55648661@N00
 twitter_username: pageboy
 lang: en_gb
 gridlayout: false
-header_text: 
-header_feature_image: 
+header_text:
+header_feature_image:
 footer_text: Copyright 2019 Chris Jennings
 rss: false
-email_address: 
-facebook: 
+email_address:
+facebook:
 flickr: chrisjennings
-google_plus: 
+google_plus:
 instagram: pagebuoy
-linkedin: 
-pinterest: 
-soundcloud: 
+linkedin:
+pinterest:
+soundcloud:
 twitter: pageboy
 youtube: PublishaDigitalPublishingHub
 share_buttons:
   facebook: true
   twitter: true
-  tumblr: 
-  pinterest: 
-  linkedin: 
+  tumblr:
+  pinterest:
+  linkedin:
   email: true
-google_analytics: 
-disqus_shortname: 
+google_analytics:
+disqus_shortname:
 str_follow_on: Follow on
 str_rss_follow: Follow RSS feed
 str_share_on: Share on
@@ -96,101 +96,3 @@ exclude:
 - ".jekyll-cache"
 - Gemfile
 - README.md
-prose:
-  siteurl: https://pageboy.github.io
-  media: images
-  ignore:
-  - README.md
-  - _config.yml
-  - "/_layouts"
-  - "/_includes"
-  - "/_site"
-  - _mdwriter.cson
-  - Gemfile.lock
-  - ".gitignore"
-  - feed.xml
-  - sitemap.xml
-  - gemfile
-  - index.html
-  - samplepost.html
-  - samplehome.html
-  - tags.json
-  - "/assets"
-  metadata:
-    _posts:
-    - name: layout
-      field:
-        element: hidden
-        value: post
-    - name: title
-      field:
-        element: text
-        label: title
-    - name: published
-      field:
-        element: checkbox
-        label: published
-        value: false
-    - name: header_feature_image
-      field:
-        element: text
-        label: Optional feature image for the post
-        help: Paste the URL of the image here
-    - name: caption
-      field:
-        element: text
-        label: caption in here
-        help: add a caption to the image
-    - name: date
-      field:
-        element: text
-        label: date
-        help: current date and time
-        value: CURRENT_DATETIME
-    - name: tags
-      field:
-        element: multiselect
-        label: Add Tags
-        placeholder: Choose Tags
-        options:
-        - name: Books
-          value: books
-        - name: Art
-          value: art
-        - name: Movies
-          value: movies
-        - name: Food
-          value: food
-        - name: Music
-          value: music
-    pages:
-    - name: layout
-      field:
-        element: hidden
-        value: page
-    - name: permalink
-      field:
-        element: text
-        label: Permalink
-        value: ''
-    - name: published
-      field:
-        element: checkbox
-        label: published or not
-        value: false
-    - name: header_feature_image
-      field:
-        element: text
-        label: Optional feature image for the page
-        help: Paste the URL of the image here
-    - name: caption
-      field:
-        element: text
-        label: caption in here
-        help: add a caption to the image
-    - name: date
-      field:
-        element: text
-        label: date
-        help: current date and time
-        value: CURRENT_DATETIME
