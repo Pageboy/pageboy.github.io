@@ -6,7 +6,7 @@ caption: Photo by Tim Boote on Unsplash
 flickr_album: flickr72157711862222001
 ---
 
-It's the stuff that we use on boats to hoist our sales and to hold on to the wharf. It is amazing material that we couldn't;t really do without – not just in the marine environment but in construction, farming and the haulage business too. If you like climbing maintains then you depend on rope to keep you alive.
+It's the stuff that we use on boats to hoist our sails and to hold on to the wharf. It is an amazing material that we couldn't really do without – not just in the marine environment but in construction, farming and the haulage business too. If you like climbing mountains then you depend on rope to keep you alive.
 
 Rope is formed in many ways, single strand to multi-braided.
 
