@@ -31,7 +31,7 @@ siteImagesDir: "_uploads/"
 # URLs to tags/posts/categories JSON files
 # https://github.com/zhuochun/md-writer/wiki/Settings-for-Front-Matters
 # urlForPosts: ""
-urlForTags: 'https://pageboy.github.io/tags.json'
+urlForTags: 'https://www.chrisjennings.net/tags.json'
 # urlForCategories: ""
 
 # The front matter key name
@@ -61,6 +61,7 @@ header_feature_image:
 caption:
 flickr_album:
 tags:    # use [tag1,tag2]
+comments: 
 ---
 """
 
