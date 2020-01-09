@@ -1309,3 +1309,9 @@ a:focus {
   font-size: .8em;
   line-height: .6 !important;
 }
+
+section.box {
+  border-bottom: 1px solid gray;
+  margin-bottom: 6px;
+  padding: 12px 0 5px 0;
+}
