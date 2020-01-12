@@ -259,7 +259,7 @@ article, .comments, .feature-image .post-content, .feature-image footer,
 
 @media (max-width: 576px) {
     .call-out {
-        padding: 6%
+        padding: 6%;
     }
 }
 
@@ -404,6 +404,7 @@ header {
     .feature-image header {
         padding: 4% 4%
     }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -495,6 +496,7 @@ max-height: 100%;
     .posts .post-teaser .post-img {
         height: 150px
     }
+
 }
 
 .posts .post-teaser .post-img img {
@@ -769,8 +771,15 @@ max-height: 100%;
     }
 
     .site-header .site-title {
-        margin-top: 7px
+        margin-top: 7px;
+        font-size: 1.1em;
     }
+
+    .site-header .avatar {
+        height: 2.6em;
+        width: 2.6em;
+      }
+
 
     nav {
         height: auto
