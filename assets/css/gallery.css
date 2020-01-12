@@ -133,7 +133,8 @@ margin:0;
     /* width: 150px; */
 }
 
-p.caption + p {
+/* if this is a project remove the description on small sizes */
+body.project p.caption + p {
   display:none !important;
 }
 
