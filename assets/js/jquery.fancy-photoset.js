@@ -9,7 +9,7 @@
  * Requires jQuery 1.4.2+, Fancybox 1.3.1+
  * Docs: http://phlippers.net/code/fancy-photoset
  */
-;(function($, window, document) {
+(function($, window, document) {
   var FancyPhotoset, defaults, pluginName;
   pluginName = "fancyPhotoset";
   defaults = {
@@ -56,11 +56,15 @@
             rel: "flickr-" + options.photosetId,
             title: photo.title
           });
+          // keep any line breaks
+          var des = photo.description._content.replace(/\n/g, '<br/>');
           anchor.html(image).fancybox(options.fancybox);
           if (options.captions) {
-            image.after(($("<p/>")).addClass("caption").text(photo.description._content));
+            image.after(($("<p/>")).addClass("caption").html(des));
             image.after(($("<p/>")).addClass("caption").text(photo.title));
           }
+
+
           return element.find("ul").append(($("<li/>")).html(anchor));
         });
         if (options.firstOnly) {
