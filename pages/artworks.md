@@ -1,9 +1,10 @@
 ---
 title: Art in Progress
 permalink: "/artworks/"
-layout: post
-icon: fa-connectdevelop
 header_feature_image: _uploads/seachop.jpg
-flickr_album: 72157712432097142
+flickr_album: 72157712432097140
+icon: fa-connectdevelop
+layout: post
 ---
 
+Gathering images and geometry with simple captions. Taking the triangles for a walk in the landscape and around my photograph collections.
