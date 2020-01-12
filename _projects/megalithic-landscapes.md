@@ -4,7 +4,7 @@ date: 2019-11-18 00:00:00 Z
 layout: project
 flickr_album: 72157638454280223
 header_feature_image: images/2019/11/brodgar.jpg
-caption:
+caption: 
 ---
 
 The mysterious standing stones and stone circles of the British Isles are the remains of a culture that existed some 4,000 years ago. The photographs on this page show a selection of the many hundreds that exist, often in remote and desolate places, throughout the country. Archaeologists associate the sites with the Neolithic (late Stone Age) and early Bronze Age periods, but the question of their purpose remains largely unresolved.
