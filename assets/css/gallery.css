@@ -146,8 +146,10 @@ body.project p.caption + p {
 }
 
 @media screen and (max-width: 600px) {
+
+
   #gallery li {
-    flex: 1 1 220px;
+  width: 220px;
 }
 
 }
