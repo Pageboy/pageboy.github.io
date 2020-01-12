@@ -130,7 +130,7 @@ margin:0;
   }
 
   #gallery li {
-    /* width: 150px; */
+    /* flex: 1 1 220px; */
 }
 
 /* if this is a project remove the description on small sizes */
@@ -147,7 +147,7 @@ body.project p.caption + p {
 
 @media screen and (max-width: 600px) {
   #gallery li {
-    width: 220px;
+    flex: 1 1 220px;
 }
 
 }
