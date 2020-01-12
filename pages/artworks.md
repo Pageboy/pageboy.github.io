@@ -2,7 +2,7 @@
 title: Art in Progress
 permalink: "/artworks/"
 header_feature_image: _uploads/seachop.jpg
-flickr_album: 72157712432097140
+flickr_album: '72157712432097142_'
 icon: fa-connectdevelop
 layout: post
 ---
