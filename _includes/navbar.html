@@ -22,20 +22,28 @@
     <!-- Menu -->
     <ul class="hide">
         {% assign name_page = "" %}
-        {% for page in site.pages %}
-            {% unless page.title == null or page.hide or name_page contains page.title %}
+				{%- assign sorted_pages = site.pages | sort: "order" -%}
+        {%- for node in sorted_pages -%}
+            {% unless node.title == null or node.hide or name_page contains node.title %}
             <li class="separator"> | </li>
             <li>
-                <a class="clear" aria-label="{{ page.title }}" title="{{ page.title }}" href="{{ page.url | relative_url }}">
-                    {% if page.icon %} <i class="fa {{ page.icon }}" aria-hidden="true"></i>
-                    {% else %} {{ page.title }} {% endif%}
+                <a class="clear" aria-label="{{ node.title }}" title="{{ node.title }}" href="{{ node.url | relative_url }}">
+                    {% if node.icon %} <i class="fa {{ node.icon }}" aria-hidden="true"></i>
+                    {% else %} {{ node.title }} {% endif%}
                 </a>
             </li>
             {% endunless %}
-            {% assign name_page = page.title | append: name_page %}
+            {% assign name_page = node.title | append: name_page %}
         {% endfor %}
-				<!-- <li><a title="see Digital Publshing Hub" target="_blank" class="clear" aria-label="Publisha" href="https://publisha.github.io">Publisha</a>
-				</li> -->
+				<li class="separator"> | </li>
+				<li><a title="see Digital Publishing Hub" target="_blank" class="clear" aria-label="Publisha" href="https://publisha.github.io">Publisha</a>
+				</li>
+				<li class="separator"> | </li>
+				<li><a title="A perspectief on Cruising" target="_blank" class="clear" aria-label="Perspectief" href="https://www.chrisjennings/perspectief">My Boat</a>
+				</li>
+				<li class="separator"> | </li>
+				<li><a title="Search this site" class="clear" aria-label="Publisha" href="/search/"><i class="fa fa-search" aria-hidden="true"></i></a>
+				</li>
     </ul>
 
 	</nav>

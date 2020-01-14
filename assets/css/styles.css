@@ -679,6 +679,13 @@ max-height: 100%;
     }
 }
 
+@media screen and (max-width: 900px) {
+    .site-header {
+        font-size: 80%;
+    }
+
+}
+
 .site-header {
     padding: 1% 2% 0 2%;
     background: #fff;
@@ -773,7 +780,7 @@ max-height: 100%;
 
     .site-header .site-title {
         margin-top: 7px;
-        font-size: 1em;
+        /* font-size: 1em; */
     }
 
     .site-header .avatar {

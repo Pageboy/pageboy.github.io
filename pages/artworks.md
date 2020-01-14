@@ -5,6 +5,7 @@ header_feature_image: _uploads/seachop.jpg
 flickr_album: flickr72157712432097142
 icon: fa-connectdevelop
 layout: post
+sort: 5
 ---
 
 Gathering images and geometry with simple captions. Taking the triangles for a walk in the landscape and around my photograph collections.

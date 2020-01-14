@@ -2,8 +2,8 @@
 title: Search
 permalink: "/search/"
 layout: search
-subtitle: What are you looking for?
-header_feature_image: assets/img/pexels/search-map.jpeg
+header_feature_image:
 icon: fa-search
+sort: 0
+hide: true
 ---
-
