@@ -10,7 +10,7 @@ layout: default
   <section class="post-content">
       {{ content | replace: "_uploads", "uploads" }}
       {% if page.flickr_album %}
-      {% assign flickr-album = page.flickr_album | replace: "flickr", "" -%}
+{% assign flickr-album = page.flickr_album | replace: "flickr", "" -%}
                 <div class="gallerycontainer content">
                         <p class="info">Click each image here for an enlarged view. | <a href="https://www.flickr.com/photos/chrisjennings/albums/{{flickr-album}}">See this gallery on Flickr</a></p>
                 <div id="gallery"></div>
@@ -40,8 +40,8 @@ layout: default
   {% include share_buttons.html %}
 
    <!-- Tag list -->
-  {% capture tag_list %}{{ page.tags | join: "|"}}{% endcapture %}
-  {% include tags_list.html tags=tag_list %}
+  <!-- {% capture tag_list %}{{ page.tags | join: "|"}}{% endcapture %}
+  {% include tags_list.html tags=tag_list %} -->
 
 </article>
 

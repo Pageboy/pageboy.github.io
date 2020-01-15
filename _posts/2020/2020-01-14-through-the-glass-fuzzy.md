@@ -2,10 +2,13 @@
 title: Through the Glass Fuzzy
 date: 2020-01-14 15:36:00 Z
 layout: post
-header_feature_image: _uploads/buswindow.jpg
-caption: 
-flickr_album: 
-comments: 
+header_feature_image: /_uploads/buswindow.jpg
+tags:
+- Photography
+- Journey
+caption:
+flickr_album:
+comments:
 ---
 
 I'm on the bus, on my way home. It's getting dark and it's raining. I'm on the top deck at the front. I'm struggling see where we are (I'm looking for my stop). The bus is full and everyone is breathing; why shouldn't they?
