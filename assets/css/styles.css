@@ -1315,12 +1315,8 @@ a:focus {
 .postimage {
   display:block;
   margin:12px auto;
-  max-width:500px;
-}
-
-.postimage img {
-  max-width:500px;
-  display:block;
+  /* max-width:500px; */
+  width:100%;
 }
 
 .postimage .caption {
