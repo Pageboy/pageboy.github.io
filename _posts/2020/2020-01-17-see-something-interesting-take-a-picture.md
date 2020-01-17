@@ -1,13 +1,11 @@
 ---
-layout: post
 title: See something interesting.<br/>Take a picture. Do some research.
-date: 2020-01-17 13:15
-published: true
-header_feature_image: /_uploads/oilspill.jpg
-caption:
-flickr_album:
-tags:    # use [tag1,tag2]
-comments:
+date: 2020-01-17 13:15:00 Z
+layout: post
+header_feature_image: "/_uploads/oilspill.jpg"
+caption: 
+flickr_album: 
+comments: 
 ---
 
 I'm standing at the bus stop and I see an interesting pattern on the ground. I am mesmerised. Out comes the phone. I take a picture.
