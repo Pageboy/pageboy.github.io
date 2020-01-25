@@ -2,8 +2,7 @@
 title: Cobbles and Shingle
 date: 2020-01-25 00:00:00 Z
 header_feature_image: "/_uploads/shingle.jpg"
-caption: Shingle
-flickr_album: 
+caption: Shingle near to Lyme Regis
 comments: 
 ---
 
