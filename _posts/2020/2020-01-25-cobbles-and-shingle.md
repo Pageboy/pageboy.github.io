@@ -11,7 +11,7 @@ comments:
 
 Walking around the town, I find myself looking down. Often this is because I need to tread carefully on the uneven pavements and kerbs, but often it is because I am noticing the rich variety of textures and shades.
 
-In my city we have a lot of cobbled streets and so recently I took this photo. Simple. Just point the camera down and here it is.
+In my city we have a lot of cobbled streets and so recently I took this photo. Simple. Just point the camera (phone actually) down and here it is.
 
 [![Cobble stones in Oxford](/_uploads/cobbles.jpg)](/_uploads/cobbles.jpg)
 
