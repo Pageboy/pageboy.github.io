@@ -3,8 +3,8 @@ title: Cobbles and Shingle
 date: 2020-01-25 00:00:00 Z
 header_feature_image: "/_uploads/shingle.jpg"
 caption: Shingle
-flickr_album: 
-comments: 
+flickr_album:
+comments:
 ---
 
 Walking around the town, I find myself looking down. Often this is because I need to tread carefully on the uneven pavements and kerbs, but often it is because I am noticing the rich variety of textures and shades.
@@ -20,6 +20,11 @@ Here is a fabulous photo by Mark Murphy of shingle on Chesil beach.
 [![Mark.murphy - shingle on Chesil beach](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Shingle_on_Chesil_Beach_at_Chesil_Cove.jpg/2048px-Shingle_on_Chesil_Beach_at_Chesil_Cove.jpg)](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Shingle_on_Chesil_Beach_at_Chesil_Cove.jpg/2048px-Shingle_on_Chesil_Beach_at_Chesil_Cove.jpg)
 
 [<a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA</a>]
+
+You may have seen the film _On Chesil Beach_ or possible read the book by  Ian McEwan of the same name. Guess where this was filmed.
+
+[![Poster of the film with Saoirse Ronan](/_uploads/On-Chesil-Beach-Banner-Poster.jpg)](/_uploads/On-Chesil-Beach-Banner-Poster.jpg)
+
 
 Here is the photo seen in the headline above. This one was taken near Lyme Regis - very near to Chesil Beach.
 
