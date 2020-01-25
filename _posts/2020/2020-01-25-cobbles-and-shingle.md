@@ -3,8 +3,8 @@ title: Cobbles and Shingle
 date: 2020-01-25 00:00:00 Z
 header_feature_image: "/_uploads/shingle.jpg"
 caption: Shingle
-flickr_album:
-comments:
+flickr_album: 
+comments: 
 ---
 
 Walking around the town, I find myself looking down. Often this is because I need to tread carefully on the uneven pavements and kerbs, but often it is because I am noticing the rich variety of textures and shades.
