@@ -1,9 +1,10 @@
 ---
-title: Cobbles and Shingle
+title: Cobbles and Shingle. Grounds and Beaches
 date: 2020-01-25 00:00:00 Z
 header_feature_image: "/_uploads/shingle.jpg"
-caption: Shingle near to Lyme Regis
-comments: 
+caption: Shingle
+flickr_album:
+comments:
 ---
 
 Walking around the town, I find myself looking down. Often this is because I need to tread carefully on the uneven pavements and kerbs, but often it is because I am noticing the rich variety of textures and shades.
@@ -25,6 +26,6 @@ You may have seen the film _On Chesil Beach_ or possible read the book by  Ian M
 [![Poster of the film with Saoirse Ronan](/_uploads/On-Chesil-Beach-Banner-Poster.jpg)](/_uploads/On-Chesil-Beach-Banner-Poster.jpg)
 
 
-Here is the photo seen in the headline above. This one was taken near Lyme Regis - very near to Chesil Beach.
+Here comes the photo seen in the headline above. This one was taken near Lyme Regis - very near to Chesil Beach.
 
 [![wet shingle](/_uploads/wetshinglefromlyme.jpg)](/_uploads/wetshinglefromlyme.jpg)
