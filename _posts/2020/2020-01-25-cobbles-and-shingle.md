@@ -3,7 +3,7 @@ title: Cobbles and Shingle
 date: 2020-01-25
 published: true
 header_feature_image: /_uploads/shingle.jpg
-caption:
+caption: Shingle
 flickr_album:
 tags:    # use [tag1,tag2]
 comments:
