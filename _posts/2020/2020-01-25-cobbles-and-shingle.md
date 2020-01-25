@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Cobbles and Shingle
+title: Cobbles and Shingle Grounded
 date: 2020-01-25 14:36
 published: true
 header_feature_image: /_uploads/shingle.jpg
@@ -16,7 +16,7 @@ In my city we have a lot of cobbled streets and so recently I took this photo. S
 
 [![Cobble stones in Oxford](/_uploads/cobbles.jpg)](/_uploads/cobbles.jpg)
 
-I am wondering where cobblestones actually come from. Clearly, these stones are smoothed by the action of the water – probably the sea, and s, could it be that these stones (laid some 150 years ago) were taken from the Dorset coast (the nearest sea to Oxford). Could it be, that stones where collected from Chesil beach?
+I am wondering where cobblestones actually come from. Clearly, these stones are smoothed by the action of the water – probably the sea, and so, could it be that these stones (laid some 150 years ago) were taken from the Dorset coast (the nearest sea to Oxford). Could it be, that stones where collected from Chesil beach?
 
 Here is a fabulous photo by Mark Murphy of shingle on Chesil beach.
 
