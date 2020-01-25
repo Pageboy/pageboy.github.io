@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Cobbles and Shingle Grounded
 date: 2020-01-25
 published: true
