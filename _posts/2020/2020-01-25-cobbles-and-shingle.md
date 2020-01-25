@@ -1,5 +1,5 @@
 ---
-title: Cobbles and Shingle Grounded
+title: Cobbles and Shingle
 date: 2020-01-25
 published: true
 header_feature_image: /_uploads/shingle.jpg
