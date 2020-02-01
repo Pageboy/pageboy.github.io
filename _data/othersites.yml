@@ -1,0 +1,9 @@
+- name: # here is the name of your other site
+  siteurl: # the url can be full (maybe your other blog)
+- name:
+  siteurl:
+- name:
+  siteurl:
+
+# You can put links here and these will appear on your menu bar
+# Don't make the name long and don't add too many!
