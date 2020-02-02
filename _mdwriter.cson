@@ -53,14 +53,13 @@ frontMatterDate: "{year}-{month}-{day} {hour}:{minute}:{second} Z"
 # Front matter template
 frontMatter: """
 ---
-layout: {layout}
 title: {title}
 date: {date}
+layout: {layout}
 published: false
 header_feature_image:
 caption:
 flickr_album:
-tags:    # use [tag1,tag2]
 comments:
 ---
 """
