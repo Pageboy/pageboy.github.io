@@ -49,7 +49,7 @@ newPostFileName: "{year}-{month}-{day}-{slug}{extension}"
 # frontMatterCustomFields:
 #   author: "Your Name Here"
 # Front matter date format, determines the {date} in frontMatter
-frontMatterDate: "{year}-{month}-{day} {hour}:{minute}"
+frontMatterDate: "{year}-{month}-{day} {hour}:{minute}:{second} UTC"
 # Front matter template
 frontMatter: """
 ---
@@ -61,7 +61,7 @@ header_feature_image:
 caption:
 flickr_album:
 tags:    # use [tag1,tag2]
-comments: 
+comments:
 ---
 """
 
