@@ -37,7 +37,7 @@ defaults:
     header_feature_image: 
     caption: 
     flickr_album: 
-baseurl: ''
+baseurl: 
 url: https://www.chrisjennings.net
 description: Projects past and present
 avatar: assets/img/home.png
