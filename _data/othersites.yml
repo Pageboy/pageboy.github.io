@@ -1,9 +1,12 @@
-- name: # here is the name of your other site
-  siteurl: # the url can be full (maybe your other blog)
+- name: Publisha
+  siteurl: https://publisha.github.io
+  title: see Digital Publishing Hub
+- name: My Boat
+  siteurl: https://www.chrisjennings.net/perspectief
+  title: A perspectief on Cruising
 - name:
   siteurl:
-- name:
-  siteurl:
+  title:
 
 # You can put links here and these will appear on your menu bar
 # Don't make the name long and don't add too many!

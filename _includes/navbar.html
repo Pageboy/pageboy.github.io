@@ -21,6 +21,16 @@
 
     <!-- Menu -->
     <ul class="hide">
+			{%- for sites in site.data.othersites -%}
+			{%- unless sites.name == null or sites.siteurl ==  null -%}
+			<li class="separator"> | </li>
+			  <li>
+			    <a class="clear" aria-label="{{ sites.name }}" title="{{ sites.title }}" href="{{ sites.siteurl }}" target="_blank">
+			      {{ sites.name }}
+			    </a>
+			  </li>
+				{%- endunless -%}
+			{%- endfor -%}
         {% assign name_page = "" %}
 				{%- assign sorted_pages = site.pages | sort: "order" -%}
         {%- for node in sorted_pages -%}
@@ -35,15 +45,6 @@
             {% endunless %}
             {% assign name_page = node.title | append: name_page %}
         {% endfor %}
-				<li class="separator"> | </li>
-				<li><a title="see Digital Publishing Hub" target="_blank" class="clear" aria-label="Publisha" href="https://publisha.github.io">Publisha</a>
-				</li>
-				<li class="separator"> | </li>
-				<li><a title="A perspectief on Cruising" target="_blank" class="clear" aria-label="Perspectief" href="https://www.chrisjennings.net/perspectief">My Boat</a>
-				</li>
-				<li class="separator"> | </li>
-				<li><a title="Search this site" class="clear" aria-label="Publisha" href="/search/"><i class="fa fa-search" aria-hidden="true"></i></a>
-				</li>
     </ul>
 
 	</nav>
