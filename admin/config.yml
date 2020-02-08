@@ -3,8 +3,8 @@
 #   branch: master
 #
 backend:
-name: github
-repo: Pageboy/pageboy.github.io # Path to your GitHub repository
+  name: github
+  repo: Pageboy/pageboy.github.io # Path to your GitHub repository
 
 
 # This line should *not* be indented
