@@ -1,6 +1,6 @@
 backend:
-name: github
-repo: pageboy/pageboy.github.io # Path to your GitHub repository
+  name: github
+  repo: pageboy/pageboy.github.io # Path to your GitHub repository
 # This line should *not* be indented
 media_folder: "_uploads" # Media files will be stored in the repo under images/uploads
 
