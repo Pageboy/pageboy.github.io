@@ -37,7 +37,7 @@ collections:
   - name: "pages" # Used in routes, e.g., /admin/collections/blog
     label: "Pages" # Used in the UI
     label_singular: "Page"
-    folder: "_pages/" # The path to the folder where the documents are stored
+    folder: "pages/" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     media_folder: "/uploads"
@@ -50,4 +50,24 @@ collections:
       - {label: "Permalink", name: "permalink", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "header_feature_image", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+
+  - name: "projects" # Used in routes, e.g., /admin/collections/blog
+    label: "Projects" # Used in the UI
+    label_singular: "Project"
+    folder: "_projects/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    media_folder: "/uploads"
+    public_folder: "/uploads"
+    editor:
+      preview: false
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Permalink", name: "permalink", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "header_feature_image", widget: "image", required: false}
+      - {label: "Flickr Album", name: "flickr_album", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
