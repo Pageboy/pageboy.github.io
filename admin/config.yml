@@ -23,7 +23,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     path: '{{year}}/{{slug}}'
     media_folder: "_uploads"
-    public_folder: ""/uploads"
+    public_folder: "/uploads"
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string"}
