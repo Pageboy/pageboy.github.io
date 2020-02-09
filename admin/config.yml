@@ -12,10 +12,12 @@ publish_mode: editorial_workflow
 
 # This line should *not* be indented
 media_folder: "_uploads" # Media files will be stored in the repo under images/uploads
+public_folder: /uploads
 
 collections:
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
     label: "Posts" # Used in the UI
+    label_singular: "Post"
     folder: "_posts/" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
@@ -24,4 +26,4 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "header_feature_image", widget: "image"}
+      - {label: "Featured Image", name: "header_feature_image", widget: "image", required: false}
