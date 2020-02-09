@@ -1,11 +1,9 @@
 ---
 title: Enough Rope
-date: 2019-12-22 19:38:00 Z
-tags:
-- sail
-header_feature_image: "/uploads/tim-boote-0-IKoef3Ukw-unsplash.jpg"
+date: 2019-12-22T19:38:00.000Z
+header_feature_image: /uploads/tim-boote-0-IKoef3Ukw-unsplash.jpg
 caption: Photo by Tim Boote on Unsplash
-flickr_album: flickr72157711862222001
+flickr_album: '72157711862222001'
 ---
 
 It's the stuff that we use on boats to hoist our sails and to hold on to the wharf. It is an amazing material that we couldn't really do without – not just in the marine environment but in construction, farming and the haulage business too. If you like climbing mountains then you depend on rope to keep you alive.
