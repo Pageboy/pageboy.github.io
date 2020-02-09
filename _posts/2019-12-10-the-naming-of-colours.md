@@ -6,7 +6,7 @@ tags:
 - Art,
 - Web
 layout: post
-header_feature_image: "/images/2019/12/IMG_0578.jpg"
+header_feature_image: "/uploads/IMG_0578.jpg"
 caption: Farrow and Ball colour chart
 flickr_album: 72157712175659357
 ---

@@ -2,17 +2,17 @@
 title: See something interesting.<br/>Take a picture. Do some research.
 date: 2020-01-17 13:15:00 Z
 layout: post
-header_feature_image: "/_uploads/oilspill.jpg"
-caption: 
-flickr_album: 
-comments: 
+header_feature_image: "/uploads/oilspill.jpg"
+caption:
+flickr_album:
+comments:
 ---
 
 I'm standing at the bus stop and I see an interesting pattern on the ground. I am mesmerised. Out comes the phone. I take a picture.
 
 **Here is is.**
 
-[![Oil spill in the road](/_uploads/oilspill.jpg)](/_uploads/oilspill.jpg)
+[![Oil spill in the road](/uploads/oilspill.jpg)](/uploads/oilspill.jpg)
 
 I know that this is a fuel spillage, maybe from a bus (it is a bus stop after all). But why does it make these beautiful colours? Before I posted this I googled. This is research. I mean take a picture but do some research.
 

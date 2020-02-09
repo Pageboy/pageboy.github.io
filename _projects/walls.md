@@ -3,7 +3,7 @@ title: Walls of Interest
 date: 2019-07-05 08:50:00 Z
 published: false
 layout: project
-header_feature_image: images/2019/11/wall.jpg
+header_feature_image: /uploads/wall.jpg
 caption: Oxford wall
 flickr_album: 72157711425003093
 ---
