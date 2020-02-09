@@ -1,25 +1,21 @@
 ---
-title: The Naming of Colours
-date: 2019-12-10 19:03:00 Z
-tags:
-- Colour,
-- Art,
-- Web
 layout: post
-header_feature_image: "/uploads/IMG_0578.jpg"
+title: The Naming of Colours
+date: 2019-12-10T19:03:00.000Z
+header_feature_image: /uploads/IMG_0578.jpg
 caption: Farrow and Ball colour chart
-flickr_album: 72157712175659357
+flickr_album: 72157712175659360
 ---
 
 We might say "I like your blue sweater". But we could instead say "I really love your "Pavilion Blue" sweater. Of course we would need to have memorised the _Farrow & Ball_ colour card and have been brainwashed with these named colours.
 
 When visiting a **Bobbi Brown** make up store recently I was struck at the incredible variety of lipstick colours on display. Many of the shades are almost identical, but the customers need that level of choice to get the absolute perfect colour for their lips.
 
-[![Lipsticks at Bobbi Brown](/images/2019/12/IMG_0576.jpg)](/images/2019/12/IMG_0576.jpg)
+[![Lipsticks at Bobbi Brown](/uploads/IMG_0576.jpg)](/uploads/IMG_0576.jpg)
 
 On a recent visit to the Farrow & ball paint store I picked up a different colour chart -  _the Colour By Nature_ chart  - a collaboration with the Natural History Museum (London). This is based on Werner's Nomenclature of Colours[^1].
 
-[![Patrick Syme, Werner's nomenclature of colours; Edinburgh: William Blackwood, 1821.](/images/2019/12/WernersNomenclature_02-768x655@2x.jpg)](/images/2019/12/WernersNomenclature_02-768x655@2x.jpg)
+[![Patrick Syme, Werner's nomenclature of colours; Edinburgh: William Blackwood, 1821.](/uploads/WernersNomenclature_02-768x655@2x.jpg)](/uploads/WernersNomenclature_02-768x655@2x.jpg)
 
 Werner’s Nomenclature of Colour (first published in 1814) constructs a system or taxonomy for the classification of colour with reference to things in the natural world. The classification was then extended and published by Patrick Syme. A total of 110 colours are included.
 
