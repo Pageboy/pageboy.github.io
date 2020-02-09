@@ -2,10 +2,10 @@
 title: Glass Domed Ceiling in Montpellier
 date: 2019-11-25 13:43:00 Z
 layout: post
-header_feature_image: "/_uploads/domedceiling.jpg"
-caption: 
-flickr_album: 
-comments: 
+header_feature_image: "/uploads/domedceiling.jpg"
+caption:
+flickr_album:
+comments:
 ---
 
 This is the ceiling in the Halles Laissac in Montpellier. The ceiling is a glass dome and :
@@ -18,7 +18,7 @@ Quoted from [laramoneta.com][974db79f]
 
 Here is my picture again:
 
-[![Domed Ceiling in Montpellier](/_uploads/domedceiling.jpg)](/_uploads/domedceiling.jpg)
+[![Domed Ceiling in Montpellier](/uploads/domedceiling.jpg)](/uploads/domedceiling.jpg)
 
 ### I took this picture of tomatoes in the same Fruit market.
 

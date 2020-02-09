@@ -3,7 +3,7 @@ title: About
 permalink: "/about/"
 layout: page
 subtitle: All about me and my stuff
-header_feature_image: _uploads/watersedge.jpg
+header_feature_image: uploads/watersedge.jpg
 order: 2
 ---
 
@@ -17,7 +17,7 @@ I teach at Oxford Brookes University within the [Oxford International Centre for
 
 <section class="box" markdown="1">
 
-![Publisha](/_uploads/publisha.png)
+![Publisha](/uploads/publisha.png)
 
 [My Digital Publishing Hub site][5f5c75ef]
 
@@ -28,7 +28,7 @@ This site includes all of my eBook production and digital publishing help docume
 </section>
 <section class="box" markdown="1">
 
-![Publisha on Medium](/_uploads/medium2.png)
+![Publisha on Medium](/uploads/medium2.png)
 
 [Publisha on Medium][2b32ddf3]
 
