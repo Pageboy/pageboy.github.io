@@ -1,20 +1,19 @@
-backend:
-  name: git-gateway
-  branch: master
-  site_domain: www.chrisjennings.net
+# backend:
+#   name: git-gateway
+#   branch: master
+#   site_url: https://www.chrisjennings.net
 
-publish_mode: editorial_workflow
+backend:
+  name: github
+  repo: Pageboy/pageboy.github.io # Path to your GitHub repository
+  site_url: https://www.chrisjennings.net
 
 show_preview_links: false
-
-# backend:
-#   name: github
-#   repo: Pageboy/pageboy.github.io # Path to your GitHub repository
-#
+publish_mode: editorial_workflow
 
 # This line should *not* be indented
-media_folder: "/uploads" # Media files will be stored in the repo under /uploads
-public_folder: "uploads"
+media_folder: "uploads" # Media files will be stored in the repo under /uploads
+public_folder: "/uploads"
 
 collections:
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
@@ -24,7 +23,7 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     media_folder: "uploads"
-    public_folder: "uploads"
+    public_folder: "/uploads"
     editor:
       preview: false
     fields: # The fields for each document, usually in front matter
@@ -43,7 +42,7 @@ collections:
     folder: "pages/" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    media_folder: "/uploads"
+    media_folder: "uploads"
     public_folder: "/uploads"
     editor:
       preview: false
@@ -62,7 +61,7 @@ collections:
     folder: "_projects/" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    media_folder: "/uploads"
+    media_folder: "uploads"
     public_folder: "/uploads"
     editor:
       preview: false
