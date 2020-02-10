@@ -7,7 +7,6 @@ backend:
   name: github
   repo: Pageboy/pageboy.github.io # Path to your GitHub repository
   site_url: https://www.chrisjennings.net
-  base_url: https://chrisjennings.netlify.com
 
 show_preview_links: false
 publish_mode: editorial_workflow
