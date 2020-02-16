@@ -5,7 +5,7 @@
 
 backend:
   name: github
-  repo: https://www.chrisjennings.net # Path to your GitHub repository
+  repo: Pageboy/pageboy.github.io # Path to your GitHub repository
   branch: master # Branch to update (master by default)
   site_domain: chrisjennings.netlify.com
 
