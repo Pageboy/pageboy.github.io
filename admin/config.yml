@@ -7,7 +7,7 @@ backend:
   name: github
   repo: Pageboy/pageboy.github.io # Path to your GitHub repository
   branch: master # Branch to update (master by default)
-  site_domain: chrisjennings.netlify.com
+  base_url: https://glistening-spot-koi6xom1xs.glitch.me/ # URL of your public glitch project
 
 show_preview_links: false
 publish_mode: editorial_workflow
