@@ -1354,6 +1354,7 @@ section.box {
   list-style: none;
   font-size: 1em;
   margin-left: 0;
+  text-align: center;;
 }
 
 .art .caption{
@@ -1380,4 +1381,9 @@ div.portfolio header {
 
 section.art img {
   border:1px solid #c2c2c2;
+  width:auto;
+  max-height: 80vh;
+  margin-left:auto;
+  margin-right: auto;
+  display:block;
 }
