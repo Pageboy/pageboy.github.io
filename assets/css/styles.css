@@ -1338,7 +1338,7 @@ section.box {
   padding: 12px 0 5px 0;
 }
 
-.art header {
+#artmain {
   border-bottom:none;
 }
 
@@ -1374,10 +1374,10 @@ font-size: 1.1em;
 }
 
 .portfolio header {
-  border-bottom:none !important;
-  margin-top: 12px;
+  /* border-bottom:none !important; */
+  /* margin-top: 12px; */
 }
 
-.art img {
+section.art img {
   border:1px solid #c2c2c2;
 }
