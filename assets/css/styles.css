@@ -208,6 +208,10 @@ article, .comments, .feature-image .post-content, .feature-image footer,
     padding: 1% 23%;
 }
 
+.art-teaser {
+  padding: 1% 12%;
+}
+
 
 /* ----------- iPad 3, 4 and Pro 9.7" ----------- */
 
@@ -220,6 +224,10 @@ article, .comments, .feature-image .post-content, .feature-image footer,
     article, .comments, .feature-image .post-content, .feature-image footer,
     .posts .post-teaser, .site-footer {
         padding: 2% 5%;
+    }
+
+    .art-teaser {
+      padding: 2% 5%;
     }
 
 }
@@ -1328,4 +1336,48 @@ section.box {
   border-bottom: 1px solid gray;
   margin-bottom: 6px;
   padding: 12px 0 5px 0;
+}
+
+.art header {
+  border-bottom:none;
+}
+
+.art header h1 {
+  font-size: 1.2em;
+
+  padding:0;
+  color:silver;
+  text-align: center;
+}
+
+.art ul {
+  list-style: none;
+  font-size: 1em;
+  margin-left: 0;
+}
+
+.art .caption{
+display:none;
+}
+
+p.linkall {
+  text-align: center;
+
+}
+
+.portfolio header h1 a {
+color:#797979;
+}
+
+.portfolio header h1 {
+font-size: 1.1em;
+}
+
+.portfolio header {
+  border-bottom:none !important;
+  margin-top: 12px;
+}
+
+.art img {
+  border:1px solid #c2c2c2;
 }

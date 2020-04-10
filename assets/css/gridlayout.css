@@ -34,3 +34,8 @@
 .post-img {
   height:180px !important;
 }
+
+
+.portfolio .post-img {
+  height:auto !important;
+}

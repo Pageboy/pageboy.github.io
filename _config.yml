@@ -9,6 +9,10 @@ collections:
     title: Projects
     output: true
     layout: project
+  portfolio:
+    title: Portfolio
+    output: true
+    layout: art
 defaults:
 - scope:
     path: ''

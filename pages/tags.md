@@ -1,10 +1,9 @@
 ---
 title: Tags
 permalink: "/tags/"
-published: false
+published: true
 layout: tags
 icon: fa-tags
 sort: 200
 hide: true
 ---
-

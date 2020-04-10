@@ -1,12 +1,12 @@
 ---
-title: Art in Progress
-permalink: "/artworks/"
-header_feature_image: uploads/seachop.jpg
-flickr_album: flickr72157712432097142
+title: portfolio
+permalink: "/portfolio/"
+layout: portfolio
+header_feature_image: "uploads/log.jpg"
+description:
+gridlayout: true
 icon: fa-connectdevelop
-layout: post
-order: 1
-hide: true
+order: 3
 ---
 
 Gathering images and geometry with simple captions. Taking shapes and triangles for a walk in the landscape and around my photograph collections.

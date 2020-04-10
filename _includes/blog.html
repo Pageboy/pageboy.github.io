@@ -1,4 +1,5 @@
 <div class="posts">
+
     {% for post in paginator.posts | sort: "title" %}
     <div class="post-teaser">
         {% if post.header_feature_image %}
@@ -29,6 +30,7 @@
       </span>
     </div>
     {% endfor %}
+
 </div>
 
 {% include blog_nav.html %}
