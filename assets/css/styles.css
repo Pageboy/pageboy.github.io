@@ -1373,9 +1373,9 @@ color:#797979;
 font-size: 1.1em;
 }
 
-.portfolio header {
-  /* border-bottom:none !important; */
-  /* margin-top: 12px; */
+div.portfolio header {
+  border-bottom:none !important;
+  margin-top: 12px;
 }
 
 section.art img {
