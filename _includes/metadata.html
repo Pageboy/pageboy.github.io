@@ -3,7 +3,11 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 {%- if page.header_feature_image != null -%}
-<meta property="og:image" content="{{site.url}}{{page.header_feature_image}}">
+  {% if page.header_feature_image contains "http" %}
+    <meta property="og:image" content="{{page.header_feature_image}}">
+  {%- else -%}
+    <meta property="og:image"  content="{{site.url}}{{page.header_feature_image}}">
+  {% endif %}
 {%- else -%}
 <meta property="og:image" content="{{site.url}}{{site.header_feature_image}}">
 {%- endif -%}
@@ -23,7 +27,11 @@
 <meta name="twitter:description" content="{{site.description}}">
 {%- endif -%}
 {%- if page.header_feature_image != null -%}
-<meta name="twitter:image" content="{{site.url}}{{page.header_feature_image}}">
+  {% if page.header_feature_image contains "http" %}
+    <meta name="twitter:image" content="{{page.header_feature_image}}">
+  {%- else -%}
+    <meta name="twitter:image" content="{{site.url}}{{page.header_feature_image}}">
+  {% endif %}
 {%- else -%}
 <meta name="twitter:image" content="{{site.url}}{{site.header_feature_image}}">
 {%- endif -%}
