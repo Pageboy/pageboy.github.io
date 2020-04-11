@@ -12,7 +12,7 @@ Spending a lot of time in the garden because of the lockdown, I find myself look
 
 [![Here is the Oak tree that we have an the bottom of our garden.](/uploads/DSC_6054.jpg)](/uploads/DSC_6054.jpg)
 
-We are blessed with a nice good sized garden, but any toen graden is going to feel limited by the fences that restrict our views to the wider landscape. But looking up through the trees makes us feel part of the world; the passing clouds are only ours while they are directly above - they move on for for others to view.
+We are blessed with a nice good sized garden, but any town garden is going to feel limited by the fences that restrict our views to the wider landscape. But looking up through the trees makes us feel part of the world; the passing clouds are only ours while they are directly above - they move on for for others to view.
 
 [![The passing clouds seen through our sycamore tree](/uploads/IMG_0876.jpg)](/uploads/IMG_0876.jpg)
 
@@ -20,7 +20,7 @@ We have several trees but the 2 that dominate our garden are the Oak tree which 
 
 [![The Oak is tall and has a very large trunk](/uploads/DSC_6056.jpg)](/uploads/DSC_6056.jpg)
 
-The girth (circumference) of the trunk of the oak tree is 3metres near to the ground.
+The girth (circumference) of the trunk of the oak tree is 3 metres near to the ground.
 
 [![The oak and the sycamore reaching out to each other](/uploads/DSC_6057.jpg)](/uploads/DSC_6057.jpg)
 
