@@ -38,6 +38,14 @@ defaults:
     header_feature_image:
     caption:
     flickr_album:
+- scope:
+    path: ''
+    type: portfolio
+  values:
+    layout: art
+    header_feature_image:
+    caption:
+    flickr_album:
 baseurl:
 url: https://www.chrisjennings.net
 description: Projects past and present
