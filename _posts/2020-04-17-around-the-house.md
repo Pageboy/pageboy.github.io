@@ -11,7 +11,7 @@ comments:
 
 So this self isolating is rather frustrating, I'm sure you will agree. But here's the thing; if you are cooped up inside your own house maybe there are some details that you never really noticed. Maybe you just take for granted the corners here and there that might make an interesting picture.
 
-When you are indoors, you hopefully will get the light coming in through the window. The refections and shapes are changing through the day. Sometimes the light strikes something and you were just there at the right time.
+When you are indoors, you hopefully will get the light coming in through your windows. The refections and shapes are changing through the day. Sometimes the light strikes something and you were just there at the right time.
 
 [![Light reflected back from the chrome pipes.](/uploads/IMG_0881.jpg)](/uploads/IMG_0881.jpg)
 
