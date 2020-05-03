@@ -39,3 +39,11 @@
 .portfolio .post-img {
   height:auto !important;
 }
+
+.photographs .post-img {
+  height:300px !important;
+}
+
+.photographs .post-teaser {
+  flex-basis: 450px;
+}

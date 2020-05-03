@@ -13,6 +13,10 @@ collections:
     title: Portfolio
     output: true
     layout: art
+  photographs:
+    title: Photographs
+    output: true
+    layout: art
 defaults:
 - scope:
     path: ''
@@ -41,6 +45,14 @@ defaults:
 - scope:
     path: ''
     type: portfolio
+  values:
+    layout: art
+    header_feature_image:
+    caption:
+    flickr_album:
+- scope:
+    path: ''
+    type: photogaphs
   values:
     layout: art
     header_feature_image:

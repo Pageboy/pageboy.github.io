@@ -14,11 +14,11 @@ layout: page
 {% endfor %}
 
 <!-- cycles through portfolio collection to get tags -->
-<!-- {% assign portfolio =  site.portfolio | map: 'tags' | join: ','  | split: ',' | uniq %}
-{% for tag in portfolio %}
-{% assign portfolio_tags = tag | join: '|' | append: '|' %}
-{% assign rawtags = rawtags | append: portfolio_tags %}
-{% endfor %} -->
+{% assign photographs =  site.photographs | map: 'tags' | join: ','  | split: ',' | uniq %}
+{% for tag in photographs %}
+{% assign photograph_tags = tag | join: '|' | append: '|' %}
+{% assign rawtags = rawtags | append: photograph_tags %}
+{% endfor %}
 
 <!-- cycles through pages to get tags -->
 {% for page in site.pages %}
@@ -77,6 +77,23 @@ layout: page
 
             <!-- Portfolio -->
             {% for note in site.portfolio %}
+                {% if note.tags contains tag %}
+                <h5 class="tag-title">
+                    <a href="{{ note.url | relative_url }}">
+                        <i class="fa fa-file-o" aria-hidden="true"></i>
+                        {{ note.title }}
+                    </a>
+
+                    <div class="meta">
+                        {{ note.date | date: "%B %-d, %Y" }}
+                    </div>
+                </h5>
+                {% endif %}
+            {% endfor %}
+
+
+            <!-- Photographs -->
+            {% for note in site.photographs %}
                 {% if note.tags contains tag %}
                 <h5 class="tag-title">
                     <a href="{{ note.url | relative_url }}">
