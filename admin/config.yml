@@ -33,7 +33,7 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "header_feature_image", widget: "image", required: false}
       - {label: "Caption", name: "caption", widget: "string", required: false}
-      - {label: "Flickr Album", name: "flickr_album", widget: "string", required: false}
+      - {label: "Flickr Album", name: "flickr_album", default: "flickr", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
 
 
@@ -72,8 +72,10 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "header_feature_image", widget: "image", required: false}
       - {label: "Caption", name: "caption", widget: "string", required: false}
-      - {label: "Flickr Album", name: "flickr_album", widget: "string", required: false}
+      - {label: "Flickr Album", name: "flickr_album", widget: "string", required: false, default: "flickr"}
       - {label: "Body", name: "body", widget: "markdown"}
+
+
 
   - name: "photographs" # Used in routes, e.g., /admin/collections/blog
     label: "Photographs" # Used in the UI
@@ -91,5 +93,5 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "header_feature_image", widget: "image", required: false}
       - {label: "Caption", name: "caption", widget: "string", required: false}
-      - {label: "Flickr Album", name: "flickr_album", widget: "string", required: false}
+      - {label: "Flickr Album", name: "flickr_album", widget: "string", required: false, default: "flickr"}
       - {label: "Body", name: "body", widget: "markdown"}
