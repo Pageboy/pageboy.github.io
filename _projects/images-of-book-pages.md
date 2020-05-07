@@ -1,10 +1,10 @@
 ---
-title: Books and Typography
-date: 2019-11-08 16:53:00 Z
 layout: project
-flickr_album: 72157685438344222
+title: Books and Typography
+date: 2019-11-08T16:53:00.000Z
 header_feature_image: /uploads/page.jpg
-caption:
+caption: null
+flickr_album: "72157685438344222"
 ---
 
 Images of books and pages from books
