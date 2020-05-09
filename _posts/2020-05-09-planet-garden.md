@@ -9,7 +9,7 @@ flickr_album: 72157714238083198
 comments:
 ---
 
-So much to see in this small world between the fences. Plenty of time to get down and closeup to the world of plants and insects. Abundant greenness sprinkled with colour, pierced with sharpness. Home to our beautiful cat who is surprised that we are spending so much time in her planet.
+So much to see in this small world between the fences. Plenty of time to get down and closeup to the world of plants and insects. Abundant greenness sprinkled with colour, pierced with sharpness. Home to our beautiful cat who is surprised that we are spending so much time on her planet.
 
 [![Asima loves her world. ](/uploads/asima090520.jpg)](/uploads/asima090520.jpg)
 
