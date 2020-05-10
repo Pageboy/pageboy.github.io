@@ -41,7 +41,7 @@ When you get in close you realise what miraculous shapes can be found at the mac
 
 ### Explore colours on planet garden
 
-[![Zap](/uploads/gettingcolourful.jpg)](/uploads/gettingcolourful.jpg)
+[![Zap - California Lilac](/uploads/gettingcolourful.jpg)](/uploads/gettingcolourful.jpg)
 
 ### We're going green
 
