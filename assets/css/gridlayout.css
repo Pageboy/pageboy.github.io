@@ -47,3 +47,12 @@
 .photographs .post-teaser {
   flex-basis: 450px;
 }
+
+
+@media screen and (max-width: 768px) {
+
+  .post-teaser {
+    flex-basis: 500px;
+
+  }
+}

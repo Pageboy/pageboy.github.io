@@ -433,6 +433,19 @@ header {
         background-size: 200% auto;
 
     }
+
+    .avatar {
+      display:none;
+    }
+
+    .site-header .site-title a {
+      font-size: .9em;
+    }
+
+    .site-header {
+
+      padding-bottom: 10px !important;
+    }
 }
 
 .call-out {

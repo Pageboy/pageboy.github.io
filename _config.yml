@@ -67,7 +67,7 @@ flickr_key: 6a751024fcc480f70610ed1f98220880
 flickr_id: 55648661@N00
 twitter_username: pageboy
 lang: en_gb
-gridlayout: false
+gridlayout: true
 header_text:
 header_feature_image:
 footer_text: Copyright 2020 Chris Jennings
@@ -104,7 +104,7 @@ str_next_page: Next
 str_previous_page: Prev
 str_javascript_required_disqus: Please enable JavaScript to view comments.
 post_navigation: true
-paginate: 5
+paginate: 6
 paginate_path: page:num
 permalink: pretty
 markdown: kramdown
