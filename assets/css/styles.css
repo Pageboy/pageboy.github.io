@@ -834,10 +834,11 @@ max-height: 100%;
         transition: font-size .25s, margin .25s, padding .25s, opacity .5s .25s;
         background: white;
         z-index: 100;
-        opacity: .98;
+        opacity: .9;
         position: fixed;
-        right:20px;
+        right:0;
         top: 45px;
+        border-right:20px solid white;
     }
 
     nav ul.hide {
@@ -879,6 +880,10 @@ max-height: 100%;
 
       height:45px;
       padding-top:12px;
+    }
+
+    body {
+        padding-top:45px;
     }
 
 

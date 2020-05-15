@@ -1,9 +1,9 @@
 - name: Publisha
   siteurl: https://publisha.github.io
   title: see Digital Publishing Hub
-- name: My Boat
-  siteurl: https://www.chrisjennings.net/perspectief
-  title: A perspectief on Cruising
+# - name: My Boat
+#   siteurl: https://www.chrisjennings.net/perspectief
+#   title: A perspectief on Cruising
 - name:
   siteurl:
   title:
