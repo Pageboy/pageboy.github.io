@@ -10,7 +10,7 @@
     {%- endif -%}
 
     {%- for tag in tags -%}
-    <a class="button" href="{{ "/tags" | relative_url }}#{{ tag | escape }}">
+    <a class="button" href="{{ "/tags/" | relative_url }}#{{ tag | escape }}">
       <p><i class="fa fa-tag fa-fw"></i> {{ tag }}</p>
     </a>
     {%- endfor -%}

@@ -6,6 +6,9 @@ published: true
 header_feature_image: "/uploads/DSC_5546.jpg"
 caption: "Many private properties are fortunate to have the Thames at the bottom of their garden"
 flickr_album: 72157710613024437
+tags:
+  - boat
+  - cruising
 ---
 
 As we cruise up and down the Thames, we are struck by the variety of scenes that drift past; marking the boundary between the water and the land.

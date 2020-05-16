@@ -3,7 +3,9 @@
   date: 2020-05-03
   layout: art
   header_feature_image: https://live.staticflickr.com/65535/49850217477_bb646767af_b.jpg
-  tags: "Rock-drawing"
+  tags:
+    - rock-drawing
+    - photography
   published: true
 ---
 

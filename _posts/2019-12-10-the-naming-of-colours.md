@@ -5,6 +5,9 @@ date: 2019-12-10T19:03:00.000Z
 header_feature_image: /uploads/IMG_0578.jpg
 caption: Farrow and Ball colour chart
 flickr_album: 72157712175659360
+tags:
+  - observations
+  - photography
 ---
 
 We might say "I like your blue sweater". But we could instead say "I really love your "Pavilion Blue" sweater. Of course we would need to have memorised the _Farrow & Ball_ colour card and have been brainwashed with these named colours.

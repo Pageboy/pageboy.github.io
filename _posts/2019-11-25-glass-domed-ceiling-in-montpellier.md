@@ -6,6 +6,8 @@ header_feature_image: "/uploads/domedceiling.jpg"
 caption:
 flickr_album:
 comments:
+tags:
+  - travel
 ---
 
 This is the ceiling in the Halles Laissac in Montpellier. The ceiling is a glass dome and :

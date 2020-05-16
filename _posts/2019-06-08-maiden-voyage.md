@@ -4,6 +4,9 @@ title: Maiden Voyage
 date: '2019-06-08 13:59'
 published: true
 header_feature_image: /uploads/IMG_1059.jpg
+tags:
+  - boat
+  - cruising
 ---
 
 Late April and we take the train to Wargrave for a trip upstream to Oxford. The mooring at Osney awaits! Our first lock was Shiplake. Here the crew is holding on while we wait for the lock to open.

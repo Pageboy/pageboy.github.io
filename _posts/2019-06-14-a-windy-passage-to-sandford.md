@@ -8,6 +8,9 @@ comments: false
 title: A windy passage to Sandford
 header_feature_image: /uploads/IMG_1285.jpeg
 caption: "Tied up in Sandford"
+tags:
+  - boat
+  - cruising
 ---
 We took and opportunity between the rain showers to take our friend Wilfried to Sandford for a picnic lunch.
 

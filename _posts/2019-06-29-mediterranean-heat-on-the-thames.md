@@ -2,15 +2,14 @@
 layout: post
 published: true
 date: 2019-06-30
-categories:
-  - personal
-  - day trip
-  - guests on board
 header_feature_image: /uploads/IMG_0051.jpeg
 caption: Dejeuner sur L'herbe
 featured: false
 comments: false
 title: Mediterranean Heat on the Thames
+tags:
+  - boat
+  - cruising
 ---
 Phew... sunburn and swimming after a great trip down to Abingdon reach.
 

@@ -5,8 +5,9 @@ date: "2019-07-14 22:43"
 published: true
 header_feature_image: "/uploads/DSC_5346.jpg"
 caption: "We just made it with inches to spare. Photo by Zoë Jennings"
-categories:
-  - day trip
+tags:
+  - boat
+  - cruising
 ---
 
 The Botley Road in Oxford crosses the Thames just beyond the railway station. The road is carried by an iron bridge constructed in 1888 after the previous stone bridge had collapsed killing 3 people. Apart from this tragedy, it is also a great shame that the bridge is so low (2.28 metres clearance) that it prevents many craft from navigating further upstream than Oxford.

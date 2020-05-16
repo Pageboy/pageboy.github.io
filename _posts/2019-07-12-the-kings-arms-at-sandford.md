@@ -3,11 +3,11 @@ layout: "post"
 title: "The Kings Arms at Sandford"
 date: "2019-07-12 23:58"
 published: true
-categories:
-  - day trip
-  - guests on board
 header_feature_image: "/uploads/s-l1600.jpg"
 caption: "Kings Arms, Sandford, 1890"
+tags:
+  - boat
+  - cruising
 ---
 From our Osney Moorings to a view of the Carfax Conduit at Nuneham, takes us through Iffley and Sandford Locks. This is a favourite excursion because it gives us a chance to get back to Sandford in time for a lunch at the fine establishment of the King's Arms.
 

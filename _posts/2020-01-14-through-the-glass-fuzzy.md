@@ -3,6 +3,8 @@ layout: post
 title: Through the Glass Fuzzy
 date: 2020-01-14T15:36:00.000Z
 header_feature_image: /_uploads/buswindow.jpg
+tags:
+  - observations
 ---
 
 I'm on the bus, on my way home. It's getting dark and it's raining. I'm on the top deck at the front. I'm struggling see where we are (I'm looking for my stop). The bus is full and everyone is breathing; why shouldn't they?

@@ -7,6 +7,8 @@ tags: []
 date: '2019-03-09 14:03'
 header_feature_image: /uploads/canopyfittinghingewithscrew.jpg
 published: true
+tags:
+  - boat
 ---
 
 The canopy is stretched over stainless steel hoops which are then hinged at 2 points on the top deck. Because the canopy needs to come down and be detached at the main hinge point, it was felt essential to change from a slotted bolt fitting to a quick release pin.

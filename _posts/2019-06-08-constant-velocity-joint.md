@@ -4,6 +4,9 @@ title: Constant Velocity Joint
 date: '2019-06-08 12:37'
 published: true
 header_feature_image: /uploads/DSC_3368.jpg
+tags:
+  - boat
+  - engine
 ---
 The rubber boot that enclosed the CV joint was torn and grease had been flying out from this joint. The survey had picked this up as a necessary correction.
 

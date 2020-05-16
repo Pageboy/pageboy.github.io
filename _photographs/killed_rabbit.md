@@ -4,6 +4,8 @@
   layout: art
   header_feature_image: https://live.staticflickr.com/65535/49849909736_0f0d8bb780_b.jpg
   published: true
+  tags: 
+    - photography
 ---
 
 [![Killed Rabbit](https://live.staticflickr.com/65535/49849909736_6372778ccc_3k.jpg)](https://live.staticflickr.com/65535/49849909736_6372778ccc_3k.jpg)

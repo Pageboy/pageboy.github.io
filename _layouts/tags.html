@@ -14,6 +14,13 @@ layout: page
 {% endfor %}
 
 <!-- cycles through portfolio collection to get tags -->
+{% assign portfolio =  site.portfolio | map: 'tags' | join: ','  | split: ',' | uniq %}
+{% for tag in portfolio %}
+{% assign portfolio_tags = tag | join: '|' | append: '|' %}
+{% assign rawtags = rawtags | append: portfolio_tags %}
+{% endfor %}
+
+<!-- cycles through photograph collection to get tags -->
 {% assign photographs =  site.photographs | map: 'tags' | join: ','  | split: ',' | uniq %}
 {% for tag in photographs %}
 {% assign photograph_tags = tag | join: '|' | append: '|' %}
@@ -32,11 +39,11 @@ layout: page
 {% include tags_list.html tags=rawtags %}
 
     <!-- Displays the posts and pages that contains the tag-->
-    <div class="posts">
+    <div class="tag-posts">
         {% for tag in tags %}
         <h3 id="{{ tag | cgi_escape }}" class="tag-anchor">
             <a href="#{{ tag | escape }}"><i class="fa fa-tag fa-fw"></i> {{ tag }}</a>
-            <a href="#{{ page.title }}" style="float: right"><i class="fa fa-chevron-up" aria-hidden="true"> </i> </a>
+            <!-- <a href="#{{ page.title }}" style="float: right"><i class="fa fa-chevron-up" aria-hidden="true"> </i> </a> -->
 
         </h3>
 
@@ -93,16 +100,16 @@ layout: page
 
 
             <!-- Photographs -->
-            {% for note in site.photographs %}
-                {% if note.tags contains tag %}
+            {% for pic in site.photographs %}
+                {% if pic.tags contains tag %}
                 <h5 class="tag-title">
-                    <a href="{{ note.url | relative_url }}">
+                    <a href="{{ pic.url | relative_url }}">
                         <i class="fa fa-file-o" aria-hidden="true"></i>
-                        {{ note.title }}
+                        {{ pic.title }}
                     </a>
 
                     <div class="meta">
-                        {{ note.date | date: "%B %-d, %Y" }}
+                        {{ pic.date | date: "%B %-d, %Y" }}
                     </div>
                 </h5>
                 {% endif %}

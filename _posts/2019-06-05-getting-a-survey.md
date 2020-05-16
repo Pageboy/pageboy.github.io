@@ -5,10 +5,7 @@ date: '2018-12-06'
 author: false
 header_feature_image: /uploads/DSC_3538.jpg
 hidden: false
-categories:
-  - Purchase
 tags:
-  - start
   - boat
 description: 'Before you buy a boat, you need to get it surveyed.'
 

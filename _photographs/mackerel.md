@@ -3,6 +3,8 @@
   date: 2020-05-02
   layout: art
   header_feature_image: https://live.staticflickr.com/65535/49845397763_68eaeb090a_k.jpg
+  tags: 
+    - photography
 ---
 
 [![Mackerel caught in West Loch Tarbert, Argyll](https://live.staticflickr.com/65535/49845397763_68eaeb090a_k.jpg)](https://live.staticflickr.com/65535/49845397763_68eaeb090a_k.jpg)

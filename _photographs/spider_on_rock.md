@@ -5,6 +5,9 @@
   header_feature_image: /uploads/spider_min.jpg
   tags: "Rock-drawing"
   published: true
+  tags:
+    - rock-drawing
+    - photography
 ---
 
 [![Spider drawing, Charcoal on Rock](https://live.staticflickr.com/65535/49850218027_07920d5230_3k.jpg)](https://live.staticflickr.com/65535/49850218027_07920d5230_3k.jpg)

@@ -4,6 +4,9 @@ title: Oil Pressure Gauge
 date: '2019-04-09 23:33'
 published: true
 header_feature_image: /uploads/IMG_1107.jpg
+tags:
+  - boat
+  - engine
 ---
 
 The oil pressure gauge at the upper helm position was displaying near to zero, when the engine got warm. This was worrying. At the lower helm position the oil pressure gauge seemed to indicate a normal reading. So what was going on?

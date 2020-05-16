@@ -6,6 +6,9 @@ header_feature_image: /uploads/IMG_0874.jpg
 caption:
 flickr_album:
 comments:
+tags:
+  - observations
+  - lockdown
 ---
 
 Spending a lot of time in the garden because of the lockdown, I find myself looking skywards through the trees.

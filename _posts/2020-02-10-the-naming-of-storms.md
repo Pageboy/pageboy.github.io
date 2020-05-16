@@ -4,6 +4,8 @@ title: The Naming of Storms
 date: 2020-02-10T19:23:43.538Z
 header_feature_image: /uploads/kym-mackinnon-54kc5pklFmU-unsplash.jpg
 caption: ''
+tags:
+  - observations
 ---
 Just today we have been suffering from the onslaught of storm *Ciara* (edit) and now storm *Dennis* has arrived. Trees are down and much debris on the pavements. The chain saws are out and the branches are being shredded.
 

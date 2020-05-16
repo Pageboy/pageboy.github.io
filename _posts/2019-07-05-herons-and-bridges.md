@@ -6,6 +6,9 @@ published: true
 header_feature_image: "/uploads/DSC_5139.jpg"
 caption: "Grey Heron looking for lunch"
 flickr_album: 72157709441752206
+tags:
+  - boat
+  - cruising
 ---
 
 Our cruise downstream gave the crew a slight case of sunburn in spite of lashings of sunscreen. We were fortunate to be able to find good moorings for our nights but we have learnt to arrive early at the popular locations.
