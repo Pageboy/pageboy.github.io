@@ -1,6 +1,6 @@
 ---
 title: Planet Garden
-date: 2020-05-09 19:19:35 Z
+date: 2020-05-17 19:47
 layout: post
 published: true
 header_feature_image: /uploads/asimiagarden0.jpg
@@ -18,6 +18,10 @@ So much to see in this small world between the fences. Plenty of time to get dow
 [![Asima loves her world. ](/uploads/asima090520.jpg)](/uploads/asima090520.jpg)
 
 Does Asima see in colour?
+
+We don't want her to catch sight of Robin redbreast.
+
+[![This robin is very friendly to us humans but does not like Asima at all](/uploads/robin.jpg)](/uploads/robin.jpg)
 
 ## Springing into colour
 
