@@ -6,7 +6,7 @@
   tags: "Rock-drawing"
   published: true
   tags:
-    - rock-drawing
+    - rock drawing
     - photography
 ---
 

@@ -4,7 +4,7 @@
   layout: art
   header_feature_image: https://live.staticflickr.com/65535/49849374288_e68568bc0d_b.jpg
   tags:
-    - rock-drawing
+    - rock drawing
     - photography
   published: true
 ---
