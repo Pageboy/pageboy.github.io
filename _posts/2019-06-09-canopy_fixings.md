@@ -1,9 +1,6 @@
 ---
 layout: post
 title: Canopy Fixings
-subtitle: null
-permalink: null
-tags: []
 date: '2019-03-09 14:03'
 header_feature_image: /uploads/canopyfittinghingewithscrew.jpg
 published: true
