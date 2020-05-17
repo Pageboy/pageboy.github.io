@@ -3,7 +3,6 @@
   date: 2020-05-03
   layout: art
   header_feature_image: /uploads/spider_min.jpg
-  tags: "Rock-drawing"
   published: true
   tags:
     - rock drawing
