@@ -12,4 +12,4 @@ Those of us that like to take our boats out on the Thames are in lockdown like e
 
 A walk along the river takes us to Osney Lock where we find that here to we cannot use the lock, but that’s because It is well and truly broken. The note says so.
 
-![]()
+![Osney Lockdown](/uploads/f25b7424-6550-46cb-b968-c02759e24319.jpeg "Osney Lockdown")
