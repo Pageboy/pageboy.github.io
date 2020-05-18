@@ -1,3 +1,16 @@
+@media (max-width: 1000px) {
+.css-svjxk-SearchContainer {
+  width:250px;
+}
+.css-3ifd9s-ActionsContainer {
+flex: 0 0 auto;
+}
+.css-smzvtl-LibraryTop div:first-child {
+  flex: 0 1 auto;
+}
+
+}
+
 @media (max-width: 799px) {
   .css-u4olba-SidebarContainer-card {
     position: static;
@@ -29,7 +42,7 @@
   }
   .css-svjxk-SearchContainer {
     display: block;
-    width: 100%;
+    width: auto;
   }
   .css-smzvtl-LibraryTop {
     flex-direction: column;
