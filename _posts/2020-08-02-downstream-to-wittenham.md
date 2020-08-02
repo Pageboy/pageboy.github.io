@@ -4,7 +4,7 @@ title: Downstream to Wittenham
 date: 2020-08-02T11:32:11.549Z
 header_feature_image: /uploads/dsc6875.jpg
 caption: View from Wittenham Clumps
-flickr_album: flickr
+flickr_album: ""
 ---
 Of course we have been here before, but on this trip the weather was very hot and in spite of lashings of sun cream the skipper got a liitle sun burnt.
 
