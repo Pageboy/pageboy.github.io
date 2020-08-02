@@ -4,7 +4,7 @@ date: 2019-11-25 13:43:00 Z
 layout: post
 header_feature_image: "/uploads/domedceiling.jpg"
 caption:
-flickr_album:
+flickr_album: ""
 comments:
 tags:
   - travel

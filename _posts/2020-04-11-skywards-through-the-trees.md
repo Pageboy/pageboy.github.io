@@ -4,7 +4,7 @@ date: 2020-04-10 15:11
 layout: post
 header_feature_image: /uploads/IMG_0874.jpg
 caption:
-flickr_album:
+flickr_album: ""
 comments:
 tags:
   - observations
