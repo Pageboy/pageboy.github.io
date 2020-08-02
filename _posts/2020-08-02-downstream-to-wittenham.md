@@ -6,7 +6,7 @@ header_feature_image: /uploads/dsc6875.jpg
 caption: View from Wittenham Clumps
 flickr_album: ""
 ---
-Of course we have been here before, but on this trip the weather was very hot and in spite of lashings of sun cream the skipper got a liitle sun burnt.
+Of course we have been here before, but on this trip the weather was very hot and in spite of lashings of sun cream the skipper got a little sun burnt.
 
 What a relief it was to go for a swim at the end of the day!
 
@@ -24,9 +24,9 @@ We love Dorchester on Thames and on this occasion we took a different route. We 
 
 ## A Walk to Little Wittenham and on the Wittenham Clumps
 
-Afer a good breakfast and excersise we walked back along the river and over the bridge at Day's lock to St Peter's Church at Little Wittenham. We wandered amongst the variety of gravestones and admired the wild flowers and dappled light.
+After a good breakfast and exercise we walked back along the river and over the bridge at Day's lock to St Peter's Church at Little Wittenham. We wandered amongst the variety of gravestones and admired the wild flowers and dappled light.
 
-We wonderd what I.H.S meant on some gravestones and looked this up out of curiosity.
+We wondered what I.H.S meant on some gravestones and looked this up out of curiosity.
 
 [![St Peter's Church, Little Wittenham](/uploads/dsc6869.jpg)](/uploads/dsc6869.jpg)
 
