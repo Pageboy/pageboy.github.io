@@ -22,7 +22,7 @@ We love Dorchester on Thames and on this occasion we took a different route. We 
 
 [![A Trabant from Germany and a truly British Rolls Royce](/uploads/dsc6843.jpg)](/uploads/dsc6843.jpg)
 
-## A Walk to Little Wittenham and on the Wittenham Clumps
+## A Walk to Little Wittenham and on to Wittenham Clumps
 
 After a good breakfast and exercise we walked back along the river and over the bridge at Day's lock to St Peter's Church at Little Wittenham. We wandered amongst the variety of gravestones and admired the wild flowers and dappled light.
 
@@ -30,4 +30,4 @@ We wondered what I.H.S meant on some gravestones and looked this up out of curio
 
 [![St Peter's Church, Little Wittenham](/uploads/dsc6869.jpg)](/uploads/dsc6869.jpg)
 
-So the answer to the question seems to be that the initials are formed from the Greek word for Jesus Christ, however, I advice using Google to get the answer, becaseu there does seem to be more than one answer. Have a [read of this Wikipedia entry](https://simple.wikipedia.org/wiki/Christogram_IHS).
+So the answer to the question seems to be that the initials are formed from the Greek word for Jesus Christ, however, I advice using a Google search to get the answer, because there does seem to be more than one solution to this query. Have a [read of this Wikipedia entry](https://simple.wikipedia.org/wiki/Christogram_IHS).
