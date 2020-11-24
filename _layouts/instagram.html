@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<article class="feature-image">
+  <header id="main">
+      <h1 id="{{ page.title | escape }}" class="title">{{ page.title }}</h1>
+    {% if page.subtitle %}
+    <h2 class="subtitle">{{ page.subtitle }}</h2>
+    {% endif %}
+
+  </header>
+  <section class="post-content">
+    <div class="gallery">
+<!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="https://cdn.lightwidget.com/widgets/76a040478e90551985cfdca9a7ae2b0c.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+    </div>
+  </section>
+
+
+  <!-- Tag list for portfolio -->
+  {% capture tag_list %}{{ page.tags | join: "|"}}{% endcapture %}
+  {% include tags_list.html tags=tag_list %}
+
+</article>

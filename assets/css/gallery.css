@@ -1,0 +1,157 @@
+
+
+#gallery {
+  /* float:left; */
+  margin:3px 0;
+  padding:0;
+  width:100%;
+
+}
+
+#gallery li {
+  list-style-type: none;
+  padding: 8px;
+  margin-right:6px;
+  margin-bottom: 6px;
+  display: inline-block;
+  border:1px solid silver;
+  width:30%;
+  vertical-align: top;
+}
+
+/* #gallery li:nth-child(3n+1){
+    clear:left
+} */
+
+#gallery ul {
+  padding:0;
+  margin:0;
+  width:100%;
+
+}
+
+#gallery a {
+  color:#64906d;
+  text-decoration: none;
+}
+
+#gallery li img {
+text-align:center;
+margin-left: auto;
+margin-right: auto;
+width:100%;
+margin:0;
+}
+
+#gallery p.caption {
+  font-size:.75rem;
+  line-height:1;
+  margin-top: 0;
+  margin-bottom:6px;
+  float:none;
+  display:block;
+}
+
+
+#gallery ul li a {
+  /* line-height:.6; */
+  /* float:left; */
+}
+
+.gallerycontainer {
+  width: 100%;
+  /*max-width: 52rem;*/
+  /* padding-left:  1rem;
+  padding-right: 1rem; */
+  margin-left:  auto;
+  margin-right: auto;
+  /*border:1px solid red;*/
+}
+
+/*for the list of galleries*/
+
+.gallerylist li {
+  display: inline;
+  list-style-type: none;
+  padding: 8px;
+  /*float: left;*/
+  display: inline-block;
+  /*border:1px solid red;*/
+  width:33%;
+  height:20%;
+}
+
+.gallerylist ul {
+  padding:0;
+}
+
+.gallerylist li img {
+text-align:center;
+margin-left: auto;
+margin-right: auto;
+width:100%;
+margin:0;
+}
+
+
+#gallery ul {
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      /* justify-content: space-between; */
+      justify-content:flex-start;
+}
+
+
+#gallery li {
+  list-style-type: none;
+  padding: 8px;
+  margin-right:8px;
+  margin-bottom: 10px;
+  border:1px solid #d2d1d1;
+  vertical-align: top;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: 1 1 auto;
+  max-width: 325px;
+}
+
+
+@media screen and (max-width: 768px) {
+
+  #gallery p.caption {
+    font-size:.75rem;
+    /* line-height: .5; */
+  }
+
+  #gallery li {
+    /* width: 150px; */
+}
+
+/* if this is a project remove the description on small sizes */
+body.project p.caption + p {
+  display:none !important;
+}
+
+
+.posttitle {
+  font-size:1.8em;
+}
+
+}
+
+@media screen and (max-width: 600px) {
+  #gallery li {
+    width: 160px;
+}
+
+}
+
+.info {
+  font-size: 80%;
+}

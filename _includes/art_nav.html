@@ -1,0 +1,17 @@
+<div id="post-nav">
+    {% if page.next.url %}
+    <div id="previous-post">
+        <a title="{{ page.next.title }}" href="{{ page.next.url | relative_url }}">
+            <i class="far fa-caret-square-left fa-2x"></i>
+        </a>
+    </div>
+    {% endif %}
+    {% if page.previous.url %}
+
+    <div id="next-post">
+        <a title="{{ page.previous.title }}" href="{{ page.previous.url | relative_url }}">
+            <i class="far fa-caret-square-right fa-2x"></i>
+        </a>
+    </div>
+    {% endif %}
+</div>

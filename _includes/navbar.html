@@ -1,0 +1,51 @@
+<header class="site-header">
+
+    <!-- Logo and title -->
+	<div class="branding">
+		<a href="{{ '/' | relative_url }}">
+			<img alt="logo img" class="avatar" src="{{ site.avatar | relative_url }}" />
+		</a>
+
+		<h1 class="site-title">
+			<a aria-label="{{ site.title }}" href="{{ '/' | relative_url }}">
+        {{ site.title }}
+      </a>
+		</h1>
+	</div>
+
+    <!-- Toggle menu -->
+    <nav class="clear">
+    <a aria-label="pull" id="pull" class="toggle" href="#">
+    <i class="fa fa-bars fa-lg"></i>
+    </a>
+
+    <!-- Menu -->
+    <ul class="hide">
+			{%- for sites in site.data.othersites -%}
+			{%- unless sites.name == null or sites.siteurl ==  null -%}
+			<li class="separator"> | </li>
+			  <li>
+			    <a class="clear" aria-label="{{ sites.name }}" title="{{ sites.title }}" href="{{ sites.siteurl }}" target="_blank">
+			      {{ sites.name }}
+			    </a>
+			  </li>
+				{%- endunless -%}
+			{%- endfor -%}
+        {% assign name_page = "" %}
+				{%- assign sorted_pages = site.pages | sort: "order" -%}
+        {%- for node in sorted_pages -%}
+            {% unless node.title == null or node.hide or name_page contains node.title %}
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="{{ node.title }}" title="{{ node.title }}" href="{{ node.url | relative_url }}">
+                    {% if node.icon %} <i class="fa {{ node.icon }}" aria-hidden="true"></i>
+                    {% else %} {{ node.title }} {% endif%}
+                </a>
+            </li>
+            {% endunless %}
+            {% assign name_page = node.title | append: name_page %}
+        {% endfor %}
+    </ul>
+
+	</nav>
+</header>

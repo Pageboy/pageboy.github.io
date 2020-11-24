@@ -1,0 +1,36 @@
+<div class="posts">
+
+  {%- assign items = site.portfolio | sort: 'title' -%}
+    {%- for art in items limit:30 -%}
+    <div class="post-teaser">
+        {% if art.header_feature_image %}
+        {% assign image_url = art.header_feature_image | replace: "_uploads", "uploads" -%}
+        <div class="post-img">
+            <a aria-label="{{ art.title }}" href="{{ art.url | relative_url }}">
+              {%- if art.caption -%}
+                <img alt="{{ art.caption }}" src="{{ image_url | relative_url }}">
+              {%- else -%}
+                <img alt="{{ art.title }}" src="{{ image_url | relative_url }}">
+              {%- endif -%}
+
+            </a>
+        </div>
+        {% endif %}
+        <span>
+          <header>
+            <h1>
+              <a aria-label="{{ art.title }}" class="post-link" href="{{ art.url | relative_url }}">
+                {{ art.title }}
+              </a>
+            </h1>
+          </header>
+          <div class="excerpt">
+              {{ art.excerpt | strip_html | escape }}
+          </div>
+      </span>
+    </div>
+    {% endfor %}
+
+</div>
+
+<!-- {% include blog_nav.html %} -->

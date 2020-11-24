@@ -1,0 +1,97 @@
+# backend:
+#   name: git-gateway
+#   branch: master
+#   site_url: https://www.chrisjennings.net
+
+backend:
+  name: github
+  repo: Pageboy/pageboy.github.io # Path to your GitHub repository
+  branch: master # Branch to update (master by default)
+  base_url: https://fog-bandana-sd962ciqd.glitch.me/ # URL of your public glitch project
+
+show_preview_links: false
+publish_mode: editorial_workflow
+
+# This line should *not* be indented
+media_folder: "uploads" # Media files will be stored in the repo under /uploads
+public_folder: "/uploads"
+
+collections:
+  - name: "posts" # Used in routes, e.g., /admin/collections/blog
+    label: "Posts" # Used in the UI
+    label_singular: "Post"
+    folder: "_posts/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    media_folder: "/uploads"
+    public_folder: "/uploads"
+    editor:
+      preview: false
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "header_feature_image", widget: "image", required: false}
+      - {label: "Caption", name: "caption", widget: "string", required: false}
+      - {label: "Flickr Album", name: "flickr_album", default: "flickr", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+
+  - name: "pages" # Used in routes, e.g., /admin/collections/blog
+    label: "Pages" # Used in the UI
+    label_singular: "Page"
+    folder: "pages/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    media_folder: "/uploads"
+    public_folder: "/uploads"
+    editor:
+      preview: false
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Permalink", name: "permalink", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "header_feature_image", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+
+  - name: "projects" # Used in routes, e.g., /admin/collections/blog
+    label: "Projects" # Used in the UI
+    label_singular: "Project"
+    folder: "_projects/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    media_folder: "/uploads"
+    public_folder: "/uploads"
+    editor:
+      preview: false
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "project"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "header_feature_image", widget: "image", required: false}
+      - {label: "Caption", name: "caption", widget: "string", required: false}
+      - {label: "Flickr Album", name: "flickr_album", widget: "string", required: false, default: "flickr"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+
+
+  - name: "photographs" # Used in routes, e.g., /admin/collections/blog
+    label: "Photographs" # Used in the UI
+    label_singular: "Photograph"
+    folder: "_photographs/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    media_folder: "/uploads"
+    public_folder: "/uploads"
+    editor:
+      preview: false
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "art"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "header_feature_image", widget: "image", required: false}
+      - {label: "Caption", name: "caption", widget: "string", required: false}
+      - {label: "Flickr Album", name: "flickr_album", widget: "string", required: false, default: "flickr"}
+      - {label: "Body", name: "body", widget: "markdown"}

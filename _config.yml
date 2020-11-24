@@ -1,0 +1,119 @@
+---
+title: Chris Jennings & ideas
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  projects:
+    title: Projects
+    output: true
+    layout: project
+  portfolio:
+    title: Portfolio
+    output: true
+    layout: art
+  photographs:
+    title: Photographs
+    output: true
+    layout: art
+defaults:
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
+    header_feature_image:
+    caption:
+    flickr_album:
+- scope:
+    path: ''
+    type: pages
+  values:
+    layout: page
+    header_feature_image:
+    caption:
+    flickr_album:
+- scope:
+    path: ''
+    type: projects
+  values:
+    layout: project
+    header_feature_image:
+    caption:
+    flickr_album:
+- scope:
+    path: ''
+    type: portfolio
+  values:
+    layout: art
+    header_feature_image:
+    caption:
+    flickr_album:
+- scope:
+    path: ''
+    type: photogaphs
+  values:
+    layout: art
+    header_feature_image:
+    caption:
+    flickr_album:
+baseurl:
+url: https://www.chrisjennings.net
+description: Projects past and present
+avatar: assets/img/home.png
+favicon: assets/img/logo.png
+flickr_key: 6a751024fcc480f70610ed1f98220880
+flickr_id: 55648661@N00
+twitter_username: pageboy
+lang: en_gb
+gridlayout: true
+header_text:
+header_feature_image:
+footer_text: Copyright 2020 Chris Jennings
+rss: false
+email_address:
+facebook:
+flickr: chrisjennings
+google_plus:
+instagram: pagebuoy
+linkedin:
+pinterest:
+soundcloud:
+twitter: pageboy
+youtube: PublishaDigitalPublishingHub
+share_buttons:
+  facebook: true
+  twitter: true
+  tumblr:
+  pinterest:
+  linkedin:
+  email: true
+google_analytics:
+disqus_shortname:
+str_follow_on: Follow on
+str_rss_follow: Follow RSS feed
+str_share_on: Share on
+str_add_to: Add to
+str_email: Email
+str_tweet: Tweet
+str_pin_it: Pin it
+str_next_post: Next Article
+str_previous_post: Previous Article
+str_next_page: Next
+str_previous_page: Prev
+str_javascript_required_disqus: Please enable JavaScript to view comments.
+post_navigation: true
+paginate: 6
+paginate_path: page:num
+permalink: pretty
+markdown: kramdown
+highlighter: rouge
+plugins:
+- jekyll-paginate
+- jekyll-seo-tag
+- jekyll-sitemap
+exclude:
+- ".jekyll-cache"
+- Gemfile
+- README.md
