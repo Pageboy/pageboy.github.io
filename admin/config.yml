@@ -1,16 +1,20 @@
-# backend:
-#   name: git-gateway
-#   branch: master
-#   site_url: https://www.chrisjennings.net
-
 backend:
   name: github
-  repo: Pageboy/pageboy.github.io # Path to your GitHub repository
+  repo: Pageboy/chrisjennings # Path to your GitHub repository
   branch: master # Branch to update (master by default)
-  base_url: https://fog-bandana-sd962ciqd.glitch.me/ # URL of your public glitch project
+  site_domain: chrisjennings.netlify.app #Your site on netlify
+  use_graphql: true
 
-show_preview_links: false
 publish_mode: editorial_workflow
+show_preview_links: true
+display_url: https://chrisjennings.netlify.app
+logo_url: https://chrisjennings.netlify.app/assets/img/home.png
+
+# Do NOT edit below this line
+
+media_folder: "uploads" # Media files will be stored in the repo under /uploads
+public_folder: "../uploads"
+
 
 # This line should *not* be indented
 media_folder: "uploads" # Media files will be stored in the repo under /uploads
