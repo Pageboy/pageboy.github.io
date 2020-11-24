@@ -12,9 +12,8 @@ logo_url: https://chrisjennings.netlify.app/assets/img/home.png
 
 # Do NOT edit below this line
 
-media_folder: "uploads" # Media files will be stored in the repo under /uploads
-public_folder: "../uploads"
-
+# media_folder: "uploads" # Media files will be stored in the repo under /uploads
+# public_folder: "../uploads"
 
 # This line should *not* be indented
 media_folder: "uploads" # Media files will be stored in the repo under /uploads
@@ -32,14 +31,24 @@ collections:
     editor:
       preview: false
     fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "header_feature_image", widget: "image", required: false}
-      - {label: "Caption", name: "caption", widget: "string", required: false}
-      - {label: "Flickr Album", name: "flickr_album", default: "flickr", widget: "string", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
-
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - {
+          label: "Featured Image",
+          name: "header_feature_image",
+          widget: "image",
+          required: false,
+        }
+      - { label: "Caption", name: "caption", widget: "string", required: false }
+      - {
+          label: "Flickr Album",
+          name: "flickr_album",
+          default: "flickr",
+          widget: "string",
+          required: false,
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "pages" # Used in routes, e.g., /admin/collections/blog
     label: "Pages" # Used in the UI
@@ -52,13 +61,17 @@ collections:
     editor:
       preview: false
     fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Permalink", name: "permalink", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "header_feature_image", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
-
+      - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - {
+          label: "Featured Image",
+          name: "header_feature_image",
+          widget: "image",
+          required: false,
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "projects" # Used in routes, e.g., /admin/collections/blog
     label: "Projects" # Used in the UI
@@ -71,15 +84,29 @@ collections:
     editor:
       preview: false
     fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "project"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "header_feature_image", widget: "image", required: false}
-      - {label: "Caption", name: "caption", widget: "string", required: false}
-      - {label: "Flickr Album", name: "flickr_album", widget: "string", required: false, default: "flickr"}
-      - {label: "Body", name: "body", widget: "markdown"}
-
-
+      - {
+          label: "Layout",
+          name: "layout",
+          widget: "hidden",
+          default: "project",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - {
+          label: "Featured Image",
+          name: "header_feature_image",
+          widget: "image",
+          required: false,
+        }
+      - { label: "Caption", name: "caption", widget: "string", required: false }
+      - {
+          label: "Flickr Album",
+          name: "flickr_album",
+          widget: "string",
+          required: false,
+          default: "flickr",
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "photographs" # Used in routes, e.g., /admin/collections/blog
     label: "Photographs" # Used in the UI
@@ -92,10 +119,21 @@ collections:
     editor:
       preview: false
     fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "art"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "header_feature_image", widget: "image", required: false}
-      - {label: "Caption", name: "caption", widget: "string", required: false}
-      - {label: "Flickr Album", name: "flickr_album", widget: "string", required: false, default: "flickr"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - { label: "Layout", name: "layout", widget: "hidden", default: "art" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - {
+          label: "Featured Image",
+          name: "header_feature_image",
+          widget: "image",
+          required: false,
+        }
+      - { label: "Caption", name: "caption", widget: "string", required: false }
+      - {
+          label: "Flickr Album",
+          name: "flickr_album",
+          widget: "string",
+          required: false,
+          default: "flickr",
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
