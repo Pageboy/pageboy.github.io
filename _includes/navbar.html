@@ -42,6 +42,12 @@
                     {% else %} {{ node.title }} {% endif%}
                 </a>
             </li>
+            <li class="separator"> | </li>
+            <li>
+              <a class="clear" aria-label="Editor" title="Editor" href="/admin/" target="_blank">
+                <i class="fa fa-pencil"></i>
+              </a>
+            </li>
             {% endunless %}
             {% assign name_page = node.title | append: name_page %}
         {% endfor %}

@@ -123,13 +123,6 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - {
-          label: "Featured Image",
-          name: "header_feature_image",
-          widget: "image",
-          required: false,
-        }
-      - { label: "Caption", name: "caption", widget: "string", required: false }
-      - {
           label: "Flickr Album",
           name: "flickr_album",
           widget: "string",
