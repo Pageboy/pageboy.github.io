@@ -4,7 +4,7 @@ date: 2020-01-17 13:15:00 Z
 layout: post
 header_feature_image: "/uploads/oilspill.jpg"
 caption:
-flickr_album:
+flickr_album: ""
 comments:
 tags:
   - observations
