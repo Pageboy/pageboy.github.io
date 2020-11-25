@@ -18,46 +18,46 @@ collections:
     output: true
     layout: art
 defaults:
-- scope:
-    path: ''
-    type: posts
-  values:
-    layout: post
-    header_feature_image:
-    caption:
-    flickr_album:
-- scope:
-    path: ''
-    type: pages
-  values:
-    layout: page
-    header_feature_image:
-    caption:
-    flickr_album:
-- scope:
-    path: ''
-    type: projects
-  values:
-    layout: project
-    header_feature_image:
-    caption:
-    flickr_album:
-- scope:
-    path: ''
-    type: portfolio
-  values:
-    layout: art
-    header_feature_image:
-    caption:
-    flickr_album:
-- scope:
-    path: ''
-    type: photogaphs
-  values:
-    layout: art
-    header_feature_image:
-    caption:
-    flickr_album:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      header_feature_image:
+      caption:
+      flickr_album:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+      header_feature_image:
+      caption:
+      flickr_album:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+      header_feature_image:
+      caption:
+      flickr_album:
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: art
+      header_feature_image:
+      caption:
+      flickr_album:
+  - scope:
+      path: ""
+      type: photogaphs
+    values:
+      layout: art
+      header_feature_image:
+      caption:
+      flickr_album:
 baseurl:
 url: https://www.chrisjennings.net
 description: Projects past and present
@@ -104,16 +104,34 @@ str_next_page: Next
 str_previous_page: Prev
 str_javascript_required_disqus: Please enable JavaScript to view comments.
 post_navigation: true
-paginate: 6
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  parse_block_html: true
+
+  # Rouge Highlighter in Kramdown › http://kramdown.gettalong.org/syntax_highlighter/rouge.html
+  # span, block element options fall back to global
+  syntax_highlighter_opts:
+    # Rouge Options › https://github.com/jneen/rouge#full-options
+    css_class: "codehilite"
+    # span:
+    #   line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+paginate: 9
 paginate_path: page:num
 permalink: pretty
 markdown: kramdown
+
 highlighter: rouge
 plugins:
-- jekyll-paginate
-- jekyll-seo-tag
-- jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
 exclude:
-- ".jekyll-cache"
-- Gemfile
-- README.md
+  - ".jekyll-cache"
+  - Gemfile
+  - README.md
