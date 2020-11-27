@@ -13,8 +13,8 @@ Perspectief has a Ford Diesel engine 1.6. This is a marinized Ford Escort Engine
 The gearbox is a PRM hydraulic.
 
 
-[![Thank You Haynes](/uploads/IMG_1255.jpg)](/uploads/IMG_1255.jpg)
+![Thank You Haynes](/uploads/IMG_1255.jpg "Thank You Haynes")
 
 Another view of the engine.
 
-[![Looking forward](/uploads/IMG_0087.jpg)](/uploads/IMG_0087.jpg)
+![Looking forward](/uploads/IMG_0087.jpg "Looking forward")

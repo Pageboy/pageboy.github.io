@@ -9,7 +9,7 @@
     - photography
 ---
 
-[![Shellduck drawing, Chalk on Rock](https://live.staticflickr.com/65535/49849909056_cbf79dd800_3k.jpg)](https://live.staticflickr.com/65535/49849909056_cbf79dd800_3k.jpg)
+![Shellduck drawing, Chalk on Rock](https://live.staticflickr.com/65535/49849909056_cbf79dd800_3k.jpg)
 
 Crab drawing, Chalk on Shore Rocks, Ardpatrick, 1979
 

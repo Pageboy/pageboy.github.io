@@ -8,7 +8,7 @@
     - square series
 ---
 
-[![wheat, grasses and fern](https://live.staticflickr.com/65535/49310721462_26e5ecec58_o.jpg)](https://live.staticflickr.com/65535/49310721462_26e5ecec58_o.jpg)
+![wheat, grasses and fern](https://live.staticflickr.com/65535/49310721462_26e5ecec58_o.jpg)
 
 - Yellow flowers in the grass
 - Wheat fields for harvest

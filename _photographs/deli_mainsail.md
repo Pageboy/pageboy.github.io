@@ -9,7 +9,7 @@
     - photography
 ---
 
-[![Deli with her mainsail up](https://live.staticflickr.com/65535/49883259417_b652e6fd92_o.jpg)](https://live.staticflickr.com/65535/49883259417_b652e6fd92_o.jpg)
+![Deli with her mainsail up](https://live.staticflickr.com/65535/49883259417_b652e6fd92_o.jpg)
 
 35mm Film positive Ektachrome. Maybe 1980. Alistair on the bowsprit.
 

@@ -9,7 +9,7 @@
     - photography
 ---
 
-[![ex Danish trawler &#x27;Deli&#x27;](https://live.staticflickr.com/65535/49882422828_cdbc90663d_o.jpg)](https://live.staticflickr.com/65535/49882422828_cdbc90663d_o.jpg)
+![ex Danish trawler &#x27;Deli&#x27;](https://live.staticflickr.com/65535/49882422828_cdbc90663d_o.jpg)
 
 35mm Film positive Ektachrome. Maybe 1980.
 

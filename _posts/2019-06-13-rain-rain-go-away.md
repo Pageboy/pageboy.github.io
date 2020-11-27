@@ -14,4 +14,4 @@ imagefeature: ''
 ---
 Maybe we dont need a heading here
 
-![Buoy boy](/uploads/duckbuoy.jpg)
+![Buoy boy](/uploads/duckbuoy.jpg "Buoy boy")

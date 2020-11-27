@@ -9,7 +9,7 @@
   published: true
 ---
 
-[![Feather drawing, Chalk on Rock](https://live.staticflickr.com/65535/49849374288_74633df9fa_3k.jpg)](https://live.staticflickr.com/65535/49849374288_74633df9fa_3k.jpg)
+![Feather drawing, Chalk on Rock](https://live.staticflickr.com/65535/49849374288_74633df9fa_3k.jpg)
 
 Feather drawing, Chalk on Rock, Ardpatrick, 1979
 

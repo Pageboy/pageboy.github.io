@@ -9,7 +9,7 @@
     - photography
 ---
 
-[![Deli Approaching the island of Tanera Móre](https://live.staticflickr.com/65535/49882953441_5e64e12056_o.jpg)](https://live.staticflickr.com/65535/49882953441_5e64e12056_o.jpg)
+![Deli Approaching the island of Tanera Móre](https://live.staticflickr.com/65535/49882953441_5e64e12056_o.jpg)
 
 35mm Film positive Ektachrome. Maybe 1980
 

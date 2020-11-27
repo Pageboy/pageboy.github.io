@@ -9,7 +9,7 @@
     - photography
 ---
 
-[![Spider drawing, Charcoal on Rock](https://live.staticflickr.com/65535/49850218027_07920d5230_3k.jpg)](https://live.staticflickr.com/65535/49850218027_07920d5230_3k.jpg)
+![Spider drawing, Charcoal on Rock](https://live.staticflickr.com/65535/49850218027_07920d5230_3k.jpg)
 
 Spider drawing, Charcoal on Rock, Ardpatrick, 1979
 

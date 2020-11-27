@@ -27,6 +27,17 @@ $(".post-content img").each(function() {
 });
 </script>
 
+<!-- add a link to the image itself -->
+<script>
+  $(document).ready(function() {
+    $('.post-content img').each(function ()
+    {
+       var currentImage = $(this);
+       currentImage.wrap("<a href='" + currentImage.attr("src") + "' </a>");
+    });
+  });
+  </script>
+
 <!-- <script type="text/javascript">
 $(function(){
     $.url.attr('flickrpic')

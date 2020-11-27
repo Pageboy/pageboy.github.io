@@ -10,8 +10,8 @@ tags:
 ---
 The rubber boot that enclosed the CV joint was torn and grease had been flying out from this joint. The survey had picked this up as a necessary correction.
 
-[![The CV joint in the drive](/uploads/IMG_0808.jpg)](/uploads/IMG_0808.jpg)
+![The CV joint in the drive](/uploads/IMG_0808.jpg "The CV joint in the drive")
 
 Here we see the new CV joint. All is well; this now operates perfectly.
 
-[![New CV drive](/uploads/IMG_1056.jpg)](/uploads/IMG_1056.jpg)
+![New CV drive](/uploads/IMG_1056.jpg "New CV drive")

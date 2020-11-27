@@ -8,7 +8,7 @@
     - photography
 ---
 
-[![Shellduck drawing, Chalk on Rock](https://live.staticflickr.com/65535/49845400253_6e6aaf2791_3k.jpg)](https://live.staticflickr.com/65535/49845400253_6e6aaf2791_3k.jpg)
+![Shellduck drawing, Chalk on Rock](https://live.staticflickr.com/65535/49845400253_6e6aaf2791_3k.jpg)
 
 Shellduck drawing, Chalk on Rock, Ardpatrick, 1979
 

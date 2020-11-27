@@ -8,7 +8,7 @@
     - square series
 ---
 
-[![Lake, river, pond](https://live.staticflickr.com/65535/49466262646_34140918aa_o.jpg)](https://live.staticflickr.com/65535/49466262646_34140918aa_o.jpg)
+![Lake, river, pond](https://live.staticflickr.com/65535/49466262646_34140918aa_o.jpg)
 
 - The rippling surface
 - Reflecting land and sky

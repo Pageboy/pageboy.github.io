@@ -15,10 +15,10 @@ Phew... sunburn and swimming after a great trip down to Abingdon reach.
 
 As the temperature reached 31 degrees Salter's _Wargrave_ headed downstream with music blairing and a party in full swing. A rendition of _happy birthday_ echoed around the woods on the opposite bank.
 
-[![The good crew of Perspectief](/uploads/crew_danistellachrismick.jpeg)](/uploads/crew_danistellachrismick.jpeg)
+![The good crew of Perspectief](/uploads/crew_danistellachrismick.jpeg "The good crew of Perspectief")
 
-[![Grassy mooring with no clouds whatsoever](/uploads/IMG_0048.jpg)](/uploads/IMG_0048.jpg)
+![Grassy mooring with no clouds whatsoever](/uploads/IMG_0048.jpg "Grassy mooring with no clouds whatsoever")
 
-[!['Wargrave' in a party mood](/uploads/IMG_0053.jpg)](/uploads/IMG_0053.jpg)
+!['Wargrave' in a party mood](/uploads/IMG_0053.jpg "'Wargrave' in a party mood")
 
-[![Back through Sandford Lock](/uploads/atsandfordlock.jpeg)](/uploads/atsandfordlock.jpeg)
+![Back through Sandford Lock](/uploads/atsandfordlock.jpeg "Back through Sandford Lock")

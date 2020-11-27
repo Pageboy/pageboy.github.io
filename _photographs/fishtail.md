@@ -9,7 +9,7 @@
   published: true
 ---
 
-[![Fish tail drawn with Chalk on Roc](https://live.staticflickr.com/65535/49850218742_594553a1f2_3k.jpg)](https://live.staticflickr.com/65535/49850218742_594553a1f2_3k.jpg)
+![Fish tail drawn with Chalk on Roc](https://live.staticflickr.com/65535/49850218742_594553a1f2_3k.jpg)
 
 Fishtail drawing, Chalk on Shore Rocks, Ardpatrick, 1979
 

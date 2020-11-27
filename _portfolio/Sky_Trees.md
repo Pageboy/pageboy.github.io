@@ -8,7 +8,7 @@
     - square series
 ---
 
-[![Sky Trees](https://live.staticflickr.com/65535/49742128562_87346d51c0_o.jpg)](https://live.staticflickr.com/65535/49742128562_87346d51c0_o.jpg)
+![Sky Trees](https://live.staticflickr.com/65535/49742128562_87346d51c0_o.jpg)
 
 - Trees reaching out
 - Branches in the sky

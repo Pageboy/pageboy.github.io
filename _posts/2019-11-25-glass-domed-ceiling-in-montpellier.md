@@ -20,8 +20,8 @@ Quoted from [laramoneta.com][974db79f]
 
 Here is my picture again:
 
-[![Domed Ceiling in Montpellier](/uploads/domedceiling.jpg)](/uploads/domedceiling.jpg)
+![Domed Ceiling in Montpellier](/uploads/domedceiling.jpg "Domed Ceiling in Montpellier")
 
 ### I took this picture of tomatoes in the same Fruit market.
 
-[![Tomatoes in Montpellier](https://live.staticflickr.com/65535/49210211787_711b08ed94_k.jpg)](https://live.staticflickr.com/65535/49210211787_711b08ed94_k.jpg)
+![Tomatoes in Montpellier](https://live.staticflickr.com/65535/49210211787_711b08ed94_k.jpg)](https://live.staticflickr.com/65535/49210211787_711b08ed94_k.jpg "Tomatoes in Montpellier](https://live.staticflickr.com/65535/49210211787_711b08ed94_k.jpg)")

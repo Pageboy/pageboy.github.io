@@ -7,7 +7,7 @@
     - photography
 ---
 
-[![Mackerel caught in West Loch Tarbert, Argyll](https://live.staticflickr.com/65535/49845397763_68eaeb090a_k.jpg)](https://live.staticflickr.com/65535/49845397763_68eaeb090a_k.jpg)
+![Mackerel caught in West Loch Tarbert, Argyll](https://live.staticflickr.com/65535/49845397763_68eaeb090a_k.jpg)
 
 A Mackerel caught from a feather lure, Ardpatrick, 1979
 

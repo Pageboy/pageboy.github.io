@@ -9,7 +9,7 @@
   published: true
 ---
 
-[![Mushrooms drawn on Rock with chalk](https://live.staticflickr.com/65535/49849376783_caf6b58899_3k.jpg)](https://live.staticflickr.com/65535/49849376783_caf6b58899_3k.jpg)
+![Mushrooms drawn on Rock with chalk](https://live.staticflickr.com/65535/49849376783_caf6b58899_3k.jpg)
 
 Mushrooms drawn on Rock with chalk, Ardpatrick, 1979
 

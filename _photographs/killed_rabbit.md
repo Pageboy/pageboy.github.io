@@ -8,7 +8,7 @@
     - photography
 ---
 
-[![Killed Rabbit](https://live.staticflickr.com/65535/49849909736_6372778ccc_3k.jpg)](https://live.staticflickr.com/65535/49849909736_6372778ccc_3k.jpg)
+![Killed Rabbit](https://live.staticflickr.com/65535/49849909736_6372778ccc_3k.jpg)
 
 Rabbit hunted and killed with a shotgun, Ardpatrick, 1980
 

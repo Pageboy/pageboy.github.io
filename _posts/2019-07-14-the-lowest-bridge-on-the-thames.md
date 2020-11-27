@@ -14,12 +14,12 @@ The Botley Road in Oxford crosses the Thames just beyond the railway station. Th
 
 **Not so, Perspectief**, for on this day we managed to get under the bridge and went for a short trip to Kings Lock for lunch.
 
-[![Approaching Osney Bridge. Photo by Zoë Jennings](/uploads/DSC_5336.jpg)](/uploads/DSC_5336.jpg)
+![Approaching Osney Bridge. Photo by Zoë Jennings](/uploads/DSC_5336.jpg "Approaching Osney Bridge. Photo by Zoë Jennings")
 
 Everything needs to be folded down, the upper deck helm wheel removed and the skipper is best to steer from the lower helm.
 
-[![Very tight fit photographed by our crew looking aft. Photo by Zoë Jennings](/uploads/DSC_5343.jpg)](/uploads/DSC_5343.jpg)
+![Very tight fit photographed by our crew looking aft. Photo by Zoë Jennings](/uploads/DSC_5343.jpg "Very tight fit photographed by our crew looking aft. Photo by Zoë Jennings")
 
-[![A pleasant stay at KIngs Lock Island](/uploads/IMG_0101.jpg)](/uploads/IMG_0101.jpg)
+![A pleasant stay at KIngs Lock Island](/uploads/IMG_0101.jpg "A pleasant stay at KIngs Lock Island")
 
-[![Back at Osney Lock with a relaxed crew](/uploads/IMG_0102.jpg)](/uploads/IMG_0102.jpg)
+![Back at Osney Lock with a relaxed crew](/uploads/IMG_0102.jpg "Back at Osney Lock with a relaxed crew")

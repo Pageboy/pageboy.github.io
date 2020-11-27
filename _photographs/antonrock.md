@@ -9,7 +9,7 @@
   published: true
 ---
 
-[![Ant drawing, Charcoal on Rock](https://live.staticflickr.com/65535/49849911156_72e25fce55_3k.jpg)](https://live.staticflickr.com/65535/49849911156_72e25fce55_3k.jpg)
+![Ant drawing, Charcoal on Rock](https://live.staticflickr.com/65535/49849911156_72e25fce55_3k.jpg)
 
 Ant drawing, Charcoal on Rock, Ardpatrick, 1979
 

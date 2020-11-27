@@ -8,7 +8,7 @@ tags:
   - square series
 ---
 
-[![3 triangles reds and yellows](https://live.staticflickr.com/65535/49300571742_c994c70466_o.jpg)](https://live.staticflickr.com/65535/49300571742_c994c70466_o.jpg)
+![3 triangles reds and yellows](https://live.staticflickr.com/65535/49300571742_c994c70466_o.jpg)
 
 - Polished Reds
 - Juice Filled Bursting

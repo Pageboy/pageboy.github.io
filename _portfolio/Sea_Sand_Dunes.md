@@ -8,7 +8,7 @@
     - square series
 ---
 
-[![Sea, Sand, and Dunes](https://live.staticflickr.com/65535/49444332933_34c20d0687_o.jpg)](https://live.staticflickr.com/65535/49444332933_34c20d0687_o.jpg)
+![Sea, Sand, and Dunes](https://live.staticflickr.com/65535/49444332933_34c20d0687_o.jpg)
 
 - Skyline meets the sea
 - Wind waves the water

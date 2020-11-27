@@ -9,7 +9,7 @@
   published: true
 ---
 
-[![Shellduck drawing, Chalk on Rock](https://live.staticflickr.com/65535/49850217477_b802ae25a0_3k.jpg)](https://live.staticflickr.com/65535/49850217477_b802ae25a0_3k.jpg)
+![Shellduck drawing, Chalk on Rock](https://live.staticflickr.com/65535/49850217477_b802ae25a0_3k.jpg)
 
 Pine cones drawn on Rock with Chalk, Ardpatrick, 1979
 
