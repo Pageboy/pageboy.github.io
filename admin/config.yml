@@ -49,6 +49,55 @@ collections:
           required: false,
         }
       - { label: "Body", name: "body", widget: "markdown" }
+      - {
+          label: "Tags",
+          name: "tags",
+          widget: "select",
+          multiple: true,
+          max: 5,
+          options:
+            [
+              "Architecture",
+              "Art",
+              "Books",
+              "Boat",
+              "Buildings",
+              "Cinema",
+              "Cruising",
+              "Culture",
+              "Design",
+              "Education",
+              "Engine",
+              "Fonts",
+              "Graphics",
+              "History",
+              "Journalism",
+              "Landscape",
+              "Life",
+              "Literature",
+              "Lockdown",
+              "Media",
+              "Music",
+              "Nature",
+              "Observations",
+              "Packaging",
+              "Personal",
+              "Photography",
+              "Portraits",
+              "Publishing",
+              "Retail",
+              "Rock Drawing",
+              "Sea",
+              "Science",
+              "Signage",
+              "Transport",
+              "Travel",
+              "TV",
+              "Work",
+            ],
+          required: false,
+          hint: "By adding tags the posts can be listed together under that tag. You will need to enable the tags page (by turning on show on menu for the tags page.",
+        }
 
   - name: "pages" # Used in routes, e.g., /admin/collections/blog
     label: "Pages" # Used in the UI
@@ -119,14 +168,59 @@ collections:
     editor:
       preview: false
     fields: # The fields for each document, usually in front matter
-      - { label: "Layout", name: "layout", widget: "hidden", default: "art" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "photo" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Flickr Photo", name: "header_feature_image", widget: "string", hint: "Find the original or large image link in the download link on Flickr" }
+      - { label: "Caption", name: "caption", widget: "string" }
+      - { label: "Flickr Share", name: "flickr_share", widget: "string", hint: "Grab the share link from Flickr for this image" }
+      - { label: "Body", name: "body", widget: "markdown". hint: "Anything else aprat from the caption" }
       - {
-          label: "Flickr Album",
-          name: "flickr_album",
-          widget: "string",
+          label: "Tags",
+          name: "tags",
+          widget: "select",
+          multiple: true,
+          max: 5,
+          options:
+            [
+              "Architecture",
+              "Art",
+              "Books",
+              "Boat",
+              "Buildings",
+              "Cinema",
+              "Cruising",
+              "Culture",
+              "Design",
+              "Education",
+              "Engine",
+              "Fonts",
+              "Graphics",
+              "History",
+              "Journalism",
+              "Landscape",
+              "Life",
+              "Literature",
+              "Lockdown",
+              "Media",
+              "Music",
+              "Nature",
+              "Observations",
+              "Packaging",
+              "Personal",
+              "Photography",
+              "Portraits",
+              "Publishing",
+              "Retail",
+              "Rock Drawing",
+              "Sea",
+              "Science",
+              "Signage",
+              "Transport",
+              "Travel",
+              "TV",
+              "Work",
+            ],
           required: false,
-          default: "flickr",
+          hint: "By adding tags the photos can be listed together under that tag. You will need to enable the tags page (by turning on show on menu for the tags page.",
         }
-      - { label: "Body", name: "body", widget: "markdown" }
