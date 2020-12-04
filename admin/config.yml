@@ -171,10 +171,25 @@ collections:
       - { label: "Layout", name: "layout", widget: "hidden", default: "photo" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Flickr Photo", name: "header_feature_image", widget: "string", hint: "Find the original or large image link in the download link on Flickr" }
+      - {
+          label: "Flickr Photo",
+          name: "header_feature_image",
+          widget: "string",
+          hint: "Find the original or large image link in the download link on Flickr",
+        }
       - { label: "Caption", name: "caption", widget: "string" }
-      - { label: "Flickr Share", name: "flickr_share", widget: "string", hint: "Grab the share link from Flickr for this image" }
-      - { label: "Body", name: "body", widget: "markdown". hint: "Anything else aprat from the caption" }
+      - {
+          label: "Flickr Share",
+          name: "flickr_share",
+          widget: "string",
+          hint: "Grab the share link from Flickr for this image",
+        }
+      - {
+          label: "Body",
+          name: "body",
+          widget: "markdown",
+          hint: "Anything else apart from the caption",
+        }
       - {
           label: "Tags",
           name: "tags",
