@@ -2,12 +2,12 @@ backend:
   name: github
   repo: Pageboy/chrisjennings # Path to your GitHub repository
   branch: master # Branch to update (master by default)
-  site_domain: chrisjennings.net #Your site on netlify
+  site_domain: chrisjennings.netlify.app #Your site on netlify
   use_graphql: true
 
 publish_mode: editorial_workflow
 show_preview_links: true
-display_url: https://chrisjennings.net
+display_url: https://www.chrisjennings.net
 logo_url: https://chrisjennings.net/uploads/typewriter.jpeg
 
 # Do NOT edit below this line
