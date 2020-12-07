@@ -7,7 +7,7 @@ backend:
 
 publish_mode: editorial_workflow
 show_preview_links: true
-display_url: https://chrisjennings.net
+display_url: https://www.chrisjennings.net
 logo_url: https://chrisjennings.net/uploads/typewriter.jpeg
 
 # Do NOT edit below this line
@@ -188,6 +188,7 @@ collections:
           label: "Body",
           name: "body",
           widget: "markdown",
+          minimal: true,
           hint: "Anything else apart from the caption",
         }
       - {
