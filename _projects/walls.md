@@ -1,15 +1,10 @@
 ---
-layout: post
-title: Wonderwall
-date: 2019-12-09T17:26:00.000Z
-header_feature_image: /uploads/wall.jpg
-caption: Oxford wall
-flickr_album: '72157711425003093'
-tags:
-  - observations
-  - photography
+layout: project
+title: Wonderwalls
+date: 2020-12-08T13:13:15.332Z
+header_feature_image: /uploads/49050222736_ee490f271b_k.jpg
+flickr_album: "72157711425003093"
 ---
-
 Walls to hold us in, walls to keep us apart. But walls can also present interesting textures and support plants. Did you walk by a wall today and see some graffiti on it? Did you lean on a wall while waiting for your bus?
 
 A wall keeps Pyramus and Thisbe apart, but they manage to whisper to each other through a crack:
@@ -36,6 +31,6 @@ You can even find the movie (directed by Joe Massot) on [YouTube][de90e908].
 
 I like finding interesting textures in walls of all kind. See my photos here.
 
-^1]: from a translation of Pyramus and Thisbe a part of _Metamorphoses_ by Ovid accessed from [Wikisource][9720f898]
+[^1]: from a translation of Pyramus and Thisbe a part of _Metamorphoses_ by Ovid accessed from [Wikisource][9720f898]
 
   [9720f898]: https://en.wikisource.org/wiki/Translation:Metamorphoses/Pyramus_and_Thisbe "Wikisource"
