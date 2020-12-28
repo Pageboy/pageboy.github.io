@@ -5,6 +5,7 @@ date: 2020-12-28T10:32:14.932Z
 header_feature_image: /uploads/aca41dc0-7752-475c-b1cb-211af06b9a69.jpeg
 caption: Oxford from Boars Hill
 flickr_album: flickr
+map: '{"type":"Point","coordinates":[-1.2905931,51.7161548]}'
 tags:
   - architecture
   - landscape
