@@ -11,7 +11,9 @@ tags:
   - literature
   - buildings
 ---
-Matthew Arnold (1822-88) was familiar with this view from East of the city and his poem, *Thyrsis* included the phrase **dreaming spires.**
+Matthew Arnold (1822-88) was familiar with this view from East of the city of Oxford and his poem, *Thyrsis* included the phrase **dreaming spires.**
+
+![Oxford from Boars Hill](/uploads/aca41dc0-7752-475c-b1cb-211af06b9a69.jpeg "Oxford")
 
 How changed is here each spot man makes or fills!\
 In the two Hinkseys nothing keeps the same;\
@@ -37,15 +39,8 @@ She needs not June for beauty’s heightening,
 
 Lovely all times she lies, lovely to-night.
 
-The distant view will have changed slightly and you may notice an incongruous red building that is recent addition. Here is the view in all it’s glory.
-
-![Oxford from Boars Hill](/uploads/aca41dc0-7752-475c-b1cb-211af06b9a69.jpeg "Oxford")
+The distant view will have changed slightly and you may notice an incongruous red building that is recent addition.
 
 I have taken a picture of this red building from the other side of the Thames at Grandpont.
 
 ![Looking through Friars Wharf houses](/uploads/d1d442be-9602-4a11-bd2e-d158f0208046.jpeg)
-
-Here is a picture of Matthew Arnold
-
-<a title="Elliott &amp; Fry
-, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Matthew_Arnold.jpg"><img alt="Matthew Arnold" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Matthew_Arnold.jpg/512px-Matthew_Arnold.jpg"></a>
