@@ -40,6 +40,8 @@ She needs not June for beauty’s heightening,
 
 Lovely all times she lies, lovely to-night.
 
+<hr />
+
 The distant view will have changed slightly and you may notice an incongruous red building that is recent addition.
 
 I have taken a picture of this red building from the other side of the Thames at Grandpont.
