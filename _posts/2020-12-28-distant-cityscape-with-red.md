@@ -13,6 +13,8 @@ tags:
 ---
 Matthew Arnold (1822-88) was familiar with this view from East of the city and his poem, *Thyrsis* included the phrase **dreaming spires.**
 
+![Oxford from Boars Hill](/uploads/aca41dc0-7752-475c-b1cb-211af06b9a69.jpeg "Oxford")
+
 How changed is here each spot man makes or fills!\
 In the two Hinkseys nothing keeps the same;\
 The village-street its haunted mansion lacks,\
@@ -37,9 +39,7 @@ She needs not June for beauty’s heightening,
 
 Lovely all times she lies, lovely to-night.
 
-The distant view will have changed slightly and you may notice an incongruous red building that is recent addition. Here is the view in all it’s glory.
-
-![Oxford from Boars Hill](/uploads/aca41dc0-7752-475c-b1cb-211af06b9a69.jpeg "Oxford")
+The distant view will have changed slightly and you may notice an incongruous red building that is recent addition.
 
 I have taken a picture of this red building from the other side of the Thames at Grandpont.
 
