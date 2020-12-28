@@ -544,7 +544,11 @@ max-height: 100%;
 }
 
 .posts .excerpt {
-    margin-top: 1em
+    margin-top: .6em;
+}
+
+.excerpt p {
+    margin:0;
 }
 
 .subtitle {
