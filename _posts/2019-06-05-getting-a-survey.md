@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Getting a boat survey
-date: '2018-12-06'
-author: false
+date: 2018-12-06
 header_feature_image: /uploads/DSC_3538.jpg
 hidden: false
+author: false
 tags:
   - boat
-description: 'Before you buy a boat, you need to get it surveyed.'
-
+  - Perspectief
+description: Before you buy a boat, you need to get it surveyed.
 ---
 
 Barry Burnell of National Marine Surveying came to the marina, the boat was hauled out and the survey took place over one day.
