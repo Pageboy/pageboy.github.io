@@ -52,12 +52,6 @@ collections:
         }
       - { label: "Body", name: "body", widget: "markdown" }
       - {
-          label: "Map",
-          name: "map",
-          widget: "map",
-          default: '{"type":"Point","coordinates":[0,0]}',
-        }
-      - {
           label: "Tags",
           name: "tags",
           widget: "select",
@@ -90,6 +84,7 @@ collections:
               "observations",
               "packaging",
               "personal",
+              "Perspectief",
               "photography",
               "portraits",
               "publishing",
@@ -98,6 +93,8 @@ collections:
               "sea",
               "science",
               "signage",
+              "teaching",
+              "Thames",
               "transport",
               "travel",
               "tv",
