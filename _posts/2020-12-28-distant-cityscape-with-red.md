@@ -5,6 +5,7 @@ date: 2020-12-28T10:32:14.932Z
 header_feature_image: /uploads/aca41dc0-7752-475c-b1cb-211af06b9a69.jpeg
 caption: Oxford from Boars Hill
 flickr_album: flickr
+map: '{"type":"Point","coordinates":[-1.2902927,51.7164472]}'
 tags:
   - architecture
   - landscape
@@ -39,7 +40,9 @@ She needs not June for beauty’s heightening,
 
 Lovely all times she lies, lovely to-night.
 
-The distant view will have changed slightly and you may notice an incongruous red building that is recent addition.
+<hr />
+
+The distant view will have changed slightly and you may notice an incongruous red building that is a recent addition.
 
 I have taken a picture of this red building from the other side of the Thames at Grandpont.
 
