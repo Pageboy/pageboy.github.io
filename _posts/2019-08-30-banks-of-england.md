@@ -1,14 +1,16 @@
 ---
-layout: "post"
-title: "Banks of England"
-date: "2019-08-30 13:52"
+layout: post
+title: Banks of England
+date: 2019-08-30 13:52
+header_feature_image: /uploads/DSC_5546.jpg
+caption: Many private properties are fortunate to have the Thames at the bottom
+  of their garden
 published: true
-header_feature_image: "/uploads/DSC_5546.jpg"
-caption: "Many private properties are fortunate to have the Thames at the bottom of their garden"
-flickr_album: 72157710613024437
+flickr_album: 72157710613024430
 tags:
   - boat
   - cruising
+  - Perspectief
 ---
 
 As we cruise up and down the Thames, we are struck by the variety of scenes that drift past; marking the boundary between the water and the land.
