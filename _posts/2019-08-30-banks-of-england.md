@@ -6,7 +6,7 @@ header_feature_image: /uploads/DSC_5546.jpg
 caption: Many private properties are fortunate to have the Thames at the bottom
   of their garden
 published: true
-flickr_album: 72157710613024430
+flickr_album: 72157710613024437
 tags:
   - boat
   - cruising
