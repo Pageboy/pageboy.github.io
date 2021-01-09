@@ -29,4 +29,56 @@ First of all, I should say that the engine has done very well and could probably
 * Hard to maintain. Due to the reason above, it is very difficult to do the simplest of tasks, like change the water pump impeller or tighten the alternator belt (virtually no room to get between the bulkhead and the engine)
 * The engine uses a timing belt and this needs to be replaced sometimes otherwise failure means a broken engine
 
-Since I became the owner of *Perspectief*, I have soundproofed the engine bay and this has helped a little but the engine is so big that the supports for the floor are sitting on top of the air intake (the highest pont of the engine. In the process to marinise this engine the air intake silencer and filter is removed; I believe this could also be a reason for excessive noise.
+Since I became the owner of *Perspectief*, I have soundproofed the engine bay and this has helped a little but the engine is so big that the supports for the floor are sitting on top of the air intake (the highest point of the engine. In the process to marinise this engine the air intake silencer and filter is removed; I believe this could also be a reason for excessive noise.
+
+### Replacing with what?
+
+In order to establish the replacement engine and gearbox we need to evaluate 2 pieces of information:
+
+* The current specifications
+* The ideal engine size for this boat to be calculated
+
+#### Detailed Specifications of the current engine
+
+The Ford 1.6 Diesel Engine is not specified with horsepowr when used in a car (such as a Ford Escort). Even when looking through the *Haynes Workshop Manual* no information is given, however [Wikipedia](https://en.wikipedia.org/wiki/Ford_LT_engine) has an entry for this engine and it states that - *Output is 40 kW (54 PS; 54 hp) at 4800 rpm*. Or simply put **54hp at 4800rpm**.
+
+This worried me at first, because I was considering a 38hp replacement. But then I found the page in the Haynes Diesel Boat Engine Manual.
+
+![page 133 from Diesel Boat Engine Manual (Haynes, 1989)](/uploads/6647570d-23b9-4f4a-9e02-f015c12d2d31_1_105_c.jpeg)
+
+As you will read, this states that this marinised version is rated at **35HP at 3000rpm**. 
+
+Ok, so what we should now do is try to calculate the ideal engine size for this boat.
+
+### Calculating the required Engine Size for *Perspectief*
+
+This required some maths and I referred to an excellent book in my posession: *How to Install a New Diesel Engine*, Peter Cumberlidge, 2006, Adlard Coles. The information herein was also verified by referring to the *Diesel Boat Engine Manual*, Peter Bowyer, Haynes Publishing 1982.
+
+**Perspectief's specifications needed for the calculations**:
+
+* Water Line Length: 25 feet = **WL**
+* Displacement: 8 tons (17637 pounds) = **D**
+
+The probable maximum speed that *Perspectief* can reach is:
+
+```
+S = 1.4 X √WL
+```
+
+Max speed  is  **S** = 7 Knots
+
+To calculate the horsepower (**HP**) needed to reach this max speed the following formula can be used:
+
+
+
+```
+S / √WL  =  10.665 / 3√(D / HP)
+
+HP = (S x D) / √WL x 1213
+```
+
+Therefore **HP** = 21
+
+So, we can confidently suggest that an engine that delivers 38hp at 3600rpm will be adequate.
+
+## So what is the best choice?
