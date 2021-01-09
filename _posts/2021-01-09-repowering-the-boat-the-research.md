@@ -29,4 +29,4 @@ First of all, I should say that the engine has done very well and could probably
 * Hard to maintain. Due to the reason above, it is very difficult to do the simplest of tasks, like change the water pump impeller or tighten the alternator belt (virtually no room to get between the bulkhead and the engine)
 * The engine uses a timing belt and this needs to be replaced sometimes otherwise failure means a broken engine
 
-Since I became the owner of *Perspectief*, I have soundproofed the engine bay and this has helped a little but the engine is so big that the supports for the floor are sitting on top of the air intake (the highest pont of the engine. In the process to marinise this engine
+Since I became the owner of *Perspectief*, I have soundproofed the engine bay and this has helped a little but the engine is so big that the supports for the floor are sitting on top of the air intake (the highest pont of the engine. In the process to marinise this engine the air intake silencer and filter is removed; I believe this could also be a reason for excessive noise.
