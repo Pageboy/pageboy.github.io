@@ -19,7 +19,7 @@ When *Perspectief* was commissioned in 1987 at the z-yacht yard in the Netherlan
 
 ### The Engine Marinised
 
-It seems that the components for marinising this engine would have come from Lancing Marine in Sussex UK. I would imagine that the actual marinisation may have happened in Holland with parts shipped from the UK. 
+It seems that the components for marinising this engine would have come from [Lancing Marine](https://www.lancingmarine.com) in Sussex UK. I would imagine that the actual marinisation may have happened in Holland with parts shipped from the UK. 
 
 Interestingy I have 2 books from **Haynes Publishers** - The *Ford 1.6 and 1.8 Diesel Engine* 1998, but also I recently discovered the *Diesel Boat Engine Manual*, Peter Bower 1989. This latter book has a section on marinising the Ford 1.6 from parts supplied by Lancing Marine.
 
@@ -33,6 +33,10 @@ First of all, I should say that the engine has done very well and could probably
 * The engine uses a timing belt and this needs to be replaced sometimes otherwise failure means a broken engine
 
 Since I became the owner of *Perspectief*, I have soundproofed the engine bay and this has helped a little but the engine is so big that the supports for the floor are sitting on top of the air intake (the highest point of the engine. In the process to marinise this engine the air intake silencer and filter is removed; I believe this could also be a reason for excessive noise.
+
+Fortunately, between the engine and the shaft there is an aquadrive because it would have been impossible to align the shaft directly with the output at the gearbox, because the engine fits exactly between the bottom of the hull and underside of the floor. Let me show you:
+
+![You see here the Aquadrive at about 15 degrees offset vertically. The engine should be lifted to align properly.](/uploads/e2185672-28dd-4cea-8a5f-45af686896bc_1_105_c.jpeg)
 
 ### Replacing with what?
 
@@ -54,6 +58,10 @@ This worried me at first, because I was considering a 38hp replacement. But then
 As you will read, this states that this marinised version is rated at **35HP at 3000rpm**. 
 
 Ok, so what we should now do is try to calculate the ideal engine size for this boat.
+
+**The Existing Gearbox:**
+
+This is a PRM Delta Hydraulic and is no longer made. This would be replaced by a PRM 160.
 
 ### Calculating the required Engine Size for *Perspectief*
 
