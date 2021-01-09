@@ -5,6 +5,9 @@ date: 2021-01-09T14:32:28.872Z
 header_feature_image: /uploads/81ed7106-33d2-45aa-9915-78d873ee2311_1_105_c.jpeg
 caption: The Ford 1.6 Diesel
 flickr_album: flickr
+tags:
+  - engine
+  - boat
 ---
 After a lot of research the decision has been made to replace the engine in *Perspectief*. Her engine is as old as the boat and maybe be even older. Here follows an explanation of why we need to get a new engine and also a narrative of the research undertaken. No doubt you will want to read on to find out the progress on the project, but this post is just about the research.
 
@@ -42,6 +45,8 @@ In order to establish the replacement engine and gearbox we need to evaluate 2 p
 
 The Ford 1.6 Diesel Engine is not specified with horsepowr when used in a car (such as a Ford Escort). Even when looking through the *Haynes Workshop Manual* no information is given, however [Wikipedia](https://en.wikipedia.org/wiki/Ford_LT_engine) has an entry for this engine and it states that - *Output is 40 kW (54 PS; 54 hp) at 4800 rpm*. Or simply put **54hp at 4800rpm**.
 
+I also have an *Operators Handbook* (found on eBay) for the XLD 416. This states that the max power is 40kW  at 48000rpm - meaning 54hp at 48000rpm
+
 This worried me at first, because I was considering a 38hp replacement. But then I found the page in the Haynes Diesel Boat Engine Manual.
 
 ![page 133 from Diesel Boat Engine Manual (Haynes, 1989)](/uploads/6647570d-23b9-4f4a-9e02-f015c12d2d31_1_105_c.jpeg)
@@ -69,8 +74,6 @@ Max speed  is  **S** = 7 Knots
 
 To calculate the horsepower (**HP**) needed to reach this max speed the following formula can be used:
 
-
-
 ```
 S / √WL  =  10.665 / 3√(D / HP)
 
@@ -82,3 +85,18 @@ Therefore **HP** = 21
 So, we can confidently suggest that an engine that delivers 38hp at 3600rpm will be adequate.
 
 ## So what is the best choice?
+
+Here are the engines that I have considered:
+
+Vetus M4.35, Nani 4.38, Betamarine 38
+
+**Why did I choose the Betamarine 38?**
+
+* Cheaper
+* Can have an extra panel and cables for the upper helm
+* Special feet can be made to fit the existing supports
+* The dimensions are perfect for the engine bay and will give pleanty of room for acces to alternator and impeller.
+
+Another reason is that I have previously owned a Betamarine engine on my previous boat, and I found this to be very relaible and easy to maintain.
+
+I can let you read all about this engine here. In the next post I will show the details of the exiting engine space against the new engine and how this should fit in to the space.
