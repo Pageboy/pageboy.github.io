@@ -107,4 +107,4 @@ Vetus M4.35, Nani 4.38, Betamarine 38
 
 Another reason is that I have previously owned a Betamarine engine on my previous boat, and I found this to be very relaible and easy to maintain.
 
-I can let you read all about this engine here. In the next post I will show the details of the exiting engine space against the new engine and how this should fit in to the space.
+I can let you [read all about this engine here](https://betamarine.co.uk/portfolio/beta-38/). In the next post I will show the details of the existing engine space against the new engine and how this should fit in to the space.
