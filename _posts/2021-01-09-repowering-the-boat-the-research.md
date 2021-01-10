@@ -4,7 +4,7 @@ title: Repowering the Boat - the research
 date: 2021-01-09T14:32:28.872Z
 header_feature_image: /uploads/81ed7106-33d2-45aa-9915-78d873ee2311_1_105_c.jpeg
 caption: The Ford 1.6 Diesel
-flickr_album: flickr
+flickr_album: flickr72157717820076916
 tags:
   - engine
   - boat
@@ -108,3 +108,9 @@ Vetus M4.35, Nani 4.38, Betamarine 38
 Another reason is that I have previously owned a Betamarine engine on my previous boat, and I found this to be very reliable and easy to maintain.
 
 I can let you [read all about the Betamarine 38 engine here](https://betamarine.co.uk/portfolio/beta-38/). In the next post I will show the details of the existing engine space against the new engine and how this should fit in to the space.
+
+**Will it fit?**
+
+Take a look at this animated gif where I overlay the Betamarine 38 (in red) on top of the Ford (engine only - no gearbox).
+
+![The Betamarine 38 and the Ford XLD 1.6](/uploads/engineoverlays.gif)
