@@ -13,7 +13,7 @@ After a lot of research the decision has been made to replace the engine in *Per
 
 ## What is the current engine (as of early 2021)?
 
-When *Perspectief* was commissioned in 1987 at the z-yacht yard in the Netherlands, she was equiped with a Ford XLD 1.6 Diesel. This engine is sometimes referred to as the XLD-4016 but also as the Dagenham since it was produced at Ford's Dagenham plant (Dagenham is in Essex, UK). vThis Ford engine was fitted in a Ford Escort and also some vans.
+When *Perspectief* was commissioned in 1987 at the z-yacht yard in the Netherlands, she was equiped with a Ford XLD 1.6 Diesel. This engine is sometimes referred to as the XLD-4016 but also as the *Dagenham* since it was produced at Ford's Dagenham plant (Dagenham is in Essex, UK). This Ford engine was fitted in a Ford Escort and also some vans.
 
 ![This shows the Engine in a Ford Escort circa 1988](/uploads/ford_1.6_diesel_engine_ltc.jpg)
 
@@ -37,9 +37,9 @@ First of all, I should say that the engine has done very well and could probably
 
 Since I became the owner of *Perspectief*, I have soundproofed the engine bay and this has helped a little but the engine is so big that the supports for the floor are sitting on top of the air intake (the highest point of the engine. In the process to marinise this engine the air intake silencer and filter is removed; I believe this could also be a reason for excessive noise.
 
-Fortunately, between the engine and the shaft there is an aquadrive because it would have been impossible to align the shaft directly with the output at the gearbox, because the engine fits exactly between the bottom of the hull and underside of the floor. Let me show you:
+Fortunately, between the engine and the shaft there is an **aquadrive** because it would have been impossible to align the shaft directly with the output at the gearbox, because the engine fits exactly between the bottom of the hull and underside of the floor. Let me show you:
 
-![You see here the Aquadrive at about 15 degrees offset vertically. The engine should be lifted to align properly.](/uploads/e2185672-28dd-4cea-8a5f-45af686896bc_1_105_c.jpeg)
+![You see here the Aquadrive at about 10 degrees offset vertically. The engine should be lifted to align properly.](/uploads/e2185672-28dd-4cea-8a5f-45af686896bc_1_105_c.jpeg)
 
 ### Replacing with what?
 
