@@ -1,8 +1,9 @@
 ---
-title: About
-permalink: "/about/"
 layout: page
+title: About
+permalink: /about/
 subtitle: All about me and my stuff
+date: 2021-01-24T23:33:42.725Z
 header_feature_image: uploads/watersedge.jpg
 order: 1
 ---
@@ -19,7 +20,7 @@ I teach at Oxford Brookes University within the [Oxford International Centre for
 
 ![Publisha](/uploads/publisha.png "Publisha")
 
-My Digital Publishing Hub site][5f5c75ef]
+[My Digital Publishing Hub site][5f5c75ef]
 
 This site includes all of my eBook production and digital publishing help documents, presentations and screencasts. You can get loads of help if you are using InDesign to create eBooks.
 
@@ -30,7 +31,7 @@ This site includes all of my eBook production and digital publishing help docume
 
 ![Publisha on Medium](/uploads/medium2.png "Publisha on Medium")
 
-Publisha on Medium][2b32ddf3]
+[Publisha on Medium][2b32ddf3]
 
   [2b32ddf3]: https://medium.com/publisha "I am putting some of my papers on Medium"
 
