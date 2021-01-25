@@ -21,7 +21,7 @@ When *Perspectief* was commissioned in 1987 at the z-yacht yard in the Netherlan
 
 It seems that the components for marinising this engine would have come from [Lancing Marine](https://www.lancingmarine.com) in Sussex UK. I would imagine that the actual marinisation may have happened in Holland with parts shipped from the UK. 
 
-Interestingy I have 2 books from **Haynes Publishers** - The *Ford 1.6 and 1.8 Diesel Engine* 1998, but also I recently discovered the *Diesel Boat Engine Manual*, Peter Bower 1989. This latter book has a section on marinising the Ford 1.6 from parts supplied by Lancing Marine.
+Interestingy I have 2 books from **Haynes Publishers** - The *Ford 1.6 and 1.8 Diesel Engine* 1998, but also I recently discovered the *Diesel Boat Engine Manual*, Peter Bowyer 1989. This latter book has a section on marinising the Ford 1.6 from parts supplied by Lancing Marine (see below for an extract).
 
 ![The marinised engine in Perspectief](/uploads/img_0085.jpeg)
 
@@ -60,11 +60,11 @@ This worried me at first, because I was considering a 38hp replacement. But then
 
 As you will read, this states that this marinised version is rated at **35HP at 3000rpm**. 
 
-Ok, so what we should now do is try to calculate the ideal engine size for this boat.
-
 **The Existing Gearbox:**
 
 This is a PRM Delta Hydraulic and is no longer made. This would be replaced by a PRM 160.
+
+Ok, so what we should now do is try to calculate the ideal engine size for this boat.
 
 ### Calculating the required Engine Size for *Perspectief*
 
@@ -103,7 +103,8 @@ Vetus M4.35, Nani 4.38, Betamarine 38
 
 **Why did I choose the Betamarine 38?**
 
-* Cheaper
+* Better value
+* Excellent support from Betamarine in Gloucestershire
 * Can have an extra panel and cables for the upper helm
 * Special feet can be made to fit the existing supports
 * The dimensions are perfect for the engine bay and will give pleanty of room for acces to alternator and impeller.
