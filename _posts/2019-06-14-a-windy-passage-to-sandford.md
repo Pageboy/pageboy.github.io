@@ -13,7 +13,7 @@ tags:
 categories:
   - personal
 ---
-We took and opportunity between the rain showers to take our friend Wilfried to Sandford for a picnic lunch.
+We took an opportunity between the rain showers to take our friend Wilfried to Sandford for a picnic lunch.
 
 There were 2 Salters steamers plying up and down the river; Wargrave and Goring.
 
