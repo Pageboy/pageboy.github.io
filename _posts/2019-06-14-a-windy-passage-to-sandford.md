@@ -1,18 +1,19 @@
 ---
 layout: post
-published: true
-categories:
-  - personal
+header_feature_image: /uploads/IMG_1285.jpeg
+caption: Tied up in Sandford
 featured: false
+published: true
+date: 2020-10-06T10:35:14.170Z
 comments: false
 title: A windy passage to Sandford
-header_feature_image: /uploads/IMG_1285.jpeg
-caption: "Tied up in Sandford"
 tags:
   - boat
   - cruising
+categories:
+  - personal
 ---
-We took and opportunity between the rain showers to take our friend Wilfried to Sandford for a picnic lunch.
+We took an opportunity between the rain showers to take our friend Wilfried to Sandford for a picnic lunch.
 
 There were 2 Salters steamers plying up and down the river; Wargrave and Goring.
 
