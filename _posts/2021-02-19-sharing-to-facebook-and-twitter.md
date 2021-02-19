@@ -2,7 +2,7 @@
 layout: post
 title: Sharing to Facebook and Twitter
 date: 2020-12-30T17:03:50.198Z
-header_feature_image: /uploads/f5b697b1-50b3-49fa-b0e4-5b3a835eea56.jpeg
+header_feature_image: /uploads/22004381.jpeg
 flickr_album: flickr
 tags:
   - web sites
