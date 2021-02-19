@@ -3,6 +3,8 @@
 font-family: "Cantarell",Geneva,Tahoma,"Trebuchet MS",sans-serif;
 } */
 
+@import "highlighter.css";
+
 html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
