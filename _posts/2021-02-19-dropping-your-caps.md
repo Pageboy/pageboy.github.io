@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dropping your caps
-date: 2021-02-19T16:15:06.088Z
+date: 2021-02-19T16:46:22.865Z
 header_feature_image: /uploads/dropcaps.jpg
 caption: Drop Caps to start a paragraph
 flickr_album: flickr
@@ -22,7 +22,7 @@ As you may expect, I am going to talk about *InDesign* here.
 
 To add drop caps to a paragraph we use the Drop Caps and Nested Styles feature. Here we see this in use:
 
-![Here we see a drop cap setting of one character but dropped by 3 lines.](../uploads/dropcapsindesign.png "InDesign drop caps")
+![Here we see a drop cap setting of one character but dropped by 3 lines.](/uploads/dropcapsindesign.png "InDesign drop caps")
 
 ### Further adjustments
 
