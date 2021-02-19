@@ -67,3 +67,7 @@ h1 {
   font-size: 2.5rem;
 }
 ```
+
+## Change the root em value
+
+For convenience we can change the font-size default value (normally 16px) so that our subsequent values within the body will be easier to calculate / visualise. After all, using something like 1.3rem, will be a tricky value - actually 16x1.3=20.8pixels. So, why not change the value of the default to 10px, then our value will be easier - a value of 1.3rem becomes 13pixels.
