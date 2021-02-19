@@ -2,7 +2,7 @@
 layout: post
 title: Sharing to Facebook and Twitter
 date: 2020-12-30T17:03:50.198Z
-header_feature_image: ""
+header_feature_image: /uploads/typewriter.jpeg
 flickr_album: flickr
 tags:
   - web sites
