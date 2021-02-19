@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dropping your caps
-date: 2021-02-19T15:48:09.863Z
+date: 2021-02-19T16:15:06.088Z
 header_feature_image: /uploads/dropcaps.jpg
 caption: Drop Caps to start a paragraph
 flickr_album: flickr
