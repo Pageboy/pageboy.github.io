@@ -28,7 +28,7 @@ If you want your page referrals in `Twitter`to look good too you have some furth
 
 Here we see the code that I am using to get the correct tags in both Facebook and Twitter.
 
-{%- raw -%}
+{% raw %}
 
 ```html
 <!-- Open Graph -->
@@ -53,7 +53,7 @@ Here we see the code that I am using to get the correct tags in both Facebook an
 <meta name="twitter:image:alt" content="Book in the hands of a monk">
 ```
 
-{%- endraw -%}
+{% endraw %}
 
 ## Stand out with a fine picture
 
@@ -61,7 +61,7 @@ Here we see the code that I am using to get the correct tags in both Facebook an
 
 You will see from the code block above that both `OpenGraph` and `TwitterCard` expect an image to display.  In this case we use an image that has a path set out in the `YAML` config. In other words you need to commit to an image for your site. There are other options. You can give each page or blog post on your site an image; in this case the code snippet above might go something like:
 
-{%- raw -%}
+{% raw %}
 
 ```html
 {%- if page.image != null -%}
@@ -71,7 +71,7 @@ You will see from the code block above that both `OpenGraph` and `TwitterCard` e
 {%- endif -%}
 ```
 
-{%- endraw -%}
+{% endraw %}
 
 ## A good description is going to help
 
@@ -79,7 +79,7 @@ Facebook and Twitter want some honest info to display. The question is; do you w
 
 Here is snippet for the `TwitterCard` that will get that right:
 
-{%- raw -%}
+{% raw %}
 
 ```html
 {%- if page.blurb != null -%}
@@ -89,7 +89,7 @@ Here is snippet for the `TwitterCard` that will get that right:
 {%- endif -%}
 ```
 
-{%- endraw -%}
+{% endraw %}
 
 The `excerpt` in the code above simply takes the first paragraph of your post. The description will be truncated to 2 lines. **Note**: do not include links in this description otherwise the meta tag will be broken (you could strip the HTML from this with the `strip_html` code).
 
