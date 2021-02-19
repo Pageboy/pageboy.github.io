@@ -21,4 +21,6 @@ Isn't it even too much to deal with these channels - YouTube.Facebook.Flickr.Twi
 
 ### So here is the plan
 
-pagetoscreen.net will be retired, so I won't link to it here. I have the domain publisha.org, so plan to move the github pages site to there.
+pagetoscreen.net will be retired, so I won't link to it here. I have the domain publisha.org, so plan to move the github pages site to there. I will stop using that site as a blog and just do those kinds of posts here.
+
+Should I republish some posts. Yes, probably, so things stay together (that's the idea).
