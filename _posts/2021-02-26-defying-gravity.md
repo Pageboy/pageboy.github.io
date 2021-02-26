@@ -14,4 +14,4 @@ Of course it has, so we can search on YouTube and find plenty of boaters and eng
 
 #### Building a gantry
 
-So, in my situation, I am unable to get above the engine bay from outside the boat, so the siloution was to construct a gantry inside. I am fortunate to have some old timber from dismanteld childrens' bunk beds (yes, they have grwon up now). My solution was to build a pair of triangular structures to support a 100mm x 80mm length of timber (rescued from a  skip). I also supplemented this with a cross brace perpendicular and over to the upper helm access opening.
+So, in my situation, I am unable to get above the engine bay from outside the boat, so the siloution was to construct a gantry inside. I am fortunate to have some old timber from dismanteld childrens' bunk beds (yes, they have grwon up now). My solution was to build a pair of triangular structures to support a 100mm x 50mm length of timber (rescued from a  skip). I also supplemented this with a cross brace perpendicular and over to the upper helm access opening.
