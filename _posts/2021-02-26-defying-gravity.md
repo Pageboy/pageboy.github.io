@@ -10,10 +10,12 @@ Engines are very heavy objects being made from cast iron and steel. A typical di
 
 ## It has been done by Lots and Lots of people
 
-Of course it has, so we can search on YouTube and find plenty of boaters and engineers who have shared their experiences. That's what I did, but no 2 situations are the same and mine is a steel cruiser without sails ans o I don't have a boom that can be used as a crane! Further, I have a narrow entrance to the wheelhouse with steps.
+Of course it has, so we can search on YouTube and find plenty of boaters and engineers who have shared their experiences. That's what I did, but no 2 situations are the same and mine is a steel cruiser without sails and I don't have a boom that can be used as a crane! Further, I have a narrow entrance to the wheelhouse with steps.
 
 #### Building a gantry
 
-So, in my situation, I am unable to get above the engine bay from outside the boat, so the siloution was to construct a gantry inside. I am fortunate to have some old timber from dismanteld childrens' bunk beds (yes, they have grwon up now). My solution was to build a pair of triangular structures to support a 100mm x 50mm length of timber (rescued from a  skip). I also supplemented this with a cross brace perpendicular and over to the upper helm access opening.
+So, in my situation, I am unable to get above the engine bay from outside the boat, so the solution was to construct a gantry inside. I am fortunate to have some old timber from dismantled childrens' bunk beds (yes, they have grwon up now). My solution was to build a pair of triangular structures to support a 100mm x 50mm length of timber (rescued from a  skip). I also supplemented this with a cross brace perpendicular and over to the upper helm access opening.
 
-![Very wide angle view](/uploads/_dsc7600.jpeg)
+Take a look here. I hope you get the idea.
+
+![Very wide angle view of the engine now sitting on the cabin floor.](/uploads/_dsc7600.jpeg)
