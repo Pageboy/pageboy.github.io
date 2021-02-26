@@ -6,4 +6,12 @@ header_feature_image: /uploads/engineup.jpg
 caption: Engine suspended
 flickr_album: flickr
 ---
-Engine are very heavy objects being made from cast iron and steel. A typical deisel engine will weigh 140 kilos and a marine engine with a gearbox and heat exchanger attached that could go up to 190kilos. So, how does one lift and engine from the engine bay so that it can be removed from the baot.
+Engines are very heavy objects being made from cast iron and steel. A typical diesel engine will weigh 140 kilos and a marine engine with a gearbox and heat exchanger attached could be up to 190kilos. So, how does one lift an engine from the boat's engine bay so that it can be removed from the boat.
+
+## It has been done by Lots and Lots of people
+
+Of course it has, so we can search on YouTube and find plenty of boaters and engineers who have shared their experiences. That's what I did, but no 2 situations are the same and mine is a steel cruiser without sails ans o I don't have a boom that can be used as a crane! Further, I have a narrow entrance to the wheelhouse with steps.
+
+Building a gantry
+
+So, in my situation.
