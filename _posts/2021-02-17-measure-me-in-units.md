@@ -84,7 +84,7 @@ h4 {
 
 h5 {
   font-size: 1rem; /*this will be 16px if root is default. */
-  margin: 2rem
+  margin: 2rem; /* this will be 
 ```
 
 ## Screen Units
