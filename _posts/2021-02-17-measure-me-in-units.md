@@ -77,24 +77,24 @@ For convenience we can change the font-size default value (normally 16px) so tha
 em simply means the font size of a particular element. So if I use 1em in the CSS, I am adopting the size of this particular element's font size. So if a paragraph of text uses the base font size - let's say 16px then 2em would be 32px. The **em** unit is relative to the font size of the element being addressed, whereas the **rem** unit is relative to the base or root font-size.
 
 ```css
+/*this presumes that the root font size is left as the default 16px */
+
 h4 {
   font-size: 18px;
   margin: 2em; /*this will be 36px*/
 }
 
 h5 {
-  font-size: 1rem; /*this will be 16px if root is default. */
-  margin: 2rem; /* this will be 
+  font-size: 1.5rem; /*this will be 24px */
+  margin: 2em; /* this will be 48px */;
+}
 ```
 
 ## Screen Units
 
 Whereas the **rem** unit is relative to the base or root font-size (in HTML), screen units are relative to the viewport dimensions. There are 4 of these values that we can make use of in our CSS; they are percentage values. I will list these here and then we can use them in an example CodePen.
 
-1vw (not the car!) is 1% of the width of the viewport
-
-1vh is 1% if the height of the viewport
-
-1vmin is 1% of the viewport's smallest dimension (could be vertical or horizontal)
-
-1vmax is 1% of the viewport's largest dimension (could be vertical or horizontal)
+* 1vw is 1% of the width of the viewport
+* 1vh is 1% if the height of the viewport
+* 1vmin is 1% of the viewport's smallest dimension (could be vertical or horizontal)
+* 1vmax is 1% of the viewport's largest dimension (could be vertical or horizontal)
