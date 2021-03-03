@@ -30,3 +30,5 @@ Should I republish some posts. Yes, probably, so things stay together (that's th
 I am sure that this a common conundrum: where do you post up your stuff - Medium, Instagram, Twitter, Facebook, YouTube, TikTok, Flickr or just your blog - or **all of them**. Here are some thoughts on this.
 
 #### Cross Posting
+
+If you read
