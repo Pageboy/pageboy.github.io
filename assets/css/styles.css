@@ -188,6 +188,10 @@ iframe, img, embed, object, video {
     padding: 0 10%
 }
 
+iframe {
+    padding:0;
+}
+
 img[align=left] {
     margin-right: 3%
 }
