@@ -29,7 +29,7 @@
 {%- else -%}
 <meta name="twitter:description" content="{{site.description}}">
 {%- endif -%}
-<!-- {%- if page.header_feature_image != null -%}
+{%- if page.header_feature_image != null -%}
   {% if page.header_feature_image contains "http" %}
     <meta name="twitter:image" content="{{page.header_feature_image}}">
   {%- else -%}
@@ -37,5 +37,5 @@
   {% endif %}
 {%- else -%}
 <meta name="twitter:image" content="{{site.url}}{{site.header_feature_image}}">
-{%- endif -%} -->
+{%- endif -%}
 <meta name="twitter:creator" content="@{{site.twitter_username}}">
