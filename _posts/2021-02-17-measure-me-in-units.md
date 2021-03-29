@@ -106,13 +106,13 @@ Whereas the **rem** unit is relative to the base or root font-size (in HTML), sc
 
 ## Pixels? We don't need them at all
 
-The things is that we can almost forget pixels for web design. I know I have mentioned pixels in setting up yhr root value, but beyond that we should be using rem and ems wherever possible.
+The things is that we can almost forget pixels for web design. I know I have mentioned pixels in setting up your root value, but beyond that we should be using rem and ems wherever possible.
 
 ### Image sizes
 
 I guess we are used to thinking about pixel sizes for images, but we never need to include the images size in the HTML we can then use percentages to deliver the single version at different sizes in diffeent contexts.
 
-Rather than use the same image but delivered at different sizes we can also provide different size versions with the \`srcset\` tag:
+Rather than use the same image but delivered at different sizes we can also provide different size versions with the srcset tag:
 
 #### The srcset tag
 
