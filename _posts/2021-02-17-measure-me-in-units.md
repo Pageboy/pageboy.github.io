@@ -112,14 +112,14 @@ The things is that we can almost forget pixels for web design. I know I have men
 
 I guess we are used to thinking about pixel sizes for images, but we never need to include the images size in the HTML we can then use percentages to deliver the single version at different sizes in diffeent contexts.
 
-#### The picture tag
+Rather than use the same image but delivered at different sizes we can also provide different size versions with the \`srcset\` tag:
 
-With the picture tag we can also provide different images for different size viewports. Like this:
+#### The srcset tag
+
+With this tag we can provide different images for different size viewports. Like this:
 
 ```html
-<picture>
-  <source media="(min-width:650px)" srcset="img_pink_flowers.jpg">
-  <source media="(min-width:465px)" srcset="img_white_flower.jpg">
-  <img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
-</picture>
+<img src="small_pic.jpg"
+    srcset="small_pic.jpg 320w, medium_pic.jpg 800w, large_pic.jpg 1200w"
+    alt="Image description">
 ```
