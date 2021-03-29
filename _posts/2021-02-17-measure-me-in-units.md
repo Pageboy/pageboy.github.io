@@ -123,3 +123,15 @@ With this tag we can provide different images for different size viewports. Like
     srcset="small_pic.jpg 320w, medium_pic.jpg 800w, large_pic.jpg 1200w"
     alt="Image description">
 ```
+
+#### The picture tag
+
+The picture tag is useful if yu want to deliver different format images, so maybe a landscape version for large screen and a portrait version on mobile. Like this:
+
+```html
+<picture>
+  <source media="(min-width:650px)" srcset="landscape_pic.jpg">
+  <source media="(min-width:465px)" srcset="portrait_pic.jpg">
+  <img src="landscape_pic.jpg" alt="Sea" style="width:auto;">
+</picture>
+```
