@@ -103,3 +103,23 @@ Whereas the **rem** unit is relative to the base or root font-size (in HTML), sc
   See the Pen <a href='https://codepen.io/pageboy/pen/oNYyZxY'>Screen Units</a> by Chris Jennings
   (<a href='https://codepen.io/pageboy'>@pageboy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
+
+## Pixels? We don't need them at all
+
+The things is that we can almost forget pixels for web design. I know I have mentioned pixels in setting up yhr root value, but beyond that we should be using rem and ems wherever possible.
+
+### Image sizes
+
+I guess we are used to thinking about pixel sizes for images, but we never need to include the images size in the HTML we can then use percentages to deliver the single version at different sizes in diffeent contexts.
+
+#### The picture tag
+
+With the picture tag we can also provide different images for different size viewports. Like this:
+
+```html
+<picture>
+  <source media="(min-width:650px)" srcset="img_pink_flowers.jpg">
+  <source media="(min-width:465px)" srcset="img_white_flower.jpg">
+  <img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
+</picture>
+```
