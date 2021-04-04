@@ -1,6 +1,7 @@
 <div class="posts">
 
     {% for post in paginator.posts | sort: "title" %}
+    {%- unless post.tags contains "boat" -%}
     <div class="post-teaser">
         {% if post.header_feature_image %}
         {% assign image_url = post.header_feature_image | replace: "_uploads", "uploads" -%}
@@ -29,6 +30,7 @@
           </div>
       </span>
     </div>
+    {% endunless %}
     {% endfor %}
 
 </div>
