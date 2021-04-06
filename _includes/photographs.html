@@ -1,7 +1,7 @@
 <div class="posts">
 
   {%- assign items = site.photographs | sort: 'date' -%}
-    {%- for art in items limit:30 -%}
+    {%- for art in items limit:100 -%}
     <div class="post-teaser">
         {% if art.header_feature_image %}
         {% assign image_url = art.header_feature_image | replace: "_uploads", "uploads" -%}
