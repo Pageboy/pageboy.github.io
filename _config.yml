@@ -82,9 +82,6 @@ pinterest:
 soundcloud:
 twitter: pageboy
 youtube: PublishaDigitalPublishingHub
-flickr:
-  api_key: df0bdac36c8f30bc29e50d61a7ee06d8
-  api_secret: 2c0e58a0753c4c38
 share_buttons:
   facebook: true
   twitter: true
