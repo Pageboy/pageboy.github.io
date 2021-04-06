@@ -121,7 +121,7 @@ kramdown:
       line_numbers: true
       start_line: 1
 
-paginate: 9
+paginate: 16
 paginate_path: page:num
 permalink: pretty
 markdown: kramdown
