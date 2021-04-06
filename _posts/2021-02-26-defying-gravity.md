@@ -30,6 +30,8 @@ Take a look here. I hope you get the idea.
 
 ![Very wide angle view of the engine now sitting on the cabin floor.](/uploads/40dcfbd6-b5d8-46fe-b283-c39bc982d173.jpeg "engine now sitting on the cabin floor")
 
+<div class="video-box"><iframe width="560" height="315" src="https://www.youtube.com/embed/CCyDa67va7o?rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
 ![Gearbox removed and engine ready to be craned out.](/uploads/img_1514.jpeg)
 
 I was not able to film the craning out of the engine.
