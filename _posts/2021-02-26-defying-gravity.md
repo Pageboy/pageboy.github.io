@@ -32,6 +32,4 @@ Take a look here. I hope you get the idea.
 
 ![Gearbox removed and engine ready to be craned out.](/uploads/img_1514.jpeg)
 
-<div class="video-box"><iframe width="560" height="315" src="https://www.youtube.com/embed/erqF7qH7kcA?rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-
 I was not able to film the craning out of the engine.
