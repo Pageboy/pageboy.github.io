@@ -20,4 +20,4 @@ So, in my situation, I am unable to get above the engine bay from outside the bo
 
 Take a look here. I hope you get the idea.
 
-![Very wide angle view of the engine now sitting on the cabin floor.](/uploads/_dsc7600.jpeg)
+![Very wide angle view of the engine now sitting on the cabin floor.](/uploads/_dsc7600.jpeg "engine now sitting on the cabin floor")
