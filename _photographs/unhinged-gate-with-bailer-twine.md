@@ -2,8 +2,8 @@
 layout: photo
 title: Unhinged gate with baler twine
 date: 2021-04-06T08:46:48.037Z
-header_feature_image: https://live.staticflickr.com/65535/51095465103_14ac7bd648_c_d.jpg
-caption: Gate leaning against post held with bailer twine
+header_feature_image: https://live.staticflickr.com/65535/51095465103_54827f2d9c_4k_d.jpg
+caption: Gate leaning against post held with baler twine
 flickr_share: https://flic.kr/p/2kR8BCT
 tags:
   - landscape
