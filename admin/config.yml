@@ -185,9 +185,9 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - {
-          label: "Flickr Photo",
+          label: "Upload Photo or use Flickr Photo",
           name: "header_feature_image",
-          widget: "string",
+          widget: "image",
           hint: "Find the original or large image link in the download link on Flickr",
         }
       - { label: "Caption", name: "caption", widget: "string" }
@@ -195,7 +195,7 @@ collections:
           label: "Flickr Share",
           name: "flickr_share",
           widget: "string",
-          hint: "Grab the share link from Flickr for this image",
+          hint: "If this is a Flickr image grab the share link from Flickr for this image",
         }
       - {
           label: "Body",
