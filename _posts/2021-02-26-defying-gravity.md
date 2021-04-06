@@ -21,3 +21,5 @@ So, in my situation, I am unable to get above the engine bay from outside the bo
 Take a look here. I hope you get the idea.
 
 ![Very wide angle view of the engine now sitting on the cabin floor.](/uploads/40dcfbd6-b5d8-46fe-b283-c39bc982d173.jpeg "engine now sitting on the cabin floor")
+
+<div class="video-box"><iframe width="560" height="315" src="https://www.youtube.com/embed/erqF7qH7kcA?rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
