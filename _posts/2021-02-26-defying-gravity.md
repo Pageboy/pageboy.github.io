@@ -18,8 +18,20 @@ Of course it has, so we can search on YouTube and find plenty of boaters and eng
 
 So, in my situation, I am unable to get above the engine bay from outside the boat, so the solution was to construct a gantry inside. I am fortunate to have some old timber from dismantled childrens' bunk beds (yes, they have grwon up now). My solution was to build a pair of triangular structures to support a 100mm x 50mm length of timber (rescued from a  skip). I also supplemented this with a cross brace perpendicular and over to the upper helm access opening.
 
+This constructed gantry was enough to get the engine up onto the floor of the saloon.
+
+Once the engine was lifted up then the floor had to put back under the swinging engine and then let back down onto a trolley.
+
+**Why a trolley?** 
+
+Perspectief has an offset entrance so the engine needed be shifted from the centre to the port side ready to lifted out by crane.
+
 Take a look here. I hope you get the idea.
 
 ![Very wide angle view of the engine now sitting on the cabin floor.](/uploads/40dcfbd6-b5d8-46fe-b283-c39bc982d173.jpeg "engine now sitting on the cabin floor")
 
+![Gearbox removed and engine ready to be craned out.](/uploads/img_1514.jpeg)
+
 <div class="video-box"><iframe width="560" height="315" src="https://www.youtube.com/embed/erqF7qH7kcA?rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+I was not able to film the craning out of the engine.
