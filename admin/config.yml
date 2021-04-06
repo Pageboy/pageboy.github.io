@@ -196,6 +196,7 @@ collections:
           name: "flickr_share",
           widget: "string",
           hint: "If this is a Flickr image grab the share link from Flickr for this image",
+          required: false,
         }
       - {
           label: "Body",
