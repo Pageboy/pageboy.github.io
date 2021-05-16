@@ -21,3 +21,5 @@ New Betamarine engine arrived at the marina in a big cardboard box. Beuatifully 
 You can't fit a brand new engine into a dirty engine bay can you?
 
 <div class="video-box"><iframe width="560" height="315" src="https://www.youtube.com/embed/d6rfiG5uCeI?rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+Thanks to George the crane driver, Les and Neil who also did some heavy lifting - and friends and family who came to watch.
