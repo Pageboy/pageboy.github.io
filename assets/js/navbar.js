@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   var menu = document.querySelector('nav ul');
 
   pull.addEventListener('click', function (e) {
-    menu.classList.toggle('hide');
+    menu.classList.toggle('hideme');
   });
 
   /*

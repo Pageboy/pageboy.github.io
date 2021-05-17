@@ -861,7 +861,7 @@ h3.tag-anchor i {
         border-right:20px solid white;
     }
 
-    nav ul.hide {
+    nav ul.hideme {
         font-size: 0;
         margin: 0;
         opacity: 0;
