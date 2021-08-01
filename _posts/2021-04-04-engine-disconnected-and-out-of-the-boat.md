@@ -24,8 +24,8 @@ The new engine is on order so now I have time to prepare the engine bay.
 
 Here are a couple of before and after pictures. I used some bilge cleaner and bilge paint. No poit in putting a new ingine into a dirty engine bay!
 
-![Nastiness from under the engine.](/uploads/img_1519.jpeg "Nastiness from under the engine.")
+![Nastiness from under the engine.](/uploads/437a89da-99ac-48a7-a2bc-98ac8eb902d8_1_102_a.jpeg "Nastiness from under the engine.")
 
 Now let's see what it looks like now.
 
-![]()
+![What a difference](/uploads/eca224dc-4b1d-4686-a914-46fc6930e985_1_102_o.jpeg)
