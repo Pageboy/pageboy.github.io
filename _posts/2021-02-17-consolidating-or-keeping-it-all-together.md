@@ -13,7 +13,7 @@ I can't handle it anymore! Too many locations to post and so I have decided to *
 
 ## The details
 
-OK, so I'll keep [publisha.github.io](publisha.github.io) for the long form articles about eBook, InDesign and web work, but one off blog posts will be here. A dolly mixture of posts about HTML, My boat, travels, activities and so on.
+OK, so I'll keep ~~[publisha.github.io](publisha.github.io)~~ (now changed to [www.publisha.org)](https://www.publisha.org) for the long form articles about eBook, InDesign and web work, but one off blog posts will be here. A dolly mixture of posts about HTML, My boat, travels, activities and so on.
 
 ### All these channels are too much for any human.
 
