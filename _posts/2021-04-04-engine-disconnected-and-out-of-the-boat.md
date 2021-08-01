@@ -29,3 +29,5 @@ Here are a couple of before and after pictures. I used some bilge cleaner and bi
 Now let's see what it looks like now.
 
 ![What a difference](/uploads/eca224dc-4b1d-4686-a914-46fc6930e985_1_102_o.jpeg)
+
+Next stage is taking delivery of the new engine and craning that in.
