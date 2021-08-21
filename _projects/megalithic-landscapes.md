@@ -3,7 +3,7 @@ title: Megalithic Landscapes
 date: 2019-11-18 00:00:00 Z
 layout: project
 flickr_album: 72157638454280223
-header_feature_image: /uploads/brodgar.jpg
+image: /uploads/brodgar.jpg
 caption:
 ---
 

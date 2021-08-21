@@ -3,7 +3,7 @@ title: My Boat
 permalink: "/perspectief/"
 layout: perspectief
 subtitle: A Perspectief on Cruising
-header_feature_image: /uploads/cliftohamdenbridge.jpg
+image: /uploads/cliftohamdenbridge.jpg
 order: 2
 flickr_album: 72157710628205712
 tags:

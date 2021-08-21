@@ -2,7 +2,7 @@
 title: Glass Domed Ceiling in Montpellier
 date: 2019-11-25 13:43:00 Z
 layout: post
-header_feature_image: "/uploads/domedceiling.jpg"
+image: "/uploads/domedceiling.jpg"
 caption:
 flickr_album: ""
 comments:

@@ -57,7 +57,7 @@ title: {title}
 date: {date}
 layout: {layout}
 published: false
-header_feature_image:
+image:
 caption:
 flickr_album:
 comments:

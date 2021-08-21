@@ -2,7 +2,7 @@
 layout: post
 published: true
 date: 2019-06-30
-header_feature_image: /uploads/IMG_0051.jpeg
+image: /uploads/IMG_0051.jpeg
 caption: Dejeuner sur L'herbe
 featured: false
 comments: false

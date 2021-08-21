@@ -2,7 +2,7 @@
 title: Greens, browns and yellows
 date: 2020-01-08 13:12
 layout: art
-header_feature_image: https://live.staticflickr.com/65535/49398803246_f2d51067ec_3k.jpg
+image: https://live.staticflickr.com/65535/49398803246_f2d51067ec_3k.jpg
 tags:
   - art
   - square series

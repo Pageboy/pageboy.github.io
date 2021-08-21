@@ -3,7 +3,7 @@ layout: post
 title: Constant Velocity Joint
 date: '2019-06-08 12:37'
 published: true
-header_feature_image: /uploads/DSC_3368.jpg
+image: /uploads/DSC_3368.jpg
 tags:
   - boat
   - engine

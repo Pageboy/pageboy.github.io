@@ -2,7 +2,7 @@
 layout: post
 title: Getting a boat survey
 date: 2018-12-06
-header_feature_image: /uploads/DSC_3538.jpg
+image: /uploads/DSC_3538.jpg
 hidden: false
 author: false
 tags:

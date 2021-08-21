@@ -2,7 +2,7 @@
 title: Stones and Mirrors
 date: 2019-07-05 08:50:00 Z
 layout: project
-header_feature_image: /uploads/2mirrors_shadowsandreflections.jpg
+image: /uploads/2mirrors_shadowsandreflections.jpg
 caption: Two mirrors in the sand with an incoming tide
 flickr_album: 72157709156751573
 ---

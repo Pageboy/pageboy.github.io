@@ -2,7 +2,7 @@
 layout: post
 title: New Engine Craned in
 date: 2021-05-16T16:23:17.956Z
-header_feature_image: /uploads/img_0114.jpeg
+image: /uploads/img_0114.jpeg
 caption: New engine ready to be craned in
 flickr_album: flickr
 tags:

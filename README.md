@@ -53,7 +53,7 @@ Customize your site header/footer with these variables in `_config.yml`:
 
 ```yml
     header_text: Welcome to my Student blog
-    header_feature_image: assets/img/sample3.png
+    image: assets/img/sample3.png
     footer_text: Copyright 2019 - Your Name
 ```
 
@@ -144,7 +144,7 @@ This are the basic features you can use with the  `post` layout.
 layout: post
 title: Hello World       			            # Title of the page
 date: 2019-08-06
-header_feature_image: images/hello.jpg 	 	# Add a feature-image to the post
+image: images/hello.jpg 	 	# Add a feature-image to the post
 tags: [holiday, Oxford, life]             # to group the posts
 published: false                          # change to true to make live
 ---
@@ -159,7 +159,7 @@ The _page_ layout has more features explained here.
 layout: page
 title: "About"
 subtitle: "This is a subtitle"  # Optional sub title for the page
-header_feature_image: "images/sample.png"
+image: "images/sample.png"
 permalink: /about.html          # Set a permalink your your page
 hide: true                # Prevent the page title to appear in the navbar
 icon: "fa-search"         # Will Display only the fontawesome icon (here: fa-search) and not the title

@@ -2,7 +2,7 @@
 layout: post
 title: Banks of England
 date: 2019-08-30 13:52
-header_feature_image: /uploads/DSC_5546.jpg
+image: /uploads/DSC_5546.jpg
 caption: Many private properties are fortunate to have the Thames at the bottom
   of their garden
 published: true

@@ -3,7 +3,7 @@ layout: "post"
 title: "The Lowest bridge on the Thames"
 date: "2019-07-14 22:43"
 published: true
-header_feature_image: "/uploads/DSC_5346.jpg"
+image: "/uploads/DSC_5346.jpg"
 caption: "We just made it with inches to spare. Photo by Zoë Jennings"
 tags:
   - boat

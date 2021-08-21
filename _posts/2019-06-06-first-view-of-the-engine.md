@@ -2,7 +2,7 @@
 layout: post
 title: First view of the engine
 date: '2018-12-06 19:39'
-header_feature_image: /uploads/DSC_3351.jpg
+image: /uploads/DSC_3351.jpg
 tags:
   - boat
   - engine

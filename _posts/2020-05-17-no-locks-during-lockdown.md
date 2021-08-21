@@ -2,7 +2,7 @@
 layout: post
 title: No Locks during Lockdown
 date: 2020-05-18 13:36
-header_feature_image: /uploads/godstow_lockdown.jpg
+image: /uploads/godstow_lockdown.jpg
 caption: Godstow Lock reporting Osney Lock
 flickr_album: ""
 ---

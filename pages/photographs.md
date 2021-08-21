@@ -2,7 +2,7 @@
 title: Photographs
 permalink: "/photographs/"
 layout: photographs
-header_feature_image:
+image:
 description:
 gridlayout: true
 icon: fa-camera-retro

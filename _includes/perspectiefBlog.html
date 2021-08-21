@@ -4,8 +4,8 @@
   {%- for post in posts limit:100 -%}
     {%- if post.tags contains "boat" -%}
     <div class="post-teaser">
-        {%- if post.header_feature_image -%}
-        {%- assign image_url = post.header_feature_image | replace: "_uploads", "uploads" -%}
+        {%- if post.image -%}
+        {%- assign image_url = post.image | replace: "_uploads", "uploads" -%}
         <div class="post-img">
             <a aria-label="{{ post.title }}" href="{{ post.url | relative_url }}">
               {%- if post.caption -%}

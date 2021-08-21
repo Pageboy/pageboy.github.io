@@ -2,7 +2,7 @@
 title: A Perspectief Gallery
 permalink: "/perspectiefgallery/"
 layout: post
-header_feature_image:
+image:
 order: 2
 hide: true
 flickr_album: 72157710628205712

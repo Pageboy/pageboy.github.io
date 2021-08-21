@@ -3,7 +3,7 @@ layout: "post"
 title: "Herons and Bridges"
 date: "2019-07-05 08:50"
 published: true
-header_feature_image: "/uploads/DSC_5139.jpg"
+image: "/uploads/DSC_5139.jpg"
 caption: "Grey Heron looking for lunch"
 flickr_album: 72157709441752206
 tags:

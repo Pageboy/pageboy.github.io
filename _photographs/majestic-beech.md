@@ -2,7 +2,7 @@
 layout: photo
 title: Majestic Beech
 date: 2020-12-06T13:12:53.018Z
-header_feature_image: https://live.staticflickr.com/65535/50454264307_633d765d24_5k_d.jpg
+image: https://live.staticflickr.com/65535/50454264307_633d765d24_5k_d.jpg
 caption: This tree is in Wytham Woods, Oxford
 flickr_share: https://flic.kr/p/2jSthYK
 tags:

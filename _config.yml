@@ -23,7 +23,7 @@ defaults:
       type: posts
     values:
       layout: post
-      header_feature_image:
+      image:
       caption:
       flickr_album:
   - scope:
@@ -31,7 +31,7 @@ defaults:
       type: pages
     values:
       layout: page
-      header_feature_image:
+      image:
       caption:
       flickr_album:
   - scope:
@@ -39,7 +39,7 @@ defaults:
       type: projects
     values:
       layout: project
-      header_feature_image:
+      image:
       caption:
       flickr_album:
   - scope:
@@ -47,7 +47,7 @@ defaults:
       type: portfolio
     values:
       layout: art
-      header_feature_image:
+      image:
       caption:
       flickr_album:
   - scope:
@@ -55,7 +55,7 @@ defaults:
       type: photogaphs
     values:
       layout: art
-      header_feature_image:
+      image:
       caption:
       flickr_album:
 baseurl:
@@ -69,8 +69,8 @@ twitter_username: pageboy
 lang: en_gb
 gridlayout: true
 header_text:
-header_feature_image:
-footer_text: Copyright 2020 Chris Jennings
+image:
+footer_text: Copyright 2021 Chris Jennings
 rss: false
 email_address:
 facebook:
@@ -125,7 +125,7 @@ paginate: 100
 paginate_path: page:num
 permalink: pretty
 markdown: kramdown
-
+disable_disk_cache: true
 highlighter: rouge
 plugins:
   - jekyll-paginate

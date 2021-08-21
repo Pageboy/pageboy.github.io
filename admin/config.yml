@@ -38,7 +38,7 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - {
           label: "Featured Image",
-          name: "header_feature_image",
+          name: "image",
           widget: "image",
           required: false,
         }
@@ -129,7 +129,7 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - {
           label: "Featured Image",
-          name: "header_feature_image",
+          name: "image",
           widget: "image",
           required: false,
         }
@@ -156,7 +156,7 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - {
           label: "Featured Image",
-          name: "header_feature_image",
+          name: "image",
           widget: "image",
           required: false,
         }
@@ -186,7 +186,7 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - {
           label: "Upload Photo or use Flickr Photo",
-          name: "header_feature_image",
+          name: "image",
           widget: "image",
           hint: "Find the original or large image link in the download link on Flickr",
         }

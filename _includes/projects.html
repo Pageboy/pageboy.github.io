@@ -3,8 +3,8 @@
   {%- assign items = site.projects | sort: 'title' -%}
     {%- for project in items limit:30 -%}
     <div class="post-teaser">
-        {% if project.header_feature_image %}
-        {% assign image_url = project.header_feature_image | replace: "_uploads", "uploads" -%}
+        {% if project.image %}
+        {% assign image_url = project.image | replace: "_uploads", "uploads" -%}
         <div class="post-img">
             <a aria-label="{{ project.title }}" href="{{ project.url | relative_url }}">
               {%- if project.caption -%}

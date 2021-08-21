@@ -2,7 +2,7 @@
 title: Skywards through the Trees
 date: 2020-04-10 15:11
 layout: post
-header_feature_image: /uploads/IMG_0874.jpg
+image: /uploads/IMG_0874.jpg
 caption:
 flickr_album: ""
 comments:

@@ -3,7 +3,7 @@ layout: "post"
 title: "The Kings Arms at Sandford"
 date: "2019-07-12 23:58"
 published: true
-header_feature_image: "/uploads/s-l1600.jpg"
+image: "/uploads/s-l1600.jpg"
 caption: "Kings Arms, Sandford, 1890"
 tags:
   - boat

@@ -1,6 +1,6 @@
 ---
 layout: post
-header_feature_image: /uploads/IMG_1285.jpeg
+image: /uploads/IMG_1285.jpeg
 caption: Tied up in Sandford
 featured: false
 published: true

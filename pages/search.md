@@ -2,7 +2,7 @@
 title: Search
 permalink: "/search/"
 layout: search
-header_feature_image: 
+image: 
 icon: fa-search
 order: 10
 hide: false

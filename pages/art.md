@@ -2,7 +2,7 @@
 title: portfolio
 permalink: "/portfolio/"
 layout: portfolio
-header_feature_image: "uploads/log.jpg"
+image: "uploads/log.jpg"
 description:
 gridlayout: true
 icon: fa-connectdevelop

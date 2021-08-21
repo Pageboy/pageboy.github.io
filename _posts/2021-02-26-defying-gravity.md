@@ -2,7 +2,7 @@
 layout: post
 title: Defying Gravity
 date: 2021-02-26T09:45:08.827Z
-header_feature_image: /uploads/engineup.jpg
+image: /uploads/engineup.jpg
 caption: Engine suspended
 flickr_album: flickr
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: Oil Pressure Gauge
 date: '2019-04-09 23:33'
 published: true
-header_feature_image: /uploads/IMG_1107.jpg
+image: /uploads/IMG_1107.jpg
 tags:
   - boat
   - engine

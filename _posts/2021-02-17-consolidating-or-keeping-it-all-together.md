@@ -2,7 +2,7 @@
 layout: post
 title: Consolidating or keeping it all together
 date: 2021-02-17T19:42:39.008Z
-header_feature_image: /uploads/49095964572_e46c8a8bbc_o.jpg
+image: /uploads/49095964572_e46c8a8bbc_o.jpg
 flickr_album: flickr
 tags:
   - web sites

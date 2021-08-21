@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 subtitle: All about me and my stuff
 date: 2021-01-24T23:33:42.725Z
-header_feature_image: uploads/watersedge.jpg
+image: uploads/watersedge.jpg
 order: 1
 ---
 

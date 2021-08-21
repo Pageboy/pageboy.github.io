@@ -2,7 +2,7 @@
 title: Projects
 permalink: "/projects/"
 layout: projects
-header_feature_image: "uploads/log.jpg"
+image: "uploads/log.jpg"
 description:
 gridlayout: true
 order: 3

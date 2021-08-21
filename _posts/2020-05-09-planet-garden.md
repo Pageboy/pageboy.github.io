@@ -3,7 +3,7 @@ title: Planet Garden
 date: 2020-05-17 19:47
 layout: post
 published: true
-header_feature_image: /uploads/asimiagarden0.jpg
+image: /uploads/asimiagarden0.jpg
 caption: Asima in the garden
 flickr_album: 72157714238083198
 comments:

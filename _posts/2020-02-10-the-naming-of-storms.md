@@ -2,7 +2,7 @@
 layout: post
 title: The Naming of Storms
 date: 2020-02-10T19:23:43.538Z
-header_feature_image: /uploads/kym-mackinnon-54kc5pklFmU-unsplash.jpg
+image: /uploads/kym-mackinnon-54kc5pklFmU-unsplash.jpg
 caption: ''
 tags:
   - observations

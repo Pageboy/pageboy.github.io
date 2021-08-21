@@ -2,7 +2,7 @@
 layout: project
 title: Wonderwalls
 date: 2020-12-08T13:13:15.332Z
-header_feature_image: /uploads/49050222736_ee490f271b_k.jpg
+image: /uploads/49050222736_ee490f271b_k.jpg
 flickr_album: "72157711425003093"
 ---
 Walls to hold us in, walls to keep us apart. But walls can also present interesting textures and support plants. Did you walk by a wall today and see some graffiti on it? Did you lean on a wall while waiting for your bus?

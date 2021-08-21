@@ -3,7 +3,7 @@ title: Type is everywhere
 date: 2019-12-04 00:00:00 Z
 published: false
 layout: project
-header_feature_image: /uploads/soak.jpg
+image: /uploads/soak.jpg
 caption: Graffiti on bridge. Overlapping letters
 flickr_album: 72157703225470271
 ---

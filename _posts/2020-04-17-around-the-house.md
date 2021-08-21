@@ -3,7 +3,7 @@ title: Around the House
 date: 2020-04-17 16:46:03 Z
 layout: post
 published: true
-header_feature_image: /uploads/DSC_6088.jpg
+image: /uploads/DSC_6088.jpg
 caption: Close up of a carpet
 flickr_album: 72157713928021958
 comments:

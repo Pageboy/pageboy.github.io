@@ -55,7 +55,7 @@
     {%- endif -%}
     {%- include metadata.html -%}
     <!-- style the featured page image -->
-    {%- if page.header_feature_image %}{% assign image_url = page.header_feature_image | replace: "_uploads", "uploads" -%}
+    {%- if page.image %}{% assign image_url = page.image | replace: "_uploads", "uploads" -%}
     <style>
       #main {
         background-repeat:no-repeat;
