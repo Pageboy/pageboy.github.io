@@ -1,0 +1,28 @@
+<rdf:RDF
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+      xmlns:foaf="http://xmlns.com/foaf/0.1/">
+<foaf:Person>
+<foaf:name>Chris Jennings</foaf:name>
+<foaf:title>Mr</foaf:title>
+<foaf:firstName>Chris</foaf:firstName>
+<foaf:surname>Jennings</foaf:surname>
+<foaf:nick>Chris</foaf:nick>
+<foaf:mbox_sha1sum>fca29d5ddf502ab67379cabe6d27d04f82750eb0</foaf:mbox_sha1sum>
+<foaf:homepage rdf:resource="http://www.chrisjennings.net"/>
+<foaf:depiction rdf:resource="http://www.chrisjennings.net/chris/images/iona2001.jpg"/>
+<foaf:workplaceHomepage rdf:resource="http://www.pagetoscreen.net"/>
+<foaf:schoolHomepage rdf:resource="http://www.cheney.oxon.sch.uk/"/>
+<foaf:knows>
+<foaf:Person>
+<foaf:name>Bob Hughes</foaf:name>
+<foaf:mbox_sha1sum>55223da89e8e774f06fbdfabdabd47d374e2a691</foaf:mbox_sha1sum></foaf:Person></foaf:knows>
+<foaf:knows>
+<foaf:Person>
+<foaf:name>Hira Verick</foaf:name>
+<foaf:mbox_sha1sum>116098153312983247c1cebf25e4ab50a913d765</foaf:mbox_sha1sum></foaf:Person></foaf:knows>
+<foaf:knows>
+<foaf:Person>
+<foaf:name>Mark Rogerson</foaf:name>
+<foaf:mbox_sha1sum>eabd1b66f57da7627ad40a91965800c5fe8f0373</foaf:mbox_sha1sum></foaf:Person></foaf:knows></foaf:Person>
+</rdf:RDF>
