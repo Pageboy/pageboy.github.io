@@ -16,7 +16,7 @@ logo_url: https://chrisjennings.net/uploads/typewriter.jpeg
 # public_folder: "../uploads"
 
 # This line should *not* be indented
-media_folder: "uploads" # Media files will be stored in the repo under /uploads
+media_folder: "/uploads" # Media files will be stored in the repo under /uploads
 public_folder: "/uploads"
 
 collections:
