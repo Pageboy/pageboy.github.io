@@ -10,7 +10,7 @@ tags:
   - engine
   - Perspectief
 ---
-New Betamarine engine arrived at the marina in a big cardboard box. Beautifully packaged and mounted on a wooden palet. Two control panels where taken home for safe keeping and for checking against the new dashboards that I had made.
+New [Betamarine engine](uploads/b38-he-datasheet-rev-02-0319.pdf) arrived at the marina in a big cardboard box. Beautifully packaged and mounted on a wooden palet. Two control panels where taken home for safe keeping and for checking against the new dashboards that I had made.
 
 ## The Engine Bay was prepared and waiting - did I get the measurements right?
 
