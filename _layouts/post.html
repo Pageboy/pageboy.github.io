@@ -11,7 +11,8 @@ layout: default
         {% include post_info.html post=page %}
   </header>
   <section class="post-content">
-      {{ content | replace: "_uploads", "uploads" }}
+      {{ content | replace: "_uploads", "uploads" | replace: "uploads", "/uploads" | replace: "//", "/" }}
+      
       {% if page.flickr_album and page.flickr_album != "" %}
       {% unless page.flickr_album == "flickr" %}
       <p style="color:#869387;"><i class="fa fa-flickr"></i> Here is a gallery of these images kept on <a title="go to Flickr" href="https://www.flickr.com/photos/chrisjennings/albums/{{page.flickr_album}}">Flickr</a></p>
