@@ -1,10 +1,10 @@
 ---
-layout: "post"
-title: "The Kings Arms at Sandford"
-date: "2019-07-12 23:58"
+layout: post
+title: The Kings Arms at Sandford
+date: 2019-07-12 23:58
 published: true
-image: "/uploads/s-l1600.jpg"
-caption: "Kings Arms, Sandford, 1890"
+image: /uploads/s-l1600.jpg
+caption: Kings Arms, Sandford, 1890
 tags:
   - boat
   - cruising
@@ -17,15 +17,14 @@ With our good friend Adrian crewing we were able to navigate the stream without 
 
 When Henry Taunt photographed Sandford in 1890, the Inn was still signed as the brewery.
 
-
 ![Henry Taunt. Sandford Brewery, c1890](/uploads/henry-taunt109mini.jpg "Henry Taunt. Sandford Brewery, c1890")
 
 ![Kings Arms, Sandford, 1890](/uploads/s-l1600.jpg "Kings Arms, Sandford, 1890")
 
-![Kings Arms,Sandford Mill from "Pleasant Spots around Oxford", Alfred Rimmer, 1878](/uploads/IMG_0105.jpg "Kings Arms,Sandford Mill from "Pleasant Spots around Oxford", Alfred Rimmer, 1878")
+![Kings Arms,Sandford Mill from "Pleasant Spots around Oxford", Alfred Rimmer, 1878](/uploads/IMG_0105.jpg "Kings Arms,Sandford Mill from \"Pleasant Spots around Oxford\", Alfred Rimmer, 1878")
 
 We turned Perspectief round at a sighting of the Carfax Conduit (now a folly in Nuneham Park).
 
-![Carfax Conduit at Nuneham from Alden's Oxford guide (1890)
+![Carfax Conduit at Nuneham from Alden's Oxford guide (1890)](/uploads/carfaxconduit.jpg "Carfax Conduit at Nuneham from Alden's Oxford guide (1890)")
 
 ![A view of Nunenham House from the Thames](/uploads/P1030162.jpg "A view of Nunenham House from the Thames")
