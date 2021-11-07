@@ -4,7 +4,7 @@ title: The Naming of Colours
 date: 2019-12-10T19:03:00.000Z
 image: /uploads/IMG_0578.jpg
 caption: Farrow and Ball colour chart
-flickr_album: flickr7215771217565936
+flickr_album: "72157712175659357"
 tags:
   - observations
   - photography
