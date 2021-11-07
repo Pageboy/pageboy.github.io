@@ -1,11 +1,11 @@
 ---
+layout: post
 title: See something interesting. Take a picture. Do some research.
 date: 2020-01-17 13:15:00 Z
-layout: post
-image: "/uploads/oilspill.jpg"
-caption:
+image: /uploads/oilspill.jpg
+caption: null
+comments: null
 flickr_album: ""
-comments:
 tags:
   - observations
   - photography
@@ -23,7 +23,7 @@ Here is what I found.
 
 > Why Does Gasoline Look So Colorful On The Ground?
 
-This web site][fa74eab1] explains that:
+This [web site][fa74eab1] explains that:
 
   [fa74eab1]: https://www.palmendodgechryslerjeepofracine.com/blog/why-does-gasoline-look-so-colorful-on-the-ground/ "Check this web site"
 
