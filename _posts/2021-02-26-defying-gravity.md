@@ -32,12 +32,6 @@ Take a look here. I hope you get the idea.
 
 <div class="video-box"><iframe width="560" height="315" src="https://www.youtube.com/embed/CCyDa67va7o?rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CCyDa67va7o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-
-
-
 ![Gearbox removed and engine ready to be craned out.](/uploads/img_1514.jpeg)
 
 I was not able to film the craning out of the engine.
