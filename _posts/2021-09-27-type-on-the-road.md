@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Type on the Road
-date: 2021-09-27T14:51:23.894Z
+date: 2021-11-07T15:30:47.509Z
 image: /uploads/a40_raw.jpg
 caption: Direction A40. Photo by Chris Jennings
 flickr_album: flickr
