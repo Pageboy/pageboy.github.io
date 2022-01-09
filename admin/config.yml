@@ -275,7 +275,7 @@ collections:
           widget: "image",
           hint: "Find the original or large image link in the download link on Flickr",
         }
-      - { label: "Caption", name: "caption", widget: "string" }
+      - { label: "Caption", name: "caption", widget: "string", required: false }
       - {
           label: "Flickr Share",
           name: "flickr_share",
