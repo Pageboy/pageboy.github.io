@@ -1,5 +1,5 @@
 <div class="posts">
-  {%- assign items = site.portfolio | sort: 'title' -%} {%- for art in items
+  {%- assign items = site.portfolio | sort: 'date' -%} {%- for art in items
   limit:30 -%}
   <div class="post-teaser">
     {% if art.image %} {% assign image_url = art.image | replace: "_uploads",
