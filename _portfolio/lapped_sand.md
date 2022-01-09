@@ -8,6 +8,4 @@
     - square series
 ---
 
-![lapped sand](https://live.staticflickr.com/65535/51574765439_ab6cb8d851_o.jpg)
-
 - Lapped Sand

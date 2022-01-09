@@ -8,7 +8,7 @@
     - square series
 ---
 
-![Happy Christmas](https://live.staticflickr.com/65535/51772671743_35fffa0812_3k.jpg)
+
 
 - Berries Red
 - Winter water

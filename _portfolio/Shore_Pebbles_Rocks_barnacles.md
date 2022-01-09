@@ -8,8 +8,6 @@
     - square series
 ---
 
-![Shore Pebbles, Rocks and barnacles](https://live.staticflickr.com/65535/49389023191_cb115eb5d3_o.jpg)
-
 - Wet shore pebbles shine
 - Flint and sandstone sea smoothed
 - Barnacles dried above the tide

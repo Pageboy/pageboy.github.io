@@ -8,7 +8,5 @@
     - square series
 ---
 
-![Trees around, Leaves Grounded](https://live.staticflickr.com/65535/51693453288_9ff8b68933_o.jpg)
-
 - Trees around
 - Leaves Grounded

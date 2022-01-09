@@ -8,7 +8,6 @@ tags:
   - square series
 ---
 
-![Greens, browns and yellows](https://live.staticflickr.com/65535/49398803246_00119c4540_o.jpg)
 
 - Ferns and Grasses
 - Wheat fields ready for harvest

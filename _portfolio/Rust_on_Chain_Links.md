@@ -8,8 +8,6 @@
    - square series
 ---
 
-![Rust on Chain Links](https://live.staticflickr.com/65535/49327401042_8f800a010e_o.jpg)
-
 - Dockside salt spray
 - Rusted chains
 - Links and shackles
