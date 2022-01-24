@@ -1,10 +1,9 @@
 - name: Publisha
-  siteurl: https://publisha.github.io
+  siteurl: https://www.publisha.org
   title: see Digital Publishing Hub
   order: 2
 - name:
   siteurl:
   title:
-
 # You can put links here and these will appear on your menu bar
 # Don't make the name long and don't add too many!
