@@ -17,6 +17,10 @@ collections:
     title: Photographs
     output: true
     layout: art
+  notes:
+    title: Digital Garden
+    output: true
+    layout: notes
 defaults:
   - scope:
       path: ""
