@@ -1,0 +1,95 @@
+{
+  "main": {
+    "id": "c91cc3c45feb5c78",
+    "type": "split",
+    "children": [
+      {
+        "id": "88530c971f996569",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "markdown.md",
+            "mode": "source",
+            "source": true
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3d3e403c9e9acd0b",
+    "type": "split",
+    "children": [
+      {
+        "id": "8b7f8921fea04abc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "05e0d7e187f57190",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "63aeb4f074d601a3",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "77a0cf225e85cc1e",
+    "type": "split",
+    "children": [
+      {
+        "id": "342c8b6a60b7361c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "75f84cf7eb580d67",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "markdown.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "active": "88530c971f996569",
+  "lastOpenFiles": [
+    "markdown.md",
+    "Obsidian.md",
+    "Building a Digital garden.md"
+  ]
+}
