@@ -1,1 +1,0 @@
-Obsidian uses [[markdown]]
