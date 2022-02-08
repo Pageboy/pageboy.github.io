@@ -7,6 +7,7 @@ flickr_album: flickr
 tags:
   - cruising
   - boat
+  - Perspectief
 ---
 ![Perspectief on the ramp](https://live.staticflickr.com/65535/51867676702_c27af2312b_3k_d.jpg "Perspectief on the ramp")
 
