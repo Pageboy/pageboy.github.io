@@ -1,72 +1,87 @@
 <head>
-    <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+  <meta
+    name="facebook-domain-verification"
+    content="t192wd09eas373v4mzdvc4o3s8y6dv"
+  />
 
-    {%- include javascripts.html -%}
-    {%- include stylesheets.html -%}
-
-    {%- if page.title=="About" -%}
-    <style>
+  {%- include javascripts.html -%} {%- include stylesheets.html -%} {%- if
+  page.title=="About" -%}
+  <style>
     .postimage {
-      display:block;
-      margin:0;
-      max-width:300px;
+      display: block;
+      margin: 0;
+      max-width: 300px;
     }
 
     .postimage img {
-      border:1px solid silver;
-      margin:0;
+      border: 1px solid silver;
+      margin: 0;
     }
-  .post-content .caption {
-    display:none;
-  }
+    .post-content .caption {
+      display: none;
+    }
 
-  .post-content img {
-    display:block;
-    margin:0;
-    max-width:300px;
-    border:1px solid silver;
-  }
+    .post-content img {
+      display: block;
+      margin: 0;
+      max-width: 300px;
+      border: 1px solid silver;
+    }
+  </style>
+  {%- endif -%}
+  <!--Favicon-->
+  <link
+    rel="shortcut icon"
+    href="{{ site.favicon | relative_url }}"
+    type="image/x-icon"
+  />
 
-    </style>
-    {%- endif -%}
-    <!--Favicon-->
-    <link rel="shortcut icon" href="{{ site.favicon | relative_url }}" type="image/x-icon">
+  {%- include alltheicons.html -%}
 
-    {%- include alltheicons.html -%}
+  <!-- Canonical -->
+  <link
+    rel="canonical"
+    href="{{ page.url | replace:'index.html','' | absolute_url }}"
+  />
 
-    <!-- Canonical -->
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    {%- if site.google_analytics -%}
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.theme_settings.google_analytics }}"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '{{ site.google_analytics }}');
-    </script>
-    {%- endif -%}
-    {%- if page.title != site.hide_title -%}
-      <title>{{site.title}} | {{ page.title }}</title>
-    {%- else -%}
-      <title>{{site.title}}</title>
-    {%- endif -%}
-    {%- include metadata.html -%}
-    <!-- style the featured page image -->
-    {%- if page.image %}{% assign image_url = page.image | replace: "_uploads", "uploads" -%}
-    <style>
-      #main {
-        background-repeat:no-repeat;
-        background-color: rgb(61, 172, 147);
-        background-position: center;
-        background-image: url('{{ image_url | relative_url }}');
-        text-shadow: 0px 0px 10px rgba(0,0,0,0.9) !important;
-      }
-      article header {
-          text-align: center;
-      }
-    </style>
-    {%- endif -%}
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  {%- if site.google_analytics -%}
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id={{ site.theme_settings.google_analytics }}"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "{{ site.google_analytics }}");
+  </script>
+  {%- endif -%} {%- if page.title != site.hide_title -%}
+  <title>{{site.title}} | {{ page.title }}</title>
+  {%- else -%}
+  <title>{{site.title}}</title>
+  {%- endif -%} {%- include metadata.html -%}
+  <!-- style the featured page image -->
+  {%- if page.image %}{% assign image_url = page.image | replace: "_uploads",
+  "uploads" -%}
+  <style>
+    #main {
+      background-repeat: no-repeat;
+      background-color: rgb(61, 172, 147);
+      background-position: center;
+      background-image: url("{{ image_url | relative_url }}");
+      text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9) !important;
+    }
+    article header {
+      text-align: center;
+    }
+  </style>
+  {%- endif -%}
 </head>
