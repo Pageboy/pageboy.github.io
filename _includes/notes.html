@@ -12,9 +12,10 @@
           >
             {{ note.title }}
           </a>
+          {% include post_info.html post=note %}
         </h1>
       </header>
-      <div class="excerpt">{{ note.excerpt | strip_html | escape }}</div>
+      <!-- <div class="excerpt">{{ note.excerpt | strip_html | escape }}</div> -->
     </span>
   </div>
   {% endfor %}
