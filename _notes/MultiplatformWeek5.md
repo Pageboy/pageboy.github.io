@@ -30,7 +30,7 @@ Not good that clicking the links does not hide the menu - can only be sorted wit
 
 Give the ul an ID and then:
 
-`<ul id=“menu” onclick=“hidemenu()”>`
+`<ul id="menu" onclick="hidemenu()">`
 
 ## For the home page
 
