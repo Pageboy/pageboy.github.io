@@ -18,8 +18,6 @@ scroll-padding-top: 45px;
 
 Not good that clicking the links does not hide the menu - can only be sorted with javascript
 
-\[[How to do Javascript]]
-
 * sort this out with simple javascript in the head tag of the play HTML 
 
 ```javascript
