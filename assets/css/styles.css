@@ -1406,7 +1406,7 @@ section.box {
   border-bottom:none;
 }
 
-.art header h1, .photographs header h1 {
+.art header h1, .photographs header h1, .notes header h1 {
   font-size: 1.2em;
   padding:0;
   color:silver;
