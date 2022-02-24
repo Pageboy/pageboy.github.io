@@ -1,6 +1,7 @@
 ---
 title: Multi-Platform week 5 lesson plan
 date: 2022-02-24T18:01:02.971Z
+layout: note
 ---
 # Week 5
 
