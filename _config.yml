@@ -17,10 +17,6 @@ collections:
     title: Photographs
     output: true
     layout: art
-  notes:
-    title: Notes
-    output: true
-    layout: note
 defaults:
   - scope:
       path: ""
