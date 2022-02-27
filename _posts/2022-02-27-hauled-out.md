@@ -2,6 +2,8 @@
 layout: post
 title: Hauled Out
 date: 2022-02-27T11:01:18.112Z
+image: /uploads/img_1023.jpeg
+caption: On the trailer
 flickr_album: flickr
 tags:
   - boat
@@ -15,17 +17,25 @@ For Perspectief there is also an opportunity to clean up the speed log paddle wh
 
 ## Marina Conundrum
 
+![See the keel shape](/uploads/drawing.jpg)
+
 Perspectief draws 0.9metre and has a step in the keel about 2metres from the bow. There was a worry that the trailer would not be able to get under the boat unless the river was above the normal Summer level. There was a possible chance that we could **not** get Perspectief out using the trailer method and an expensive crane would be the only option.
 
 All was well, and as you can see *Perspectief* came out without much bother at all.
+
+![Perspectief is level but on the slope!](/uploads/img_1019.jpeg)
 
 ## Two Coats is enough
 
 Once the power washer has done the job on the underside of the hull, some sanding around the water line was needed (there is always a ring of hardened calcium here). Anti Foul paint can be applied with a roller, but doing this job under the boat (scrabbling about in the dirt) gets uncomfortable! You don’t want to get the paint on your hair and that’s why I always wear a disposable shower cap.
 
+![Me in a shower cap](/uploads/img_1024.jpeg)
+
 ## Shine that bronze
 
 The propellor does get grimy over the seasons so a liberal application of propellor cleaner and some steel wool brings that up a treat. See the before and after pictures here.
+
+![before and after the clean up](/uploads/prop.jpg)
 
 [^1]: [Anti-fouling paint - Wikipedia](https://en.wikipedia.org/wiki/Anti-fouling_paint)
 
