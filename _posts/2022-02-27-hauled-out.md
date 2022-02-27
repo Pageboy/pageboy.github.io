@@ -19,9 +19,9 @@ For Perspectief there is also an opportunity to clean up the speed log paddle wh
 
 ![Showing the step in the keel](/uploads/drawing.jpg)
 
-Perspectief draws 0.9metre and has a step in the keel about 2metres from the bow. There was a worry that the trailer would not be able to get under the boat unless the river was above the normal Summer level. There was a possible chance that we could get Perspectief out using the trailer method and an expensive crane would be required.
+Perspectief draws 0.9metre and has a step in the keel about 2metres from the bow. There was a worry that the trailer would **not** be able to get under the boat unless the river was above the normal Summer level. There was a chance that we could not get Perspectief out using the trailer method and an expensive crane would be required as an alternative.
 
-All was well, and as you can see *Perspectief* came out without much bother at all.
+However, all was well, and as you can see *Perspectief* came out without much bother at all.
 
 ![Ready for the cleanup](/uploads/img_1019.jpeg)
 
