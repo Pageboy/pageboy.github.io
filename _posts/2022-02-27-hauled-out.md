@@ -33,6 +33,8 @@ Once the power washer has done the job on the underside of the hull, some sandin
 
 ![A fool in a shower cap](/uploads/img_1024.jpeg)
 
+![Two coats of Hempel ant-foul paint](/uploads/e3d42cb2-2566-4a87-ae3f-513d7a13560c.jpeg)
+
 ## Shine that bronze
 
 The propellor does get grimy over the seasons so a liberal application of propellor cleaner and some steel wool brings that up a treat. See the before and after pictures here.
