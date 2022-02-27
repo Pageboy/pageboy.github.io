@@ -1,0 +1,36 @@
+---
+layout: post
+title: Hauled Out
+date: 2022-02-27T11:01:18.112Z
+flickr_album: flickr
+tags:
+  - boat
+  - Perspectief
+---
+*Perspectief* is currently out of the water on the marina trailer. 
+
+Every couple of years any boat needs to come out of the water to have the bottom cleaned and new anti-foul[^1] paint applied.  This is also an opportunity to check out the stern gear (rudder, propellor) and anodes.
+
+For Perspectief there is also an opportunity to clean up the speed log paddle wheel that has **not** been working for several months. In fact, I also have been working on a solution for this issue (more on this to follow).
+
+## Marina Conundrum
+Perspectief draws 0.9metre and has a step in the keel about 2metres from the bow. There was a worry that the trailer would not be able to get under the boat unless the river was above the normal Summer level. There was a possible chance that we could get Perspectief out using the trailer method and an expensive crane would be required.
+
+All was well, and as you can see *Perspectief* came out without much bother at all.
+
+## Two Coats is enough
+Once the power washer has done the job on the underside of the hull, some sanding around the water line was needed (there is always a ring of hardened calcium here). Anti Foul paint can be applied with a roller, but doing this job under the boat (scrabbling about in the dirt) it gets uncomfortable! You don’t want to get the paint on your hair and that’s why I always wear a disposable shower cap.
+
+## Shine that bronze
+The propellor does get grimy over the seasons so a liberal application of propellor cleaner and some steel wool brings that up a treat. See the before and after pictures here.
+
+
+
+
+
+
+
+
+[^1]: [Anti-fouling paint - Wikipedia](https://en.wikipedia.org/wiki/Anti-fouling_paint)
+
+#perspectief
