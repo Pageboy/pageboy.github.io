@@ -9,11 +9,9 @@ tags:
   - boat
   - Perspectief
 ---
-# Hauled Out
+ Every couple of years any boat needs to come out of the water to have the bottom cleaned and new anti-foul[^1] paint applied.  This is also an opportunity to check out the stern gear (rudder, propellor) and anodes.
 
-*Perspectief* is currently out of the water on the marina trailer. 
-
-Every couple of years any boat needs to come out of the water to have the bottom cleaned and new anti-foul[^1] paint applied.  This is also an opportunity to check out the stern gear (rudder, propellor) and anodes.
+*Perspectief* is currently out of the water on the marina trailer.
 
 For Perspectief there is also an opportunity to clean up the speed log paddle wheel that has been **not** be working for several months. In fact, I also have been working on a solution for this issue (more on this to follow).
 
