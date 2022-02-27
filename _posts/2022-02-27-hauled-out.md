@@ -5,6 +5,9 @@ date: 2022-02-27T11:58:16.849Z
 image: /uploads/img_1023.jpeg
 caption: Perspectief on the ramp
 flickr_album: flickr
+tags:
+  - boat
+  - Perspectief
 ---
 # Hauled Out
 
@@ -28,13 +31,13 @@ All was well, and as you can see *Perspectief* came out without much bother at a
 
 Once the power washer has done the job on the underside of the hull, some sanding around the water line was needed (there is always a ring of hardened calcium here). Anti Foul paint can be applied with a roller, but doing this job under the boat (scrabbling about in the dirt) it gets uncomfortable! You don’t want to get the paint on your hair and that’s why I always wear a disposable shower cap.
 
-![Before and after](/uploads/prop.jpg)
-
 ![A fool in a shower cap](/uploads/img_1024.jpeg)
 
 ## Shine that bronze
 
 The propellor does get grimy over the seasons so a liberal application of propellor cleaner and some steel wool brings that up a treat. See the before and after pictures here.
+
+![Before and after](/uploads/prop.jpg)
 
 [^1]: [Anti-fouling paint - Wikipedia](https://en.wikipedia.org/wiki/Anti-fouling_paint)
 
