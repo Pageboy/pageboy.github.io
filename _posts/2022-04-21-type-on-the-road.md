@@ -45,3 +45,7 @@ Notice how the main type 'artist' has his hand behind his back. This certainly p
 You may occasionally see markings that are not using typeface styles but are just hand written markings.
 
 ![Services under the road are indicated with colour and symbols](../uploads/img_0778.jpeg "Services under the road are indicated with colour and symbols")
+
+
+
+> This article was first published as a sample article for my Typography students who were directed to create a web site about typography in the wild.
