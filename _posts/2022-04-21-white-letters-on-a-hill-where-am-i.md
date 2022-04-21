@@ -1,7 +1,7 @@
 ---
 layout: post
 title: White letters on a Hill - Where am I?
-date: 2022-04-21T13:38:03.632Z
+date: 2020-09-18T13:38:03.632Z
 image: /uploads/file-20171107-6733-1vd7y81.jpg
 caption: The Hollywood sign in 1978
 flickr_album: flickr
@@ -39,3 +39,5 @@ A company called [ShyFonts](https://www.dafont.com/hollywood-hills.font) have cr
 ![The new version under construction in 1978](/uploads/hollywood.jpg "The new version under construction in 1978")
 
 <div class="video-box"><iframe width="560" height="315" src="https://www.youtube.com/embed/xsiD81nNpEc?rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+> This article was first published as a sample articel for my Typography students who were directed to create a web site about typography in the wild
