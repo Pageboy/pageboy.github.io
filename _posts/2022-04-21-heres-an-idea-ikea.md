@@ -41,3 +41,5 @@ So, whatever you think of the IKEA logo and the flat-pack culture, you must admi
 Here is another image of an anonymous store, showing those little serifs.
 
 ![Image from Sky News.](/uploads/ikeastore.jpg "Image from Sky News.")
+
+> This article was first published as a sample article for my Typography students who were directed to create a web site about typography in the wild.
