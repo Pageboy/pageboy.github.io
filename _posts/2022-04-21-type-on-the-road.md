@@ -2,7 +2,7 @@
 layout: post
 title: Type on the Road
 date: 2021-11-07T14:34:36.050Z
-image: /uploads/a40.jpeg
+image: /uploads/a40_raw.jpg
 caption: Direction A40. Photo copyright by Chris Jennings
 flickr_album: flickr
 tags:
@@ -44,7 +44,7 @@ Notice how the main type 'artist' has his hand behind his back. This certainly p
 
 You may occasionally see markings that are not using typeface styles but are just hand written markings.
 
-![Services under the road are indicated with colour and symbols](../uploads/img_0778.jpeg "Services under the road are indicated with colour and symbols")
+![Services under the road are indicated with colour and symbols](/uploads/img_0778.jpeg "Services under the road are indicated with colour and symbols")
 
 
 
