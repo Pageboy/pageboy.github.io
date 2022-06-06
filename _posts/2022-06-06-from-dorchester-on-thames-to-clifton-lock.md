@@ -1,7 +1,7 @@
 ---
 layout: post
 title: From Dorchester-on-Thames to Clifton Lock
-date: 2022-06-06T13:16:33.491Z
+date: 2022-05-01T13:16:33.491Z
 image: /uploads/ddbaea45-d0f8-4baf-a45c-0c9540f7c31d.png
 caption: We take a trip upstream with a walk around Dorchester
 flickr_album: flickr
