@@ -1470,10 +1470,10 @@ section.photo img {
   }
 
 
-/* .video-box {
+.video-box {
 	position: relative;
-	padding-bottom: 56.25%;
-	padding-top: 30px;
+	/* padding-bottom: 56.25%;
+	padding-top: 30px; */
 	height: 0;
 	overflow: hidden;
 	margin-bottom: 12px;
@@ -1487,4 +1487,4 @@ section.photo img {
 	width: 100%;
 	height: 100%;
   padding: 0 !important;
-} */
+}
