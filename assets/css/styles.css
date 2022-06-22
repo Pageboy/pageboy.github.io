@@ -299,6 +299,26 @@ article, .comments, .feature-image .post-content, .feature-image footer,
     text-decoration: none
 }
 
+.button_nft {
+    border-radius: 0.3em;
+    border: 1px solid;
+    display: block;
+    margin: 1em auto;
+    padding: 0.5em 0.75em;
+    background: #04396a;
+    color:white;
+    width:50%;
+    font-size: .8em;
+    text-align: center;
+}
+
+a.button_nft:hover {
+    background: #337ab7;
+    border: 1px solid #337ab7;
+    color: #fff;
+    text-decoration: none
+}
+
 .body-link:hover, article a:hover, .posts .post-teaser p a:hover {
     text-decoration: underline;
     color: #22527b
