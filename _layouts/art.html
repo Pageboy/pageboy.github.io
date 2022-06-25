@@ -15,12 +15,18 @@ layout: default
     </p>
     {{ content | replace: "_uploads", "uploads" }}
   </section>
-  <!-- Social media shares -->
-  {% include share_buttons.html %} {% if page.nft %}
-  <a class="button_nft" href="{{ page.nft }}"
-    >Invest in this as a digital artwork blockchain item</a
-  >
+  {% if page.nft %}
+  <div class="nft">
+    <a href="{{ page.nft }}" title="Buy on OpenSea" target="_blank"
+      ><img
+        src="https://storage.googleapis.com/opensea-static/Logomark/Badge%20-%20Available%20On%20-%20Dark.png"
+        alt="You can buy this as an NFT on OpenSea"
+        class="nft"
+    /></a>
+  </div>
   {% endif %}
+  <!-- Social media shares -->
+  {% include share_buttons.html %} {
   <!-- Tag list for portfolio -->
   {% capture tag_list %}{{ page.tags | join: "|"}}{% endcapture %} {% include
   tags_list.html tags=tag_list %}

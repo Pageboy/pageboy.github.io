@@ -1471,6 +1471,16 @@ section.art img {
   display:block;
 }
 
+div.nft img {
+    /* border:1px solid #c2c2c2; */
+    width:45%;
+    /* max-height: 100vh; */
+    margin-left:auto;
+    margin-right: auto;
+    display:block;
+    /* background-color: #337ab7; */
+  }
+
 section.photo img {
     border:1px solid #c2c2c2;
     width:auto;
