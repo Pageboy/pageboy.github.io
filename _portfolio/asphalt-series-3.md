@@ -11,3 +11,5 @@ tags:
 * Asphalt Nona 
 * Shifted Ground
 * Banded Tar
+
+Within a nine sided figure (nonagon) we have 2 images of street asphalt combined with colours. Triangles and rectangles are used to form a complete asymmetric structure.
