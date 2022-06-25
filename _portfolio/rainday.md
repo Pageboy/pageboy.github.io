@@ -12,3 +12,5 @@ tags:
 * View Rain
 * Window Wet
 * Rain Window
+
+In the rain, we see water on the window and when we go out to the street, the pavements shine in their wetness. The geometry in this image used the hexagon as the basic form and then adds shapes and colours and images taken on some rainy days.
