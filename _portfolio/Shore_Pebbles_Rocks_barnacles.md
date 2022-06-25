@@ -11,4 +11,4 @@ tags:
 * Flint and sandstone sea smoothed
 * Barnacles dried above the tide
 
-The shoreline is a rich observational space for colours and forms. I love the way that the tide washes over the different elements and wetness changes everything. I am inspired but the forms between the land and the sea and adding my geometry and extracting colours from the fragments is one of my endeavours.
+The shoreline is a rich observational space for colours and forms. I love the way that the tide washes over the different elements and wetness changes everything. I am inspired by the forms between the land and the sea and adding my geometry and extracting colours from the fragments is one of my endeavours.
