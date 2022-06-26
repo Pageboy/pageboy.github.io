@@ -12,4 +12,4 @@ tags:
 * Tidal Waters
 * Weathered Stones
 
-The sea shore pebbles and the lapping water is a good location for capturing colours and texures. In this image I take the curved form and add structural elements that can be repositories for the image details and colours that are alluring to me in the moment.
+The sea shore pebbles and the lapping water is a good location for capturing colours and textures. In this image I take the curved form and add structural elements that can be repositories for the image details and colours that are alluring to me in the moment.
