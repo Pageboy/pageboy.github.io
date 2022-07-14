@@ -10,10 +10,6 @@ tags:
   - boat
   - Thames
 ---
-
-
 Come aboard Perspectief for a trip through 5 locks downsteam from Abingdon to the attractive town of Wallingford. Watch the video to the end because we go for a little walk to take a look at Wallingford Bridge.
 
 <div class="video-box"><iframe width="560" height="315" src="https://www.youtube.com/embed/JQ2oq3cSW1U?rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-
-https://youtu.be/JQ2oq3cSW1U
