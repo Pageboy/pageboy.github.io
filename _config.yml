@@ -129,7 +129,7 @@ disable_disk_cache: true
 highlighter: rouge
 plugins:
   - jekyll-paginate
-  # - jekyll-seo-tag
+  - jekyll-seo-tag
   - jekyll-sitemap
 exclude:
   - ".jekyll-cache"
