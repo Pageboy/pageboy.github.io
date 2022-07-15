@@ -2,7 +2,7 @@
 title: Drawings for Folding pieces
 date: 2022-07-14
 layout: project
-image: uploads/unfoldedlandscape.jpg
+image: /uploads/unfoldedlandscape.jpg
 caption: Detail of Parallel
 flickr_album: "72177720300464505"
 ---

@@ -2,7 +2,7 @@
 title: Works on paper
 date: 2022-07-14
 layout: project
-image: uploads/facingtriangles.jpg
+image: /uploads/facingtriangles.jpg
 caption: Facing Triangles
 flickr_album: "72177720300542608"
 ---

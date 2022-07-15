@@ -2,7 +2,7 @@
 title: Cut paper Works
 date: 2022-07-14
 layout: project
-image: uploads/vag12.jpg
+image: /uploads/vag12.jpg
 caption: Detail of Vagland12
 flickr_album: "72177720300505635"
 ---

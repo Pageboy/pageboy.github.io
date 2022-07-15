@@ -2,7 +2,7 @@
 title: Prints on paper
 date: 2022-07-14
 layout: project
-image: uploads/salmonisland_etching.jpg
+image: /uploads/salmonisland_etching.jpg
 caption: Detail of Salmon Island Etching
 flickr_album: "72177720300515443"
 ---

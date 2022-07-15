@@ -2,7 +2,7 @@
 title: Mirror Drawings
 date: 2022-07-14
 layout: project
-image: uploads/mirror_drawing_detail.jpg
+image: /uploads/mirror_drawing_detail.jpg
 caption: Detail of Pencil Mirror Drawing
 flickr_album: "72177720300503731"
 ---
