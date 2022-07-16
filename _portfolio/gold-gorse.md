@@ -11,3 +11,7 @@ tags:
 * Yellow Gold
 * Sun Folding
 * Opening Sky
+
+The sky unfolds to covering sun.
+Opening yellows and garden blooms.
+Musty gorse puffed up gold.

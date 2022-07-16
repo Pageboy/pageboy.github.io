@@ -9,7 +9,9 @@ tags:
   - shareable
 ---
 * Wet Stones
-
 * Out Tide
-
 * Dry Stones
+
+Dry stones become wet stones in the shallows shore.
+Slate and sand weathered smooth.
+Tide sweeps over the beach.
