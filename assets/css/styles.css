@@ -438,20 +438,21 @@ header {
 
 @media screen and (max-width: 768px) {
     .feature-image header {
-        padding: 4% 4%
+        padding: 4% 4%;
     }
 
 }
 
 @media screen and (min-width: 768px) {
     .feature-image header {
-        background-size: 120% auto;
+        background-size: 100% auto;
+       
     }
 }
 
 @media screen and (max-width: 768px) {
     .feature-image header {
-        background-size: 200% auto;
+        background-size: 130% auto;
     }
 }
 
