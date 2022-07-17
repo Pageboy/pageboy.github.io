@@ -12,6 +12,6 @@ tags:
 * Surfaced Blues
 * Forest Green
 
-Pool under the trees under hot sky.
-On the surface the reflections blend.
+Pool under the windy trees.
+On the surface the reflections blend under the hot air.
 12 sides enclose the shapes of colour from sky to ground.
