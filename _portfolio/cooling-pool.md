@@ -4,6 +4,9 @@ title: Cooling Pool
 date: 2022-07-17T10:53:42.328Z
 image: https://live.staticflickr.com/65535/52222013129_c3bf4dede1_h_d.jpg
 caption: At La Nav
+tags:
+  - art
+  - square series
 ---
 * Pool Water
 * Surfaced Blues
