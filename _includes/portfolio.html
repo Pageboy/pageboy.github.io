@@ -1,6 +1,6 @@
 <div class="posts">
-  {%- assign items = site.portfolio | sort: 'date' | reverse | groupby: "tags"
-  -%} {%- for art in items limit:400 -%}
+  {%- assign items = site.portfolio | sort: 'date' | reverse -%} {%- for art in
+  items limit:400 -%}
   <div class="post-teaser">
     {% if art.image %} {% assign image_url = art.image | replace: "_uploads",
     "uploads" -%}

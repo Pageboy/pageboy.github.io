@@ -46,7 +46,7 @@ I keep my boat on the Thames in Oxford, and am (as often as possible) making ext
 
 PagetoScreen soon to be retired
 
-PagetoScreen][55d18952](https://www.pagetoscreen.net "Lots of useful information") is my legacy website and I will probably be retiring this very soon.
+[PagetoScreen](https://www.pagetoscreen.net "Lots of useful information") is my legacy website and I will probably be retiring this very soon.
 
 </section>
 
@@ -59,18 +59,18 @@ See also some archived sites:
 </section>
 <section class="box" markdown="1">
 
-[Islomania](http://archive.chrisjennings.net/islomania/ "see islomania")
+[Islomania](https://www.chrisjennings.net/archive/islomania/ "see islomania")
 
 </section>
 
 <section class="box" markdown="1">
 
-[Some past work](http://archive.chrisjennings.net/pastwork/ "See some sculpture done a long time ago")
+[Some past work](https://www.chrisjennings.net/archive/pastwork/ "See some sculpture done a long time ago")
 
 </section>
 
 <section class="box" markdown="1">
 
-[And me in the past](http://archive.chrisjennings.net/chris "me")
+[And me in the past](https://www.chrisjennings.net/archive/chris "me")
 
 </section>
