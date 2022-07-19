@@ -1,7 +1,7 @@
-- name: Publisha
-  siteurl: https://www.publisha.org
-  title: see Digital Publishing Hub
-  order: 2
+# - name: Publisha
+#   siteurl: https://www.publisha.org
+#   title: see Digital Publishing Hub
+#   order: 6
 - name:
   siteurl:
   title:

@@ -13,7 +13,8 @@ layout: default
     <p>
       <img src="{{ page.image }}" alt="{{ page.caption }}" />
     </p>
-    {{ content | replace: "_uploads", "uploads" }}
+    {{ content | replace: "_uploads", "uploads" }} {% include post_info.html
+    post=page %}
   </section>
   {% if page.nft %}
   <div class="nft">

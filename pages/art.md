@@ -1,12 +1,12 @@
 ---
-title: portfolio
+title: Current Art
 permalink: "/portfolio/"
 layout: portfolio
 image: "uploads/log.jpg"
 description:
 gridlayout: true
-icon: fa-connectdevelop
-order: 3
+
+order: 1
 tags:
   - art
 ---

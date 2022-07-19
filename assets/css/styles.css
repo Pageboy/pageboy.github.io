@@ -390,10 +390,16 @@ header {
     text-transform: uppercase
 }
 
+.portfolio .meta, .art .meta {
+    text-transform: capitalize;
+    font-size: .8em;
+    margin-top: .4em;
+}
+
 .post-info {
     border-radius: 1em;
     padding-right: 0.5em;
-    display: inline-flex
+    display: inline-flex;
 }
 
 .post-info a {
@@ -1467,6 +1473,10 @@ font-size: 1.1em;
 div.portfolio header {
   border-bottom:none !important;
   margin-top: 12px;
+}
+
+.portfolio h2 {
+    text-align: center;
 }
 
 section.art img {
