@@ -12,4 +12,4 @@ tags:
 * Wind Waving Cranesbill
 * Clear Sky Blues and Distant Greens
 
-Sweeping from sky to land, the hill of meadow flowers meets the blue of sky. Up the walk with rest for breath, down the view meets wood of trees.
+Sweeping from sky to land, the hill of meadow flowers meets the blue of sky. Up the walk with rest for breath and closer look, down the view meets wood of trees.
