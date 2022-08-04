@@ -17,14 +17,11 @@ layout: default
     post=page %}
   </section>
   {% if page.nft %}
-  <div class="nft">
-    <a href="{{ page.nft }}" title="Buy on OpenSea" target="_blank"
-      ><img
-        src="https://storage.googleapis.com/opensea-static/Logomark/Badge%20-%20Available%20On%20-%20Dark.png"
-        alt="You can buy this as an NFT on OpenSea"
-        class="nft"
-    /></a>
-  </div>
+  <button class="nft">
+    <a href="{{ page.nft }}" title="Buy this as an NFT" target="_blank"
+      >Buy this as an NFT for your collection</a
+    >
+  </button>
   {% endif %}
   <!-- Social media shares -->
   {% include share_buttons.html %}

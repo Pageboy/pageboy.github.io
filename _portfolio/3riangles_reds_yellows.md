@@ -3,7 +3,7 @@ layout: art
 title: 3 triangles reds and yellows
 date: 2020-02-28 15:12
 image: https://live.staticflickr.com/65535/49300571742_c994c70466_o.jpg
-nft: https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/48162648330355413914028108631647327469322174667090404439099707909605550981124/
+nft: https://foundation.app/@pageboy/geo1x1/5?ref=0x6A7B17cA34184aE20f2679F06a4Bb0c592e83cAD
 tags:
   - art
   - square series

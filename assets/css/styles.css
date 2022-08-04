@@ -1488,14 +1488,33 @@ section.art img {
   display:block;
 }
 
-div.nft img {
-    /* border:1px solid #c2c2c2; */
+.nft {
+    border:1px solid #c2c2c2;
+    border-radius: 6px;
     width:45%;
     /* max-height: 100vh; */
-    margin-left:auto;
-    margin-right: auto;
+    margin:3px auto;
+    padding:0;
+    height:2em;
     display:block;
-    /* background-color: #337ab7; */
+    background-color: #92bb90;
+    color:white;
+  }
+
+  .nft a {
+    color:white;
+    text-decoration: none;
+    font-size: .8em;
+    line-height: 1;
+    margin:0;
+  }
+
+  .nft:hover {
+    background-color: silver;
+  }
+
+  .nft a:hover {
+    text-decoration: none;
   }
 
 section.photo img {
