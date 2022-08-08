@@ -1489,17 +1489,25 @@ section.art img {
 }
 
 .nft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border:1px solid #c2c2c2;
     border-radius: 6px;
-    width:45%;
+    width:35%;
     /* max-height: 100vh; */
-    margin:3px auto;
-    padding:0;
-    height:2em;
-    display:block;
+    margin:9px auto 3px auto;
+    padding:.5em 0;
+    /* height:2em; */
     background-color: #92bb90;
     color:white;
   }
+
+  @media (max-width: 768px) {
+    .nft {
+        width:80%;
+    }
+}
 
   .nft a {
     color:white;
