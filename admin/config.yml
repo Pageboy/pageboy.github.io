@@ -286,11 +286,11 @@ collections:
           required: false,
         }
       - {
-          label: "NFT at OpenSea",
+          label: "NFT at OpenSea or Foundation",
           name: "nft",
           widget: "string",
-          hint: "Copy this from my OpenSea location. Remove if bought",
-          required: false,
+          hint: "Copy this from my OpenSea or Foundation location. Remove if bought",
+          required: [false,]()
         }        
       - {
           label: "Body",
