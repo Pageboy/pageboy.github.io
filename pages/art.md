@@ -1,5 +1,5 @@
 ---
-title: Current Art
+title: Art
 permalink: "/portfolio/"
 layout: portfolio
 image: "uploads/log.jpg"
