@@ -290,7 +290,7 @@ collections:
           name: "nft",
           widget: "string",
           hint: "Copy this from my OpenSea or Foundation location. Remove if bought",
-          required: [false,]()
+          required: false,
         }        
       - {
           label: "Body",
