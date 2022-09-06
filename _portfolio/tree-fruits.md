@@ -7,8 +7,8 @@ tags:
   - art
   - golden section
 ---
-Berries ready ripe
-Juice on our Fingers
-Container collector
+* Berries ready ripe
+* Juice on our Fingers
+* Container collector
 
 Edges of the fields and in the public orchard we find the fruit that can be taken home. The colours of the juice stain our fingers; watch out the white trousers!
