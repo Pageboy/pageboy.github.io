@@ -1,6 +1,5 @@
 <div class="posts">
-
-    {% for post in paginator.posts | sort: "title" %}
+    {% for post in site.posts %}
     {%- unless post.tags contains "boat" -%}
     <div class="post-teaser">
         {% if post.image %}

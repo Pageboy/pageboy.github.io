@@ -5,6 +5,10 @@ collections:
   posts:
     title: Posts
     output: true
+    layout: blog
+  blog:
+    title: Blog
+    output: true
   projects:
     title: Projects
     output: true
