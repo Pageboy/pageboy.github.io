@@ -4,7 +4,8 @@ permalink: "/"
 layout: series
 gridlayout: true
 order: 1
-hide: true
+icon: fa-connectdevelop
+hide: false
 ---
 Gathering images and geometry with simple captions. Taking shapes and triangles for a walk in the landscape and around my photograph collections.
 
