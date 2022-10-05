@@ -13,6 +13,10 @@ collections:
     title: Projects
     output: true
     layout: project
+  series:
+    title: Series
+    output: true
+    layout: series
   portfolio:
     title: Portfolio
     output: true
@@ -125,8 +129,8 @@ kramdown:
       line_numbers: true
       start_line: 1
 
-paginate: 100
-paginate_path: page:num
+# paginate: 100
+# paginate_path: page:num
 permalink: pretty
 markdown: kramdown
 disable_disk_cache: true

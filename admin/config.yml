@@ -172,6 +172,41 @@ collections:
         }
       - { label: "Body", name: "body", widget: "markdown" }
 
+  - name: "series" # Used in routes, e.g., /admin/collections/blog
+    label: "Series" # Used in the UI
+    label_singular: "Group"
+    folder: "_series/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    media_folder: "/uploads"
+    public_folder: "/uploads"
+    editor:
+      preview: false
+    fields: # The fields for each document, usually in front matter
+      - {
+          label: "Layout",
+          name: "layout",
+          widget: "hidden",
+          default: "artseries",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - {
+          label: "Featured Image",
+          name: "image",
+          widget: "image",
+          required: false,
+        }
+      - { label: "Caption", name: "caption", widget: "string", required: false }
+      - {
+          label: "Section",
+          name: "section",
+          widget: "string",
+          required: true,
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+
   - name: "photographs" # Used in routes, e.g., /admin/collections/blog
     label: "Photographs" # Used in the UI
     label_singular: "Photograph"

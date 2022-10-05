@@ -1,0 +1,35 @@
+<div class="posts">
+
+  {%- assign items = site.series | sort: 'title' -%}
+    {%- for group in items limit:30 -%}
+    <div class="post-teaser">
+        {% if group.image %}
+        {% assign image_url = group.image | replace: "_uploads", "uploads" -%}
+        <div class="post-img">
+            <a aria-label="{{ group.title }}" href="{{ group.url | relative_url }}">
+              {%- if group.caption -%}
+                <img alt="{{ group.caption }}" src="{{ image_url | relative_url }}">
+              {%- else -%}
+                <img alt="{{ group.title }}" src="{{ image_url | relative_url }}">
+              {%- endif -%}
+
+            </a>
+        </div>
+        {% endif %}
+        <span>
+          <header>
+            <h1>
+              <a aria-label="{{ group.title }}" class="post-link" href="{{ group.url | relative_url }}">
+                {{ group.title }}
+              </a>
+            </h1>
+          </header>
+          <div class="excerpt">
+              {{ group.excerpt | strip_html | escape }}
+          </div>
+      </span>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- {% include blog_nav.html %} -->

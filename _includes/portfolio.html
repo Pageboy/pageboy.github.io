@@ -1,6 +1,7 @@
 <div class="posts">
   {%- assign items = site.portfolio | sort: 'date' | reverse -%} {%- for art in
   items limit:400 -%}
+  {%- if art.tags contains include.group -%}
   <div class="post-teaser">
     {% if art.image %} {% assign image_url = art.image | replace: "_uploads",
     "uploads" -%}
@@ -29,7 +30,7 @@
       <div class="excerpt">{{ art.excerpt }}</div>
     </span>
   </div>
-  {% endfor %}
+  {%- endif -%} {%- endfor -%}
 </div>
 
 <!-- {% include blog_nav.html %} -->
