@@ -5,7 +5,7 @@ layout: series
 gridlayout: true
 order: 1
 icon: fa-connectdevelop
-hide: false
+hide: true
 ---
 Gathering images and geometry with added words. Taking shapes for a walk in the landscape and around my photograph collections.
 

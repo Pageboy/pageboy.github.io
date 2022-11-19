@@ -41,10 +41,9 @@
                     {% if node.icon %} <i class="fa {{ node.icon }}" aria-hidden="true"></i>
                     {% else %} {{ node.title }} {% endif%}
                 </a>
-            </li>
-
+              </li>
             {% endunless %}
-            {% assign name_page = node.title | append: name_page %}
+            {% assign node = node.title | append: node %}
         {% endfor %}
         <li class="separator"> | </li>
         <li>
