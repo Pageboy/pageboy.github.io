@@ -1576,6 +1576,8 @@ section.sale {
     border:1px solid rgb(204, 204, 204);
     background-color: rgb(249, 249, 249);
     display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
     /* align-items: center; */
     padding: .5em 1em;
     margin-top: .6em;
@@ -1594,16 +1596,16 @@ section.sale {
 
 .sale p {
 margin-bottom:.4em;
+font-size: .8em;
 }
 
 .saledetails {
-    /* border:1px solid blue; */
-    flex-basis: 50%;
+    flex: 1 1 15em;
 }
 
 #smart-button-container {
     width:100%;
-    flex-basis: 40%;
+    flex: 1 0 0;
     padding:1em;
     margin:0 auto;
 }
