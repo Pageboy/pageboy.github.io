@@ -9,8 +9,8 @@ tags:
   - art
   - landscape
 ---
+Pads float over surface drawn with lines of reeds. The curving sweep of water grasses light against the drifting deeps. Shapes of colour align with clips of views. Colours chosen to capture the structure.
+
 * Pads Float
 * Draw Rush
 * Drift Sweep
-
-Pads float over surface drawn with lines of reeds. The curving sweep of water grasses light against the drifting deeps. Shapes of colour align with clips of views. Colours chosen to capture the structure.

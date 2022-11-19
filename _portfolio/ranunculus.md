@@ -9,10 +9,8 @@ tags:
   - landscape
   - nature
 ---
+Butter yellow shining through blades of green. Eyes down to the flat field feet following. Short grass yet, the buttercups will go.
+
 * Meadow Butter
 * Yellow Field
 * Golden Grasses
-
-Butter yellow shining through blades of green.
-Eyes down to the flat field feet following.
-Short grass yet, the buttercups will go.

@@ -7,8 +7,8 @@ tags:
   - landscape
   - art
 ---
+As we travel the river, the edges touch the surface and reveal the colours of the growing forms some in the shadows; others spreading their branches towards the light.
+
 * Light rippling
 * Sky water
 * River views
-
-As we travel the river, the edges touch the surface and reveal the colours of the growing forms.

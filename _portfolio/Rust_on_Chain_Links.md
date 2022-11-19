@@ -8,8 +8,8 @@ tags:
   - art
   - square series
 ---
+Corrosion seems like a negative thing; wasting away and dirty. But, actually no; rusted metal is rich in colour and texture and in this image I use some images of rusted chains that I have taken in sea locations. These images form the inspiration for the colours that I use in this structure. You will see squares, hexagons and triangles as well as a rhomboid shape.
+
 * Dockside salt spray
 * Rusted chains
 * Links and shackles
-
-Corrosion seems like a negative thing; wasting away and dirty. But, actually no; rusted metal is rich in colour and texture and in this image I use some images of rusted chains that I have taken in sea locations. These images form the inspiration for the colours that I use in this structure. You will see squares, hexagons and triangles as well as a rhomboid shape.

@@ -9,8 +9,8 @@ tags:
   - art
   - golden section
 ---
+Beach times between swims, the camera captures the sea washing over the pebbles. The stone colours switch from wet to dry; gloss to matt.
+
 * Tumbled Stones
 * Water Smoothed
 * Waved Sea
-
-Beach times between swims, the camera captures the sea washing over the pebbles. The stone colours switch from wet to dry; gloss to matt.

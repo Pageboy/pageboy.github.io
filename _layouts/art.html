@@ -16,15 +16,43 @@ layout: default
     {{ content | replace: "_uploads", "uploads" }} {% include post_info.html
     post=page %}
   </section>
-  {% if page.nft %}
-  <button type="button" class="nft">
-    <a href="{{ page.nft }}" title="Buy this as an NFT" target="_blank"
-      >Buy this as an NFT for your collection</a
-    >
-  </button>
+  {% if page.printsale %}
+  <section class="sale">
+    <div class="saledetails">
+  <h2>Print available</h2>
+  <p><b>Price:</b> £{{page.printsale}} (surface postage included)</p>
+  <p>Signed and dated print will be mailed in a cardboard tube with a certificate of authenticity.</p>
+  <p>There is an <b>Edition</b> of {{page.edition}} and yours will be numbered and embossed with the artist's emblem.</p>
+  
+    {% if page.tags contains "golden section" %}
+      <h3>Details:</h3>
+      <p><b>Image size:</b> 565mm x 344mm</p>
+      <p><b>Paper:</b> acid free cotton rag 310gsm, 594mm x 420mm</p>
+    {% endif %}
+    {% if page.tags contains "landscape" %}
+      <h3>Details:</h3>
+      <p><b>Image size:</b> 565mm x 317.8mm</p>
+      <p><b>Paper:</b> acid free cotton rag 310gsm, 594mm x 420mm</p>
+    {% endif %}
+    {% if page.tags contains "square series" %}
+      <h3>Details:</h3>
+      <p><b>Image size:</b> 340mm x 340mm</p>
+      <p><b>Paper:</b> acid free cotton rag 310gsm, 420mm x 594mm</p>
+    {% endif %}
+  </div>
+  {% include paypal.html price=page.printsale %}
+  
+  </section>
   {% endif %}
+
+
   <!-- Social media shares -->
   {% include share_buttons.html %}
+  {% if page.nft %}
+  <button type="button" class="nft">
+    <a href="{{ page.nft }}" title="Buy this as an NFT" target="_blank">NFT</a>
+  </button>
+  {% endif %}
   <!-- Tag list for portfolio -->
   {% capture tag_list %}{{ page.tags | join: "|"}}{% endcapture %} {% include
   tags_list.html tags=tag_list %}

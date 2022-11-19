@@ -9,8 +9,8 @@ tags:
   - art
   - golden section
 ---
+A little way back from the waves at the shore, the rocks are hosting colours of the sun. 
+
 * Marine Lichen
 * Sunburst Colours
 * Backdrop to the Beach
-
-A little way back from the waves at the shore, the rocks are hosting colours of the sun. 

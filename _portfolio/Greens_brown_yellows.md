@@ -9,7 +9,6 @@ tags:
   - square series
 ---
 
-
 - Ferns and Grasses
 - Wheat fields ready for harvest
 - Dense pine trees sap smell intense

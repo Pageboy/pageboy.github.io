@@ -8,8 +8,8 @@ tags:
   - art
   - landscape
 ---
+Across the river clouds reflect with shapes of water lapping in triangles. Banks of last years' colour with symmetry and transparency overlaid colours of the rippled water and lost greens.
+
 * River Bank
 * Reflects Back
 * Rippled Blue
-
-Across the river clouds reflect with shapes of water lapping in triangles. Banks of last years' colour with symmetry and transparency overlaid colours of the rippled water and lost greens.

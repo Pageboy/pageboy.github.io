@@ -7,8 +7,8 @@ tags:
   - art
   - square series
 ---
+All those asphalt repairs in the road and on the path - they form interesting geometries themselves, but then I add my own structure and juxtapose the textures with plain colour. Those asphalts have colours as well - they are not just black and grey. See what I mean.
+
 * Asphalt Altered
 * Ground Geometry
 * Texture Triangle
-
-All those asphalt repairs in the road and on the path - they form interesting geometries themselves, but then I add my own structure and juxtapose the textures with plain colour. Those asphalts have colours as well - they are not just black and grey. See what I mean.

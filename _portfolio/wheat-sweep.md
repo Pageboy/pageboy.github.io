@@ -8,12 +8,8 @@ tags:
   - art
   - landscape
 ---
+Pathways through the colours of farmed fields. Crops are textures of swaying grasses. The air is dusted with scents of earlier planting.
+
 * Ear Wind
 * Wheat Husks
 * Field Follow
-
-Pathways through the colours of farmed fields. 
-
-Crops are textures of swaying grasses.
-
-Air is dusted with scents of earlier planting

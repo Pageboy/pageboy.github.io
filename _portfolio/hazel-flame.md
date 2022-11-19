@@ -9,8 +9,8 @@ tags:
   - art
   - golden section
 ---
+Through shaded branches the red leaves glow against the faded greens. Recolouring in the cooling winds, the greens turn to burnt orange.
+
 * Vibrant Leaves
 * Vermillion Veins
 * Raw Reds
-
-Through shaded branches the red leaves glow against the faded greens. Recolouring in the cooling winds, the greens turn to burnt orange.

@@ -8,10 +8,8 @@ tags:
   - art
   - landscape
 ---
+The sky unfolds to the covering sun. Opening yellows and garden blooms with musty gorse puffed up gold.
+
 * Yellow Gold
 * Sun Folding
 * Opening Sky
-
-The sky unfolds to covering sun.
-Opening yellows and garden blooms.
-Musty gorse puffed up gold.

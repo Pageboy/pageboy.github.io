@@ -131,7 +131,8 @@ kramdown:
 
 # paginate: 100
 # paginate_path: page:num
-permalink: pretty
+# permalink: pretty
+permalink: /blog/:year/:month/:day/:title/
 markdown: kramdown
 disable_disk_cache: true
 highlighter: rouge

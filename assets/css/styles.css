@@ -201,7 +201,7 @@ img[align=right] {
 }
 
 #post-nav {
-    padding: 3% 6%
+    padding: 1% 18%
 }
 
 @media (max-width: 1000px) {
@@ -708,7 +708,8 @@ h3.tag-anchor i {
     text-align: center;
     width: 100%;
     color: #636363;
-    font-size: 0.9em
+    font-size: 0.9em;
+    padding-top: 0;
 }
 
 .site-footer .footer-icons ul {
@@ -818,8 +819,12 @@ h3.tag-anchor i {
 .site-header nav li {
     display: inline;
     float: left;
-    margin-right: 0.4em
+    margin-right: 0.4em;
 }
+
+.site-header nav li.active {
+    border-bottom: 7px solid #ebce7f;
+  }
 
 .site-header nav a:hover {
     color: #337ab7
@@ -933,7 +938,10 @@ h3.tag-anchor i {
         padding-top:45px;
     }
 
-
+    .site-header nav li.active {
+        border-bottom: 0px solid #ebce7f;
+        text-decoration:underline;
+      }
 
 }
 
@@ -1440,15 +1448,15 @@ section.box {
   text-align: center;
 } */
 
-.art ul {
+.art .post-content ul {
   list-style: none;
-  font-size: 1em;
-  margin-left: 0;
-  text-align: center;;
+  font-size: .7em;
+  margin: 3px 0;
+  /* text-align: center; */
 }
 
-.art p {
-    margin-bottom: 0;
+.art .post-content p {
+    margin: .8em 0;
     color: #505e6b;
     font-size: .9em;
 }
@@ -1494,20 +1502,20 @@ section.art img {
     justify-content: center;
     border:1px solid #c2c2c2;
     border-radius: 6px;
-    width:35%;
+    /* width:35%; */
     /* max-height: 100vh; */
-    margin:9px auto 3px auto;
-    padding:.5em 0;
+    margin:0 auto 12px auto;
+    padding:.5em;
     /* height:2em; */
     background-color: #92bb90;
     color:white;
   }
 
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     .nft {
         width:80%;
     }
-}
+} */
 
   .nft a {
     color:white;
@@ -1523,6 +1531,10 @@ section.art img {
 
   .nft a:hover {
     text-decoration: none;
+  }
+
+  .tag-list a:hover {
+    background-color: silver;
   }
 
 section.photo img {
@@ -1559,3 +1571,40 @@ section.photo img {
      width: 100%; 
      height: 100%; 
 }
+
+section.sale {
+    border:1px solid rgb(204, 204, 204);
+    background-color: rgb(249, 249, 249);
+    display: flex;
+    /* align-items: center; */
+    padding: .5em 1em;
+    margin-top: .6em;
+}
+
+.sale h2 {
+    font-size: 1.3em;
+    color: #768020;
+}
+
+.sale h3 {
+    font-size: 1.1em;
+    color:#8b8b8b;
+    margin-bottom: 0;
+}
+
+.sale p {
+margin-bottom:.4em;
+}
+
+.saledetails {
+    /* border:1px solid blue; */
+    flex-basis: 50%;
+}
+
+#smart-button-container {
+    width:100%;
+    flex-basis: 40%;
+    padding:1em;
+    margin:0 auto;
+}
+

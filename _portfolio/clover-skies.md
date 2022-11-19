@@ -9,10 +9,9 @@ tags:
   - art
   - landscape
 ---
+
+Buttercups cross the fields in yellow shoes. In the hedge, the clover pinkness dots the green. Skies are bright blue arcing through the trees just over there.
+
 * Yellow Fields
 * Closeup Clover
 * Purple Pale
-
-Buttercups cross the fields in yellow shoes. 
-In the hedge, the clover pinkness dots the green. 
-Skies are bright blue arcing through the trees over there.

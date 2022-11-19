@@ -8,10 +8,8 @@ tags:
   - art
   - landscape
 ---
+Sweeping from sky to land, the hill of meadow flowers meets the blue of sky. Up the walk with rest for breath and closer look, down the view meets the green of trees.
+
 * Through Thistles
 * Wind Waving Cranesbill
 * Clear Sky Blues and Distant Greens
-
-Sweeping from sky to land, the hill of meadow flowers meets the blue of sky.
-
-Up the walk with rest for breath and closer look, down the view meets the green of trees.

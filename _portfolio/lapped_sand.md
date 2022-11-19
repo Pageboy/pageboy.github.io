@@ -7,5 +7,4 @@
     - art
     - square series
 ---
-
-- Lapped Sand
+The tide pushes up the beach and covers the sand we remembered. Sea shows the sky colours but sand yellows are still just there between the ripples. The water is lapping gentle waves with light catching the edges.

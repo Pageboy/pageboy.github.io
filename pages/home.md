@@ -1,6 +1,6 @@
 ---
 title: Art in Progress
-permalink: "/"
+# permalink: "/"
 layout: series
 gridlayout: true
 order: 1

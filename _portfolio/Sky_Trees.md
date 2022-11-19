@@ -7,6 +7,7 @@
     - art
     - square series
 ---
+Trees reaching out to the branches in the sky. We walk with head up noting the contrast between bare branches and sky. Here is a spring day before the leaves come.
 
 - Trees reaching out
 - Branches in the sky

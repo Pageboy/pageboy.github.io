@@ -8,8 +8,8 @@ tags:
   - art
   - golden section
 ---
+Sea water colour drifting towards the shore. Ripples far become waves over the floor. Light mixes the blues and greens into turquoise shades and flashes.
+
 * Transparent Surface
 * Waves over stones
 * Surface Ripples
-
-Sea water colour drifting towards the shore. Ripples far become waves over the floor. Light mixes the blues and greens into turquoise shades and flashes.

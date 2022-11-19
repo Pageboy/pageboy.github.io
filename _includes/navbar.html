@@ -31,12 +31,12 @@
 			  </li>
 				{%- endunless -%}
 			{%- endfor -%}
-        {% assign name_page = "" %}
+        {% assign node = "" %}
 				{%- assign sorted_pages = site.pages | sort: "order" -%}
         {%- for node in sorted_pages -%}
             {% unless node.title == null or node.hide or name_page contains node.title %}
             <li class="separator"> | </li>
-            <li>
+            <li {% if page.url contains node.url %} class="active" {% endif %}>
                 <a class="clear" aria-label="{{ node.title }}" title="{{ node.title }}" href="{{ node.url | relative_url }}">
                     {% if node.icon %} <i class="fa {{ node.icon }}" aria-hidden="true"></i>
                     {% else %} {{ node.title }} {% endif%}

@@ -7,8 +7,8 @@ tags:
   - art
   - golden section
 ---
+On still days the sea at the shore shows through like dimpled glass, the rounded pebbles. The smoothed stones remember the storms that ground away their roughness.
+
 * Clear Ripples
 * Drifting Surface
 * Water Stones
-
-On still days the sea at the shore shows through like dimpled glass, the rounded pebbles. The smoothed stones remember the storms that ground away their roughness.

@@ -335,6 +335,20 @@ collections:
           hint: "Anything else apart from the caption",
         }
       - {
+          label: "Print available at what price",
+          name: "printsale",
+          widget: "number",
+          hint: "Price in pounds",
+          required: false,
+        }
+        {
+          label: "Number in the Print Edition",
+          name: "edition",
+          widget: "number",
+          hint: "Usually 10",
+          required: false,
+        }       
+      - {
           label: "Tags",
           name: "tags",
           widget: "select",

@@ -9,8 +9,8 @@ tags:
   - landscape
   - art
 ---
+The sea shore pebbles and the lapping water. Capturing colours and textures for the curved form. Added structural elements; repositories for the image details and colours that are alluring in the moment.
+
 * Course Sand
 * Tidal Waters
 * Weathered Stones
-
-The sea shore pebbles and the lapping water. Capturing colours and textures for the curved form. Added structural elements; repositories for the image details and colours that are alluring in the moment.

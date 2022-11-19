@@ -10,8 +10,8 @@ tags:
   - landscape
   - nature
 ---
+Short grasses overlaid with shapes of green. Look at these veins in the leaf cropped into the hexagon. The shapes anchor to the centre with balanced structure and shades of green.
+
 * Ground Grass
 * Leaf Vein
 * Over Blades
-
-Short grasses overlaid with shapes of green. Look at these veins in the leaf cropped into the hexagon. The shapes anchor to the centre with balanced structure and shades of green.

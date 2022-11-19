@@ -8,8 +8,8 @@ tags:
   - art
   - landscape
 ---
+Walking on hard ground. No sign of rain. Sunburn on the path where plants show their roots. Some green growth in the deep cracks, a feather flutters down.
+
 * Water less hard soil
 * Feather Falls
 * Roots Exposed
-
-Walking on hard ground. No sign of rain. Sunburn on the path where plants show their roots. Some green growth in the deep cracks, a feather flutters down.

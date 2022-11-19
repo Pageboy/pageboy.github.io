@@ -8,9 +8,8 @@ tags:
   - art
   - landscape
 ---
+The wind sweeps over the wheat field showing itself as it strokes the heads. Walking over the clumpy grasses and remembering the stoney ground.
+
 * Wind wheat
 * Machined Ground
 * Course Clumps
-
-The wind sweeps over the wheat field showing itself as it strokes the heads.
-Walking over the clumpy grasses and remembering the stoney ground.

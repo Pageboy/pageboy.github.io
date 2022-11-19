@@ -8,8 +8,8 @@ tags:
   - art
   - square series
 ---
+The river ripples along catching the sky. The overhanging trees darken the light on the boat wash. The leaves at the edge show their seasonal hues.
+
 * Boat wash
 * Ripples in the flow
 * The sky dips the surface
-
-The river ripples along catching the sky. The overhanging trees darken the light on the boat wash. The leaves at the edge show their seasonal hues.

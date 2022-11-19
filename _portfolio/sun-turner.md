@@ -9,12 +9,8 @@ tags:
   - art
   - landscape
 ---
+A walk through the village where sun is planted in the gardens, to meadows of ragwort and bitter dock. Sky colours the backdrop to the yellows, ochres and dusky browns. Petals repeat out from orange buttons.
+
 * Scented sunlight
 * Circling Yellows
 * Light Leaning
-
-A walk through the village where sun is planted in the gardens, to meadows of ragwort and bitter dock.
-
-Sky colours the backdrop to the yellows, ochres and dusky browns.
-
-Petals repeat out from orange buttons.

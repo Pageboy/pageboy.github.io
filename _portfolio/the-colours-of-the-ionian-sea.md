@@ -8,8 +8,8 @@ tags:
   - art
   - golden section
 ---
+Viewing the Ionian Sea from our beach places. The waves are sometimes still but sometimes confused. The greens of the olive groves and the blue of the sky colour the surface; now poured into the shapes of this geometry construct.
+
 * Light through the waves
 * Darker when deep
 * Colouring the Surface
-
-Viewing the Ionian Sea from our beach places. The waves are sometimes still but sometimes confused. The greens of the olive groves and the blue of the sky colour the surface; now poured into the shapes of this geometry construct.
