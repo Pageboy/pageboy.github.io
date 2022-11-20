@@ -341,7 +341,7 @@ collections:
           hint: "Price in pounds",
           required: false,
         }
-        {
+      - {
           label: "Number in the Print Edition",
           name: "edition",
           widget: "number",
