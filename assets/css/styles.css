@@ -1610,3 +1610,7 @@ font-size: .8em;
     margin:0 auto;
 }
 
+
+#smart-button-container img {
+    max-width: 90%;
+}
