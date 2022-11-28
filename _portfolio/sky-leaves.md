@@ -8,4 +8,4 @@ tags:
   - art
   - golden section
 ---
-The trees around the river release their leaves into the water. There, they drift in the current covering the sky reflected surface. Once, we looked up to the leaves against the sky; now we look down to them in the sky.
+The trees around the river release their leaves into the water. There, they drift in the sky reflected surface.  Once, we looked up to the leaves against the sky; now we look down at them in the river sky.
