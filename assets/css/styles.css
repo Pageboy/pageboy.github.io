@@ -1533,6 +1533,43 @@ section.art img {
     text-decoration: none;
   }
 
+  .saatchi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:1px solid #c2c2c2;
+    border-radius: 16px;
+    /* max-height: 100vh; */
+    margin:1em auto 1em auto;
+    padding:.5em 1em;
+    /* height:2em; */
+    background-color: #1f6c8d;
+    color:white;
+  }
+
+  /* @media (max-width: 768px) {
+    .nft {
+        width:80%;
+    }
+} */
+
+  .saatchi a {
+    color:white;
+    text-decoration: none;
+    font-size: .8em;
+    line-height: 3;
+    margin:0;
+  }
+
+  .saatchi:hover {
+    background-color: rgb(209, 234, 156);
+  }
+
+  .saatchi a:hover {
+    text-decoration: none;
+    color:#000;
+  }
+
   .tag-list a:hover {
     background-color: silver;
   }

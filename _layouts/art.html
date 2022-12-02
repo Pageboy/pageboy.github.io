@@ -16,14 +16,10 @@ layout: default
     {{ content | replace: "_uploads", "uploads" }} {% include post_info.html
     post=page %}
   </section>
-  {% if page.printsale %}
+  
   <section class="sale">
     <div class="saledetails">
-  <h2>Print available</h2>
-  <p><b>Price:</b> £{{page.printsale}} (surface postage included)</p>
-  <p>Signed and dated print will be mailed in a cardboard tube with a certificate of authenticity.</p>
-  <p>There is an <b>Edition</b> of {{page.edition}} and yours will be numbered and embossed with the artist's emblem.</p>
-  
+      
     {% if page.tags contains "golden section" %}
       <h3>Details:</h3>
       <p><b>Image size:</b> 565mm x 344mm</p>
@@ -40,10 +36,15 @@ layout: default
       <p><b>Paper:</b> acid free cotton rag 310gsm, 420mm x 594mm</p>
     {% endif %}
   </div>
-  {% include paypal.html price=page.printsale title=page.title %}
+  {% if page.saatchiart %}
+
+  <button type="button" class="saatchi">
+    <a href="{{ page.saatchiart }}" title="Buy this Print" target="_blank">Print available from Saatchi Art</a>
+  </button>
+  {% endif %}
+  
   
   </section>
-  {% endif %}
 
 
   <!-- Social media shares -->

@@ -335,19 +335,12 @@ collections:
           hint: "Anything else apart from the caption",
         }
       - {
-          label: "Print available at what price",
-          name: "printsale",
-          widget: "number",
-          hint: "Price in pounds",
+          label: "Print available at Saatchi",
+          name: "saatchiart",
+          widget: "string",
+          hint: "Copy this share link from my Saatchi Gallery",
           required: false,
-        }
-      - {
-          label: "Number in the Print Edition",
-          name: "edition",
-          widget: "number",
-          hint: "Usually 10",
-          required: false,
-        }       
+        }  
       - {
           label: "Tags",
           name: "tags",

@@ -5,6 +5,7 @@ date: 2022-06-26T14:58:32.669Z
 image: https://live.staticflickr.com/65535/52173224557_bc3a27ba15_h_d.jpg
 caption: Tidal
 nft: https://opensea.io/assets/ETHEREUM/0x495f947276749ce646f68ac8c248420045cb7b5e/48162648330355413914028108631647327469322174667090404439099707900809457958913
+saatchiart: https://www.saatchiart.com/art/Digital-Shore-Shallows/2113733/9903439/view
 tags:
   - landscape
   - art
