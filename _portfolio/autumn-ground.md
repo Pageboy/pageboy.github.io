@@ -5,7 +5,7 @@ date: 2022-11-13T10:36:01.664Z
 image: https://live.staticflickr.com/65535/52495753547_d9baa1f128_h_d.jpg
 caption: Wet Walking
 nft: https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/48162648330355413914028108631647327469322174667090404439099707917302132375553/
-saatchiart:
+saatchiart: https://www.saatchiart.com/art/Digital-Autumn-Ground/2113733/9916979/view
 tags:
   - art
   - golden section
