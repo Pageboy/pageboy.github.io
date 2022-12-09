@@ -16,10 +16,11 @@ layout: default
     {{ content | replace: "_uploads", "uploads" }} {% include post_info.html
     post=page %}
   </section>
-  
+  {% if page.saatchiart %}
   <section class="sale">
     <div class="saledetails">
-      <h3>Print Details:</h3>
+      <h2>Limited edition print available:</h2>
+      <h3>Details:</h3>
     {% if page.tags contains "golden section" %}  
       <p><b>Image size:</b> 562mm x 349mm</p>
       <p><b>Paper:</b> acid free archival 310gsm, 594mm x 420mm</p>
@@ -33,7 +34,7 @@ layout: default
       <p><b>Paper:</b> acid free archival 312gsm, 485mm x 330mm</p>
     {% endif %}
   </div>
-  {% if page.saatchiart %}
+  
 
   <button type="button" class="saatchi">
     <a href="{{ page.saatchiart }}" title="Buy this Print" target="_blank">Print available from Saatchi Art</a>
