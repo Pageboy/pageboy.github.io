@@ -2,7 +2,7 @@
 layout: art
 title: Lean over Water
 date: 2022-12-22T19:16:46.175Z
-image: https://live.staticflickr.com/65535/52580230604_d9bdcb7461_h_d.jpg
+image: https://live.staticflickr.com/65535/52580230604_036fdfebdf_h_d.jpg
 tags:
   - art
   - root2portrait
