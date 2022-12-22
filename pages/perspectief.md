@@ -3,6 +3,7 @@ layout: perspectief
 permalink: /perspectief/
 order: 5
 date: 2022-06-06T13:30:29.690Z
+icon: fa-anchor
 flickr_album: 72157710628205710
 subtitle: A Perspectief on Cruising
 title: My Boat

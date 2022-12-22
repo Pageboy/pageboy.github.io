@@ -1,6 +1,6 @@
 <div class="posts">
     {% for post in site.posts %}
-    {%- unless post.tags contains "boat" -%}
+    
     <div class="post-teaser">
         {% if post.image %}
         {% assign image_url = post.image | replace: "_uploads", "uploads" -%}
@@ -29,7 +29,7 @@
           </div>
       </span>
     </div>
-    {% endunless %}
+    
     {% endfor %}
 
 </div>
