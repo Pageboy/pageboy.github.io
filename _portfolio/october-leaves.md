@@ -5,7 +5,7 @@ date: 2022-10-15T15:52:56.165Z
 image: https://live.staticflickr.com/65535/52429854308_c1dbcfba34_h_d.jpg
 caption: Maple leaves
 nft: https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/48162648330355413914028108631647327469322174667090404439099707914003597492225/
-saatchiart: https://www.saatchiart.com/art/Digital-October-Leaves/2113733/9967127/view
+forsale: https://www.saatchiart.com/art/Digital-October-Leaves/2113733/9967127/view
 tags:
   - art
   - golden section

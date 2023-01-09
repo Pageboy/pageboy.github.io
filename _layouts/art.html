@@ -16,7 +16,7 @@ layout: default
     {{ content | replace: "_uploads", "uploads" }} {% include post_info.html
     post=page %}
   </section>
-  {% if page.saatchiart %}
+  {% if page.forsale %}
   <section class="sale">
     <div class="saledetails">
       <h2>Limited edition print available:</h2>
@@ -40,8 +40,8 @@ layout: default
   </div>
   
 
-  <button type="button" class="saatchi">
-    <a href="{{ page.saatchiart }}" title="Buy this Print" target="_blank">Print available from Saatchi Art</a>
+  <button type="button" class="forsale">
+    <a href="{{ page.forsale }}" title="Buy this Print" target="_blank">Print available for sale</a>
   </button>
   {% endif %}
   

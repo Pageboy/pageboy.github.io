@@ -3,7 +3,7 @@ layout: art
 title: Wet and Dry Shore
 date: 2022-06-30T11:41:38.281Z
 image: https://live.staticflickr.com/65535/52182816287_05de239884_h_d.jpg
-saatchiart: https://www.saatchiart.com/art/Digital-Wet-and-Dry-Shore/2113733/9903401/view
+forsale: https://www.saatchiart.com/art/Digital-Wet-and-Dry-Shore/2113733/9903401/view
 tags:
   - landscape
   - art

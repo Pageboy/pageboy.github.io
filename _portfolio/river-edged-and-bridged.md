@@ -4,7 +4,7 @@ title: River Edged and Bridged
 date: 2022-07-22T12:51:13.514Z
 image: https://live.staticflickr.com/65535/52233432416_29894d4d2e_h_d.jpg
 caption: Boat views bridged river
-saatchiart:
+forsale: https://www.art2arts.co.uk/artwork/river-edged-and-bridged#.Y7xff9LmJqc.link
 tags:
   - art
   - landscape

@@ -1533,7 +1533,7 @@ section.art img {
     text-decoration: none;
   }
 
-  .saatchi {
+  .forsale {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1553,7 +1553,7 @@ section.art img {
     }
 } */
 
-  .saatchi a {
+  .forsale a {
     color:white;
     text-decoration: none;
     font-size: .8em;
@@ -1561,11 +1561,11 @@ section.art img {
     margin:0;
   }
 
-  .saatchi:hover {
+  .forsale:hover {
     background-color: rgb(209, 234, 156);
   }
 
-  .saatchi a:hover {
+  .forsale a:hover {
     text-decoration: none;
     color:#000;
   }

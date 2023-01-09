@@ -335,10 +335,10 @@ collections:
           hint: "Anything else apart from the caption",
         }
       - {
-          label: "Print available at Saatchi",
-          name: "saatchiart",
+          label: "Print available",
+          name: "forsale",
           widget: "string",
-          hint: "Copy this share link from my Saatchi Gallery",
+          hint: "Copy this share link from my Gallery at Saatchi or Art2Arts",
           required: false,
         }  
       - {
