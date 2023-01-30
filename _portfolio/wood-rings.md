@@ -3,6 +3,7 @@ layout: art
 title: Wood Rings
 date: 2023-01-30T12:51:14.255Z
 image: https://live.staticflickr.com/65535/52658306981_230b13651e_h_d.jpg
+caption: Sweeping rings
 tags:
   - landscape
   - art
