@@ -2,7 +2,7 @@
 
   {%- assign items = site.projects | sort: 'title' -%}
     {%- for project in items limit:30 -%}
-    {%- unless project.tags contains "early work" -%}
+    {%- if project.tags contains "early work" -%}
     <div class="post-teaser">
         {% if project.image %}
         {% assign image_url = project.image | replace: "_uploads", "uploads" -%}
@@ -30,7 +30,7 @@
           </div>
       </span>
     </div>
-    {% endunless %}
+    {% endif %}
     {% endfor %}
 </div>
 

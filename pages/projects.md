@@ -2,10 +2,11 @@
 title: Projects
 permalink: "/projects/"
 layout: projects
-image: "uploads/log.jpg"
 description:
 gridlayout: true
 order: 3
 ---
 
-Here recorded for as long as the internet lasts my projects from a while ago and from a long time ago.
+Here are some projects that I have created. These are like 'memes', collections of things. I continue to add to these occasionally; if I spot an interesting wall, then I will add a photo.
+
+Some of the 'Wall Markings' are early photographic work in black and white.

@@ -5,6 +5,9 @@ layout: project
 image: /uploads/2mirrors_shadowsandreflections.jpg
 caption: Two mirrors in the sand with an incoming tide
 flickr_album: 72157709156751573
+tags:
+  - 'early work'
+  - photography
 ---
 
 Ceannan-tailen (pronounced Kintallen) is small bay on the West Coast of Scotland near to the mouth of West Loch Tarbert. The bay is exposed to the Sound of Jura and the prevailing westerly winds. The sand in the bay is continually shifting such that each year when I returned it always seemed different. I liked to spend much time on this shore observing the tidal world and the photographic pieces here are a result of ideas developed on this beach.

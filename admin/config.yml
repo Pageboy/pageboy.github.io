@@ -205,6 +205,30 @@ collections:
           required: true,
         }
       - { label: "Body", name: "body", widget: "markdown" }
+      - {
+          label: "Tags",
+          name: "tags",
+          widget: "select",
+          multiple: true,
+          max: 5,
+          options:
+            [
+              "early work",
+              "web",
+              "books",
+              "typography",
+              "education",
+              "history",
+              "personal",
+              "photography",
+              "portraits",
+              "publishing",
+              "sea",
+              "exhibition",
+            ],
+          required: false,
+          hint: "By adding tags the photos can be listed together under that tag. You will need to enable the tags page (by turning on show on menu for the tags page.",
+        }
 
 
   - name: "photographs" # Used in routes, e.g., /admin/collections/blog
