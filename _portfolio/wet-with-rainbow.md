@@ -8,4 +8,4 @@ tags:
   - art
   - golden section
 ---
-Downpours keep us down but the rainbow brings elation. In the parked car, waiting for the rain to stop, the sky is painted with the curve of the prism colours. Don’t start the wipers - the rain drops on glass add to the spectacle.
+Downpours keep us down but the rainbow brings elation. In the parked car, waiting for the rain to stop, the sky is painted with the curve of prism colours. Don’t start the wipers - the rain drops on glass add to the spectacle.
