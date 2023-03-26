@@ -2,7 +2,7 @@
 layout: art
 title: Wet with Rainbow
 date: 2023-03-25T16:14:53.210Z
-image: https://live.staticflickr.com/65535/52769676147_738a018732_h_d.jpg
+image: https://live.staticflickr.com/65535/52769676147_c4992abaa7_h_d.jpg
 caption: Rainbow through windscreen
 tags:
   - art
