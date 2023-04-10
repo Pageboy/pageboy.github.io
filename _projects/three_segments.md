@@ -5,6 +5,7 @@ layout: project
 image: /uploads/threesegments.jpg
 caption: View of the 3 segments sculpture
 flickr_album: "72177720307356116"
+order: 10
 tags:
   - 'early work'
   - 'public sculpture'

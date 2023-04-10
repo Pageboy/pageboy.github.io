@@ -5,6 +5,7 @@ layout: project
 image: /uploads/upstairs.jpg
 caption: View of gallery
 flickr_album: "72177720307358057"
+order: 12
 tags:
   - 'early work'
   - 'exhibition'

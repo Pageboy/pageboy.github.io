@@ -5,6 +5,7 @@ layout: project
 image: /uploads/facingtriangles.jpg
 caption: Facing Triangles
 flickr_album: "72177720300542608"
+order: 4
 tags:
   - 'early work'
 ---

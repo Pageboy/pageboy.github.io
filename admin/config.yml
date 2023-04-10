@@ -170,6 +170,13 @@ collections:
           required: false,
           default: "flickr",
         }
+      - {
+          label: "Order on Page",
+          name: "order",
+          widget: "number",
+          required: false,
+          default: "1",
+        }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "series" # Used in routes, e.g., /admin/collections/blog

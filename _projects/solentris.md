@@ -5,6 +5,7 @@ layout: project
 image: /uploads/solentris.jpg
 caption: View of the Solentris sculpture
 flickr_album: "72177720307355346"
+order: 11
 tags:
   - 'early work'
   - 'public sculpture'

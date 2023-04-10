@@ -5,6 +5,7 @@ layout: project
 image: /uploads/bradford.jpg
 caption: View of gallery
 flickr_album: "72177720307375383"
+order: 14
 tags:
   - 'early work'
   - 'exhibition'

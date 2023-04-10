@@ -5,6 +5,7 @@ layout: project
 image: /uploads/2mirrors_shadowsandreflections.jpg
 caption: Two mirrors in the sand with an incoming tide
 flickr_album: 72157709156751573
+order: 3
 tags:
   - 'early work'
   - photography

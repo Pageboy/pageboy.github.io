@@ -5,6 +5,7 @@ layout: project
 image: /uploads/mirror_drawing_detail.jpg
 caption: Detail of Pencil Mirror Drawing
 flickr_album: "72177720300503731"
+order: 2
 tags:
   - 'early work'
 ---

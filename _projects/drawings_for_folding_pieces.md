@@ -5,6 +5,7 @@ layout: project
 image: /uploads/unfoldedlandscape.jpg
 caption: Detail of Parallel
 flickr_album: "72177720300464505"
+order: 5
 tags:
   - 'early work'
 ---

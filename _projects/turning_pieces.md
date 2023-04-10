@@ -5,6 +5,7 @@ layout: project
 image: /uploads/doubleturner.jpg
 caption: Detail of Turning piece piece
 flickr_album: "72177720307359928"
+order: 8
 tags:
   - 'early work'
 ---

@@ -5,6 +5,7 @@ layout: project
 image: /uploads/vag12.jpg
 caption: Detail of Vagland12
 flickr_album: "72177720300505635"
+order: 6
 tags:
   - 'early work'
 ---

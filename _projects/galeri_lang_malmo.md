@@ -5,6 +5,7 @@ layout: project
 image: /uploads/malmo.jpg
 caption: Entrance signage
 flickr_album: "72177720307357485"
+order: 15
 tags:
   - 'early work'
   - 'exhibition'

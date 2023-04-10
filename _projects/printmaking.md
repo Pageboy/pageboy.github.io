@@ -5,6 +5,7 @@ layout: project
 image: /uploads/etching_turner.jpg
 caption: Turning pieces etching
 flickr_album: "72177720300515443"
+order: 1
 tags:
   - 'early work'
 ---

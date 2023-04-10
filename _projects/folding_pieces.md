@@ -5,6 +5,7 @@ layout: project
 image: /uploads/foldingland.jpg
 caption: Detail of landscape piece
 flickr_album: "72177720307353163"
+order: 7
 tags:
   - 'early work'
 ---

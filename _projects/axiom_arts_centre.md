@@ -5,6 +5,7 @@ layout: project
 image: /uploads/axiom.jpg
 caption: View of gallery
 flickr_album: "72177720307376093"
+order: 13
 tags:
   - 'early work'
   - 'exhibition'
