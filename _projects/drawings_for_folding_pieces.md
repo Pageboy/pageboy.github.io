@@ -10,4 +10,4 @@ tags:
   - 'early work'
 ---
 
-During 1983 and 1984, I made a series of folding wall hanging pieces using rag paper and wood. The imagery on the paper was abstracted from landscapes and was created with oil crayon. I made drawings for these pieces but not all were finally created. Most of the coloured drawings that you see here are on large graph paper with pencil and crayon.
+During 1983 and 1984, I made a series of [folding wall hanging pieces](https://www.chrisjennings.net/projects/folding_pieces/) using rag paper and wood. The imagery on the paper was abstracted from landscapes and was created with oil crayon. I made drawings for these pieces but not all were finally created. Most of the coloured drawings that you see here are on large graph paper with pencil and crayon.

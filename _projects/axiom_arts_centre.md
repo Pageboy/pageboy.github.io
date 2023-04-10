@@ -1,5 +1,5 @@
 ---
-title: Axiom Arts Centre Exhibition
+title: Axiom Arts Centre - Exhibition
 date: 2023-01-14
 layout: project
 image: /uploads/axiom.jpg
