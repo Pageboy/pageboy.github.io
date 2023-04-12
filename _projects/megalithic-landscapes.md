@@ -7,7 +7,6 @@ order: 15
 image: /uploads/brodgar.jpg
 caption:
 tags:
-  - 'early work'
   - photography
 ---
 
