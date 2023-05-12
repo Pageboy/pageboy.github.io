@@ -1,6 +1,6 @@
 <div class="posts">
   {%- assign items = site.portfolio | sort: 'date' | reverse -%} {%- for art in
-  items limit:400 -%} {%- if art.tags contains "root2portrait" -%}
+  items limit:400 -%} {%- if art.tags contains "root2A" -%}
   <div class="post-teaser">
     {% if art.image %} {% assign image_url = art.image | replace: "_uploads",
     "uploads" -%}

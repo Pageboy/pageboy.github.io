@@ -7,6 +7,6 @@ caption: Rectangle divided and rouged
 forsale: https://www.saatchiart.com/art/Digital-Ground-Leaves/2113733/9987767/view
 tags:
   - art
-  - root2portrait
+  - root2A
 ---
 Oaks overhang the paths; their leaves have scattered over the ground mixing a rusty colour palette. Shapes in the rectangle are painted with enhanced tones picked from the grounded hues.
