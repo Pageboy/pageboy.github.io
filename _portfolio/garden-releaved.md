@@ -4,7 +4,7 @@ title: Garden Releaved
 date: 2023-05-13T09:19:06.928Z
 image: https://live.staticflickr.com/65535/52893326117_284c3ec446_h_d.jpg
 caption: Around the begonias
-forsale: ""
+forsale:
 tags:
   - art
   - root2A
