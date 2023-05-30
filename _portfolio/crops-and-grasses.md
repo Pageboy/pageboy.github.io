@@ -8,4 +8,4 @@ tags:
   - art
   - root2A
 ---
-Under the cerelean skys the wind brushes the barley planted in one field as waves of randomness shimmers over the wild grasses in the next. Arcs of green and yellow with their shared centres are mixed in with the images of dense undergrowth. The distant horizon generates a line that defines the geometric coincidence.
+Under the cerelean sky the wind brushes the barley planted in one field as waves of randomness shimmers over the wild grasses in the next. Arcs of green and yellow with their shared centres are mixed in with the images of dense undergrowth. The distant horizon generates a line that defines the geometric conjunction.
