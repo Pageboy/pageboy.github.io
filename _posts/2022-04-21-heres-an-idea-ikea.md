@@ -4,6 +4,7 @@ title: Here's an Idea - IKEA
 date: 2022-01-01T14:19:40.812Z
 image: /uploads/ikea-logo-2210x1473.jpg
 caption: IKEA Store in Wembley
+published: false
 flickr_album: flickr
 tags:
   - typography
