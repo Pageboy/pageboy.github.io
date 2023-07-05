@@ -8,4 +8,4 @@ tags:
   - art
   - golden section
 ---
-The river edge is softened by the reeds that wave with the wind and the current. In the shadows of the bank we catch a glimpse of some pink blooms hanging onto the reed stems. The transparent water reveals the waving fronds and reflects the overhanging tree colours.
+The river edge is softened by the reeds that wave with the wind and the current. In the shadows of the bank we glimpse pink blooms hanging onto the reed stems. While the transparent water reveals the waving fronds beneath it mixes with the reflection of the overhanging tree colours.
