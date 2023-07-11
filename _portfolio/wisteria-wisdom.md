@@ -10,6 +10,6 @@ tags:
 ---
 We waited for the wisteria to come into flower and we were not disappointed. Up close, the violets and purples blend with light lavender tones; these colours are used to flood the geometric shapes. A block of yellow green seperates the segment and arc from the long racemes formed on the green stalks.
 
-On panel 400mm x 565mm
-
 ![Wisteria wisdom](/uploads/img_2521.jpeg "Wisteria wisdom")
+
+Varnished Giclee print on panel 400mm x 565mm
