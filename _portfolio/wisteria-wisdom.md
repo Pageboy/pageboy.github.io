@@ -12,4 +12,4 @@ We waited for the wisteria to come into flower and we were not disappointed. Up 
 
 ![Wisteria wisdom](/uploads/img_2521.jpeg "Wisteria wisdom")
 
-Varnished Giclee print on panel 400mm x 565mm
+Varnished giclée print on panel 400mm x 565mm

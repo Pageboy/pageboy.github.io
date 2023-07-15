@@ -10,6 +10,6 @@ tags:
 ---
 In the midst of predominantly grey hues, our eyes perceive skies tinged with a captivating shade of *brown*. This contrasting color evokes a longing for vibrant *blue* skies, which have the power to invigorate our minds and inspire optimism and hope. Amidst deliberately arranged arcs, segments, and bands, we arrange the random dance of clouds, juxtaposed against the textured expanses of serene cerulean and warm ochre tones.
 
-On panel 400mm x 565mm
+Varnished giclée print on panel 400mm x 565mm
 
 ![Cloud flag](/uploads/img_2576.jpeg "Cloud flag")

@@ -4,7 +4,7 @@ title: Beach Stones on the Street
 date: 2023-02-04T11:49:13.182Z
 image: https://live.staticflickr.com/65535/52668079766_a78250a622_h_d.jpg
 caption: sett stones
-forsale: https://www.art2arts.co.uk/artwork/beach-stones-on-the-street#.Y95OupHLZdU.link
+forsale:
 tags:
   - art
   - landscape

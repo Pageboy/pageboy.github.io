@@ -14,3 +14,5 @@ Beach times between swims, the camera captures the sea washing over the pebbles.
 * Tumbled Stones
 * Water Smoothed
 * Waved Sea
+
+Varnished giclée print on panel 350mm x 565mm

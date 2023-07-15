@@ -11,6 +11,6 @@ tags:
 ---
 We are relieved to see most of our garden plants coming back into leaf after a cold and (sometimes) frosty Winter. The light seems to penetrate the transparency of the leaves; reds and oranges mix with the greens with hints of the mauvish bluebells in the background. Back in the studio the colours blend within the sweep of the arcs that divide the rectangle.
 
-On panel 400mm x 565mm
+Varnished giclée print on panel 400mm x 565mm
 
 ![Releaved](/uploads/img_2574.jpeg "Releaved")
