@@ -13,4 +13,4 @@ In this **triptych** three backgrounds are used as the anchor for the circular f
 
 Museum Grade varnished giclee prints on 3 panels. Each one is 350mm x 565mm - overall 565mm x 1050mm. Panels are bolted together with stainless steel nuts and bolts.
 
-![Splendour triptych](/uploads/img_2608.jpeg "Splendour triptych")
+![Splendour triptych](/uploads/img_2608-1-.jpeg "Splendour triptych")
