@@ -16,3 +16,5 @@ Beach times between swims, the camera captures the sea washing over the pebbles.
 * Waved Sea
 
 Varnished giclée print on panel 350mm x 565mm
+
+![Ashima on the sofa](/uploads/img_2603.jpeg "Ashima on the sof")
