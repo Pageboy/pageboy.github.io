@@ -3,7 +3,7 @@ layout: art
 title: Golden Wheat
 date: 2023-07-23T15:10:02.519Z
 image: https://live.staticflickr.com/65535/53065733206_c8ad3c7efd_h_d.jpg
-caption: Golden ratio with colours from fixed wheat
+caption: Golden ratio with colours from field wheat
 tags:
   - art
   - golden section
