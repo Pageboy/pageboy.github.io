@@ -9,3 +9,7 @@ tags:
   - root2A
 ---
 A walk in the park and we are drawn to the purple flowers in the border. The insects view of these spikes is of brilliant pods of orange against the dark violet-blue wands; the camera grabs the colours and are used in the arcs defining the geometry of the rectangle.
+
+Varnished giclée print on panel 400mm x 565mm
+
+![Studio view](/uploads/nik_3109.jpeg "Studio view")
