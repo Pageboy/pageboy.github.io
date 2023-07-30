@@ -5,6 +5,7 @@ image: uploads/portfolioback.jpg
 flickr_album:
 icon: fa-connectdevelop
 layout: portfolio
+section: art
 order: 1
 hide: false
 ---
