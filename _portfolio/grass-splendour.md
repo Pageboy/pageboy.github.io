@@ -1,6 +1,6 @@
 ---
 layout: art
-title: Grass Splendour
+title: Grass Splendour (Triptych)
 date: 2023-07-20T16:27:27.533Z
 image: https://live.staticflickr.com/65535/53058778522_45dbf9474b_h_d.jpg
 tags:
@@ -11,7 +11,7 @@ tags:
 
 In this **triptych** three backgrounds are used as the anchor for the circular forms and arcs that are hosting the chosen images.
 
-Museum Grade varnished giclee prints on 3 panels. Each one is 350mm x 565mm - overall 565mm x 1050mm. Panels are bolted together with stainless steel nuts and bolts.
+Museum Grade varnished giclée prints on 3 panels. Each one is 350mm x 565mm - overall 565mm x 1050mm. Panels are bolted together with stainless steel nuts and bolts.
 
 Seen here in the studio.
 

@@ -21,13 +21,7 @@
 
     <!-- Menu -->
     <ul class="hideme">
-      {%- unless page.layout == "series" -%}
-      <li>
-        <a class="clear" aria-label="Home" title="Home page" href="/" target="_blank">
-          <i class="fa fa-connectdevelop"></i>
-        </a>
-      </li>
-      {%- endunless -%}
+     
 			{%- for sites in site.data.othersites -%}
 			{%- unless sites.name == null or sites.siteurl ==  null -%}
 			<li class="separator"> | </li>
