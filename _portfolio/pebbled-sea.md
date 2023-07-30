@@ -17,4 +17,6 @@ Beach times between swims, the camera captures the sea washing over the pebbles.
 
 Varnished giclée print on panel 350mm x 565mm
 
-![Ashima on the sofa](/uploads/img_2603.jpeg "Ashima on the sof")
+![On the wall](/uploads/pebbledseainsitu.jpeg "Showing scale")
+
+![Ashima on the sofa](/uploads/img_2603.jpeg "Ashima on the sofa")
