@@ -127,11 +127,12 @@ table {
     word-wrap: break-word;
     overflow-x: scroll;
     display: inline-block;
+    border:none;
 }
 
 td, th {
     padding: 0.5em 1em;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 0px solid rgba(0, 0, 0, 0.1);
     text-align: left;
 }
 
