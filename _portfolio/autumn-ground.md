@@ -11,3 +11,4 @@ tags:
   - golden section
 ---
 Leaves not yet rotted keep their colour on the wet ground. Eyes to the path on the grey day see the rich mixture of tones.
+
