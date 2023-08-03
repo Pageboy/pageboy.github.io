@@ -10,3 +10,7 @@ tags:
   - landscape
 ---
 The winter river is in full flood and the weirs are controlling the torrents as the turbulent waters scour out the sediments. The river is wild and dangerous with fast currents and a surface that mixes the whites of the foam with the greens and greys of the cold winter Thames.
+
+> - Image size: 562mm x 316mm
+> - paper size: 594mm x 420mm (A2)
+> - Hannamuelle German etching 310 gsm

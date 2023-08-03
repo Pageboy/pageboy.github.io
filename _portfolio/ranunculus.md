@@ -14,3 +14,7 @@ Butter yellow shining through blades of green. Eyes down to the flat field feet 
 * Meadow Butter
 * Yellow Field
 * Golden Grasses
+
+> - Image size: 562mm x 316mm
+> - paper size: 594mm x 420mm (A2)
+> - Hannamuelle German etching 310 gsm

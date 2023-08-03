@@ -12,3 +12,7 @@ tags:
 * Grey aggregate
 * ground out
 * down walker
+
+> - Image size: 295mm x 295mm
+> - paper size: 330mm x 440mm
+> - Hannamuelle German etching 310 gsm 

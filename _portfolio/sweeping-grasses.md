@@ -14,3 +14,7 @@ The wild meadow by the river. The sweeping mixtures of grass meeting the reeds a
 * Waters Edge
 * Grasses Sweep
 * Wild Meadow
+
+> - Image size: 562mm x 316mm
+> - paper size: 594mm x 420mm (A2)
+> - Hannamuelle German etching 310 gsm

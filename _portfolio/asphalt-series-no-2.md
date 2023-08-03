@@ -12,3 +12,7 @@ All those asphalt repairs in the road and on the path - they form interesting ge
 * Asphalt Altered
 * Ground Geometry
 * Texture Triangle
+
+> - Image size: 295mm x 295mm
+> - paper size: 330mm x 440mm
+> - Hannamuelle German etching 310 gsm 

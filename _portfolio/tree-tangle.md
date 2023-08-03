@@ -10,3 +10,7 @@ tags:
   - landscape
 ---
 The camera penetrates the tangle of branches before the leaves get their chance. The willow and the dogwood; common in the parks blends the subdued colours of the season's boundary. The buds and new shoots are just appearing in amongst the random weavings of the branches and with a wide aperture we can blur the palette.
+
+> - Image size: 562mm x 316mm
+> - paper size: 594mm x 420mm (A2)
+> - Hannamuelle German etching 310 gsm

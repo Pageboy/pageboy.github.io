@@ -11,3 +11,7 @@ tags:
   - art
 ---
 In the forest some trees are harvested, piled safely and revealing their aged rings. We count the rings to estimate their age and notice that some rings are wide and others narrow. Nearby, a sapling oak is only just learning how to drop last year’s brown and brittle leaves curled by the recent frosts.
+
+> - Image size: 562mm x 316mm
+> - paper size: 594mm x 420mm (A2)
+> - Hannamuelle German etching 310 gsm

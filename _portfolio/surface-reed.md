@@ -14,3 +14,7 @@ Pads float over surface drawn with lines of reeds. The curving sweep of water gr
 * Pads Float
 * Draw Rush
 * Drift Sweep
+
+> - Image size: 562mm x 316mm
+> - paper size: 594mm x 420mm (A2)
+> - Hannamuelle German etching 310 gsm

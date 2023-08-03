@@ -14,3 +14,7 @@ Travelling the river with views of light and dark water. Ahead of us the sun cat
 * Shaded water
 * Drifting Ripples
 * Wash waves
+
+> - Image size: 562mm x 316mm
+> - paper size: 594mm x 420mm (A2)
+> - Hannamuelle German etching 310 gsm

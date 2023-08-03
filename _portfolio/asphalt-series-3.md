@@ -13,3 +13,7 @@ Within a nine sided figure (nonagon) we have 2 images of street asphalt combined
 * Asphalt Nona 
 * Shifted Ground
 * Banded Tar
+
+> - Image size: 295mm x 295mm
+> - paper size: 330mm x 440mm
+> - Hannamuelle German etching 310 gsm 

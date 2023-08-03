@@ -13,3 +13,7 @@ Sweeping from sky to land, the hill of meadow flowers meets the blue of sky. Up 
 * Through Thistles
 * Wind Waving Cranesbill
 * Clear Sky Blues and Distant Greens
+
+> - Image size: 562mm x 316mm
+> - paper size: 594mm x 420mm (A2)
+> - Hannamuelle German etching 310 gsm

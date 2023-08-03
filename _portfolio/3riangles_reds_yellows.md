@@ -13,3 +13,8 @@ In a restaurant one evening a bowl of tomatoes on the counter caught my eye and 
 * Polished Reds
 * Juice Filled Bursting
 * Yellow Berries Shine like the Sun
+
+
+> - Image size: 295mm x 295mm
+> - paper size: 330mm x 440mm
+> - Hannamuelle German etching 310 gsm 

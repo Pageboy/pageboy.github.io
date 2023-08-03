@@ -14,3 +14,7 @@ Reeds border the dark bridged river. Willow herb sprinkles the colour for contra
 * River Bridges
 * Petals against Reed Reflections
 * Dark Waters
+
+> - Image size: 562mm x 316mm
+> - paper size: 594mm x 420mm (A2)
+> - Hannamuelle German etching 310 gsm

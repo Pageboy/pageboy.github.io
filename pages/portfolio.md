@@ -1,9 +1,9 @@
 ---
-title: Recent Work - Date order
+title: Portfolio
 permalink: "/portfolio/"
 image: uploads/portfolioback.jpg
 flickr_album:
-icon: fa-connectdevelop
+icon:
 layout: portfolio
 section: art
 order: 1

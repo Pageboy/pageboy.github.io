@@ -13,3 +13,8 @@ A walk through the village where sun is planted in the gardens, to meadows of ra
 * Scented sunlight
 * Circling Yellows
 * Light Leaning
+
+
+> - Image size: 562mm x 316mm
+> - paper size: 594mm x 420mm (A2)
+> - Hannamuelle German etching 310 gsm

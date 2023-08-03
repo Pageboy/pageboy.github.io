@@ -15,3 +15,7 @@ The sea shore pebbles and the lapping water. Capturing colours and textures for 
 * Course Sand
 * Tidal Waters
 * Weathered Stones
+
+> - Image size: 562mm x 316mm
+> - paper size: 594mm x 420mm (A2)
+> - Hannamuelle German etching 310 gsm

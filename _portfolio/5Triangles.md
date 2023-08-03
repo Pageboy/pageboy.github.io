@@ -11,3 +11,7 @@ tags:
 - Spring Grasses with yellow
 - Dense Greens In woods
 - Orange Flowers contrasting with the greens
+
+> - Image size: 295mm x 295mm
+> - paper size: 330mm x 440mm
+> - Hannamuelle German etching 310 gsm 

@@ -13,3 +13,7 @@ Pathways through the colours of farmed fields. Crops are textures of swaying gra
 * Ear Wind
 * Wheat Husks
 * Field Follow
+
+> - Image size: 562mm x 316mm
+> - paper size: 594mm x 420mm (A2)
+> - Hannamuelle German etching 310 gsm

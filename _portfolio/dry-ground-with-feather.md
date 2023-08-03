@@ -13,3 +13,7 @@ Walking on hard ground. No sign of rain. Sunburn on the path where plants show t
 * Water less hard soil
 * Feather Falls
 * Roots Exposed
+
+> - Image size: 562mm x 316mm
+> - paper size: 594mm x 420mm (A2)
+> - Hannamuelle German etching 310 gsm

@@ -14,3 +14,7 @@ Pool under the windy trees. On the surface the reflections blend under the hot a
 * Pool Water
 * Surfaced Blues
 * Forest Green
+
+> - Image size: 295mm x 295mm
+> - paper size: 330mm x 440mm
+> - Hannamuelle German etching 310 gsm 
