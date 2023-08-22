@@ -7,6 +7,7 @@ layout: default
       <h1 id="{{ page.title | escape }}" class="title">{{ page.title }}</h1>
   </header>
   <section class="post-content">
+    {{ content | replace: "_uploads", "uploads" }}
       {% if page.flickr_album %}
       <!-- <p style="color:#869387;"><i class="fa fa-flickr"></i> Here is a gallery of these images kept on <a title="go to Flickr" href="https://www.flickr.com/photos/chrisjennings/albums/{{page.flickr_album}}">Flickr</a></p> -->
 {%- assign flickr-album = page.flickr_album | replace: "flickr", "" -%}
@@ -34,7 +35,6 @@ layout: default
                 </div>
 
                 {% endif %}
-  {{ content | replace: "_uploads", "uploads" }}
   </section>
   <!-- Social media shares -->
   {% include share_buttons.html %}
