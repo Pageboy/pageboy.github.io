@@ -4,6 +4,7 @@ title: Beach Zones, Beach Tones
 date: 2023-09-20T09:31:55.922Z
 image: https://live.staticflickr.com/65535/53200456494_6cfce22253_h_d.jpg
 caption: Pebbles on the Ionian Shore
+nft: https://opensea.io/assets/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/48162648330355413914028108631647327469322174667090404439099707901908969586692/
 tags:
   - art
   - golden section
