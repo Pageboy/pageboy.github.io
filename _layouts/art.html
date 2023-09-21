@@ -46,13 +46,11 @@ layout: default
   {% endif %} -->
   
   {% if page.nft %}
-  <button type="button" class="nft">
-    <a href="{{ page.nft }}" title="Buy this as an NFT" target="_blank">NFT</a>
-  </button>
-
-  <h3>>NFT</h3>
-      <p>This work is also available as an <a href="{{ page.nft }}" title="Buy this as an NFT" target="_blank">NFT</a> so you can invest in the digital copy.</p>
-      <p>For further information about NFTs read this article at <a href="https://opensea.io/learn/how-to-buy-nft">Opensea</a></p>
+  <section class="sale">
+  <h3>NFT</h3>
+      <p>This work is also available as an <a href="{{ page.nft }}" title="Buy this as an NFT" target="_blank">NFT</a> so you can invest in the digital copy.<br/>
+      For further information about NFTs read this article at <a href="https://opensea.io/learn/how-to-buy-nft">Opensea</a></p>
+  </section>
   {% endif %}
   </section>
 
