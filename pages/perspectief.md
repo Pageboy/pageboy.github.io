@@ -1,5 +1,6 @@
 ---
 layout: perspectief
+hide: true
 permalink: /perspectief/
 order: 5
 date: 2022-06-06T13:30:29.690Z
