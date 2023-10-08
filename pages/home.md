@@ -1,7 +1,7 @@
 ---
 hide: true
 layout: series
-title: Art in Progress
+title:
 permalink: /
 order: 1
 date: 2022-12-22T14:44:28.645Z
