@@ -64,9 +64,9 @@
     gtag("config", "{{ site.google_analytics }}");
   </script>
   {%- endif -%} {%- if page.title != site.hide_title -%}
-  <title>{{site.title}} | {{ page.title }}</title>
+  <title>{{site.short-title}} | {{ page.title }}</title>
   {%- else -%}
-  <title>{{site.title}}</title>
+  <title>{{site.short-title}}</title>
   {%- endif -%} {%- include metadata.html -%}
   <!-- style the featured page image -->
   {%- if page.image %}{% assign image_url = page.image | replace: "_uploads",

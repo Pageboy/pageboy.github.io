@@ -1,5 +1,6 @@
 ---
 title: Chris Jennings + ideas + art
+short-title: Chris Jennings
 timezone: UTC
 collections:
   posts:
@@ -68,7 +69,7 @@ defaults:
       flickr_album:
 baseurl:
 url: https://www.chrisjennings.net
-description: Projects past and present
+description: Projects past and present from the artis Chris Jennings
 avatar: assets/img/home.png
 favicon: assets/img/logo.png
 flickr_key: 6a751024fcc480f70610ed1f98220880
