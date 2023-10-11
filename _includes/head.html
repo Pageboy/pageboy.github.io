@@ -65,8 +65,8 @@
   </script>
   {%- endif -%}
   {%- include metadata.html -%}
-  {%- if page.title != site.hide_title -%}
-  <title>{{site.short-title}} | {{ page.title }}</title>
+  {%- if page.title != site.title -%}
+  <title>{{site.title}} | {{ page.title }}</title>
   {%- else -%}
   <title>{{site.title}}</title>
   {%- endif -%} 
