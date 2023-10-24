@@ -12,6 +12,6 @@ Hello and welcome to the Jennings Art web site. You will find my recent work her
 
 The menu bar has some other links that you might want to explore. I am keen for you to take a look at some [early work](/earlywork) too!
 
-![Studio View](/uploads/studioandme.jpeg "Chris and some recent work")
+![Studio View](/uploads/nik_3016.jpeg "Chris and some recent work")
 
 I have divided my recent work here into into series; mainly in respect of the proportions.
