@@ -2,7 +2,7 @@
 layout: art
 title: Rose Mallow
 date: 2023-10-24T10:38:40.441Z
-image: https://live.staticflickr.com/65535/53282204644_446e4df711_h_d.jpg
+image: https://live.staticflickr.com/65535/53282204644_cdf2b2b9c0_h_d.jpg
 caption: ἰβίσκος (ibískos)
 tags:
   - art
