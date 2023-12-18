@@ -6,6 +6,8 @@ image: https://live.staticflickr.com/65535/52801802359_25ee087209_h_d.jpg
 caption: Arc 1
 flickr_album: "72177720313462602"
 order: 8
+tags:
+  - early work
 ---
 Works on paper and wood from 1983-5. The idea for these pieces came from the [Landscape series](https://www.chrisjennings.net/projects/folding_pieces/), but take a more geometric abstract approach.
 
