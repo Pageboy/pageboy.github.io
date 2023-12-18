@@ -179,6 +179,19 @@ collections:
           default: "1",
         }
       - { label: "Body", name: "body", widget: "markdown" }
+      - {
+          label: "Tags",
+          name: "tags",
+          widget: "select",
+          multiple: true,
+          max: 5,
+          options:
+            [
+              "early work",
+            ],
+          required: false,
+          hint: "By adding tags the posts can be listed together under that tag. You will need to enable the tags page (by turning on show on menu for the tags page.",
+        }
 
   - name: "series" # Used in routes, e.g., /admin/collections/blog
     label: "Series" # Used in the UI
