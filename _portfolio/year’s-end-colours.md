@@ -2,7 +2,7 @@
 layout: art
 title: Year’s End Colours
 date: 2023-12-16T17:10:09.880Z
-image: https://live.staticflickr.com/65535/53401628496_4a980fc7f1_h_d.jpg
+image: https://live.staticflickr.com/65535/53414403540_fa90bb2b35_h_d.jpg
 caption: Reds and greens
 tags:
   - art
