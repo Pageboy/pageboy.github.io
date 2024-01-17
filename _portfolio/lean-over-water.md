@@ -7,6 +7,6 @@ caption: into the stream
 forsale: https://www.art2arts.co.uk/artwork/lean-over-water#.Y8QmoxiUDus.link
 tags:
   - art
-  - root2A
+  - portrait format
 ---
 Lean over the stream to see trees leaning over. Leafless winter reveals triangles formed by the branches. Colours are reflected in the flowing waters that sweep through the shadows.

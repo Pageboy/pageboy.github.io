@@ -79,8 +79,8 @@ lang: en_gb
 gridlayout: true
 header_text:
 image:
-footer_text: Copyright 2023 Chris Jennings
-rss: false
+footer_text: Copyright 2024 Chris Jennings
+rss: true
 email_address:
 facebook:
 flickr: chrisjennings

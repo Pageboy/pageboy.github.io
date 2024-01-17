@@ -7,7 +7,7 @@ caption: Rectangle divided and rouged
 forsale: ""
 tags:
   - art
-  - root2A
+  - portrait format
 ---
 Oaks overhang the paths; their leaves have scattered over the ground mixing a rusty colour palette. Shapes in the rectangle are painted with enhanced tones picked from the grounded hues.
 
