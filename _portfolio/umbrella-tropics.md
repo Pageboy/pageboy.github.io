@@ -8,4 +8,4 @@ tags:
   - art
   - portrait format
 ---
-With the warm air dense with moisture we enjoy the lush and tropical exotic plants in their natural habitat.  Water drops form on the rubbery leaves and the rain seems to envelope the surroundings in a misty veil of fog over the scene.
+With the warm air dense with moisture we enjoy the tropical exotic plants in their natural habitat.  Water drops form on the rubbery leaves and the rain seems to envelope the surroundings in a misty veil of fog over the scene.
