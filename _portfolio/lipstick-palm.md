@@ -9,3 +9,5 @@ tags:
   - root2A
 ---
 In the dense lush undergrowth of Sri Lanka we spot a contrasting red colour pushing up behind the palm fronds. The leaves, with their graceful curves, and the vertical ascent of the vertical red creates a compelling contrast of geometries.
+
+Sri Lanka series
