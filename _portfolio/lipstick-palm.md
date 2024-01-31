@@ -13,3 +13,5 @@ In the dense lush undergrowth of Sri Lanka we spot a contrasting red colour push
 ![Lipstick Palm on 2 panels in the studio](https://live.staticflickr.com/65535/53499743231_8b76b386e3_h_d.jpg "Lipstick Palm on 2 panels in the studio")
 
 From the Sri Lanka series
+
+**Varnished giclée print on 2 panels 400mm x 565mm, bolted together - overall 565mm x 800mm**
