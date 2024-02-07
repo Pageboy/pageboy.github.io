@@ -8,4 +8,10 @@ tags:
   - art
   - portrait format
 ---
+
+
 In the garden as Christmas approaches we see the reds and greens in the Winter light. Leaves have fallen from the trees but the *Oregon Grape* plants that keep their leaves show the colours of Christmas.
+
+![Panel mounted and hanging at home](/uploads/christmascolours_withme.jpeg)
+
+**Varnished giclée print on panel 565mm x 400mm**
