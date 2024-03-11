@@ -10,6 +10,6 @@ tags:
 ---
 The square is divided by a golden rectangle that is occupied by the  image of a Vanda Orchid captured amidst the lush scenery of the Kandy, Sri Lanka botanical garden. The colours of the sub divisions within the square are extracted from the vivid palette of the orchid's petals.
 
-565mm x 565mm
+565mm x 565mm - in progress
 
 From the Sri Lanka Series
