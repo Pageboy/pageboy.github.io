@@ -12,6 +12,6 @@ The square is divided by a golden rectangle that is occupied by the  image of a 
 
 **Varnished giclée print on panel 565mm x 565mm**
 
-![Studio view](https://live.staticflickr.com/65535/53593868895_7fc8ccf455_h_d.jpg "Studio View")
+![Studio view](https://live.staticflickr.com/65535/53593868895_fc6e20113e_h_d.jpg "Studio View")
 
 From the Sri Lanka Series
