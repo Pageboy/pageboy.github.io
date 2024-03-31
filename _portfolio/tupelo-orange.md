@@ -14,3 +14,5 @@ Trees in the arboretum come from many parts of the world and we benefit from the
 * Tupelo Orange
 * Hazel Red
 * Shaded Brown
+
+![Framed print](/uploads/nik_2143.jpeg "Framed print")
