@@ -12,4 +12,4 @@ The Thames rushes through the weir, its paddles fully open. The roar of the wate
 
 **Varnished giclée print on 2 panels 350mm x 565mm, bolted together - overall 565mm x 700mm**
 
-![In the studio](https://live.staticflickr.com/65535/53601013117_48e122006a_h_d.jpg "In the studio")
+![In the studio](https://live.staticflickr.com/65535/53601013117_ef4c30ad30_h_d.jpg "In the studio")
