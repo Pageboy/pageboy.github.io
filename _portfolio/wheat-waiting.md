@@ -2,7 +2,7 @@
 layout: art
 title: Wheat Waiting
 date: 2023-08-21T11:48:39.077Z
-image: https://live.staticflickr.com/65535/53131838849_427c770d9f_h_d.jpg
+image: https://live.staticflickr.com/65535/53131838849_61067d0d03_h_d.jpg
 caption: Colours of mature wheat
 tags:
   - art
