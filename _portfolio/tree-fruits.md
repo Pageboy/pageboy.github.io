@@ -3,7 +3,7 @@ layout: art
 title: Tree Fruits
 date: 2022-09-06T15:08:22.149Z
 image: https://live.staticflickr.com/65535/52338931170_d7d788a2c5_h_d.jpg
-forsale: https://www.saatchiart.com/art/Digital-Tree-Fruits/2113733/9913615/view
+forsale:
 tags:
   - art
   - golden section

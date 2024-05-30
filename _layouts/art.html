@@ -16,34 +16,18 @@ layout: default
     {{ content | replace: "_uploads", "uploads" }} {% include post_info.html
     post=page %}
   </section>
-  <!-- {% if page.forsale %}
+  {% if page.forsale %}
   <section class="sale">
-    <div class="saledetails">
-      <h2>Limited edition print available:</h2>
-      <h3>Details:</h3>
-    {% if page.tags contains "golden section" %}  
-      <p><b>Image size:</b> 562mm x 349mm</p>
-      <p><b>Paper:</b> acid free archival 310gsm, 594mm x 420mm</p>
-    {% endif %}
-    {% if page.tags contains "landscape" %}
-      <p><b>Image size:</b> 562mm x 316mm</p>
-      <p><b>Paper:</b> acid free archival 310gsm, 594mm x 420mm</p>
-    {% endif %}
-    {% if page.tags contains "square series" %}
-      <p><b>Image size:</b> 295mm x 295mm</p>
-      <p><b>Paper:</b> acid free archival 312gsm, 485mm x 330mm</p>
-    {% endif %}
-    {% if page.tags contains "root2A" %}
-      <p><b>Image size:</b> 376mm x 532mm</p>
-      <p><b>Paper:</b> acid free archival 310gsm, 420mm x 594mm</p>
-    {% endif %}
-  </div>
-  
-
-  <button type="button" class="forsale">
-    <a href="{{ page.forsale }}" title="Buy this Print" target="_blank">Work available for sale</a>
-  </button>
-  {% endif %} -->
+  <script src="https://www.paypal.com/sdk/js?client-id=BAARF0DaO2Ka9JaM6mtWB6_YkDdGM7S-e77RHiWW4FPY3eSac-4ca_74jm18MRqNiaW4TqPazdc3djzEsA&components=hosted-buttons&disable-funding=venmo&currency=GBP"></script>
+  <div id="paypal-container-{{page.forsale}}"></div>
+  <script>
+    paypal.HostedButtons({
+      hostedButtonId: "{{page.forsale}}",
+    }).render("#paypal-container-{{page.forsale}}")
+  </script>
+  <div class="details"><p>The item will be packaged and shipped to any address worldwide. If you wish to collect the work personally from my studio then please contact me through the email icon below.</p></div>
+  </section>
+{% endif %}
   
   {% if page.nft %}
   <section class="sale">

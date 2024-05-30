@@ -380,10 +380,10 @@ collections:
           hint: "Anything else apart from the caption",
         }
       - {
-          label: "Print available",
+          label: "This work is available for Sale",
           name: "forsale",
           widget: "string",
-          hint: "Copy this share link from my Gallery at Saatchi or Art2Arts",
+          hint: "Copy the Paypal ID for this work",
           required: false,
         }  
       - {
