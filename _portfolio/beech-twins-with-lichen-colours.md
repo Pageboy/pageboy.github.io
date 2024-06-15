@@ -1,7 +1,7 @@
 ---
 layout: art
 title: Beech Twins with Lichen Colours
-date: 2024-06-15T14:32:00.000Z
+date: 2024-06-12T12:54:00.000Z
 image: https://live.staticflickr.com/65535/53792675371_41801cebb9_h_d.jpg
 caption: Codominant stems
 tags:
