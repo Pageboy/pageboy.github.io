@@ -1,0 +1,1808 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="My personal digital garden" name="description"/>
+<link href="https://notes.chrisjennings.net/eBookProduction/Creating%20a%20Reflowable%20eBook%20after%20a%20print%20production%20workflow/" rel="canonical"/>
+<link href="../Ambient%20Sound%20in%20a%20Fixed-Layout%20ePub/" rel="prev"/>
+<link href="../Editing%20inside%20the%20ePUB%20package/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.0, mkdocs-material-9.5.27" name="generator"/>
+<title>Creating a Reflowable eBook after a print production workflow - Chris Jennings - his Notes</title>
+<link href="../../assets/stylesheets/main.6543a935.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Sen:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Sen";--md-code-font:"Roboto Mono"}</style>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+<link href="../../stylesheets/glightbox.min.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="amber" data-md-color-primary="black" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#prepare">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Chris Jennings - his Notes" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Chris Jennings - his Notes">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Chris Jennings - his Notes
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Creating a Reflowable eBook after a print production workflow
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="amber" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="black" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="amber" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+</label>
+</form>
+<script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/Pageboy/pageboy.github.io" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden="">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Chris Jennings - his Notes" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Chris Jennings - his Notes">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    Chris Jennings - his Notes
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/Pageboy/pageboy.github.io" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    Public Notes and Articles
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Articles
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Articles
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Attention%20to%20Detail%20in%20Typography%20with%20InDesign/">
+<span class="md-ellipsis">
+    Attention to Detail in Typography with InDesign
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Building%20the%20TOC%20in%20InDesign/">
+<span class="md-ellipsis">
+    Building the TOC in InDesign
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Dropping%20your%20caps/">
+<span class="md-ellipsis">
+    Dropping your caps
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Footnotes%20and%20other%20Diversions/">
+<span class="md-ellipsis">
+    Footnotes and other Diversions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Master%20or%20Parent%20Pages%20in%20InDesign/">
+<span class="md-ellipsis">
+    Master or Parent Pages in InDesign
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Measure%20me%20in%20Units/">
+<span class="md-ellipsis">
+    Measure me in Units
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Preflight%20and%20Package%20for%20Print%20and%20Output%20to%20PDF/">
+<span class="md-ellipsis">
+    Preflight and Package for Print and Output to PDF
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Sharing%20to%20Facebook%20and%20Twitter/">
+<span class="md-ellipsis">
+    Sharing to Facebook and Twitter
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/The%20basics%20of%20HTML%20and%20CSS/">
+<span class="md-ellipsis">
+    The basics of HTML and CSS
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Using%20Flickr%20to%20Generate%20an%20Image%20Gallery/">
+<span class="md-ellipsis">
+    Using Flickr to Generate an Image Gallery
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Using%20Photoshop%20and%20InDesign%20to%20Create%20a%20Cover%20for%20Print/">
+<span class="md-ellipsis">
+    Using Photoshop and InDesign to Create a Cover for Print
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Using%20the%20Book%20Panel%20in%20InDesign/">
+<span class="md-ellipsis">
+    Using the Book Panel in InDesign
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Validation/">
+<span class="md-ellipsis">
+    Validation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Vertical%20Spacing%20for%20text%2C%20pBook%20and%20eBook/">
+<span class="md-ellipsis">
+    Vertical Spacing for text, pBook and eBook
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Video%20across%20a%202%20page%20spread%20%28updated%29/">
+<span class="md-ellipsis">
+    Video across a 2 page spread (updated)
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Teaching
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Teaching
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Design and Technology
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+            Design and Technology
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Design%20and%20Technology/Week%201/">
+<span class="md-ellipsis">
+    Week 1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Design%20and%20Technology/Week%202/">
+<span class="md-ellipsis">
+    Week 2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Design%20and%20Technology/Week%203/">
+<span class="md-ellipsis">
+    Week 3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Design%20and%20Technology/Week%206%20-%20Design%20and%20Technology/">
+<span class="md-ellipsis">
+    Week 6   Design and Technology
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Digital Workflow
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+            Digital Workflow
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Digital%20Workflow/Week%201/">
+<span class="md-ellipsis">
+    Week 1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Digital%20Workflow/Week%2011/">
+<span class="md-ellipsis">
+    Week 11
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Digital%20Workflow/Week%2012/">
+<span class="md-ellipsis">
+    Week 12
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Digital%20Workflow/Week%202/">
+<span class="md-ellipsis">
+    Week 2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Digital%20Workflow/Week%203/">
+<span class="md-ellipsis">
+    Week 3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Digital%20Workflow/Week%204/">
+<span class="md-ellipsis">
+    Week 4
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Digital%20Workflow/Week%205/">
+<span class="md-ellipsis">
+    Week 5
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Digital%20Workflow/Week%206/">
+<span class="md-ellipsis">
+    Week 6
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Digital%20Workflow/Week%208/">
+<span class="md-ellipsis">
+    Week 8
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Digital%20Workflow/Week%209/">
+<span class="md-ellipsis">
+    Dramatis Personae
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Multiplatform Publishing
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_3">
+<span class="md-nav__icon md-icon"></span>
+            Multiplatform Publishing
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/From%20Vscode%20to%20Web/">
+<span class="md-ellipsis">
+    From Vscode to Web
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/How%20to%20do%20Javascript/">
+<span class="md-ellipsis">
+    How to do Javascript
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%201%20Intro/">
+<span class="md-ellipsis">
+    Week 1 Intro
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%2010/">
+<span class="md-ellipsis">
+    Week 10
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%2011/">
+<span class="md-ellipsis">
+    Week 11
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%2012/">
+<span class="md-ellipsis">
+    Week 12
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%202/">
+<span class="md-ellipsis">
+    Week 2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%203/">
+<span class="md-ellipsis">
+    Week 3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%204%201/">
+<span class="md-ellipsis">
+    Week 4 1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%204%20part%202/">
+<span class="md-ellipsis">
+    Week 4 part 2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%204/">
+<span class="md-ellipsis">
+    Week 4
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%205%20Shakespeare%20Play%20notes/">
+<span class="md-ellipsis">
+    Week 5 Shakespeare Play notes
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%205/">
+<span class="md-ellipsis">
+    Week 5
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%206/">
+<span class="md-ellipsis">
+    Week 6
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%207/">
+<span class="md-ellipsis">
+    Week 7
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%208/">
+<span class="md-ellipsis">
+    Week 8
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%209/">
+<span class="md-ellipsis">
+    Week 9
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/eBook%20readers/">
+<span class="md-ellipsis">
+    eBook readers
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_3_19" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3_19" id="__nav_3_3_19_label" tabindex="0">
+<span class="md-ellipsis">
+    Week7extras
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_19_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_3_19">
+<span class="md-nav__icon md-icon"></span>
+            Week7extras
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/week7extras/ePUB_toc_ncx/">
+<span class="md-ellipsis">
+    ePUB toc ncx
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/week7extras/ePub_content_opf/">
+<span class="md-ellipsis">
+    ePub content opf
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/week7extras/ePub_toc_xhtml/">
+<span class="md-ellipsis">
+    ePub toc xhtml
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Web Sites with GitHub
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Web Sites with GitHub
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Web%20Sites%20with%20GitHub/Add%20Multimedia%20to%20Your%20web%20site/">
+<span class="md-ellipsis">
+    Add Multimedia to Your web site
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Web%20Sites%20with%20GitHub/Creating%20a%20recipe%20web%20site%20using%20GitHub%20and%20Netlify/">
+<span class="md-ellipsis">
+    Creating a recipe web site using GitHub and Netlify
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Web%20Sites%20with%20GitHub/From%20InDesign%20to%20HTML%20and%20CSS/">
+<span class="md-ellipsis">
+    From InDesign to HTML and CSS
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Web%20Sites%20with%20GitHub/Getting%20responsive%20with%20Flex/">
+<span class="md-ellipsis">
+    Getting responsive with Flex
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Web%20Sites%20with%20GitHub/How%20to%20build%20a%20blog%20website%20with%20GitHub%20and%20Netlify/">
+<span class="md-ellipsis">
+    How to build a blog website with GitHub and Netlify
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Web%20Sites%20with%20GitHub/Using%20a%20Git%20Repository%20to%20host%20your%20Shakespeare%20Play%20Web%20Site/">
+<span class="md-ellipsis">
+    Using a Git Repository to host your Shakespeare Play Web Site
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    eBookProduction
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            eBookProduction
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Ambient%20Sound%20in%20a%20Fixed-Layout%20ePub/">
+<span class="md-ellipsis">
+    Ambient Sound in a Fixed Layout ePub
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Creating a Reflowable eBook after a print production workflow
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Creating a Reflowable eBook after a print production workflow
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prepare">
+<span class="md-ellipsis">
+      Prepare
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-content">
+<span class="md-ellipsis">
+      The Content
+    </span>
+</a>
+<nav aria-label="The Content" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#illustrations">
+<span class="md-ellipsis">
+      Illustrations
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#back-to-work">
+<span class="md-ellipsis">
+      Back to Work
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-page">
+<span class="md-ellipsis">
+      The Page
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#spreads">
+<span class="md-ellipsis">
+      Spreads
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#margins-and-bleeds">
+<span class="md-ellipsis">
+      Margins and Bleeds
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#colour">
+<span class="md-ellipsis">
+      Colour
+    </span>
+</a>
+<nav aria-label="Colour" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cmyk-or-rgb">
+<span class="md-ellipsis">
+      CMYK or RGB?
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#paragraph-and-character-styles">
+<span class="md-ellipsis">
+      Paragraph and Character Styles
+    </span>
+</a>
+<nav aria-label="Paragraph and Character Styles" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#styles-become-html-and-css-in-the-epub">
+<span class="md-ellipsis">
+      Styles become HTML and CSS in the ePub
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#styles-for-the-headings">
+<span class="md-ellipsis">
+      Styles for the Headings
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#export-tagging">
+<span class="md-ellipsis">
+      Export Tagging
+    </span>
+</a>
+<nav aria-label="Export Tagging" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#splitting-for-the-epub">
+<span class="md-ellipsis">
+      Splitting for the ePub
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#placing-images">
+<span class="md-ellipsis">
+      Placing Images
+    </span>
+</a>
+<nav aria-label="Placing Images" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#anchoring-images">
+<span class="md-ellipsis">
+      Anchoring Images
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#object-styles">
+<span class="md-ellipsis">
+      Object Styles
+    </span>
+</a>
+<nav aria-label="Object Styles" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#export-tagging-for-objects">
+<span class="md-ellipsis">
+      Export Tagging for Objects
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-alt-text">
+<span class="md-ellipsis">
+      The ALT text
+    </span>
+</a>
+<nav aria-label="The ALT text" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#image-metadata">
+<span class="md-ellipsis">
+      Image Metadata
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-title-page">
+<span class="md-ellipsis">
+      The Title Page
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-table-of-contents">
+<span class="md-ellipsis">
+      The Table of Contents
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-cover-image">
+<span class="md-ellipsis">
+      The Cover Image
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#book-metadata">
+<span class="md-ellipsis">
+      Book Metadata
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getting-ready-to-export">
+<span class="md-ellipsis">
+      Getting Ready to Export
+    </span>
+</a>
+<nav aria-label="Getting Ready to Export" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-features-are-lost-when-we-export-the-epub">
+<span class="md-ellipsis">
+      What features are lost when we export the ePub?
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prepare-the-styles-for-export">
+<span class="md-ellipsis">
+      Prepare the Styles for Export
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chunking-the-ebook">
+<span class="md-ellipsis">
+      Chunking the eBook
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#from-book-to-epub-re-flowable">
+<span class="md-ellipsis">
+      From Book to ePub (re-flowable)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#export-to-epub">
+<span class="md-ellipsis">
+      Export to ePub
+    </span>
+</a>
+<nav aria-label="Export to ePub" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-general-section">
+<span class="md-ellipsis">
+      The General Section
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-text-section">
+<span class="md-ellipsis">
+      The Text Section
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-object-section">
+<span class="md-ellipsis">
+      The Object Section
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-conversion-settings">
+<span class="md-ellipsis">
+      The Conversion Settings
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-css-panel">
+<span class="md-ellipsis">
+      The CSS panel
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-javascript-panel">
+<span class="md-ellipsis">
+      The Javascript Panel
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-metadata-panel">
+<span class="md-ellipsis">
+      The Metadata Panel
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#you-have-an-epub-how-does-it-look">
+<span class="md-ellipsis">
+      You have an ePub; How does it look?
+    </span>
+</a>
+<nav aria-label="You have an ePub; How does it look?" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#blank-pages">
+<span class="md-ellipsis">
+      Blank Pages
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Editing%20inside%20the%20ePUB%20package/">
+<span class="md-ellipsis">
+    Editing inside the ePUB package
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Enhancing%20an%20eBook%20with%20interactivity%20multimedia%20and%20animation/">
+<span class="md-ellipsis">
+    Enhancing an eBook with interactivity multimedia and animation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Fixed%20Layout%20eBook/">
+<span class="md-ellipsis">
+    Fixed Layout eBook
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Fixed-Layout%20ePub%20with%20swashes/">
+<span class="md-ellipsis">
+    Fixed Layout ePub with swashes
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../InDesign%20to%20the%20Fixed%20Layout%20ePub/">
+<span class="md-ellipsis">
+    InDesign to the Fixed Layout ePub
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Notes%20for%20the%20Fixed%20Layout%20eBook%20workshop/">
+<span class="md-ellipsis">
+    Notes for the Fixed Layout eBook workshop
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Notes%20on%20Fixed%20Layout/">
+<span class="md-ellipsis">
+    Notes on Fixed Layout
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Page%20Size%20Issues%20in%20fixed-layout%20ePub/">
+<span class="md-ellipsis">
+    Page Size Issues in fixed layout ePub
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Page%20size%20in%20InDesign%20for%20eBook%3F/">
+<span class="md-ellipsis">
+    Page size in InDesign for eBook?
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Roundtripping%20InDesign%20and%20ePub%20re-flowable/">
+<span class="md-ellipsis">
+    Roundtripping InDesign and ePub re flowable
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tips%20for%20InDesign%20Users%20when%20Making%20eBooks/">
+<span class="md-ellipsis">
+    Tips for InDesign Users when Making eBooks
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../What%20Kind%20of%20eBooks%3F/">
+<span class="md-ellipsis">
+    What kinds of eBooks are possible?
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
+    eBooks
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            eBooks
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../eBooks/From%20Print%20Book%20to%20eBook/">
+<span class="md-ellipsis">
+    From Print Book to eBook
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../eBooks/Megalithic%20Landscapes/">
+<span class="md-ellipsis">
+    Megalithic Landscapes
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../eBooks/Memoirs%20of%20an%20Islet/">
+<span class="md-ellipsis">
+    Memoirs of an Islet
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../eBooks/The%20Encantadas%20or%20Enchanted%20Isles/">
+<span class="md-ellipsis">
+    The Encantadas or Enchanted Isles
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../eBooks/The%20Man%20Who%20Loved%20Islands/">
+<span class="md-ellipsis">
+    The Man Who Loved Islands
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../eBooks/The%20Merry%20Men/">
+<span class="md-ellipsis">
+    The Merry Men
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../eBooks/eBook%20Typography%20for%20Flowable%20eBooks/">
+<span class="md-ellipsis">
+    eBook Typography for Flowable eBooks
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prepare">
+<span class="md-ellipsis">
+      Prepare
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-content">
+<span class="md-ellipsis">
+      The Content
+    </span>
+</a>
+<nav aria-label="The Content" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#illustrations">
+<span class="md-ellipsis">
+      Illustrations
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#back-to-work">
+<span class="md-ellipsis">
+      Back to Work
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-page">
+<span class="md-ellipsis">
+      The Page
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#spreads">
+<span class="md-ellipsis">
+      Spreads
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#margins-and-bleeds">
+<span class="md-ellipsis">
+      Margins and Bleeds
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#colour">
+<span class="md-ellipsis">
+      Colour
+    </span>
+</a>
+<nav aria-label="Colour" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cmyk-or-rgb">
+<span class="md-ellipsis">
+      CMYK or RGB?
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#paragraph-and-character-styles">
+<span class="md-ellipsis">
+      Paragraph and Character Styles
+    </span>
+</a>
+<nav aria-label="Paragraph and Character Styles" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#styles-become-html-and-css-in-the-epub">
+<span class="md-ellipsis">
+      Styles become HTML and CSS in the ePub
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#styles-for-the-headings">
+<span class="md-ellipsis">
+      Styles for the Headings
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#export-tagging">
+<span class="md-ellipsis">
+      Export Tagging
+    </span>
+</a>
+<nav aria-label="Export Tagging" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#splitting-for-the-epub">
+<span class="md-ellipsis">
+      Splitting for the ePub
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#placing-images">
+<span class="md-ellipsis">
+      Placing Images
+    </span>
+</a>
+<nav aria-label="Placing Images" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#anchoring-images">
+<span class="md-ellipsis">
+      Anchoring Images
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#object-styles">
+<span class="md-ellipsis">
+      Object Styles
+    </span>
+</a>
+<nav aria-label="Object Styles" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#export-tagging-for-objects">
+<span class="md-ellipsis">
+      Export Tagging for Objects
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-alt-text">
+<span class="md-ellipsis">
+      The ALT text
+    </span>
+</a>
+<nav aria-label="The ALT text" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#image-metadata">
+<span class="md-ellipsis">
+      Image Metadata
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-title-page">
+<span class="md-ellipsis">
+      The Title Page
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-table-of-contents">
+<span class="md-ellipsis">
+      The Table of Contents
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-cover-image">
+<span class="md-ellipsis">
+      The Cover Image
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#book-metadata">
+<span class="md-ellipsis">
+      Book Metadata
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getting-ready-to-export">
+<span class="md-ellipsis">
+      Getting Ready to Export
+    </span>
+</a>
+<nav aria-label="Getting Ready to Export" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-features-are-lost-when-we-export-the-epub">
+<span class="md-ellipsis">
+      What features are lost when we export the ePub?
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prepare-the-styles-for-export">
+<span class="md-ellipsis">
+      Prepare the Styles for Export
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chunking-the-ebook">
+<span class="md-ellipsis">
+      Chunking the eBook
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#from-book-to-epub-re-flowable">
+<span class="md-ellipsis">
+      From Book to ePub (re-flowable)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#export-to-epub">
+<span class="md-ellipsis">
+      Export to ePub
+    </span>
+</a>
+<nav aria-label="Export to ePub" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-general-section">
+<span class="md-ellipsis">
+      The General Section
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-text-section">
+<span class="md-ellipsis">
+      The Text Section
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-object-section">
+<span class="md-ellipsis">
+      The Object Section
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-conversion-settings">
+<span class="md-ellipsis">
+      The Conversion Settings
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-css-panel">
+<span class="md-ellipsis">
+      The CSS panel
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-javascript-panel">
+<span class="md-ellipsis">
+      The Javascript Panel
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-metadata-panel">
+<span class="md-ellipsis">
+      The Metadata Panel
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#you-have-an-epub-how-does-it-look">
+<span class="md-ellipsis">
+      You have an ePub; How does it look?
+    </span>
+</a>
+<nav aria-label="You have an ePub; How does it look?" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#blank-pages">
+<span class="md-ellipsis">
+      Blank Pages
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Creating a Reflowable eBook after a print production workflow</h1>
+<p>This work follows on from previous workflows in creating a Shakespeare play for print. We should already have an Indesign ‘book’ with at least 2 sections. We will export from InDesign for ePub (re-flowable) and then 'break open' the ePub file and make some changes to some of the included files.</p>
+<ul>
+<li>You will need to be using Photoshop to edit the cover image and edit the pictures and add the metadata.</li>
+<li>You will need to be using InDesign Creative Cloud (2017). The screen grabs in this document are created from InDesign version 12</li>
+<li>You may need to edit the ePub file after export from InDesign and I suggest Atom. In order to edit the ePub package, you will need to ‘unpack’ the file and then re-pack. A script is available for this.</li>
+</ul>
+<h3 id="prepare">Prepare<a class="headerlink" href="#prepare" title="Permanent link">¶</a></h3>
+<p>You should keep the original versions the InDesign files and book that you have used the create the print version. We may need to make modifications to the InDesign files, so I suggest that you archive the original work that you have used for the print version. We are, effectively <em>forking</em> to a new version of the book.</p>
+<h2 id="the-content">The Content<a class="headerlink" href="#the-content" title="Permanent link">¶</a></h2>
+<p>For my example I am working on ‘A Midsummer Night’s Dream’. I have already created a version of my book ready for print. It has the following components.</p>
+<ul>
+<li>The Cover (I need to extract the front from the complete jacket previously designed).</li>
+<li>A half title page (I will abandon this in the eBook)</li>
+<li>A copyright page</li>
+<li>A Title page</li>
+<li>A Table of contents</li>
+<li>The Introduction</li>
+<li>The Dramatis Personae</li>
+<li>The Play</li>
+</ul>
+<p>Here is a sample double page spread from the print -ready PDF of my book.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="Here is a sample spread from our print production" data-type="image" data-width="100%" href="../../media/id2rfl/image1.png"><img alt="Here is a sample spread from our print production" src="../../media/id2rfl/image1.png"/></a></p>
+<p>We will export the ePub (re-flowable) from InDesign, but first there are several things we must consider and modify before we are ready to export.</p>
+<h3 id="illustrations">Illustrations<a class="headerlink" href="#illustrations" title="Permanent link">¶</a></h3>
+<p>You will want to illustrate your Shakespeare Play, so you need to gather the images in your images folder described above. The plan is to have at least one image for each scene of the play.</p>
+<p>You will want to make some adjustments to these images using Photoshop perhaps. The images should be large enough to display in good quality within the eBook. They should be no smaller than 1000pixels wide in 72 PPI. InDesign will create the appropriate format for the eBook later, but, for now you are gathering your assets (text and images) and considering the structure of your eBook and how the play should display.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="We have prepared all of the images that we want to use in the eBook" data-type="image" data-width="100%" href="../../media/id2rfl/image2.png"><img alt="We have prepared all of the images that we want to use in the eBook" src="../../media/id2rfl/image2.png"/></a></p>
+<h3 id="back-to-work">Back to Work<a class="headerlink" href="#back-to-work" title="Permanent link">¶</a></h3>
+<p>The presumption is that you have used the book panel to manage your individual InDesign documents as a collection, so go ahead and open the book panel and view the first of your InDesign sections.</p>
+<p>We now need to address the various aspects of our previous work and how this will be affected when we export to the re-flowable ePub format.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="Here we see the book panel with our 3 InDesign documents" data-type="image" data-width="100%" href="../../media/id2rfl/image3.png"><img alt="Here we see the book panel with our 3 InDesign documents" src="../../media/id2rfl/image3.png"/></a></p>
+<h3 id="the-page">The Page<a class="headerlink" href="#the-page" title="Permanent link">¶</a></h3>
+<p>The page size in my example is (portrait), 164mm x 234mm. This was set up for print and this is a physical dimension. If we were creating an eBook from scratch with no intention to make a print version, then we might use pixel dimensions. However, the print size will not effect the way the eBook is exported, but if we want to get a better idea of how the eBook will look while we are working with InDesign, then having deep margins and single pages rather than spreads is an advantage. When you get more experienced with eBook production, you should be able to work for the print and eBook versions within the same InDesign document. Creating print and eBooks from the same InDesign document is the ultimate goal—some might even say the ‘Holy Grail’!</p>
+<p>As you will see, it is often the case that we will need to modify some attributes of the InDesign document to get a better eBook result. For this reason, we tend to ‘fork’ a new version specifically for the eBook edition.</p>
+<h3 id="spreads">Spreads<a class="headerlink" href="#spreads" title="Permanent link">¶</a></h3>
+<p>Although we may have our InDesign set up as spreads, we have no absolute control over the recto and verso pages in a re-flowable eBook. In fact we should avoid using those terms since they indicate front and back of the paper, rather than left and right!</p>
+<p>Some eBook reader software does provide a double spread view, and some tablets will automatically give you a left and right view when the tablet is used in a landscape/horizontal mode, but these left and right pages may not be the same that you see in the print version of the book.</p>
+<p>If our book design depends on the spread view; with images that cross over the spine, or images that bleed right to the edge then we should consider using the fixed-layout eBook format. In this book we are focussing entirely on the reflowable format and the many challenges that we face in getting beautifully designed responsive eBooks. We may need to make compromises but we intend to keep them to a minimum.</p>
+<h2 id="margins-and-bleeds">Margins and Bleeds<a class="headerlink" href="#margins-and-bleeds" title="Permanent link">¶</a></h2>
+<p>Different eBook reader software and devices already provide margins, and some even allow the user to adjust these margins, so your settings may be irrelevant to the eBook.</p>
+<p>With a <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>re-flowable eBook, there is no way that we can take content right to the edge of the screen. There will always be a margin. Content that goes to the edge for our print version, will be cropped or moved.</p>
+<h2 id="colour">Colour<a class="headerlink" href="#colour" title="Permanent link">¶</a></h2>
+<p>In a printed book, colour costs money. An eBook does not have that constraint, and so you might consider using colour in your text. You may use colours for the headings or to give emphasis here and there. You should create the swatches for the colours that you will need. Perhaps you could take colour ideas from the cover that you already created.</p>
+<p>You should not overuse colour. It is always best to use a limited palette; be consistent and remember, readability is crucial, so good contrast between text and background is essential.</p>
+<h3 id="cmyk-or-rgb">CMYK or RGB?<a class="headerlink" href="#cmyk-or-rgb" title="Permanent link">¶</a></h3>
+<p>Where print ready PDFs need to have colour set for the process inks (cyan, magenta, yellow and black <code>CMYK</code>), eBooks need colour in RGB (red, green and blue). When we export to the ePub format, the colour mode will be transformed automatically. CMYK will become RGB.</p>
+<p>If you use colour in the text, then I suggest that you define the colour with RGB values directly, because you will get a better result than if you leave InDesign to make the conversion. Previously, we insisted that colour images for our print version should be in CMYK mode. If this is how your images are set up in the InDesign document, then all will be well when you export to the ePub.</p>
+<p>If you are adding images specifically for the eBook version, then they can be left in RGB mode.</p>
+<h2 id="paragraph-and-character-styles">Paragraph and Character Styles<a class="headerlink" href="#paragraph-and-character-styles" title="Permanent link">¶</a></h2>
+<p>You will already have set up paragraph and character styles for the print production version. It is important that you use styles for every aspect of the typographic design and avoid where possible, overriding text formats.</p>
+<p>There are now some very specific details that we need to address for good output to the re-flowable ePub format.</p>
+<h3 id="styles-become-html-and-css-in-the-epub">Styles become HTML and CSS in the ePub<a class="headerlink" href="#styles-become-html-and-css-in-the-epub" title="Permanent link">¶</a></h3>
+<p>When we export to the ePub format, the paragraph and character styles will be resolved into a combination of markup in the HTML and stylesheet definitions in the CSS. We have control over this output by using the Export Tagging section of the style panel.</p>
+<h3 id="styles-for-the-headings">Styles for the Headings<a class="headerlink" href="#styles-for-the-headings" title="Permanent link">¶</a></h3>
+<p>You will notice in the example here that the beginning of the ACT and the beginning of the SCENE in each case begins on a new recto page. This is because I have selected ‘On the Next Odd page’ under the keep options for this style rule. This forces this heading style to move to the top of the next facing page. We used this style setting for our print book.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="The keep options for the paragraph style is setting this for the next odd page" data-type="image" data-width="100%" href="../../media/id2rfl/image4.png"><img alt="The keep options for the paragraph style is setting this for the next odd page" src="../../media/id2rfl/image4.png"/></a>
+You will need to think carefully about how you want the headings to appear. Do you want to start the ACT at the top of a page? Will the Scene also start a new page, or only when it come after the first scene?</p>
+<p>This is an important concept in InDesign, and we would normally use this feature for printable documents. In our ePub though we will need to apply some other settings before we export to ePub. Controlling where pages begin is a challenge. Controlling where pages end is virtually impossible.</p>
+<h2 id="export-tagging">Export Tagging<a class="headerlink" href="#export-tagging" title="Permanent link">¶</a></h2>
+<p>You need to pay special attention to the Export Tagging panel because it will help you get a successful ePub. Do not rely on InDesign to create the markup for you. Choose the tag and give each a class name. Class names are without spaces, however a tag can have more than one class name by entering a single space between them.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="Through export tagging, we set the HTML tag and class name" data-type="image" data-width="100%" href="../../media/id2rfl/image5.png"><img alt="Through export tagging, we set the HTML tag and class name" src="../../media/id2rfl/image5.png"/></a></p>
+<h3 id="splitting-for-the-epub">Splitting for the ePub<a class="headerlink" href="#splitting-for-the-epub" title="Permanent link">¶</a></h3>
+<p>The final attribute panel in the paragraph panel is ‘Export Tagging’. This is where we tell InDesign what HTML tag to use in the ePub file. We also need to consider if our heading is an appropriate place to ‘Split the ePub’ and how this relates to our table of contents.</p>
+<p>It is important that we use the correct level tags; h1 through to h6 for the headings but p for the paragraphs.</p>
+<h2 id="placing-images">Placing Images<a class="headerlink" href="#placing-images" title="Permanent link">¶</a></h2>
+<p>Images will need to be anchored in the text, so that when the text flows (when the reader has increased the font size), the image stays with the correct text. Images that are not anchored may simply appear at the end of the ebook.</p>
+<p>The important thing to remember, is that this process is more about the flow of the document rather than the appearance, so we cannot just place the images anywhere and expect them to appear in the right place within the text. The images need to be 'anchored' correctly.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="Observe the little blue square, top right on the image object frame" data-type="image" data-width="100%" href="../../media/id2rfl/image6.png"><img alt="Observe the little blue square, top right on the image object frame" src="../../media/id2rfl/image6.png"/></a></p>
+<h3 id="anchoring-images">Anchoring Images<a class="headerlink" href="#anchoring-images" title="Permanent link">¶</a></h3>
+<p>In my eBook I plan to put a different images with each scene. I intend to place this image below the Scene heading and before the start of the first stage directions.</p>
+<p>Here we see the image on the pasteboard. Notice the small blue square on the border of the image. We need to shift-drag this to the end of the line ‘Athens. Quince’s House’. This will anchor it at this point in the text and you should notice an ‘anchor’ symbol in place of the small blue square.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="We should attach the image to an object style for consistency" data-type="image" data-width="100%" href="../../media/id2rfl/image7.png"><img alt="We should attach the image to an object style for consistency" src="../../media/id2rfl/image7.png"/></a></p>
+<p>Now we need to create an Object Style for all images that will follow the scene title.</p>
+<h2 id="object-styles">Object Styles<a class="headerlink" href="#object-styles" title="Permanent link">¶</a></h2>
+<p>Object styles are a very powerful feature of InDesign, and allow you to apply formatting to various attributes of the object.</p>
+<p>With the anchored image selected, find the Object panel, and create a new object style. I will name mine ‘scene_image’.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="We can set the various options for the Object style through this panel" data-type="image" data-width="100%" href="../../media/id2rfl/image8.png"><img alt="We can set the various options for the Object style through this panel" src="../../media/id2rfl/image8.png"/></a>
+As you will see from this Object Style Options panel, there are many features and attributes that you can set. We are particularly interested in the Export Tagging tab and the Export Options for ‘Alt text’ and ‘ePub and HTML’. The settings here will have significant effect on the output to ePub.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="In the export options section we need to set the Export tagging to give us a &lt;div&gt; or possibly &lt;figure&gt; with an appropriate class name" data-type="image" data-width="100%" href="../../media/id2rfl/image9.png"><img alt="In the export options section we need to set the Export tagging to give us a &lt;div&gt; or possibly &lt;figure&gt; with an appropriate class name" src="../../media/id2rfl/image9.png"/></a></p>
+<p>When we use Object Style Options panel, we are setting some generic features of all objects that use this object style. We can also make some specific style changes to each image individually.</p>
+<h3 id="export-tagging-for-objects">Export Tagging for Objects<a class="headerlink" href="#export-tagging-for-objects" title="Permanent link">¶</a></h3>
+<p>In the tag drop down field you will find div and span but because this is a block element rather than inline, we will use div and give this a class name. We can type anything into the tag field, but only some accepted HTML tags will work. We could actually use the HTM5 tag — figure, but not all ePub readers will accept this.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>I normally give images the <em>figure</em> tag with a class name derived from the style name </p>
+</div>
+<h2 id="the-alt-text">The ALT text<a class="headerlink" href="#the-alt-text" title="Permanent link">¶</a></h2>
+<p>In the markup language of HTML for the web, images should have some alternative text so that screen readers for people with visual impairment, can read aloud the text description when the image is encountered in the reading order. So, it is with the ePub format. All images should have some ‘ALT text’. Here is what this would look like in the HTML markup:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"image/ancathens.png"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"Ancient Athens showing the Parthenon"</span> <span class="p">/&gt;</span>
+</code></pre></div>
+<p>We can add the ALT text in a variety of ways.</p>
+<h3 id="image-metadata">Image Metadata<a class="headerlink" href="#image-metadata" title="Permanent link">¶</a></h3>
+<p>If we wish to use the ALT text setting in the Object style panel then we will need to extract this text from the metadata held in each image file. This can only work if you have added the metadata for each image.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="We can add metadata for each image separately" data-type="image" data-width="100%" href="../../media/id2rfl/image10.png"><img alt="We can add metadata for each image separately" src="../../media/id2rfl/image10.png"/></a></p>
+<p>Although you can type some ALT text in the text panel here, this would mean that all images have the same ALT text! This is not acceptable. It is not good practice to use something like ‘Image for the scene’. Using the metadata from each image is the most efficient way, because we can use the Object Style to apply this for all images. Adding metadata for the images can be done with Photoshop under the ‘File Info…’ menu. You can use the title or description fields, but you need to know which to choose in the InDesign ALT text panel.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="The text is created in the custom field" data-type="image" data-width="100%" href="../../media/id2rfl/image11.png"><img alt="The text is created in the custom field" src="../../media/id2rfl/image11.png"/></a></p>
+<p>The other way to add the ALT text is to use the ‘Object Export Options’ menu item (under the Object Menu). This method can be used instead of, the above or, we can use it for a particular image where we want to override the Object Style settings.</p>
+<h2 id="the-title-page">The Title Page<a class="headerlink" href="#the-title-page" title="Permanent link">¶</a></h2>
+<p>Our title page needs special treatment because we have spread out the title, author and sub title down the page, and we want to be sure that this fills the page with no possibility of user changes to font size disturbing this arrangement.</p>
+<p>The way to make this happen is to convert the grouped texts into an image. We do this through the Object Export Options Panel, found under the Objects menu.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="Choosing an ePub:type for the grouped objects on the title page" data-type="image" data-width="100%" href="../../media/id2rfl/image12.png"><img alt="Choosing an ePub:type for the grouped objects on the title page" src="../../media/id2rfl/image12.png"/></a></p>
+<p>We will invoke this panel after we have grouped all of the objects on this page.</p>
+<p>The settings for the Object Export panel are shown here. You can select the correct ePub:type, make sure that you use ‘Rasterise Container’ and also add the ALT text information. Once we have set this up, we will need to make sure that this group is added to the Articles panel in the correct order.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="The articles panel showing the title group" data-type="image" data-width="100%" href="../../media/id2rfl/image13.png"><img alt="The articles panel showing the title group" src="../../media/id2rfl/image13.png"/></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>I normally select <em>png</em> for the graphic type because this will be transparent in the eBook. If the user uses a reversed colour mode then this will look better.</p>
+</div>
+<h2 id="the-table-of-contents">The Table of Contents<a class="headerlink" href="#the-table-of-contents" title="Permanent link">¶</a></h2>
+<p>In our previous work for the print production workflows, we have created a table of contents on the one of the front matter pages. We successfully created the TOC and displayed the items from the structure of the book—the headings, acts and scenes from the play. We displayed the page numbers right aligned with tabs marked with dots. This was appropriate for our print ready PDF, but our ePub version needs something slightly different.</p>
+<p>Most eBook reader software will use a structured table of contents within its user interface. In most cases we do not need the TOC to be displayed on the page<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>, because this interactive TOC is a navigation aid available from a drop down menu or in a ‘slide-out’ panel.</p>
+<p>In Apple books  on the iPad, the table of contents is displayed in a particular style that we have no control over. In the landscape view on the iPad (seen here) we also have the cover alongside the table of contents.</p>
+<p>We have dealt with the details of building a table of contents with InDesign in an earlier help document, so we don’t need to go through this again, but what issues will we encounter when we export to the re-flowable ePub?</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="In iBooks on iPad the table of contents appears opposite the cover image" data-type="image" data-width="100%" href="../../media/id2rfl/image14.png"><img alt="In iBooks on iPad the table of contents appears opposite the cover image" src="../../media/id2rfl/image14.png"/></a></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This is also how it looks on the Apple Mac since updated in 2020 </p>
+</div>
+<p>By using the table of contents feature, InDesign has already added the structural TOC into the file. All we need to do is to hide this from the page and then choose it by name at the time of export to ePub.</p>
+<p>We have two options to hide the ‘on-page’ version of the TOC:</p>
+<ol>
+<li>We could simply drag the TOC text box to the paste board. Drag it left or right and make sure that no part of the text box is on the page. It will be in the file but NOT on the page.</li>
+</ol>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="You can exclude the table of contents that is normally on the printed page, if you use the articles to organise the blocks of content" data-type="image" data-width="100%" href="../../media/id2rfl/image15.png"><img alt="You can exclude the table of contents that is normally on the printed page, if you use the articles to organise the blocks of content" src="../../media/id2rfl/image15.png"/></a></p>
+<ol>
+<li>A better way though is to set up the whole of our book using the Articles panel. With this method, we simply disable ‘Include when Exporting’ for the ‘Contents’.</li>
+</ol>
+<p>We will look further at the Articles panel before we export to the reflowable ePub, because it is with this that we can order the structure.</p>
+<h2 id="the-cover-image">The Cover Image<a class="headerlink" href="#the-cover-image" title="Permanent link">¶</a></h2>
+<p>Since we have already created a wrap around cover for the print book, we can use some part of this for the eBook cover. We only need the front part of the cover, not the spine nor the back or flaps. Of course, you might want to use any text you have created for the back of the book somewhere in the front matter, so don’t abandon this altogether.</p>
+<p>The cover that I have created for the print book is shown below. This is for a paperback edition with a spine and back. I just need the front for the eBook, so I am going to take the PDF into Photoshop and crop down to a portrait image.
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="We need a portrait cover with a width of 1400 pixels" data-type="image" data-width="100%" href="../../media/id2rfl/image16.png"><img alt="We need a portrait cover with a width of 1400 pixels" src="../../media/id2rfl/image16.png"/></a></p>
+<p>There are certain requirements for this image. If we intend to distribute this eBook through the Apple iBooks store, we need an image that is, at least, 1400pixels on the short side. This is the image that you can put into the ePub, although be sure to keep a copy of this, because distribution systems such as Apple’s or Amazon’s will need this large high quality image for marketing purposes.</p>
+<p>In my ‘Midsummer Night’s Dream’ eBook I have cropped the cover in Photoshop and saved as a JPEG image ready to be used when we export to ePub from InDesign. Be sure to know where you have saved this image, because we will need to select it at the time of export to ePub..</p>
+<p>The cover is a special image and we have certain issues to consider.</p>
+<p>Remember, this cover will be seen as a thumbnail image within the eBook delivery system, so make it clear enough to be read at small sizes. Do not use text that is too small or against a complex background. In my example, I am using the same image from the print edition. You don’t have to do this. Design an eBook version if you prefer.</p>
+<p>This eBook will be a portrait format eBook and so the cover should be in the proportion of 6x8 although this is not critical.</p>
+<p>Even if the cover is reduced in size for the eBook, keep a larger version available for marketing purposes.</p>
+<h2 id="book-metadata">Book Metadata<a class="headerlink" href="#book-metadata" title="Permanent link">¶</a></h2>
+<p>Every eBook needs metadata. This can include the title, description, publication date, copyright information and so on. When we export the ePub (reflowable), there is a panel to add this information and we will look at this when we go through the export options later.</p>
+<p>Even before we get to this point, we can add this metadata information in InDesign, through the File Info… section under the File menu. However, we are using the book panel, so, the question is, where should we enter this information? Which of the section documents? The book panel does not provide metadata input for the whole book!</p>
+<p>It turns out that if we enter the metadata information in the File Info… section <em>for the InDesign file that is set as the style source</em>, then it is the information in this file that is used for the metadata in the ePub!</p>
+<p>Save the InDesign File, but be sure to save with no spaces in the name. Use underscores or just save using CamelCase.</p>
+<p>We will add further metadata to the ePub when we export to ePub.</p>
+<h2 id="getting-ready-to-export">Getting Ready to Export<a class="headerlink" href="#getting-ready-to-export" title="Permanent link">¶</a></h2>
+<p>We are probably ready to export to ePub(reflowable) now, but let us just recap on a few things so we don’t get any nasty surprises. And, by the way, we don’t ruin anything when we export. We can always keep trying and overwrite previous versions of the ePub!</p>
+<h3 id="what-features-are-lost-when-we-export-the-epub">What features are lost when we export the ePub?<a class="headerlink" href="#what-features-are-lost-when-we-export-the-epub" title="Permanent link">¶</a></h3>
+<p>There are some aspects of our work for the print version of this book, that will not be carried over to the reflowable ePub. I am going to list them here with a little explanation.</p>
+<ul>
+<li><strong>Master pages</strong> Anything on the master pages such as the page numbers and the headers will be ignored.</li>
+<li><strong>Margins</strong> If you have set different margins for left and right pages in a spread, these are ignored. The eBook will be created so that each page is the same.</li>
+<li><strong>Columns</strong> These will be ignored. The reflowable eBook can only have one column.</li>
+<li><strong>Alignment to the Baseline Grid</strong> This will be ignored, so you are advised to be sure to set leading for all of your paragraph styles and test these by turning off the Align to Grid option temporarily. The line spacing (leading) in the ePub will only come from the leading setting NOT to the baseline grid.</li>
+<li><strong>Advanced Character Formats</strong> Any settings for the character or paragraph styles here will be ignored, so if you have set a Baseline Shift, then you may be disappointed that this is not available in the ePub. It may be possible later to add some CSS style rules to simulate this.</li>
+<li><strong>Paragraph Rules</strong> If you are using a line above or below (or in any other place), this will be ignored in the ePub. We can add this back in using a border in the CSS. More on this later. If you use the underline rather than rule, this will appear in the ePub, but without any offset or colour change.</li>
+<li><strong>Footnotes</strong> This won’t be ignored and we can use these to create ‘popup’ notes.</li>
+<li><strong>Orphans and Widows</strong> These are controlled using the Keep Options and they will not be ignored, however, the concept of orphans and widows is not supported by any eReader software that we know currently. The Keep Options panel also controls when a style starts on a new page. This will be used to force a new page, but not all systems support this feature. More on this later.</li>
+<li><strong>Text wrap</strong> If you have text wrapping around a shaped object, then this feature will be lost. In my book I have a portrait of Shakespeare in an oval shape with the edge of the text following the curve. Our eBook version simply stops the text either side of this image.</li>
+<li><strong>And more...</strong> I am sure there will be other aspects that will surprise you such as any tabs that will disappear in the ePub!</li>
+</ul>
+<h2 id="prepare-the-styles-for-export">Prepare the Styles for Export<a class="headerlink" href="#prepare-the-styles-for-export" title="Permanent link">¶</a></h2>
+<p>We have looked already at how we can add tags and class names to the styles. We must be sure to do this before we export.</p>
+<p>One handy way to make sure of these is by using the Edit All Export Tags… feature that can be found in the drop down context menu of the paragraph styles palette.</p>
+<h2 id="chunking-the-ebook">Chunking the eBook<a class="headerlink" href="#chunking-the-ebook" title="Permanent link">¶</a></h2>
+<p>The ePub package consists of a number of HTML documents, and for our example we want one separate HTML file for each of our Scenes in the play. We have already simulated this in InDesign, by styling some of the headings to start on the next odd page (see this in a previous section).</p>
+<p>If we are using the book panel and have different sections as separate InDesign files; Title, Contents, Introduction, Play —then these will become separate HTML files inside the ePub, when we export. Therefore those sections will always start on a new page.</p>
+<p>For each of our heading styles inside these sections, we need to tell InDesign to ‘<strong>Split Document</strong>’ under the Export Tagging tab of the style palette.  </p>
+<p>The ‘Export tagging’ panel is where we set up the HTML tags for each of the paragraph, character and object styles. We can configure these setting for each style in turn. We can also conveniently, use the ‘Edit All Export Tags’ panel to configure all of these in one place.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="Editing all export tags in one place" data-type="image" data-width="100%" href="../../media/id2rfl/image17.png"><img alt="Editing all export tags in one place" src="../../media/id2rfl/image17.png"/></a></p>
+<p>As you can see here, we have given all of the various elements such as verse, prose, act and scene a tag and added our own class names that identify their meaning in the structure of our play or introduction.</p>
+<h2 id="from-book-to-epub-re-flowable">From Book to ePub (re-flowable)<a class="headerlink" href="#from-book-to-epub-re-flowable" title="Permanent link">¶</a></h2>
+<p>If you are following along from the previous print workflows, then you will be using the book panel to organise your InDesign sections. If you are using the book panel, you should export to ePub and then choose the correct format - ePub(re-flowable).</p>
+<p>The dialogue box for the re-flowable ePub has several sections and you need to pay attention to each of these in turn.</p>
+<p>If you have Adobe Digital Edition software then this may be the default ePub viewer. You can use other ePub viewer software to review your work. MAC users with OSX version 9 and above can use iBooks to view the eBook. Apple iBooks will be our default, since we are working with a MAC.</p>
+<p>If you have an iPad, you can view the eBook with iBooks on that device. We will discuss getting the eBook onto your devices later.</p>
+<p>The viewer apps can be set up in the final panel when you export the ePub (re-flowable).</p>
+<h2 id="export-to-epub">Export to ePub<a class="headerlink" href="#export-to-epub" title="Permanent link">¶</a></h2>
+<p>Now follows instructions for each of the sections of the export to ePub (reflowable). When you make changes to these settings, they will stay with the file, so you don’t need to fill in the details again each time you export.</p>
+<h3 id="the-general-section">The General Section<a class="headerlink" href="#the-general-section" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="The first panel in the export process" data-type="image" data-width="100%" href="../../media/id2rfl/image1.jpeg"><img alt="The first panel in the export process" src="../../media/id2rfl/image1.jpeg"/></a></p>
+<p>Select <code>EPUB3.0</code> we are using the most recent version of the ePub standard.</p>
+<p>We should select the cover from the graphic made earlier. This should be a JPEG - not a Photoshop file.</p>
+<p>Choose the TOC style from the one we made for our print version. You may find that your saved TOC is not listed, this is because you may have saved it in a different document from the Style source. The solution is to change the style source to the file that contains the TOC. If you haven't explicitly saved with a name, then you will only have <code>default</code>.</p>
+<p><strong>Content Same as Articles Panel</strong>. This is the best option for us, because we have arranged our content in the Articles panel, and even turned off the page based Table of Contents, so that it doesn’t show on the page.</p>
+<p>We want to <em>Split Document</em> based on the Paragraph Style Export Tags. This is so that we can control exactly where the ePub is split into the separated HTML documents. This is often referred to as ‘chunking’.</p>
+<h3 id="the-text-section">The Text Section<a class="headerlink" href="#the-text-section" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="The text section of the export options" data-type="image" data-width="100%" href="../../media/id2rfl/image20.png"><img alt="The text section of the export options" src="../../media/id2rfl/image20.png"/></a></p>
+<p>If we have used footnotes in our book then these would normally be delivered at the bottom of each page. Here is a sample of what this looks like in InDesign.</p>
+<p>If we choose <em>Inside a Pop-up (EPUB3)</em> then we should get a hyperlinked elevated number in the text which will then produce a popup window with the text of our footnote. We may need to make some adjustments later to the style of the numbered reference in the text.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="Here is an example footnote on the InDesign page " data-type="image" data-width="100%" href="../../media/id2rfl/image21.png"><img alt="Here is an example footnote on the InDesign page " src="../../media/id2rfl/image21.png"/></a></p>
+<h3 id="the-object-section">The Object Section<a class="headerlink" href="#the-object-section" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="We can adjust the settings for the way the objects are displayed. The is is important for images and how they resize for different devices and orientations" data-type="image" data-width="100%" href="../../media/id2rfl/image23.png"><img alt="We can adjust the settings for the way the objects are displayed. The is is important for images and how they resize for different devices and orientations" src="../../media/id2rfl/image23.png"/></a></p>
+<p>You might prefer to experiment with some of these settings for yourself, but here are my suggestions</p>
+<p>Use preserve Appearance from Layout, so the images will take on the style and approximate size that you have given them.\ When you view your eBook in some software and devices, you can enlarge the image by double tapping. The image file inside the ePub needs to be big enough for this to work, so make sure that your originals are at least 1200pixels wide or tall.</p>
+<p>Use ‘Relative to Text Flow’\ What this really means is - resize to fit the space; if we view the eBook in a smaller device or window, then the image should be smaller relative to the overall space.\ The alternative is ‘Fixed’ and this may give us display problems on some devices.</p>
+<p>We can Align the images left, right or Centred. However, when aligning left or right, the text will flow around the image and—in some situations this can restrict the text to very narrow widths and produce awkward spacing.</p>
+<p>It is possible to add a page break automatically after or before an image (or even for both!)</p>
+<h3 id="the-conversion-settings">The Conversion Settings<a class="headerlink" href="#the-conversion-settings" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="Images can be coverted to JPEGS or PNG files with a choice of quality etc." data-type="image" data-width="100%" href="../../media/id2rfl/image24.png"><img alt="Images can be coverted to JPEGS or PNG files with a choice of quality etc." src="../../media/id2rfl/image24.png"/></a></p>
+<p>We can choose the way that InDesign converts the images inside the ePub file.</p>
+<p>In this example I have opted to use the JPEG file format, although you can just use the automatic setting or PNG. With the JPEG setting you have more options for reducing the file size by reducing the quality. This setting really needs your full attention and please experiment, so that you can build an eBook that has superb images but is not too big overall. Users will not be happy if they need to wait a long time to download you eBook. The Medium or High quality is probably going to be good enough if you have a lot of images. On the other hand use the Maximum quality if you analyse a few images.</p>
+<p>If your images use transparency (such as blended shadows or colour overlays), then you should choose PNG. Be aware, though that not all devices support transparency.</p>
+<p>Later on we will learn how to unpack the ePub and modify the images to reduce the amount of space that they take up in the ePub package.</p>
+<h3 id="the-css-panel">The CSS panel<a class="headerlink" href="#the-css-panel" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="We can include our own CSS file and this will be linked at the top of each page **after** the InDesign generated one." data-type="image" data-width="100%" href="../../media/id2rfl/image25.png"><img alt="We can include our own CSS file and this will be linked at the top of each page **after** the InDesign generated one." src="../../media/id2rfl/image25.png"/></a></p>
+<p>If you don’t know what we mean by CSS, then you should grab some information from the web or get one of the many books on the subject, but essentially…
+- CSS means Cascading Style Sheets and is the associated language that goes along with markup languages such as HTML to apply styles to the elements used in the structure of the content.
+- When we export to ePub, the various styles (paragraph, character and object) need to be converted to these CSS rules. The ePub format uses HTML and CSS inside the package—you knew that of course
+- Do you remember, that we have set the Export Tagging for each style? This is where we get to use these tags. So, we need to check the box ‘Generate CSS’. We can optionally add a margin around the content.
+- As you will notice you can also turn on or off the local overrides; if you have specifically selected some text and made the style different without applying a style, then InDesign will create a new tag and CSS to try to match your design style. I suggest that you try to avoid using overrides, but this is where you get a second chance to turn them off!
+- <strong>Embedding Fonts</strong> This is whole topic that deserves a separate chapter, but you can opt to include embeddable fonts in the ePub. Some font vendors disable the ability to embed fonts, so you may get a warning if embedding is prevented.
+- <strong>Additional CSS</strong> Optionally we can add our own CSS file. The idea here is that this will be linked in the head of each XHTML file in the ePub3 package. Currently version 10.1 of InDesign puts this file before the InDesign generated one. This is wrong—it should come after so you can override some of the style rules that InDesign creates.</p>
+<h3 id="the-javascript-panel">The Javascript Panel<a class="headerlink" href="#the-javascript-panel" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="We can also add our own javascript into the mix" data-type="image" data-width="100%" href="../../media/id2rfl/image26.png"><img alt="We can also add our own javascript into the mix" src="../../media/id2rfl/image26.png"/></a></p>
+<p>There are some situations where you might want to add javascript to the ePub package. In the example here I have added jQuery and some other routines that help with the display of certain styles.</p>
+<p>Using javascript inside the eBook is certainly an advanced topic and you should know that it will have very limited support apart from the Apple iBook software where javascript can be used to great effect on the iPad.</p>
+<h3 id="the-metadata-panel">The Metadata Panel<a class="headerlink" href="#the-metadata-panel" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="The metadata for the book is crucial. Put as much in here as possible." data-type="image" data-width="100%" href="../../media/id2rfl/image27.png"><img alt="The metadata for the book is crucial. Put as much in here as possible." src="../../media/id2rfl/image27.png"/></a></p>
+<p>Every eBook must have certain information stored within the package before it can be published. It is essential that all of the fields provided in this panel are completed. If you don’t yet have an ISBN for the eBook, you can use the random identifier that has been added automatically.</p>
+<p>Most of these entry fields are self explanatory but the date field will need a special format.</p>
+<p>The date must be in the form shown: Year-Month-Day, in numerals like this:</p>
+<p><code>2015-01-23</code></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>I suggest that you leave InDesign to enter this date for you. </p>
+</div>
+<p>Some further Metadata is added to the eBook automatically:</p>
+<ul>
+<li>Modified date comes from the time that you exported the ePub</li>
+<li>Language will come from the Dictionary setting in InDesign. This is a generic setting for the whole book, but paragraph and character styles can have different language settings as well, so the metadata can be overridden within the ePub.</li>
+<li>Cover will be generated when you selected the cover image</li>
+</ul>
+<h2 id="you-have-an-epub-how-does-it-look">You have an ePub; How does it look?<a class="headerlink" href="#you-have-an-epub-how-does-it-look" title="Permanent link">¶</a></h2>
+<p>The final panel ‘Viewing Apps’ gives you an opportunity to set your default eReader software. If you are using the MAC then this could be iBooks. Adobe Digital Editions could also be a choice, but, remember, you should test your ePub in a number of environments if possible.</p>
+<p>Hopefully, your eReader will show you a cover image and you will be able to observe the table of contents. You may not be happy with some aspects of the visual appearance and so we will now need to make some changes to the CSS that controls the typography and layout.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="A sample double page in Apple iBooks" data-type="image" data-width="100%" href="../../media/id2rfl/image28.png"><img alt="A sample double page in Apple iBooks" src="../../media/id2rfl/image28.png"/></a></p>
+<p>You will notice in this view with Apple’s iBooks, we seem to have lost the heading for the Act — above Scene 1. This is because we used a white text against a deep offset grey rule with InDesign. This does not get converted to any supported CSS, so we will need to add this back with a background for the style of this heading. We do this with ur very own CSS file like this:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">h1</span><span class="p">.</span><span class="nc">act</span><span class="w"> </span><span class="p">{</span>
+<span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="kc">silver</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="blank-pages">Blank Pages<a class="headerlink" href="#blank-pages" title="Permanent link">¶</a></h3>
+<p>You may also experience blank pages in the eBook. This is because we have 2 mechanisms that have effected where the pages break. We have a style for the Acts and Scenes that starts on the next odd page and we have also <em>split</em> the eBook by creating a new HTML file for each section. We can easily resolve this by editing the CSS inside the ePub. Here is what would need:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">h1</span><span class="p">.</span><span class="nc">act</span><span class="o">,</span><span class="w"> </span><span class="nt">h2</span><span class="p">.</span><span class="nc">scene</span><span class="w"> </span><span class="p">{</span>
+<span class="k">page-break-after</span><span class="p">:</span><span class="kc">auto</span><span class="p">;</span>
+<span class="k">page-break-before</span><span class="p">:</span><span class="kc">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The next help document will focus on how we can edit the insides of the ePub file and what changes we can make to the styles and other view settings.</p>
+<p><a href="../Editing%20inside%20the%20ePUB%20package/">Editing inside the ePUB package</a></p>
+<div class="footnote">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>There is a project to develop a hybrid ePub format that will allow the mixture of re-flowable and fixed-layout pages. If you want to explore this further then you should go to the <a href="http://idpf.org/epub/31" title="EPUB 3.1 - International Digital Publishing Forum">International Digital Publishing Forum </a>web site. The IDPF has now merged with the W3 organisation. <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn:2">
+<p>If we plan to convert the ePub to the Kindle MOBI format then we may need to display a table of contents somewhere. This is because the Amazon recommend this for their format. However, we can find other ways of resolving this. A topic to be addressed later. <a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+</ol>
+</div>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2023 Chris Jennings
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://twitter.com/pageboy" rel="noopener" target="_blank" title="twitter.com">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+</a>
+<a class="md-social__link" href="https://instagram.com/pagebuoy" rel="noopener" target="_blank" title="instagram.com">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+<script src="../../javascripts/glightbox.min.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": false, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
