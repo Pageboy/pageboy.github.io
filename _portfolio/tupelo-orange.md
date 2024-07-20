@@ -9,7 +9,9 @@ tags:
   - art
   - golden section
 ---
-Trees in the arboretum come from many parts of the world and we benefit from the collectors of saplings and seeds. After a hot summer, the hazel and the tupelo blend their vibrant orange and yellow colours contrasting against the shadows of the undergrowth.
+Trees in the arboretum come from many parts of the world and we benefit from the collectors of saplings and seeds.
+
+After a hot summer, the hazel and the tupelo blend their vibrant orange and yellow colours contrasting against the shadows of the undergrowth.
 
 * Tupelo Orange
 * Hazel Red

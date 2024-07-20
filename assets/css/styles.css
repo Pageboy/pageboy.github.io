@@ -212,8 +212,8 @@ img[align=right] {
 }
 
 article, .comments, .feature-image .post-content, .feature-image footer,
-.posts .post-teaser, .site-footer {
-    padding: 1% 23%;
+.posts .post-teaser, .site-footer, .first-post {
+    padding: 1% 10%;
 }
 
 .art-teaser {
@@ -230,7 +230,7 @@ article, .comments, .feature-image .post-content, .feature-image footer,
   and (-webkit-min-device-pixel-ratio: 2) {
 
     article, .comments, .feature-image .post-content, .feature-image footer,
-    .posts .post-teaser, .site-footer {
+    .posts .post-teaser, .site-footer, .first-post {
         padding: 2% 5%;
     }
 
@@ -543,6 +543,22 @@ height: 100%;
 max-height: 100%;
 }
 
+
+.posts .first-post {
+    width: 100%;
+    margin-bottom: 0;
+    display: inline-block;
+    background-size: cover;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+}
+
+.posts .first-post .post-img {
+    vertical-align: middle;
+    /* border-radius: 10px; */
+    overflow: hidden
+}
+
+
 @media (min-width: 768px) {
     .posts .post-teaser .post-img {
         height: 250px
@@ -557,6 +573,12 @@ max-height: 100%;
 }
 
 .posts .post-teaser .post-img img {
+    width: 100%;
+    padding: 0;
+    vertical-align: middle
+}
+
+.posts .first-post .post-img img {
     width: 100%;
     padding: 0;
     vertical-align: middle
@@ -1489,9 +1511,9 @@ div.portfolio header {
 }
 
 section.art img {
-  border:1px solid #c2c2c2;
+  /* border:1px solid #c2c2c2; */
   width:auto;
-  max-height: 80vh;
+  max-height: 95vh;
   margin-left:auto;
   margin-right: auto;
   display:block;

@@ -1,5 +1,5 @@
 ---
-navbar-title: Chris Jennings + ideas + art
+navbar-title: Chris Jennings + art
 title: Chris Jennings
 timezone: UTC
 collections:
@@ -21,7 +21,7 @@ collections:
   portfolio:
     title: Portfolio
     output: true
-    layout: art
+    layout: portfolio
   photographs:
     title: Photographs
     output: true

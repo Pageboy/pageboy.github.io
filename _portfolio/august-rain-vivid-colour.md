@@ -9,7 +9,9 @@ tags:
   - art
   - root2A
 ---
-The August rain has painted the garden with glossy colour. The fiery oranges and reds contrast with the blades of green that shun the water. The Crocosmia plants that are native to Africa deserve a closer look and the camera penetrates the stems and capsules to find forking curves and droplets of water.
+The August rain has painted the garden with glossy colour.
+
+The fiery oranges and reds contrast with the blades of green that shun the water. The Crocosmia plants that are native to Africa deserve a closer look and the camera penetrates the stems and capsules to find forking curves and droplets of water.
 
 **Varnished giclée print on panel 400mm x 565mm**
 

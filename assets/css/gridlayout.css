@@ -1,5 +1,8 @@
 /* if you want the posts to appear as a grid then use the style settings below. */
 
+
+
+
 .posts {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10,26 +13,101 @@
   flex-flow: row wrap;
   -ms-flex-pack: distribute;
   justify-content: center;
+  justify-content: space-between;
+  justify-content: space-around;
   padding: 2px 12px;
-  margin: 15px 6%;
+  margin: 15px 3%;
+
 }
 
 .post-teaser {
-  flex-basis: 300px;
+  flex-basis: 550px;
   padding: 8px !important;
   margin: 10px;
-  border: 1px solid silver;
-  -webkit-box-flex: 1;
-  -ms-flex: auto;
-  flex: 0 0 1;
-  max-width: 850px;
-  min-width: 150px;
+  /* border: 1px solid silver; */
+  /* -webkit-box-flex: 1; */
+  /* -ms-flex: auto; */
+  /* flex: 1 0 1; */
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 50%;
+  /* max-width: 850px; */
+  min-width: 250px;
   font-size: 80%;
 }
+.toShow
+{
+   opacity:0; 
+}
+
+/* animation */
+
+.animated {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@keyframes bounceInUp {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+            transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 200px, 0);
+            transform: translate3d(0, 200px, 0);
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+.bounceInUp {
+  -webkit-animation-name: bounceInUp;
+          animation-name: bounceInUp;
+}
+
+/* @keyframes fade-in {
+  to { scale:1; opacity: 1; }
+  } */
 
 .post-teaser h1 {
   font-size: 1.5em;
 }
+
+.first-post {
+  flex-basis: 100%;
+  padding: 8px !important;
+  margin: 10px;
+  /* border: 1px solid silver; */
+  -webkit-box-flex: 1;
+  -ms-flex: auto;
+  flex: 1 0 1;
+  /* max-width: 950px; */
+  min-width: 150px;
+  /* font-size: 80%; */
+  margin-bottom: 4em !important;
+  background-color: white;
+}
+
+.first-post h1 {
+  /* font-size: 3.5em !important; */
+  text-align: center;
+}
+
+.first-post {
+  text-align: center;
+}
+
 
 .post-img {
   height: 180px !important;

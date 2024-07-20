@@ -1,77 +1,22 @@
 ---
-layout: page
+hide: false
+layout: series
 title: About
-published: false
-permalink: /about/
-subtitle: All about me and my stuff
-date: 2021-01-24T23:33:42.725Z
-image: uploads/watersedge.jpg
-order: 2
+permalink: /about
+order: 1
+date: 2022-12-22T14:44:28.645Z
+gridlayout: true
+# icon: fa-connectdevelop
 ---
-Yes I am. Chris Jennings and I live in Oxford, UK.
+Hello and welcome to the Chris Jennings.Art web site. You will find my recent work here arranged by series. On the home page the work is arranged in date order.
 
-I teach at Oxford Brookes University within the [Oxford International Centre for Publishing](https://publishing.brookes.ac.uk "see the Publishing web site - which I manage").
+Other work that you can find here:
 
-## My web sites
+- [Early work before the year 2000](/earlywork)
+- [Some projects including _Megalithic Landscapes_](/projects)
+- [Some photographs](/photographs)
 
-<section class="box" markdown="1">
 
-![Publisha](/uploads/publisha.png "Publisha")
+![Studio View](/uploads/nik_3016.jpeg "Chris and some recent work")
 
-[My Digital Publishing Hub site](https://www.publisha.org "check out Publisha")
-
-This site includes all of my eBook production and digital publishing help documents, presentations and screencasts. You can get loads of help if you are using InDesign to create eBooks.
-
-</section>
-<section class="box" markdown="1">
-
-![Publisha on Medium](/uploads/medium2.png "Publisha on Medium")
-
-[Publisha on Medium](https://medium.com/publisha "I am putting some of my papers on Medium")
-
-I publish papers within my medium publication.
-
-</section>
-<section class="box" markdown="1">
-
-![My boat Perspectief](/_uploads/perspectief.png "My boat Perspectief")
-
-[My boat *Perspectief*](https://www.chrisjennings.net/perspectief/)
-
-I keep my boat on the Thames in Oxford, and am (as often as possible) making extended trips out on the river both upstream and downstream.
-
-</section>
-<section class="box" markdown="1">
-
-![PagetoScreen](/_uploads/pagetoscreen.png "PagetoScreen")
-
-PagetoScreen soon to be retired
-
-[PagetoScreen](https://www.pagetoscreen.net "Lots of useful information") is my legacy website and I will probably be retiring this very soon.
-
-</section>
-
-<section class="box" markdown="1">
-
-See also some archived sites:
-
-[My previous boat on the Thames - AViVA](http://avivaboat.weebly.com "Built with Weebly originally")
-
-</section>
-<section class="box" markdown="1">
-
-[Islomania](https://www.chrisjennings.net/archive/islomania/ "see islomania")
-
-</section>
-
-<section class="box" markdown="1">
-
-[Some past work](https://www.chrisjennings.net/archive/pastwork/ "See some sculpture done a long time ago")
-
-</section>
-
-<section class="box" markdown="1">
-
-[And me in the past](https://www.chrisjennings.net/archive/chris "me")
-
-</section>
+I have divided my recent work here into into series; mainly in respect of the proportions.

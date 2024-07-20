@@ -8,7 +8,9 @@ tags:
   - art
   - root2A
 ---
-In the dense lush undergrowth of Sri Lanka we spot a contrasting red colour pushing up behind the palm fronds. The leaves, with their graceful curves, and the vertical ascent of the vertical red creates a compelling contrast of geometries.
+In the dense lush undergrowth of Sri Lanka we spot a contrasting red colour pushing up behind the palm fronds.
+
+The leaves, with their graceful curves, and the vertical ascent of the vertical red creates a compelling contrast of geometries.
 
 ![Lipstick Palm on 2 panels in the studio](https://live.staticflickr.com/65535/53499743231_8b76b386e3_h_d.jpg "Lipstick Palm on 2 panels in the studio")
 

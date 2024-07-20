@@ -8,7 +8,9 @@ tags:
   - golden section
 ---
 
-The trees are showing their fireworks and we blink to find that the trees are bare. The fresh October winds shake the branches and colour the forest floor with a carpet of red and yellow.
+The trees are showing their fireworks and we blink to find that the trees are bare.
+
+The fresh October winds shake the branches and colour the forest floor with a carpet of red and yellow.
 
 * The Arboretum
 * Japanese Acers

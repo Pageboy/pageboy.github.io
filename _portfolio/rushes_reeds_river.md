@@ -8,7 +8,9 @@ tags:
   - art
   - square series
 ---
-The boundaries of the water and the bank; the trees, the reeds and the reflections when the water is still. This image uses the hexagon and the square as the basic underlying structure - then triangles of colour and photographs combined.
+The boundaries of the water and the bank; the trees, the reeds and the reflections when the water is still.
+
+This image uses the hexagon and the square as the basic underlying structure - then triangles of colour and photographs combined.
 
 * Wind waving the water rushes
 * Tangle of reeds

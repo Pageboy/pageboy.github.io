@@ -3,6 +3,7 @@ title: Projects
 permalink: "/projects/"
 layout: projects
 description:
+hide: true
 gridlayout: true
 order: 3
 ---

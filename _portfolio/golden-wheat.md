@@ -8,7 +8,9 @@ tags:
   - art
   - golden section
 ---
-Crops in the fields are bursting with heavy wheat heads. The kernels are still green but will be *golden* when ready for harvest. The geometry of the *golden* ratio is used to form the parts of this image; the **short** side to the **long** side is the same as the **short** side to the arc **radius**.
+Crops in the fields are bursting with heavy wheat heads.
+
+The kernels are still green but will be *golden* when ready for harvest. The geometry of the *golden* ratio is used to form the parts of this image; the **short** side to the **long** side is the same as the **short** side to the arc **radius**.
 
 > - Image size: 562mm x 349mm
 > - paper size: 594mm x 420mm (A2)

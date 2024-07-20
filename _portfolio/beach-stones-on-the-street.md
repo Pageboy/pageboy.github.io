@@ -9,7 +9,9 @@ tags:
   - art
   - landscape
 ---
-Merton street sett stones caught my eye. I wonder if these came from Chessel Beach. [I wondered about this before](https://www.chrisjennings.net/blog/2020/01/25/cobbles-and-shingle/) but now I am collecting the images for my collages using in the geometry - this time rotated sectors of a circle.
+Merton street sett stones caught my eye. I wonder if these came from Chessel Beach. 
+
+[I wondered about this before](https://www.chrisjennings.net/blog/2020/01/25/cobbles-and-shingle/) but now I am collecting the images for my collages using in the geometry - this time rotated sectors of a circle.
 
 The colour of these stones is rich with reds and purples with hints of blue and ochre. The rain water is held in the dips and the places between is perfect for the green moss to grow.
 

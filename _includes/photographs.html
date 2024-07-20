@@ -2,7 +2,7 @@
 
   {%- assign items = site.photographs | sort: 'date' | reverse -%}
     {%- for art in items limit:100 -%}
-    <div class="post-teaser">
+    <div class="post-teaser toShow">
         {% if art.image %}
         {% assign image_url = art.image | replace: "_uploads", "uploads" -%}
         <div class="post-img">

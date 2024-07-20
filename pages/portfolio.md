@@ -7,7 +7,7 @@ icon:
 layout: portfolio
 section: art
 order: 1
-hide: false
+hide: true
 ---
 Gathering images and geometry with simple captions. Taking shapes and triangles for a walk in the landscape and around my photograph collections.
 

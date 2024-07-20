@@ -26,4 +26,4 @@ I should like to thank the following people and organisations who helped and enc
 - The Kenneil family at Ardpatrick for many voyages on board ‘Deli’,the Danish ketch, out to the islands of Western Scotland.
 - Richard Demarco, who’s incredible enthusiasm for the ancient sites gave me great encouragement.
 - Elise Meyer, who exhibited my photographs during one of her founding exhibitions at the Elise Meyer Gallery, New York.
-- My artist friends and mentors; Robert Janz and Adolpho Estrada
+- My artist friends and mentors; Robert Janz, Dante Leonelli and Adolfo Estrada

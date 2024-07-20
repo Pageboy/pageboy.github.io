@@ -8,4 +8,6 @@ tags:
   - art
   - golden section
 ---
-Rich colours sweep over the garden when we have more daylight hours. Sun, rain and soil are the catalysts for growth. Even before the flowers come, the leaves shine; green edged with red.
+Rich colours sweep over the garden when we have more daylight hours.
+
+Sun, rain and soil are the catalysts for growth. Even before the flowers come, the leaves shine; green edged with red.

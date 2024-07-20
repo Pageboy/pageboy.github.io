@@ -9,7 +9,7 @@ tags:
   - art
   - landscape
 ---
-Travelling the river with views of light and dark water. Ahead of us the sun catches the ripples; waves behind, grow and recede.
+Traveling the river with views of light and dark water. Ahead of us the sun catches the ripples; waves behind, grow and recede.
 
 * Shaded water
 * Drifting Ripples

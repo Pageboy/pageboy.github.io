@@ -8,6 +8,8 @@ tags:
   - art
   - golden section
 ---
-Arcs and segments filled with colours of the garden. Mauve bells softly focussed with iris green blades blended. Shapes rotating cut through with a shaft of colours picked from sunlit garden.
+Arcs and segments filled with colours of the garden.
+
+Mauve bells softly focussed with iris green blades blended. Shapes rotating cut through with a shaft of colours picked from sunlit garden.
 
 **Varnished giclée print on panel 350mm x 566mm**

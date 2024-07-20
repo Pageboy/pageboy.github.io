@@ -1,9 +1,10 @@
 ---
 hide: true
-layout: series
+layout: portfolio
 title: Chris Jennings
 permalink: /
 order: 1
+section: art
 date: 2022-12-22T14:44:28.645Z
 gridlayout: true
 icon: fa-connectdevelop

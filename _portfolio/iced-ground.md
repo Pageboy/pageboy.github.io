@@ -4,6 +4,7 @@ title: Iced Ground
 date: 2022-12-20T19:10:50.198Z
 image: https://live.staticflickr.com/65535/52576258750_95d07b65a4_h_d.jpg
 caption: Iced blades of grass
+published: false
 tags:
   - art
   - portrait formatp

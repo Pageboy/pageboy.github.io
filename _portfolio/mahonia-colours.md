@@ -8,4 +8,6 @@ tags:
   - art
   - golden section
 ---
-As hues shift within the Autumn garden, our gaze is drawn to a small emblem of America—the Oregon Grape. Leaves shimmer under the pale equinox sun, blending magenta and chromium green. Their edges, lined with forbidding spikes, deter any touch. Intricate geometric shapes and bands brim with colours, vividly captured by the lens of the camera.
+As hues shift within the Autumn garden, our gaze is drawn to a small emblem of America—the Oregon Grape.
+
+Leaves shimmer under the pale equinox sun, blending magenta and chromium green. Their edges, lined with forbidding spikes, deter any touch. Intricate geometric shapes and bands brim with colours, vividly captured by the lens of the camera.

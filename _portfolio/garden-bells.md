@@ -8,4 +8,6 @@ tags:
   - art
   - golden section
 ---
-Brilliant citrine green of the euphorbia bells can be seen against the mauve thimble shapes of the bluebells. The sweeping shapes crosscut through with the transparent king’s blue; a shaft of blue from the sky.
+Brilliant citrine green of the euphorbia bells can be seen against the mauve thimble shapes of the bluebells.
+
+The sweeping shapes crosscut through with the transparent king’s blue; a shaft of blue from the sky.

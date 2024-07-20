@@ -10,7 +10,9 @@ tags:
   - art
   - golden section
 ---
-A visit to the maple tree copse with changing colours for the winter coming. The green leaves, still on the trees, are overcome by the reds before they are swept to the ground by the dry winds.
+A visit to the maple tree copse with changing colours for the winter coming.
+
+The green leaves, still on the trees, are overcome by the reds before they are swept to the ground by the dry winds.
 
 * Red Leaf Season
 * Blending Greens

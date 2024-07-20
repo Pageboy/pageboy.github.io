@@ -9,7 +9,9 @@ tags:
   - art
   - landscape
 ---
-Bracken brown on the forest floor with last years leaves crunching on the walking ground. Slim tree bark parallel to my verticals with shifted hexagon aligned to transparent structure. New season green just seen through the past year.
+Bracken brown on the forest floor with last years leaves crunching on the walking ground. 
+
+Slim tree bark parallel to my verticals with shifted hexagon aligned to transparent structure. New season green just seen through the past year.
 
 * Forest Floor
 * Bracken Brown

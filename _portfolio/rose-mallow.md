@@ -8,7 +8,9 @@ tags:
   - art
   - root2A
 ---
-Peach coloured lobes and carmine red *stigma* of the hibiscus flowers reach out towards the Greek island sun. We focus on the forms of this cultivated **mallow** and pick out the colours to complete this rectangle with arcs and sweeps.
+Peach coloured lobes and carmine red *stigma* of the hibiscus flowers reach out towards the Greek island sun. 
+
+We focus on the forms of this cultivated **mallow** and pick out the colours to complete this rectangle with arcs and sweeps.
 
 **Varnished giclée print on 2 panels 400mm x 565mm, bolted together - overall 565mm x 800mm**
 

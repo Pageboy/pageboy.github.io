@@ -8,7 +8,9 @@ tags:
   - art
   - root2A
 ---
-Blades of grass form random pencil line texture scribbled in greens. In the field beyond, the grasses show less green but more ochres and yellows. Curved shapes and angular forms are filled with the summer colours picked from the day’s images.
+Blades of grass form random pencil line texture scribbled in greens.
+
+In the field beyond, the grasses show less green but more ochres and yellows. Curved shapes and angular forms are filled with the summer colours picked from the day’s images.
 
 Varnished giclée print on panel 400mm x 565mm
 

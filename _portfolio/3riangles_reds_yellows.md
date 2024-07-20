@@ -8,7 +8,9 @@ tags:
   - art
   - square series
 ---
-In a restaurant one evening a bowl of tomatoes on the counter caught my eye and I used this photo together with others that I have taken of berries and other tomatoes to make this geometric collage. I am using a hexagon (6 sided symmetrical figure) to arrange 3 triangles.
+In a restaurant one evening a bowl of tomatoes on the counter caught my eye and I used this photo together with others that I have taken of berries and other tomatoes to make this geometric collage.
+
+I am using a hexagon (6 sided symmetrical figure) to arrange 3 triangles.
 
 * Polished Reds
 * Juice Filled Bursting

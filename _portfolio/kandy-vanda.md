@@ -6,9 +6,11 @@ image: https://live.staticflickr.com/65535/53511325188_42a447f277_h_d.jpg
 caption: Vanda Orchid
 tags:
   - art
-  - golden section
+  - triptych
 ---
-The dazzle of flower petals draws us into the display of **orchids** in the botanical garden in the City of Kandy. Each petal seems to shimmer in an an array of pastel hues.
+The dazzle of flower petals draws us into the display of **orchids** in the botanical garden in the City of Kandy.
+
+Each petal seems to shimmer in an an array of pastel hues.
 
 From the Sri Lanka Series
 

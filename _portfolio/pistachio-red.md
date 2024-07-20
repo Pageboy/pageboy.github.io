@@ -8,4 +8,6 @@ tags:
   - art
   - golden section
 ---
-In the warm Mediterranean soil the Pistache grow in abundance. When a branch of the pistachio tree dies back or experiences stress, its leaves often turn a fiery red or orange hue. This change in leaf color creates a striking contrast with the vivid green leaves that glisten in the summer sun. This dramatic contrast surprises us as we walk past. The shapes are filled with the red and orange hues that the camera has captured against the backdrop of the tree's healthy green foliage.
+In the warm Mediterranean soil the Pistache grow in abundance. When a branch of the pistachio tree dies back or experiences stress, its leaves often turn a fiery red or orange hue.
+
+This change in leaf color creates a striking contrast with the vivid green leaves that glisten in the summer sun. This dramatic contrast surprises us as we walk past. The shapes are filled with the red and orange hues that the camera has captured against the backdrop of the tree's healthy green foliage.

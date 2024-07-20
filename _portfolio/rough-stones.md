@@ -8,7 +8,9 @@ tags:
   - art
   - golden section
 ---
-Landscape stones collected by callousted hands are built into rough walls for terracing the slopes. As we walk on the olive grove island we notice the subtle grey tints in these rocks. Some stones are blessed with the lichen orange and others show hints of granite pink. The geometric composition based on the *golden rectangle* gives form to these colours drawn in by the camera.
+Landscape stones collected by callousted hands are built into rough walls for terracing the slopes.
+
+As we walk on the olive grove island we notice the subtle grey tints in these rocks. Some stones are blessed with the lichen orange and others show hints of granite pink. The geometric composition based on the *golden rectangle* gives form to these colours drawn in by the camera.
 
 This piece is available as a print (edition of 5) 
 

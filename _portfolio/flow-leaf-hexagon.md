@@ -9,7 +9,9 @@ tags:
   - art
   - landscape
 ---
-Tangled leaves show through the shapes and structures. Flowers of white and colour highlight the shadows. The shapes are asymmetric in the image with outlines and alignment.
+Tangled leaves show through the shapes and structures.
+
+Flowers of white and colour highlight the shadows. The shapes are asymmetric in the image with outlines and alignment.
 
 * Petal Leaf
 * Flow Green

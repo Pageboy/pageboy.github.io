@@ -9,7 +9,9 @@ tags:
   - golden section
 ---
 
-The journey on the river shows the ripples covering the drifting forms. The fronds in the shallows mirror the reeds leaning from the bank edge. The sky blues peak through the reflections on the surface.
+The journey on the river shows the ripples covering the drifting forms.
+
+The fronds in the shallows mirror the reeds leaning from the bank edge. The sky blues peak through the reflections on the surface.
 
 * Waving forms
 * Holding the surface

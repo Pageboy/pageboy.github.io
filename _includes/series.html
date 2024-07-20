@@ -2,7 +2,7 @@
 
   {%- assign items = site.series | sort: 'title' -%}
     {%- for group in items limit:30 -%}
-    <div class="post-teaser">
+    <div class="post-teaser toShow">
         {% if group.image %}
         {% assign image_url = group.image | replace: "_uploads", "uploads" -%}
         <div class="post-img">
