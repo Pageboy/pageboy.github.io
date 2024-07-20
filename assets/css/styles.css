@@ -1493,13 +1493,13 @@ p.linkall {
 
 }
 
-.portfolio header h1 a {
+/* .portfolio header h1 a {
 color:#797979;
 }
 
 .portfolio header h1 {
 font-size: 1.1em;
-}
+} */
 
 div.portfolio header {
   border-bottom:none !important;
