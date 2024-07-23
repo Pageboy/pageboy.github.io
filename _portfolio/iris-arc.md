@@ -12,3 +12,5 @@ The low arc motif draws together the contrasting hues found in this flower, rela
 **Iris** was the Greek goddess of the rainbow.
 
 For a few brief days the garden *flags* show their brilliant purples and yellows and we are grateful for the insects that are attracted to them and act as pollinators for the next generation of flowers. 
+
+![In the studio](https://live.staticflickr.com/65535/53876987288_328f23c06d_h_d.jpg "In the studio")
