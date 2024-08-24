@@ -3,7 +3,6 @@ layout: art
 title: Calm River
 date: 2022-09-06T15:28:12.647Z
 image: https://live.staticflickr.com/65535/52338741698_4d261aa77c_h_d.jpg
-forsale: https://www.saatchiart.com/art/Digital-Calm-River/2113733/9965767/view
 tags:
   - art
   - golden section
