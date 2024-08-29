@@ -17,4 +17,4 @@ After a hot summer, the hazel and the tupelo blend their vibrant orange and yell
 * Hazel Red
 * Shaded Brown
 
-![Studio View](https://live.staticflickr.com/65535/53796037672_65df1898ae_h_d.jpg "Studio View")
+![Studio View](https://live.staticflickr.com/65535/53866915247_c6b3b18625_h_d.jpg "Studio View")
