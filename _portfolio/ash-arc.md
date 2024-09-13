@@ -3,6 +3,9 @@ layout: art
 title: Ash Arc
 date: 2024-09-13T11:29:00.000Z
 image: https://live.staticflickr.com/65535/53988208294_9cb67dd761_h_d.jpg
+tags:
+  - art
+  - root2A
 ---
 In the forest the ash trees stand strong against the Summer foliage.
 
