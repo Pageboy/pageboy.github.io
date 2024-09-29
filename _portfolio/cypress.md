@@ -10,3 +10,5 @@ tags:
   - golden section
 ---
 As Summer gives way to the cooler Autumn, the branches of the Cypress trees take on warmer tones.
+
+![In the studio](https://live.staticflickr.com/65535/54029460861_29ec76420e_h_d.jpg "In the studio")
