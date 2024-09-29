@@ -12,3 +12,5 @@ tags:
 As Summer gives way to the cooler Autumn, the branches of the Cypress trees take on warmer tones.
 
 ![In the studio](https://live.staticflickr.com/65535/54029460861_29ec76420e_h_d.jpg "In the studio")
+
+**Varnished giclée print on 3 panels, bolted together - overall 565mm x 1093mm**
