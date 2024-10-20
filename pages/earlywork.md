@@ -3,7 +3,7 @@ title: Early Work
 permalink: "/earlywork/"
 layout: earlywork
 description:
-hide: true
+hide: false
 gridlayout: true
 order: 2
 ---
