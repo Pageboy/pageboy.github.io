@@ -111,7 +111,7 @@
 
 
 .post-img {
-  height: 180px !important;
+  /* height: 180px !important; */
 }
 
 .portfolio .post-img {
@@ -126,7 +126,7 @@
 
 }
 
-.first-post .post-img a img, .art p a img {
+.first-post .post-img a img {
   display: block;
   max-height: 85vh;
   /* border: 1px solid red; */
@@ -136,11 +136,22 @@
   object-fit:scale-down;
 }
 
+.art p a img {
+  display: block;
+  max-height: 75vh;
+  /* border: 1px solid red; */
+  width:auto;
+  /* flex-grow: 0;
+  flex-shrink: 0; */
+  object-fit:scale-down;
+}
+
+
 .post-img a img {
   display: block;
   max-height: 85vh;
   width:auto;
-  object-fit:scale-down;
+  /* object-fit:scale-down; */
 }
 
 .photographs .post-img {
