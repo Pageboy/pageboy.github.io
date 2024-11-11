@@ -1,0 +1,1440 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="My personal digital garden" name="description"/>
+<link href="https://notes.chrisjennings.net/eBookProduction/Enhancing%20an%20eBook%20with%20interactivity%20multimedia%20and%20animation/" rel="canonical"/>
+<link href="../Editing%20inside%20the%20ePUB%20package/" rel="prev"/>
+<link href="../Fixed%20Layout%20eBook/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.5.44" name="generator"/>
+<title>Enhancing an eBook with interactivity multimedia and animation - Chris Jennings - his Notes</title>
+<link href="../../assets/stylesheets/main.0253249f.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Sen:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Sen";--md-code-font:"Roboto Mono"}</style>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+<link href="../../stylesheets/glightbox.min.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="amber" data-md-color-primary="black" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#what-enhancements-we-can-add-beyond-text-and-image">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Chris Jennings - his Notes" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Chris Jennings - his Notes">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Chris Jennings - his Notes
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Enhancing an eBook with interactivity multimedia and animation
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="amber" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="black" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="amber" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/Pageboy/pageboy.github.io" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden="">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Chris Jennings - his Notes" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Chris Jennings - his Notes">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Chris Jennings - his Notes
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/Pageboy/pageboy.github.io" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    Public Notes and Articles
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Articles
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Articles
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Attention%20to%20Detail%20in%20Typography%20with%20InDesign/">
+<span class="md-ellipsis">
+    Attention to Detail in Typography with InDesign
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Building%20the%20TOC%20in%20InDesign/">
+<span class="md-ellipsis">
+    Building the TOC in InDesign
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Dropping%20your%20caps/">
+<span class="md-ellipsis">
+    Dropping your caps
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Footnotes%20and%20other%20Diversions/">
+<span class="md-ellipsis">
+    Footnotes and other Diversions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Master%20or%20Parent%20Pages%20in%20InDesign/">
+<span class="md-ellipsis">
+    Master or Parent Pages in InDesign
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Measure%20me%20in%20Units/">
+<span class="md-ellipsis">
+    Measure me in Units
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Preflight%20and%20Package%20for%20Print%20and%20Output%20to%20PDF/">
+<span class="md-ellipsis">
+    Preflight and Package for Print and Output to PDF
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Sharing%20to%20Facebook%20and%20Twitter/">
+<span class="md-ellipsis">
+    Sharing to Facebook and Twitter
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/The%20basics%20of%20HTML%20and%20CSS/">
+<span class="md-ellipsis">
+    The basics of HTML and CSS
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Using%20Flickr%20to%20Generate%20an%20Image%20Gallery/">
+<span class="md-ellipsis">
+    Using Flickr to Generate an Image Gallery
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Using%20Photoshop%20and%20InDesign%20to%20Create%20a%20Cover%20for%20Print/">
+<span class="md-ellipsis">
+    Using Photoshop and InDesign to Create a Cover for Print
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Using%20the%20Book%20Panel%20in%20InDesign/">
+<span class="md-ellipsis">
+    Using the Book Panel in InDesign
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Validation/">
+<span class="md-ellipsis">
+    Validation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Vertical%20Spacing%20for%20text%2C%20pBook%20and%20eBook/">
+<span class="md-ellipsis">
+    Vertical Spacing for text, pBook and eBook
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Video%20across%20a%202%20page%20spread%20%28updated%29/">
+<span class="md-ellipsis">
+    Video across a 2 page spread (updated)
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Teaching
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Teaching
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Design and Technology
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+            Design and Technology
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Design%20and%20Technology/Week%201/">
+<span class="md-ellipsis">
+    Week 1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Design%20and%20Technology/Week%202/">
+<span class="md-ellipsis">
+    Week 2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Design%20and%20Technology/Week%203/">
+<span class="md-ellipsis">
+    Week 3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Design%20and%20Technology/Week%206%20-%20Design%20and%20Technology/">
+<span class="md-ellipsis">
+    Week 6   Design and Technology
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Digital Workflow
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+            Digital Workflow
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Digital%20Workflow/Digital%20Workflow/">
+<span class="md-ellipsis">
+    Digital Workflow
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Digital%20Workflow/Week%201/">
+<span class="md-ellipsis">
+    Week 1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Digital%20Workflow/Week%2011/">
+<span class="md-ellipsis">
+    Week 11
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Digital%20Workflow/Week%2012/">
+<span class="md-ellipsis">
+    Week 12
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Digital%20Workflow/Week%202/">
+<span class="md-ellipsis">
+    Week 2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Digital%20Workflow/Week%203/">
+<span class="md-ellipsis">
+    Week 3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Digital%20Workflow/Week%204/">
+<span class="md-ellipsis">
+    Week 4
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Digital%20Workflow/Week%205/">
+<span class="md-ellipsis">
+    Week 5
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Digital%20Workflow/Week%206/">
+<span class="md-ellipsis">
+    Week 6
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Digital%20Workflow/Week%208/">
+<span class="md-ellipsis">
+    Week 8
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Digital%20Workflow/Week%209/">
+<span class="md-ellipsis">
+    Dramatis Personae
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Multiplatform Publishing
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_3">
+<span class="md-nav__icon md-icon"></span>
+            Multiplatform Publishing
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/From%20Vscode%20to%20Web/">
+<span class="md-ellipsis">
+    From Vscode to Web
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/How%20to%20do%20Javascript/">
+<span class="md-ellipsis">
+    How to do Javascript
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%201%20Intro/">
+<span class="md-ellipsis">
+    Week 1 Intro
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%2010/">
+<span class="md-ellipsis">
+    Week 10
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%2011/">
+<span class="md-ellipsis">
+    Week 11
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%2012/">
+<span class="md-ellipsis">
+    Week 12
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%202/">
+<span class="md-ellipsis">
+    Week 2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%203/">
+<span class="md-ellipsis">
+    Week 3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%204%201/">
+<span class="md-ellipsis">
+    Week 4 1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%204%20part%202/">
+<span class="md-ellipsis">
+    Week 4 part 2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%204/">
+<span class="md-ellipsis">
+    Week 4
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%205%20Shakespeare%20Play%20notes/">
+<span class="md-ellipsis">
+    Week 5 Shakespeare Play notes
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%205/">
+<span class="md-ellipsis">
+    Week 5
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%206/">
+<span class="md-ellipsis">
+    Week 6
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%207/">
+<span class="md-ellipsis">
+    Week 7
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%208/">
+<span class="md-ellipsis">
+    Week 8
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%209/">
+<span class="md-ellipsis">
+    Week 9
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/eBook%20readers/">
+<span class="md-ellipsis">
+    eBook readers
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_3_19" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3_19" id="__nav_3_3_19_label" tabindex="0">
+<span class="md-ellipsis">
+    Week7extras
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_19_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_3_19">
+<span class="md-nav__icon md-icon"></span>
+            Week7extras
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/week7extras/ePUB_toc_ncx/">
+<span class="md-ellipsis">
+    ePUB toc ncx
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/week7extras/ePub_content_opf/">
+<span class="md-ellipsis">
+    ePub content opf
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/week7extras/ePub_toc_xhtml/">
+<span class="md-ellipsis">
+    ePub toc xhtml
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Web Sites with GitHub
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Web Sites with GitHub
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Web%20Sites%20with%20GitHub/Add%20Multimedia%20to%20Your%20web%20site/">
+<span class="md-ellipsis">
+    Add Multimedia to Your web site
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Web%20Sites%20with%20GitHub/Creating%20a%20recipe%20web%20site%20using%20GitHub%20and%20Netlify/">
+<span class="md-ellipsis">
+    Creating a recipe web site using GitHub and Netlify
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Web%20Sites%20with%20GitHub/From%20InDesign%20to%20HTML%20and%20CSS/">
+<span class="md-ellipsis">
+    From InDesign to HTML and CSS
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Web%20Sites%20with%20GitHub/Getting%20responsive%20with%20Flex/">
+<span class="md-ellipsis">
+    Getting responsive with Flex
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Web%20Sites%20with%20GitHub/How%20to%20build%20a%20blog%20website%20with%20GitHub%20and%20Netlify/">
+<span class="md-ellipsis">
+    How to build a blog website with GitHub and Netlify
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Web%20Sites%20with%20GitHub/Using%20a%20Git%20Repository%20to%20host%20your%20Shakespeare%20Play%20Web%20Site/">
+<span class="md-ellipsis">
+    Using a Git Repository to host your Shakespeare Play Web Site
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    eBookProduction
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            eBookProduction
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Ambient%20Sound%20in%20a%20Fixed-Layout%20ePub/">
+<span class="md-ellipsis">
+    Ambient Sound in a Fixed Layout ePub
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Creating%20a%20Reflowable%20eBook%20after%20a%20print%20production%20workflow/">
+<span class="md-ellipsis">
+    Creating a Reflowable eBook after a print production workflow
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Editing%20inside%20the%20ePUB%20package/">
+<span class="md-ellipsis">
+    Editing inside the ePUB package
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Enhancing an eBook with interactivity multimedia and animation
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Enhancing an eBook with interactivity multimedia and animation
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-enhancements-we-can-add-beyond-text-and-image">
+<span class="md-ellipsis">
+      What enhancements we can add beyond text and image?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-multimedia">
+<span class="md-ellipsis">
+      Adding Multimedia
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#file-size">
+<span class="md-ellipsis">
+      File Size
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#placing-the-video">
+<span class="md-ellipsis">
+      Placing the Video
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#anchoring-and-text-wrap">
+<span class="md-ellipsis">
+      Anchoring and Text Wrap
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-result-on-export-to-epub-reflowable">
+<span class="md-ellipsis">
+      The Result on Export to ePUB (reflowable)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-audio">
+<span class="md-ellipsis">
+      Adding Audio
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#multimedia-in-the-fixed-layout-epub">
+<span class="md-ellipsis">
+      Multimedia in the Fixed Layout ePUB
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#read-aloud">
+<span class="md-ellipsis">
+      Read Aloud
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#additions-to-the-package-file-contentopf">
+<span class="md-ellipsis">
+      Additions to the package file (content.opf)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ambient-sound">
+<span class="md-ellipsis">
+      Ambient Sound
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#audio-on-click-or-touch">
+<span class="md-ellipsis">
+      Audio on Click or Touch
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hyperlinked-and-supplementary-information">
+<span class="md-ellipsis">
+      Hyperlinked and supplementary Information
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#non-linear-content-in-a-reflowable-epub">
+<span class="md-ellipsis">
+      Non-Linear Content in a Reflowable ePub
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#scrolling-text-in-the-fixed-layout-epub">
+<span class="md-ellipsis">
+      Scrolling Text in the Fixed Layout ePUB
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-to-create-a-vertical-scrolling-text-field">
+<span class="md-ellipsis">
+      How to create a vertical scrolling text field
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-popup-information-with-indesign-for-fixed-layout-epub">
+<span class="md-ellipsis">
+      Adding Popup Information with InDesign for fixed-layout ePUB
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#animation">
+<span class="md-ellipsis">
+      Animation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-a-slide-show-in-indesign">
+<span class="md-ellipsis">
+      Creating a Slide Show in InDesign
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#enough-bells-and-whistles">
+<span class="md-ellipsis">
+      Enough Bells and Whistles?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#epub-interactivity-preview">
+<span class="md-ellipsis">
+      ePUB Interactivity Preview
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Fixed%20Layout%20eBook/">
+<span class="md-ellipsis">
+    Fixed Layout eBook
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Fixed-Layout%20ePub%20with%20swashes/">
+<span class="md-ellipsis">
+    Fixed Layout ePub with swashes
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../InDesign%20to%20the%20Fixed%20Layout%20ePub/">
+<span class="md-ellipsis">
+    InDesign to the Fixed Layout ePub
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Notes%20for%20the%20Fixed%20Layout%20eBook%20workshop/">
+<span class="md-ellipsis">
+    Notes for the Fixed Layout eBook workshop
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Notes%20on%20Fixed%20Layout/">
+<span class="md-ellipsis">
+    Notes on Fixed Layout
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Page%20Size%20Issues%20in%20fixed-layout%20ePub/">
+<span class="md-ellipsis">
+    Page Size Issues in fixed layout ePub
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Page%20size%20in%20InDesign%20for%20eBook%3F/">
+<span class="md-ellipsis">
+    Page size in InDesign for eBook?
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Roundtripping%20InDesign%20and%20ePub%20re-flowable/">
+<span class="md-ellipsis">
+    Roundtripping InDesign and ePub re flowable
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tips%20for%20InDesign%20Users%20when%20Making%20eBooks/">
+<span class="md-ellipsis">
+    Tips for InDesign Users when Making eBooks
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../What%20Kind%20of%20eBooks%3F/">
+<span class="md-ellipsis">
+    What kinds of eBooks are possible?
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
+    eBooks
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            eBooks
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../eBooks/From%20Print%20Book%20to%20eBook/">
+<span class="md-ellipsis">
+    From Print Book to eBook
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../eBooks/Megalithic%20Landscapes/">
+<span class="md-ellipsis">
+    Megalithic Landscapes
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../eBooks/Memoirs%20of%20an%20Islet/">
+<span class="md-ellipsis">
+    Memoirs of an Islet
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../eBooks/The%20Encantadas%20or%20Enchanted%20Isles/">
+<span class="md-ellipsis">
+    The Encantadas or Enchanted Isles
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../eBooks/The%20Man%20Who%20Loved%20Islands/">
+<span class="md-ellipsis">
+    The Man Who Loved Islands
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../eBooks/The%20Merry%20Men/">
+<span class="md-ellipsis">
+    The Merry Men
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../eBooks/eBook%20Typography%20for%20Flowable%20eBooks/">
+<span class="md-ellipsis">
+    eBook Typography for Flowable eBooks
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-enhancements-we-can-add-beyond-text-and-image">
+<span class="md-ellipsis">
+      What enhancements we can add beyond text and image?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-multimedia">
+<span class="md-ellipsis">
+      Adding Multimedia
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#file-size">
+<span class="md-ellipsis">
+      File Size
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#placing-the-video">
+<span class="md-ellipsis">
+      Placing the Video
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#anchoring-and-text-wrap">
+<span class="md-ellipsis">
+      Anchoring and Text Wrap
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-result-on-export-to-epub-reflowable">
+<span class="md-ellipsis">
+      The Result on Export to ePUB (reflowable)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-audio">
+<span class="md-ellipsis">
+      Adding Audio
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#multimedia-in-the-fixed-layout-epub">
+<span class="md-ellipsis">
+      Multimedia in the Fixed Layout ePUB
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#read-aloud">
+<span class="md-ellipsis">
+      Read Aloud
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#additions-to-the-package-file-contentopf">
+<span class="md-ellipsis">
+      Additions to the package file (content.opf)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ambient-sound">
+<span class="md-ellipsis">
+      Ambient Sound
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#audio-on-click-or-touch">
+<span class="md-ellipsis">
+      Audio on Click or Touch
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hyperlinked-and-supplementary-information">
+<span class="md-ellipsis">
+      Hyperlinked and supplementary Information
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#non-linear-content-in-a-reflowable-epub">
+<span class="md-ellipsis">
+      Non-Linear Content in a Reflowable ePub
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#scrolling-text-in-the-fixed-layout-epub">
+<span class="md-ellipsis">
+      Scrolling Text in the Fixed Layout ePUB
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-to-create-a-vertical-scrolling-text-field">
+<span class="md-ellipsis">
+      How to create a vertical scrolling text field
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-popup-information-with-indesign-for-fixed-layout-epub">
+<span class="md-ellipsis">
+      Adding Popup Information with InDesign for fixed-layout ePUB
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#animation">
+<span class="md-ellipsis">
+      Animation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-a-slide-show-in-indesign">
+<span class="md-ellipsis">
+      Creating a Slide Show in InDesign
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#enough-bells-and-whistles">
+<span class="md-ellipsis">
+      Enough Bells and Whistles?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#epub-interactivity-preview">
+<span class="md-ellipsis">
+      ePUB Interactivity Preview
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Enhancing an eBook with interactivity multimedia and animation</h1>
+<p>There are some ways we can creatively enhance the eBook version to provide some interactivity and multimedia that can go beyond the traditional book page.</p>
+<h2 id="what-enhancements-we-can-add-beyond-text-and-image">What enhancements we can add beyond text and image?<a class="headerlink" href="#what-enhancements-we-can-add-beyond-text-and-image" title="Permanent link">¶</a></h2>
+<p><strong>Multimedia</strong></p>
+<ul>
+<li>We can add audio and video inline with the text</li>
+<li>Audio can be used to provide a soundtrack (music and sound while we read)</li>
+<li>Audio narration can be played back to synchronise with text (fixed-layout only)</li>
+</ul>
+<p><strong>Non-linear content</strong></p>
+<ul>
+<li>Items that are not in the flow of the text but can appear through a hyperlink</li>
+</ul>
+<p><strong>Popup notes</strong></p>
+<ul>
+<li>We can convert footnotes into popup notes in a reflowable ePub. We can also show and hide objects that include text and image.</li>
+</ul>
+<p><strong>Animation</strong></p>
+<ul>
+<li>InDesign has some inbuilt features that can  move and deliver objects dynamically, on page open or activated by interaction with buttons</li>
+</ul>
+<p><strong>Read Aloud</strong></p>
+<ul>
+<li>Although complex to build and implement, it is possible to have text synchronised with and audio narration. This only possible in a fixed layout ePub.</li>
+</ul>
+<h2 id="adding-multimedia">Adding Multimedia<a class="headerlink" href="#adding-multimedia" title="Permanent link">¶</a></h2>
+<p>In a reflowable eBook we can add audio and video to the pages, but this content will need to be placed and anchored just as we have learnt to do with the images. In the context of our example Shakespeare play, we could place a video before the play begins.</p>
+<p>In the example I am using Max Reinhardt’s 1935 production of <em>A Midsummer Night’s Dream</em> with Mickey Rooney as Puck.</p>
+<h2 id="file-size">File Size<a class="headerlink" href="#file-size" title="Permanent link">¶</a></h2>
+<p>It is worth pointing out that the video mentioned above will add 470MB to the eBook, so we should consider this carefully before we add the complete video. There is software available to compress video down to a smaller file size and you should take advantage of these. <a href="Milo Video Converter">http://www.mirovideoconverter.com</a> for the MAC is useful for this. Adobe Creative Cloud users can also try the Media Encoder to reduce the file size.</p>
+<h2 id="placing-the-video">Placing the Video<a class="headerlink" href="#placing-the-video" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="Placing the video and viewing in the Media panel" data-type="image" data-width="100%" href="../../media/image1.png"><img alt="Placing the video and viewing in the Media panel" src="../../media/image1.png"/></a>
+We place video much as we do images. Once placed though, we can then view the settings through the media view panel. We can control the preview image and decide on how to display the controller.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="Anchoring and text wrap for the video" data-type="image" data-width="100%" href="../../media/image2.png"><img alt="Anchoring and text wrap for the video" src="../../media/image2.png"/></a></p>
+<p>Perhaps a more appropriate use of video within an eBook, is to just show short clips in the appropriate context. The issue with reflowable eBooks, is that we cannot be certain the video will appear right near to the textual context.</p>
+<h2 id="anchoring-and-text-wrap">Anchoring and Text Wrap<a class="headerlink" href="#anchoring-and-text-wrap" title="Permanent link">¶</a></h2>
+<p>Unfortunately, InDesign does not provide a way for us to create object styles for media, so we will need to make individual settings for text wrap and anchoring.</p>
+<h2 id="the-result-on-export-to-epub-reflowable">The Result on Export to ePUB (reflowable)<a class="headerlink" href="#the-result-on-export-to-epub-reflowable" title="Permanent link">¶</a></h2>
+<p>We do not need to apply any specific settings when we export again and the results are initially quite good, but I have found there is a need to edit the CSS to get the video and controller to display full width of the page. InDesign produces a very complex set of <code>&lt;div&gt;</code> blocks, and we need to look carefully at these in the HTML markup before experimenting with alternative rules.</p>
+<h2 id="adding-audio">Adding Audio<a class="headerlink" href="#adding-audio" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="When audio is placed you will initially see just a square" data-type="image" data-width="100%" href="../../media/image3_1.png"><img alt="When audio is placed you will initially see just a square" src="../../media/image3_1.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="Here we see the results - audio on the eBook page" data-type="image" data-width="100%" href="../../media/image4_1.png"><img alt="Here we see the results - audio on the eBook page" src="../../media/image4_1.png"/></a></p>
+<p>Audio can be added in much the same way as the video, but once again we need to be aware that probably only want small snippets of audio in context. The audio will initially be placed as a small square, and you will need to stretch this out to fill the width of the page, so that the audio controller is as wide as possible.</p>
+<p>There are different behaviours when the audio or video is playing in the book.</p>
+<p>When using iBooks on the MAC, the audio and video will continue to play even if the pages are turned. When viewing the eBook on an iOS device like the iPad, the video will stop when the page is turned, but audio will continue to play on page turn.</p>
+<h2 id="multimedia-in-the-fixed-layout-epub">Multimedia in the Fixed Layout ePUB<a class="headerlink" href="#multimedia-in-the-fixed-layout-epub" title="Permanent link">¶</a></h2>
+<p>When you create the fixed-layout ePUB from InDesign then the page content will be exactly as you see it in InDesign. With audio you will need to make the audio object fill the frame that you have stretched across the page</p>
+<p>We can add audio or video as we can for the reflowable ePUB, but both audio and video will stop playing on page turn on both the MAC and iPad, because each page is a new HTML file.</p>
+<blockquote>
+<p><strong>Note:</strong> There are ways to resolve this, and we will see a solution when we reach the section on ambient audio</p>
+</blockquote>
+<h2 id="read-aloud">Read Aloud<a class="headerlink" href="#read-aloud" title="Permanent link">¶</a></h2>
+<p>As of this writing, the read aloud feature whereby audio can be synchronised to the text (words or lines highlighted as the audio plays) has some very mixed support. The ePUB3 Media Overlays specification does not get the support it deserves at the moment, so it can be problematic getting this to work properly.</p>
+<p>If we use the current method that InDesign provides for exporting the the ePUB(fixed-layout) form, then each word in the HTML is marked-up with a span tag. Now, actually, this is exactly what we need for read-aloud, but then we are committed to highlight every word and also analyse our audio to pick out every word. We will find it very difficult to change the HTML markup to tag each line instead.</p>
+<p>The basic principle is that each word spoken and written needs to relate to a time sequence within a longer audio file. A SMIL (Synchronized Multimedia Integration Language) file is constructed so as to mirror the text that is then marked up with the appropriate tags that will tell the text on screen what to highlight as the audio plays.</p>
+<p>Building something like this by hand coding would be virtually impossible for the whole of the play, and would also depend on the level of granularity that you want to be highlighted; word, line, sentence, or paragraph etc.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="Here we see the complex markup" data-type="image" data-width="100%" href="../../media/image6.png"><img alt="Here we see the complex markup" src="../../media/image6.png"/></a></p>
+<p>Here we see that the audio section that we will use start ‘Four nights …’ with the span tag <code>id="_idTextSpan207"</code></p>
+<p>We now need to construct a SMIL file that uses the following syntax:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">smil</span> <span class="na">xmlns</span><span class="o">=</span><span class="s">"http://www.w3.org/ns/SMIL"</span> <span class="na">xmlns:epub</span><span class="o">=</span><span class="s">"http://www.idpf.org/2007/ops"</span> <span class="na">version</span><span class="o">=</span><span class="s">"3.0"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">seq</span> <span class="na">id</span><span class="o">=</span><span class="s">"s000001"</span> <span class="na">epub:textref</span><span class="o">=</span><span class="s">"dream-05.xhtml"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">par</span> <span class="na">id</span><span class="o">=</span><span class="s">"par1"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">text</span> <span class="na">src</span><span class="o">=</span><span class="s">"dream-05.xhtml#_idTextSpan207"</span><span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">audio</span> <span class="na">src</span><span class="o">=</span><span class="s">"audio/act1scene1_clip01.mp3"</span> <span class="na">clipBegin</span><span class="o">=</span><span class="s">"0.000000s"</span> <span class="na">clipEnd</span><span class="o">=</span><span class="s">"2.214817s"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">par</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">par</span> <span class="na">id</span><span class="o">=</span><span class="s">"par2"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">text</span> <span class="na">src</span><span class="o">=</span><span class="s">"dream-05.xhtml#_idTextSpan208"</span><span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">audio</span> <span class="na">src</span><span class="o">=</span><span class="s">"audio/act1scene1_clip01.mp3"</span> <span class="na">clipBegin</span><span class="o">=</span><span class="s">"2.214817s"</span> <span class="na">clipEnd</span><span class="o">=</span><span class="s">"4.062584s"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">par</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">par</span> <span class="na">id</span><span class="o">=</span><span class="s">"par3"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">text</span> <span class="na">src</span><span class="o">=</span><span class="s">“dream-05.xhtml#_idTextSpan209”/</span><span class="p">&gt;</span>
+and so on ….
+<span class="p">&lt;/</span><span class="nt">seq</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">smil</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>You might consider using regular expressions to help with this task. My strategy would be to duplicate the XHTML file (dream-05.xhtml), and then strip out all of the style information. I can then use this base file to reconstruct the <code>SMIL</code> tags.</p>
+<p>The next challenge is how to identify all of the clip ranges inside the audio file. For this we need the marvellous free audio editor ‘Audacity’.</p>
+<p>Audacity can help us build a clip sequence by using a label track:</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title=" Audacity can help locate words spoken within the audio file" data-type="image" data-width="100%" href="../../media/masterpages/image7.png"><img alt=" Audacity can help locate words spoken within the audio file" src="../../media/masterpages/image7.png"/></a></p>
+<p>Then we can export the labels and we get:</p>
+<p><div class="highlight"><pre><span></span><code>3.051281 3.379623 Four
+3.375440 3.549022 Nights
+3.546931 3.820898 will
+3.818807 4.172245 quickly
+4.170154 4.448303 dream
+4.446212 4.596789 away
+4.590515 4.747366 the
+4.747366 5.238834 time
+</code></pre></div>
+and then we build the SMIL file with some GREP, giving us this:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">smil</span> <span class="na">xmlns</span><span class="o">=</span><span class="s">"http://www.w3.org/ns/SMIL"</span> <span class="na">xmlns:epub</span><span class="o">=</span><span class="s">"http://www.idpf.org/2007/ops"</span> <span class="na">version</span><span class="o">=</span><span class="s">"3.0"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">seq</span> <span class="na">id</span><span class="o">=</span><span class="s">"s000001"</span> <span class="na">epub:textref</span><span class="o">=</span><span class="s">"dream-05.xhtml"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">par</span> <span class="na">id</span><span class="o">=</span><span class="s">"par1"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">text</span> <span class="na">src</span><span class="o">=</span><span class="s">"dream-05.xhtml#_idTextSpan207"</span><span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">audio</span> <span class="na">src</span><span class="o">=</span><span class="s">"audio/act1scene1_clip01.mp3"</span> <span class="na">clipBegin</span><span class="o">=</span><span class="s">"0.000000s"</span> <span class="na">clipEnd</span><span class="o">=</span><span class="s">"2.214817s"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">par</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">par</span> <span class="na">id</span><span class="o">=</span><span class="s">"par2"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">text</span> <span class="na">src</span><span class="o">=</span><span class="s">"dream-05.xhtml#_idTextSpan208"</span><span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">audio</span> <span class="na">src</span><span class="o">=</span><span class="s">"audio/act1scene1_clip01.mp3"</span> <span class="na">clipBegin</span><span class="o">=</span><span class="s">"2.214817s"</span> <span class="na">clipEnd</span><span class="o">=</span><span class="s">"4.062584s"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">par</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">par</span> <span class="na">id</span><span class="o">=</span><span class="s">"par3"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">text</span> <span class="na">src</span><span class="o">=</span><span class="s">"dream-05.xhtml#_idTextSpan209"</span><span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">audio</span> <span class="na">src</span><span class="o">=</span><span class="s">"audio/act1scene1_clip01.mp3"</span> <span class="na">clipBegin</span><span class="o">=</span><span class="s">"4.062584s"</span> <span class="na">clipEnd</span><span class="o">=</span><span class="s">"6.006284s"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">par</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">par</span> <span class="na">id</span><span class="o">=</span><span class="s">"par4"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">text</span> <span class="na">src</span><span class="o">=</span><span class="s">"dream-05.xhtml#_idTextSpan210"</span><span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">audio</span> <span class="na">src</span><span class="o">=</span><span class="s">"audio/act1scene1_clip01.mp3"</span> <span class="na">clipBegin</span><span class="o">=</span><span class="s">"6.006284s"</span> <span class="na">clipEnd</span><span class="o">=</span><span class="s">"7.403579s"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">par</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">seq</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">smil</span><span class="p">&gt;</span>
+</code></pre></div>
+<h2 id="additions-to-the-package-file-contentopf">Additions to the package file (content.opf)<a class="headerlink" href="#additions-to-the-package-file-contentopf" title="Permanent link">¶</a></h2>
+<p>We now need to make changes and additions to the content.opf file. The manifest needs to include the following:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">item</span> <span class="na">id</span><span class="o">=</span><span class="s">"act1scene1_clip01"</span> <span class="na">href</span><span class="o">=</span><span class="s">"dream-5.smil"</span> <span class="na">media-type</span><span class="o">=</span><span class="s">"application/smil+xml"</span><span class="p">/&gt;</span>
+</code></pre></div>
+<p>and then for each XHTML file where audio is played you should edit to be like this:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">item</span> <span class="na">id</span><span class="o">=</span><span class="s">"dream-6"</span> <span class="na">href</span><span class="o">=</span><span class="s">"dream-6.xhtml"</span> <span class="na">media-type</span><span class="o">=</span><span class="s">"application/xhtml+xml"</span> <span class="na">media-overlay</span><span class="o">=</span><span class="s">"act1scene1_clip01"</span> <span class="p">/&gt;</span>
+</code></pre></div>
+<p>the metadata section should have this:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">property</span><span class="o">=</span><span class="s">"media:duration"</span> <span class="na">refines</span><span class="o">=</span><span class="s">"#act1scene1_clip01"</span><span class="p">&gt;</span>0:00:53.320<span class="p">&lt;/</span><span class="nt">meta</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">property</span><span class="o">=</span><span class="s">"media:duration"</span><span class="p">&gt;</span>0:02:37.970<span class="p">&lt;/</span><span class="nt">meta</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>If you want to explore the read-aloud feature I suggest looking at <a href="http://www.albertopettarin.it/blog/2014/08/02/how-to-create-epub-3-read-aloud-ebooks.html">Alberto Pettarin’s web site</a></p>
+<p>Alberto Pettarin has created some javascript which can be used to simulate the read-aloud feature and this will even work with a reflowable format of eBook.</p>
+<h2 id="ambient-sound">Ambient Sound<a class="headerlink" href="#ambient-sound" title="Permanent link">¶</a></h2>
+<p>It is possible to add audio that plays automatically when a page is opened. The audio will play as long as one XHTML file is open. In other words, you can have a different ambient sound for each chapter. In our example Shakespeare play we can add some ambient audio to the start of the Scene. If you plan to create a reflowable eBook then this sound will play for the whole of this scene by placing the audio once. With a fixed-layout eBook the audio will need to be on each page.</p>
+<p>To make the ambient sound user friendly there really needs to be some way to turn this off, if the reader prefers not to hear it.</p>
+<p>For the ePUB Fixed layout format, Apple have some proprietary extensions that can handle ambient sound in the ePUB, and if you wish to consider this, then please refer to <a href="https://help.apple.com/itc/booksassetguide/en.lproj/static.html">Apple’s Asset Guide</a> for eBook production.</p>
+<p><a href="https://www.booktrack.com">Booktrack</a> have a really effective way to add ambient sound to an eBook, but this requires their own eReader software and the use of their service, however, when you experience their approach to this, you realise, that anything less sophisticated than this, simply won’t do!</p>
+<p><a href="../Ambient%20Sound%20in%20a%20Fixed-Layout%20ePub/">see this more comprehensive explanation - Ambient Sound in a Fixed-Layout ePub</a></p>
+<h2 id="audio-on-click-or-touch">Audio on Click or Touch<a class="headerlink" href="#audio-on-click-or-touch" title="Permanent link">¶</a></h2>
+<p>When building a fixed-layout ePUB with InDesign, it is also possible to have audio play when an object is touched or clicked.</p>
+<p>The audio object must first be placed on a page, and you will need to hide it by covering with the object itself or another opaque box. If the audio object is off the page (on the pasteboard), then it will not export.</p>
+<p>Remember that the audio will stop when the user moves to another page.</p>
+<h2 id="hyperlinked-and-supplementary-information">Hyperlinked and supplementary Information<a class="headerlink" href="#hyperlinked-and-supplementary-information" title="Permanent link">¶</a></h2>
+<p>We have seen how it is possible to convert footnotes into popup notes, when using InDesign to create reflowable ePUB.</p>
+<p>We can also build more advanced popups (or ‘out of flow’ content’) in the reflowable ePUB format, by adding ‘non-linear’ content. This method only has limited support, but is worth considering if your target device is Apple’s iPad.</p>
+<h2 id="non-linear-content-in-a-reflowable-epub">Non-Linear Content in a Reflowable ePub<a class="headerlink" href="#non-linear-content-in-a-reflowable-epub" title="Permanent link">¶</a></h2>
+<p>You can create a single HTML5 web page and then create a hyperlink within the text of your eBook. This web page will then display in an overlaid window. When adding this kind of content, there are some steps which must be followed:</p>
+<p>When the ePUB3 package is packed you can add the HTML file into the OEBPS folder and then create the hyperlink to that named file.</p>
+<p>In the content.opf file add the named file to the list in the manifest section</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">item</span> <span class="na">id</span><span class="o">=</span><span class="s">"lambs"</span> <span class="na">href</span><span class="o">=</span><span class="s">"lambstales.xhtml"</span> <span class="na">media-type</span><span class="o">=</span><span class="s">"application/xhtml+xml"</span> <span class="p">/&gt;</span>
+</code></pre></div>
+<p>Add the named file into the <code>&lt;spine&gt;</code> section but add the attribute ‘linear’</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">itemref</span> <span class="na">idref</span><span class="o">=</span><span class="s">"lambs"</span> <span class="na">linear</span><span class="o">=</span><span class="s">"no"</span><span class="p">/&gt;</span>
+</code></pre></div>
+<p>It is also possible to add a PDF into the eBook and have a hyperlink open this file, but once again this must be set to ‘linear-“no”’.</p>
+<blockquote>
+<p><strong>Note:</strong> It is not currently possible to get non linear content to work in a fixed-layout ePub.</p>
+</blockquote>
+<h2 id="scrolling-text-in-the-fixed-layout-epub">Scrolling Text in the Fixed Layout ePUB<a class="headerlink" href="#scrolling-text-in-the-fixed-layout-epub" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="Scroller" data-type="image" data-width="100%" href="../../media/image12_1.png"><img alt="Scroller" src="../../media/image12_1.png"/></a></p>
+<p>It is not possible to add scrolling text fields in a reflowable ePUB, but with the fixed layout format we can add a text box on a page and include as much scrolling text as you like.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="The result" data-type="image" data-width="100%" href="../../media/image13_1.png"><img alt="The result" src="../../media/image13_1.png"/></a></p>
+<h2 id="how-to-create-a-vertical-scrolling-text-field">How to create a vertical scrolling text field<a class="headerlink" href="#how-to-create-a-vertical-scrolling-text-field" title="Permanent link">¶</a></h2>
+<p>Start a new document in InDesign with a very long vertical page size (maximum height is about 5000pixels). This really just depends on the length of your text!</p>
+<p>Paste your long text into a text field on this page.</p>
+<p>Make sure there is no overset text. Reduce the vertical size of the text field so that the text just fits. Copy this this text field (not just the contents but the selected object).</p>
+<p>In your target InDesign file create an empty text field wider (by about 20mm) than the one you created in the other temporary InDesign document.</p>
+<p>Select the text field and ‘Paste Into’ this selected text box. You can select all of this text and style accordingly.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="The pasted text box goes to the middle" data-type="image" data-width="100%" href="../../media/pastetextboxinto_goestomiddle.png"><img alt="The pasted text box goes to the middle" src="../../media/pastetextboxinto_goestomiddle.png"/></a></p>
+<blockquote>
+<p>You will find that InDesign put this text box in the vertical middle and so you won't see the first line of your text or content. To rectify this, you need to use the position box in the InDesign toolbar. Once you see the target circle in the centre of your containing text box, then observe the position number near to the top left. Change this number to <code>0</code>. The 2 images here will help you understand this process.</p>
+</blockquote>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="Set the position to 0" data-type="image" data-width="100%" href="../../media/setpositiontozero.png"><img alt="Set the position to 0" src="../../media/setpositiontozero.png"/></a></p>
+<p>With the parent text box selected, create an Object Style and set the export tagging for HTML and ePUB to a <code>&lt;div&gt;</code> with a class of ‘scroller’.</p>
+<p>Create a CSS file with the following:</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="Export tagging for the object" data-type="image" data-width="100%" href="../../media/image14.png"><img alt="Export tagging for the object" src="../../media/image14.png"/></a></p>
+<div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="p">.</span><span class="nc">scroller</span><span class="w"> </span><span class="p">{</span>
+<span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">relative</span><span class="p">;</span>
+<span class="k">border</span><span class="p">:</span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="kc">silver</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">div</span><span class="p">.</span><span class="nc">scroller</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
+<span class="k">overflow</span><span class="p">:</span><span class="w"> </span><span class="kc">auto</span><span class="p">;</span>
+<span class="k">overflow-y</span><span class="p">:</span><span class="kc">scroll</span><span class="p">;</span>
+<span class="k">overflow</span><span class="p">:</span><span class="w"> </span><span class="kc">scroll</span><span class="p">;</span>
+<span class="k">overflow-x</span><span class="p">:</span><span class="kc">hidden</span><span class="p">;</span>
+<span class="kp">-webkit-</span><span class="n">overflow-scrolling</span><span class="p">:</span><span class="n">touch</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Add this CSS file into the CSS panel when you export.</p>
+<p>There may be other adjustments that you can make to the CSS, but essentially, this will created a scrolling text field.</p>
+<p>You may notice that there is no scroll bar on the iPad until you actually touch the field. You may want to include an instruction above or below the text field to indicate that scroll is available.</p>
+<p>As an alternative to using InDesign to create a nested text field, you could also consider leaving a blank page and then adding the text directly into the HTML after unpacking the ePUB package. Just create a web page and then copy the content from within the <code>&lt;body&gt;</code> tag and paste into the ePUB page. With additional styling you can then achieve the same as before.</p>
+<h2 id="adding-popup-information-with-indesign-for-fixed-layout-epub">Adding Popup Information with InDesign for fixed-layout ePUB<a class="headerlink" href="#adding-popup-information-with-indesign-for-fixed-layout-epub" title="Permanent link">¶</a></h2>
+<p>Popup notes cannot be created from footnotes in the fixed layout ePub. However, any combination of text and image can be made into a button, and so to make a popup text, you can group a text box with a drawn speech bubble and then make this into a button. You then need a transparent frame laid over the text that you want to be interactive – this then becomes the button that performs the action. You can make the popup speech bubble also have an action to hide itself when clicked.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="Here we see an object that can be set to show on click" data-type="image" data-width="100%" href="../../media/image15_1.png"><img alt="Here we see an object that can be set to show on click" src="../../media/image15_1.png"/></a></p>
+<h2 id="animation">Animation<a class="headerlink" href="#animation" title="Permanent link">¶</a></h2>
+<p>InDesign does give you some basic controls over the way objects are dynamically drawn on the screen, and by selecting an object and then the Animation panel (under Window&gt;Interactive), you can invoke an event on page load. Here we see that an image is set to drop down from the top of the page when that page is reached.</p>
+<blockquote>
+<p><strong>Note:</strong> Animation is not supported on anchored objects, so you will need to release any previously anchored images.</p>
+</blockquote>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="Animating an image to slide onto the page" data-type="image" data-width="100%" href="../../media/image16.png"><img alt="Animating an image to slide onto the page" src="../../media/image16.png"/></a></p>
+<h2 id="creating-a-slide-show-in-indesign">Creating a Slide Show in InDesign<a class="headerlink" href="#creating-a-slide-show-in-indesign" title="Permanent link">¶</a></h2>
+<p>There is no direct way to create a sequence of images in InDesign (as of this writing), but you can use a ‘multi-state object’ and then create a button that will provide the controls to move through the image sequence.</p>
+<p>The images in the sequence need to be the same size and proportion (approximately) and you can add them to InDesign using the following workflow:</p>
+<p>Prepare the images so that they are all the same proportion and size (InDesign will crop them to fit if you don't).</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="Make images the same size" data-type="image" data-width="100%" href="../../media/image17.png"><img alt="Make images the same size" src="../../media/image17.png"/></a></p>
+<p>You may need to consider using a full page for this asset, so go ahead and create a new page or find a blank one. If your print book had blank pages then this is a good solution to keeping the same pages but avoiding banks in the eBook.</p>
+<p>Create an empty graphics frame and adjust the size in the correct proportion for your image sequence.</p>
+<p>You should configure this frame to ‘Fit Content Proportionally’ and turn on ‘Auto Fit’.</p>
+<p>Now duplicate this frame for the number of images you want in the sequence. Use the Step and Repeat menu found on the Edit menu. The frames should be offset by a small distance.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="Step by step" data-type="image" data-width="100%" href="../../media/image18.png"><img alt="Step by step" src="../../media/image18.png"/></a></p>
+<p>Use the Place command and select all of your images and click each frame in turn to populate the frames with the images. They should automatically resize and crop to fit. When placing images you can select more than one and all we be loaded onto your cursor.</p>
+<p>Use the align toolbar to make the frames sit on top of each other. You need to align horizontally first and then vertically.</p>
+<p>Use the Object States menu under Window&gt;Interactive and create a new multi-state object while this group is selected. It will automatically add each image into the different states.</p>
+<p>Now we need to create buttons to control the sequence as a slide show.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="Create the buttons" data-type="image" data-width="100%" href="../../media/image19.png"><img alt="Create the buttons" src="../../media/image19.png"/></a></p>
+<p>You need to build a graphic that shows a backward or forward triangle.</p>
+<p>InDesign can help. The Polygon Frame tool gives you the ability to choose 3 for the number of sides. Turn this around to face to the left and then duplicate and turn to the right. Fill with colour etc.</p>
+<p>These triangles then need to be made into buttons (menu&gt;Window&gt;Interactive&gt;Buttons and Forms) and then you need to get the action to change the state of the previously created multi-state object. More than one action can be assigned to a button, so you might consider adding a sound as a second action, to give the user some feedback when they click the button.</p>
+<h2 id="enough-bells-and-whistles">Enough Bells and Whistles?<a class="headerlink" href="#enough-bells-and-whistles" title="Permanent link">¶</a></h2>
+<p>Since we are creating an alternative publication to the print book, we may want to add some value to the digital version by including those artefacts that certainly are not possible in the pBook!</p>
+<p>But let us not get too carried away by all the possibilities. Think carefully about the additional interactivity, multimedia and animation that you add. Ask yourself – does this really enhance the experience for the user or does it over complicate the experience. Are the Bells and Whistles a distraction? Have we become over indulgent and engaged in ‘Feature Creep’?</p>
+<h2 id="epub-interactivity-preview">ePUB Interactivity Preview<a class="headerlink" href="#epub-interactivity-preview" title="Permanent link">¶</a></h2>
+<p>Under the Window&gt;Interactivity menu you will find the EPUB Interactivity Window. With this, you can test your fixed pages (or indeed the whole book) before exporting to the fixed layout ePUB. Not all features can be previewed but certainly the animation, multimedia and interactivity will show as expected.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="Interactivity preview" data-type="image" data-width="100%" href="../../media/image20.png"><img alt="Interactivity preview" src="../../media/image20.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../../media/image21.png"><img alt="" src="../../media/image21.png"/></a></p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2023 Chris Jennings
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://www.instagram.com/chris.jennings.art/" rel="noopener" target="_blank" title="www.instagram.com">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141m0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7m146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8m76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8M398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+<script src="../../javascripts/glightbox.min.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": false, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

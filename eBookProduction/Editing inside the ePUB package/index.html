@@ -1,0 +1,1683 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="My personal digital garden" name="description"/>
+<link href="https://notes.chrisjennings.net/eBookProduction/Editing%20inside%20the%20ePUB%20package/" rel="canonical"/>
+<link href="../Creating%20a%20Reflowable%20eBook%20after%20a%20print%20production%20workflow/" rel="prev"/>
+<link href="../Enhancing%20an%20eBook%20with%20interactivity%20multimedia%20and%20animation/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.5.44" name="generator"/>
+<title>Editing inside the ePUB package - Chris Jennings - his Notes</title>
+<link href="../../assets/stylesheets/main.0253249f.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Sen:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Sen";--md-code-font:"Roboto Mono"}</style>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+<link href="../../stylesheets/glightbox.min.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="amber" data-md-color-primary="black" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#unpacking-and-repacking">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Chris Jennings - his Notes" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Chris Jennings - his Notes">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Chris Jennings - his Notes
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Editing inside the ePUB package
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="amber" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="black" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="amber" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/Pageboy/pageboy.github.io" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Chris Jennings - his Notes" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Chris Jennings - his Notes">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Chris Jennings - his Notes
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/Pageboy/pageboy.github.io" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    Public Notes and Articles
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Articles
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Articles
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Attention%20to%20Detail%20in%20Typography%20with%20InDesign/">
+<span class="md-ellipsis">
+    Attention to Detail in Typography with InDesign
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Building%20the%20TOC%20in%20InDesign/">
+<span class="md-ellipsis">
+    Building the TOC in InDesign
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Dropping%20your%20caps/">
+<span class="md-ellipsis">
+    Dropping your caps
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Footnotes%20and%20other%20Diversions/">
+<span class="md-ellipsis">
+    Footnotes and other Diversions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Master%20or%20Parent%20Pages%20in%20InDesign/">
+<span class="md-ellipsis">
+    Master or Parent Pages in InDesign
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Measure%20me%20in%20Units/">
+<span class="md-ellipsis">
+    Measure me in Units
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Preflight%20and%20Package%20for%20Print%20and%20Output%20to%20PDF/">
+<span class="md-ellipsis">
+    Preflight and Package for Print and Output to PDF
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Sharing%20to%20Facebook%20and%20Twitter/">
+<span class="md-ellipsis">
+    Sharing to Facebook and Twitter
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/The%20basics%20of%20HTML%20and%20CSS/">
+<span class="md-ellipsis">
+    The basics of HTML and CSS
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Using%20Flickr%20to%20Generate%20an%20Image%20Gallery/">
+<span class="md-ellipsis">
+    Using Flickr to Generate an Image Gallery
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Using%20Photoshop%20and%20InDesign%20to%20Create%20a%20Cover%20for%20Print/">
+<span class="md-ellipsis">
+    Using Photoshop and InDesign to Create a Cover for Print
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Using%20the%20Book%20Panel%20in%20InDesign/">
+<span class="md-ellipsis">
+    Using the Book Panel in InDesign
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Validation/">
+<span class="md-ellipsis">
+    Validation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Vertical%20Spacing%20for%20text%2C%20pBook%20and%20eBook/">
+<span class="md-ellipsis">
+    Vertical Spacing for text, pBook and eBook
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Articles/Video%20across%20a%202%20page%20spread%20%28updated%29/">
+<span class="md-ellipsis">
+    Video across a 2 page spread (updated)
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Teaching
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Teaching
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Design and Technology
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+            Design and Technology
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Design%20and%20Technology/Week%201/">
+<span class="md-ellipsis">
+    Week 1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Design%20and%20Technology/Week%202/">
+<span class="md-ellipsis">
+    Week 2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Design%20and%20Technology/Week%203/">
+<span class="md-ellipsis">
+    Week 3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Design%20and%20Technology/Week%206%20-%20Design%20and%20Technology/">
+<span class="md-ellipsis">
+    Week 6   Design and Technology
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Digital Workflow
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+            Digital Workflow
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Digital%20Workflow/Digital%20Workflow/">
+<span class="md-ellipsis">
+    Digital Workflow
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Digital%20Workflow/Week%201/">
+<span class="md-ellipsis">
+    Week 1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Digital%20Workflow/Week%2011/">
+<span class="md-ellipsis">
+    Week 11
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Digital%20Workflow/Week%2012/">
+<span class="md-ellipsis">
+    Week 12
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Digital%20Workflow/Week%202/">
+<span class="md-ellipsis">
+    Week 2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Digital%20Workflow/Week%203/">
+<span class="md-ellipsis">
+    Week 3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Digital%20Workflow/Week%204/">
+<span class="md-ellipsis">
+    Week 4
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Digital%20Workflow/Week%205/">
+<span class="md-ellipsis">
+    Week 5
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Digital%20Workflow/Week%206/">
+<span class="md-ellipsis">
+    Week 6
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Digital%20Workflow/Week%208/">
+<span class="md-ellipsis">
+    Week 8
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Digital%20Workflow/Week%209/">
+<span class="md-ellipsis">
+    Dramatis Personae
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Multiplatform Publishing
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_3">
+<span class="md-nav__icon md-icon"></span>
+            Multiplatform Publishing
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/From%20Vscode%20to%20Web/">
+<span class="md-ellipsis">
+    From Vscode to Web
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/How%20to%20do%20Javascript/">
+<span class="md-ellipsis">
+    How to do Javascript
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%201%20Intro/">
+<span class="md-ellipsis">
+    Week 1 Intro
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%2010/">
+<span class="md-ellipsis">
+    Week 10
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%2011/">
+<span class="md-ellipsis">
+    Week 11
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%2012/">
+<span class="md-ellipsis">
+    Week 12
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%202/">
+<span class="md-ellipsis">
+    Week 2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%203/">
+<span class="md-ellipsis">
+    Week 3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%204%201/">
+<span class="md-ellipsis">
+    Week 4 1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%204%20part%202/">
+<span class="md-ellipsis">
+    Week 4 part 2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%204/">
+<span class="md-ellipsis">
+    Week 4
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%205%20Shakespeare%20Play%20notes/">
+<span class="md-ellipsis">
+    Week 5 Shakespeare Play notes
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%205/">
+<span class="md-ellipsis">
+    Week 5
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%206/">
+<span class="md-ellipsis">
+    Week 6
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%207/">
+<span class="md-ellipsis">
+    Week 7
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%208/">
+<span class="md-ellipsis">
+    Week 8
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/Week%209/">
+<span class="md-ellipsis">
+    Week 9
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/eBook%20readers/">
+<span class="md-ellipsis">
+    eBook readers
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_3_19" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3_19" id="__nav_3_3_19_label" tabindex="0">
+<span class="md-ellipsis">
+    Week7extras
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_19_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_3_19">
+<span class="md-nav__icon md-icon"></span>
+            Week7extras
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/week7extras/ePUB_toc_ncx/">
+<span class="md-ellipsis">
+    ePUB toc ncx
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/week7extras/ePub_content_opf/">
+<span class="md-ellipsis">
+    ePub content opf
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Teaching/Multiplatform%20Publishing/week7extras/ePub_toc_xhtml/">
+<span class="md-ellipsis">
+    ePub toc xhtml
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Web Sites with GitHub
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Web Sites with GitHub
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Web%20Sites%20with%20GitHub/Add%20Multimedia%20to%20Your%20web%20site/">
+<span class="md-ellipsis">
+    Add Multimedia to Your web site
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Web%20Sites%20with%20GitHub/Creating%20a%20recipe%20web%20site%20using%20GitHub%20and%20Netlify/">
+<span class="md-ellipsis">
+    Creating a recipe web site using GitHub and Netlify
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Web%20Sites%20with%20GitHub/From%20InDesign%20to%20HTML%20and%20CSS/">
+<span class="md-ellipsis">
+    From InDesign to HTML and CSS
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Web%20Sites%20with%20GitHub/Getting%20responsive%20with%20Flex/">
+<span class="md-ellipsis">
+    Getting responsive with Flex
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Web%20Sites%20with%20GitHub/How%20to%20build%20a%20blog%20website%20with%20GitHub%20and%20Netlify/">
+<span class="md-ellipsis">
+    How to build a blog website with GitHub and Netlify
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Web%20Sites%20with%20GitHub/Using%20a%20Git%20Repository%20to%20host%20your%20Shakespeare%20Play%20Web%20Site/">
+<span class="md-ellipsis">
+    Using a Git Repository to host your Shakespeare Play Web Site
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    eBookProduction
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            eBookProduction
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Ambient%20Sound%20in%20a%20Fixed-Layout%20ePub/">
+<span class="md-ellipsis">
+    Ambient Sound in a Fixed Layout ePub
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Creating%20a%20Reflowable%20eBook%20after%20a%20print%20production%20workflow/">
+<span class="md-ellipsis">
+    Creating a Reflowable eBook after a print production workflow
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Editing inside the ePUB package
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Editing inside the ePUB package
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unpacking-and-repacking">
+<span class="md-ellipsis">
+      Unpacking and repacking
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#can-we-edit">
+<span class="md-ellipsis">
+      Can we Edit?
+    </span>
+</a>
+<nav aria-label="Can we Edit?" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-can-we-edit">
+<span class="md-ellipsis">
+      What Can We edit?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-many-css-files-do-we-have">
+<span class="md-ellipsis">
+      How many CSS files do we have?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#our-first-correction">
+<span class="md-ellipsis">
+      Our First Correction
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#test-and-view-our-changes">
+<span class="md-ellipsis">
+      Test and View Our Changes
+    </span>
+</a>
+<nav aria-label="Test and View Our Changes" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#roundtrip-to-indesign">
+<span class="md-ellipsis">
+      Roundtrip to InDesign
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#changes-to-the-css">
+<span class="md-ellipsis">
+      Changes to the CSS.
+    </span>
+</a>
+<nav aria-label="Changes to the CSS." class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-page-breaks">
+<span class="md-ellipsis">
+      The page breaks
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#footnote-references">
+<span class="md-ellipsis">
+      Footnote References
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#typography">
+<span class="md-ellipsis">
+      Typography
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-opf-package-document">
+<span class="md-ellipsis">
+      The OPF Package Document
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-cover">
+<span class="md-ellipsis">
+      The Cover
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-spine">
+<span class="md-ellipsis">
+      The Spine
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-guide-section">
+<span class="md-ellipsis">
+      The Guide Section
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-metadata-block">
+<span class="md-ellipsis">
+      The Metadata Block
+    </span>
+</a>
+<nav aria-label="The Metadata Block" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#let-me-offer-an-example">
+<span class="md-ellipsis">
+      Let me offer an example.
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#orientation-and-spreads">
+<span class="md-ellipsis">
+      Orientation and Spreads
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-navigation-document-tocxhtml">
+<span class="md-ellipsis">
+      The Navigation Document (toc.xhtml)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#landmarks">
+<span class="md-ellipsis">
+      Landmarks
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-can-the-landmarks-help-in-the-way-the-ebook-is-read">
+<span class="md-ellipsis">
+      How can the Landmarks help in the way the eBook is read?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pages-outside-the-flow">
+<span class="md-ellipsis">
+      Pages Outside the Flow
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#non-linear-content">
+<span class="md-ellipsis">
+      Non-Linear Content
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#displaying-the-table-of-contents-as-a-page">
+<span class="md-ellipsis">
+      Displaying the Table of Contents as a Page
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-javascript">
+<span class="md-ellipsis">
+      Adding Javascript
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-content-with-javascript">
+<span class="md-ellipsis">
+      Adding Content with Javascript
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-content-with-css">
+<span class="md-ellipsis">
+      Adding Content with CSS
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#summary">
+<span class="md-ellipsis">
+      Summary
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Enhancing%20an%20eBook%20with%20interactivity%20multimedia%20and%20animation/">
+<span class="md-ellipsis">
+    Enhancing an eBook with interactivity multimedia and animation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Fixed%20Layout%20eBook/">
+<span class="md-ellipsis">
+    Fixed Layout eBook
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Fixed-Layout%20ePub%20with%20swashes/">
+<span class="md-ellipsis">
+    Fixed Layout ePub with swashes
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../InDesign%20to%20the%20Fixed%20Layout%20ePub/">
+<span class="md-ellipsis">
+    InDesign to the Fixed Layout ePub
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Notes%20for%20the%20Fixed%20Layout%20eBook%20workshop/">
+<span class="md-ellipsis">
+    Notes for the Fixed Layout eBook workshop
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Notes%20on%20Fixed%20Layout/">
+<span class="md-ellipsis">
+    Notes on Fixed Layout
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Page%20Size%20Issues%20in%20fixed-layout%20ePub/">
+<span class="md-ellipsis">
+    Page Size Issues in fixed layout ePub
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Page%20size%20in%20InDesign%20for%20eBook%3F/">
+<span class="md-ellipsis">
+    Page size in InDesign for eBook?
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Roundtripping%20InDesign%20and%20ePub%20re-flowable/">
+<span class="md-ellipsis">
+    Roundtripping InDesign and ePub re flowable
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tips%20for%20InDesign%20Users%20when%20Making%20eBooks/">
+<span class="md-ellipsis">
+    Tips for InDesign Users when Making eBooks
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../What%20Kind%20of%20eBooks%3F/">
+<span class="md-ellipsis">
+    What kinds of eBooks are possible?
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
+    eBooks
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            eBooks
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../eBooks/From%20Print%20Book%20to%20eBook/">
+<span class="md-ellipsis">
+    From Print Book to eBook
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../eBooks/Megalithic%20Landscapes/">
+<span class="md-ellipsis">
+    Megalithic Landscapes
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../eBooks/Memoirs%20of%20an%20Islet/">
+<span class="md-ellipsis">
+    Memoirs of an Islet
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../eBooks/The%20Encantadas%20or%20Enchanted%20Isles/">
+<span class="md-ellipsis">
+    The Encantadas or Enchanted Isles
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../eBooks/The%20Man%20Who%20Loved%20Islands/">
+<span class="md-ellipsis">
+    The Man Who Loved Islands
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../eBooks/The%20Merry%20Men/">
+<span class="md-ellipsis">
+    The Merry Men
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../eBooks/eBook%20Typography%20for%20Flowable%20eBooks/">
+<span class="md-ellipsis">
+    eBook Typography for Flowable eBooks
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unpacking-and-repacking">
+<span class="md-ellipsis">
+      Unpacking and repacking
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#can-we-edit">
+<span class="md-ellipsis">
+      Can we Edit?
+    </span>
+</a>
+<nav aria-label="Can we Edit?" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-can-we-edit">
+<span class="md-ellipsis">
+      What Can We edit?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-many-css-files-do-we-have">
+<span class="md-ellipsis">
+      How many CSS files do we have?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#our-first-correction">
+<span class="md-ellipsis">
+      Our First Correction
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#test-and-view-our-changes">
+<span class="md-ellipsis">
+      Test and View Our Changes
+    </span>
+</a>
+<nav aria-label="Test and View Our Changes" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#roundtrip-to-indesign">
+<span class="md-ellipsis">
+      Roundtrip to InDesign
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#changes-to-the-css">
+<span class="md-ellipsis">
+      Changes to the CSS.
+    </span>
+</a>
+<nav aria-label="Changes to the CSS." class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-page-breaks">
+<span class="md-ellipsis">
+      The page breaks
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#footnote-references">
+<span class="md-ellipsis">
+      Footnote References
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#typography">
+<span class="md-ellipsis">
+      Typography
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-opf-package-document">
+<span class="md-ellipsis">
+      The OPF Package Document
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-cover">
+<span class="md-ellipsis">
+      The Cover
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-spine">
+<span class="md-ellipsis">
+      The Spine
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-guide-section">
+<span class="md-ellipsis">
+      The Guide Section
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-metadata-block">
+<span class="md-ellipsis">
+      The Metadata Block
+    </span>
+</a>
+<nav aria-label="The Metadata Block" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#let-me-offer-an-example">
+<span class="md-ellipsis">
+      Let me offer an example.
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#orientation-and-spreads">
+<span class="md-ellipsis">
+      Orientation and Spreads
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-navigation-document-tocxhtml">
+<span class="md-ellipsis">
+      The Navigation Document (toc.xhtml)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#landmarks">
+<span class="md-ellipsis">
+      Landmarks
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-can-the-landmarks-help-in-the-way-the-ebook-is-read">
+<span class="md-ellipsis">
+      How can the Landmarks help in the way the eBook is read?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pages-outside-the-flow">
+<span class="md-ellipsis">
+      Pages Outside the Flow
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#non-linear-content">
+<span class="md-ellipsis">
+      Non-Linear Content
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#displaying-the-table-of-contents-as-a-page">
+<span class="md-ellipsis">
+      Displaying the Table of Contents as a Page
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-javascript">
+<span class="md-ellipsis">
+      Adding Javascript
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-content-with-javascript">
+<span class="md-ellipsis">
+      Adding Content with Javascript
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-content-with-css">
+<span class="md-ellipsis">
+      Adding Content with CSS
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#summary">
+<span class="md-ellipsis">
+      Summary
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Editing inside the ePUB package</h1>
+<p>When we have created a reflowable ePub by exporting from InDesign, we may find that there are some stylistic details that need tidying up, changing or even correcting. Not all aspects of our wonderfully crafted typographic design work will give perfect results in the ePub.</p>
+<p>Some text editors have the functionality to edit the components of the ePUB package even without unpacking. BBedit is the one I have used, but Oxygen XML will also give you that ability. Oxygen is more sophisticated and expensive; it will allow you to remove and add files into the package, so if you wanted replace a picture, Oxygen will do it!</p>
+<p>These days I use <em>Vscode</em> as my text editor and so, although you can view the insides of the ePub package, you need to unpack before editing.</p>
+<p>Here we see the files within the ePub package using Atom</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title=" Here we see the files within the ePub package using Atom" data-type="image" data-width="100%" href="../../media/atomfilelist.png"><img alt=" Here we see the files within the ePub package using Atom" src="../../media/atomfilelist.png"/></a></p>
+<blockquote>
+<p>Edit: <em>Atom</em> and <em>Vscode</em> are very similar</p>
+</blockquote>
+<h2 id="unpacking-and-repacking">Unpacking and repacking<a class="headerlink" href="#unpacking-and-repacking" title="Permanent link">¶</a></h2>
+<p>For this I recommend downloading eCanCrusher available here: <a href="https://www.docdataflow.com/ecancrusher/">https://www.docdataflow.com/ecancrusher/</a></p>
+<h2 id="can-we-edit">Can we Edit?<a class="headerlink" href="#can-we-edit" title="Permanent link">¶</a></h2>
+<p>It really depends on the software tools that you have.</p>
+<p>I tend to use Atom as the text editor, and once you have unpacked the ePub (using the script just described), then you can drag the complete folder onto the Atom app, and this will then become a project that you can edit.</p>
+<p>The ePub package open for editing with Atom</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title=" The ePub package open for editing with Atom" data-type="image" data-width="100%" href="../../media/epubinAtom.png"><img alt=" The ePub package open for editing with Atom" src="../../media/epubinAtom.png"/></a></p>
+<h3 id="what-can-we-edit">What Can We edit?<a class="headerlink" href="#what-can-we-edit" title="Permanent link">¶</a></h3>
+<p>This really depends on how the ePUB looks after export from InDesign and what changes you want to make, but crucially you need to keep your options open to go back to InDesign to make further changes. This means avoiding the editing of the XHTML documents and just focussing on the stylesheets.</p>
+<p>In our workflow we plan to return to InDesign for further edits, so let us explore how to create our own copy of the stylesheet (CSS), that we can link back in the next time we export to the ePUB.</p>
+<h3 id="how-many-css-files-do-we-have">How many CSS files do we have?<a class="headerlink" href="#how-many-css-files-do-we-have" title="Permanent link">¶</a></h3>
+<p>If you have used the InDesign book panel to organise your content, you are gong to find several CSS files; one main file with a filename- <code>idGeneratedStyles_0.css</code> and then further stylesheets one for each of the documents in your book panel.</p>
+<p>The main CSS file is where the generic styles are located (those which are common throughout the eBook), and then each of the others will only include style information for elements present in those separate XHTML files.</p>
+<p>All we want to do at this stage is to edit the stylesheet called <code>idGeneratedStyles_0.css</code>.</p>
+<h3 id="our-first-correction">Our First Correction<a class="headerlink" href="#our-first-correction" title="Permanent link">¶</a></h3>
+<p>You will remember from our previous chapter that we found that an offer rule that provided a background grey block to the Act heading had disappeared when we views the ePUB. Here is a reminder:</p>
+<p>An indicator showing the missing Act heading</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="image3.png" data-type="image" data-width="100%" href="../../media/shakespeareCover/image3.png"><img alt="image3.png" src="../../media/shakespeareCover/image3.png"/></a></p>
+<p>The reason for this error is that InDesign does not export the rules (lines) above or below the paragraphs from the paragraph style settings, and our tex is white so it disappears.</p>
+<blockquote>
+<p><strong>Version alert:</strong> Since InDesign 2015 edition it is possible to use <code>Background Shading</code> in a paragraph style, so we might us this instead of offsetting a paragraph rule.</p>
+</blockquote>
+<p>The correction we need to make is in</p>
+<p><code>idGeneratedStyles_0.css</code></p>
+<p>In our Export Tagging setting we configured the paragraph style called act to use the tag - h1 with a class name of ‘act’. We then look for and find this block in the CSS.</p>
+<p>The setting for the paragraph rule that gives a background to the text.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="image4.png" data-type="image" data-width="100%" href="../../media/shakespeareCover/image4.png"><img alt="image4.png" src="../../media/shakespeareCover/image4.png"/></a></p>
+<p>We need to add the following line:</p>
+<p><code>background-color:#a196a0;</code></p>
+<p>I grabbed the hexadecimal value of the colour from the swatch in InDesign.</p>
+<p>We can make adjustments to the height of this block of colour by adjusting the leading – in CSS this is the line-height:</p>
+<p><code>line-height:1.5;</code></p>
+<p>The styles that InDesign has given us.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="image5.png" data-type="image" data-width="100%" href="../../media/masterpages/image5.png"><img alt="image5.png" src="../../media/masterpages/image5.png"/></a></p>
+<h2 id="test-and-view-our-changes">Test and View Our Changes<a class="headerlink" href="#test-and-view-our-changes" title="Permanent link">¶</a></h2>
+<p>If you want to view one of your XHTML files when open in Atom, you should obtain an extension called HTML-Preview. With this you can view the page simply. On the other hand, just opening the XHTML file in a web browser will also give a good idea of the result.</p>
+<p>HTML-Preview we can see the results of our changes right away
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="epubinAtomwithpreview.png" data-type="image" data-width="100%" href="../../media/epubinAtomwithpreview.png"><img alt="epubinAtomwithpreview.png" src="../../media/epubinAtomwithpreview.png"/></a></p>
+<h3 id="roundtrip-to-indesign">Roundtrip to InDesign<a class="headerlink" href="#roundtrip-to-indesign" title="Permanent link">¶</a></h3>
+<p>If we need to return to InDesign then we will lose these corrections that we make to the CSS, because InDesign will generate the same ones again.</p>
+<p>Once you have made the corrections that solve the style and display issues, then you can take a copy of the CSS file and save this somewhere in your working files with a logical name (mine is dream.css). The next time that you export the ePUB, we can then select this external CSS file (see the CSS panel when exporting), and this will be added in the head of each XHTML file.</p>
+<p>Here we see the listed CSS files - 2 generated by InDesign and one of our own making. This custom one should come after the other 2 so that your rules will override the ones that InDesign has put in.</p>
+<p>here we see how the mystyles.css has been added</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="mystyles.png" data-type="image" data-width="100%" href="../../media/mystyles.png"><img alt="mystyles.png" src="../../media/mystyles.png"/></a></p>
+<h2 id="changes-to-the-css">Changes to the CSS.<a class="headerlink" href="#changes-to-the-css" title="Permanent link">¶</a></h2>
+<h3 id="the-page-breaks">The page breaks<a class="headerlink" href="#the-page-breaks" title="Permanent link">¶</a></h3>
+<p>Each of the XHTML pages represents a new chapter or section (or Act / Scene of the play), and will therefore begin a new page. This has happened because you opted to have the style for the Act or Scene to ‘Split the ePUB’ on export. The paragraph style in the play is ‘act’ and the resulting HTML is:</p>
+<p><code>&lt;h1 class="act"&gt;</code></p>
+<p>Because for print we also set this up to Start on a New Page (in fact - On Next Odd Page under the Keep Options), InDesign has been less than helpful by applying a rule to the CSS as follows:</p>
+<p><code>page-break-before:always;</code></p>
+<p>Guess what! This means that you may get a blank page, because the ePUB gives the eReader software 2 reasons to start a new page</p>
+<ol>
+<li>It starts a new page because we split the ePub into separate HTML files at the Act start</li>
+<li>And then because we use 'Keep Option' we get the CSS above.</li>
+</ol>
+<p>The line in the CSS will need to be changed to:</p>
+<p><code>page-break-before:auto;</code></p>
+<h2 id="footnote-references">Footnote References<a class="headerlink" href="#footnote-references" title="Permanent link">¶</a></h2>
+<p>In a printed book the footnotes are at the bottom of the page and the references in the text are usually a superscript number (slightly smaller in size and elevated next to the appropriate context.</p>
+<p>Footnote references are superscript numbers</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="image8.png" data-type="image" data-width="100%" href="../../media/masterpages/image8.png"><img alt="image8.png" src="../../media/masterpages/image8.png"/></a></p>
+<p>In our eBook version we can opt for the footnotes to become popup notes (supported in ePUB3 in Apple’s iBooks software and the recent Kindles. However, the little superscript number are very difficult to spot and even more difficult for the finger to touch, so I suggest making then stand out a bit more by adjusting the CSS to give a background colour and slight increase in size.</p>
+<p>Here is the popup text showing a re-styled reference number</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="image9.png" data-type="image" data-width="100%" href="../../media/masterpages/image9.png"><img alt="image9.png" src="../../media/masterpages/image9.png"/></a></p>
+<p>In the CSS we need to edit these lines to the rule for the reference element:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">span</span><span class="p">.</span><span class="nc">reference</span><span class="w"> </span><span class="p">{</span>
+<span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="mh">#cc071e</span><span class="p">;</span>
+<span class="w"> </span><span class="k">font-variant</span><span class="p">:</span><span class="kc">normal</span><span class="p">;</span>
+<span class="w"> </span><span class="k">text-transform</span><span class="p">:</span><span class="kc">none</span><span class="p">;</span>
+<span class="w"> </span><span class="k">vertical-align</span><span class="p">:</span><span class="kc">super</span><span class="p">;</span>
+<span class="w"> </span><span class="k">font-size</span><span class="p">:</span><span class="mf">1.6</span><span class="kt">em</span><span class="p">;</span>
+<span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="kc">white</span><span class="p">;</span>
+<span class="w"> </span><span class="k">background</span><span class="p">:</span><span class="mh">#cc071e</span><span class="p">;</span>
+<span class="w"> </span><span class="k">padding</span><span class="p">:</span><span class="mi">3</span><span class="kt">px</span><span class="p">;</span>
+<span class="w"> </span><span class="k">font-weight</span><span class="p">:</span><span class="kc">bold</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="typography">Typography<a class="headerlink" href="#typography" title="Permanent link">¶</a></h2>
+<p>In our print book we have 2 columns in the introduction text and we have set this to be justified.</p>
+<p>print version shows 2 columns</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="image10.png" data-type="image" data-width="100%" href="../../media/masterpages/image10.png"><img alt="image10.png" src="../../media/masterpages/image10.png"/></a></p>
+<p>When this arrives in the ePUB (reflowable), we find only one column but the text is justified. Maybe we are happy with this, but if not we need to change the CSS in the body text rule from:</p>
+<p><code>text-align:justify;</code></p>
+<p>to</p>
+<p><code>text-align:left;</code></p>
+<p>If you delete the line altogether, the user will control the text alignment, in their eReader software settings.</p>
+<p>If the intention is to go back to InDesign in this workflow / editorial cycle, then you should avoid editing anything other than the CSS. Your objective (wherever possible) is to avoid editing the XHTML pages. Once you edit any other files inside the ePUB package, then roundtrip to InDesign will be very difficult.</p>
+<p>If your workflow requires that you edit the ePUB in order to consult the other members of your creative team or even a client, then you should copy and record the changes that you make so you can wind these changes back int a new version.<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
+<p>The other modifications that you may need to make are as follows.</p>
+<h2 id="the-opf-package-document">The OPF Package Document<a class="headerlink" href="#the-opf-package-document" title="Permanent link">¶</a></h2>
+<p>If you exported from InDesign this file will be named <code>content.opf</code></p>
+<p>There are a number of adjustments that can be made to the OPF file that will affect the way that the ePUB is displayed. Some of these settings are particular for iBooks on iPad, but there are some settings that are generic and are needed for other devices and platforms.</p>
+<h2 id="the-cover">The Cover<a class="headerlink" href="#the-cover" title="Permanent link">¶</a></h2>
+<p>You will find references to the cover in 3 places in the content.opf file.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">"cover"</span> <span class="na">content</span><span class="o">=</span><span class="s">"msnd_cover15.jpg"</span> <span class="p">/&gt;</span>
+</code></pre></div>
+<p>This is a line required only for backwards compatibility for ePUB2 and is not really need but leave this alone!</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">item</span> <span class="na">id</span><span class="o">=</span><span class="s">"cover"</span> <span class="na">href</span><span class="o">=</span><span class="s">"cover.xhtml"</span> <span class="na">media-type</span><span class="o">=</span><span class="s">"application/xhtml+xml"</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>In my case this is a separate page that can optionally display the cover. In other words, this refers to an XHTML page that includes a link to the image source. However, the item in the spine section that refers to this looks like this:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">itemref</span> <span class="na">idref</span><span class="o">=</span><span class="s">"cover"</span> <span class="na">linear</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>and the <code>linear="no"</code> attribute means that this page will never show unless it is linked from elsewhere - for example - the table of contents.</p>
+<p>So, if you would like your users to be able to navigate back to the cover, then you can remove <code>linear="no"</code>, so that the cover itself is part of the book flow, and can be seen as the first page in the book. Note: Do not do this if you intend to convert to the Kindle version, because you will then have the cover showing twice!</p>
+<p>We are not done with the cover yet! There is another line required for the ePUB3 format and you will find this in the <code>&lt;metadata&gt;</code> section:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">item</span> <span class="na">id</span><span class="o">=</span><span class="s">"msnd_cover15.jpg"</span> <span class="na">href</span><span class="o">=</span><span class="s">"image/msnd_cover15.jpg"</span> <span class="na">media-type</span><span class="o">=</span><span class="s">"image/jpeg"</span> <span class="na">properties</span><span class="o">=</span><span class="s">"cover-image"</span> <span class="p">/&gt;</span>
+</code></pre></div>
+<p>This we should leave alone!</p>
+<h2 id="the-spine">The Spine<a class="headerlink" href="#the-spine" title="Permanent link">¶</a></h2>
+<p>The spine section of the <code>content.opf</code> file gives the reading order. This will have come from the order of the pages in InDesign or even the the Articles panels. Also, if (like me) you are using the book panel, the order of the InDesign files will affect this spine list.</p>
+<p>You can modify this order; let’s say you have a colophon and you would rather have this in the back matter, then you can move the appropriate line to your choice in the sequence.</p>
+<p>Here is my spine section:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">spine</span> <span class="na">toc</span><span class="o">=</span><span class="s">'ncx'</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">itemref</span> <span class="na">idref</span><span class="o">=</span><span class="s">"cover"</span> <span class="na">linear</span><span class="o">=</span><span class="s">"no"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">itemref</span> <span class="na">idref</span><span class="o">=</span><span class="s">"frontmatter"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">itemref</span> <span class="na">idref</span><span class="o">=</span><span class="s">"dream_preface"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">itemref</span> <span class="na">idref</span><span class="o">=</span><span class="s">"dream"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">itemref</span> <span class="na">idref</span><span class="o">=</span><span class="s">"dream-1"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">itemref</span> <span class="na">idref</span><span class="o">=</span><span class="s">"dream-2"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">itemref</span> <span class="na">idref</span><span class="o">=</span><span class="s">"dream-3"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">itemref</span> <span class="na">idref</span><span class="o">=</span><span class="s">"dream-4"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">itemref</span> <span class="na">idref</span><span class="o">=</span><span class="s">"dream-5"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">itemref</span> <span class="na">idref</span><span class="o">=</span><span class="s">"dream-6"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">spine</span><span class="p">&gt;</span>
+</code></pre></div>
+<h2 id="the-guide-section">The Guide Section<a class="headerlink" href="#the-guide-section" title="Permanent link">¶</a></h2>
+<p>You will notice that under the spine items you will find the Guide section and this is only here for backwards compatibility.<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></p>
+<p>The Guide Section of the package OPF file provides a similar function to the Landmarks section of the ePUB3 navigation document (see later), but harks back to the ePUB2 format.</p>
+<p>There is some advantage to adding some items here if you plan to export to the Kindle/MOBI format for Amazon devices; especially if you wish to support earlier versions of these devices. Kindle software does have a drop down menu that can be populated with some items. Here is my Guide section built by InDesign on export:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">guide</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">reference</span> <span class="na">type</span><span class="o">=</span><span class="s">"cover"</span> <span class="na">href</span><span class="o">=</span><span class="s">"cover.xhtml"</span> <span class="na">title</span><span class="o">=</span><span class="s">"Cover"</span> <span class="p">/&gt;</span>
+ <span class="p">&lt;</span><span class="nt">reference</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="na">href</span><span class="o">=</span><span class="s">"dream_preface.xhtml#_idContainer005"</span> <span class="na">title</span><span class="o">=</span><span class="s">"Beginning"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">guide</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>I want to add the Table of Contents in here because Amazon recommend that the TOC should display on the page; this is at odds with the ePUB3 format, where we would rather use the logical version in the eReader interface. So, how can we add an XHTML version of the TOC?</p>
+<p>We have one already, because the ePUB3 export has given us - <code>toc.xhtml</code> - the Table of Contents that is perfectly formed to be displayable. So we use this. Add this line to the <code>&lt;guide&gt;</code> section to become:</p>
+<p><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">guide</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">reference</span> <span class="na">type</span><span class="o">=</span><span class="s">"TOC"</span> <span class="na">href</span><span class="o">=</span><span class="s">"toc.xhtml"</span> <span class="na">title</span><span class="o">=</span><span class="s">"Table of Contents"</span> <span class="p">/&gt;</span>
+ <span class="p">&lt;</span><span class="nt">reference</span> <span class="na">type</span><span class="o">=</span><span class="s">"cover"</span> <span class="na">href</span><span class="o">=</span><span class="s">"cover.xhtml"</span> <span class="na">title</span><span class="o">=</span><span class="s">"Cover"</span> <span class="p">/&gt;</span>
+ <span class="p">&lt;</span><span class="nt">reference</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="na">href</span><span class="o">=</span><span class="s">"dream_preface.xhtml#_idContainer005"</span>   <span class="na">title</span><span class="o">=</span><span class="s">"Beginning"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">guide</span><span class="p">&gt;</span>
+</code></pre></div>
+ This change will not effect the ePUB3, but is useful for the Kindle version.</p>
+<h2 id="the-metadata-block">The Metadata Block<a class="headerlink" href="#the-metadata-block" title="Permanent link">¶</a></h2>
+<p>We can make some additions to the <code>&lt;metadata&gt;</code> section of the <code>content.opf</code> file. You should notice the following line if you opted to embed fonts when you exported to the ePUB:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">property</span><span class="o">=</span><span class="s">"ibooks:specified-fonts"</span><span class="p">&gt;</span>true<span class="p">&lt;/</span><span class="nt">meta</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>InDesign has put this line into the <code>content.opf</code> file at the same time as encrypting the fonts that you chose in your paragraph styles. There could be a situation where you want to add this line in to the <code>&lt;metadata&gt;</code> block. This would be a situation where you are only targeting the Apple devices and you want to use some fonts that are present on the iPad/iOS devices<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. You don’t need to embed those fonts but you do need to switch on the ‘specified fonts’. So, if you plan to use the fonts that are available on the iOS systems, then do NOT tell InDesign to embed the fonts (when you export, but rather, add this line into the opf file.</p>
+<h3 id="let-me-offer-an-example">Let me offer an example.<a class="headerlink" href="#let-me-offer-an-example" title="Permanent link">¶</a></h3>
+<p>So, let’s say that you decide to use avenir-next.</p>
+<p>Build your ePUB with InDesign, with that font used in the paragraph styles.</p>
+<p>When you export the ePUB, you can opt to NOT embed the fonts. Then, you will need to add the above line into the content.opf file.</p>
+<p>But this line will only make a difference if the package item is included with all of the following:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">package</span> <span class="na">version</span><span class="o">=</span><span class="s">"3.0"</span> <span class="na">xmlns</span><span class="o">=</span><span class="s">"http://www.idpf.org/2007/opf"</span> <span class="na">unique-identifier</span><span class="o">=</span><span class="s">"bookid"</span> <span class="na">prefix</span><span class="o">=</span><span class="s">"ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/"</span> <span class="p">&gt;</span>
+</code></pre></div>
+<h2 id="orientation-and-spreads">Orientation and Spreads<a class="headerlink" href="#orientation-and-spreads" title="Permanent link">¶</a></h2>
+<p>If you expand the package section even more as follows:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">package</span> <span class="na">xmlns</span><span class="o">=</span><span class="s">"http://www.idpf.org/2007/opf"</span> <span class="na">unique-identifier</span><span class="o">=</span><span class="s">"bookid"</span> <span class="na">version</span><span class="o">=</span><span class="s">"3.0"</span> <span class="na">prefix</span><span class="o">=</span><span class="s">"rendition: http://www.idpf.org/vocab/rendition/\# ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/"</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>We have added the extra prefix for rendition and this will also give you the potential to lock the orientation to landscape or portrait.</p>
+<p>To lock the orientation on all iOS platforms we can use:</p>
+<p><code>&lt;meta property="rendition:orientation"&gt;portrait&lt;/meta&gt;</code></p>
+<p>To lock the orientation on a specific Apple device we can use</p>
+<p><code>&lt;meta property="ibooks:iphone-orientation-lock"&gt;portrait-only&lt;/meta&gt;</code></p>
+<h2 id="the-navigation-document-tocxhtml">The Navigation Document (toc.xhtml)<a class="headerlink" href="#the-navigation-document-tocxhtml" title="Permanent link">¶</a></h2>
+<p>InDesign CC will create the essential navigation document - toc.xhtml file ePUB3 as well as the ePUB2 equivalent - the toc.ncx file. This latter is provided for backwards compatibility.</p>
+<p>All being well, your intelligent construction of the table of contents in InDesign, there should be no good reason to edit the TOC section of these files. Have a look at a sample section of the navigation section of the toc.xhtml file:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;nav</span><span class="w"> </span><span class="na">id=</span><span class="s">"toc"</span><span class="w"> </span><span class="na">epub:type=</span><span class="s">"toc"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;h2&gt;</span>Contents<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;ol&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span><span class="w"> </span><span class="na">href=</span><span class="s">"dream_preface.xhtml#_idParaDest-1"</span><span class="nt">&gt;</span>Shakespeare’s<span class="w"> </span>Life<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;ol&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span><span class="w"> </span><span class="na">href=</span><span class="s">"dream_preface.xhtml#_idParaDest-2"</span><span class="nt">&gt;</span>Our<span class="w"> </span>Knowledge<span class="w"> </span>of<span class="w"> </span>Shakespeare<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span><span class="w"> </span><span class="na">href=</span><span class="s">"dream_preface.xhtml#_idParaDest-3"</span><span class="nt">&gt;</span>Stratford<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span><span class="w"> </span><span class="na">href=</span><span class="s">"dream_preface.xhtml#_idParaDest-4"</span><span class="nt">&gt;</span>Birth<span class="w"> </span>and<span class="w"> </span>Parentage<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span><span class="w"> </span><span class="na">href=</span><span class="s">"dream_preface.xhtml#_idParaDest-5"</span><span class="nt">&gt;</span>Education<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span><span class="w"> </span><span class="na">href=</span><span class="s">"dream_preface.xhtml#_idParaDest-6"</span><span class="nt">&gt;</span>Marriage<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span><span class="w"> </span><span class="na">href=</span><span class="s">"dream_preface.xhtml#_idParaDest-7"</span><span class="nt">&gt;</span>Early<span class="w"> </span>Life<span class="w"> </span>in<span class="w"> </span>London<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span>
+<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span><span class="w"> </span><span class="na">href=</span><span class="s">"dream.xhtml#_idParaDest-8"</span><span class="nt">&gt;</span>Dramatis<span class="w"> </span>Personae<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span><span class="w"> </span><span class="na">href=</span><span class="s">"dream-1.xhtml#_idParaDest-9"</span><span class="nt">&gt;</span>Act<span class="w"> </span>I<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;ol&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span><span class="w"> </span><span class="na">href=</span><span class="s">"dream-1.xhtml#_idParaDest-10"</span><span class="nt">&gt;</span>Scene<span class="w"> </span>I<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;ol&gt;</span>
+<span class="nt">&lt;li&gt;&lt;a</span><span class="w"> </span><span class="na">href=</span><span class="s">"dream-1.xhtml#_idParaDest-11"</span><span class="nt">&gt;</span>Athens.<span class="w"> </span>The<span class="w"> </span>palace<span class="w"> </span>of<span class="w"> </span>Theseus<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+………………<span class="w"> </span>and<span class="w"> </span>so<span class="w"> </span>on<span class="w"> </span>………
+<span class="nt">&lt;/nav&gt;</span>
+</code></pre></div>
+<p>This is a perfectly formed set of nested list items that can be viewed as a web page.</p>
+<p>Here is what the <code>toc.xhtml</code> page looks like if I open in a web browser</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="image11.png" data-type="image" data-width="100%" href="../../media/id2rfl/image11.png"><img alt="image11.png" src="../../media/id2rfl/image11.png"/></a></p>
+<p>In the image here you will notice another section called the Landmarks.</p>
+<h2 id="landmarks">Landmarks<a class="headerlink" href="#landmarks" title="Permanent link">¶</a></h2>
+<p>Landmarks are a feature introduced with the ePUB3 format, and are provided so that eReader software can give the user a means to navigate to particular sections of the eBook. The ePUB format is ready to accept a number of <code>epub:type</code> values that can be addressed by the eReader software and will enable further navigation aids for the reader.</p>
+<p>In later versions of InDesign you are likely to find this section on Landmarks is provided within your <code>toc.xhtml</code> file when you have selected the ePUB3 format on export.</p>
+<p>In my first export to the ePUB, InDesign has given me 2 landmarks entries. Here is why:</p>
+<p>The ‘Cover’ entry is there because InDesign has constructed a cover.xhtml file and this is normally not in the reading order of the spine (see the paragraph on The Spine in the section on The OPF Package Document). In eReader software that supports this feature, users can locate the cover from a menu.</p>
+<p>The second item (Title-Page) is slightly more complex, and you will need to refer to the work we did in InDesign on our title page. Here is what this looks like in InDesign with the Object Export Options panel open:</p>
+<p>As you see here the epub:type is set to title page and this is what provides the item in Landmarks section.</p>
+<blockquote>
+<p><strong>Note:</strong> This may look different if you have an earlier version of InDesign.</p>
+</blockquote>
+<p>The Landmarks section may include ‘cover’, ‘titlepage’, ‘bibliography’ etc. Here is an example:</p>
+<p>This is where we select the epub:type</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="image12.png" data-type="image" data-width="100%" href="../../media/id2rfl/image12.png"><img alt="image12.png" src="../../media/id2rfl/image12.png"/></a></p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;nav</span><span class="w"> </span><span class="na">epub:type=</span><span class="s">"landmarks"</span><span class="nt">&gt;</span>
+<span class="w"> </span><span class="nt">&lt;ol&gt;</span>
+<span class="w">  </span><span class="nt">&lt;li&gt;&lt;a</span><span class="w"> </span><span class="na">href=</span><span class="s">"cover.xhtml"</span><span class="w"> </span><span class="na">epub:type=</span><span class="s">"cover"</span><span class="nt">&gt;</span>Cover<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="w">  </span><span class="nt">&lt;li&gt;&lt;a</span><span class="w"> </span><span class="na">href=</span><span class="s">"titlepage.xhtml"</span><span class="w"> </span><span class="na">epub:type=</span><span class="s">"titlepage"</span><span class="nt">&gt;</span>Title<span class="w"> </span>Page<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="w">  </span><span class="nt">&lt;li&gt;&lt;a</span><span class="w"> </span><span class="na">href=</span><span class="s">"introduction.xhtml"</span><span class="w"> </span><span class="na">epub:type=</span><span class="s">"bodymatter"</span><span class="nt">&gt;</span>Introduction<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="w"> </span><span class="nt">&lt;/ol&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
+</code></pre></div>
+<p>This mark-up can be be added to the toc.xhtml file or you might prefer to set this up in InDesign by setting the Object Export Options for particular text frames.</p>
+<h2 id="how-can-the-landmarks-help-in-the-way-the-ebook-is-read">How can the Landmarks help in the way the eBook is read?<a class="headerlink" href="#how-can-the-landmarks-help-in-the-way-the-ebook-is-read" title="Permanent link">¶</a></h2>
+<p>The way that the eReader software uses the Landmarks does vary. Some software does not make use of these items at all. For iBooks on Apple devices we can be very specific:</p>
+<p>When you distribute the eBook through the Apple iBookstore, Apple will generate a preview of your book. This preview will be constructed from information in the landmarks section.</p>
+<p>If you add the following to one of the items in the Landmarks section, the eBook will open on that page:</p>
+<p><code>epub:type="ibooks:reader-start-page"</code></p>
+<p>This is from the specific iBooks vocabulary and will only make a difference on Apple devices if you add the following attribute to the HTML tag at the top of the toc.xhtml page:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span> <span class="na">xmlns</span><span class="o">=</span><span class="s">"http://www.w3.org/1999/xhtml"</span> <span class="na">xmlns:epub</span><span class="o">=</span><span class="s">"http://www.idpf.org/2007/ops"</span> <span class="na">epub:prefix</span><span class="o">=</span><span class="s">"ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/"</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Getting the page to start at a particular location is very difficult to test for because the eReader software (in this case iBooks on Apple devices), will remember your last location in the eBook, so you can only be certain by putting a fresh copy of the ePUB on to your device.</p>
+<p>Generally though, one specific item needs to be positioned correctly, with the correct <code>epub:type</code> so that it becomes the first page that the user sees on opening their eBook.</p>
+<p>Probably the most contentious issue here is the cover. The ePUB3 standard seems to presume that you don’t want your readers to see the cover as the first page. I can see the logic here, but if you do want the book to open initially at the cover, then you will need to follow the next paragraph on including the cover page in the flow within the spine section.</p>
+<h2 id="pages-outside-the-flow">Pages Outside the Flow<a class="headerlink" href="#pages-outside-the-flow" title="Permanent link">¶</a></h2>
+<p>A more significant controller of your page ordering is the Spine section, where you are likely to find the following:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;itemref</span><span class="w"> </span><span class="na">idref=</span><span class="s">"cover"</span><span class="w"> </span><span class="na">linear=</span><span class="s">"no"</span><span class="w"> </span><span class="nt">/&gt;</span>
+</code></pre></div>
+<p>This means that your cover is not available to your readers other than as a view in the Table of Contents (when in landscape mode on the iPad), or if you have linked in your logical table of contents.</p>
+<p>You can rectify this by using:</p>
+<p><code>&lt;itemref idref="cover" linear="yes" /&gt;</code></p>
+<p>Users can then navigate to the cover by turning back from your title page.</p>
+<h2 id="non-linear-content">Non-Linear Content<a class="headerlink" href="#non-linear-content" title="Permanent link">¶</a></h2>
+<p>The concept of non-linear content is really important, because it means that you can have pages that will not be found by turning the page, but only through a hyperlink. For example, if you want a References page in your eBook, but you don’t want this page located at the end of the book (viewed by swiping through to that page), then you could edit your toc.xhtml file to include:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"references.xhtml"</span><span class="p">&gt;</span>References<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>But then in the spine use:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;itemref</span><span class="w"> </span><span class="na">idref=</span><span class="s">"references"</span><span class="w"> </span><span class="na">linear=</span><span class="s">"no"</span><span class="w"> </span><span class="nt">/&gt;</span>
+</code></pre></div>
+<p>To prevent the page from being in the flow of pages.</p>
+<h2 id="displaying-the-table-of-contents-as-a-page">Displaying the Table of Contents as a Page<a class="headerlink" href="#displaying-the-table-of-contents-as-a-page" title="Permanent link">¶</a></h2>
+<p>InDesign has been great at building the table of contents for us on export. We opted to keep this TOC off the pages, because we unchecked this page in the Articles panel.</p>
+<p>Indesign created an HTML page for the ePUB3 version and this is used as the logical TOC.</p>
+<p>But suppose you want to display this in your eBook with some further enhancements?</p>
+<p>As you have seen earlier in this chapter, the <code>toc.xhtml</code> page is a page built with ordered lists, so we should be able to make it look better with some CSS.</p>
+<p>We can add some CSS into the head tag of this page.</p>
+<p>So I will just go ahead and add that to the <code>toc.xhtml</code> file.</p>
+<p>Now I need to add this to the Spine section of the content.opf file:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;itemref</span><span class="w"> </span><span class="na">idref=</span><span class="s">"toc"</span><span class="w"> </span><span class="nt">/&gt;</span>
+</code></pre></div>
+<p>You can see the image of the new page here on the left.</p>
+<p>Here is the new page for the toc</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="image13.png" data-type="image" data-width="100%" href="../../media/id2rfl/image13.png"><img alt="image13.png" src="../../media/id2rfl/image13.png"/></a></p>
+<p>I have also hidden the Landmarks section of this navigation document by using this CSS:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">nav</span><span class="p">#</span><span class="nn">landmarks</span><span class="w"> </span><span class="p">{</span><span class="k">display</span><span class="p">:</span><span class="kc">none</span><span class="p">;}</span>
+</code></pre></div>
+<h2 id="adding-javascript">Adding Javascript<a class="headerlink" href="#adding-javascript" title="Permanent link">¶</a></h2>
+<p>It is possible to use javascript to your ePUB3 package, for special purposes although this has limited support on devices and eReader software.</p>
+<p>The example I am using here will solve a common problem when going from InDesign to ePUB - Balancing Ragged Lines.</p>
+<p>In your paragraph styles, under Indents and Spacing, you may have switched on ‘Balance Ragged Lines’. This will be ignored on export to ePUB3 (reflowable), but we can use jquery and some code from Adobe (<em>blogs.adobe.com/webplatform/2013/01/30/balancing-text-for-better-readability/</em>).</p>
+<p>We will need to add a class name to the item that we wish to apply this to, so in InDesign for the heading style - be sure to add this to the Export Tagging panel:</p>
+<p>Adding a second class name </p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title=" Adding a second class name " data-type="image" data-width="100%" href="../../media/id2rfl/image14.png"><img alt=" Adding a second class name " src="../../media/id2rfl/image14.png"/></a></p>
+<p>You will notice that we have 2 class names. This is perfectly correct.</p>
+<p>Now we need to add to our own CSS file the following:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">h2</span><span class="p">.</span><span class="nc">balance-text</span><span class="w"> </span><span class="p">{</span>
+<span class="k">text-wrap</span><span class="p">:</span><span class="w"> </span><span class="n">balanced</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Then we add the following javascript files at the time we export the ePUB3:</p>
+<p><code>jquery-1.6.2.min.js</code></p>
+<p><code>jquery.balancetext.min.js</code></p>
+<h2 id="adding-content-with-javascript">Adding Content with Javascript<a class="headerlink" href="#adding-content-with-javascript" title="Permanent link">¶</a></h2>
+<p>jQuery also gives us an easy way to add content to pages.<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
+<p>For example, suppose we want to take a heading and the first paragraph that follows it, and wrap this in a <code>&lt;div&gt;</code> so that we can apply a style to the whole block. We can create a javascript file that includes the following:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+<span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s2">".subhead"</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">next</span><span class="p">(</span><span class="s1">'p'</span><span class="p">).</span><span class="nx">andSelf</span><span class="p">().</span><span class="nx">wrapAll</span><span class="p">(</span><span class="s1">'&lt;div class="staytogether" /&gt;'</span><span class="p">);</span>
+<span class="w"> </span><span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>We then add some style to the CSS like this:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="p">.</span><span class="nc">staytogether</span><span class="w"> </span><span class="p">{</span>
+<span class="k">page-break-inside</span><span class="p">:</span><span class="kc">avoid</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="adding-content-with-css">Adding Content with CSS<a class="headerlink" href="#adding-content-with-css" title="Permanent link">¶</a></h2>
+<p>CSS also has the potential for us to add some content at run-time.</p>
+<p>In this example we are going to add a flourish before and after the scene name in the play.</p>
+<p>The CSS we need is:</p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">scene</span><span class="p">::</span><span class="nd">before</span><span class="o">,</span><span class="w"> </span><span class="p">.</span><span class="nc">scene</span><span class="p">::</span><span class="nd">after</span><span class="w"> </span><span class="p">{</span>
+<span class="w"> </span><span class="k">font-family</span><span class="p">:</span><span class="n">ZapfDingbatsITC</span><span class="p">;</span>
+<span class="w"> </span><span class="k">content</span><span class="p">:</span><span class="s1">'✣'</span><span class="p">;</span>
+<span class="w"> </span><span class="k">font-weight</span><span class="p">:</span><span class="kc">normal</span><span class="p">;</span>
+<span class="w"> </span><span class="k">font-size</span><span class="p">:</span><span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
+<span class="w"> </span><span class="k">vertical-align</span><span class="p">:</span><span class="kc">middle</span><span class="p">;</span>
+<span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="mh">#6bc77e</span><span class="p">;</span>
+<span class="w"> </span><span class="k">margin</span><span class="p">:</span><span class="mi">0</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Content added with CSS</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-title="image15.png" data-type="image" data-width="100%" href="../../media/id2rfl/image15.png"><img alt="image15.png" src="../../media/id2rfl/image15.png"/></a></p>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
+<p>This chapter has shown you some of the edits you can make to the inner workings of the ePUB package.</p>
+<p>Remember, if you want to ‘roundtrip’ back to InDesign then you will need to keep a record of these changes so that you can re-instate them, when InDesign overwrites your ePUB file. It is possible to add your own CSS at export time, but all other changes (to the package documents, toc.xhtml, landmarks etc.)- these will be lost at export time.</p>
+<p>As time goes on, the export to ePUB3 feature of InDesign will no doubt improve, and so it may be that we will have more control over the output without having to make any edits inside the ePUB package.</p>
+<p>Until that time — have fun!</p>
+<div class="footnote">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>The fonts that are available on the iOS devices are listed here: <em><a href="http://iosfonts.com">iosfonts.com</a></em> <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn:2">
+<p>You might consider using a Git repository for this process so that you edits can be shared <a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+<li id="fn:3">
+<p>The guide section may be required when you convert this ePub to the MOBI format for the Kindle <a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">↩</a></p>
+</li>
+<li id="fn:4">
+<p>Some features of InDesign (such as animation) will automatically generate JavaScript inside the exported ePub. More on this topic when we explore the fixed-layout eBook. <a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">↩</a></p>
+</li>
+</ol>
+</div>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2023 Chris Jennings
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://www.instagram.com/chris.jennings.art/" rel="noopener" target="_blank" title="www.instagram.com">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141m0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7m146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8m76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8M398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+<script src="../../javascripts/glightbox.min.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": false, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
