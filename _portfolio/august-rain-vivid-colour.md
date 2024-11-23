@@ -4,7 +4,6 @@ title: August Rain, Vivid Colour
 date: 2023-08-06T10:11:28.325Z
 image: https://live.staticflickr.com/65535/53096317547_291199ba55_h_d.jpg
 caption: Crocosmia
-nft: ""
 tags:
   - art
   - root2A
