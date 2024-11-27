@@ -1,7 +1,7 @@
-# - name: Publisha
-#   siteurl: https://www.publisha.org
-#   title: see Digital Publishing Hub
-#   order: 6
+- name: Subscribe
+  siteurl: https://chrisjenningsart.substack.com/
+  title: Subscribe to Substack and get an email when I post
+  order: 6
 # - name: Notes
 #   siteurl: https://notes.chrisjennings.net
 #   title: Notes
