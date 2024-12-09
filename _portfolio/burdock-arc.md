@@ -13,3 +13,5 @@ In the Summer meadows the Burdock plant shows its purple flowers. The green spik
 ![Burdock in the studio with the artist for scale](https://live.staticflickr.com/65535/54132047436_1575e7fae9_h_d.jpg "Burdock in the studio with the artist for scale")
 
 **Varnished giclée print on 3 panels, bolted together - overall 565mm x 1093mm**
+
+![on the wall in the studio](https://live.staticflickr.com/65535/54192357572_d43e65b4ba_h_d.jpg "on the wall in the studio")
