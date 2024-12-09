@@ -8,3 +8,5 @@ tags:
   - portrait format
 ---
 During a walk through the winter forest, the contrasting colors at ground level appear to amplify each other's vibrancy.
+
+![on the wall](https://live.staticflickr.com/65535/54193740610_2149cd7cee_h_d.jpg "on the wall")
