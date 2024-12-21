@@ -780,7 +780,7 @@ h3.tag-anchor i {
 }
 
 .site-header {
-    padding: 1% 2% 1% 2%;
+    padding: .8em 2em 1em 2em;
     background: #fff;
     display: inline-block;
     /* float: left; */
