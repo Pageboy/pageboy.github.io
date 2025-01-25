@@ -12,6 +12,6 @@ The ancient olive trees on the Greek island stand heavy with fruit. In early Sep
 
 ![Olive Arcs in the Studio](https://live.staticflickr.com/65535/54085074452_a3de9ac538_h_d.jpg "Olive Arcs in the studio")
 
-**Varnished giclée print on 3 panels, bolted together - overall 915mm x 566mm**
+**UV varnished archival ink on fine art paper bonded to 3 panels, bolted together - overall 915mm x 566mm**
 
 ![On the wall in the studio](https://live.staticflickr.com/65535/54192320652_2cd039d062_h_d.jpg "On the wall in the studio")

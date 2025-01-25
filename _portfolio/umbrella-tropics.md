@@ -16,4 +16,4 @@ From the Sri Lanka series
 
 ![In the studio](https://live.staticflickr.com/65535/53667243010_66ff7b3527_h_d.jpg "In the studio")
 
-**Varnished giclée print on panel 565mm x 400mm**
+**UV varnished archival ink on fine art paper bonded to panel 565mm x 400mm**

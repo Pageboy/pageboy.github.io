@@ -12,4 +12,4 @@ Along the river, the banks are obscured by the profuse growth of reeds and rushe
 
 ![In the studio](https://live.staticflickr.com/65535/54042657738_067656ec22_h_d.jpg "In the studio")
 
-**Varnished giclée print on 3 panels, bolted together - overall 566mm x 1050mm**
+**UV varnished archival ink on fine art paper bonded to 3 panels, bolted together - overall 566mm x 1050mm**

@@ -15,4 +15,4 @@ For a few brief days the garden *flags* show their brilliant purples and yellows
 
 ![In the studio](https://live.staticflickr.com/65535/53876987288_805d405d62_h_d.jpg "In the studio")
 
-**Varnished giclée print on 3 panels 350mm x 566mm, bolted together - overall 1482mm x 566mm**
+**UV varnished archival ink on fine art paper bonded to 3 panels 350mm x 566mm, bolted together - overall 1482mm x 566mm**

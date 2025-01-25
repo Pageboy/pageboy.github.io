@@ -14,4 +14,4 @@ The vibrant hues dance in stark contrast against the lush, verdant greens that m
 
 ![In the studio](https://live.staticflickr.com/65535/54285567486_727986d6e0_h_d.jpg "In the studio")
 
-**Varnished giclée print on 2 panels 400mm x 565mm, bolted together - overall 565mm x 800mm**
+**UV varnished archival ink on fine art paper bonded to 2 panels 400mm x 565mm, bolted together - overall 565mm x 800mm**

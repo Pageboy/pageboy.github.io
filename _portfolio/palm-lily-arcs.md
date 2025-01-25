@@ -12,4 +12,4 @@ The gardens of the King's Palace in Phnom Penh boast a stunning array of exotic 
 
 ![In the studio](https://live.staticflickr.com/65535/54285809513_87151e7f13_h_d.jpg "In the studio")
 
-**Varnished giclée print on 3 panels , bolted together - overall 565mm x 917mm**
+**UV varnished archival ink on fine art paper bonded to 3 panels , bolted together - overall 565mm x 917mm**

@@ -17,7 +17,7 @@ The stone colours switch from wet to dry; gloss to matt.
 * Water Smoothed
 * Waved Sea
 
-**Varnished giclée print on panel 350mm x 565mm**
+**UV varnished archival ink on fine art paper bonded to panel 350mm x 565mm**
 
 ![On the wall](/uploads/pebbledseainsitu.jpeg "Showing scale")
 

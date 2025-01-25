@@ -16,4 +16,4 @@ The leaves, with their graceful curves, and the vertical ascent of the vertical 
 
 From the Sri Lanka series
 
-**Varnished giclée print on 2 panels 400mm x 565mm, bolted together - overall 565mm x 800mm**
+**UV varnished archival ink on fine art paper bonded to 2 panels 400mm x 565mm, bolted together - overall 565mm x 800mm**

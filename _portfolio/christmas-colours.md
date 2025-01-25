@@ -16,4 +16,4 @@ Leaves have fallen from the trees but the *Oregon Grape* plants that keep their 
 
 ![Panel mounted and hanging at home](/uploads/christmascolours_withme.jpeg)
 
-**Varnished giclée print on panel 565mm x 400mm**
+**UV varnished archival ink on fine art paper bonded to panel 565mm x 400mm**

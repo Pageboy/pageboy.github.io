@@ -12,7 +12,7 @@ The square is divided by a golden rectangle that is occupied by the  image of a 
 
 The colours of the sub divisions within the square are extracted from the vivid palette of the orchid's petals.
 
-**Varnished giclée print on panel 565mm x 565mm**
+**UV varnished archival ink on fine art paper bonded to panel 565mm x 565mm**
 
 ![Studio view](https://live.staticflickr.com/65535/53593868895_fc6e20113e_h_d.jpg "Studio View")
 

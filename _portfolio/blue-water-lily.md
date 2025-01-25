@@ -14,4 +14,4 @@ Their petals mirror the cerulean hues of the sky, while delicate light yellow st
 
 ![Blue Water Lily in the studio](https://live.staticflickr.com/65535/53673210841_b6bb876417_h_d.jpg "Blue Water Lily in the studio")
 
-**Varnished giclée print on 3 panels 350mm x 566mm, bolted together - overall 1482mm x 566mm**
+**UV varnished archival ink on fine art paper bonded to 3 panels 350mm x 566mm, bolted together - overall 1482mm x 566mm**

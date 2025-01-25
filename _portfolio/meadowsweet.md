@@ -12,4 +12,4 @@ On the damp meadow by the river, the stalks of the meadowsweet flowers contrast 
 
 ![In the studio](https://live.staticflickr.com/65535/53936050428_9f158a72f5_h_d.jpg "In the studio")
 
-**Varnished giclée print on 3 panels, bolted together - overall 565mm x 1093mm**
+**UV varnished archival ink on fine art paper bonded to 3 panels, bolted together - overall 565mm x 1093mm**

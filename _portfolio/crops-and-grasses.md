@@ -12,4 +12,4 @@ Under the cerulean sky the wind brushes the barley planted in one field as waves
 
 Arcs of green and yellow with their shared centres are mixed in with the images of dense undergrowth. The distant horizon generates a line that defines the geometric conjunction.
 
-**Varnished giclée print on panel 400mm x 565mm**
+**UV varnished archival ink on fine art paper bonded to panel 400mm x 565mm**

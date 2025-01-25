@@ -10,4 +10,4 @@ tags:
 ---
 A walk around a Thames side church. Chalk white, flint grey and brick red are the colours that expose this wall to my camera. Sweeps and arcs are blended into the constructed *divine* rectangles.
 
-**Varnished giclée print on panel 350mm x 565mm**
+**UV varnished archival ink on fine art paper bonded to panel 350mm x 565mm**

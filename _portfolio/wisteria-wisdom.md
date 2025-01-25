@@ -14,4 +14,4 @@ Up close, the violets and purples blend with light lavender tones; these colours
 
 ![Wisteria wisdom](/uploads/img_2521.jpeg "Wisteria wisdom")
 
-Varnished giclée print on panel 400mm x 565mm
+UV varnished archival ink on fine art paper bonded to panel 400mm x 565mm

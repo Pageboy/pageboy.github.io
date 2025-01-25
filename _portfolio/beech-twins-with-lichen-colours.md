@@ -14,4 +14,4 @@ These trunks are twins, coming from the same roots and are known as *codominant 
 
 ![Studio View](https://live.staticflickr.com/65535/53791721662_e5f1e52f4d_h_d.jpg "Studio View")
 
-**Varnished giclée print on 3 panels, bolted together - overall 565mm x 1093mm**
+**UV varnished archival ink on fine art paper bonded to 3 panels, bolted together - overall 565mm x 1093mm**

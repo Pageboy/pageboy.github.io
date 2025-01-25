@@ -12,4 +12,4 @@ The wheat in the field is mature and ready for harvest. The colours of the stalk
 
 ![In the studio](https://live.staticflickr.com/65535/53867153154_f100b9acbc_h_d.jpg "In the studio")
 
-**Varnished giclée print on 2 panels 400mm x 565mm, bolted together - overall 565mm x 800mm**
+**UV varnished archival ink on fine art paper bonded to 2 panels 400mm x 565mm, bolted together - overall 565mm x 800mm**

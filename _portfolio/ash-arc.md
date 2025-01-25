@@ -11,4 +11,4 @@ In the forest the ash trees stand strong against the Summer foliage.
 
 ![Studio view](https://live.staticflickr.com/65535/53936050423_ae766d0905_h_d.jpg "Studio view")
 
-**Varnished giclée print on single panel 400mm x 565mm**
+**UV varnished archival ink on fine art paper bonded to single panel 400mm x 565mm**
