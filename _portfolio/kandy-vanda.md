@@ -14,6 +14,6 @@ Each petal seems to shimmer in an an array of pastel hues.
 
 From the Sri Lanka Series
 
-![In the studio](https://live.staticflickr.com/65535/53552888987_7ba0b75d68_h_d.jpg "In the studio")
+![In the studio](https://live.staticflickr.com/65535/54284680357_603a569234_h_d.jpg "In the studio")
 
 **Varnished giclée print on 3 panels , bolted together - overall 565mm x 917mm**
