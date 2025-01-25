@@ -12,6 +12,6 @@ Emerging from their winter seclusion, our exotic Fritillaries unfurl their delic
 
 The vibrant hues dance in stark contrast against the lush, verdant greens that majestically adorn the plants' crowns.
 
-![In the studio](https://live.staticflickr.com/65535/53665119769_37bc40341a_h_d.jpg "In the studio")
+![In the studio](https://live.staticflickr.com/65535/54285567486_727986d6e0_h_d.jpg "In the studio")
 
 **Varnished giclée print on 2 panels 400mm x 565mm, bolted together - overall 565mm x 800mm**
