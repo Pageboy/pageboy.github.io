@@ -18,6 +18,7 @@ layout: default
   {%- if page.flickr_share -%}
   <p><a href="{{ page.flickr_share }}">See this on Flickr</a></p>
   {%- endif -%}
+  {% include post_info.html post=page %}
   </section>
   <!-- Social media shares -->
   {% include share_buttons.html %}
