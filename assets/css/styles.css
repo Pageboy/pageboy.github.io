@@ -213,7 +213,7 @@ img[align=right] {
 
 article, .comments, .feature-image .post-content, .feature-image footer,
 .posts .post-teaser, .site-footer, .first-post {
-    padding: 1% 30%;
+    padding: 1% 15%;
 }
 
 .art-teaser {
@@ -244,7 +244,7 @@ article, .comments, .feature-image .post-content, .feature-image footer,
 @media (max-width: 1000px) {
     article, .comments, .feature-image .post-content, .feature-image footer,
     .posts .post-teaser, .site-footer {
-        padding: 6% 14%;
+        padding: 6% 4%;
     }
 }
 
@@ -1156,6 +1156,28 @@ ul.share-buttons .sr-only {
 .post-content {
   /* border: 1px solid red; */
 }
+
+.post-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+    justify-content: center;
+    justify-content: space-between;
+    justify-content: space-around;
+    padding: 2px 12px;
+    margin: 15px 3%;
+  
+  }
+
+
+
+
+
 
 .post-content img {
   width: 100%;
