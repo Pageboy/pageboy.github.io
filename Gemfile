@@ -4,8 +4,11 @@ source 'https://rubygems.org'
 # gem "ffi", "< 1.17.0"
 # gem "sass-embedded",  "< 1.54"
 
+
 gem 'jekyll'
 gem "jekyll-sass-converter", "~> 2.0"
+
+gem "ffi", "= 1.16.3"
 
 group :jekyll_plugins do
     gem "jekyll-gist"
