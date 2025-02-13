@@ -16,8 +16,6 @@ Other work that you can find here:
 - [Some projects including _Megalithic Landscapes_](/projects)
 - [Some photographs](/photographs)
 
-[Artist's Statement](/statement)
-
 ![Studio View](/uploads/nik_3016.jpeg "Chris and some recent work")
 
 I have divided my recent work here into into series; mainly in respect of the proportions.

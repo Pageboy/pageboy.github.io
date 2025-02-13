@@ -1,13 +1,14 @@
 ---
-hide: true
+hide: false
 layout: page
-title: Convergent Symmetries
+title: Statement
 permalink: /statement
 order: 1
 date: 2024-12-22T14:44:28.645Z
 gridlayout: true
 # icon: fa-connectdevelop
 ---
+
 ### Fusing nature's colours with cohesive geometries
 
 All works are wall hung; mostly panels of a 32mm depth.
