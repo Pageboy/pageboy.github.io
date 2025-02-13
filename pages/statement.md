@@ -1,10 +1,10 @@
 ---
 hide: true
-layout: series
+layout: page
 title: Convergent Symmetries
 permalink: /statement
 order: 1
-date: 2022-12-22T14:44:28.645Z
+date: 2024-12-22T14:44:28.645Z
 gridlayout: true
 # icon: fa-connectdevelop
 ---
@@ -14,8 +14,7 @@ All works are wall hung; mostly panels of a 25mm depth. Some framed prints will 
 
 ![](https://live.staticflickr.com/65535/53299807933_9663242d3d_h_d.jpg)
 
-> [!details] 
-> **Rose Mallow** - Varnished giclée print on 2 panels 400mm x 565mm, bolted together - overall 565mm x 800mm
+> **Rose Mallow** - UV varnished archival ink on fine art paper bonded to 2 panels 400mm x 565mm, bolted together - overall 565mm x 800mm
 
 ### My Creative Process
 
@@ -25,8 +24,7 @@ The creative process of blending photographs and geometry often requires a caref
 
 ![](https://live.staticflickr.com/65535/53511325188_42a447f277_h_d.jpg)
 
-> [!details] 
-> **Kandy Vanda** - Varnished giclée print on 3 panels , bolted together - overall 565mm x 917mm
+> **Kandy Vanda** - UV varnished archival ink on fine art paper bonded to 3 panels , bolted together - overall 565mm x 917mm
 
 ### Visual Journey
 
@@ -34,8 +32,7 @@ My collages encapsulate the duality of creation - the vibrant spontaneity of nat
 
 ![](https://live.staticflickr.com/65535/53058778522_45dbf9474b_h_d.jpg)
 
-> [!details] 
-> **Grass Splendour (Triptych)** - Museum Grade varnished giclée prints on 3 panels. Each one is 350mm x 565mm - overall 565mm x 1050mm. Panels are bolted together with stainless steel nuts and bolts.
+> **Grass Splendour (Triptych)** - UV varnished archival ink on fine art paper bonded to 3 panels. Each one is 350mm x 565mm - overall 565mm x 1050mm. Panels are bolted together with stainless steel nuts and bolts.
 
 ### Digital Collage
 
