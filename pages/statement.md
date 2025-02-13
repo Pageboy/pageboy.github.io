@@ -10,7 +10,7 @@ gridlayout: true
 ---
 ### Fusing nature's colours with cohesive geometries
 
-All works are wall hung; mostly panels of a 25mm depth. Some framed prints will also be displayed.
+All works are wall hung; mostly panels of a 32mm depth.
 
 ![](https://live.staticflickr.com/65535/53299807933_9663242d3d_h_d.jpg)
 
