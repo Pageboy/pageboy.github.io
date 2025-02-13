@@ -11,3 +11,7 @@ _site/*
 # Theme Gem files
 *.gem
 .gems
+
+
+Gemfile
+Gemfile.lock
