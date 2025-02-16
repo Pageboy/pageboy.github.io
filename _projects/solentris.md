@@ -22,4 +22,4 @@ In 2000 it was decided to make better use of the void in the building and the sc
 
 See this video transferred from VHS tape.
 
-<div class="video-box"><iframe width="560" height="315" src="https://www.youtube.com/embed/https://youtu.be/07ZL1UL7Lx0?rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div class="video-box"><iframe width="560" height="315" src="https://www.youtube.com/embed/07ZL1UL7Lx0?rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
