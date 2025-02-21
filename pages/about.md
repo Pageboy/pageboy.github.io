@@ -14,7 +14,7 @@ Other work that you can find here:
 
 - [Early work before the year 2000](/earlywork)
 - [Some projects including _Megalithic Landscapes_](/projects)
-- [Some photographs](/photographs)
+- [My photographs](https://photos.chrisjennings.net/)
 
 ![Studio View](/uploads/nik_3016.jpeg "Chris and some recent work")
 
