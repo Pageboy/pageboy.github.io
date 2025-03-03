@@ -399,9 +399,13 @@ header {
 }
 
 .post-info {
-    border-radius: 1em;
+    /* border-radius: 1em; */
     padding-right: 0.5em;
-    display: inline-flex;
+    display: block;
+}
+
+.art .post-info {
+flex: 1 1 500px;
 }
 
 .post-info a {
@@ -1171,13 +1175,15 @@ ul.share-buttons .sr-only {
     justify-content: space-between;
     justify-content: space-around;
     padding: 2px 12px;
-    margin: 15px 3%;
-  
+    margin: 15px auto;
+    max-width: 900px;
   }
 
 
 
-
+.post-content p {
+    flex: 1 1 700px;
+}
 
 
 .post-content img {
