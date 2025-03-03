@@ -7,7 +7,7 @@ source 'https://rubygems.org'
 
 gem 'jekyll'
 gem "jekyll-sass-converter", "~> 2.0"
-
+gem "bigdecimal"
 gem "ffi", "= 1.16.3"
 
 group :jekyll_plugins do
