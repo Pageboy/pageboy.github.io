@@ -8,4 +8,4 @@ tags:
   - art
   - portrait format
 ---
-The intense blue of the tropical sky is seen the through the sweeping arcs of the palm leaves.
+The intense blue of the tropical sky is seen through the sweeping arcs of the palm leaves.
