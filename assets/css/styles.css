@@ -1176,10 +1176,18 @@ ul.share-buttons .sr-only {
     justify-content: space-around;
     padding: 2px 12px;
     margin: 15px auto;
+    max-width: 1800px;
+  }
+
+  body.art .post-content {
+    display:block;
     max-width: 900px;
   }
 
-
+/* div.art {
+    max-width: 1100px;
+    margin:auto;
+} */
 
 .post-content p {
     flex: 1 1 700px;
