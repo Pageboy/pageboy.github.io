@@ -1179,7 +1179,7 @@ ul.share-buttons .sr-only {
     max-width: 1800px;
   }
 
-  body.art .post-content {
+  body.art .post-content, body.series .post-content, body.tags .post-content {
     display:block;
     max-width: 900px;
   }
