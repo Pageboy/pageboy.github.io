@@ -4,7 +4,7 @@ title: Palmatum
 date: 2024-11-07T16:33:00.000Z
 image: https://live.staticflickr.com/65535/54192455657_8121ef9773_h_d.jpg
 caption: Japanese Maple in the arboretum
-forsale: RXEDWHRR63F4Q
+forsale: ""
 tags:
   - art
   - root2A
