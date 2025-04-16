@@ -1594,7 +1594,7 @@ section.art img {
   }
 
   .forsale {
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
     border:1px solid #c2c2c2;
@@ -1602,6 +1602,7 @@ section.art img {
     /* max-height: 100vh; */
     margin:1em auto 1em auto;
     padding:.5em 1em;
+    width:45%;
     /* height:2em; */
     background-color: #1f6c8d;
     color:white;
@@ -1672,12 +1673,14 @@ section.photo img {
 section.sale {
     border:1px solid rgb(204, 204, 204);
     background-color: rgb(249, 249, 249);
-    display: flex;
+    /* display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-between; */
     /* align-items: center; */
     padding: .5em 1em;
-    margin-top: .6em;
+    margin:1em auto 1em auto;
+    padding:.5em 1em;
+    width:45%;
 }
 
 .sale h2 {
