@@ -15,7 +15,7 @@ layout: default
     </p>
     {{ content | replace: "_uploads", "uploads" }} {% include post_info.html
     post=page %}
-  </section>
+  
   {% if page.forsale %}
   <section class="sale">
   <script src="https://www.paypal.com/sdk/js?client-id=BAARF0DaO2Ka9JaM6mtWB6_YkDdGM7S-e77RHiWW4FPY3eSac-4ca_74jm18MRqNiaW4TqPazdc3djzEsA&components=hosted-buttons&disable-funding=venmo&currency=GBP"></script>
@@ -28,7 +28,7 @@ layout: default
   <div class="details"><p>The item will be packaged and shipped to any address in the UK or EU. Other destinations, then please contact via email icon below. If you wish to collect the work personally from my studio then please contact me through the email icon below.</p></div>
   </section>
 {% endif %}
-  
+</section>
   {% if page.nft %}
   <section class="sale">
   <h3>NFT</h3>

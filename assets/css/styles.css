@@ -1680,7 +1680,7 @@ section.sale {
     padding: .5em 1em;
     margin:1em auto 1em auto;
     padding:.5em 1em;
-    width:45%;
+    width:65%;
 }
 
 .sale h2 {
@@ -1713,4 +1713,12 @@ font-size: .8em;
 
 #smart-button-container img {
     max-width: 90%;
+}
+
+
+
+@media (max-width: 1000px) {
+    section.sale {
+        width:100%;
+    }
 }
