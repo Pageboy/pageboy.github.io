@@ -3,7 +3,7 @@ layout: art
 title: Wall Mix
 date: 2023-11-10T18:28:19.965Z
 image: https://live.staticflickr.com/65535/53322834251_5bcace23f1_h_d.jpg
-caption: Composed with the wall of St James the Less Church in Pangbourne
+caption: Composed with the wall of Holy Trinity Church, Cookham
 tags:
   - art
   - golden section
