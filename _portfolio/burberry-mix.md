@@ -1,7 +1,7 @@
 ---
 layout: art
 title: Burberry Mix
-date: 2025-06-08T19:32:00.000Z
+date: 2025-06-07T20:32:00.000Z
 image: https://live.staticflickr.com/65535/54575510911_1ecbff96db_h_d.jpg
 caption: Burberry arcs and segments
 tags:
