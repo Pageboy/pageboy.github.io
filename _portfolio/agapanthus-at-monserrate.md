@@ -2,7 +2,7 @@
 layout: art
 title: Agapanthus at Monserrate
 date: 2025-06-25T10:38:00.000Z
-image: https://www.flickr.com/photo_download.gne?size=h&id=54612999956&secret=eae895e6de
+image: https://live.staticflickr.com/65535/54612999956_eae895e6de_h.jpg
 caption: African Lily arcs
 tags:
   - art
