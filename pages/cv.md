@@ -41,3 +41,4 @@ hide: true
 |   1988 -1993 	|      	| Creative Consultant, Research Machines plc                                         	|
 |    1993-1995 	|      	| Senior Producer and Head of Authoring, ATTICA Cybernetics (CD-ROM Publisher)       	|
 | 1995 to 2024 	|      	| Senior Lecturer in Digital Publishing at Oxford Brookes University                 	|
+|         2025 	|      	| Art Now - Art Fair in Peckham, London                	                                |
