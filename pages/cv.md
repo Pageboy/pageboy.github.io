@@ -37,8 +37,8 @@ hide: true
 |         1986 	|      	| 16 Studios, Museum of Modern Art, Oxford                                           	|
 |              	|      	| Completed "Solentris", a large Kinetic sculpture for Southampton General Hospital. 	|
 |         1989 	|      	| Completed major Sculpture at John Radcliffe Hospital, Oxford                       	|
+|         2025 	|      	| Art Now - Art Fair in Peckham, London                	                                |
 |              	|      	| **Employment:**                                                                    	|
 |   1988 -1993 	|      	| Creative Consultant, Research Machines plc                                         	|
 |    1993-1995 	|      	| Senior Producer and Head of Authoring, ATTICA Cybernetics (CD-ROM Publisher)       	|
 | 1995 to 2024 	|      	| Senior Lecturer in Digital Publishing at Oxford Brookes University                 	|
-|         2025 	|      	| Art Now - Art Fair in Peckham, London                	                                |
