@@ -8,4 +8,4 @@ tags:
   - art
   - golden section
 ---
-Walking around the Oxford Botanical Gardens, the young Buckeye plant displays its striking maroon leaves. As summer unfolds, these rich hues will gradually shift to green. For now, the deep red tones stand in bold contrast to the surrounding greenery, offering a vivid reminder of nature’s quiet transformations.
+In the Oxford Botanical Gardens, the young Buckeye plant displays its striking maroon leaves. As summer unfolds, these rich hues will gradually shift to green. For now, the deep red tones stand in bold contrast to the surrounding greenery. The colours in the arcs and rectangles echo the hues and tones found by the camera's sensor.
