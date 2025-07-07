@@ -2,7 +2,7 @@
 layout: art
 title: Buckeye Botanised
 date: 2025-07-06T11:43:00.000Z
-image: https://live.staticflickr.com/65535/54636262502_645bf8a033_h.jpg
+image: https://live.staticflickr.com/65535/54638062097_d7bf158a68_h.jpg
 caption: Buckeye in the Botanical Gardens
 tags:
   - art
