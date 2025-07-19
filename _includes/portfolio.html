@@ -1,9 +1,12 @@
 {%- assign itemcount = 0 -%}
 <div class="posts">
-  {%- assign items = site.portfolio | sort: 'date' | reverse -%} {%- for art in
-  items limit:400 -%}
+  {%- assign items = site.portfolio | sort: 'date' | reverse -%} 
+  {%- for art in items limit:400 -%}
   {%- if art.tags contains include.group -%}
-  <div class="post-teaser toShow">
+  {%- if {{art.title}} == {{site.portfolio.last.title}} -%}
+  <div class="post-teaser firstone toShow">
+  {%- else -%}<div class="post-teaser toShow">
+  {%- endif -%}
     {% if art.image %} {% assign image_url = art.image | replace: "_uploads",
     "uploads" -%}
     <div class="post-img">

@@ -40,6 +40,11 @@
    opacity:0; 
 }
 
+.firstone {
+  flex-basis: 100%;
+  flex-shrink: 0;
+}
+
 /* animation */
 
 .animated {
@@ -172,4 +177,10 @@
   .post-teaser {
     flex-basis: 400px;
   }
+}
+
+
+.firstone {
+  flex-basis: 100%;
+  flex-shrink: 0;
 }
