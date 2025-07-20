@@ -2,7 +2,7 @@
 title: Photographs
 permalink: "/photographs/"
 layout: photographs
-published: false
+published: true
 image:
 description:
 hide: true

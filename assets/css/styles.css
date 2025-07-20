@@ -919,6 +919,7 @@ h3.tag-anchor i {
         right:0;
         top: 45px;
         border-right:20px solid white;
+        border-bottom:20px solid white;
     }
 
     nav ul.hideme {
@@ -933,7 +934,9 @@ h3.tag-anchor i {
     nav li {
         width: 100%;
         float: left;
-        position: relative
+        position: relative;
+        text-align: left;
+        margin-left: 40px;
     }
 
     nav a {
@@ -945,7 +948,6 @@ h3.tag-anchor i {
         display: block;
         width: 100%;
         position: relative;
-
     }
 
     nav a#pull:after {
