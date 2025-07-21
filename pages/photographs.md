@@ -5,7 +5,7 @@ layout: photographs
 published: true
 image:
 description:
-hide: true
+hide: false
 gridlayout: true
 icon: fa-camera-retro
 order: 3
