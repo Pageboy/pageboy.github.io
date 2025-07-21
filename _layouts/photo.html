@@ -15,9 +15,10 @@ layout: default
     <img src="{{ page.image }}" alt="{{ page.caption }}">
   </p>
   {% include post_info.html post=page %}
-        {% if page.flickr_album %}
+  {%- assign page.flickr-album = page.flickr_album | replace: "flickr", "" -%}
+        {% unless page.flickr_album == empty or page.flickr_album == null %}
       <!-- <p style="color:#869387;"><i class="fa fa-flickr"></i> Here is a gallery of these images kept on <a title="go to Flickr" href="https://www.flickr.com/photos/chrisjennings/albums/{{page.flickr_album}}">Flickr</a></p> -->
-{%- assign flickr-album = page.flickr_album | replace: "flickr", "" -%}
+
                 <div class="gallerycontainer content">
                   <p class="info">Here is a gallery of images.</p>
                         <p class="info">Click each image here for an enlarged view.</p>
@@ -40,12 +41,12 @@ layout: default
                 });
                 </script>
 
-{{ content | replace: "_uploads", "uploads" }}
-
                 <p style="color:#869387;text-align:center;"><i class="fa fa-flickr"></i> <a href="https://www.flickr.com/photos/chrisjennings/albums/{{page.flickr_album}}">See this gallery on Flickr</a></p>
                 </div>
 
-                {% endif %}
+                {% endunless %}
+
+                {{ content | replace: "_uploads", "uploads" }}
   </section>
   <!-- Social media shares -->
   {% include share_buttons.html %}
