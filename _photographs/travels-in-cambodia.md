@@ -4,7 +4,7 @@ title: Travels in Cambodia
 date: 2025-01-23T17:20:00.000+00:00
 image: https://live.staticflickr.com/65535/54291183890_24697671e0_h_d.jpg
 caption: Angkor Thom
-flickr_album: flickr
+flickr_album: ""
 ---
 ![Artificial Window at Bayon Temple](https://live.staticflickr.com/65535/54290751521_c5370120c5_h_d.jpg)
 
