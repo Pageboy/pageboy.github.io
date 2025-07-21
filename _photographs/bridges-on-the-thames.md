@@ -6,7 +6,7 @@ image: https://live.staticflickr.com/65535/54307154949_686fde7999_h_d.jpg
 caption: Clifton Hampden
 tags: null
 ---
-## Here are more bridge images along the Thames
+## More bridge images along the Thames on this page
 
 ![Culham Road Bridge](https://live.staticflickr.com/65535/51303205123_f9f16e5551_h_d.jpg)
 
