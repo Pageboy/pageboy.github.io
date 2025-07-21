@@ -4,6 +4,7 @@ title: Bridges on the Thames
 date: 2025-01-05T15:31:00.000+00:00
 image: https://live.staticflickr.com/65535/54307154949_686fde7999_h_d.jpg
 caption: Clifton Hampden
+flickr_album: "72157719717623568"
 tags: null
 ---
 ## More bridge images along the Thames on this page
