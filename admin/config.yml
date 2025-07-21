@@ -281,6 +281,13 @@ collections:
           required: false,
         }
       - {
+          label: "Flickr Album",
+          name: "flickr_album",
+          widget: "string",
+          required: false,
+          default: "flickr",
+        }
+      - {
           label: "Body",
           name: "body",
           widget: "markdown",
