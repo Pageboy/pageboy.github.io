@@ -47,7 +47,7 @@ collections:
       - {
           label: "Flickr Album",
           name: "flickr_album",
-          default: "flickr",
+          default: "",
           widget: "string",
           required: false,
         }
