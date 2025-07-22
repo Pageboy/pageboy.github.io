@@ -1,7 +1,7 @@
 ---
 layout: photo
 title: Megalithic Landscapes
-date: 2025-07-16T19:47:00.000+01:00
+date: 2018-02-16T23:18:00.000+00:00
 image: https://live.staticflickr.com/65535/54319778972_5a0b42391a_h_d.jpg
 caption: Ballochroy stones, Knapdale, Scotland
 flickr_album: "72157638454280223"
