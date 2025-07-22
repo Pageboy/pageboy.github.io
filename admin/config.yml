@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: Pageboy/chrisjennings # Path to your GitHub repository
+  repo: Pageboy/pageboy.github.io # Path to your GitHub repository
   branch: master # Branch to update (master by default)
   site_domain: chrisjennings.net #Your site on netlify
   use_graphql: true
@@ -279,7 +279,7 @@ collections:
       - {
           label: "Flickr Album",
           name: "flickr_album",
-          default: "flickr",
+          default: "",
           widget: "string",
           hint: "Get the Flickr Album ID number",
           required: false,
