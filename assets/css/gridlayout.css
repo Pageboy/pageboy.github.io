@@ -162,9 +162,9 @@
   /* height: 300px !important; */
 }
 
-.photographs .post-teaser {
+/* .photographs .post-teaser {
   flex-basis: 400px;
-}
+} */
 
 @media screen and (max-width: 768px) {
   .post-teaser {
