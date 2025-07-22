@@ -4,11 +4,11 @@ title: Megalithic Landscapes
 date: 2025-07-16T19:47:00.000+01:00
 image: https://live.staticflickr.com/65535/54319778972_5a0b42391a_h_d.jpg
 caption: Ballochroy stones, Knapdale, Scotland
-flickr_album: ""
+flickr_album: "72157638454280223"
 ---
 I am looking at my collection of photographs of standing stones and stone circles in the UK.  These photographs were taken as part of a project to document them in the landscape. The photographs were taken between 1973 and 1985.
 
-[You can see the complete digital gallery here.](https://www.chrisjennings.net/projects/megalithic-landscapes/)
+You can see the complete digital gallery here.
 
 The photographs were taken with film and eventually scanned for use on the web site. Images are stored on Flickr.
 
