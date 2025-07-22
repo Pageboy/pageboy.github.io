@@ -1,6 +1,11 @@
+# backend:
+#   name: git-gateway
+#   branch: master
+#   site_url: https://www.chrisjennings.net
+
 backend:
   name: github
-  repo: Pageboy/chrisjennings # Path to your GitHub repository
+  repo: Pageboy/pageboy.github.io # Path to your GitHub repository
   branch: master # Branch to update (master by default)
   site_domain: chrisjennings.net #Your site on netlify
   use_graphql: true
