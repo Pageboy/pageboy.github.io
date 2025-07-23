@@ -6,6 +6,8 @@ image: https://live.staticflickr.com/65535/54291183890_24697671e0_h_d.jpg
 caption: Angkor Thom
 flickr_album: ""
 ---
+Look on this page for some of my favorite photographs taken during a journey to Sri Lanka in January 2024.
+
 ![Artificial Window at Bayon Temple](https://live.staticflickr.com/65535/54290751521_c5370120c5_h_d.jpg)
 
 ![A huge task to rebuild collapsed wall at Angkor Wat](https://live.staticflickr.com/65535/54289874077_3d03bb2035_h_d.jpg)
