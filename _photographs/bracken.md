@@ -6,9 +6,9 @@ image: https://live.staticflickr.com/65535/54590610540_9018390bc3_h.jpg
 caption: Amongst the grasses and pathways
 flickr_album: ""
 ---
-![Bracken against the trees of the forest](https://live.staticflickr.com/65535/54590661168_c4fcab8bb1_h.jpg)
-
 The seasons in the forest are marked by the colour of the bracken that carpets the ground under the tree canopy. 
+
+![Bracken against the trees of the forest](https://live.staticflickr.com/65535/54590661168_c4fcab8bb1_h.jpg)
 
 ![Light falls on the single branch](https://live.staticflickr.com/65535/54590742533_173b82936d_h.jpg)
 

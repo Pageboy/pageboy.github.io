@@ -6,6 +6,9 @@ image: https://live.staticflickr.com/65535/54586505623_0976b32bfd_h.jpg
 caption: Reeds and Rushes at the edge of the Thames
 flickr_album: ""
 ---
+
+I always have my camera near when I am helming my boat along the Thames river.
+
 ![Swans live here](https://live.staticflickr.com/65535/54586478829_c8f32076e3_h.jpg)
 ![Lily pads and blades](https://live.staticflickr.com/65535/54585416467_d3adcbd536_h.jpg)
 ![Reeds and Lily pads](https://live.staticflickr.com/65535/54586478729_92ecf5a98f_h.jpg)
