@@ -11,10 +11,24 @@
             "id": "1185828851d694d0",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "_portfolio/beach-zones-beach-tones.md",
+                "mode": "preview",
+                "source": true,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "beach-zones-beach-tones"
             }
           }
         ]
@@ -168,6 +182,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "vault-file-renamer:Vault File Renamer": false,
       "obsidian-markdown-formatting-assistant-plugin:Open Markdown Formatting Assistant": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
@@ -182,6 +197,8 @@
   },
   "active": "1185828851d694d0",
   "lastOpenFiles": [
+    "_portfolio/year-s-end-colours.md",
+    "_photographs/incoming-tide.md",
     "docs/photos/Godstow Bridge.md",
     "docs/photos/River's Edge.md",
     "docs/photos/Bracken.md",
@@ -219,8 +236,6 @@
     "docs/private/Substack articles",
     "Untitled.md",
     "daily/27-04-2024.md",
-    "daily/25-04-2024.md",
-    "daily/01-02-2023.md",
     "docs/private/art/jenningsart",
     "docs/media/id2rfl",
     "docs/Teaching/Multiplatform Publishing/week7extras",

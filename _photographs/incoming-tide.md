@@ -9,6 +9,7 @@ tags:
   - nature
   - observations
   - sea
+source: Apple iPhone 16 Pro
 ---
 
 The rocks on Charmouth Beach (Dorset, England) are covered with an algae known as sea lettuce.
