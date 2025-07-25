@@ -5,5 +5,5 @@ published: true
 layout: tags
 icon: fa-tags
 order: 100
-hide: false
+hide: true
 ---
