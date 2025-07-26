@@ -1,9 +1,11 @@
 ---
 title: Tags
-permalink: "/tags/"
+permalink: /tags/
 published: true
 layout: tags
 icon: fa-tags
 order: 100
-hide: true
+hide: false
+date: 2025-07-03
+updated: 2025-07-24
 ---
