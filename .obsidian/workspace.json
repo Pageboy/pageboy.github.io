@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_photographs/spider_on_rock.md",
+                "file": "_photographs/incoming-tide.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "spider_on_rock"
+              "title": "incoming-tide"
             }
           }
         ]
@@ -213,13 +213,15 @@
   },
   "active": "03d00a82f4adbcd7",
   "lastOpenFiles": [
+    "_photographs/travels-in-cambodia.md",
+    "_photographs/autumn-at-the-arboretum.md",
+    "_photographs/spider_on_rock.md",
     "_photographs/incoming-tide.md",
     "_photographs/the-oxford-ox.md",
     "_photographs/the-oxford-ox-2.md",
     "archive/islomania/juanfernandez/anson/images/piercy-brett-2",
     "archive/islomania/juanfernandez/images/map-of-juan-fernandes-label-2.gif",
     "_photographs/wall-in-sintra-portugal.md",
-    "_photographs/travels-in-cambodia.md",
     "_site/assets/fonts/Pacifico/pacifico.eot",
     "_site/assets/fonts/Pacifico/pacifico.woff2",
     "_site/assets/fonts/Pacifico/pacifico.ttf",
@@ -257,8 +259,6 @@
     "docs/photos/Gate by the river.md",
     "docs/photos/Arch under the Old Gasworks Bridge.md",
     "docs/photos/Some Bridges over the Thames.md",
-    "docs/photos/Majestic Beech.md",
-    "docs/photos/Lines drawn on rocks.md",
     "docs/private/Teaching_Hold/Multiplatform Publishing/Assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/Assignment 2.canvas",
