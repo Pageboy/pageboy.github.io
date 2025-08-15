@@ -30,8 +30,47 @@
               "icon": "lucide-file",
               "title": "incoming-tide"
             }
+          },
+          {
+            "id": "dfa06b657d546ff7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_photographs/travels-in-cambodia.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "travels-in-cambodia"
+            }
+          },
+          {
+            "id": "0dacc8f8fb897f01",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://live.staticflickr.com/65535/54291183890_8aaea0cff3_h.jpg",
+                "title": "54291183890_8aaea0cff3_h.jpg (1600×1067)",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "54291183890_8aaea0cff3_h.jpg (1600×1067)"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -211,12 +250,13 @@
       "vault-file-renamer:Vault File Renamer": false
     }
   },
-  "active": "03d00a82f4adbcd7",
+  "active": "d886f93a66ee3a62",
   "lastOpenFiles": [
+    "Gemfile",
     "_photographs/travels-in-cambodia.md",
+    "_photographs/incoming-tide.md",
     "_photographs/autumn-at-the-arboretum.md",
     "_photographs/spider_on_rock.md",
-    "_photographs/incoming-tide.md",
     "_photographs/the-oxford-ox.md",
     "_photographs/the-oxford-ox-2.md",
     "archive/islomania/juanfernandez/anson/images/piercy-brett-2",
@@ -258,7 +298,6 @@
     "docs/photos/Ground Peak.md",
     "docs/photos/Gate by the river.md",
     "docs/photos/Arch under the Old Gasworks Bridge.md",
-    "docs/photos/Some Bridges over the Thames.md",
     "docs/private/Teaching_Hold/Multiplatform Publishing/Assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/Assignment 2.canvas",
