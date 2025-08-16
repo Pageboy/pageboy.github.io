@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_photographs/travels-in-cambodia.md",
+                "file": "_photographs/sunset-over-dorchester-on-thames.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,35 +52,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "travels-in-cambodia"
-            }
-          },
-          {
-            "id": "0dacc8f8fb897f01",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_photographs/the-pangbourne-arc.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "the-pangbourne-arc"
+              "title": "sunset-over-dorchester-on-thames"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -256,13 +232,18 @@
       "audio-recorder:Start/stop recording": false,
       "obsidian-markdown-formatting-assistant-plugin:Open Markdown Formatting Assistant": false,
       "obsidian-git:Open Git source control": false,
-      "vault-file-renamer:Vault File Renamer": false
+      "vault-file-renamer:Vault File Renamer": false,
+      "templates:Insert template": false
     }
   },
-  "active": "0dacc8f8fb897f01",
+  "active": "dfa06b657d546ff7",
   "lastOpenFiles": [
     "_photographs/travels-in-cambodia.md",
+    "_photographs/sunset-over-dorchester-on-thames.md",
+    "obsidian_templates/photograph.md",
+    "_photographs/sunset-over-dorchester-on-thames.md",
     "_photographs/the-pangbourne-arc.md",
+    "obsidian_templates",
     "Gemfile",
     "_photographs/incoming-tide.md",
     "_photographs/autumn-at-the-arboretum.md",
@@ -288,7 +269,6 @@
     "_site/archive/islomania/JuanFernandez/anson/images/piercybrett.jpeg",
     "_site/archive/islomania/JuanFernandez/anson/images/piercy-brett",
     "_site/archive/islomania/JuanFernandez/anson/tents.html",
-    "_site/archive/islomania/JuanFernandez/anson/saumarez.html",
     "_photographs/bracken.md",
     "_photographs/the_Oxford_Ox.md",
     "_photographs/rivers-edge.md",
@@ -304,9 +284,6 @@
     "docs/photos/River's Edge.md",
     "docs/photos/Godstow Bridge.md",
     "docs/photos/Lichen on Beech.md",
-    "docs/photos/Ground Peak.md",
-    "docs/photos/Gate by the river.md",
-    "docs/photos/Arch under the Old Gasworks Bridge.md",
     "docs/private/Teaching_Hold/Multiplatform Publishing/Assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/Assignment 2.canvas",

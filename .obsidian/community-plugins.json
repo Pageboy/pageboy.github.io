@@ -1,5 +1,4 @@
 [
-  "metaedit",
   "code-block-copy",
   "obsidian-gist",
   "obsidian-export-image",
@@ -11,5 +10,6 @@
   "image-captions",
   "update-time-on-edit",
   "advanced-copy",
-  "vault-file-renamer"
+  "vault-file-renamer",
+  "auto-template-trigger"
 ]

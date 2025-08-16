@@ -1,0 +1,10 @@
+{
+  "folderSpecificTemplates": [
+    {
+      "folderPath": "_photographs",
+      "templateName": "photograph"
+    }
+  ],
+  "disablePrompt": false,
+  "debug": false
+}

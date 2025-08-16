@@ -4,8 +4,12 @@
   "headerUpdated": "updated",
   "headerCreated": "date",
   "minMinutesBetweenSaves": 1,
-  "ignoreGlobalFolder": [],
-  "ignoreCreatedFolder": [],
+  "ignoreGlobalFolder": [
+    "obsidian_templates"
+  ],
+  "ignoreCreatedFolder": [
+    "obsidian_templates"
+  ],
   "enableExperimentalHash": false,
   "fileHashMap": {
     "docs/index.md": "4d74fbf301189d4269c7dfa51fb7a161586fb5026a933dff23643f02d4ad69f3",
@@ -95,6 +99,8 @@
     "_portfolio/year-s-end-colours.md": "33f17a308b43f29c1ec9a2185099b1861f3a88dc47994a4192aca0abb1d38e3d",
     "_photographs/incoming-tide.md": "f81f704fd8b37634cfca5a21c9870f663d0f4897bc430d8d58362ee4dd25cbd9",
     "pages/tags.md": "4f59fbf2926386889dc909e6f6d0a4bb741e95a0c151cc73cd76bd7cc3cb1bb7",
-    "_photographs/the-pangbourne-arc.md": "2ad8ed455820e7dde04afffee9dc71c0d1e25892ee517db520813f89299b2ee0"
+    "_photographs/the-pangbourne-arc.md": "2ad8ed455820e7dde04afffee9dc71c0d1e25892ee517db520813f89299b2ee0",
+    "obsidian_templates/photograph.md": "560180d69a276914eca212ff843f8394d589593f56cde70e3401a0f454650d3a",
+    "_photographs/sunset-over-dorchester-on-thames.md": "1002662d5cadee9190798db1c96e43673af8e90aff9cb0741a7729be3ee9f2a7"
   }
 }
