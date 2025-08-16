@@ -238,7 +238,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -259,7 +259,7 @@
       "vault-file-renamer:Vault File Renamer": false
     }
   },
-  "active": "fc8869c6842d7d0c",
+  "active": "a9ac8459ddead1f6",
   "lastOpenFiles": [
     "_photographs/the-pangbourne-arc.md",
     "Gemfile",

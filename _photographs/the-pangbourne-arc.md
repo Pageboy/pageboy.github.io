@@ -1,5 +1,5 @@
 ---
-date: 2025-08-16
+date: 2025-08-15T00:00:00
 updated: 2025-08-16
 title: The Pangbourne Arc
 image: https://live.staticflickr.com/65535/54724799488_ec22d131b7_h.jpg
