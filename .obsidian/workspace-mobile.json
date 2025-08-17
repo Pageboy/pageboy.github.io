@@ -192,11 +192,13 @@
       "markdown-importer:Open format converter": false,
       "audio-recorder:Start/stop recording": false,
       "workspaces:Manage workspace layouts": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "templates:Insert template": false
     }
   },
   "active": "1185828851d694d0",
   "lastOpenFiles": [
+    "_photographs/sunset-over-dorchester-on-thames.md",
     "_photographs/the-pangbourne-arc.md",
     "_photographs/untitled.md",
     "obsidian_templates/photograph.md",
@@ -242,7 +244,6 @@
     "docs/Teaching/Design and Technology/Week 1.md",
     "docs/Teaching/Digital Workflow/Week 2.md",
     "docs/Teaching/Digital Workflow/Week 1.md",
-    "docs/private/art/text for pieces/August 24.md",
     "docs/Teaching/DigitalProduct/Assignment 2.canvas",
     "docs/Teaching/DigitalProduct/assignment1.canvas"
   ]

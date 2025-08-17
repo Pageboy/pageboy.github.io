@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_photographs/sunset-over-dorchester-on-thames.md",
+                "file": "_photographs/sunset-from-dorchester-on-thames.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "sunset-over-dorchester-on-thames"
+              "title": "sunset-from-dorchester-on-thames"
             }
           }
         ],
@@ -239,9 +239,9 @@
   "active": "dfa06b657d546ff7",
   "lastOpenFiles": [
     "_photographs/travels-in-cambodia.md",
-    "_photographs/sunset-over-dorchester-on-thames.md",
+    "_photographs/sunset-from-dorchester-on-thames.md",
     "obsidian_templates/photograph.md",
-    "_photographs/sunset-over-dorchester-on-thames.md",
+    "_photographs/sunset-from-dorchester-on-thames.md",
     "_photographs/the-pangbourne-arc.md",
     "obsidian_templates",
     "Gemfile",
