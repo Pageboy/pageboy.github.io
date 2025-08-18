@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_photographs/sunset-from-dorchester-on-thames.md",
+                "file": "_portfolio/brome-grass.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "sunset-from-dorchester-on-thames"
+              "title": "brome-grass"
             }
           }
         ],
@@ -75,7 +75,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "byModifiedTime",
+                "sortOrder": "alphabetical",
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
@@ -238,10 +238,14 @@
   },
   "active": "dfa06b657d546ff7",
   "lastOpenFiles": [
-    "_photographs/travels-in-cambodia.md",
-    "_photographs/sunset-from-dorchester-on-thames.md",
+    "obsidian_templates/portfolio.md",
+    "_portfolio/brome-grass.md",
+    "_portfolio/the-colour-of-water.md",
+    "_portfolio/turbulence.md",
     "obsidian_templates/photograph.md",
+    "_portfolio/berberis.md",
     "_photographs/sunset-from-dorchester-on-thames.md",
+    "_photographs/travels-in-cambodia.md",
     "_photographs/the-pangbourne-arc.md",
     "obsidian_templates",
     "Gemfile",
@@ -280,10 +284,6 @@
     "docs 2/photos/Lichen on Beech.md",
     "docs/photos/Gate at Minster Lovell.md",
     "docs/photos/Bracken.md",
-    "docs/photos/Wall in Sintra, Portugal.md",
-    "docs/photos/River's Edge.md",
-    "docs/photos/Godstow Bridge.md",
-    "docs/photos/Lichen on Beech.md",
     "docs/private/Teaching_Hold/Multiplatform Publishing/Assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/Assignment 2.canvas",

@@ -3,6 +3,10 @@
     {
       "folderPath": "_photographs",
       "templateName": "photograph"
+    },
+    {
+      "folderPath": "_portfolio",
+      "templateName": "portfolio"
     }
   ],
   "disablePrompt": false,
