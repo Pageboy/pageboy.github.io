@@ -1,6 +1,6 @@
 ---
 title: Using Obsidian for a blog
-date: 2025-08-18
+date: 2025-08-17T03:00:00
 updated: 2025-08-18
 layout: post
 image: ../uploads/4E7FA436-4B14-490F-926A-8273390E60E2_1_102_o.jpeg
