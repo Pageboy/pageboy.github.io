@@ -8,6 +8,30 @@
         "type": "tabs",
         "children": [
           {
+            "id": "dfa06b657d546ff7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_series/landscape16x9.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "landscape16x9"
+            }
+          },
+          {
             "id": "03d00a82f4adbcd7",
             "type": "leaf",
             "state": {
@@ -30,33 +54,8 @@
               "icon": "lucide-file",
               "title": "incoming-tide"
             }
-          },
-          {
-            "id": "dfa06b657d546ff7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_posts/using-obsidian-to-post-blog.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "using-obsidian-to-post-blog"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -236,36 +235,41 @@
       "templates:Insert template": false
     }
   },
-  "active": "a9ac8459ddead1f6",
+  "active": "dfa06b657d546ff7",
   "lastOpenFiles": [
+    "_series/portrait.md",
+    "_series/square_series.md",
+    "_series/root-2-a-size.md",
+    "pages/about.md",
+    "pages/statement.md",
+    "pages/photographs.md",
+    "pages/perspectiefgallery.md",
+    "pages/home.md",
+    "pages/earlywork.md",
+    "pages/artworks.md",
+    "pages/portfolio.md",
+    "_posts/2020-04-17-around-the-house.md",
+    "_posts/2019-08-30-banks-of-england.md",
+    "_posts/2019-08-09-air-draft.md",
+    "uploads/screenshot.md",
+    "_posts/2019-07-14-the-lowest-bridge-on-the-thames.md",
+    "_posts/2019-07-12-the-kings-arms-at-sandford.md",
+    "_posts/2019-07-05-herons-and-bridges.md",
+    "_posts/2019-06-29-mediterranean-heat-on-the-thames.md",
+    "_posts/2019-06-14-a-windy-passage-to-sandford.md",
+    "_posts/2019-06-09-oil-pressure-gauge.md",
+    "_posts/2019-06-09-canopy_fixings.md",
+    "_posts/2019-06-08-maiden-voyage.md",
+    "_posts/2019-06-08-constant-velocity-joint.md",
+    "_posts/2019-06-06-first-view-of-the-engine.md",
+    "_posts/2019-06-05-getting-a-survey.md",
     "uploads/4e7fa436-4b14-490f-926a-8273390e60e2_1_102_o.jpeg",
-    "_posts/using-obsidian-to-post-blog.md",
     "uploads/fb148110-2532-4402-8ac5-a80e0c591af1_1_102_a.jpeg",
     "uploads/megalithiclandscapescover.jpg",
-    "obsidian_templates/blog.md",
-    "_posts/2019-11-25-glass-domed-ceiling-in-montpellier.md",
-    "pages/blog.md",
-    "_posts/2022-08-09-beale-to-oxford.md",
-    "_posts/2020-01-14-through-the-glass-fuzzy.md",
-    "_portfolio/brome-grass.md",
-    "obsidian_templates/portfolio.md",
-    "_portfolio/the-colour-of-water.md",
-    "_portfolio/turbulence.md",
-    "obsidian_templates/photograph.md",
-    "_portfolio/berberis.md",
-    "_photographs/sunset-from-dorchester-on-thames.md",
-    "_photographs/travels-in-cambodia.md",
-    "_photographs/the-pangbourne-arc.md",
     "obsidian_templates",
     "Gemfile",
-    "_photographs/incoming-tide.md",
-    "_photographs/autumn-at-the-arboretum.md",
-    "_photographs/spider_on_rock.md",
-    "_photographs/the-oxford-ox.md",
-    "_photographs/the-oxford-ox-2.md",
     "archive/islomania/juanfernandez/anson/images/piercy-brett-2",
     "archive/islomania/juanfernandez/images/map-of-juan-fernandes-label-2.gif",
-    "_photographs/wall-in-sintra-portugal.md",
     "_site/assets/fonts/Pacifico/pacifico.eot",
     "_site/assets/fonts/Pacifico/pacifico.woff2",
     "_site/assets/fonts/Pacifico/pacifico.ttf",
@@ -277,13 +281,8 @@
     "_site/archive/islomania/JuanFernandez/anson/images/saumarez.jpeg",
     "_site/archive/islomania/JuanFernandez/anson/images/minirightarrr.gif",
     "_site/archive/islomania/JuanFernandez/anson/images/rosespin.gif",
-    "_site/archive/islomania/JuanFernandez/anson/images/rose.gif",
     "_site/archive/islomania/JuanFernandez/anson/images/piercy-brett",
     "_site/archive/islomania/JuanFernandez/anson/tents.html",
-    "_photographs/bracken.md",
-    "_photographs/the_Oxford_Ox.md",
-    "_photographs/rivers-edge.md",
-    "docs 2/photos/Megalithic Landscapes.md",
     "docs/private/Teaching_Hold/Multiplatform Publishing/Assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/Assignment 2.canvas",

@@ -5,10 +5,11 @@ title: A Perspectief Gallery
 permalink: /perspectiefgallery/
 order: 2
 date: 2022-02-08T09:40:51.247Z
-flickr_album: 72157710628205712
+flickr_album: 72157710628205710
 tags:
   - boat
-image: null
+image: 
+updated: 2025-08-18
 ---
 
 ### Here's What I know about this boat
@@ -20,4 +21,4 @@ image: null
 
 ![Perspectief Drawing](/uploads/drawing.jpg "Perspectief Drawing")
 
-![Boat number plate](/uploads/IMG_0963.jpg "Boat number plate")
+![Boat number plate](/uploads/img_0963.jpg "Boat number plate")

@@ -1,6 +1,6 @@
 ---
 layout: post
-image: /uploads/IMG_1285.jpeg
+image: /uploads/img_1285.jpeg
 caption: Tied up in Sandford
 featured: false
 published: true
@@ -12,13 +12,14 @@ tags:
   - cruising
 categories:
   - personal
+updated: 2025-08-18
 ---
 We took an opportunity between the rain showers to take our friend Wilfried to Sandford for a picnic lunch.
 
 There were 2 Salters steamers plying up and down the river; Wargrave and Goring.
 
-![Salters steamer 'Goring' passing by](/uploads/IMG_1289.jpeg "Salters steamer 'Goring' passing by")
+![Salters steamer 'Goring' passing by](/uploads/img_1289.jpeg "Salters steamer 'Goring' passing by")
 
-![Salters steamer 'Wargrave leaving Iffley Lock' passing by](/uploads/IMG_1292.jpeg "Salters steamer 'Wargrave leaving Iffley Lock' passing by")
+![Salters steamer 'Wargrave leaving Iffley Lock' passing by](/uploads/img_1292.jpeg "Salters steamer 'Wargrave leaving Iffley Lock' passing by")
 
-![I seem to be listing to port](/uploads/IMG_2344.jpg "I seem to be listing to port")
+![I seem to be listing to port](/uploads/img_2344.jpg "I seem to be listing to port")

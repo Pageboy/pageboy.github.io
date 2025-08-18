@@ -2,7 +2,7 @@
 layout: post
 title: The Naming of Colours
 date: 2019-12-10T19:03:00.000Z
-image: /uploads/IMG_0578.jpg
+image: /uploads/img_0578.jpg
 caption: Farrow and Ball colour chart
 flickr_album: "72157712175659357"
 tags:
@@ -13,7 +13,7 @@ We might say "I like your blue sweater". But we could instead say "I really love
 
 When visiting a **Bobbi Brown** make up store recently I was struck at the incredible variety of lipstick colours on display. Many of the shades are almost identical, but the customers need that level of choice to get the absolute perfect colour for their lips.
 
-![Lipsticks at Bobbi Brown](/uploads/IMG_0576.jpg "Lipsticks at Bobbi Brown")
+![Lipsticks at Bobbi Brown](/uploads/img_0576.jpg "Lipsticks at Bobbi Brown")
 
 On a recent visit to the Farrow & ball paint store I picked up a different colour chart -  *the Colour By Nature* chart  - a collaboration with the Natural History Museum (London). This is based on Werner's Nomenclature of Colours\[1].
 
