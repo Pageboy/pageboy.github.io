@@ -2,10 +2,11 @@
 layout: post
 title: The Naming of Storms
 date: 2020-02-10T19:23:43.538Z
-image: /uploads/kym-mackinnon-54kc5pklFmU-unsplash.jpg
-caption: ''
+image: /uploads/kym-mackinnon-54kc5pklfmu-unsplash.jpg
+caption: ""
 tags:
   - observations
+updated: 2025-08-18
 ---
 Just today we have been suffering from the onslaught of storm *Ciara* (edit) and now storm *Dennis* has arrived. Trees are down and much debris on the pavements. The chain saws are out and the branches are being shredded.
 

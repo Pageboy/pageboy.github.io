@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_series/landscape16x9.md",
+                "file": "_posts/2019-06-29-mediterranean-heat-on-the-thames.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "landscape16x9"
+              "title": "2019-06-29-mediterranean-heat-on-the-thames"
             }
           },
           {
@@ -237,6 +237,10 @@
   },
   "active": "dfa06b657d546ff7",
   "lastOpenFiles": [
+    "_posts/2019-12-22-enoughrope.md",
+    "_posts/2020-02-10-the-naming-of-storms.md",
+    "_posts/2022-08-09-beale-to-oxford.md",
+    "_series/landscape16x9.md",
     "_series/portrait.md",
     "_series/square_series.md",
     "_series/root-2-a-size.md",
@@ -259,10 +263,6 @@
     "_posts/2019-06-14-a-windy-passage-to-sandford.md",
     "_posts/2019-06-09-oil-pressure-gauge.md",
     "_posts/2019-06-09-canopy_fixings.md",
-    "_posts/2019-06-08-maiden-voyage.md",
-    "_posts/2019-06-08-constant-velocity-joint.md",
-    "_posts/2019-06-06-first-view-of-the-engine.md",
-    "_posts/2019-06-05-getting-a-survey.md",
     "uploads/4e7fa436-4b14-490f-926a-8273390e60e2_1_102_o.jpeg",
     "uploads/fb148110-2532-4402-8ac5-a80e0c591af1_1_102_a.jpeg",
     "uploads/megalithiclandscapescover.jpg",
