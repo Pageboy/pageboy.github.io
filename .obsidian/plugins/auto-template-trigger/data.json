@@ -7,6 +7,10 @@
     {
       "folderPath": "_portfolio",
       "templateName": "portfolio"
+    },
+    {
+      "folderPath": "_posts",
+      "templateName": "blog"
     }
   ],
   "disablePrompt": false,

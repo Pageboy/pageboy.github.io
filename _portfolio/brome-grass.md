@@ -8,5 +8,6 @@ tags:
   - art
 caption: Red and green grass
 forsale: 
+published: false
 ---
 In the meadows near the river, the blades of Smooth Brome Grass reveal surprising colours, shifting gently from one hue to another. Their subtle fusions create a soft backdrop against which the arcs of the composition emerge.

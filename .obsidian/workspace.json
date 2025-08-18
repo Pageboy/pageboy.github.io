@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/brome-grass.md",
+                "file": "_posts/using-obsidian-to-post-blog.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "brome-grass"
+              "title": "using-obsidian-to-post-blog"
             }
           }
         ],
@@ -236,10 +236,19 @@
       "templates:Insert template": false
     }
   },
-  "active": "dfa06b657d546ff7",
+  "active": "a9ac8459ddead1f6",
   "lastOpenFiles": [
-    "obsidian_templates/portfolio.md",
+    "uploads/4e7fa436-4b14-490f-926a-8273390e60e2_1_102_o.jpeg",
+    "_posts/using-obsidian-to-post-blog.md",
+    "uploads/fb148110-2532-4402-8ac5-a80e0c591af1_1_102_a.jpeg",
+    "uploads/megalithiclandscapescover.jpg",
+    "obsidian_templates/blog.md",
+    "_posts/2019-11-25-glass-domed-ceiling-in-montpellier.md",
+    "pages/blog.md",
+    "_posts/2022-08-09-beale-to-oxford.md",
+    "_posts/2020-01-14-through-the-glass-fuzzy.md",
     "_portfolio/brome-grass.md",
+    "obsidian_templates/portfolio.md",
     "_portfolio/the-colour-of-water.md",
     "_portfolio/turbulence.md",
     "obsidian_templates/photograph.md",
@@ -269,21 +278,12 @@
     "_site/archive/islomania/JuanFernandez/anson/images/minirightarrr.gif",
     "_site/archive/islomania/JuanFernandez/anson/images/rosespin.gif",
     "_site/archive/islomania/JuanFernandez/anson/images/rose.gif",
-    "_site/archive/islomania/JuanFernandez/anson/images/piercybrett.gif",
-    "_site/archive/islomania/JuanFernandez/anson/images/piercybrett.jpeg",
     "_site/archive/islomania/JuanFernandez/anson/images/piercy-brett",
     "_site/archive/islomania/JuanFernandez/anson/tents.html",
     "_photographs/bracken.md",
     "_photographs/the_Oxford_Ox.md",
     "_photographs/rivers-edge.md",
     "docs 2/photos/Megalithic Landscapes.md",
-    "docs 2/photos/Bracken.md",
-    "docs 2/photos/River's Edge.md",
-    "docs 2/photos/Travels in Cambodia.md",
-    "docs 2/photos/Wall in Galle, Sri Lanka.md",
-    "docs 2/photos/Lichen on Beech.md",
-    "docs/photos/Gate at Minster Lovell.md",
-    "docs/photos/Bracken.md",
     "docs/private/Teaching_Hold/Multiplatform Publishing/Assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/Assignment 2.canvas",
