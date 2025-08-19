@@ -13,9 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_photographs/travels-in-cambodia.md",
-                "mode": "preview",
-                "source": true,
+                "file": "_portfolio/brome-grass.md",
+                "mode": "source",
+                "source": false,
                 "backlinks": true,
                 "backlinkOpts": {
                   "collapseAll": false,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "travels-in-cambodia"
+              "title": "brome-grass"
             }
           }
         ]
@@ -198,6 +198,10 @@
   },
   "active": "1185828851d694d0",
   "lastOpenFiles": [
+    "_portfolio/berberis.md",
+    "_portfolio/brome-grass.md",
+    "_photographs/travels-in-cambodia.md",
+    "_articles/using-obsidian-to-post-blog.md",
     "_photographs/sunset-over-dorchester-on-thames.md",
     "_photographs/the-pangbourne-arc.md",
     "_photographs/untitled.md",
@@ -240,10 +244,6 @@
     "docs/private/art/Image sizes for export.md",
     "docs/Teaching/Digital Workflow/Digital Workflow.md",
     "docs/Teaching/Multiplatform Publishing/Week 11.md",
-    "docs/private/Substack articles/Arcs and Arches.md",
-    "docs/Teaching/Design and Technology/Week 1.md",
-    "docs/Teaching/Digital Workflow/Week 2.md",
-    "docs/Teaching/Digital Workflow/Week 1.md",
     "docs/Teaching/DigitalProduct/Assignment 2.canvas",
     "docs/Teaching/DigitalProduct/assignment1.canvas"
   ]

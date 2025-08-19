@@ -5,12 +5,12 @@
       "templateName": "photograph"
     },
     {
-      "folderPath": "_portfolio",
-      "templateName": "portfolio"
-    },
-    {
       "folderPath": "_articles",
       "templateName": "blog"
+    },
+    {
+      "folderPath": "_portfolio",
+      "templateName": "portfolio"
     }
   ],
   "disablePrompt": true,
