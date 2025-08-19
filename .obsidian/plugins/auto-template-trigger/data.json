@@ -9,7 +9,7 @@
       "templateName": "portfolio"
     },
     {
-      "folderPath": "_posts",
+      "folderPath": "_articles",
       "templateName": "blog"
     }
   ],

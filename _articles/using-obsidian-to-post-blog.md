@@ -3,11 +3,12 @@ title: Using Obsidian for a blog
 date: 2025-08-17T03:00:00
 updated: 2025-08-19
 layout: post
-image: ../uploads/4E7FA436-4B14-490F-926A-8273390E60E2_1_102_o.jpeg
+image: ./uploads/4e7fa436-4b14-490f-926a-8273390e60e2_1_102_o.jpeg
 caption: What is this
 flickr_album: 
 tags:
   - buildings
+  - technology
 published: true
 ---
 In this example the banner image comes from my Flickr collection. The image below is held locally in the vault.

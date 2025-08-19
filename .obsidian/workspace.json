@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_photographs/incoming-tide.md",
+                "file": "_articles/using-obsidian-to-post-blog.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "incoming-tide"
+              "title": "using-obsidian-to-post-blog"
             }
           }
         ]
@@ -212,8 +212,10 @@
       "template-filename:Create note with template filename": false
     }
   },
-  "active": "d886f93a66ee3a62",
+  "active": "03d00a82f4adbcd7",
   "lastOpenFiles": [
+    "_photographs/incoming-tide.md",
+    "_posts/using-obsidian-to-post-blog.md",
     "_articles/2019-11-25-glass-domed-ceiling-in-montpellier.md",
     "_articles/2021-02-26-defying-gravity.md",
     "_articles/2020-04-17-around-the-house.md",
@@ -238,8 +240,6 @@
     "_articles/2022-04-21-white-letters-on-a-hill-where-am-i.md",
     "_articles/2019-06-09-canopy_fixings.md",
     "_articles/2020-05-09-planet-garden.md",
-    "_articles/2019-06-14-a-windy-passage-to-sandford.md",
-    "_articles/2019-06-05-getting-a-survey.md",
     "_articles",
     "_posts-copy",
     "uploads/4e7fa436-4b14-490f-926a-8273390e60e2_1_102_o.jpeg",
