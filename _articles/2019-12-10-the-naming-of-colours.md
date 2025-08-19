@@ -17,7 +17,7 @@ When visiting a **Bobbi Brown** make up store recently I was struck at the incre
 
 On a recent visit to the Farrow & ball paint store I picked up a different colour chart -  *the Colour By Nature* chart  - a collaboration with the Natural History Museum (London). This is based on Werner's Nomenclature of Colours\[1].
 
-![Patrick Syme, Werner's nomenclature of colours; Edinburgh: William Blackwood, 1821.](/uploads/WernersNomenclature_02-768x655@2x.jpg "Patrick Syme, Werner's nomenclature of colours; Edinburgh: William Blackwood, 1821.")
+![Patrick Syme, Werner's nomenclature of colours; Edinburgh: William Blackwood, 1821.](/uploads/wernersnomenclature_02-768x655-2x.jpg "Patrick Syme, Werner's nomenclature of colours; Edinburgh: William Blackwood, 1821.")
 
 Werner’s Nomenclature of Colour (first published in 1814) constructs a system or taxonomy for the classification of colour with reference to things in the natural world. The classification was then extended and published by Patrick Syme. A total of 110 colours are included.
 

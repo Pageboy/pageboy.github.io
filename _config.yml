@@ -3,8 +3,8 @@ navbar-title: Chris Jennings + art
 title: Chris Jennings
 timezone: UTC
 collections:
-  posts:
-    title: Posts
+  articles:
+    title: Blog
     output: true
     layout: blog
   blog:

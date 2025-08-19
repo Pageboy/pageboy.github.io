@@ -13,6 +13,6 @@
       "templateName": "blog"
     }
   ],
-  "disablePrompt": false,
+  "disablePrompt": true,
   "debug": false
 }
