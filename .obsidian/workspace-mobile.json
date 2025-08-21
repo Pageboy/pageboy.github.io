@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/brome-grass.md",
+                "file": "_photographs/red-poppy.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "brome-grass"
+              "title": "red-poppy"
             }
           }
         ]
@@ -182,6 +182,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "vault-file-renamer:Vault File Renamer": false,
       "obsidian-markdown-formatting-assistant-plugin:Open Markdown Formatting Assistant": false,
       "switcher:Open quick switcher": false,
@@ -198,13 +199,15 @@
   },
   "active": "1185828851d694d0",
   "lastOpenFiles": [
-    "_portfolio/berberis.md",
-    "_portfolio/brome-grass.md",
-    "_photographs/travels-in-cambodia.md",
     "_articles/using-obsidian-to-post-blog.md",
+    "_photographs/red-poppy.md",
+    "_photographs/the-oxford-ox.md",
+    "uploads/poppy.jpg",
+    "_portfolio/brome-grass.md",
+    "_portfolio/berberis.md",
+    "_photographs/travels-in-cambodia.md",
     "_photographs/sunset-over-dorchester-on-thames.md",
     "_photographs/the-pangbourne-arc.md",
-    "_photographs/untitled.md",
     "obsidian_templates/photograph.md",
     "obsidian_templates",
     "_site/uploads/c543f611-f0a4-4109-92c0-9d64c7f2b0d0.jpeg",
@@ -216,7 +219,6 @@
     "_site/uploads/img_0350.jpg",
     "_site/uploads/domedceiling.jpg",
     "_site/uploads/screenshot-2019-08-09-10.47.14.png",
-    "_site/uploads/dsc_5218.jpg",
     "_site/archive/islomania/ebooks/stevenson/ebooks/isletmultimedia.zip",
     "_site/archive/islomania/ebooks/stevenson/ebooks/media/erraid.mov",
     "_site/uploads/b38-he-datasheet-rev-02-0319.pdf",
@@ -243,7 +245,6 @@
     "docs/private/art/Cutting list for panels.md",
     "docs/private/art/Image sizes for export.md",
     "docs/Teaching/Digital Workflow/Digital Workflow.md",
-    "docs/Teaching/Multiplatform Publishing/Week 11.md",
     "docs/Teaching/DigitalProduct/Assignment 2.canvas",
     "docs/Teaching/DigitalProduct/assignment1.canvas"
   ]

@@ -197,6 +197,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "workspaces:Manage workspace layouts": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
@@ -208,12 +209,14 @@
       "obsidian-markdown-formatting-assistant-plugin:Open Markdown Formatting Assistant": false,
       "obsidian-git:Open Git source control": false,
       "vault-file-renamer:Vault File Renamer": false,
-      "templates:Insert template": false,
-      "template-filename:Create note with template filename": false
+      "templates:Insert template": false
     }
   },
   "active": "03d00a82f4adbcd7",
   "lastOpenFiles": [
+    "_photographs/red-poppy.md",
+    "_photographs/untitled.md",
+    "uploads/poppy.jpg",
     "_articles/2022-08-09-beale-to-oxford.md",
     "_articles/using-obsidian-to-post-blog.md",
     "Gemfile",
@@ -239,8 +242,6 @@
     "_articles/2020-12-28-distant-cityscape-with-red.md",
     "_articles/2021-02-17-consolidating-or-keeping-it-all-together.md",
     "_articles/2019-06-29-mediterranean-heat-on-the-thames.md",
-    "_articles/2022-04-21-white-letters-on-a-hill-where-am-i.md",
-    "_articles/2019-06-09-canopy_fixings.md",
     "_articles",
     "_posts-copy",
     "uploads/4e7fa436-4b14-490f-926a-8273390e60e2_1_102_o.jpeg",
@@ -259,7 +260,6 @@
     "_site/archive/islomania/JuanFernandez/anson/images/saumarezmini.jpeg",
     "_site/archive/islomania/JuanFernandez/anson/images/saumarez.jpeg",
     "_site/archive/islomania/JuanFernandez/anson/images/minirightarrr.gif",
-    "_site/archive/islomania/JuanFernandez/anson/images/rosespin.gif",
     "docs/private/Teaching_Hold/Multiplatform Publishing/Assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/Assignment 2.canvas",
