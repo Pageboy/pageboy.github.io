@@ -197,8 +197,9 @@
       "templates:Insert template": false
     }
   },
-  "active": "1185828851d694d0",
+  "active": "067faf30219200de",
   "lastOpenFiles": [
+    "Gemfile",
     "_articles/using-obsidian-to-post-blog.md",
     "_photographs/red-poppy.md",
     "_photographs/the-oxford-ox.md",
@@ -244,7 +245,6 @@
     "docs/Teaching/Digital Workflow/Week 5.md",
     "docs/private/art/Cutting list for panels.md",
     "docs/private/art/Image sizes for export.md",
-    "docs/Teaching/Digital Workflow/Digital Workflow.md",
     "docs/Teaching/DigitalProduct/Assignment 2.canvas",
     "docs/Teaching/DigitalProduct/assignment1.canvas"
   ]
