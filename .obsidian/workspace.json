@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_photographs/red-poppy.md",
+                "file": "_photographs/still-waters.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "red-poppy"
+              "title": "still-waters"
             }
           }
         ]
@@ -197,6 +197,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "vault-file-renamer:Vault File Renamer": false,
       "bases:Create new base": false,
       "workspaces:Manage workspace layouts": false,
       "switcher:Open quick switcher": false,
@@ -208,26 +209,26 @@
       "audio-recorder:Start/stop recording": false,
       "obsidian-markdown-formatting-assistant-plugin:Open Markdown Formatting Assistant": false,
       "obsidian-git:Open Git source control": false,
-      "vault-file-renamer:Vault File Renamer": false,
       "templates:Insert template": false
     }
   },
-  "active": "a9ac8459ddead1f6",
+  "active": "03d00a82f4adbcd7",
   "lastOpenFiles": [
+    "_photographs/red-poppy.md",
+    "Gemfile",
     "uploads/img_4485.jpeg",
+    "s-till-waters.md",
+    "_photographs/still-waters.md",
     "uploads/river_scene 1.jpg",
     "uploads/river_scene-1.jpg",
     "gemfile",
     "_photographs/Still Waters.md",
     "_photographs/Untitled.md",
     "untitled.base",
-    "_photographs/still-waters.md",
     "_photographs/Still waters.md",
     "_photographs/untitled.md",
     "uploads/river_scene.jpg",
     "_articles/using-obsidian-to-post-blog.md",
-    "Gemfile",
-    "_photographs/red-poppy.md",
     "_photographs/untitled.md",
     "uploads/poppy.jpg",
     "_articles/2022-08-09-beale-to-oxford.md",
@@ -246,7 +247,6 @@
     "_articles/2021-05-16-new-engine-craned-in.md",
     "_articles/2019-12-22-enoughrope.md",
     "_articles/2020-05-17-no-locks-during-lockdown.md",
-    "_articles/2019-06-08-constant-velocity-joint.md",
     "_articles",
     "_posts-copy",
     "uploads/4e7fa436-4b14-490f-926a-8273390e60e2_1_102_o.jpeg",
@@ -259,7 +259,6 @@
     "_site/assets/fonts/Pacifico/pacifico.woff2",
     "_site/assets/fonts/Pacifico/pacifico.ttf",
     "_site/assets/fonts/Pacifico/pacifico.svg",
-    "_site/archive/islomania/JuanFernandez/anson/images/uparr.gif",
     "docs/private/Teaching_Hold/Multiplatform Publishing/Assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/Assignment 2.canvas",

@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "targetExtensions": [
+    "md"
+  ],
+  "excludedExtensions": [],
+  "blacklistedFolders": [
+    ".obsidian"
+  ],
+  "blacklistedFiles": [
+    "Gemfile"
+  ]
+}

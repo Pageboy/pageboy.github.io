@@ -13,4 +13,6 @@ tags:
   - nature
 ---
 
-In August 2025 the levels of water are very low with a drought declared in the area. There is very little flow on the river.
+In August 2025 the levels of water are very low with a drought conditions declared in the area. There is very little flow on the river.
+
+This view is from the right bank going downstream.
