@@ -1,10 +1,11 @@
 ---
-date: 
-updated: 
-title: 
-image: 
-caption: 
-source: 
+date:
+updated:
+title:
+image:
+caption:
+source:
 layout: photo
-tags: 
+tags:
+published: false
 ---

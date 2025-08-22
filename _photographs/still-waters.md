@@ -11,6 +11,7 @@ tags:
   - cruising
   - landscape
   - nature
+published: true
 ---
 
 In August 2025 the levels of water are very low with a drought conditions declared in the area. There is very little flow on the river.
