@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "obsidian_templates/photograph.md",
+                "file": "_photographs/still-waters.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "photograph"
+              "title": "still-waters"
             }
           }
         ]
@@ -214,6 +214,7 @@
   },
   "active": "03d00a82f4adbcd7",
   "lastOpenFiles": [
+    "obsidian_templates/photograph.md",
     "_photographs/still-waters.md",
     "_photographs/red-poppy.md",
     "Gemfile",
