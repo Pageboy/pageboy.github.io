@@ -1,6 +1,6 @@
 ---
 date: 2025-08-21
-updated: 2025-08-21
+updated: 2025-08-22
 title: Red Poppy
 image: /uploads/poppy.jpg
 caption:

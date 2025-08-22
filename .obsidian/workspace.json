@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_articles/using-obsidian-to-post-blog.md",
+                "file": "_photographs/red-poppy.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "using-obsidian-to-post-blog"
+              "title": "red-poppy"
             }
           }
         ]
@@ -214,12 +214,12 @@
   },
   "active": "03d00a82f4adbcd7",
   "lastOpenFiles": [
+    "_articles/using-obsidian-to-post-blog.md",
     "Gemfile",
     "_photographs/red-poppy.md",
     "_photographs/untitled.md",
     "uploads/poppy.jpg",
     "_articles/2022-08-09-beale-to-oxford.md",
-    "_articles/using-obsidian-to-post-blog.md",
     "_photographs/incoming-tide.md",
     "_posts/using-obsidian-to-post-blog.md",
     "_articles/2019-11-25-glass-domed-ceiling-in-montpellier.md",
