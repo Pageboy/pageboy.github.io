@@ -7,5 +7,5 @@ caption:
 source:
 layout: photo
 tags:
-published: false
+published: true
 ---

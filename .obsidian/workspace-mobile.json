@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "152b8c6ce6d9dbbd",
+        "id": "a31f28c2b3f805bf",
         "type": "tabs",
         "children": [
           {
-            "id": "2ed083a69d9f0a68",
+            "id": "76fdfc5004bfa0d5",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -197,12 +197,12 @@
       "templates:Insert template": false
     }
   },
-  "active": "2ed083a69d9f0a68",
+  "active": "76fdfc5004bfa0d5",
   "lastOpenFiles": [
-    "uploads/IMG_1344.jpeg",
-    "_photographs/still-waters.md",
     "obsidian_templates/photograph.md",
     "_photographs/stained-glass-window.md",
+    "uploads/IMG_1344.jpeg",
+    "_photographs/still-waters.md",
     "Gemfile",
     "uploads/img_4485.jpeg",
     "s-till-waters.md",
@@ -227,7 +227,6 @@
     "_site/uploads/c543f611-f0a4-4109-92c0-9d64c7f2b0d0.jpeg",
     "_site/uploads/seachop.jpg",
     "_site/uploads/img_0896.jpg",
-    "_site/uploads/gettingcolourful.jpg",
     "_site/archive/islomania/ebooks/stevenson/ebooks/isletmultimedia.zip",
     "_site/archive/islomania/ebooks/stevenson/ebooks/media/erraid.mov",
     "_site/uploads/b38-he-datasheet-rev-02-0319.pdf",
