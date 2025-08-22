@@ -5,7 +5,8 @@
   ],
   "excludedExtensions": [],
   "blacklistedFolders": [
-    ".obsidian"
+    ".obsidian",
+    "uploads"
   ],
   "blacklistedFiles": [
     "Gemfile"
