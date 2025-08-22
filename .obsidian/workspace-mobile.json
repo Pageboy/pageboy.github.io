@@ -4,17 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "3b559ffd9c2e65a9",
+        "id": "f2ce6565cef0b25c",
         "type": "tabs",
         "children": [
           {
-            "id": "29456053ad5fbc35",
+            "id": "fb522b6a0205068f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "_photographs/still-waters.md",
+                "mode": "source",
+                "source": true,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "still-waters"
             }
           }
         ]
@@ -183,13 +197,17 @@
       "templates:Insert template": false
     }
   },
-  "active": "29456053ad5fbc35",
+  "active": "fb522b6a0205068f",
   "lastOpenFiles": [
+    "uploads/img_4485.jpeg",
+    "_photographs/still-waters.md",
+    "s-till-waters.md",
+    "_photographs/rivers-edge.md",
     "_photographs/still-waters.md",
     "uploads/img_4485.jpeg",
     "uploads/river_scene 1.jpg",
     "uploads/river_scene-1.jpg",
-    "_photographs/Still Waters.md",
+    "_photographs/still-waters.md",
     "untitled.base",
     "_photographs/red-poppy.md",
     "uploads/river_scene.jpg",
@@ -227,9 +245,6 @@
     "docs/private/art/text for pieces/April 2024.md",
     "docs/private/art/text for pieces/October 2024.md",
     "docs/private/art/Print sizes by theme.md",
-    "docs/Teaching/Digital Workflow/Week 6.md",
-    "docs/private/art/Art Sites requirements.md",
-    "docs/Teaching/Digital Workflow/Week 5.md",
     "docs/Teaching/DigitalProduct/Assignment 2.canvas",
     "docs/Teaching/DigitalProduct/assignment1.canvas"
   ]
