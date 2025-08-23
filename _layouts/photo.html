@@ -46,7 +46,7 @@ layout: default
 
                 {% endunless %}
 
-                {{ content | replace: "_uploads", "uploads" }}
+                {{ content | replace: "../uploads", "/uploads" }}
   </section>
   <!-- Social media shares -->
   {% include share_buttons.html %}
