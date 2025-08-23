@@ -8,7 +8,7 @@
         {% assign image_url = article.image | replace: "_uploads", "uploads" -%}
         <div class="post-img">
             <a aria-label="{{ article.title }}" href="{{ article.url | relative_url }}">
-              {%- if post.caption -%}
+              {%- if article.caption -%}
                 <img alt="{{ article.caption }}" src="{{ image_url }}">
               {%- else -%}
                 <img alt="{{ article.title }}" src="{{ image_url }}">
