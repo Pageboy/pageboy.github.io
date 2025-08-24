@@ -71,6 +71,7 @@
               {%- else -%}
                 <img alt="{{ post.title }}" src="{{ image_url }}" />
               {%- endif -%}
+        {{ article.excerpt | replace: "_uploads", "uploads" | replace: "uploads", "/uploads" | replace: "//", "/" }}
         <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ image_url | xml_escape }}" />
         <media:content medium="image" url="{{ image_url | xml_escape }}" xmlns:media="http://search.yahoo.com/mrss/" />
     </entry>
