@@ -66,12 +66,12 @@
       <id>{{ post.id | absolute_url | xml_escape }}</id>
     {%- assign image_url = post.image | replace: "_uploads", "uploads" -%}
 
-{%- if article.caption -%}
+{%- if post.caption -%}
                 <img alt="{{ post.caption }}" src="{{ image_url }}" />
               {%- else -%}
                 <img alt="{{ post.title }}" src="{{ image_url }}" />
               {%- endif -%}
-        {{ article.excerpt | replace: "_uploads", "uploads" | replace: "uploads", "/uploads" | replace: "//", "/" }}
+        {{ post.excerpt | replace: "_uploads", "uploads" | replace: "uploads", "/uploads" | replace: "//", "/" }}
         <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ image_url | xml_escape }}" />
         <media:content medium="image" url="{{ image_url | xml_escape }}" xmlns:media="http://search.yahoo.com/mrss/" />
     </entry>
