@@ -72,6 +72,9 @@
                 <img alt="{{ post.title }}" src="{{ image_url }}" />
               {%- endif -%}
               <summary type="html"><![CDATA[{{ post.excerpt | strip_html | normalize_whitespace }}]]></summary>
+
+              {%- assign date = include.post.date -%}
+                {{ date | date: "%B %-d, %Y" }}
         <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ image_url | xml_escape }}" />
         <media:content medium="image" url="{{ image_url | xml_escape }}" xmlns:media="http://search.yahoo.com/mrss/" />
     </entry>
