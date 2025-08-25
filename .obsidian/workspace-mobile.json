@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/berberis.md",
-                "mode": "source",
+                "file": "_photographs/cotswolds-wall.md",
+                "mode": "preview",
                 "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "berberis"
+              "title": "cotswolds-wall"
             }
           }
         ]
@@ -199,6 +199,7 @@
   },
   "active": "76fdfc5004bfa0d5",
   "lastOpenFiles": [
+    "_portfolio/berberis.md",
     "_photographs/cotswolds-wall.md",
     "obsidian_templates/photograph.md",
     "_site/uploads/poppy.jpg",
@@ -230,7 +231,6 @@
     "_articles/using-obsidian-to-post-blog.md",
     "_photographs/the-oxford-ox.md",
     "_portfolio/brome-grass.md",
-    "_portfolio/berberis.md",
     "_photographs/travels-in-cambodia.md",
     "_photographs/sunset-over-dorchester-on-thames.md",
     "_photographs/the-pangbourne-arc.md",

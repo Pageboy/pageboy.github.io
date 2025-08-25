@@ -1,5 +1,5 @@
 ---
-date: 2025-08-25T17:10:00
+date: 2025-08-24T17:10:00
 updated: 2025-08-25
 title: Wall in the Cotswolds
 image: https://live.staticflickr.com/65535/54744352445_2c525672e3_h.jpg

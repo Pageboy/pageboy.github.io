@@ -14,4 +14,4 @@ Now mounted on 3 panels. Overall dimensions -915mm x 915mm
 
 ![Berberis in the Studio](https://live.staticflickr.com/65535/54744199208_db57bf88fe_h.jpg)
 
-Each panel is 565mm x 350mm. Printed on Hahnemühle German etching, bonded onto 3 panels, 565mm x 350mm and matt varnished with UV protection.
+Printed on Hahnemühle German etching, bonded onto 3 panels, 565mm x 350mm and matt varnished with UV protection.
