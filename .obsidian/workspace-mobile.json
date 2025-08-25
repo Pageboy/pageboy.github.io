@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_photographs/cotswolds-wall.md",
+                "file": "_portfolio/berberis.md",
                 "mode": "source",
                 "source": true,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "cotswolds-wall"
+              "title": "berberis"
             }
           }
         ]
@@ -199,8 +199,8 @@
   },
   "active": "76fdfc5004bfa0d5",
   "lastOpenFiles": [
-    "obsidian_templates/photograph.md",
     "_photographs/cotswolds-wall.md",
+    "obsidian_templates/photograph.md",
     "_site/uploads/poppy.jpg",
     "_site/uploads/megalithiclandscapescover.jpg",
     "_site/uploads/4e7fa436-4b14-490f-926a-8273390e60e2_1_102_o.jpeg",
