@@ -4,11 +4,14 @@
         <mj-font name="Roboto" href="https://fonts.googleapis.com/css?family=Roboto:400,700"></mj-font>
         <mj-font name="Roboto Slab" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900"></mj-font>
         <mj-attributes>
+        <mj-text font-weight="400" font-size="16px" color="#000000"></mj-text />
             <mj-class name="header" padding="20px 0" color="#1D83A8" font-size="30px" line-height="40px" font-family="'Roboto Slab', Helvetica, Arial, sans-serif"/>
             <mj-class name="paragraph" color="#333333" font-size="14px" font-family="Arial" />
-            <mj-class name="link" color="#5C68E2" />
-            <mj-all font-family="Roboto, Helvetica, Arial, sans-serif" padding="0px"></mj-all>
-      <mj-text font-weight="400" font-size="14px" color="#000000" line-height="21px"></mj-text>
+            <mj-class name="post" padding: "0 20px" color="#333333" font-size="14px" font-family="Roboto" line-height="14px" />
+            <mj-class name="link" color="#5C68E2" text-decoration="none" font-size="18px" />
+            <mj-class name="post_title" color="#2d5201ff" font-size="18px" />
+            <mj-all font-family="Roboto, Helvetica, Arial, sans-serif"></mj-all>
+      
         </mj-attributes>
         <mj-style>
             .rollover:hover .rollover-first { max-height: 0px !important; display: none !important; }
@@ -24,12 +27,12 @@
             <mj-image src="https://www.chrisjennings.net/uploads/newsletterbannergreen.png" alt="River bank" align="center" border="none" padding="0px">
             </mj-image>
                 <mj-text mj-class="header"><b>Latest Work</b></mj-text>
-                <mj-text mj-class="paragraph">Hello</mj-text>
-                <mj-text mj-class="paragraph">Here is my latest work on the {{newsletter.name}} website:</mj-text>
+                <mj-text mj-class="paragraph">Hello {{#person.name}}{{{.}}}{{/person.name}}</mj-text>
+                <mj-text mj-class="paragraph">Here is my latest work on the {{newsletter.name}} website. Follow the links to see the full content:</mj-text>
 
                 {{#articles}}
-                <mj-text mj-class="paragraph">&#10132; <a href="{{{link}}}" mj-class="link">{{title}}</a></mj-text>
-                <mj-text mj-class="paragraph">{{summary}}</mj-text>
+                <mj-text mj-class="post_title">&#10132; <a href="{{{link}}}" mj-class="link">{{title}}</a></mj-text>
+                <mj-text mj-class="post">{{description}}</mj-text>
 
                 {{/articles}}
             </mj-column>

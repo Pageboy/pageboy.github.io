@@ -56,7 +56,7 @@
 
 
     {%- for post in posts limit:100 -%}
-    <entry>
+    <item>
       {% assign post_title = post.title | smartify | strip_html | normalize_whitespace | xml_escape %}
 
       <title type="html">{{ post_title }}</title>
@@ -72,14 +72,14 @@
               {%- else -%}
                 <img alt="{{ post.title }}" src="{{ image_url }}" />
               {%- endif -%}
+               <p:imageLink>{{ image_url }}</p:imageLink>
               <![CDATA[{{ post.excerpt | strip_html | normalize_whitespace }}]]>
 
               {%- assign date = include.post.date -%}
                 {{ date | date: "%B %-d, %Y" }}
                 </summary>
-        <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ image_url | xml_escape }}" />
         <media:content medium="image" url="{{ image_url | xml_escape }}" xmlns:media="http://search.yahoo.com/mrss/" />
     </description>
-      </entry>
+  </item>
   {% endfor %}
 </feed>
