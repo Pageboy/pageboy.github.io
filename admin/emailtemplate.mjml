@@ -32,7 +32,6 @@
 
                 {{#articles}}
                 <mj-text mj-class="post_title">&#10132; <a href="{{{link}}}" mj-class="link">{{title}}</a></mj-text>
-                <mj-image width="165px" src="http://i.imgur.com/L7Q88fd.png"></mj-image>
                 
                 <mj-text mj-class="post">{{description}}</mj-text>
 
