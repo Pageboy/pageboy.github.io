@@ -67,18 +67,12 @@
     {%- assign image_url = post.image | replace: "_uploads", "uploads" -%}
 <description>
   <summary type="html">
-{%- if post.caption -%}
-                <img alt="{{ post.caption }}" src="{{ image_url }}" />
-              {%- else -%}
-                <img alt="{{ post.title }}" src="{{ image_url }}" />
-              {%- endif -%}
-               <p:imageLink>{{ image_url }}</p:imageLink>
+              <media:content medium="image" url="{{ image_url | xml_escape }}" xmlns:media="http://search.yahoo.com/mrss/" />
               <![CDATA[{{ post.excerpt | strip_html | normalize_whitespace }}]]>
 
               {%- assign date = include.post.date -%}
                 {{ date | date: "%B %-d, %Y" }}
                 </summary>
-        <media:content medium="image" url="{{ image_url | xml_escape }}" xmlns:media="http://search.yahoo.com/mrss/" />
     </description>
   </item>
   {% endfor %}
