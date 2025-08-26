@@ -31,7 +31,7 @@
                 <mj-text mj-class="paragraph">Here is the latest work I have posted on the {{newsletter.name}} website. Follow the links to see the full content:</mj-text>
 
                 {{#articles}}
-                <mj-text mj-class="post_title">&#10132; <a href="{{{link}}}" mj-class="link">{{title}}</a></mj-text>
+                <mj-text mj-class="post_title" >&#10132; <a style="text-decoration: none; color: inherit;" href="{{{link}}}" mj-class="link">{{title}}</a></mj-text>
                 
                 <mj-text mj-class="post">{{description}}</mj-text>
 
