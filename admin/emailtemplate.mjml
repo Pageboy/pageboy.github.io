@@ -21,15 +21,15 @@
         </mj-section>
         <mj-section background-color="#FFFFFF" padding="20px">
             <mj-column>
-            <mj-image src="https://www.chrisjennings.net/uploads/newsletterbanner.png" alt="River bank" align="center" border="none" padding="0px">
+            <mj-image src="https://www.chrisjennings.net/uploads/newsletterbannergreen.png" alt="River bank" align="center" border="none" padding="0px">
             </mj-image>
-                <mj-text mj-class="header"><b>{{newsletter.name}}</b></mj-text>
+                <mj-text mj-class="header"><b>Latest Work</b></mj-text>
                 <mj-text mj-class="paragraph">Hello</mj-text>
                 <mj-text mj-class="paragraph">Here is my latest work on the {{newsletter.name}} website:</mj-text>
 
                 {{#articles}}
                 <mj-text mj-class="paragraph">&#10132; <a href="{{{link}}}" mj-class="link">{{title}}</a></mj-text>
-                <mj-text mj-class="paragraph">{{description}}</mj-text>
+                <mj-text mj-class="paragraph">{{summary}}</mj-text>
 
                 {{/articles}}
             </mj-column>
@@ -59,13 +59,13 @@
 
         <mj-section background-color="#FAFAFA" padding="20px">
             <mj-column>
-                <mj-text mj-class="paragraph" align="center" font-size="12px" line-height="0.5">
+                <mj-text mj-class="paragraph" align="center" font-size="12px" line-height="1.5">
                     <a href="{{newsletter.url}}" mj-class="link">{{newsletter.name}}</a> © {{currentYear}}. All Rights Reserved.
                 </mj-text>
-                <mj-text mj-class="paragraph" align="center" font-size="12px" line-height="0.5">
+                <mj-text mj-class="paragraph" align="center" font-size="12px" line-height="1.5">
                     Powered by <a href="https://hakanai.io" mj-class="link">Hakanai</a>
                 </mj-text>
-                <mj-text mj-class="paragraph" align="center" font-size="12px" line-height="0.5">
+                <mj-text mj-class="paragraph" align="center" font-size="12px" line-height="01.5">
                     No longer want to receive these emails? <a href="{{{newsletter.unsubscribe}}}" mj-class="link">Unsubscribe</a>.
                 </mj-text>
             </mj-column>

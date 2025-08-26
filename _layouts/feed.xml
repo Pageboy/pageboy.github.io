@@ -65,7 +65,7 @@
       <updated>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</updated>
       <id>{{ post.id | absolute_url | xml_escape }}</id>
     {%- assign image_url = post.image | replace: "_uploads", "uploads" -%}
-
+<description>
 {%- if post.caption -%}
                 <img alt="{{ post.caption }}" src="{{ image_url }}" />
               {%- else -%}
@@ -77,6 +77,7 @@
                 {{ date | date: "%B %-d, %Y" }}
         <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ image_url | xml_escape }}" />
         <media:content medium="image" url="{{ image_url | xml_escape }}" xmlns:media="http://search.yahoo.com/mrss/" />
-    </entry>
+    </description>
+      </entry>
   {% endfor %}
 </feed>
