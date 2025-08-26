@@ -56,7 +56,7 @@
 
 
     {%- for post in posts limit:100 -%}
-    <item>
+    <entry>
       {% assign post_title = post.title | smartify | strip_html | normalize_whitespace | xml_escape %}
 
       <title type="html">{{ post_title }}</title>
@@ -77,6 +77,6 @@
               <![CDATA[{{ post.excerpt | strip_html | normalize_whitespace }}]]>
 </summary>
     </description>
-  </item>
+  </entry>
   {% endfor %}
 </feed>
