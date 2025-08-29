@@ -65,15 +65,16 @@
       <updated>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</updated>
       <id>{{ post.id | absolute_url | xml_escape }}</id>
        {% assign post_image = post.image.path | default: post.image %}
-  <summary type="html">
-              {% if post_image %}
+        {% if post_image %}
+      <image>
         {% unless post_image contains "://" %}
           {% assign post_image = post_image | absolute_url %}
         {% endunless %}
+      </image>
+  <summary type="html">
 
-        <p>
+
       <img src="{{ post_image }}" alt="{{ post_title }}" />
-    </p>
       {% endif %}
               
               {{ post.excerpt | strip_html | normalize_whitespace }}
