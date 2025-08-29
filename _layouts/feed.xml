@@ -65,7 +65,6 @@
       <updated>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</updated>
       <id>{{ post.id | absolute_url | xml_escape }}</id>
        {% assign post_image = post.image.path | default: post.image %}
-<description>
   <summary type="html">
               {% if post_image %}
         {% unless post_image contains "://" %}
@@ -79,7 +78,6 @@
               
               {{ post.excerpt | strip_html | normalize_whitespace }}
 </summary>
-    </description>
   </entry>
   {% endfor %}
 </feed>
