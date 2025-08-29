@@ -64,20 +64,17 @@
       <published>{{ post.date | date_to_xmlschema }}</published>
       <updated>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</updated>
       <id>{{ post.id | absolute_url | xml_escape }}</id>
-       {% assign post_image = post.image.path | default: post.image %}
-<description>
-  <summary type="html">
-              {% if post_image %}
+            {% assign post_image = post.image.path | default: post.image %}
+      {% if post_image %}
         {% unless post_image contains "://" %}
           {% assign post_image = post_image | absolute_url %}
         {% endunless %}
-
-        <p>
-      <img src="{{ post_image }}" alt="{{ post_title }}" />
-    </p>
+        <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ post_image | xml_escape }}" />
+        <media:content medium="image" url="{{ post_image | xml_escape }}" xmlns:media="http://search.yahoo.com/mrss/" />
       {% endif %}
-              
-              {{ post.excerpt | strip_html | normalize_whitespace }}
+<description>
+  <summary type="html">
+              <![CDATA[{{ post.excerpt | strip_html | normalize_whitespace }}]]>
 </summary>
     </description>
   </entry>

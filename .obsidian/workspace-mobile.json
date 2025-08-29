@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_photographs/cotswolds-wall.md",
+                "file": "_portfolio/berberis.md",
                 "mode": "preview",
                 "source": true,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "cotswolds-wall"
+              "title": "berberis"
             }
           }
         ]
@@ -199,8 +199,12 @@
   },
   "active": "76fdfc5004bfa0d5",
   "lastOpenFiles": [
-    "_portfolio/berberis.md",
+    "_portfolio/brome-grass.md",
     "_photographs/cotswolds-wall.md",
+    "uploads/newsletterbanner.png",
+    "uploads/newsletterbannergreen.png",
+    "admin/emailtemplate.mjml",
+    "_portfolio/berberis.md",
     "obsidian_templates/photograph.md",
     "_site/uploads/poppy.jpg",
     "_site/uploads/megalithiclandscapescover.jpg",
@@ -219,18 +223,14 @@
     "_site/portfolio/brome-grass/index.html",
     "_site/portfolio/brome-grass",
     "_site/photographs/stained-glass-window/index.html",
-    "_site/photographs/stained-glass-window",
     "_photographs/still-waters.md",
     "_photographs/stained-glass-window.md",
     "uploads/IMG_1344.jpeg",
-    "uploads/img_4485.jpeg",
     "s-till-waters.md",
     "_photographs/rivers-edge.md",
-    "uploads/img_4485.jpeg",
     "_photographs/red-poppy.md",
     "_articles/using-obsidian-to-post-blog.md",
     "_photographs/the-oxford-ox.md",
-    "_portfolio/brome-grass.md",
     "_photographs/travels-in-cambodia.md",
     "_photographs/sunset-over-dorchester-on-thames.md",
     "_photographs/the-pangbourne-arc.md",
@@ -244,7 +244,6 @@
     "docs/photos/Lichen on Beech.md",
     "docs/private/art/text for pieces/April 2024.md",
     "docs/private/art/text for pieces/October 2024.md",
-    "docs/private/art/Print sizes by theme.md",
     "docs/Teaching/DigitalProduct/Assignment 2.canvas",
     "docs/Teaching/DigitalProduct/assignment1.canvas"
   ]
