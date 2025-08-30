@@ -74,9 +74,8 @@
         {% unless post_image contains "://" %}
           {% assign post_image = post_image | absolute_url %}
         {% endunless %}
-      <image>{{ post_image | xml_escape }}</image>
-<!--         <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ post_image | xml_escape }}" />
-        <media:content medium="image" url="{{ post_image | xml_escape }}" xmlns:media="http://search.yahoo.com/mrss/" /> -->
+        <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ post_image | xml_escape }}" width="300" />
+<!--         <media:content medium="image" url="{{ post_image | xml_escape }}" xmlns:media="http://search.yahoo.com/mrss/" /> -->
       {% endif %}
   <summary type="html">
               {{ post.excerpt | strip_html | normalize_whitespace }}
