@@ -76,6 +76,7 @@
         {% endunless %}
              <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ post_image | xml_escape }}" />
         <media:content medium="image" url="{{ post_image | xml_escape }}" xmlns:media="http://search.yahoo.com/mrss/" />
+      {{ post_image | xml_escape }}
       {% endif %}
   <summary type="html">
               {{ post.excerpt | strip_html | normalize_whitespace }}
