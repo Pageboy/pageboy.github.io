@@ -74,20 +74,13 @@
         {% unless post_image contains "://" %}
           {% assign post_image = post_image | absolute_url %}
         {% endunless %}
-<!-- <content type="html">
-  <![CDATA[
-      <img alt="{{post_title}}" src="{{ post_image | xml_escape }}" />
-  ]]>
-</content> -->
       
 
       {% endif %}
   <summary type="html">
-        <content type="html">
     <![CDATA[
       <img alt="{{post_title}}" src="{{ post_image | xml_escape }}" />
   ]]>
-      </content>
               {{ post.excerpt | strip_html | normalize_whitespace }}
 
 <!--    <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ post_image | xml_escape }}" width="300" /> -->
