@@ -78,10 +78,10 @@
 
       {% endif %}
   <summary type="html">
-   <media:content url="{{ post_image }}" width="500px" type="image/jpg" expression="full"/>
+<media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ post_image | xml_escape }}" width="300" />
               {{ post.excerpt | strip_html | normalize_whitespace }}
 
-<!--    <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ post_image | xml_escape }}" width="300" /> -->
+
 <!--         <media:content medium="image" url="{{ post_image | xml_escape }}" xmlns:media="http://search.yahoo.com/mrss/" /> -->
 </summary>
   </entry>
