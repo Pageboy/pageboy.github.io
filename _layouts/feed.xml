@@ -68,7 +68,7 @@
         <name>Chris Jennings</name>
       </author>
 
-  <summary type="html">
+  <content type="html">
          {% assign post_image = post.image.path | default: post.image %}
         {% if post_image %}
 
@@ -83,7 +83,7 @@
 
 
 <!--         <media:content medium="image" url="{{ post_image | xml_escape }}" xmlns:media="http://search.yahoo.com/mrss/" /> -->
-</summary>
+</content>
   </entry>
   {% endfor %}
 </feed>
