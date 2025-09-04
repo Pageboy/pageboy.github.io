@@ -67,7 +67,9 @@
       <author>
         <name>Chris Jennings</name>
       </author>
-       {% assign post_image = post.image.path | default: post.image %}
+
+  <summary type="html">
+         {% assign post_image = post.image.path | default: post.image %}
         {% if post_image %}
 
 
@@ -75,10 +77,8 @@
           {% assign post_image = post_image | absolute_url %}
         {% endunless %}
       
-
-      {% endif %}
-  <summary type="html">
 <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ post_image | xml_escape }}" width="300" />
+      {% endif %}
               {{ post.excerpt | strip_html | normalize_whitespace }}
 
 
