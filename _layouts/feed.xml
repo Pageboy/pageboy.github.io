@@ -79,9 +79,6 @@
   <summary type="html">
 
               {{ post.excerpt | strip_html | normalize_whitespace }}
-
-
-<!--         <media:content medium="image" url="{{ post_image | xml_escape }}" xmlns:media="http://search.yahoo.com/mrss/" /> -->
 </summary>
   </entry>
   {% endfor %}
