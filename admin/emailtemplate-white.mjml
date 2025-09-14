@@ -3,13 +3,13 @@
     <mj-title>{{title}}</mj-title>
     <mj-font name="Ubuntu" href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"></mj-font>
     <mj-font name="Roboto Slab" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900"></mj-font>
-    <mj-attributes>
+        <mj-attributes>
       <mj-class name="header" padding="10px 0" color="#1D83A8" font-size="30px" line-height="40px" font-family="'Roboto Slab', Helvetica, Arial, sans-serif" />
-      <mj-class name="intro" color="#838181ff" font-size="15px" font-family="Ubuntu" padding="0 10px"line-height="1.6" font-weight="500" />
+      <mj-class name="intro" color="#333333" font-size="15px" font-family="Ubuntu" padding="0 10px"line-height="1.6" font-weight="500" />
       <mj-class name="paragraph" color="#333333" font-size="15px" font-family="Ubuntu" padding="0 10px"line-height="1.5"/>
-      <mj-class name="post" padding="0 10px" color="#5f5e5eff" font-size="15px" font-family="Ubuntu" line-height="1.5" />
-      <mj-class name="link" color="#358300ff" text-decoration="none" font-size="22px" />
-      <mj-class name="post_title" padding="10px" color="#4e8d01ff" font-size="22px" font-weight="700" />
+      <mj-class name="post" padding="0 10px" color="#333333" font-size="15px" font-family="Ubuntu" line-height="1.5" />
+      <mj-class name="link" color="#4eb00cff" text-decoration="none" font-size="22px" />
+      <mj-class name="post_title" padding="10px" color="#2d5201ff" font-size="22px" font-weight="700" />
       <mj-class name="entry_image" padding="10px"/>
       <mj-all font-family="Ubuntu, Helvetica, Arial, sans-serif"></mj-all>
 
@@ -20,10 +20,10 @@
       .rollover span { font-size: 0px; }
     </mj-style>
   </mj-head>
-  <mj-body background-color="#000000">
-    <mj-section background-color="#000000" padding="5px">
+  <mj-body background-color="#EAE8E5">
+    <mj-section background-color="#FAFAFA" padding="5px">
     </mj-section>
-    <mj-section background-color="#000000" padding="12px">
+    <mj-section background-color="#FFFFFF" padding="12px">
       <mj-column>
         <mj-image src="https://www.chrisjennings.net/uploads/newsletterbannergreen.jpg" alt="Choppy Sea" align="center" border="none" padding="0px">
         </mj-image>
@@ -32,21 +32,21 @@
         <mj-text mj-class="intro">Here is the latest work I have posted on the {{newsletter.name}} website. Follow the links to see the full content:</mj-text>
 
         {{#articles}}
-          <mj-text mj-class="post_title"><a style="text-decoration: none; color: inherit;" href="{{{link}}}" mj-class="link">Here is a title of a post &#10132; </a></mj-text>
+          <mj-text mj-class="post_title"><a style="text-decoration: none; color: inherit;" href="{{{link}}}" mj-class="link">{{title}} &#10132; </a></mj-text>
           {{#thumbnail}}
-              <mj-image mj-class="entry_image" src="../images/hhh.jpg">
+              <mj-image mj-class="entry_image" src="{{thumbnail}}">
         </mj-image>
           {{/thumbnail}}
       
 
-          <mj-text mj-class="post">Et consequat eu ipsum anim tempor excepteur officia sunt occaecat exercitation laboris. Fugiat tempor anim elit aliquip sunt proident aliquip cupidatat nulla ullamco fugiat nulla voluptate. Et cillum quis ex consectetur amet. Officia eu labore sint voluptate esse nostrud ut dolore proident cillum occaecat labore. Nisi proident aute et exercitation. Cillum ea ipsum cillum veniam Lorem ut ut amet eu.</mj-text>
+          <mj-text mj-class="post">{{description}}</mj-text>
 
         {{/articles}}
       </mj-column>
     </mj-section>
 
     {{#socials}}
-      <mj-section >
+      <mj-section>
         <mj-column>
           <mj-social font-size="14px" icon-size="32px" mode="horizontal">
             {{#socials.twitter}}

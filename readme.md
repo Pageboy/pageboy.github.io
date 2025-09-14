@@ -2,8 +2,6 @@
 
 ## Usage
 
-This is a template set up for students to begin their own web site. The template is created by Chris Jennings and is based on various Jekyll themes.
-
 `Jekyll` is a system for building and editing static web sites; meaning that it does not need a database for the content. Content can be added with a simple text language called `Markdown`. You can explore and learn **Markdown** here:
 
 https://commonmark.org/help/tutorial/
