@@ -1,4 +1,4 @@
-# Chruis Jennings web site
+# Chris Jennings web site
 
 ## Usage
 
