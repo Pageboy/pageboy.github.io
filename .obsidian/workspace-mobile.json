@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "a31f28c2b3f805bf",
+        "id": "b355ec613fa1a195",
         "type": "tabs",
         "children": [
           {
-            "id": "76fdfc5004bfa0d5",
+            "id": "1185828851d694d0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/brome-grass.md",
+                "file": "_photographs/travels-in-cambodia.md",
                 "mode": "preview",
                 "source": true,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "brome-grass"
+              "title": "travels-in-cambodia"
             }
           }
         ]
@@ -47,7 +47,7 @@
           "type": "file-explorer",
           "state": {
             "sortOrder": "byModifiedTime",
-            "autoReveal": true
+            "autoReveal": false
           },
           "icon": "lucide-folder-closed",
           "title": "Files"
@@ -60,7 +60,7 @@
           "type": "search",
           "state": {
             "query": "",
-            "matchingCase": true,
+            "matchingCase": false,
             "explainSearch": false,
             "collapseAll": false,
             "extraContext": false,
@@ -182,7 +182,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:Create new base": false,
       "vault-file-renamer:Vault File Renamer": false,
       "obsidian-markdown-formatting-assistant-plugin:Open Markdown Formatting Assistant": false,
       "switcher:Open quick switcher": false,
@@ -197,43 +196,32 @@
       "templates:Insert template": false
     }
   },
-  "active": "76fdfc5004bfa0d5",
+  "active": "1185828851d694d0",
   "lastOpenFiles": [
-    "_portfolio/berberis.md",
-    "_portfolio/brome-grass.md",
-    "_photographs/cotswolds-wall.md",
-    "uploads/newsletterbanner.png",
-    "uploads/newsletterbannergreen.png",
-    "admin/emailtemplate.mjml",
-    "obsidian_templates/photograph.md",
-    "_site/uploads/poppy.jpg",
-    "_site/uploads/megalithiclandscapescover.jpg",
-    "_site/uploads/4e7fa436-4b14-490f-926a-8273390e60e2_1_102_o.jpeg",
-    "_site/uploads/tim-boote-unsplash.jpg",
-    "_site/uploads/screenshot.md",
-    "_site/uploads/fb148110-2532-4402-8ac5-a80e0c591af1_1_102_a.jpeg",
-    "_site/uploads/IMG_1344.jpeg",
-    "_site/uploads/img_4485.jpeg",
-    "_site/photographs/the-pangbourne-arc/index.html",
-    "_site/photographs/the-pangbourne-arc",
-    "_site/photographs/still-waters/index.html",
-    "_site/photographs/still-waters",
-    "_site/portfolio/berberis/index.html",
-    "_site/portfolio/berberis",
-    "_site/portfolio/brome-grass/index.html",
-    "_site/portfolio/brome-grass",
-    "_site/photographs/stained-glass-window/index.html",
-    "_photographs/still-waters.md",
-    "_photographs/stained-glass-window.md",
-    "uploads/IMG_1344.jpeg",
-    "s-till-waters.md",
-    "_photographs/rivers-edge.md",
-    "_photographs/red-poppy.md",
-    "_articles/using-obsidian-to-post-blog.md",
-    "_photographs/the-oxford-ox.md",
-    "_photographs/travels-in-cambodia.md",
     "_photographs/sunset-over-dorchester-on-thames.md",
     "_photographs/the-pangbourne-arc.md",
+    "_photographs/untitled.md",
+    "obsidian_templates/photograph.md",
+    "obsidian_templates",
+    "_site/uploads/c543f611-f0a4-4109-92c0-9d64c7f2b0d0.jpeg",
+    "_site/uploads/seachop.jpg",
+    "_site/uploads/img_0896.jpg",
+    "_site/uploads/gettingcolourful.jpg",
+    "_site/uploads/leiden85.jpg",
+    "_site/uploads/dsc_5241.jpg",
+    "_site/uploads/img_0350.jpg",
+    "_site/uploads/domedceiling.jpg",
+    "_site/uploads/screenshot-2019-08-09-10.47.14.png",
+    "_site/uploads/dsc_5218.jpg",
+    "_site/archive/islomania/ebooks/stevenson/ebooks/isletmultimedia.zip",
+    "_site/archive/islomania/ebooks/stevenson/ebooks/media/erraid.mov",
+    "_site/uploads/b38-he-datasheet-rev-02-0319.pdf",
+    "_site/archive/islomania/juanfernandez/slocum/images",
+    "_site/archive/islomania/narratives/rime/images",
+    "_site/archive/islomania/juanfernandez/dampier/images",
+    "_site/oldgemfile.lock",
+    "_site/archive/islomania/ebooks/stevenson/ebooks/media/earraid320.mov",
+    "_site/archive/islomania/ebooks/stevenson/ebooks/media/storm.mov",
     "_portfolio/beach-zones-beach-tones.md",
     "_site/readme.md",
     "_portfolio/year-s-end-colours.md",
@@ -244,6 +232,18 @@
     "docs/photos/Lichen on Beech.md",
     "docs/private/art/text for pieces/April 2024.md",
     "docs/private/art/text for pieces/October 2024.md",
+    "docs/private/art/Print sizes by theme.md",
+    "docs/Teaching/Digital Workflow/Week 6.md",
+    "docs/private/art/Art Sites requirements.md",
+    "docs/Teaching/Digital Workflow/Week 5.md",
+    "docs/private/art/Cutting list for panels.md",
+    "docs/private/art/Image sizes for export.md",
+    "docs/Teaching/Digital Workflow/Digital Workflow.md",
+    "docs/Teaching/Multiplatform Publishing/Week 11.md",
+    "docs/private/Substack articles/Arcs and Arches.md",
+    "docs/Teaching/Design and Technology/Week 1.md",
+    "docs/Teaching/Digital Workflow/Week 2.md",
+    "docs/Teaching/Digital Workflow/Week 1.md",
     "docs/Teaching/DigitalProduct/Assignment 2.canvas",
     "docs/Teaching/DigitalProduct/assignment1.canvas"
   ]

@@ -28,7 +28,5 @@
   "canvas": true,
   "bookmarks": true,
   "properties": true,
-  "webviewer": true,
-  "footnotes": false,
-  "bases": true
+  "webviewer": true
 }

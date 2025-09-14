@@ -9,7 +9,7 @@
   <div class="post-teaser toShow">
   {%- endif -%}
         {% if art.image %}
-        {% assign image_url = art.image | replace: "../uploads", "/uploads" -%}
+        {% assign image_url = art.image | replace: "_uploads", "uploads" -%}
         <div class="post-img">
             <a aria-label="{{ art.title }}" href="{{ art.url | relative_url }}">
               {%- if art.caption -%}

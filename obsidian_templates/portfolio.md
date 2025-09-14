@@ -8,5 +8,4 @@ tags:
   - art
 caption: 
 forsale:
-published: true
 ---

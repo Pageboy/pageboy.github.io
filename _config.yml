@@ -1,11 +1,10 @@
 ---
 navbar-title: Chris Jennings + art
-name: Art
 title: Chris Jennings
 timezone: UTC
 collections:
-  articles:
-    title: Blog
+  posts:
+    title: Posts
     output: true
     layout: blog
   blog:
@@ -76,7 +75,7 @@ favicon: assets/img/logo.png
 flickr_key: 6a751024fcc480f70610ed1f98220880
 flickr_id: 55648661@N00
 twitter_username: 
-lang: en
+lang: en_gb
 gridlayout: true
 header_text:
 image:

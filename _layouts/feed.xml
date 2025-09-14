@@ -1,85 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom" {% if site.lang %}xml:lang="{{ site.lang }}"{% endif %}>
-  <generator uri="https://jekyllrb.com/" version="{{ jekyll.version }}">Jekyll</generator>
-  <link href="{{ page.url | absolute_url }}" rel="self" type="application/atom+xml" />
-  <link href="{{ '/' | absolute_url }}" rel="alternate" type="text/html" {% if site.lang %}hreflang="{{ site.lang }}" {% endif %}/>
-  <updated>{{ site.time | date_to_xmlschema }}</updated>
-  <id>{{ page.url | absolute_url | xml_escape }}</id>
-
-  {% assign title = site.title | default: site.name %}
-  {% if page.collection != "posts" %}
-    {% assign collection = page.collection | capitalize %}
-    {% assign title = title | append: " | " | append: collection %}
-  {% endif %}
-  {% if page.category %}
-    {% assign category = page.category | capitalize %}
-    {% assign title = title | append: " | " | append: category %}
-  {% endif %}
-
-  {% if title %}
-    <title type="html">{{ title | smartify | xml_escape }}</title>
-  {% endif %}
-
-  {% if site.description %}
-    <subtitle>{{ site.description | xml_escape }}</subtitle>
-  {% endif %}
-
-  {% if site.feed.icon %}
-    {% assign feed_icon = site.feed.icon %}
-    {% unless feed_icon contains "://" %}
-      {% assign feed_icon = feed_icon | absolute_url %}
-    {% endunless %}
-    <icon>{{ feed_icon | xml_escape }}</icon>
-  {% endif %}
-
-  {% if site.feed.logo %}
-    {% assign feed_logo = site.feed.logo %}
-    {% unless feed_logo contains "://" %}
-      {% assign feed_logo = feed_logo | absolute_url %}
-    {% endunless %}
-    <logo>{{ feed_logo | xml_escape }}</logo>
-  {% endif %}
-
-  {% if site.author %}
-    <author>
-        <name>{{ site.author.name | default: site.author | xml_escape }}</name>
-      {% if site.author.email %}
-        <email>{{ site.author.email | xml_escape }}</email>
-      {% endif %}
-      {% if site.author.uri %}
-        <uri>{{ site.author.uri | xml_escape }}</uri>
-      {% endif %}
-    </author>
-  {% endif %}
-
-{% assign posts = site.documents | where_exp: "post", "page.collections contains post.collection" | sort "post.date" | reverse %}
-
-
-    {%- for post in posts limit:100 -%}
-    <entry>
-      {% assign post_title = post.title | smartify | strip_html | normalize_whitespace | xml_escape %}
-
-      <title type="html">{{ post_title }}</title>
-      <link href="{{ post.url | absolute_url }}" rel="alternate" type="text/html" title="{{ post_title }}" />
-      <published>{{ post.date | date_to_xmlschema }}</published>
-      <updated>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</updated>
-      <id>{{ post.id | absolute_url | xml_escape }}</id>
-      <author>
-        <name>Chris Jennings</name>
-      </author>
-         {% assign post_image = post.image.path | default: post.image %}
-        {% if post_image %}
-
-
-        {% unless post_image contains "://" %}
-          {% assign post_image = post_image | absolute_url %}
-        {% endunless %}
-    <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ post_image | xml_escape }}" width="300" />
-      {% endif %}
-  <summary type="html">
-
-              {{ post.excerpt | strip_html | normalize_whitespace }}
-</summary>
-  </entry>
-  {% endfor %}
-</feed>
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom"
+    xmlns:webfeeds="http://webfeeds.org/rss/1.0">
+    <channel>
+        <title>{{ site.title | xml_escape }}</title>
+        <atom:link href="{{ "/feed.xml" | absolute_url }}" rel="self" type="application/rss+xml"/>
+        <link>{{ "/" | absolute_url }}</link>
+        <description>{{ site.description | xml_escape }}</description>
+        <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+        <webfeeds:icon>{{ site.theme_settings.avatar | absolute_url }}</webfeeds:icon>
+        {% for post in site.posts limit:15 %}
+        <item>
+            {% if post.thumbnail %}
+                <enclosure length="1" type="image" url="{{ post.thumbnail | absolute_url }}"/>
+            {% endif %}
+            <title>{{ post.title | xml_escape }}</title>
+            <link>{{ post.url | absolute_url }}</link>
+            <guid isPermaLink="false">{{ post.url | relative_url }}</guid>
+            <description>{{ post.content | xml_escape }}</description>
+            <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+        </item>
+        {% endfor %}
+    </channel>
+</rss>
