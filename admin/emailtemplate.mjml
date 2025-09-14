@@ -1,0 +1,78 @@
+<mjml>
+    <mj-head>
+        <mj-title>{{title}}</mj-title>
+        <mj-font name="Roboto" href="https://fonts.googleapis.com/css?family=Roboto:400,700"></mj-font>
+        <mj-font name="Roboto Slab" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900"></mj-font>
+        <mj-attributes>
+        <mj-text font-weight="400" font-size="16px" color="#000000"></mj-text />
+            <mj-class name="header" padding="20px 0" color="#1D83A8" font-size="30px" line-height="40px" font-family="'Roboto Slab', Helvetica, Arial, sans-serif"/>
+            <mj-class name="paragraph" color="#333333" font-size="14px" font-family="Arial" />
+            <mj-class name="post" padding: "0 20px" color="#333333" font-size="14px" font-family="Roboto" line-height="14px" />
+            <mj-class name="link" color="#4eb00cff" text-decoration="none" font-size="18px" />
+            <mj-class name="post_title" color="#2d5201ff" font-size="18px" />
+            <mj-all font-family="Roboto, Helvetica, Arial, sans-serif"></mj-all>
+      
+        </mj-attributes>
+        <mj-style>
+            .rollover:hover .rollover-first { max-height: 0px !important; display: none !important; }
+            .rollover:hover .rollover-second { max-height: none !important; display: block !important; }
+            .rollover span { font-size: 0px; }
+        </mj-style>
+    </mj-head>
+     <mj-body background-color="#EAE8E5">
+        <mj-section background-color="#FAFAFA" padding="20px">
+        </mj-section>
+        <mj-section background-color="#FFFFFF" padding="20px">
+            <mj-column>
+            <mj-image src="https://www.chrisjennings.net/uploads/newsletterbannergreen.png" alt="River bank" align="center" border="none" padding="0px">
+            </mj-image>
+                <mj-text mj-class="header"><b>Latest Work</b></mj-text>
+                <mj-text mj-class="paragraph">Hello {{#person?}}{{name}}{{/person?}}</mj-text>
+                <mj-text mj-class="paragraph">Here is the latest work I have posted on the {{newsletter.name}} website. Follow the links to see the full content:</mj-text>
+
+                {{#articles}}
+                <mj-text mj-class="post_title" >&#10132; <a style="text-decoration: none; color: inherit;" href="{{{link}}}" mj-class="link">{{title}}</a></mj-text>
+                
+                <mj-text mj-class="post">{{description}}</mj-text>
+
+                {{/articles}}
+            </mj-column>
+        </mj-section>
+
+        {{#socials}}
+        <mj-section>
+            <mj-column>
+                <mj-social font-size="14px" icon-size="32px" mode="horizontal">
+                    {{#socials.twitter}}
+                    <mj-social-element name="twitter" href="{{{.}}}" src="https://eventuallycoding.com/images/rssfeedpulse/twitter.png" />
+                    {{/socials.twitter}}
+                    {{#socials.youtube}}
+                    <mj-social-element name="youtube" href="{{{.}}}" src="https://eventuallycoding.com/images/rssfeedpulse/youtube.png" />
+                    {{/socials.youtube}}
+                    {{#socials.mastodon}}
+                    <mj-social-element href="{{{.}}}" background-color="#FFFFFF" src="https://eventuallycoding.com/images/rssfeedpulse/mastodon-logo-black.png">
+                    </mj-social-element>
+                    {{/socials.mastodon}}
+                        {{#socials.instagram}}
+                    <mj-social-element name="instagram" href="{{{.}}}" src="https://eventuallycoding.com/images/rssfeedpulse/instagram.png" />
+                    {{/socials.instagram}}
+                </mj-social>
+            </mj-column>
+        </mj-section>
+        {{/socials}}
+
+        <mj-section background-color="#FAFAFA" padding="20px">
+            <mj-column>
+                <mj-text mj-class="paragraph" align="center" font-size="12px" line-height="1.5">
+                    <a href="{{newsletter.url}}" mj-class="link">{{newsletter.name}}</a> © {{currentYear}}. All Rights Reserved.
+                </mj-text>
+                <mj-text mj-class="paragraph" align="center" font-size="12px" line-height="1.5">
+                    Powered by <a href="https://hakanai.io" mj-class="link">Hakanai</a>
+                </mj-text>
+                <mj-text mj-class="paragraph" align="center" font-size="12px" line-height="01.5">
+                    No longer want to receive these emails? <a href="{{{newsletter.unsubscribe}}}" mj-class="link">Unsubscribe</a>.
+                </mj-text>
+            </mj-column>
+        </mj-section>
+    </mj-body>
+</mjml>

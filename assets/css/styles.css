@@ -191,6 +191,9 @@ iframe, img, embed, object, video {
 
 iframe {
     padding:0;
+    margin: 0 auto;
+    width: 100%;
+    display: block;
 }
 
 img[align=left] {

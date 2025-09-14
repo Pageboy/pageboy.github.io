@@ -12,6 +12,6 @@ _site/*
 *.gem
 .gems
 
-
+gemfile
 Gemfile
 Gemfile.lock

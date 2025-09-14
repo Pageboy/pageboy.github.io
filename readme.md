@@ -1,4 +1,4 @@
-# Template for a student web site and blog
+# Chris Jennings web site
 
 ## Usage
 
