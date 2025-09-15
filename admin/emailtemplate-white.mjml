@@ -20,8 +20,8 @@
       .rollover span { font-size: 0px; }
     </mj-style>
   </mj-head>
-  <mj-body background-color="#ffffffff">
-    <mj-section background-color="#ffffffff" padding="12px">
+  <mj-body background-color="#ffffff">
+    <mj-section background-color="#ffffff" padding="12px">
     </mj-section>
     <mj-section background-color="#FFFFFF" padding="0 0 8px 0">
       <mj-column>

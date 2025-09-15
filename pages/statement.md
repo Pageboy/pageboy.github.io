@@ -3,7 +3,7 @@ hide: false
 layout: page
 title: Statement
 permalink: /statement
-order: 1
+order: 2
 date: 2024-12-22T14:44:28.645Z
 gridlayout: true
 # icon: fa-connectdevelop
