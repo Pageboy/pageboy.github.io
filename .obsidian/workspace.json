@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_photographs/still-waters.md",
+                "file": "_photographs/over-the-north-sea.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "still-waters"
+              "title": "over-the-north-sea"
             }
           }
         ]
@@ -212,8 +212,11 @@
       "templates:Insert template": false
     }
   },
-  "active": "a9ac8459ddead1f6",
+  "active": "03d00a82f4adbcd7",
   "lastOpenFiles": [
+    "_photographs/still-waters.md",
+    "_photographs/over-the-north-sea.md",
+    "uploads/flyingovernorthsea.jpg",
     "feed.xml",
     "_layouts/feed.xml000",
     "_layouts/feed.xml",
@@ -224,7 +227,6 @@
     "_site/photographs/red-poppy/index.html",
     "_site/photographs/red-poppy",
     "_site/photographs/sunset-from-dorchester-on-thames/index.html",
-    "_site/photographs/sunset-from-dorchester-on-thames",
     "_site/uploads/tim-boote-unsplash.jpg",
     "_site/uploads/screenshot.md",
     "_site/uploads/poppy.jpg",
@@ -235,15 +237,12 @@
     "_site/uploads/4e7fa436-4b14-490f-926a-8273390e60e2_1_102_o.jpeg",
     "uploads/2b244b89-a09a-4e5c-916b-379990117d54.png.png",
     "uploads/2b244b89-a09a-4e5c-916b-379990117d54.jpg.jpg",
-    "uploads/2b244b89-a09a-4e5c-916b-379990117d54.jpg",
     "_photographs/stained-glass-window.md",
-    "_photographs/untitled.md",
+    "_photographs/over-the-north-sea.md",
     "obsidian_templates/photograph.md",
-    "_photographs/still-waters.md",
     "_photographs/red-poppy.md",
     "s-till-waters.md",
     "_photographs/Still Waters.md",
-    "_photographs/Untitled.md",
     "_photographs/Still waters.md",
     "_articles/using-obsidian-to-post-blog.md",
     "_articles/2022-08-09-beale-to-oxford.md",
