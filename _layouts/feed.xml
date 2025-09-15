@@ -77,7 +77,7 @@
       {% endif %}
   <summary type="html">
 
-              {{ post.content }}
+              {{ post.content | strip | xml_escape }}
 </summary>
   </entry>
   {% endfor %}
