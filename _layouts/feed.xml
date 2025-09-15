@@ -77,7 +77,7 @@
       {% endif %}
   <summary type="html">
 
-              {{ post.excerpt | strip_html | normalize_whitespace }}
+              {{ post.content }}
 </summary>
   </entry>
   {% endfor %}
