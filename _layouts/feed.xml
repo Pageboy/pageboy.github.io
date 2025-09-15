@@ -78,10 +78,10 @@
 <summary type="html">
 {{ post.excerpt | strip_html | normalize_whitespace | xml_escape }}
 </summary>
-{% assign post_start = post.excerpt %}
+<!-- {% assign post_start = post.excerpt %}
 <summary type="html">
 {{ post.content | remove: post_start | strip_html | normalize_whitespace | xml_escape }}
-</summary>
+</summary> -->
   </entry>
   {% endfor %}
 </feed>
