@@ -14,5 +14,4 @@ On the beautiful Greek island of Paxos in the Ionian Sea, *Turpentine Trees* sta
 
 Work in progress and ready for 3 panels. Overall dimensions will be 915mm square.
 
-> [!summary] 
 >  Part of an ongoing series, this work uses three _golden rectangles_ (1:1.67 ratio) arranged to frame the photograph and echo arcs of color found within the image.

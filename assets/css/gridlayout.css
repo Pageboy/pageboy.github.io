@@ -39,11 +39,6 @@
    opacity:0; 
 }
 
-.firstone {
-  flex-basis: 100%;
-  flex-shrink: 0;
-}
-
 /* animation */
 
 .animated {
@@ -187,4 +182,14 @@
   flex-basis: 100%;
   flex-shrink: 0;
   flex-grow: 4;
+}
+
+.firstone .post-img a img {
+  display: block;
+  max-height: 85vh;
+  /* border: 1px solid red; */
+  width:auto;
+  /* flex-grow: 0;
+  flex-shrink: 0; */
+  object-fit:scale-down;
 }

@@ -1,7 +1,3 @@
-/*! CSS adapted from  type theme */
-/* html, body {
-font-family: "Cantarell",Geneva,Tahoma,"Trebuchet MS",sans-serif;
-} */
 
 @import "highlighter.css";
 
@@ -35,8 +31,8 @@ main, menu, nav, section, summary {
 
 body {
     color: #262626;
-    font-family: "Source Sans Pro", "Trebuchet MS", Helvetica, Arial, sans-serif;
-    font-size: 1.25em;
+    font-family: "Ubuntu", "Trebuchet MS", Helvetica, Arial, sans-serif;
+    font-size: 1.35em;
     word-wrap: break-word;
 }
 
@@ -83,7 +79,7 @@ h4 {
     }
 
     p {
-        font-size: 0.8em;
+        font-size: 0.9em;
     }
 }
 
@@ -110,10 +106,10 @@ h4 {
 }
 
 blockquote {
-    border-left: 2px solid #9fd2e3;
-    margin: 1em 1em;
-    padding: 0.75em 1em;
-    background-color: #EEF7FA;
+    border-left: 3px solid #4e737b;
+    margin: 0 2em;
+    padding: 0.1em 1em;
+    background-color: #d3d3d3;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
 }
 
