@@ -75,11 +75,13 @@
         {% endunless %}
     <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ post_image | xml_escape }}" width="300" />
       {% endif %}
-  <summary type="html">
+<summary type="html">
 {% if post.content contains "iframe" %}
 {{ post.excerpt | strip | xml_escape }}
 {% else %}
-{{ post.content | strip | xml_escape }}
+<![CDATA[
+{{ post.content }}
+]]>
 {% endif %}
 </summary>
   </entry>
