@@ -63,6 +63,7 @@
       <published>{{ post.date | date_to_xmlschema }}</published>
       <updated>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</updated>
       <id>{{ post.id | absolute_url | xml_escape }}</id>
+      <category term="{{ post.collection }}"/>
       <author>
         <name>Chris Jennings</name>
       </author>
@@ -77,13 +78,10 @@
       {% endif %}
 <summary type="html">
 {{ post.excerpt | strip_html | normalize_whitespace | xml_escape }}
-<![CDATA[<p>From the {{ post.collection | upcase }} section</p>]]>
+
+
+From the {{ post.collection | upcase }} section.
 </summary>
-<!-- {% assign post_start = post.excerpt %}
-<content type="html">
-{{ post.content | remove: post_start | strip_html | normalize_whitespace | xml_escape }}
-<p style="text-transform: capitalise">From the {{ post.collection }} section</p>
-</content> -->
   </entry>
   {% endfor %}
 </feed>
