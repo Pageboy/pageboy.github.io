@@ -77,10 +77,10 @@
     <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ post_image | xml_escape }}" width="300" />
       {% endif %}
 <summary type="html">
-{{ post.excerpt | normalize_whitespace }}
+{{ post.excerpt | normalize_whitespace | strip_html }}
 </summary>
 <content type="html">
-  From the {{ post.collection | upcase }} section.</p>
+  From the {{ post.collection | upcase }} section.
 </content>
   </entry>
   {% endfor %}
