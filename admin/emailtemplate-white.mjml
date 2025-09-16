@@ -30,25 +30,32 @@
         <mj-text mj-class="header" align="center"><b>The Latest from Me</b></mj-text>
         <mj-text mj-class="intro">Hello!</mj-text>
         <mj-text mj-class="intro">Here is the latest work I have posted on the {{newsletter.name}} website. Follow the links to see the full content:</mj-text>
-
+     </mj-column>
+    </mj-section>
+    
         {{#articles}}
+         <mj-section background-color="#FFFFFF" padding="0 0 8px 0">
+      <mj-column>
           <mj-text mj-class="post_title"><a style="text-decoration: none; color: inherit;" href="{{{link}}}" mj-class="link">The way is good. Good is the way &#10132; </a></mj-text>
           {{#thumbnail}}
               <mj-image mj-class="entry_image" src="../images/hhh.jpg">
         </mj-image>
           {{/thumbnail}}
       
-
-          <mj-text mj-class="post">Aute irure laborum sint pariatur non magna anim. Adipisicing ad excepteur fugiat anim id minim sint non esse nulla exercitation occaecat. Ut dolore consequat aliquip duis adipisicing.
-          
-          Another paragraph</mj-text>
-           <mj-text mj-class="post">Aute irure laborum sint pariatur non magna anim. Adipisicing ad excepteur fugiat anim id minim sint non esse nulla exercitation occaecat. Ut dolore consequat aliquip duis adipisicing.
-          
-          Another paragraph</mj-text>
-
-        {{/articles}}
-      </mj-column>
+     </mj-column>
     </mj-section>
+     <mj-section background-color="#FFFFFF" padding="0 0 8px 0">
+      <mj-column>
+          <mj-raw>
+          <div style="margin:16px;">
+          <p style="color:red;">Aute irure laborum sint pariatur non magna anim. Adipisicing ad excepteur fugiat anim id minim sint non esse nulla exercitation occaecat. Ut dolore consequat aliquip duis adipisicing.</p>
+           <p style="color:green;">Aute irure laborum sint pariatur non magna anim. Adipisicing ad excepteur fugiat anim id minim sint non esse nulla exercitation occaecat. Ut dolore consequat aliquip duis adipisicing.</p>
+           </div>
+           </mj-raw>
+     </mj-column>
+    </mj-section>
+        {{/articles}}
+ 
 
     {{#socials}}
       <mj-section>

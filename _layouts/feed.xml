@@ -77,10 +77,8 @@
     <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ post_image | xml_escape }}" width="300" />
       {% endif %}
 <summary type="html">
-{{ post.excerpt | strip_html | normalize_whitespace | xml_escape }}
-
-
-&lt;p&gt;From the {{ post.collection | upcase }} section.&lt;/p&gt;
+{{ post.excerpt | normalize_whitespace }}
+<p>From the {{ post.collection | upcase }} section.</p>
 </summary>
   </entry>
   {% endfor %}
