@@ -80,7 +80,7 @@
 {{ post.excerpt | strip_html | normalize_whitespace | xml_escape }}
 
 
-From the {{ post.collection | upcase }} section.
+&lt;p&gt;From the {{ post.collection | upcase }} section.&lt;/p&gt;
 </summary>
   </entry>
   {% endfor %}
