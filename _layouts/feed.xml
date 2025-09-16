@@ -66,7 +66,6 @@
       <author>
         <name>Chris Jennings</name>
       </author>
-      <category domain="https://www.chrisjennings.net/{{ post.collection }}">{{ post.collection | upcase}}</category>
          {% assign post_image = post.image.path | default: post.image %}
         {% if post_image %}
 
