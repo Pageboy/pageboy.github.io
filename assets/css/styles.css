@@ -388,12 +388,12 @@ header {
     color: #595959;
     letter-spacing: 0.1em;
     margin: 0;
-    text-transform: uppercase
+    /* text-transform: uppercase */
 }
 
 .portfolio .meta, .art .meta {
-    text-transform: capitalize;
-    font-size: .8em;
+    /* text-transform: capitalize; */
+    /* font-size: .8em; */
     margin-top: .4em;
 }
 
@@ -401,6 +401,8 @@ header {
     /* border-radius: 1em; */
     padding-right: 0.5em;
     display: block;
+    margin-bottom: 1em;
+    font-size: .8em;
 }
 
 .art .post-info {
@@ -1646,7 +1648,7 @@ section.photo img {
   }
 
   .photo p {
-      text-align: center;
+      /* text-align: center; */
   }
 
   .caption {
