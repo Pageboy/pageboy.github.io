@@ -2,6 +2,7 @@
 hide: false
 layout: page
 title: Statement
+popup: I am trying to explain my work here.
 permalink: /statement
 order: 2
 date: 2024-12-22T14:44:28.645Z

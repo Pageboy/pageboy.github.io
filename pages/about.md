@@ -2,6 +2,7 @@
 hide: false
 layout: series
 title: About
+popup: Read all about this site
 permalink: /about
 order: 2
 date: 2022-12-22T14:44:28.645Z

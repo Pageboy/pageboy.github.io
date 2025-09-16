@@ -1,5 +1,6 @@
 ---
 title: Blog
+popup: Read a mix of articles on the blog
 permalink: "/blog/"
 layout: blog
 image: "uploads/log.jpg"

@@ -1,5 +1,6 @@
 ---
 title: Search
+popup: Looking for something? - try the search
 permalink: "/search/"
 layout: search
 image: 

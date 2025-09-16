@@ -1,5 +1,6 @@
 ---
 title: Projects
+popup: I have a number of projects that you can explore here
 permalink: "/projects/"
 layout: projects
 description:

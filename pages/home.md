@@ -2,6 +2,7 @@
 hide: true
 layout: portfolio
 title: Chris Jennings
+popup: My art ordered by the latest at the top
 permalink: /
 order: 1
 section: art

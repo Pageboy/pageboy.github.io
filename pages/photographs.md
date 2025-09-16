@@ -1,5 +1,6 @@
 ---
 title: Photographs
+popup: Here are photographs that I like to post
 permalink: "/photographs/"
 layout: photographs
 published: true

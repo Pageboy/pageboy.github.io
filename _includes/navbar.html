@@ -38,7 +38,7 @@
             {% unless node.title == null or node.hide or name_page contains node.title %}
             <li class="separator"> | </li>
             <li {% if page.url contains node.url %} class="active" {% endif %}>
-                <a class="clear" aria-label="{{ node.title }}" title="{{ node.title }}" href="{{ node.url | relative_url }}">
+                <a class="clear" aria-label="{{ node.title }}" {% if node.popup %} title="{{ node.popup }}" {% else %} title="{{ node.title }}" {% endif%} href="{{ node.url | relative_url }}">
                     {% if node.icon %} <i class="fa {{ node.icon }}" aria-hidden="true"></i>
                     {% else %} {{ node.title }} {% endif%}
                 </a>

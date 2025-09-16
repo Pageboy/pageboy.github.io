@@ -1,5 +1,6 @@
 ---
 title: Early Work
+popup: Explore my early art work
 permalink: "/earlywork/"
 layout: earlywork
 description:
