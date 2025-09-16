@@ -66,7 +66,7 @@
       <author>
         <name>Chris Jennings</name>
       </author>
-      <category>From the {{ post.collection | upcase }} section</category>
+      <category domain="https://www.chrisjennings.net/{{ post.collection }}">{{ post.collection | upcase}}</category>
          {% assign post_image = post.image.path | default: post.image %}
         {% if post_image %}
 
@@ -78,6 +78,7 @@
       {% endif %}
 <summary type="html">
 {{ post.excerpt | strip_html | normalize_whitespace | xml_escape }}
+<![CDATA[<p>From the {{ post.collection | upcase }} section</p>]]>
 </summary>
 <!-- {% assign post_start = post.excerpt %}
 <content type="html">
