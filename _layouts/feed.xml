@@ -77,11 +77,13 @@
       {% endif %}
 <summary type="html">
 {{ post.excerpt | strip_html | normalize_whitespace | xml_escape }}
+<p style="text-transform: capitalise">From the {{ post.collection }} section</p>
 </summary>
 <!-- {% assign post_start = post.excerpt %}
-<summary type="html">
+<content type="html">
 {{ post.content | remove: post_start | strip_html | normalize_whitespace | xml_escape }}
-</summary> -->
+<p style="text-transform: capitalise">From the {{ post.collection }} section</p>
+</content> -->
   </entry>
   {% endfor %}
 </feed>
