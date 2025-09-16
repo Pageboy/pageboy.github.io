@@ -78,8 +78,10 @@
       {% endif %}
 <summary type="html">
 {{ post.excerpt | normalize_whitespace }}
-<p>From the {{ post.collection | upcase }} section.</p>
 </summary>
+<content type="html">
+  From the {{ post.collection | upcase }} section.</p>
+</content>
   </entry>
   {% endfor %}
 </feed>
