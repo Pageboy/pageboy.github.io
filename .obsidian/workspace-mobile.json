@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/brome-grass.md",
+                "file": "_photographs/two-windows-on-paxos.md",
                 "mode": "preview",
                 "source": true,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "brome-grass"
+              "title": "two-windows-on-paxos"
             }
           }
         ]
@@ -199,8 +199,14 @@
   },
   "active": "76fdfc5004bfa0d5",
   "lastOpenFiles": [
-    "_portfolio/berberis.md",
+    "_projects/thebookinart.md",
+    "_photographs/two-windows-on-paxos.md",
+    "_photographs/over-the-north-sea.md",
+    "_photographs/two-windows--paxos.md",
     "_portfolio/brome-grass.md",
+    "Untitled.base",
+    "two-windows.md",
+    "_portfolio/berberis.md",
     "_photographs/cotswolds-wall.md",
     "uploads/newsletterbanner.png",
     "uploads/newsletterbannergreen.png",
@@ -222,7 +228,6 @@
     "_site/portfolio/berberis",
     "_site/portfolio/brome-grass/index.html",
     "_site/portfolio/brome-grass",
-    "_site/photographs/stained-glass-window/index.html",
     "_photographs/still-waters.md",
     "_photographs/stained-glass-window.md",
     "uploads/IMG_1344.jpeg",
@@ -240,10 +245,6 @@
     "_photographs/incoming-tide.md",
     "docs/photos/Godstow Bridge.md",
     "docs/photos/River's Edge.md",
-    "docs/photos/Bracken.md",
-    "docs/photos/Lichen on Beech.md",
-    "docs/private/art/text for pieces/April 2024.md",
-    "docs/private/art/text for pieces/October 2024.md",
     "docs/Teaching/DigitalProduct/Assignment 2.canvas",
     "docs/Teaching/DigitalProduct/assignment1.canvas"
   ]
