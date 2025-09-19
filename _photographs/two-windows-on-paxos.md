@@ -11,10 +11,9 @@ tags:
   - art
   - observations
   - church
-published: false
+published: true
 flickr_album: flickr72177720323722839
 ---
-
 On the Greek island of Paxos in the Ionian Sea, we see many churches, and this one in Fontana has these high windows set with decorative surrounds.
 
 This belongs to my growing collection of photographs of arcs - doors, windows and architectural elements.
