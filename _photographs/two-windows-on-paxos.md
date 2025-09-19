@@ -12,7 +12,7 @@ tags:
   - observations
   - church
 published: true
-flickr_album: 72177720323722830
+flickr_album: flickr72177720323722839
 ---
 
 On the Greek island of Paxos in the Ionian Sea, we see many churches, and this one in Fontana has these high windows set with decorative surrounds.
