@@ -11,7 +11,7 @@ tags:
   - art
   - observations
   - church
-published: false
+published: true
 map:
 flickr_album: 72177720323722830
 ---

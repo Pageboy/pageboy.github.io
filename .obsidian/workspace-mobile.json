@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_photographs/over-the-north-sea.md",
+                "file": "_photographs/two-windows-on-paxos.md",
                 "mode": "preview",
                 "source": true,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "over-the-north-sea"
+              "title": "two-windows-on-paxos"
             }
           }
         ]
@@ -199,9 +199,9 @@
   },
   "active": "76fdfc5004bfa0d5",
   "lastOpenFiles": [
+    "_photographs/over-the-north-sea.md",
     "_photographs/two-windows-on-paxos.md",
     "_projects/thebookinart.md",
-    "_photographs/over-the-north-sea.md",
     "_photographs/two-windows--paxos.md",
     "_portfolio/brome-grass.md",
     "Untitled.base",
