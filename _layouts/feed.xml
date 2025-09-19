@@ -77,7 +77,11 @@
     <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ post_image | xml_escape }}" width="300" />
       {% endif %}
 <summary type="html">
-{{ post.excerpt | normalize_whitespace | strip_html }} | From the <a href="{{ site.url }}/{{ post.collection }}">{{ post.collection | upcase }}</a> section of my website.
+{{ post.excerpt | normalize_whitespace | strip_html }}
+<![CDATA[
+<br />
+From the <a href="{{ site.url }}/{{ post.collection }}">{{ post.collection | upcase }}</a> section of my website.
+]]>
 </summary>
   </entry>
   {% endfor %}
