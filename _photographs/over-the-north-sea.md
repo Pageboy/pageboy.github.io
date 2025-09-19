@@ -1,6 +1,6 @@
 ---
 date: 2025-09-15
-updated: 2025-09-16
+updated: 2025-09-19
 title: Over the North Sea
 image: /uploads/flyingovernorthsea.jpg
 caption: From seat 25A to the North Sea
@@ -10,7 +10,7 @@ tags:
   - observations
   - travel
   - transport
-published: true
+published: false
 ---
 Summer 2025 and the stay in Greece is over. Time to get back to England.
 I took this photo on the flight from Corfu to London, Heathrow. We can just make out the coast of Belgium.
