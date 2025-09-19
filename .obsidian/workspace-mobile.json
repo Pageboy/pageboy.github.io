@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_photographs/wall-in-sintra-portugal.md",
+                "file": "_photographs/two-windows-on-paxos.md",
                 "mode": "preview",
                 "source": true,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "wall-in-sintra-portugal"
+              "title": "two-windows-on-paxos"
             }
           }
         ]
@@ -199,6 +199,7 @@
   },
   "active": "76fdfc5004bfa0d5",
   "lastOpenFiles": [
+    "_photographs/wall-in-sintra-portugal.md",
     "_photographs/two-windows-on-paxos.md",
     "obsidian_templates/photograph.md",
     "_photographs/over-the-north-sea.md",
@@ -244,7 +245,6 @@
     "_portfolio/year-s-end-colours.md",
     "_photographs/incoming-tide.md",
     "docs/photos/Godstow Bridge.md",
-    "docs/photos/River's Edge.md",
     "docs/Teaching/DigitalProduct/Assignment 2.canvas",
     "docs/Teaching/DigitalProduct/assignment1.canvas"
   ]

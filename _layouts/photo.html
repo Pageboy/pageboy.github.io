@@ -15,7 +15,7 @@ layout: default
     <img src="{{ page.image }}" alt="{{ page.caption }}">
   </p>
   {% include post_info.html post=page %}
-  {%- assign page.flickr-album = page.flickr_album | replace: "flickr", "" -%}
+  {%- assign page.flickr_album = page.flickr_album | replace: "flickr", "" -%}
         {% unless page.flickr_album == empty or page.flickr_album == null %}
       <!-- <p style="color:#869387;"><i class="fa fa-flickr"></i> Here is a gallery of these images kept on <a title="go to Flickr" href="https://www.flickr.com/photos/chrisjennings/albums/{{page.flickr_album}}">Flickr</a></p> -->
 
@@ -30,7 +30,7 @@ layout: default
                   var options = {
                     apiKey: '{{site.flickr_key}}',
                     flickrId: '{{site.flickr_id}}',
-                    photosetId: '{{page.flickr-album}}',
+                    photosetId: '{{page.flickr_album}}',
                     captions: true,
                     small: 'medium',
                     large: 'original'
