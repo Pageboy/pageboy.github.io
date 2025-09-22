@@ -14,8 +14,8 @@
               "type": "markdown",
               "state": {
                 "file": "_photographs/dorchester-abbey.md",
-                "mode": "source",
-                "source": false,
+                "mode": "preview",
+                "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
                   "collapseAll": false,
@@ -211,13 +211,13 @@
   },
   "active": "5264800840486e68",
   "lastOpenFiles": [
+    "_site/photographs/dorchester-abbey/index.html",
+    "_site/photographs/dorchester-abbey",
     "obsidian_templates/photograph.md",
     "_photographs/dorchester-abbey.md",
     "_site/Untitled.canvas",
     "Untitled.canvas",
     "obsidian_templates/portfolio.md",
-    "_site/photographs/dorchester-abbey/index.html",
-    "_site/photographs/dorchester-abbey",
     "_photographs/two-windows-on-paxos.md",
     "_site/photographs/two-windows-on-paxos/index.html",
     "_site/photographs/two-windows-on-paxos",
