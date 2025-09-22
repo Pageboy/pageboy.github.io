@@ -1,7 +1,7 @@
 ---
 navbar-title: Chris Jennings + art
 name: Art
-title: Chris Jennings
+title: Chris Jennings Art
 timezone: UTC
 collections:
   articles:
@@ -75,6 +75,8 @@ avatar: assets/img/home.png
 favicon: assets/img/logo.png
 flickr_key: 6a751024fcc480f70610ed1f98220880
 flickr_id: 55648661@N00
+author: Chris Jennings
+tagline: This website shows the art work that the artist Chris Jennings is currently working on as well as the review of previous projects amd exhibitions. The site also includes photographs which are posted in a seperate section.
 twitter_username: 
 lang: en
 gridlayout: true
