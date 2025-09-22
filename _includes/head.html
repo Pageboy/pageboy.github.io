@@ -44,11 +44,11 @@
 
   {%- include alltheicons.html -%}
 
-  <!-- Canonical -->
-  <link
+  <!-- Canonical removed becasue we have in seo plugin-->
+  <!-- <link
     rel="canonical"
     href="{{ page.url | replace:'index.html','' | absolute_url }}"
-  />
+  /> -->
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   {%- if site.google_analytics -%}
@@ -67,7 +67,7 @@
   {%- endif -%}
   {%- include metadata.html -%}
   {%- if page.title != site.title -%}
-  <title>{{site.title}} | {{ page.title }}</title>
+  <title>{{site.title}}  |  {%if page.collection %}{{ page.collection | capitalize }} - {% endif %}  {{ page.title }}</title>
   {%- else -%}
   <title>{{site.title}}</title>
   {%- endif -%} 

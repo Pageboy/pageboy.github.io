@@ -375,7 +375,7 @@ footer a.button {
     margin-left: 1em
 }
 
-header h1 {
+header h1, header p {
     margin: 0;
     line-height: 1;
 }
@@ -590,7 +590,9 @@ max-height: 100%;
     vertical-align: middle
 }
 
-.posts .post-teaser .post-img img {
+/* this following css will make the images popup up a little bit on moue over */
+
+/* .posts .post-teaser .post-img img {
     -moz-transition-timing-function: ease-out;
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
@@ -603,7 +605,7 @@ max-height: 100%;
     -moz-transform: scale(1.1);
     -webkit-transform: scale(1.1);
     transform: scale(1.1)
-}
+} */
 
 .posts .excerpt {
     margin-top: .6em;
@@ -823,7 +825,7 @@ h3.tag-anchor i {
     padding: 10px 10px;
 }
 
- .site-title {
+ p.site-title {
     float: left;
     font-weight: bold;
     font-size: 1.3em
@@ -1174,8 +1176,8 @@ ul.share-buttons .sr-only {
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
     -ms-flex-pack: distribute;
-    justify-content: center;
-    justify-content: space-between;
+    /* justify-content: center;
+    justify-content: space-between; */
     justify-content: space-around;
     padding: 2px 12px;
     margin: 15px auto;
