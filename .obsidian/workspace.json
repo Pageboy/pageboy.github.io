@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/sea-splash-and-rock.md",
+                "file": "_portfolio/ionian-pebbles.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "sea-splash-and-rock"
+              "title": "ionian-pebbles"
             }
           }
         ]
@@ -214,6 +214,7 @@
   "active": "03d00a82f4adbcd7",
   "lastOpenFiles": [
     "_portfolio/turpentine-tree.md",
+    "_portfolio/ionian-pebbles.md",
     "_portfolio/sea-splash-and-rock.md",
     "_photographs/over-the-north-sea.md",
     "_site/photographs/over-the-north-sea/index.html",
@@ -258,7 +259,6 @@
     "_articles/2022-04-21-type-in-the-sky.md",
     "_articles/2022-07-14-wallingford-to-pangbourne.md",
     "_articles/2022-06-06-from-dorchester-on-thames-to-clifton-lock.md",
-    "_articles/2021-05-16-new-engine-craned-in.md",
     "docs/private/Teaching_Hold/Multiplatform Publishing/Assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/Assignment 2.canvas",
