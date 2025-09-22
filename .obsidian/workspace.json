@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_photographs/over-the-north-sea.md",
+                "file": "_portfolio/sea-splash-and-rock.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "over-the-north-sea"
+              "title": "sea-splash-and-rock"
             }
           }
         ]
@@ -205,7 +205,6 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "command-palette:Open command palette": false,
-      "markdown-importer:Open format converter": false,
       "audio-recorder:Start/stop recording": false,
       "obsidian-markdown-formatting-assistant-plugin:Open Markdown Formatting Assistant": false,
       "obsidian-git:Open Git source control": false,
@@ -214,11 +213,12 @@
   },
   "active": "03d00a82f4adbcd7",
   "lastOpenFiles": [
+    "_photographs/over-the-north-sea.md",
+    "_portfolio/sea-splash-and-rock.md",
     "_site/photographs/over-the-north-sea/index.html",
     "_site/photographs/over-the-north-sea",
     "_site/uploads/flyingovernorthsea.jpg",
     "_photographs/still-waters.md",
-    "_photographs/over-the-north-sea.md",
     "uploads/flyingovernorthsea.jpg",
     "feed.xml",
     "_layouts/feed.xml000",
@@ -228,7 +228,6 @@
     "_site/photographs/still-waters/index.html",
     "_site/photographs/still-waters",
     "_site/photographs/red-poppy/index.html",
-    "_site/photographs/red-poppy",
     "_site/uploads/tim-boote-unsplash.jpg",
     "_site/uploads/screenshot.md",
     "_site/uploads/poppy.jpg",
@@ -239,7 +238,6 @@
     "_site/uploads/4e7fa436-4b14-490f-926a-8273390e60e2_1_102_o.jpeg",
     "uploads/2b244b89-a09a-4e5c-916b-379990117d54.png.png",
     "_photographs/stained-glass-window.md",
-    "_photographs/over-the-north-sea.md",
     "obsidian_templates/photograph.md",
     "_photographs/red-poppy.md",
     "s-till-waters.md",
