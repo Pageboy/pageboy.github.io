@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_photographs/dorchester-abbey.md",
-                "mode": "preview",
+                "file": "_photographs/arched-doorway-st-gabriels-church.md",
+                "mode": "source",
                 "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "dorchester-abbey"
+              "title": "arched-doorway-st-gabriels-church"
             }
           }
         ]
@@ -183,7 +183,7 @@
         "state": {
           "type": "footnotes",
           "state": {
-            "file": "_photographs/dorchester-abbey.md"
+            "file": "_photographs/arched-doorway-st-gabriels-church.md"
           },
           "icon": "lucide-file-signature",
           "title": "Footnotes"
@@ -211,13 +211,18 @@
   },
   "active": "5264800840486e68",
   "lastOpenFiles": [
+    "obsidian_templates/portfolio.md",
+    "_photographs/arched-doorway-st-gabriels-church.md",
+    "_photographs/Untitled.md",
+    "_photographs/untitled.md",
+    "_photographs/dorchester-abbey.md",
+    "_portfolio/ionian-pebbles.md",
+    "_portfolio/sea-splash-and-rock.md",
     "_site/photographs/dorchester-abbey/index.html",
     "_site/photographs/dorchester-abbey",
     "obsidian_templates/photograph.md",
-    "_photographs/dorchester-abbey.md",
     "_site/Untitled.canvas",
     "Untitled.canvas",
-    "obsidian_templates/portfolio.md",
     "_photographs/two-windows-on-paxos.md",
     "_site/photographs/two-windows-on-paxos/index.html",
     "_site/photographs/two-windows-on-paxos",
@@ -254,10 +259,6 @@
     "_articles/using-obsidian-to-post-blog.md",
     "_photographs/the-oxford-ox.md",
     "_photographs/travels-in-cambodia.md",
-    "_photographs/sunset-over-dorchester-on-thames.md",
-    "_photographs/the-pangbourne-arc.md",
-    "_portfolio/beach-zones-beach-tones.md",
-    "_site/readme.md",
     "docs/Teaching/DigitalProduct/Assignment 2.canvas",
     "docs/Teaching/DigitalProduct/assignment1.canvas"
   ]
