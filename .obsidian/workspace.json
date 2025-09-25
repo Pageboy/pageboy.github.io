@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/ionian-pebbles.md",
+                "file": "_photographs/arched-doorway-st-gabriels-church.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "ionian-pebbles"
+              "title": "arched-doorway-st-gabriels-church"
             }
           }
         ]
@@ -213,12 +213,12 @@
   },
   "active": "03d00a82f4adbcd7",
   "lastOpenFiles": [
+    "_portfolio/ionian-pebbles.md",
     "_photographs/arched-doorway-st-gabriels-church.md",
     "_photographs/arched-doorway-st-gabriel-s-church.md",
     "_photographs/untitled-1.md",
     "_photographs/untitled.md",
     "_portfolio/turpentine-tree.md",
-    "_portfolio/ionian-pebbles.md",
     "_portfolio/sea-splash-and-rock.md",
     "_photographs/over-the-north-sea.md",
     "_site/photographs/over-the-north-sea/index.html",
