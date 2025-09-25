@@ -1,7 +1,7 @@
 ---
 date: 2025-09-24
 updated: 2025-09-25
-title:
+title: St Gabriel’s Church, Charmouth
 image: https://live.staticflickr.com/65535/54802791679_9cbcfb3830_h.jpg
 caption: The remains of St Gabriels Chapel
 source: Apple iPhone 16 Pro
