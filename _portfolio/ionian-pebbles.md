@@ -1,5 +1,5 @@
 ---
-date: 2025-09-22
+date: 2025-09-26T00:00:00
 updated: 2025-09-26
 title: Pebbles on the shore of this Ionian Island
 image: https://live.staticflickr.com/65535/54810239047_84474eb035_h.jpg

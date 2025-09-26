@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_photographs/arched-doorway-st-gabriels-church.md",
+                "file": "_portfolio/ionian-pebbles.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "arched-doorway-st-gabriels-church"
+              "title": "ionian-pebbles"
             }
           }
         ]
@@ -50,7 +50,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical",
+                "sortOrder": "byModifiedTime",
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
@@ -213,8 +213,10 @@
   },
   "active": "03d00a82f4adbcd7",
   "lastOpenFiles": [
-    "_portfolio/ionian-pebbles.md",
+    "_portfolio/pebbled-sea.md",
+    "_portfolio/untitled.md",
     "_photographs/arched-doorway-st-gabriels-church.md",
+    "_portfolio/ionian-pebbles.md",
     "_photographs/arched-doorway-st-gabriel-s-church.md",
     "_photographs/untitled-1.md",
     "_photographs/untitled.md",
@@ -257,8 +259,6 @@
     "_articles/2021-02-26-defying-gravity.md",
     "_articles/2020-04-17-around-the-house.md",
     "_articles/2020-01-14-through-the-glass-fuzzy.md",
-    "_articles/2022-04-21-heres-an-idea-ikea.md",
-    "_articles/2019-06-06-first-view-of-the-engine.md",
     "docs/private/Teaching_Hold/Multiplatform Publishing/Assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/Assignment 2.canvas",
