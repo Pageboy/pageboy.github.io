@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_photographs/arched-doorway-st-gabriels-church.md",
+                "file": "_portfolio/ionian-pebbles.md",
                 "mode": "preview",
                 "source": true,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "arched-doorway-st-gabriels-church"
+              "title": "ionian-pebbles"
             }
           }
         ]
@@ -210,8 +210,8 @@
   },
   "active": "5264800840486e68",
   "lastOpenFiles": [
-    "obsidian_templates/portfolio.md",
     "_photographs/arched-doorway-st-gabriels-church.md",
+    "obsidian_templates/portfolio.md",
     "_photographs/Untitled.md",
     "_photographs/untitled.md",
     "_photographs/dorchester-abbey.md",

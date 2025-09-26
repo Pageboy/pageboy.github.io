@@ -1,17 +1,17 @@
 ---
 date: 2025-09-22
-updated: 2025-09-22
+updated: 2025-09-26
 title: Pebbles on the shore of this Ionian Island
-image: https://live.staticflickr.com/65535/54805304810_e9b71dbb74_h.jpg
+image: https://live.staticflickr.com/65535/54810239047_84474eb035_h.jpg
 layout: art
 tags:
   - art
   - square
 caption: Arcs and pebbles
 forsale:
-published: false
+published: true
 ---
-The variety of colours in these shore pebbles are used for this geometric composition of arcs and rectangles.
+This geometric composition of arcs and rectangles makes use of the subtle and varied colours of wet pebbles photographed on this Greek island shore.
 
 Work in progress and ready for 3 panels. Overall dimensions will be 915mm square.
 
