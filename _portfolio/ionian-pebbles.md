@@ -1,7 +1,7 @@
 ---
 date: 2025-09-26T00:00:00
 updated: 2025-09-26
-title: Pebbles on the shore of this Ionian Island
+title: Ionian pebbles
 image: https://live.staticflickr.com/65535/54810239047_84474eb035_h.jpg
 layout: art
 tags:
