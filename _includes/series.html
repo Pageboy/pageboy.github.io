@@ -18,11 +18,11 @@
         {% endif %}
         <span>
           <header>
-            <h1>
+            <h2>
               <a aria-label="{{ group.title }}" class="post-link" href="{{ group.url | relative_url }}">
                 {{ group.title }}
               </a>
-            </h1>
+            </h2>
           </header>
           <div class="excerpt">
               {{ group.excerpt | strip_html | escape }}
