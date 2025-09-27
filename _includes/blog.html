@@ -19,11 +19,11 @@
         {% endif %}
         <span>
           <header>
-            <h1>
+            <h2>
               <a aria-label="{{ article.title }}" class="post-link" href="{{ article.url | relative_url }}">
                 {{ article.title }} &#10132;
               </a>
-            </h1>
+            </h2>
             {% include post_info.html article=article %}
           </header>
           <div class="excerpt">
