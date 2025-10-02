@@ -148,3 +148,5 @@ exclude:
   - ".jekyll-cache"
   - Gemfile
   - README.md
+  - obsidian_templates
+  - newsletters

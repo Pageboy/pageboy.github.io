@@ -10,7 +10,8 @@
   "obsidian-git",
   "image-captions",
   "update-time-on-edit",
-  "advanced-copy",
   "auto-template-trigger",
-  "vault-file-renamer"
+  "vault-file-renamer",
+  "quail",
+  "copy-document-as-html"
 ]
