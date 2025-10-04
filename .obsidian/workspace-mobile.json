@@ -4,18 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "9951801f6ec6aa01",
+        "id": "ce59a0b294945f52",
         "type": "tabs",
         "children": [
           {
-            "id": "5264800840486e68",
+            "id": "d0c5f8accb9d12ca",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/ionian-pebbles.md",
-                "mode": "preview",
-                "source": true,
+                "file": "newsletters/october-25.md",
+                "mode": "source",
+                "source": false,
                 "backlinks": true,
                 "backlinkOpts": {
                   "collapseAll": false,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "ionian-pebbles"
+              "title": "october-25"
             }
           }
         ]
@@ -47,7 +47,7 @@
           "type": "file-explorer",
           "state": {
             "sortOrder": "byModifiedTime",
-            "autoReveal": true
+            "autoReveal": false
           },
           "icon": "lucide-folder-closed",
           "title": "Files"
@@ -208,14 +208,15 @@
       "templates:Insert template": false
     }
   },
-  "active": "5264800840486e68",
+  "active": "d0c5f8accb9d12ca",
   "lastOpenFiles": [
+    "newsletters/october-25.md",
+    "_portfolio/ionian-pebbles.md",
     "_photographs/arched-doorway-st-gabriels-church.md",
     "obsidian_templates/portfolio.md",
     "_photographs/Untitled.md",
     "_photographs/untitled.md",
     "_photographs/dorchester-abbey.md",
-    "_portfolio/ionian-pebbles.md",
     "_portfolio/sea-splash-and-rock.md",
     "_site/photographs/dorchester-abbey/index.html",
     "_site/photographs/dorchester-abbey",
@@ -257,7 +258,6 @@
     "_photographs/red-poppy.md",
     "_articles/using-obsidian-to-post-blog.md",
     "_photographs/the-oxford-ox.md",
-    "_photographs/travels-in-cambodia.md",
     "docs/Teaching/DigitalProduct/Assignment 2.canvas",
     "docs/Teaching/DigitalProduct/assignment1.canvas"
   ]

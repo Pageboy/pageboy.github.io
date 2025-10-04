@@ -11,6 +11,10 @@
     {
       "folderPath": "_portfolio",
       "templateName": "portfolio"
+    },
+    {
+      "folderPath": "newsletters",
+      "templateName": "newsletter"
     }
   ],
   "disablePrompt": true,

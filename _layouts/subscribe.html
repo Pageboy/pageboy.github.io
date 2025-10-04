@@ -7,7 +7,12 @@
     {% include head.html %}
   <body class="{{page.layout}}">
     {% include navbar.html %}
+<article {% if page.image %}class="feature-image"{% endif %}>
+  <section class="post-content">
+	{{ content | replace: "_uploads", "uploads" }}
+  </section>
     {% include subscribe.html %}
+    </article>
   </body>
 </html>
 

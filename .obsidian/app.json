@@ -32,7 +32,8 @@
     "editor:toggle-keyboard",
     "editor:configure-toolbar",
     "obsidian-markdown-formatting-assistant-plugin:open-callouts-selector",
-    "editor:insert-callout"
+    "editor:insert-callout",
+    "editor:insert-footnote"
   ],
   "mobilePullAction": "obsidian-markdown-formatting-assistant-plugin:open-command-selector",
   "showUnsupportedFiles": true,
