@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_photographs/arched-doorway-st-gabriels-church.md",
+                "file": "newsletters/october-25.md",
                 "mode": "source",
                 "source": true,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "arched-doorway-st-gabriels-church"
+              "title": "october-25"
             }
           },
           {
@@ -55,8 +55,7 @@
               "title": "travels-in-cambodia"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -236,13 +235,16 @@
       "templates:Insert template": false
     }
   },
-  "active": "d886f93a66ee3a62",
+  "active": "03d00a82f4adbcd7",
   "lastOpenFiles": [
+    "_includes/portfoliowithfirstmade large.html",
+    "_includes/portfolio copy.html",
+    "_photographs/arched-doorway-st-gabriels-church.md",
+    "_photographs/dorchester-abbey.md",
+    "_photographs/travels-in-cambodia.md",
     "obsidian_templates/newsletter.md",
     "obsidian_templates/blog-copy.md",
     "newsletters",
-    "_photographs/travels-in-cambodia.md",
-    "_photographs/arched-doorway-st-gabriels-church.md",
     "_portfolio/ionian-pebbles.md",
     "_site/photographs/arched-doorway-st-gabriels-church/index.html",
     "_site/photographs/arched-doorway-st-gabriels-church",
@@ -260,7 +262,6 @@
     "_portfolio/sea-splash-and-rock.md",
     "_photographs/over-the-north-sea.md",
     "_site/photographs/over-the-north-sea/index.html",
-    "_site/photographs/over-the-north-sea",
     "_site/uploads/flyingovernorthsea.jpg",
     "_photographs/still-waters.md",
     "uploads/flyingovernorthsea.jpg",
@@ -282,8 +283,6 @@
     "_articles/using-obsidian-to-post-blog.md",
     "_articles/2022-08-09-beale-to-oxford.md",
     "_photographs/incoming-tide.md",
-    "_posts/using-obsidian-to-post-blog.md",
-    "_articles/2019-11-25-glass-domed-ceiling-in-montpellier.md",
     "docs/private/Teaching_Hold/Multiplatform Publishing/Assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/Assignment 2.canvas",

@@ -1,6 +1,6 @@
 ---
 date: 2025-09-24
-updated: 2025-10-02
+updated: 2025-10-04
 title: St Gabriel’s Church, Charmouth
 image: https://live.staticflickr.com/65535/54802791679_9cbcfb3830_h.jpg
 caption: The remains of St Gabriels Chapel
@@ -11,8 +11,6 @@ published: true
 flickr_album: flickr72177720323722839
 slug: arched-doorway-st-gabriels-church
 datetime: 2025-10-02 10:37
-summary: Silent walls stand where prayers once rose; the arch still holds the sky, though the roof has gone. Stone remembers what time forgets.
-cover_image_url: ""
 ---
 
 The remains of this chapel sits below the Golden Cap hill near to Charmouth in Dorset. The walls and doorways are preserved but no roof remains. I took this photograph and made some refinements to bring out the texture of the stone.

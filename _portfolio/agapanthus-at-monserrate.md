@@ -7,5 +7,6 @@ caption: African Lily arcs
 tags:
   - art
   - golden section
+updated: 2025-10-05
 ---
 In the beautiful gardens of the palace of Monserrate in Sintra, Portugal, the Agapanthus flowers display their blooms against the forest of cork oaks.
