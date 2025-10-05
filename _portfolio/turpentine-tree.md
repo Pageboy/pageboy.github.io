@@ -20,3 +20,5 @@ Work in progress and ready for 3 panels. Overall dimensions will be 915mm square
 > 3 panels will be bolted together - 3 x 465mm x 350mm with an overall size of 915mm x 915mm
 > Each of these rectangles is a _golden rectangle_ 
 > Please view [Berberis](https://www.chrisjennings.net/portfolio/berberis/) here for an idea of how this will look full size
+
+![framed print on Hahnemüle paper](../uploads/20251005-_N724857.jpg)
