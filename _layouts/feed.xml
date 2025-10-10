@@ -80,7 +80,7 @@
 <div xmlns="http://www.w3.org/1999/xhtml">
 {{ post.excerpt | normalize_whitespace }}
 
-<p>From the <a href="{{site.url}}/{{post.collection}}">{{ post.collection | upcase }}</a> section of my website.</p>
+<p>From the <a href="{{site.url}}/{{post.collection}}">{{ post.collection }}</a> section of my website.</p>
 </div>
 </summary>
   </entry>
