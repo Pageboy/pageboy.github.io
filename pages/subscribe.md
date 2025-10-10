@@ -15,3 +15,5 @@ Hello. Glad to meet you.
 I love it that you are looking at my web site and seeing all my work and photographs.
 
 If you want to get my news you can subscribe by entering your email address here. Don't worry, you won't get a lot of emails, cluttering up your inbox and - you can always hit an unsubscribe link (at the bottom of all the emails that you get).
+
+Oh and make sure you check your spam in case my news ends up there!
