@@ -46,7 +46,7 @@
     <mj-section background-color="#FFFFFF" padding="0 0 8px 0">
       <mj-column>
           <mj-raw>
-            <div style="margin:16px;border:1px solid red;">
+            <div style="margin:16px;border:1px solid silver;">
             {{description}}
           <p><a style="text-decoration: none; color: inherit;" href="{{{link}}}" mj-class="link">Read more on my website &#10132; </a></p>
           </div>

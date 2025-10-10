@@ -1,17 +1,18 @@
 <mjml>
   <mj-head>
     <mj-title>{{title}}</mj-title>
-    <mj-font name="Ubuntu" href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"></mj-font>
+    <mj-font name="Ubuntu" href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700"></mj-font>
     <mj-font name="Roboto Slab" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900"></mj-font>
-      <mj-attributes>
+     <mj-attributes>
       <mj-class name="header" padding="10px 0" color="#1D83A8" font-size="30px" line-height="40px" font-family="'Roboto Slab', Helvetica, Arial, sans-serif" />
-      <mj-class name="intro" color="#333333" font-size="15px" font-family="Ubuntu" padding="0 14px 5px 14px" line-height="1.6" font-weight="500" />
-      <mj-class name="paragraph" color="#333333" font-size="15px" font-family="Ubuntu" padding="0 10px"line-height="1.5"/>
-      <mj-class name="post" padding="0 14px 5px 14px" color="#333333" padding="0 14px 5px 14px" font-size="15px" font-family="Ubuntu" line-height="1.5" />
+      <mj-class name="intro" color="#333333" font-size="15px" font-family="'Ubuntu','avenir-next',sans-serif" padding="0 14px 5px 14px" line-height="1.6" font-weight="500" />
+      <mj-class name="paragraph" color="#333333" font-size="15px" font-family="'Ubuntu','avenir-next',sans-serif" padding="0 10px"line-height="1.5" font-weight="400" />
+      <mj-class name="post" padding="0 14px 5px 14px" color="#333333" padding="0 14px 5px 14px" font-size="15px" font-family="'Ubuntu','avenir-next',sans-serif" line-height="1.5" />
       <mj-class name="link" color="#4eb00cff" text-decoration="none" font-size="22px" />
       <mj-class name="post_title" padding="14px" color="#2d5201ff" font-size="22px" font-weight="700" />
-      <mj-class name="entry_image" padding="0 14px 7px 14px"/>
-      <mj-all font-family="Ubuntu, Helvetica, Arial, sans-serif"></mj-all>
+      <mj-class name="entry_image" padding="0 14px 7px 14px" border="1px solid silver"/>
+      <mj-class name="readmore" padding="12px 0" align="center" font-size="16px" color="#1D83A8" />
+      <mj-all font-family="'Ubuntu','avenir-next',sans-serif"></mj-all>
 
     </mj-attributes>
     <mj-style>
@@ -20,40 +21,36 @@
       .rollover span { font-size: 0px; }
     </mj-style>
   </mj-head>
-  <mj-body background-color="#ffffff">
+    <mj-body background-color="#ffffff">
     <mj-section background-color="#ffffff" padding="12px">
     </mj-section>
     <mj-section background-color="#FFFFFF" padding="0 0 8px 0">
       <mj-column>
-        <mj-image src="https://www.chrisjennings.net/uploads/newsletterbannergreen.jpg" alt="Choppy Sea" align="center" border="none" padding="0">
+        <mj-image src="https://www.chrisjennings.net/uploads/newsletterbannergreen.jpg" alt="Choppy Sea" align="center" border="none" padding="0px">
         </mj-image>
         <mj-text mj-class="header" align="center"><b>The Latest from Me</b></mj-text>
         <mj-text mj-class="intro">Hello!</mj-text>
         <mj-text mj-class="intro">Here is the latest work I have posted on the {{newsletter.name}} website. Follow the links to see the full content:</mj-text>
-     </mj-column>
+      </mj-column>
     </mj-section>
-    
         {{#articles}}
-         <mj-section background-color="#FFFFFF" padding="0 0 8px 0">
-      <mj-column>
-          <mj-text mj-class="post_title"><a style="text-decoration: none; color: inherit;" href="{{{link}}}" mj-class="link">The way is good. Good is the way &#10132; </a></mj-text>
+    <mj-section background-color="#FFFFFF" padding="0 0 8px 0">
+      <mj-column>    
+          <mj-text mj-class="post_title"><a style="text-decoration: none; color: inherit;" href="{{{link}}}" mj-class="link">{{title}} &#10132; </a></mj-text>
           {{#thumbnail}}
-              <mj-image mj-class="entry_image" src="../images/hhh.jpg">
-        </mj-image>
+          <mj-image mj-class="entry_image" src="{{thumbnail}}">
+          </mj-image>
           {{/thumbnail}}
-      
-     </mj-column>
-    </mj-section>
-     <mj-section background-color="#FFFFFF" padding="0 0 8px 0">
+      </mj-column>
+    </mj-section>      
+    <mj-section background-color="#FFFFFF" padding="0 0 8px 0">
       <mj-column>
-          <mj-raw>
-
-<p>On the Greek island of Paxos in the Ionian Sea, we see many churches, and this one in Fontana has these high windows set with decorative surrounds.</p> <p>From the <a href="https://www.chrisjennings.net/photographs">PHOTOGRAPHS</a> section of my website.</p>
-           </mj-raw>
-     </mj-column>
+          <mj-text mj-class="paragraph">{{description}}</mj-text>
+          <mj-text mj-class="readmore"><a style="text-decoration: none; color: inherit;" href="{{{link}}}" mj-class="link">Read more on my website &#10132; </a></p>
+          </mj-text>
+      </mj-column>
     </mj-section>
         {{/articles}}
- 
 
     {{#socials}}
       <mj-section>
