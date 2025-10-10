@@ -76,11 +76,10 @@
         {% endunless %}
     <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ post_image | xml_escape }}" width="300" />
       {% endif %}
-<summary type="xhtml">
-<div xmlns="http://www.w3.org/1999/xhtml">
+<summary type="html">
 {{ post.excerpt | normalize_whitespace | strip_html}}
 
-<p>From the <a href="{{site.url}}/{{post.collection}}">{{ post.collection | upcase }}</a> section of my website.</p>
+From the {{ post.collection | upcase }} section of my website.</p>
 </div>
 </summary>
   </entry>
