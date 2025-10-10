@@ -80,7 +80,7 @@
 <div xmlns="http://www.w3.org/1999/xhtml">
 {{ post.excerpt | normalize_whitespace }}
 
-<p>From the <a href="{{site.url}}/{{post.collection}}">{{ post.collection }}</a> section of my website.</p>
+<p><a href="{{ post.url | absolute_url }}">Read more on this from the  <b>{{ post.collection }}</b> section of my website &#10132;</a></p>
 </div>
 </summary>
   </entry>
