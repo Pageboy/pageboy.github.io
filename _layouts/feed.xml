@@ -79,8 +79,7 @@
 <summary type="html">
 {{ post.excerpt | normalize_whitespace | strip_html}}
 
-From the {{ post.collection | upcase }} section of my website.</p>
-</div>
+From the {{ post.collection | upcase }} section of my website.
 </summary>
   </entry>
   {% endfor %}
