@@ -342,7 +342,7 @@ a.button_nft:hover {
 }
 
 article, .comments {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
     float: left;
     width: 100%
 }
@@ -532,7 +532,7 @@ flex: 1 1 500px;
     margin-bottom: 0;
     display: inline-block;
     background-size: cover;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.1) */
 }
 
 .posts .post-teaser .post-img {
