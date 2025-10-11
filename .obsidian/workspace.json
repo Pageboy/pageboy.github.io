@@ -13,31 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/brome-grass.md",
-                "mode": "preview",
-                "source": true,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "brome-grass"
-            }
-          },
-          {
-            "id": "9b0b3ac5567acdad",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_photographs/travels-in-cambodia.md",
+                "file": "_articles/the-proportions-in-my-work.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "travels-in-cambodia"
+              "title": "the-proportions-in-my-work"
             }
           }
         ]
@@ -213,7 +189,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -237,6 +213,14 @@
   },
   "active": "03d00a82f4adbcd7",
   "lastOpenFiles": [
+    "uploads/goldenrectangle.jpg",
+    "_portfolio/garden-releaved.md",
+    "_articles/the-proportions-in-my-work.md",
+    "_portfolio/sea-colours.md",
+    "uploads/root2.gif",
+    "uploads/golden.gif",
+    "uploads/proportions.jpg",
+    "_portfolio/brome-grass.md",
     "_portfolio/turpentine-tree.md",
     "newsletters/october-25.md",
     "_site/uploads/20251005-_N724861.jpg",
@@ -271,18 +255,10 @@
     "uploads/flyingovernorthsea.jpg",
     "_site/uploads/tim-boote-unsplash.jpg",
     "_site/uploads/screenshot.md",
-    "_site/uploads/poppy.jpg",
-    "_site/uploads/megalithiclandscapescover.jpg",
-    "_site/uploads/img_4485.jpeg",
     "_photographs/stained-glass-window.md",
     "obsidian_templates/photograph.md",
     "_photographs/red-poppy.md",
     "s-till-waters.md",
-    "_photographs/Still Waters.md",
-    "_photographs/Still waters.md",
-    "_articles/using-obsidian-to-post-blog.md",
-    "_articles/2022-08-09-beale-to-oxford.md",
-    "_photographs/incoming-tide.md",
     "docs/private/Teaching_Hold/Multiplatform Publishing/Assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/Assignment 2.canvas",

@@ -5,8 +5,9 @@ date: 2025-06-15T18:19:00.000+01:00
 image: https://live.staticflickr.com/65535/54590610540_9018390bc3_h.jpg
 caption: Amongst the grasses and pathways
 flickr_album: ""
+updated: 2025-10-11
 ---
-The seasons in the forest are marked by the colour of the bracken that carpets the ground under the tree canopy. 
+. The seasons in the forest are marked by the colour of the bracken that carpets the ground under the tree canopy. 
 
 ![Bracken against the trees of the forest](https://live.staticflickr.com/65535/54590661168_c4fcab8bb1_h.jpg)
 

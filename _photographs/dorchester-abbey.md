@@ -17,4 +17,6 @@ This arched recess may have been provided for a sculpture. I was able to show th
 
 Dorchester Abbey is in Dorchester-on-Thames, Oxfordshire.
 
+<!--more-->
+
 You can see a collection of my _arc photographs_ from Flickr here.
