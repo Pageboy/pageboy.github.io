@@ -76,7 +76,7 @@
         {% endunless %}
     <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ post_image | xml_escape }}" width="300" />
       {% endif %}
-<summary type="xhtml">
+<summary type="html">
 <![CDATA[
 {{ post.excerpt | normalize_whitespace }}
 <p style="text-align:center;"><a style="text-decoration: none; color: #1D83A8;" href="{{ post.url | absolute_url }}">Read more on the <b>{{ post.collection }}</b> section of my website &#10132;</a></p>
