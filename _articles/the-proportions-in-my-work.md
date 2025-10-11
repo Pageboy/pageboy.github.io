@@ -6,21 +6,23 @@ layout: post
 image: ../uploads/proportions.jpg
 caption:
 flickr_album:
+excerpt_separator: <!--and-->
 tags:
   - Geometry
 published: false
 ---
-![]()
 ## Proportions of rectangles
 
-In my current work, I use very specific rectangles that are defined by their precise proportions. The rectangles themselves form overall structure and the shapes within them emphasise these proportions. While I do not wish to limit my work to these proportions, the structures and geometry keeps me focussed on my main objective; building images from photo collected colours.
+In my current work, I use very specific rectangles that are defined by their precise proportions. The rectangles themselves form overall structure and the shapes within them emphasise these proportions. While I do not wish to limit my work to these proportions, the structures and geometry keeps me 
+focussed on my main objective; building images from photo collected colours.
+
 ### Divine Proportion or the Golden Rectangle
 
 In this series the landscape shaped pieces are using the _golden ratio_. The ratio between the long and the short side is 1.61803. To be precise, this should be (1+√5)/2.
 
 The golden ratio rectangle is one of many _dynamic rectangles_ that can be rationally divided into visually interesting shapes.
 
-<!--more-->
+<!--and-->
 
 Watch this animated gif to see how to  construct a golden rectangle:
 ![Constructing the golden rectangle](../uploads/golden.gif)
