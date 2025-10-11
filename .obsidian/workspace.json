@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_articles/the-proportions-in-my-work.md",
+                "file": "_photographs/dorchester-abbey.md",
                 "mode": "source",
                 "source": true,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "the-proportions-in-my-work"
+              "title": "dorchester-abbey"
             }
           }
         ]
@@ -213,8 +213,8 @@
   },
   "active": "03d00a82f4adbcd7",
   "lastOpenFiles": [
-    "obsidian_templates/blog.md",
     "_articles/the-proportions-in-my-work.md",
+    "obsidian_templates/blog.md",
     "uploads/goldenrectangle.jpg",
     "_portfolio/garden-releaved.md",
     "_portfolio/sea-colours.md",
