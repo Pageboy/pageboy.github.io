@@ -8,7 +8,7 @@ permalink: /subscribe
 order: 1
 date: 2025-04-22T14:44:28.645Z
 published: true
-updated: 2025-10-06
+updated: 2025-10-11
 ---
 Hello. Glad to meet you.
 
