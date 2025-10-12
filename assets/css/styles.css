@@ -613,7 +613,7 @@ max-height: 100%;
 }
 
 .excerpt p {
-    margin:0;
+    margin:.5rem 0;
 }
 
 .subtitle {
