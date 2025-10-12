@@ -1,7 +1,7 @@
 ---
 title: The proportions in my work
 date: 2025-10-11
-updated: 2025-10-11
+updated: 2025-10-12
 layout: post
 image: ../uploads/proportions.jpg
 caption:
@@ -56,10 +56,9 @@ This is a somewhat simpler construct as follows:
 - extend the bottom line of the square to meet this circle
 - this line then becomes the longer side of the rectangle
 
+Here is an example from this series:
 
-Here is an [example](https://www.chrisjennings.net/portfolio/garden-releaved/) from this series:
-
-![Garden Releaved](https://live.staticflickr.com/65535/52893326117_284c3ec446_h_d.jpg)
+![Garden Releaved](https://live.staticflickr.com/65535/54850207969_de5f0c8609_h.jpg)
 
 Because the proportions of the rectangles are a very important aspect of my work, I don't like posting on some websites where the images are cropped.
 For example, *Substack* and *Medium* (platforms that I have tried), are restricted to the proportion **1.5:1** and this means that they are cropped to 800x600 pixels (depending on the screen size).
