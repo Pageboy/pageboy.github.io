@@ -1,9 +1,9 @@
 ---
 title: A Walk up Wittenham Clumps
 date: 2025-10-12
-updated: 2025-10-12
+updated: 2025-10-13
 layout: post
-image: ../uploads/viewfromwittenhamclumps.jpg)
+image: ../uploads/viewfromwittenhamclumps.jpg
 caption: The view from the top of Wittenham Clumps
 excerpt_separator: <!--and-->
 flickr_album:
@@ -34,8 +34,9 @@ Quite soon we come to the footbridge across the Thames. This bridge was used for
 
 ![The bridge over the Thames at Day’s Lock near to Little Wittenham](../uploads/dayslockbridge.png)
 
+<div class="video-box">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/blF9KoI3BxE?si=emLTE8uvr3C-34vH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+</div>
 ### What do see after the Bridge?
 
 After the bridge we are effectively on an island formed by the 2 streams; the main navigable Thames and the streams that rejoin a little further down. Up a steep walk (although made for cars to reach the lock keeper’s house), we come to St Peters Church, Little Wittenham. This charming parish church of Saint Peter has a 14th-century west bell tower.
@@ -49,7 +50,9 @@ Press enter or click to view image in full size
 
 Relax and enjoy this gentle walk up the hill. We pause and take a long look at the wild flowers.
 
+<div class="video-box">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/reRVdrjANpU?si=-h6nclw2j70IIjsi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ### Iron Age Fort
 
@@ -69,8 +72,10 @@ Please see more information on the [Paul Nash web site](https://www.nashclumps.
 
 Join me as I go back over (and under) the bridge and along the towpath to find _Perspectief_ tucked in to her safe mooring.
 
+<div class="video-box">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/jiRmElCyj2I?si=qMz4wAxxkat3LrGF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
-This post was first published in my *Medium* channel. I am now rebublishing these articles on my own web site. Enjoy!
+This post was first published in my *Medium* channel. I am now republishing these articles on my own web site. Enjoy!
 
 [^1]: Poohsticks is a game first mentioned in The House at Pooh Corner , a Winnie-the-Pooh book by A. A. Milne.
