@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "_articles/the-proportions-in-my-work.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -211,7 +211,7 @@
       "templates:Insert template": false
     }
   },
-  "active": "d886f93a66ee3a62",
+  "active": "03d00a82f4adbcd7",
   "lastOpenFiles": [
     "_site/articles/qr-the-link-between-real-and-virtual/index.html",
     "_site/articles/qr-the-link-between-real-and-virtual",

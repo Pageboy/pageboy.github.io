@@ -1,7 +1,7 @@
 ---
 title: The proportions in my work
 date: 2025-10-11
-updated: 2025-10-13
+updated: 2025-10-15
 layout: post
 image: ../uploads/proportions.jpg
 caption:
@@ -66,6 +66,4 @@ For example, *Substack* and *Medium* (platforms that I have tried), are restrict
 Some sites that love to host your work will give you a square image whatever you give them and I try to avoid those sites. 
 
 **Instagram** gives you the option of using the original proportions when uploading but your home page will give a grid of squares.
-
-
 
