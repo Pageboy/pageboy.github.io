@@ -1,7 +1,7 @@
 ---
 title: A Walk up Wittenham Clumps
 date: 2025-10-12
-updated: 2025-10-13
+updated: 2025-10-15
 layout: post
 image: ../uploads/viewfromwittenhamclumps.jpg
 caption: The view from the top of Wittenham Clumps
@@ -34,9 +34,6 @@ Quite soon we come to the footbridge across the Thames. This bridge was used for
 
 ![The bridge over the Thames at Day’s Lock near to Little Wittenham](../uploads/dayslockbridge.png)
 
-<div class="video-box">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/blF9KoI3BxE?si=emLTE8uvr3C-34vH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
 ### What do see after the Bridge?
 
 After the bridge we are effectively on an island formed by the 2 streams; the main navigable Thames and the streams that rejoin a little further down. Up a steep walk (although made for cars to reach the lock keeper’s house), we come to St Peters Church, Little Wittenham. This charming parish church of Saint Peter has a 14th-century west bell tower.

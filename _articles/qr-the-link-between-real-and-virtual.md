@@ -1,10 +1,10 @@
 ---
 title: QR - The Link between the real and virtual
 date: 2025-10-11
-updated: 2025-10-12
+updated: 2025-10-15
 layout: post
-image: ../uploads/qr-side-of-panel.jpg
-caption: QR code
+image: ../uploads/qr-on-print.jpg
+caption: QR code printed with a limited edition print
 flickr_album:
 excerpt_separator: <!--and-->
 tags:
@@ -13,17 +13,15 @@ tags:
   - observations
 published: false
 ---
-
-You can see in the piece hanging on the wall above that on the side of the panel I have printed and mounted a QR code.
-
 We have become very familiar with these strange looking graphic squares; visible on products and posters. We (most of us anyway) know that if we point our smartphone cameras at these 2 dimensional codes, we can then be led to a web site for further information.
-
-![QR code printed with a limited edition print](../uploads/qr-on-print.jpg)
 
 So, while we have a physical work of art, hanging on the wall, other details can be provided. This may simply be a caption or, in my case I like to include a short narrative about the work. Indeed very short — just a few words to signify the inspiration behind the piece.
 
 <!--and-->
 
+![QR code](../uploads/qr-side-of-panel.jpg)
+
+You can see in the piece hanging on the wall above that on the side of the panel I have printed and mounted a QR code.
 You can read about QR codes here: [QR Code story](https://www.qrcode.com/en/history/).
 
 Here is a an example:
