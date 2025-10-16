@@ -1,6 +1,6 @@
 ---
 date: 2025-09-26T00:00:00
-updated: 2025-10-05
+updated: 2025-10-16
 title: Ionian pebbles
 image: https://live.staticflickr.com/65535/54810239047_84474eb035_h.jpg
 layout: art
@@ -10,6 +10,7 @@ tags:
 caption: Arcs and pebbles
 forsale:
 published: true
+solo: false
 ---
 This geometric composition of arcs and rectangles makes use of the subtle and varied colours of wet pebbles photographed on this Greek island shore.
 
