@@ -11,7 +11,7 @@ tags:
   - arc
   - buildings
 solo: false
-published: false
+published: true
 flickr_album: flickr72177720323722839
 ---
 The Norman castle in this Sussex town boasts a captivating archway fashioned from sandstones of many hues — soft reds, warm yellows, and muted browns. Centuries of weathering have roughened the stone surfaces, giving the arch a rugged, beauty that stands out against the flint walls.
