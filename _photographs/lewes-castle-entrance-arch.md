@@ -20,7 +20,7 @@ The first arch rises in a graceful, pointed _lancet_ style, while the second c
 
 <!--and-->
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1237.2469291220284!2d0.006330639594131117!3d50.872878588252334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47df629bcc41e463%3A0xb75e4022ab0f9f97!2sLewes%20Castle%20%26%20Museum!5e0!3m2!1sen!2suk!4v1761655042212!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d161136.79466377894!2d-0.15566445839820658!3d50.87259800000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47df629bcc41e463%3A0xb75e4022ab0f9f97!2sLewes%20Castle%20%26%20Museum!5e0!3m2!1sen!2suk!4v1761662272051!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 
 You can see a collection of my _arc photographs_ from Flickr here.
