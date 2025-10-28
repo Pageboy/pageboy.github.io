@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_articles/the-proportions-in-my-work.md",
-                "mode": "source",
+                "file": "_photographs/lewes-castle-entrance-arch.md",
+                "mode": "preview",
                 "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "the-proportions-in-my-work"
+              "title": "lewes-castle-entrance-arch"
             }
           }
         ]
@@ -213,6 +213,18 @@
   },
   "active": "03d00a82f4adbcd7",
   "lastOpenFiles": [
+    "obsidian_templates/photograph.md",
+    "uploads/newsletterbanner.png.png",
+    "_photographs/lewes-castle-entrance-arch.md",
+    "_photographs/megalithic-landscapes.md",
+    "_photographs/over-the-north-sea.md",
+    "_photographs/dorchester-abbey.md",
+    "_portfolio/california-poppy-arc.md",
+    "_site/portfolio/california-poppy-arc/index.html",
+    "_site/portfolio/california-poppy-arc",
+    "_site/portfolio/untitled/index.html",
+    "_site/portfolio/untitled",
+    "_articles/the-proportions-in-my-work.md",
     "_site/articles/qr-the-link-between-real-and-virtual/index.html",
     "_site/articles/qr-the-link-between-real-and-virtual",
     "_site/articles/a-walk-up-wittenham-clumps/index.html",
@@ -227,23 +239,15 @@
     "uploads/phone-icon-dark-2x.png",
     "_site/admin/emailsignature.html",
     "admin/emailsignature.html",
-    "_site/articles/the-proportions-in-my-work/index.html",
-    "_site/articles/the-proportions-in-my-work",
     "_articles/a-walk-up-wittenham-clumps.md",
     "_articles/using-obsidian-to-post-blog.md",
     "_articles/2022-07-14-wallingford-to-pangbourne.md",
     "_articles/2022-06-06-from-dorchester-on-thames-to-clifton-lock.md",
     "_articles/2019-08-09-air-draft.md",
     "_site/uploads/paulnash.jpg",
-    "uploads/paulnash.jpg",
-    "_site/articles/Untitled/index.html",
-    "_site/articles/Untitled",
-    "_site/articles/untitled/index.html",
     "_articles/landscape-series-on-paper-16x9.md",
     "obsidian_templates/blog.md",
     "_articles/qr-the-link-between-real-and-virtual.md",
-    "_articles/the-proportions-in-my-work.md",
-    "_photographs/dorchester-abbey.md",
     "_portfolio/garden-releaved.md",
     "_portfolio/sea-colours.md",
     "_portfolio/brome-grass.md",
@@ -255,10 +259,6 @@
     "obsidian_templates/blog-copy.md",
     "_portfolio/ionian-pebbles.md",
     "_portfolio/pebbled-sea.md",
-    "_portfolio/untitled.md",
-    "_photographs/arched-doorway-st-gabriel-s-church.md",
-    "_photographs/untitled-1.md",
-    "_photographs/untitled.md",
     "docs/private/Teaching_Hold/Multiplatform Publishing/Assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/Assignment 2.canvas",

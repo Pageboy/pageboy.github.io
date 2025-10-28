@@ -8,6 +8,8 @@ source:
 layout: photo
 tags:
 solo: false
-published: true
+published: false
 flickr_album: flickr
+excerpt_separator: <!--and-->
 ---
+

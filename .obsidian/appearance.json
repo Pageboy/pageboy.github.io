@@ -3,5 +3,6 @@
   "cssTheme": "Obsidian Nord",
   "accentColor": "#ff6a00",
   "textFontFamily": "Avenir",
-  "interfaceFontFamily": "Avenir"
+  "interfaceFontFamily": "Avenir",
+  "theme": "obsidian"
 }
