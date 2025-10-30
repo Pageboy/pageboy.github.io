@@ -7,6 +7,8 @@ layout: art
 excerpt_separator: <!--and-->
 tags:
   - art
+  - square
+  - zeta-series
 caption: Red and green grass
 forsale:
 published: true

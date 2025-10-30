@@ -7,6 +7,7 @@ layout: art
 tags:
   - art
   - square
+  - zeta-series
 excerpt_separator: <!--and-->
 caption: Arcs and pebbles
 forsale:

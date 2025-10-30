@@ -6,7 +6,9 @@ image: https://live.staticflickr.com/65535/54728755234_9e2252b866_h.jpg
 caption: The red and greens
 tags:
   - art
-updated: 2025-08-25
+  - square
+  - zeta-series
+updated: 2025-10-30
 ---
 On the Thames lock island, the berberis blazes with midsummer brilliance, its colours at their most vibrant. The crisp arcs and rectangles, in this piece, mirror the reds and greens of the leaves, which gleam in the bright daylight.
 
