@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_photographs/lewes-castle-entrance-arch.md",
+                "file": "_portfolio/california-poppy-arc.md",
                 "mode": "source",
                 "source": true,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "lewes-castle-entrance-arch"
+              "title": "california-poppy-arc"
             }
           }
         ]
@@ -213,13 +213,19 @@
   },
   "active": "03d00a82f4adbcd7",
   "lastOpenFiles": [
+    "_portfolio/veronica-vera-eikon.md",
+    "_portfolio/tupelo-orange.md",
+    "_portfolio/california-poppy-arc.md",
+    "obsidian_templates/portfolio.md",
+    "_portfolio/ionian-pebbles.md",
+    "_portfolio/brome-grass.md",
+    "_photographs/lewes-castle-entrance-arch.md",
+    "_portfolio/turpentine-tree.md",
     "obsidian_templates/photograph.md",
     "uploads/newsletterbanner.png.png",
-    "_photographs/lewes-castle-entrance-arch.md",
     "_photographs/megalithic-landscapes.md",
     "_photographs/over-the-north-sea.md",
     "_photographs/dorchester-abbey.md",
-    "_portfolio/california-poppy-arc.md",
     "_site/portfolio/california-poppy-arc/index.html",
     "_site/portfolio/california-poppy-arc",
     "_site/portfolio/untitled/index.html",
@@ -250,15 +256,9 @@
     "_articles/qr-the-link-between-real-and-virtual.md",
     "_portfolio/garden-releaved.md",
     "_portfolio/sea-colours.md",
-    "_portfolio/brome-grass.md",
-    "_portfolio/turpentine-tree.md",
     "newsletters/october-25.md",
     "_photographs/arched-doorway-st-gabriels-church.md",
     "_photographs/travels-in-cambodia.md",
-    "obsidian_templates/newsletter.md",
-    "obsidian_templates/blog-copy.md",
-    "_portfolio/ionian-pebbles.md",
-    "_portfolio/pebbled-sea.md",
     "docs/private/Teaching_Hold/Multiplatform Publishing/Assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/Assignment 2.canvas",

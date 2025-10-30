@@ -6,8 +6,9 @@ image:
 layout: art
 tags:
   - art
+excerpt_separator: <!--and-->
 solo: false
 caption: 
 forsale:
-published: true
+published: false
 ---
