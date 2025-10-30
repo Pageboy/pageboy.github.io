@@ -7,6 +7,8 @@ caption: Flag flower
 tags:
   - art
   - triptych
+  - t-series
+updated: 2025-10-30
 ---
 The low arc motif draws together the contrasting hues found in this flower, relating also to the shape of the rainbow.
 **Iris** was the Greek goddess of the rainbow.

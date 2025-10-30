@@ -7,6 +7,8 @@ caption: Blue Lilies in the waters of Sri Lanka
 tags:
   - art
   - triptych
+  - t-series
+updated: 2025-10-30
 ---
 In Sri Lanka, we observe the Blue Water Lilies gracefully adorning the shallow waters.
 

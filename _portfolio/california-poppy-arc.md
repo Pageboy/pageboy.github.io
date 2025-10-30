@@ -7,6 +7,7 @@ layout: art
 tags:
   - art
   - t-series
+  - triptych
 excerpt_separator: <!--and-->
 solo: true
 caption:
