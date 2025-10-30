@@ -13,8 +13,8 @@ layout: default
     <p>
       <img src="{{ page.image }}" alt="{{ page.caption }}" />
     </p>
-    {{ content | replace: "_uploads", "uploads" }} {% include post_info.html
-    post=page %}
+    {{ content | replace: "../uploads", "/uploads" }}
+    {% include post_info.html post=page %}
   
   {% if page.forsale %}
   <section class="sale">
