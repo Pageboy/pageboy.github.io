@@ -6,6 +6,7 @@ image: https://live.staticflickr.com/65535/54857396227_2432654707_h.jpg
 layout: art
 tags:
   - art
+  - t-series
 excerpt_separator: <!--and-->
 solo: true
 caption:
