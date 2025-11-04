@@ -13,9 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_articles/2019-06-08-maiden-voyage.md",
+                "file": "_articles/2019-07-05-herons-and-bridges.md",
                 "mode": "source",
-                "source": false,
+                "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
                   "collapseAll": false,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2019-06-08-maiden-voyage"
+              "title": "2019-07-05-herons-and-bridges"
             }
           }
         ]
@@ -213,6 +213,9 @@
   },
   "active": "8dd31b30643e59be",
   "lastOpenFiles": [
+    "_articles/2022-07-14-wallingford-to-pangbourne.md",
+    "_articles/2019-07-05-herons-and-bridges.md",
+    "_articles/2022-06-06-from-dorchester-on-thames-to-clifton-lock.md",
     "_articles/2019-06-08-maiden-voyage.md",
     "uploads/img_1059.jpg",
     "_articles/2019-11-25-glass-domed-ceiling-in-montpellier.md",
@@ -222,7 +225,6 @@
     "_articles/2019-12-17-rust-away.md",
     "_articles/qr-the-link-between-real-and-virtual.md",
     "_articles/the-proportions-in-my-work.md",
-    "_articles/2019-07-05-herons-and-bridges.md",
     "_articles/2021-05-16-new-engine-craned-in.md",
     "newsletters/november-2025_fromcanvas.md",
     "newsletters/November 2025.canvas",
@@ -240,7 +242,6 @@
     "newsletters/untitled.md",
     "newsletters/november-25.md",
     "newsletters/untitled.md",
-    "newsletters/november-2025.md",
     "newsletters/november-2025.md",
     "uploads/z-form.jpg.jpg",
     "uploads/z-form.jpg",
