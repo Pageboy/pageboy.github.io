@@ -5,7 +5,7 @@ date: 2019-07-05 08:50
 published: true
 image: /uploads/dsc_5139.jpg
 caption: Grey Heron looking for lunch
-flickr_album: Flickr72157719717623568
+flickr_album: flickr72157719717623568
 tags:
   - boat
   - cruising
