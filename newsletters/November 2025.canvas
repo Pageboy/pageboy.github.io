@@ -1,0 +1,12 @@
+{
+	"nodes":[
+		{"id":"8f0a14f5182fa571","x":-360,"y":-400,"width":250,"height":60,"type":"text","text":"Winterising the boat"},
+		{"id":"62a634ca49d1f317","x":-440,"y":-520,"width":250,"height":60,"type":"text","text":"Perspectief (my boat)"},
+		{"id":"3bbda5c240175ad4","x":-360,"y":-160,"width":250,"height":60,"type":"text","text":"Eden or Floriana"},
+		{"id":"6ce341e5d6e950d4","x":-463,"y":-278,"width":250,"height":60,"type":"text","text":"Movies seen"}
+	],
+	"edges":[
+		{"id":"bc9e91f2f33e5536","fromNode":"62a634ca49d1f317","fromSide":"bottom","toNode":"8f0a14f5182fa571","toSide":"top"},
+		{"id":"788518eb3481390e","fromNode":"6ce341e5d6e950d4","fromSide":"bottom","toNode":"3bbda5c240175ad4","toSide":"top"}
+	]
+}

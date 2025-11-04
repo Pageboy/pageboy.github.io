@@ -12,6 +12,6 @@
   "update-time-on-edit",
   "auto-template-trigger",
   "vault-file-renamer",
-  "quail",
-  "copy-document-as-html"
+  "copy-document-as-html",
+  "pretty-properties"
 ]

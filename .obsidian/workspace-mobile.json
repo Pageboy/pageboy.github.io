@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "71788f46b7eedd4d",
+        "id": "b29e88ad98632528",
         "type": "tabs",
         "children": [
           {
-            "id": "dbfbeceed416e5c8",
+            "id": "bbe4aa92e753a2cf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_photographs/dorchester-abbey.md",
+                "file": "_photographs/antonrock.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "dorchester-abbey"
+              "title": "antonrock"
             }
           }
         ]
@@ -208,37 +208,45 @@
       "templates:Insert template": false
     }
   },
-  "active": "067faf30219200de",
+  "active": "bbe4aa92e753a2cf",
   "lastOpenFiles": [
+    "_photographs/two-windows-on-paxos.md",
+    "_photographs/dorchester-abbey.md",
+    "_photographs/rivers-edge.md",
+    "_portfolio/3riangles_reds_yellows.md",
+    "newsletters/Untitled.canvas",
+    "newsletters/November 2025.canvas",
+    "newsletters/november-2025_fromcanvas.md",
+    "newsletters/november-2025_canvas2doc-data/newdoc-node_8f0a14f5182fa571_fromcanvas.md",
+    "newsletters/november-2025_canvas2doc-data/newdoc-node_3bbda5c240175ad4_fromcanvas.md",
+    "newsletters/november-2025_canvas2doc-data/newdoc-node_6ce341e5d6e950d4_fromcanvas.md",
+    "newsletters/november-2025_canvas2doc-data/newdoc-node_62a634ca49d1f317_fromcanvas.md",
+    "newsletters/november-2025_canvas2doc-data",
+    "newsletters/November 25.md",
+    "newsletters/november-25.md",
+    "newsletters/untitled.md",
+    "obsidian_templates/newsletter.md",
+    "november-2025.md",
+    "newsletters/october-25.md",
     "_photographs/bracken.md",
     "_articles/the-proportions-in-my-work.md",
     "_portfolio/palm-lily-arcs.md",
-    "newsletters/october-25.md",
     "_portfolio/ionian-pebbles.md",
     "_photographs/arched-doorway-st-gabriels-church.md",
     "obsidian_templates/portfolio.md",
     "_photographs/Untitled.md",
     "_photographs/untitled.md",
-    "_photographs/dorchester-abbey.md",
     "_portfolio/sea-splash-and-rock.md",
     "_site/photographs/dorchester-abbey/index.html",
     "_site/photographs/dorchester-abbey",
     "obsidian_templates/photograph.md",
     "_site/Untitled.canvas",
     "Untitled.canvas",
-    "_photographs/two-windows-on-paxos.md",
     "_site/photographs/two-windows-on-paxos/index.html",
     "_site/photographs/two-windows-on-paxos",
     "_site/Untitled.base",
     "_photographs/wall-in-sintra-portugal.md",
-    "_photographs/over-the-north-sea.md",
-    "_projects/thebookinart.md",
-    "_photographs/two-windows--paxos.md",
-    "_portfolio/brome-grass.md",
     "Untitled.base",
-    "two-windows.md",
-    "_portfolio/berberis.md",
-    "_photographs/cotswolds-wall.md",
     "uploads/newsletterbanner.png",
     "uploads/newsletterbannergreen.png",
     "admin/emailtemplate.mjml",
@@ -246,18 +254,12 @@
     "_site/uploads/megalithiclandscapescover.jpg",
     "_site/uploads/4e7fa436-4b14-490f-926a-8273390e60e2_1_102_o.jpeg",
     "_site/uploads/tim-boote-unsplash.jpg",
-    "_site/uploads/screenshot.md",
     "_site/uploads/fb148110-2532-4402-8ac5-a80e0c591af1_1_102_a.jpeg",
     "_site/uploads/IMG_1344.jpeg",
     "_site/uploads/img_4485.jpeg",
     "_site/photographs/the-pangbourne-arc/index.html",
     "_site/photographs/the-pangbourne-arc",
-    "_site/photographs/still-waters/index.html",
-    "_photographs/still-waters.md",
-    "_photographs/stained-glass-window.md",
     "uploads/IMG_1344.jpeg",
-    "s-till-waters.md",
-    "_photographs/rivers-edge.md",
     "docs/Teaching/DigitalProduct/Assignment 2.canvas",
     "docs/Teaching/DigitalProduct/assignment1.canvas"
   ]
