@@ -1,7 +1,7 @@
 ---
 title: Cobbles and Shingle. Grounds and Beaches
 date: 2020-01-25T00:00:00.000Z
-image: /_uploads/shingle.jpg
+image: /uploads/shingle.jpg
 caption: Shingle
 tags:
   - observations

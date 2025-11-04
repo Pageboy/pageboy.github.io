@@ -2,7 +2,7 @@
 layout: post
 title: Through the Glass Fuzzy
 date: 2020-01-14T15:36:00.000Z
-image: /_uploads/buswindow.jpg
+image: /uploads/buswindow.jpg
 tags:
   - observations
 ---

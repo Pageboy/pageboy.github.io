@@ -3,7 +3,7 @@ layout: post
 title: Maiden Voyage
 date: 2019-06-08 13:59
 published: true
-image: ../uploads/img_1059.jpg
+image: "[](uploads/img_1059.jpg)"
 tags:
   - boat
   - cruising

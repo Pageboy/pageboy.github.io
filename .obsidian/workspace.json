@@ -4,18 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "4b85e945bdd91c50",
+        "id": "dd98324cdf36268d",
         "type": "tabs",
         "children": [
           {
-            "id": "8dd31b30643e59be",
+            "id": "91b14bd7655ac9f8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "obsidian_templates/newsletter.md",
+                "file": "_articles/2019-06-08-maiden-voyage.md",
                 "mode": "source",
-                "source": true,
+                "source": false,
                 "backlinks": true,
                 "backlinkOpts": {
                   "collapseAll": false,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "newsletter"
+              "title": "2019-06-08-maiden-voyage"
             }
           }
         ]
@@ -211,8 +211,18 @@
       "templates:Insert template": false
     }
   },
-  "active": "8dd31b30643e59be",
+  "active": "91b14bd7655ac9f8",
   "lastOpenFiles": [
+    "uploads/img_0105.jpg",
+    "uploads/img_1056.jpg",
+    "_articles/2019-06-08-maiden-voyage.md",
+    "_articles/the-proportions-in-my-work.md",
+    "obsidian_templates/newsletter.md",
+    "_site/gemfile.lock",
+    "gemfile.lock",
+    "Gemfile.lock",
+    "_site/----gemfile.lock",
+    "----gemfile.lock",
     "obsidian_templates/blog.md",
     "obsidian_templates/portfolio.md",
     "obsidian_templates/photograph.md",
@@ -222,14 +232,10 @@
     "_site/portfolio/california-poppy-arc/index.html",
     "_site/portfolio/california-poppy-arc",
     "_site/series/zeta-series/index.html",
-    "_site/series/zeta-series",
-    "_site/series/t-series/index.html",
-    "_site/series/t-series",
     "_site/uploads/z-form.jpg",
     "_site/uploads/t-form.jpg",
     "_articles/2022-07-14-wallingford-to-pangbourne.md",
     "_articles/2022-06-06-from-dorchester-on-thames-to-clifton-lock.md",
-    "_articles/2019-06-08-maiden-voyage.md",
     "uploads/img_1059.jpg",
     "_articles/2019-11-25-glass-domed-ceiling-in-montpellier.md",
     "_photographs/dorchester-abbey.md",
@@ -237,7 +243,6 @@
     "_articles/2019-06-06-first-view-of-the-engine.md",
     "_articles/2019-12-17-rust-away.md",
     "_articles/qr-the-link-between-real-and-virtual.md",
-    "_articles/the-proportions-in-my-work.md",
     "_articles/2021-05-16-new-engine-craned-in.md",
     "newsletters/november-2025_fromcanvas.md",
     "newsletters/November 2025.canvas",
@@ -245,22 +250,17 @@
     "newsletters/november-2025_canvas2doc-data/newdoc-node_6ce341e5d6e950d4_fromcanvas.md",
     "newsletters/november-2025_canvas2doc-data/newdoc-node_8f0a14f5182fa571_fromcanvas.md",
     "newsletters/november-2025_canvas2doc-data/newdoc-node_62a634ca49d1f317_fromcanvas.md",
-    "newsletters/november-2025_canvas2doc-data",
     "newsletters/Untitled 1.canvas",
     "newsletters/november-2025.md",
     "_portfolio/california-poppy-arc.md",
     "newsletters/November 25.md",
     "newsletters/Untitled.md",
-    "newsletters/november-25.md",
-    "newsletters/untitled.md",
     "uploads/z-form.jpg.jpg",
     "uploads/z-form.jpg",
-    "_includes/portfolio_zetaseries.html",
     "uploads/t-form.jpg.jpg",
     "uploads/t-form.png.png",
     "uploads/t-form.png",
     "uploads/t-form.jpg",
-    "uploads/triptych copy.jpg",
     "docs/private/Teaching_Hold/Multiplatform Publishing/Assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/Assignment 2.canvas",

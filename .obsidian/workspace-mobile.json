@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_photographs/antonrock.md",
+                "file": "_articles/2019-06-08-maiden-voyage.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "antonrock"
+              "title": "2019-06-08-maiden-voyage"
             }
           }
         ]
@@ -190,7 +190,7 @@
         }
       }
     ],
-    "currentTab": 2
+    "currentTab": 4
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -210,6 +210,7 @@
   },
   "active": "bbe4aa92e753a2cf",
   "lastOpenFiles": [
+    "_photographs/antonrock.md",
     "_photographs/two-windows-on-paxos.md",
     "_photographs/dorchester-abbey.md",
     "_photographs/rivers-edge.md",
@@ -245,7 +246,6 @@
     "_site/photographs/two-windows-on-paxos/index.html",
     "_site/photographs/two-windows-on-paxos",
     "_site/Untitled.base",
-    "_photographs/wall-in-sintra-portugal.md",
     "Untitled.base",
     "uploads/newsletterbanner.png",
     "uploads/newsletterbannergreen.png",

@@ -5,7 +5,8 @@
     
     <div class="post-teaser">
         {% if article.image %}
-        {% assign image_url = article.image | replace: "_uploads", "uploads" | replace: "../uploads", "/uploads" -%}
+        {%- assign image_url = article.image | remove: "[]" | remove: "(" | remove: ")" -%}
+        {% assign image_url = image_url | replace: "uploads", "/uploads" | replace: "../uploads", "/uploads" | replace: "//uploads", "/uploads" -%}
         <div class="post-img">
             <a aria-label="{{ article.title }}" href="{{ article.url | relative_url }}">
               {%- if article.caption -%}

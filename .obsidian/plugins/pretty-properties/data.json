@@ -41,7 +41,7 @@
     " "
   ],
   "bannersFolder": "",
-  "coversFolder": "",
+  "coversFolder": "uploads",
   "showColorSettings": false,
   "showTextColorSettings": false,
   "showHiddenSettings": false,
@@ -68,7 +68,7 @@
   "enableCustomDateFormat": false,
   "enableCustomDateFormatInBases": false,
   "enableRelativeDateColors": false,
-  "settingsTab": "OTHER",
+  "settingsTab": "COVERS",
   "enableTaskNotesCount": false,
   "allTNTasksCount": "tn_tasks",
   "completedTNTasksCount": "tn_tasks_completed",

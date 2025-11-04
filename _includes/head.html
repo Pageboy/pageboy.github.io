@@ -72,8 +72,8 @@
   <title>{{site.title}}</title>
   {%- endif -%} 
   <!-- style the featured page image -->
-  {%- if page.image %}{% assign image_url = page.image | replace: "_uploads",
-  "uploads" -%}
+  {%- if page.image %}
+  {%- assign image_url = page.image | replace: "_uploads", "uploads" -%}
   <style>
     #main {
       background-repeat: no-repeat;
