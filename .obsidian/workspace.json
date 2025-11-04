@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_articles/2019-07-05-herons-and-bridges.md",
+                "file": "obsidian_templates/newsletter.md",
                 "mode": "source",
                 "source": true,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2019-07-05-herons-and-bridges"
+              "title": "newsletter"
             }
           }
         ]
@@ -213,6 +213,10 @@
   },
   "active": "8dd31b30643e59be",
   "lastOpenFiles": [
+    "obsidian_templates/blog.md",
+    "obsidian_templates/portfolio.md",
+    "obsidian_templates/photograph.md",
+    "_articles/2019-07-05-herons-and-bridges.md",
     "_site/photographs/lewes-castle-entrance-arch/index.html",
     "_site/photographs/lewes-castle-entrance-arch",
     "_site/portfolio/california-poppy-arc/index.html",
@@ -224,7 +228,6 @@
     "_site/uploads/z-form.jpg",
     "_site/uploads/t-form.jpg",
     "_articles/2022-07-14-wallingford-to-pangbourne.md",
-    "_articles/2019-07-05-herons-and-bridges.md",
     "_articles/2022-06-06-from-dorchester-on-thames-to-clifton-lock.md",
     "_articles/2019-06-08-maiden-voyage.md",
     "uploads/img_1059.jpg",
@@ -250,12 +253,9 @@
     "newsletters/Untitled.md",
     "newsletters/november-25.md",
     "newsletters/untitled.md",
-    "newsletters/november-25.md",
-    "newsletters/untitled.md",
     "uploads/z-form.jpg.jpg",
     "uploads/z-form.jpg",
     "_includes/portfolio_zetaseries.html",
-    "_includes/portfolio_tseries copy.html",
     "uploads/t-form.jpg.jpg",
     "uploads/t-form.png.png",
     "uploads/t-form.png",
