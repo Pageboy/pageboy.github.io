@@ -1,7 +1,12 @@
 {
   "hiddenProperties": [],
   "propertyPillColors": {},
-  "propertyLongtextColors": {},
+  "propertyLongtextColors": {
+    "uploads/img_1059.jpg": {
+      "pillColor": "default",
+      "textColor": "orange"
+    }
+  },
   "tagColors": {},
   "enableBanner": false,
   "enableIcon": true,
@@ -9,9 +14,7 @@
   "bannerProperty": "banner",
   "iconProperty": "icon",
   "coverProperty": "image",
-  "extraCoverProperties": [
-    "caption"
-  ],
+  "extraCoverProperties": [],
   "bannerHeight": 150,
   "bannerHeightMobile": 100,
   "bannerHeightPopover": 100,
