@@ -18,7 +18,7 @@ layout: default
 
  {{ content | replace: "../uploads", "/uploads" }}
   {% assign page.flickr_album = post.flickr_album | remove: 'flickr' %}
-        {% unless page.flickr_album == empty or page.flickr_album == null %}
+        {% unless page.flickr_album == empty or page.flickr_album == null or page.flickr_album == "" %}
       <!-- <p style="color:#869387;"><i class="fa fa-flickr"></i> Here is a gallery of these images kept on <a title="go to Flickr" href="https://www.flickr.com/photos/chrisjennings/albums/{{page.flickr_album}}">Flickr</a></p> -->
                 <div class="gallerycontainer content">
                   <p class="info">Here is a my gallery of related images held on Flickr.</p>
