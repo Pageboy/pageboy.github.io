@@ -7,6 +7,8 @@ caption: Autumn orange
 tags:
   - art
   - golden section
+published: true
+updated: 2025-11-05
 ---
 Through shaded branches the red leaves glow against the faded greens. Re-colouring in the cooling winds, the greens turn to burnt orange.
 

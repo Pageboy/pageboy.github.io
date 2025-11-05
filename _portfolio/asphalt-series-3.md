@@ -7,6 +7,8 @@ nft: https://opensea.io/assets/ethereum/0x495f947276749ce646f68ac8c248420045cb7b
 tags:
   - art
   - square series
+published: true
+updated: 2025-11-05
 ---
 Within a nine sided figure (nonagon) we have 2 images of street asphalt combined with colours.
 

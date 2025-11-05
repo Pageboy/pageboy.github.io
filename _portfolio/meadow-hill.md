@@ -7,6 +7,8 @@ caption: Up clump and down hill
 tags:
   - art
   - landscape
+published: true
+updated: 2025-11-05
 ---
 Sweeping from sky to land, the hill of meadow flowers meets the blue of sky. Up the walk with rest for breath and closer look, down the view meets the green of trees.
 

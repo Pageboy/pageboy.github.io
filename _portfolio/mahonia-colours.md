@@ -7,6 +7,8 @@ caption: Oregon Grape
 tags:
   - art
   - golden section
+published: true
+updated: 2025-11-05
 ---
 As hues shift within the Autumn garden, our gaze is drawn to a small emblem of America—the Oregon Grape.
 

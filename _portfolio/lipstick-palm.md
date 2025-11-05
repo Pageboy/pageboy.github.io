@@ -7,6 +7,8 @@ caption: Sri Lanka lush
 tags:
   - art
   - root2A
+published: true
+updated: 2025-11-05
 ---
 In the dense lush undergrowth of Sri Lanka we spot a contrasting red colour pushing up behind the palm fronds.
 

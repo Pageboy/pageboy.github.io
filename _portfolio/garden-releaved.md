@@ -8,6 +8,8 @@ forsale:
 tags:
   - art
   - root2A
+published: true
+updated: 2025-11-05
 ---
 We are relieved to see most of our garden plants coming back into leaf after a cold and (sometimes) frosty Winter.
 

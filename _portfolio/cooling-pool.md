@@ -8,6 +8,8 @@ nft: https://foundation.app/@pageboy/geo1x1/2?ref=0x6A7B17cA34184aE20f2679F06a4B
 tags:
   - art
   - square series
+published: true
+updated: 2025-11-05
 ---
 Pool under the windy trees.
 

@@ -7,6 +7,8 @@ caption: Reeds dip into the water
 tags:
   - art
   - golden section
+published: true
+updated: 2025-11-05
 ---
 The river edge is softened by the reeds that wave with the wind and the current.
 

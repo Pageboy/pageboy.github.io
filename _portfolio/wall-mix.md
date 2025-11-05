@@ -7,6 +7,8 @@ caption: Composed with the wall of Holy Trinity Church, Cookham
 tags:
   - art
   - golden section
+published: true
+updated: 2025-11-05
 ---
 A walk around Holy Trinity Church, Cookham near the Thames. Chalk white, flint grey and brick red are the colours that expose this wall to my camera. Sweeps and arcs are blended into the constructed *divine* rectangles.
 

@@ -8,6 +8,8 @@ forsale: HUMFTSRHH325E
 tags:
   - art
   - golden section
+published: true
+updated: 2025-11-05
 ---
 The Thames rushes through the weir, its paddles fully open.
 

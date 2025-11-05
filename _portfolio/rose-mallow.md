@@ -7,6 +7,8 @@ caption: ἰβίσκος (ibískos)
 tags:
   - art
   - root2A
+published: true
+updated: 2025-11-05
 ---
 Peach coloured lobes and carmine red *stigma* of the hibiscus flowers reach out towards the Greek island sun. 
 

@@ -6,7 +6,8 @@ image: /uploads/dsc_3351.jpg
 tags:
   - boat
   - engine
-updated: 2025-08-18
+updated: 2025-11-05
+published: true
 ---
 
 Perspectief has a Ford Diesel engine 1.6. This is a marinized Ford Escort Engine from 1987. This apparently gives around 40hp at 3000rpm.

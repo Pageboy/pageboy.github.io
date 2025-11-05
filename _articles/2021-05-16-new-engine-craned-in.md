@@ -9,6 +9,8 @@ tags:
   - boat
   - engine
   - Perspectief
+published: true
+updated: 2025-11-05
 ---
 New [Betamarine engine](uploads/b38-he-datasheet-rev-02-0319.pdf) arrived at the marina in a big cardboard box. Beautifully packaged and mounted on a wooden palet. Two control panels where taken home for safe keeping and for checking against the new dashboards that I had made.
 

@@ -7,6 +7,8 @@ caption: Garden in late December
 tags:
   - art
   - portrait format
+published: true
+updated: 2025-11-05
 ---
 
 

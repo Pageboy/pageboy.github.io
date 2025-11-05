@@ -8,6 +8,8 @@ nft: https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/
 tags:
   - art
   - landscape
+published: true
+updated: 2025-11-05
 ---
 Pads float over surface drawn with lines of reeds. The curving sweep of water grasses light against the drifting deeps. Shapes of colour align with clips of views. Colours chosen to capture the structure.
 

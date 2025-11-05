@@ -11,6 +11,8 @@ tags:
   - landscape
   - literature
   - buildings
+published: true
+updated: 2025-11-05
 ---
 Matthew Arnold (1822-88) was familiar with this view from East of the city of Oxford and his poem, *Thyrsis* included the phrase **dreaming spires.**
 

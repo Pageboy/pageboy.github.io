@@ -7,6 +7,8 @@ caption: Samphire on the rocky shore
 tags:
   - art
   - golden section
+published: true
+updated: 2025-11-05
 ---
 Just within the splash zone of the Ionian sea,  the lime green of the **Samphire** contrasts against the grey limestone rocky shore. 
 

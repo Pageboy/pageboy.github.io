@@ -7,7 +7,8 @@ flickr_album: "72157711862222001"
 tags:
   - observations
   - photography
-updated: 2025-08-18
+updated: 2025-11-05
+published: true
 ---
 
 It's the stuff that we use on boats to hoist our sails and to hold on to the wharf. It is an amazing material that we couldn't really do without – not just in the marine environment but in construction, farming and the haulage business too. If you like climbing mountains then you depend on rope to keep you alive.

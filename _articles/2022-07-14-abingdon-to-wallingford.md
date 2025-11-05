@@ -9,6 +9,8 @@ tags:
   - Perspectief
   - boat
   - Thames
+published: true
+updated: 2025-11-05
 ---
 Come aboard Perspectief for a trip through 5 locks downsteam from Abingdon to the attractive town of Wallingford. Watch the video to the end because we go for a little walk to take a look at Wallingford Bridge.
 

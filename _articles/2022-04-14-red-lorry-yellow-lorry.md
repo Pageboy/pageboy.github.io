@@ -2,12 +2,13 @@
 layout: post
 title: Red Lorry - Yellow Lorry
 date: 2022-04-14T10:26:40.739Z
-image: /uploads/redlorry_yellowlorry.jpg
+image: "[](uploads/redlorry_yellowlorry.jpg)"
 caption: Sainsburys distribution lorry in the UK
 flickr_album: flickr
 published: false
 tags:
   - typography
+updated: 2025-11-05
 ---
 RedLorryYellowLorryRedLorryYellowLorryRedLorryYellowLorryRedLorryYellowLorry. Try saying that very quickly and see if your tongue gets all twisted up. Yes, this post is all about lorry (*truck* if you are from the USA) typography.
 

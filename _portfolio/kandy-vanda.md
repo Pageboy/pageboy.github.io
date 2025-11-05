@@ -7,6 +7,8 @@ caption: Vanda Orchid
 tags:
   - art
   - triptych
+published: true
+updated: 2025-11-05
 ---
 The dazzle of flower petals draws us into the display of **orchids** in the botanical garden in the City of Kandy.
 

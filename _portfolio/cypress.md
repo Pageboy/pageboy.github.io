@@ -8,6 +8,8 @@ tags:
   - art
   - triptych
   - golden section
+published: true
+updated: 2025-11-05
 ---
 As Summer gives way to the cooler Autumn, the branches of the Cypress trees take on warmer tones.
 

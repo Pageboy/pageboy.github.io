@@ -7,6 +7,8 @@ nft: https://foundation.app/@pageboy/geo1x1/5?ref=0x6A7B17cA34184aE20f2679F06a4B
 tags:
   - art
   - square series
+updated: 2025-11-05
+published: true
 ---
 In a restaurant one evening a bowl of tomatoes on the counter caught my eye and I used this photo together with others that I have taken of berries and other tomatoes to make this geometric collage.
 

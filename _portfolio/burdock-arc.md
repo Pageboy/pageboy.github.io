@@ -7,6 +7,8 @@ caption: Fields of Burdock
 tags:
   - art
   - triptych
+published: true
+updated: 2025-11-05
 ---
 In the Summer meadows the Burdock plant shows its purple flowers. The green spikes will turn into hard burrs ready to cling to anyone or anything passing by.
 

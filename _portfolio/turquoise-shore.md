@@ -7,5 +7,7 @@ caption: Rocks and pebbles
 tags:
   - art
   - golden section
+published: true
+updated: 2025-11-05
 ---
 Turquoise waters lap the weathered rocks on the Ionian shore. Through the blue transparency the stones on the beach show their textured pinks and pastel shades. Shapes are composed in the golden rectangles and filled with the colours from the focussed view.

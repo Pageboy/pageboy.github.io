@@ -7,6 +7,8 @@ caption: Wild grass and Barley
 tags:
   - art
   - root2A
+published: true
+updated: 2025-11-05
 ---
 Under the cerulean sky the wind brushes the barley planted in one field as waves of randomness shimmers over the wild grasses in the next.
 

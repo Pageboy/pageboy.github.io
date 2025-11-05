@@ -9,6 +9,8 @@ tags:
   - boat
   - Perspectief
   - Thames
+published: true
+updated: 2025-11-05
 ---
 Welcome aboard *Perspectief*! Wallingford on Thames isn‘t our home port but we often end up there from Oxford. In this video we cruise downstream through three locks to Pangbourne meadow. Once we moor up we take a walk back to take a closer look at Whitchurch bridge.
 

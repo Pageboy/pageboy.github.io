@@ -7,6 +7,8 @@ caption: Colours of mature wheat
 tags:
   - art
   - root2A
+published: true
+updated: 2025-11-05
 ---
 The wheat in the field is mature and ready for harvest. The colours of the stalks and ears smell of the bread that will soon be baked from the threshed grains. The camera finds the drooping buff coloured stems above the ochre interior; home to the unseen field mice.
 

@@ -5,6 +5,8 @@ image: /uploads/shingle.jpg
 caption: Shingle
 tags:
   - observations
+updated: 2025-11-05
+published: true
 ---
 
 Walking around the town, I find myself looking down. Often this is because I need to tread carefully on the uneven pavements and kerbs, but often it is because I am noticing the rich variety of textures and shades.

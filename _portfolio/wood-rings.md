@@ -7,6 +7,8 @@ caption: Sweeping rings
 tags:
   - landscape
   - art
+published: true
+updated: 2025-11-05
 ---
 In the forest some trees are harvested, piled safely and revealing their aged rings.
 

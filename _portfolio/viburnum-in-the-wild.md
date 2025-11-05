@@ -6,6 +6,8 @@ image: https://live.staticflickr.com/65535/54159016036_99488468af_h_d.jpg
 tags:
   - art
   - root2A
+published: true
+updated: 2025-11-05
 ---
 We notice the vibrant red berries of the viburnum, nestled in the tangled branches of the woody hedgerows. 
 

@@ -5,6 +5,8 @@ date: 2020-05-18 13:36
 image: /uploads/godstow_lockdown.jpg
 caption: Godstow Lock reporting Osney Lock
 flickr_album: ""
+published: true
+updated: 2025-11-05
 ---
 Those of us that like to take our boats out on the Thames are in lockdown like everyone else. We have recently learnt (15th May) that we may visit our boats at the marina, but the Environment Agency are discouraging cruising by keeping the locks without hydraulic power. Hand wind only.
 

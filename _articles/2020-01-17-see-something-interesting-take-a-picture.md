@@ -3,12 +3,14 @@ layout: post
 title: See something interesting. Take a picture. Do some research.
 date: 2020-01-17 13:15:00 Z
 image: /uploads/oilspill.jpg
-caption: null
-comments: null
+caption:
+comments:
 flickr_album: ""
 tags:
   - observations
   - photography
+published: true
+updated: 2025-11-05
 ---
 
 I'm standing at the bus stop and I see an interesting pattern on the ground. I am mesmerised. Out comes the phone. I take a picture.

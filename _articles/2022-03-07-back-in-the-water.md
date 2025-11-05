@@ -8,6 +8,8 @@ flickr_album: flickr
 tags:
   - boat
   - Perspectief
+published: true
+updated: 2025-11-05
 ---
 *Perspectief* went back in the water today and is now happy to be afloat on her mooring.
 

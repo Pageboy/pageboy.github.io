@@ -7,6 +7,8 @@ caption: Moor Walk
 tags:
   - art
   - landscape
+published: true
+updated: 2025-11-05
 ---
 * Moor Rush
 * Reed Wave

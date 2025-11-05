@@ -7,6 +7,8 @@ caption: Vanda orchid, Kandy
 tags:
   - art
   - square series
+published: true
+updated: 2025-11-05
 ---
 The square is divided by a golden rectangle that is occupied by the  image of a Vanda Orchid captured amidst the lush scenery of the Kandy, Sri Lanka botanical garden. 
 

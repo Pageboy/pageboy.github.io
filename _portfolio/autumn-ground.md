@@ -8,6 +8,8 @@ forsale:
 tags:
   - art
   - golden section
+published: true
+updated: 2025-11-05
 ---
 Leaves not yet rotted keep their colour on the wet ground. Eyes to the path on the grey day see the rich mixture of tones.
 

@@ -7,5 +7,7 @@ caption: During a trip to Sri Lanka
 flickr_album: flickr
 tags:
   - travel
+published: true
+updated: 2025-11-05
 ---
 Source: Nikon 7ii

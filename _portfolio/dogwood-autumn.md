@@ -8,5 +8,7 @@ tags:
   - art
   - landscape
   - triptych
+published: true
+updated: 2025-11-05
 ---
 The leaves of the dogwood tree turn to orange when the summer ends. The dark undergrowth seems to make their colour even more vibrant.

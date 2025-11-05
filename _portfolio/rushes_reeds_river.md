@@ -7,6 +7,8 @@ nft: https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/
 tags:
   - art
   - square series
+published: true
+updated: 2025-11-05
 ---
 The boundaries of the water and the bank; the trees, the reeds and the reflections when the water is still.
 

@@ -7,6 +7,8 @@ caption: Euphorbia and bluebells
 tags:
   - art
   - golden section
+published: true
+updated: 2025-11-05
 ---
 Brilliant citrine green of the euphorbia bells can be seen against the mauve thimble shapes of the bluebells.
 

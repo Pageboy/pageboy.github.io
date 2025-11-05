@@ -4,31 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "b29e88ad98632528",
+        "id": "e8b3875d96ee9688",
         "type": "tabs",
         "children": [
           {
-            "id": "bbe4aa92e753a2cf",
+            "id": "31bce4fbf2e601fd",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "bases",
               "state": {
-                "file": "_articles/2019-06-08-maiden-voyage.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "file": "_articles/Articles.base",
+                "viewName": "Table"
               },
-              "icon": "lucide-file",
-              "title": "2019-06-08-maiden-voyage"
+              "icon": "lucide-table",
+              "title": "Articles"
             }
           }
         ]
@@ -208,8 +197,12 @@
       "templates:Insert template": false
     }
   },
-  "active": "bbe4aa92e753a2cf",
+  "active": "31bce4fbf2e601fd",
   "lastOpenFiles": [
+    "_articles/Untitled.base",
+    "_articles/2019-06-08-maiden-voyage.md",
+    "_articles/Articles.base",
+    "_articles/untitled.md",
     "_photographs/antonrock.md",
     "_photographs/two-windows-on-paxos.md",
     "_photographs/dorchester-abbey.md",
@@ -236,11 +229,8 @@
     "_photographs/arched-doorway-st-gabriels-church.md",
     "obsidian_templates/portfolio.md",
     "_photographs/Untitled.md",
-    "_photographs/untitled.md",
-    "_portfolio/sea-splash-and-rock.md",
     "_site/photographs/dorchester-abbey/index.html",
     "_site/photographs/dorchester-abbey",
-    "obsidian_templates/photograph.md",
     "_site/Untitled.canvas",
     "Untitled.canvas",
     "_site/photographs/two-windows-on-paxos/index.html",
@@ -257,8 +247,6 @@
     "_site/uploads/fb148110-2532-4402-8ac5-a80e0c591af1_1_102_a.jpeg",
     "_site/uploads/IMG_1344.jpeg",
     "_site/uploads/img_4485.jpeg",
-    "_site/photographs/the-pangbourne-arc/index.html",
-    "_site/photographs/the-pangbourne-arc",
     "uploads/IMG_1344.jpeg",
     "docs/Teaching/DigitalProduct/Assignment 2.canvas",
     "docs/Teaching/DigitalProduct/assignment1.canvas"

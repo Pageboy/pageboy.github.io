@@ -1,0 +1,19 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.folder == "_portfolio"
+    order:
+      - file.name
+      - title
+      - published
+      - date
+      - updated
+      - image
+    sort:
+      - property: date
+        direction: ASC
+    columnSize:
+      file.name: 231
+      note.title: 247

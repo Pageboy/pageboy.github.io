@@ -7,6 +7,8 @@ caption: Speedwell in the park
 tags:
   - art
   - root2A
+published: true
+updated: 2025-11-05
 ---
 A walk in the park and we are drawn to the purple flowers in the border.
 

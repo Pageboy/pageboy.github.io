@@ -8,6 +8,8 @@ forsale:
 tags:
   - art
   - portrait format
+published: true
+updated: 2025-11-05
 ---
 Oaks overhang the paths; their leaves have scattered over the ground mixing a rusty colour palette.
 

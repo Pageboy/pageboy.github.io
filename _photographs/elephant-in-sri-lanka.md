@@ -7,5 +7,7 @@ caption: Sri Lankan Elephant
 tags:
   - nature
   - photography
+published: true
+updated: 2025-11-05
 ---
 Source: Nikon 7ii

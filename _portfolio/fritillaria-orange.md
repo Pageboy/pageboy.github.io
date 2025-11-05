@@ -7,6 +7,8 @@ caption: Fritillaria imperialis
 tags:
   - art
   - root2A
+published: true
+updated: 2025-11-05
 ---
 Emerging from their winter seclusion, our exotic Fritillaries unfurl their delicate petals adorned with captivating shades of pink and orange.
 

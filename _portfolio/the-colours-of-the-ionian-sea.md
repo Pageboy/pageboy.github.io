@@ -7,6 +7,8 @@ caption: Waves of Ionia
 tags:
   - art
   - golden section
+published: true
+updated: 2025-11-05
 ---
 Viewing the Ionian Sea from our beach places. The waves are sometimes still but sometimes confused. The greens of the olive groves and the blue of the sky colour the surface; now poured into the shapes of this geometry construct.
 

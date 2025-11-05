@@ -7,6 +7,8 @@ caption: reeds on the river side
 tags:
   - art
   - triptych
+published: true
+updated: 2025-11-05
 ---
 Along the river, the banks are obscured by the profuse growth of reeds and rushes.
 

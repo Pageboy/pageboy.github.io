@@ -1,0 +1,23 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.folder == "_photographs"
+    order:
+      - file.name
+      - title
+      - date
+      - source
+      - image
+      - published
+    sort:
+      - property: title
+        direction: ASC
+      - property: date
+        direction: DESC
+    columnSize:
+      file.name: 205
+      note.title: 282
+      note.source: 162
+      note.flickr_album: 208

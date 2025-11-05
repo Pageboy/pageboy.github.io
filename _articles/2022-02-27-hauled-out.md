@@ -8,6 +8,8 @@ flickr_album: flickr
 tags:
   - boat
   - Perspectief
+published: true
+updated: 2025-11-05
 ---
 *Perspectief* is currently out of the water on the marina trailer and ready for some underwater maintenance. This is also an opportunity to check out the stern gear (rudder, propellor) and anodes.
 

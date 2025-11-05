@@ -9,6 +9,8 @@ forsale:
 tags:
   - landscape
   - art
+published: true
+updated: 2025-11-05
 ---
 The sea shore pebbles and the lapping water. Capturing colours and textures for the curved form. Added structural elements; repositories for the image details and colours that are alluring in the moment.
 

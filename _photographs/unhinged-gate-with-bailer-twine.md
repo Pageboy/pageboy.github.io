@@ -7,5 +7,7 @@ caption: Gate leaning against post held with baler twine
 flickr_share: https://flic.kr/p/2kR8BCT
 tags:
   - landscape
+published: true
+updated: 2025-11-05
 ---
 I love the colours in rust. I remember when I worked on a farm how baler twine was always around to tie up a gate or even hold up one's trousers.

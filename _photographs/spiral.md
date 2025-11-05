@@ -7,6 +7,8 @@ caption: Down the tower
 tags:
   - travel
   - architecture
+published: true
+updated: 2025-11-05
 ---
 This is what it looks like when you walk downthe spiral stairs at the famouse Sagrada Familia Cathedral in Barcelona.
 

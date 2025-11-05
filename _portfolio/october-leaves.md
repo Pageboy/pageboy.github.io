@@ -9,6 +9,8 @@ forsale:
 tags:
   - art
   - golden section
+published: true
+updated: 2025-11-05
 ---
 A visit to the maple tree copse with changing colours for the winter coming.
 

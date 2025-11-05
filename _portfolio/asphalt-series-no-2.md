@@ -6,6 +6,8 @@ image: https://live.staticflickr.com/65535/51868397488_82df1da720_3k_d.jpg
 tags:
   - art
   - square series
+published: true
+updated: 2025-11-05
 ---
 All those asphalt repairs in the road and on the path - they form interesting geometries themselves, but then I add my own structure and juxtapose the textures with plain colour.
 

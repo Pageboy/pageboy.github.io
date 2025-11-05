@@ -7,6 +7,8 @@ forsale:
 tags:
   - art
   - square series
+published: true
+updated: 2025-11-05
 ---
 Corrosion seems like a negative thing; wasting away and dirty. But, actually no; rusted metal is rich in colour and texture and in this image I use some images of rusted chains that I have taken in sea locations.
 

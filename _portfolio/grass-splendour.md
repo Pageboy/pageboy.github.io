@@ -6,6 +6,8 @@ image: https://live.staticflickr.com/65535/53058778522_45dbf9474b_h_d.jpg
 tags:
   - art
   - triptych
+published: true
+updated: 2025-11-05
 ---
 In this **triptych** three backgrounds are used as the anchor for the circular forms and arcs that are hosting the chosen images.
 

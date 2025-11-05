@@ -1,0 +1,19 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.folder == "_articles"
+    order:
+      - title
+      - file.name
+      - published
+      - file.ctime
+    sort:
+      - property: title
+        direction: DESC
+    columnSize:
+      note.title: 272
+      file.name: 319
+      file.ctime: 210
+      note.published: 150

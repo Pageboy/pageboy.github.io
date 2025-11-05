@@ -1,6 +1,6 @@
 ---
 date: 2025-07-24
-updated: 2025-07-24
+updated: 2025-11-05
 image: https://live.staticflickr.com/65535/54676220231_54b2a4a87c_h.jpg
 title: Incoming Tide over a rock covered with Sea Lettuce
 layout: photo
@@ -10,6 +10,7 @@ tags:
   - observations
   - sea
 source: Apple iPhone 16 Pro
+published: true
 ---
 
 The rocks on Charmouth Beach (Dorset, England) are covered with an algae known as sea lettuce.

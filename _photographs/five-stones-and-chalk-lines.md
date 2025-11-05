@@ -7,5 +7,7 @@ caption: Lines on Rock, Ardpatrick, 1979
 flickr_share: https://flic.kr/p/2iWK2zq
 tags:
   - rock drawing
+published: true
+updated: 2025-11-05
 ---
 Scanned 5 x 4 Negative. 1979

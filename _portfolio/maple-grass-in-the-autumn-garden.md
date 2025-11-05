@@ -7,6 +7,8 @@ caption: The garden grass is covered with maple leaves
 tags:
   - art
   - triptych
+published: true
+updated: 2025-11-05
 ---
 Before the great *leaf pickup* begins in our garden, the grounded maple leaves form a spectacle of colours; oranges, yellows and browns contrasting against the viridian greens of the cropped grass.
 

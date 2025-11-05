@@ -7,5 +7,7 @@ caption: Burberry arcs and segments
 tags:
   - art
   - golden section
+published: true
+updated: 2025-11-05
 ---
 On the lock island in the Thames the Burberry is showing the leaves in vibrant reds and greens. The yellow flowers are gradually revealed making it possible for me to develop an exciting palette of colours for the geometric shapes.

@@ -9,6 +9,8 @@ tags:
   - art
   - root2A
   - triptych
+published: true
+updated: 2025-11-05
 ---
 The leaves of the exotic trees in the arboretum are transforming from greens to spectacular shades of purple. We notice the Japanese Maple with leaf clusters swaying gracefully in the breeze.
 

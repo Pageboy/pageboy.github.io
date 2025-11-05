@@ -8,6 +8,8 @@ forsale:
 tags:
   - art
   - landscape
+published: true
+updated: 2025-11-05
 ---
 The wild meadow by the river. The sweeping mixtures of grass meeting the reeds at the waters' edge. Dark shades mix in with the multitude of greens.
 

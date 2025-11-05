@@ -8,6 +8,8 @@ flickr_album: ""
 tags:
   - boat
   - cruising
+published: true
+updated: 2025-11-05
 ---
 Of course we have been here before, but on this trip the weather was very hot and in spite of lashings of sun cream the skipper got a little sun burnt.
 

@@ -8,6 +8,8 @@ flickr_album: flickr
 tags:
   - boat
   - Perspectief
+published: true
+updated: 2025-11-05
 ---
 Dorchester on Thames is a favorite mooring spot for *Perspectief*. Here follows a video that first explores the village of Dorchester (it has an Abbey) and then we make way upstream. Check out this video on the YouTube Channel.
 

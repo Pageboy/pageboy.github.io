@@ -7,6 +7,8 @@ caption: Arc over meadow
 tags:
   - art
   - triptych
+published: true
+updated: 2025-11-05
 ---
 On the damp meadow by the river, the stalks of the meadowsweet flowers contrast against the green grasses. The clusters of creamy flowers are ready to burst open in the summer sun.
 

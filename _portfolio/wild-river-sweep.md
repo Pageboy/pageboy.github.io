@@ -8,6 +8,8 @@ forsale: ""
 tags:
   - art
   - landscape
+published: true
+updated: 2025-11-05
 ---
 The winter river is in full flood and the weirs are controlling the torrents as the turbulent waters scour out the sediments. The river is wild and dangerous with fast currents and a surface that mixes the whites of the foam with the greens and greys of the cold winter Thames.
 

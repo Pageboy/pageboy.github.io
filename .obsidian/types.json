@@ -4,6 +4,7 @@
     "cssclasses": "multitext",
     "tags": "tags",
     "date": "datetime",
-    "flickr_album": "text"
+    "flickr_album": "text",
+    "title": "text"
   }
 }

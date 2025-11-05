@@ -8,6 +8,8 @@ nft: ""
 tags:
   - art
   - golden section
+published: true
+updated: 2025-11-05
 ---
 Beach times between swims, the camera captures the sea washing over the pebbles.
 

@@ -8,7 +8,8 @@ tags:
   - art
   - triptych
   - t-series
-updated: 2025-10-30
+updated: 2025-11-05
+published: true
 ---
 In Sri Lanka, we observe the Blue Water Lilies gracefully adorning the shallow waters.
 

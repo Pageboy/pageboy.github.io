@@ -6,5 +6,7 @@ image: /uploads/91841238-4546-4ed5-979f-1ef40f28293a.jpeg
 caption: Rusty trailers
 tags:
   - landscape
+published: true
+updated: 2025-11-05
 ---
 Nothing to bale but these trailers are queued up ready.

@@ -8,6 +8,8 @@ flickr_album: flickr72157717820076916
 tags:
   - engine
   - boat
+published: true
+updated: 2025-11-05
 ---
 After a lot of research the decision has been made to replace the engine in *Perspectief*. Her engine is as old as the boat and maybe be even older. Here follows an explanation of why we need to get a new engine and also a narrative of the research undertaken. No doubt you will want to read on to find out the progress on the project, but this post is just about the research.
 

@@ -5,6 +5,8 @@ date: 2020-01-14T15:36:00.000Z
 image: /uploads/buswindow.jpg
 tags:
   - observations
+updated: 2025-11-05
+published: true
 ---
 
 I'm on the bus, on my way home. It's getting dark and it's raining. I'm on the top deck at the front. I'm struggling see where we are (I'm looking for my stop). The bus is full and everyone is breathing; why shouldn't they?

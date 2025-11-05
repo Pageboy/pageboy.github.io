@@ -7,6 +7,8 @@ caption: See sea colour
 tags:
   - art
   - golden section
+published: true
+updated: 2025-11-05
 ---
 Sea water colour drifting towards the shore. Ripples far become waves over the floor. Light mixes the blues and greens into turquoise shades and flashes.
 

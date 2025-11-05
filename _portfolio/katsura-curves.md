@@ -7,5 +7,7 @@ caption: Katsura from Japan
 tags:
   - art
   - portrait format
+published: true
+updated: 2025-11-05
 ---
 During our annual autumn visit to the arboretum, we are captivated by the vibrant display of the Japanese Katsura trees. Their leaves showcase an extraordinary palette of colors, shifting from brilliant apricot yellow to fiery vermillion and deep carmine red. Aware of the fleeting nature of this beauty, we capture it through the lens of a camera, later drawing upon these hues to inspire this composition.

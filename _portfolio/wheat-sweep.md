@@ -7,6 +7,8 @@ caption: Fields of ears
 tags:
   - art
   - landscape
+published: true
+updated: 2025-11-05
 ---
 Pathways through the colours of farmed fields. Crops are textures of swaying grasses. The air is dusted with scents of earlier planting.
 

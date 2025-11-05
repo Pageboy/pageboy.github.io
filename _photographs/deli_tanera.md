@@ -9,6 +9,8 @@ title: Deli Approaching the island of Tanera Móre
 date: 2020-05-17
 tags:
   - photography
+source: 4x5 Scanned
+updated: 2025-11-05
 ---
 
 35mm Film positive Ektachrome. Maybe 1980

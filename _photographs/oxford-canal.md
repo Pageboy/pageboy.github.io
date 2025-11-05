@@ -6,5 +6,7 @@ image: https://live.staticflickr.com/65535/51988695356_fc1e02a98d_h_d.jpg
 caption: Bollard
 tags:
   - landscape
+published: true
+updated: 2025-11-05
 ---
 A bollard by the Oxford canal at Shipton Lock

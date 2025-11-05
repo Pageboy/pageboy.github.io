@@ -9,6 +9,8 @@ comments:
 tags:
   - observations
   - lockdown
+published: true
+updated: 2025-11-05
 ---
 
 Spending a lot of time in the garden because of the lockdown, I find myself looking skywards through the trees.

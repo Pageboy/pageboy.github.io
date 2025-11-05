@@ -7,6 +7,8 @@ caption: Garden wisteria flowers
 tags:
   - art
   - root2A
+published: true
+updated: 2025-11-05
 ---
 We waited for the wisteria to come into flower and we were not disappointed.
 

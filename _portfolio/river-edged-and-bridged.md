@@ -8,6 +8,8 @@ forsale:
 tags:
   - art
   - landscape
+published: true
+updated: 2025-11-05
 ---
 Reeds border the dark bridged river. Willow herb sprinkles the colour for contrast as we sweep past.
 

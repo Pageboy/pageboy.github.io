@@ -7,5 +7,7 @@ caption: Lantana in the the Botanical gardens
 tags:
   - art
   - golden section
+published: true
+updated: 2025-11-05
 ---
 In the green houses of the Oxford Botanical Gardens we find glorious colours that inspire composition for this combination of curves, lines and rectangles. The Golden Rectangle its subdivided to provide balance and focus.

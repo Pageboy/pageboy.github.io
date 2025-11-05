@@ -7,5 +7,7 @@ caption: Through the leaves of the palm
 tags:
   - art
   - portrait format
+published: true
+updated: 2025-11-05
 ---
 The intense blue of the tropical sky is seen through the sweeping arcs of the palm leaves.

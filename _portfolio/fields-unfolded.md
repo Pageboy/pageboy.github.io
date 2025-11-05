@@ -8,6 +8,8 @@ forsale:
 tags:
   - art
   - landscape
+published: true
+updated: 2025-11-05
 ---
 The wind sweeps over the wheat field showing itself as it strokes the heads.
 

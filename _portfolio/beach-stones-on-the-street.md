@@ -8,6 +8,8 @@ forsale:
 tags:
   - art
   - landscape
+published: true
+updated: 2025-11-05
 ---
 Merton street sett stones caught my eye. I wonder if these came from Chessel Beach. 
 

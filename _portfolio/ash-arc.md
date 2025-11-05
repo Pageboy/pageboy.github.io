@@ -6,6 +6,8 @@ image: https://live.staticflickr.com/65535/53988208294_9cb67dd761_h_d.jpg
 tags:
   - art
   - root2A
+updated: 2025-11-05
+published: true
 ---
 In the forest the ash trees stand strong against the Summer foliage.
 

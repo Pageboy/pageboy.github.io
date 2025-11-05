@@ -7,5 +7,7 @@ caption: "Curved road wet with rain "
 tags:
   - art
   - square series
+published: true
+updated: 2025-11-05
 ---
 Drops splash the walking path and the blinking eyes are unfocused. The wet asphalt road reflects the house hedges. When the rain comes we don’t hide our heads.

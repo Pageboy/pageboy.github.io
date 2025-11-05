@@ -6,6 +6,8 @@ image: https://live.staticflickr.com/65535/54198949272_efe54a9709_h_d.jpg
 caption: Arc over Tall Thistle
 tags:
   - art
+published: true
+updated: 2025-11-05
 ---
 Standing way tall over the flowers on the Summer meadow, the Plume Thistles attract the many insects with their brilliant purple feathered hairs. The vibrant colours are contrasted against the shadowy woods bordering the field.
 

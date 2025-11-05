@@ -6,6 +6,8 @@ image: https://live.staticflickr.com/65535/49389023191_ec94c37003_3k.jpg
 tags:
   - art
   - square series
+published: true
+updated: 2025-11-05
 ---
 The shoreline is a rich observational space for colours and forms.
 

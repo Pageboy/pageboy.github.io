@@ -7,5 +7,7 @@ caption: Cut and Stacked, Wytham Woods
 flickr_share: https://flic.kr/p/2ngvRbu
 tags:
   - landscape
+published: true
+updated: 2025-11-05
 ---
 Spring in Wytham Woods, Bluebells

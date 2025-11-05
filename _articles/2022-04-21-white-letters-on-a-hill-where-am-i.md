@@ -9,6 +9,8 @@ tags:
   - landscape
   - signage
   - travel
+published: true
+updated: 2025-11-05
 ---
 The Hollywood sign in Santa Monica, California is a well known landmark and has an interesting history, because it was originally put up in 1923 as an advertisement for land available for building homes in an area known as *Hollywoodland*.
 

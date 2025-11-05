@@ -7,6 +7,8 @@ caption: Parasol tree (maranga)
 tags:
   - art
   - portrait format
+published: true
+updated: 2025-11-05
 ---
 With the warm air dense with moisture we enjoy the tropical exotic plants in their natural habitat. 
 

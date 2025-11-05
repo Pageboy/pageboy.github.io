@@ -7,6 +7,8 @@ caption: Codominant stems
 tags:
   - art
   - triptych
+published: true
+updated: 2025-11-05
 ---
 Shining through the dark forest of greens and browns we notice the vibrant orange colour that adorns the bark of the beech trees.
 

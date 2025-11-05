@@ -6,6 +6,8 @@ image: https://live.staticflickr.com/65535/51950398193_b5d51a8413_h_d.jpg
 tags:
   - art
   - landscape
+published: true
+updated: 2025-11-05
 ---
 * Sky Trees
 * Liquid Blue

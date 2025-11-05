@@ -9,6 +9,8 @@ tags:
   - fonts
   - transport
   - signage
+published: true
+updated: 2025-11-05
 ---
 We must offer some admiration for those people who paint the text on the road. These letters (white or often yellow), are painted skilfully so as to read well from an angle. Of course, the letters need to be geometrically perfect, but some distortion helps the readablity from a moving vehicle.
 

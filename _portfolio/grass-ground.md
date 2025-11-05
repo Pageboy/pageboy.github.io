@@ -7,6 +7,8 @@ caption: Grasses
 tags:
   - art
   - root2A
+published: true
+updated: 2025-11-05
 ---
 Blades of grass form random pencil line texture scribbled in greens.
 

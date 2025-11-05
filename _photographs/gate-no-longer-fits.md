@@ -7,5 +7,7 @@ caption: Dampness and weather and soft ground
 flickr_share: https://flic.kr/p/2mWaH8a
 tags:
   - landscape
+published: true
+updated: 2025-11-05
 ---
 Took this photo on Boars Hill on a damp and misty day.

@@ -7,6 +7,8 @@ caption: Bluebells and iris blades
 tags:
   - art
   - golden section
+published: true
+updated: 2025-11-05
 ---
 Arcs and segments filled with colours of the garden.
 

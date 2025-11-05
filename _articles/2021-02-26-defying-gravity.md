@@ -7,6 +7,8 @@ caption: Engine suspended
 flickr_album: flickr
 tags:
   - boat
+published: true
+updated: 2025-11-05
 ---
 Engines are very heavy objects being made from cast iron and steel. A typical diesel engine will weigh 140 kilos and a marine engine with a gearbox and heat exchanger attached could be up to 190kilos. So, how does one lift an engine from the boat's engine bay so that it can be removed from the boat.
 

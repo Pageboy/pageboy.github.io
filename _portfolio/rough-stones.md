@@ -7,6 +7,8 @@ caption: Stones walled in rough
 tags:
   - art
   - golden section
+published: true
+updated: 2025-11-05
 ---
 Landscape stones collected by callousted hands are built into rough walls for terracing the slopes.
 

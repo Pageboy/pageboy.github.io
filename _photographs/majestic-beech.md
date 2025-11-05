@@ -8,5 +8,7 @@ flickr_share: https://flic.kr/p/2jSthYK
 tags:
   - landscape
   - nature
+published: true
+updated: 2025-11-05
 ---
 Nikon 1 J5 - 1 NIKKOR VR 6.7-13mm f/3.5-5.6

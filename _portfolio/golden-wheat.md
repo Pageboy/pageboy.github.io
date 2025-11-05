@@ -7,6 +7,8 @@ caption: Golden ratio with colours from field wheat
 tags:
   - art
   - golden section
+published: true
+updated: 2025-11-05
 ---
 Crops in the fields are bursting with heavy wheat heads.
 

@@ -6,7 +6,8 @@ image: /uploads/kym-mackinnon-54kc5pklfmu-unsplash.jpg
 caption: ""
 tags:
   - observations
-updated: 2025-08-18
+updated: 2025-11-05
+published: true
 ---
 Just today we have been suffering from the onslaught of storm *Ciara* (edit) and now storm *Dennis* has arrived. Trees are down and much debris on the pavements. The chain saws are out and the branches are being shredded.
 

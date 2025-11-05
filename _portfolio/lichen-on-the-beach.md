@@ -8,6 +8,8 @@ nft: https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/
 tags:
   - art
   - golden section
+published: true
+updated: 2025-11-05
 ---
 A little way back from the waves at the shore, the rocks are hosting colours of the sun. 
 

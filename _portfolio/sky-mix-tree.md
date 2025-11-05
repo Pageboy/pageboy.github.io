@@ -8,6 +8,8 @@ forsale:
 tags:
   - art
   - portrait format
+published: true
+updated: 2025-11-05
 ---
 Against the cloudless sky the sun catches the branches of the leafless tree. 
 

@@ -7,6 +7,8 @@ caption: "Storm clouds are gathering "
 tags:
   - art
   - root2A
+published: true
+updated: 2025-11-05
 ---
 In the midst of predominantly grey hues, our eyes perceive skies tinged with a captivating shade of *brown*. 
 

@@ -7,6 +7,8 @@ caption: Paxos olives
 tags:
   - art
   - portrait format
+published: true
+updated: 2025-11-05
 ---
 The ancient olive trees on the Greek island stand heavy with fruit. In early September, the olives glow a brilliant green under the Mediterranean sun, though they won’t be ready for harvest until later in the year.
 

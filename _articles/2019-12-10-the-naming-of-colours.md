@@ -8,6 +8,8 @@ flickr_album: "72157712175659357"
 tags:
   - observations
   - photography
+published: true
+updated: 2025-11-05
 ---
 We might say "I like your blue sweater". But we could instead say "I really love your "Pavilion Blue" sweater. Of course we would need to have memorised the *Farrow & Ball* colour card and have been brainwashed with these named colours.
 

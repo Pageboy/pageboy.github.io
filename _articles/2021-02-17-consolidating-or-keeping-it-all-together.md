@@ -8,6 +8,8 @@ tags:
   - web sites
   - work
   - personal
+published: true
+updated: 2025-11-05
 ---
 I can't handle it anymore! Too many locations to post and so I have decided to *bite the bullet* - *grasp the nettle* and post all blog items here to chrisjennings.net. It makes sense 'cos that's who I am, and even though I have several *irons in my fire*, I need to keep it all together. Yes, all - photos, artwork, archive, design work, teaching work, whatever. Maintaining all of these web sites has become *too much*.
 

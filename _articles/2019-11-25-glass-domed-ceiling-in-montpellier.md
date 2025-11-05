@@ -2,12 +2,14 @@
 title: Glass Domed Ceiling in Montpellier
 date: 2019-11-25 13:43:00 Z
 layout: post
-image: "/uploads/domedceiling.jpg"
+image: /uploads/domedceiling.jpg
 caption:
 flickr_album: ""
 comments:
 tags:
   - travel
+published: true
+updated: 2025-11-05
 ---
 
 This is the ceiling in the Halles Laissac in Montpellier. The ceiling is a glass dome and :
