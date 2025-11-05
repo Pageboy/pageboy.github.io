@@ -11,13 +11,24 @@
             "id": "4427579dde050b11",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "bases/Photographs.base",
-                "viewName": "Table"
+                "file": "_photographs/pomegranate-on-the-tree.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-table",
-              "title": "Photographs"
+              "icon": "lucide-file",
+              "title": "pomegranate-on-the-tree"
             }
           }
         ]
@@ -202,10 +213,11 @@
   },
   "active": "4427579dde050b11",
   "lastOpenFiles": [
+    "bases/Photographs.base",
+    "_photographs/pomegranate-on-the-tree.md",
     "bases/Articles.base",
     "bases/Portfolio.base",
     "_photographs/deli_mainsail.md",
-    "bases/Photographs.base",
     "_photographs/killed_rabbit.md",
     "_articles/2019-06-08-constant-velocity-joint.md",
     "_photographs/Photographs.base",
@@ -223,7 +235,6 @@
     "obsidian_templates/newsletter.md",
     "_site/gemfile.lock",
     "gemfile.lock",
-    "Gemfile.lock",
     "obsidian_templates/blog.md",
     "obsidian_templates/portfolio.md",
     "obsidian_templates/photograph.md",
@@ -243,7 +254,6 @@
     "newsletters/November 2025.canvas",
     "newsletters/november-2025_canvas2doc-data/newdoc-node_3bbda5c240175ad4_fromcanvas.md",
     "newsletters/november-2025_canvas2doc-data/newdoc-node_6ce341e5d6e950d4_fromcanvas.md",
-    "newsletters/november-2025_canvas2doc-data/newdoc-node_8f0a14f5182fa571_fromcanvas.md",
     "newsletters/Untitled 1.canvas",
     "uploads/z-form.jpg.jpg",
     "uploads/z-form.jpg",
