@@ -17,8 +17,9 @@ layout: default
   {% include post_info.html post=page %}
 
  {{ content | replace: "../uploads", "/uploads" }}
-  {% assign page.flickr_album = post.flickr_album | remove: 'flickr' %}
-        {% unless page.flickr_album == empty or page.flickr_album == null or page.flickr_album == "" %}
+
+  {%- assign flickr_album = page.flickr_album | replace: "flickr", "" -%}
+        {% unless flickr_album == empty or flickr_album == null or flickr_album == "" %}
       <!-- <p style="color:#869387;"><i class="fa fa-flickr"></i> Here is a gallery of these images kept on <a title="go to Flickr" href="https://www.flickr.com/photos/chrisjennings/albums/{{page.flickr_album}}">Flickr</a></p> -->
                 <div class="gallerycontainer content">
                   <p class="info">Here is a my gallery of related images held on Flickr.</p>
@@ -31,7 +32,7 @@ layout: default
                   var options = {
                     apiKey: '{{site.flickr_key}}',
                     flickrId: '{{site.flickr_id}}',
-                    photosetId: '{{page.flickr_album | remove: "flickr"}}',
+                    photosetId: '{{flickr_album | remove: "flickr"}}',
                     captions: true,
                     small: 'medium',
                     large: 'original'
