@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_photographs/pomegranate-on-the-tree.md",
+                "file": "_articles/arcs-of-oxford.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "pomegranate-on-the-tree"
+              "title": "arcs-of-oxford"
             }
           }
         ]
@@ -213,23 +213,23 @@
   },
   "active": "4427579dde050b11",
   "lastOpenFiles": [
+    "_site/articles/index.html",
+    "_site/artcles/index.html",
+    "_site/artcles",
+    "_site/articles/arcs-of-oxford/index.html",
+    "_site/articles/arcs-of-oxford",
+    "_articles/arcs-of-oxford.md",
+    "_photographs/pomegranate-on-the-tree.md",
     "_site/photographs/pomegranate-on-the-tree/index.html",
     "_site/photographs/pomegranate-on-the-tree",
     "_site/bases/Portfolio.base",
     "_site/bases/Photographs.base",
     "_site/bases/Articles.base",
     "_site/bases",
-    "bases/Photographs.base",
-    "_photographs/pomegranate-on-the-tree.md",
-    "bases/Articles.base",
-    "bases/Portfolio.base",
     "_photographs/deli_mainsail.md",
     "_photographs/killed_rabbit.md",
     "_articles/2019-06-08-constant-velocity-joint.md",
-    "_photographs/Photographs.base",
-    "bases",
     "_articles/2022-04-14-red-lorry-yellow-lorry.md",
-    "_articles/untitled.md",
     "_articles/2019-12-17-rust-away.md",
     "_articles/2019-06-08-maiden-voyage.md",
     "uploads/img_0105.jpg",
