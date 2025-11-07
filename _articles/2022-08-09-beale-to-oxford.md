@@ -9,7 +9,7 @@ tags:
   - boat
   - Perspectief
   - Thames
-updated: 2025-11-05
+updated: 2025-11-06
 published: true
 ---
 Welcome aboard *Perspectief*! This was an upstream trip that took 2 days with an overnight stay at Dorchester, however, this video just shows some highlights with some nice music. Enjoy!

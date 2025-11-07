@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_articles/arcs-of-oxford.md",
+                "file": "_portfolio/wisteria-autumn.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "arcs-of-oxford"
+              "title": "wisteria-autumn"
             }
           }
         ]
@@ -179,7 +179,7 @@
             }
           },
           {
-            "id": "fc8869c6842d7d0c",
+            "id": "51dcffb09b1ed331",
             "type": "leaf",
             "state": {
               "type": "side-panel-control-view",
@@ -213,19 +213,23 @@
   },
   "active": "4427579dde050b11",
   "lastOpenFiles": [
+    "_site/portfolio/wisteria-autumn/index.html",
+    "_site/portfolio/wisteria-autumn",
+    "_site/uploads/instagrey.jpeg",
+    "uploads/instagrey.jpeg",
+    "_articles/arcs-of-oxford.md",
+    "_portfolio/wisteria-autumn.md",
+    "_articles/2022-08-09-beale-to-oxford.md",
+    "_articles/2019-07-14-the-lowest-bridge-on-the-thames.md",
     "_site/articles/index.html",
     "_site/artcles/index.html",
     "_site/artcles",
     "_site/articles/arcs-of-oxford/index.html",
     "_site/articles/arcs-of-oxford",
-    "_articles/arcs-of-oxford.md",
     "_photographs/pomegranate-on-the-tree.md",
     "_site/photographs/pomegranate-on-the-tree/index.html",
     "_site/photographs/pomegranate-on-the-tree",
     "_site/bases/Portfolio.base",
-    "_site/bases/Photographs.base",
-    "_site/bases/Articles.base",
-    "_site/bases",
     "_photographs/deli_mainsail.md",
     "_photographs/killed_rabbit.md",
     "_articles/2019-06-08-constant-velocity-joint.md",
@@ -251,16 +255,11 @@
     "_articles/2019-06-06-first-view-of-the-engine.md",
     "_articles/qr-the-link-between-real-and-virtual.md",
     "_articles/2021-05-16-new-engine-craned-in.md",
-    "newsletters/november-2025_fromcanvas.md",
     "newsletters/November 2025.canvas",
-    "newsletters/november-2025_canvas2doc-data/newdoc-node_3bbda5c240175ad4_fromcanvas.md",
-    "newsletters/november-2025_canvas2doc-data/newdoc-node_6ce341e5d6e950d4_fromcanvas.md",
     "newsletters/Untitled 1.canvas",
     "uploads/z-form.jpg.jpg",
     "uploads/z-form.jpg",
     "uploads/t-form.jpg.jpg",
-    "uploads/t-form.png.png",
-    "uploads/t-form.png",
     "docs/private/Teaching_Hold/Multiplatform Publishing/Assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/Assignment 2.canvas",
