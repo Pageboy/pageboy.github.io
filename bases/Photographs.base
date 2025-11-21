@@ -21,3 +21,5 @@ views:
       note.title: 282
       note.source: 162
       note.flickr_album: 208
+  - type: table
+    name: View

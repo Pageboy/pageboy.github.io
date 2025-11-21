@@ -4,20 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "e8b3875d96ee9688",
+        "id": "79b9eeb1db2ef7db",
         "type": "tabs",
         "children": [
           {
-            "id": "31bce4fbf2e601fd",
+            "id": "c3f37e4c93a93387",
             "type": "leaf",
             "state": {
               "type": "bases",
               "state": {
-                "file": "_articles/Articles.base",
+                "file": "bases/Photographs.base",
                 "viewName": "Table"
               },
               "icon": "lucide-table",
-              "title": "Articles"
+              "title": "Photographs"
             }
           }
         ]
@@ -197,8 +197,10 @@
       "templates:Insert template": false
     }
   },
-  "active": "31bce4fbf2e601fd",
+  "active": "c3f37e4c93a93387",
   "lastOpenFiles": [
+    "bases/Photographs.base",
+    "bases/Articles.base",
     "_articles/Untitled.base",
     "_articles/2019-06-08-maiden-voyage.md",
     "_articles/Articles.base",
@@ -239,7 +241,6 @@
     "Untitled.base",
     "uploads/newsletterbanner.png",
     "uploads/newsletterbannergreen.png",
-    "admin/emailtemplate.mjml",
     "_site/uploads/poppy.jpg",
     "_site/uploads/megalithiclandscapescover.jpg",
     "_site/uploads/4e7fa436-4b14-490f-926a-8273390e60e2_1_102_o.jpeg",
