@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_photographs/cornmarket-street.md",
+                "file": "_portfolio/sumac-tree.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "cornmarket-street"
+              "title": "sumac-tree"
             }
           }
         ]
@@ -213,8 +213,9 @@
   },
   "active": "4427579dde050b11",
   "lastOpenFiles": [
-    "_articles/colour-search-november.md",
     "_photographs/cornmarket-street.md",
+    "_portfolio/sumac-tree.md",
+    "_articles/colour-search-november.md",
     "obsidian_templates/blog.md",
     "_articles/2022-08-09-beale-to-oxford.md",
     "_portfolio/wisteria-autumn.md",
@@ -255,7 +256,6 @@
     "_photographs/dorchester-abbey.md",
     "_photographs/lewes-castle-entrance-arch.md",
     "_articles/2019-06-06-first-view-of-the-engine.md",
-    "_articles/qr-the-link-between-real-and-virtual.md",
     "newsletters/November 2025.canvas",
     "newsletters/Untitled 1.canvas",
     "uploads/z-form.jpg.jpg",
