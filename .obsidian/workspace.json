@@ -30,8 +30,33 @@
               "icon": "lucide-file",
               "title": "sumac-tree"
             }
+          },
+          {
+            "id": "10d2d5af66a48ac8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_portfolio/palm-lily-arcs.md",
+                "mode": "preview",
+                "source": true,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "palm-lily-arcs"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -211,8 +236,10 @@
       "templates:Insert template": false
     }
   },
-  "active": "4427579dde050b11",
+  "active": "10d2d5af66a48ac8",
   "lastOpenFiles": [
+    "_photographs/oxford-wall-with-random-repairs.md",
+    "_portfolio/poppy-red.md",
     "_photographs/cornmarket-street.md",
     "_portfolio/sumac-tree.md",
     "_articles/colour-search-november.md",
@@ -254,8 +281,6 @@
     "uploads/img_1059.jpg",
     "_articles/2019-11-25-glass-domed-ceiling-in-montpellier.md",
     "_photographs/dorchester-abbey.md",
-    "_photographs/lewes-castle-entrance-arch.md",
-    "_articles/2019-06-06-first-view-of-the-engine.md",
     "newsletters/November 2025.canvas",
     "newsletters/Untitled 1.canvas",
     "uploads/z-form.jpg.jpg",

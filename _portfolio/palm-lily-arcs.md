@@ -8,12 +8,13 @@ forsale:
 tags:
   - art
   - triptych
-updated: 2025-11-05
+updated: 2025-12-11
 published: true
 ---
 The gardens of the King's Palace in Phnom Penh boast a stunning array of exotic plants, including some native to Cambodia. My attention was immediately captured by the vibrant colors of this particular specimen. Its sweeping, broad leaves seemed perfectly suited for the central panel of a triptych, framed by contrasting, asymmetrical arcs.
 
-![In the studio](https://live.staticflickr.com/65535/54325766195_28d3929044_h.jpg "In the studio")
+
+![In the studio](https://live.staticflickr.com/65535/54977953701_54b005e449_h.jpg "In the studio")
 
 
 **UV varnished archival ink on fine art paper bonded to 3 panels , bolted together - overall 565mm x 917mm**
