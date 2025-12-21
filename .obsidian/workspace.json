@@ -37,8 +37,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/palm-lily-arcs.md",
-                "mode": "preview",
+                "file": "_portfolio/turpentine-tree.md",
+                "mode": "source",
                 "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "palm-lily-arcs"
+              "title": "turpentine-tree"
             }
           }
         ],
@@ -238,6 +238,8 @@
   },
   "active": "10d2d5af66a48ac8",
   "lastOpenFiles": [
+    "_portfolio/pistachio-red.md",
+    "_portfolio/palm-lily-arcs.md",
     "_photographs/oxford-wall-with-random-repairs.md",
     "_portfolio/poppy-red.md",
     "_photographs/cornmarket-street.md",
@@ -279,8 +281,6 @@
     "_articles/2022-07-14-wallingford-to-pangbourne.md",
     "_articles/2022-06-06-from-dorchester-on-thames-to-clifton-lock.md",
     "uploads/img_1059.jpg",
-    "_articles/2019-11-25-glass-domed-ceiling-in-montpellier.md",
-    "_photographs/dorchester-abbey.md",
     "newsletters/November 2025.canvas",
     "newsletters/Untitled 1.canvas",
     "uploads/z-form.jpg.jpg",
