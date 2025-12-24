@@ -6,6 +6,12 @@
   <link rel="stylesheet" href="{{site.baseurl}}/assets/css/subscribeform.css">
     {% include head.html %}
 
+  <script
+  src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+  async
+  defer
+  ></script>
+
 <article {% if page.image %}class="feature-image"{% endif %}>
   <section class="post-content">
 	{{ content | replace: "_uploads", "uploads" }}
