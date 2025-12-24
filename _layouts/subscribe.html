@@ -11,6 +11,11 @@
   async
   defer
   ></script>
+      <script>
+      function enableSubmit() {
+        document.getElementById("submit-button").disabled = false;
+      }
+    </script>
 
 <article {% if page.image %}class="feature-image"{% endif %}>
   <section class="post-content">
