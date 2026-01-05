@@ -16,7 +16,7 @@ In late autumn, some woodland paths are scattered with fallen crab apples in var
 
 <!--and-->
 
-![Apple Drop in the Studio](https://live.staticflickr.com/65535/55024135577_03222cb65c_h.jpg)
+![Apple Drop in the Studio](https://live.staticflickr.com/65535/55024135577_cb660a9557_h.jpg)
 
 My camera isolates these opposing hues, revealing colour relationships that I use to articulate the curves in this multi panel piece.
 

@@ -37,9 +37,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/sumac-tree.md",
-                "mode": "source",
-                "source": false,
+                "file": "_portfolio/apple-drop.md",
+                "mode": "preview",
+                "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
                   "collapseAll": false,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "sumac-tree"
+              "title": "apple-drop"
             }
           }
         ],
@@ -238,8 +238,8 @@
   },
   "active": "10d2d5af66a48ac8",
   "lastOpenFiles": [
-    "_portfolio/apple-drop.md",
     "_portfolio/sumac-tree.md",
+    "_portfolio/apple-drop.md",
     "_site/photographs/cornmarket-street/index.html",
     "_site/photographs/cornmarket-street",
     "_site/portfolio/sumac-tree/index.html",
