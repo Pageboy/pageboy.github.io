@@ -1,6 +1,6 @@
 ---
 date: 2025-11-23
-updated: 2025-12-29
+updated: 2026-01-05
 title: Sumac Tree
 image: https://live.staticflickr.com/65535/54942018068_1cf2589ef7_h.jpg
 layout: art
@@ -13,10 +13,6 @@ caption: Sumac Staghorn in a village garden
 forsale:
 published: true
 ---
-
-
-![](https://live.staticflickr.com/65535/54942018068_1cf2589ef7_h.jpg){: .hide}
-
 
 Autumn is the season of fireworks—much to the dismay of our pets—and the leaves of this tree seem to echo the colours of the flames rising from bonfires across the country.
 

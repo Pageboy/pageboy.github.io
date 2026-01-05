@@ -18,8 +18,6 @@ In late autumn, some woodland paths are scattered with fallen crab apples in var
 
 ![Apple Drop in the Studio](https://live.staticflickr.com/65535/55024135577_03222cb65c_h.jpg)
 
-My camera picks out these contrasting hues and these colours provide good relationships between the curves and their grounds.
-
 My camera isolates these opposing hues, revealing colour relationships that I use to articulate the curves in this multi panel piece.
 
 Printed on Hahnemühle German etching, bonded onto 3 panels, 565mm x 350mm and matt varnished with UV protection. Overall fitting into - 915mm square.
