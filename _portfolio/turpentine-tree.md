@@ -1,6 +1,6 @@
 ---
 date: 2025-09-10
-updated: 2025-12-21
+updated: 2025-12-26
 title: Turpentine Tree
 image: https://live.staticflickr.com/65535/54997377525_5407f9dcb9_h.jpg
 layout: art
@@ -23,6 +23,6 @@ Work in progress and ready for 3 panels. Overall dimensions will be 915mm square
 > Each of these rectangles is a _golden rectangle_ 
 > Please view [Berberis](https://www.chrisjennings.net/portfolio/berberis/) here for an idea of how this will look full size
 
-The image here is an artists proof
+The image here is a framed artists proof
 
 ![framed print on Hahnemüle paper](../uploads/20251005-_N724857.jpg)

@@ -11,13 +11,24 @@
             "id": "c3f37e4c93a93387",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "bases/Photographs.base",
-                "viewName": "Table"
+                "file": "_portfolio/sumac-tree.md",
+                "mode": "source",
+                "source": true,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-table",
-              "title": "Photographs"
+              "icon": "lucide-file",
+              "title": "sumac-tree"
             }
           }
         ]

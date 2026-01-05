@@ -1,0 +1,25 @@
+---
+date: 2026-01-05
+updated: 2026-01-05
+title: Apple Drop
+image: https://live.staticflickr.com/65535/54940431532_9052f7cc5e_h.jpg
+layout: art
+tags:
+  - art
+excerpt_separator: <!--and-->
+solo: false
+caption:
+forsale:
+published: true
+---
+In late autumn, some woodland paths are scattered with fallen crab apples in various stages of ripeness and decay. I am drawn to the contrast between their brilliant greens and the muted backdrop of rotting leaves. 
+
+<!--and-->
+
+![Apple Drop in the Studio](https://live.staticflickr.com/65535/55024135577_03222cb65c_h.jpg)
+
+My camera picks out these contrasting hues and these colours provide good relationships between the curves and their grounds.
+
+My camera isolates these opposing hues, revealing colour relationships that I use to articulate the curves in this multi panel piece.
+
+Printed on Hahnemühle German etching, bonded onto 3 panels, 565mm x 350mm and matt varnished with UV protection. Overall fitting into - 915mm square.

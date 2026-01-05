@@ -77,3 +77,13 @@ $(document).ready(function() {
 });
 
 </script>
+<script>
+function copyHTML(id) {
+const el = document.getElementById(id);
+const html = el.outerHTML;
+navigator.clipboard.writeText(html).then(() => {
+alert("Copied HTML:\n" + html);
+}).catch(err => {console.error("Copy failed:", err);   }); 
+}
+
+</script>

@@ -37,9 +37,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/turpentine-tree.md",
+                "file": "_portfolio/apple-drop.md",
                 "mode": "source",
-                "source": true,
+                "source": false,
                 "backlinks": true,
                 "backlinkOpts": {
                   "collapseAll": false,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "turpentine-tree"
+              "title": "apple-drop"
             }
           }
         ],
@@ -75,7 +75,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "byModifiedTime",
+                "sortOrder": "byCreatedTime",
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
@@ -238,12 +238,19 @@
   },
   "active": "10d2d5af66a48ac8",
   "lastOpenFiles": [
+    "_portfolio/sumac-tree.md",
+    "_portfolio/apple-drop.md",
+    "_site/photographs/cornmarket-street/index.html",
+    "_site/photographs/cornmarket-street",
+    "_site/portfolio/sumac-tree/index.html",
+    "_site/portfolio/sumac-tree",
+    "_site/images/xmas2025.png",
+    "_portfolio/turpentine-tree.md",
     "_portfolio/pistachio-red.md",
     "_portfolio/palm-lily-arcs.md",
     "_photographs/oxford-wall-with-random-repairs.md",
     "_portfolio/poppy-red.md",
     "_photographs/cornmarket-street.md",
-    "_portfolio/sumac-tree.md",
     "_articles/colour-search-november.md",
     "obsidian_templates/blog.md",
     "_articles/2022-08-09-beale-to-oxford.md",
@@ -258,11 +265,7 @@
     "_site/artcles/index.html",
     "_site/artcles",
     "_site/articles/arcs-of-oxford/index.html",
-    "_site/articles/arcs-of-oxford",
     "_photographs/pomegranate-on-the-tree.md",
-    "_site/photographs/pomegranate-on-the-tree/index.html",
-    "_site/photographs/pomegranate-on-the-tree",
-    "_site/bases/Portfolio.base",
     "_photographs/deli_mainsail.md",
     "_photographs/killed_rabbit.md",
     "_articles/2019-06-08-constant-velocity-joint.md",
@@ -278,14 +281,11 @@
     "_articles/2019-07-05-herons-and-bridges.md",
     "_site/uploads/z-form.jpg",
     "_site/uploads/t-form.jpg",
-    "_articles/2022-07-14-wallingford-to-pangbourne.md",
-    "_articles/2022-06-06-from-dorchester-on-thames-to-clifton-lock.md",
     "uploads/img_1059.jpg",
     "newsletters/November 2025.canvas",
     "newsletters/Untitled 1.canvas",
     "uploads/z-form.jpg.jpg",
     "uploads/z-form.jpg",
-    "uploads/t-form.jpg.jpg",
     "docs/private/Teaching_Hold/Multiplatform Publishing/Assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/Assignment 2.canvas",
