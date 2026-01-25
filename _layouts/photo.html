@@ -52,8 +52,8 @@ layout: default
   {% include share_buttons.html %}
 
   <!-- Flickr share -->
-{% if flickr_share %}
-  <a href="{{flickr_share}} title='Go to the Flickr site">See the image on my Flickr page</a>
+{% if page.flickr_share %}
+  <a href="{{page.flickr_share}}" title="Go to the Flickr site">This image is hosted on my Flickr site</a>
 {% endif %}
 
   <!-- Tag list for portfolio -->
