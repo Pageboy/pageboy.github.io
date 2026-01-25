@@ -1,6 +1,6 @@
 ---
 date: 2026-01-05
-updated: 2026-01-05
+updated: 2026-01-25
 title: Apple Drop
 image: https://live.staticflickr.com/65535/54940431532_9052f7cc5e_h.jpg
 layout: art
@@ -11,6 +11,7 @@ solo: false
 caption:
 forsale:
 published: true
+flickr_share: https://flic.kr/p/2rGU5cw
 ---
 In late autumn, some woodland paths are scattered with fallen crab apples in various stages of ripeness and decay. I am drawn to the contrast between their brilliant greens and the muted backdrop of rotting leaves. 
 

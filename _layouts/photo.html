@@ -51,6 +51,11 @@ layout: default
   <!-- Social media shares -->
   {% include share_buttons.html %}
 
+  <!-- Flickr share -->
+{% if flickr_share %}
+  <a href="{{flickr_share}} title='Go to the Flickr site">See the image on my Flickr page</a>
+{% endif %}
+
   <!-- Tag list for portfolio -->
   {% capture tag_list %}{{ page.tags | join: "|"}}{% endcapture %}
   {% include tags_list.html tags=tag_list %}

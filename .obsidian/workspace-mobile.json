@@ -4,18 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "79b9eeb1db2ef7db",
+        "id": "5a945df62558a46d",
         "type": "tabs",
         "children": [
           {
-            "id": "c3f37e4c93a93387",
+            "id": "5bc89c0b59696e19",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/sumac-tree.md",
+                "file": "obsidian_templates/photograph.md",
                 "mode": "source",
-                "source": true,
+                "source": false,
                 "backlinks": true,
                 "backlinkOpts": {
                   "collapseAll": false,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "sumac-tree"
+              "title": "photograph"
             }
           }
         ]
@@ -208,8 +208,12 @@
       "templates:Insert template": false
     }
   },
-  "active": "c3f37e4c93a93387",
+  "active": "5bc89c0b59696e19",
   "lastOpenFiles": [
+    "_photographs/palm-tree-curves.md",
+    "_photographs/light-entertainment.md",
+    "_portfolio/palm-tree-curves.md",
+    "_portfolio/sumac-tree.md",
     "bases/Photographs.base",
     "bases/Articles.base",
     "_articles/Untitled.base",
@@ -239,9 +243,6 @@
     "_articles/the-proportions-in-my-work.md",
     "_portfolio/palm-lily-arcs.md",
     "_portfolio/ionian-pebbles.md",
-    "_photographs/arched-doorway-st-gabriels-church.md",
-    "obsidian_templates/portfolio.md",
-    "_photographs/Untitled.md",
     "_site/photographs/dorchester-abbey/index.html",
     "_site/photographs/dorchester-abbey",
     "_site/Untitled.canvas",
@@ -249,7 +250,6 @@
     "_site/photographs/two-windows-on-paxos/index.html",
     "_site/photographs/two-windows-on-paxos",
     "_site/Untitled.base",
-    "Untitled.base",
     "uploads/newsletterbanner.png",
     "uploads/newsletterbannergreen.png",
     "_site/uploads/poppy.jpg",
