@@ -5,13 +5,14 @@ date: 2025-01-23T17:20:00.000+00:00
 image: https://live.staticflickr.com/65535/54291183890_8aaea0cff3_h.jpg
 caption: Angkor Thom
 flickr_album: ""
-updated: 2025-11-05
+updated: 2026-01-25
 tags: Cambodia,temples,journey
 slug: travels-in-cambodia
 datetime: 2025-10-02 10:46
 summary: Stone smiles, river Buddhas, and silent bones — Cambodia whispers through temples, waters, and shadows. Every frame a doorway; every step, a prayer.
 cover_image_url: ""
 published: true
+flickr_share: https://flic.kr/s/aHBqjBZpjU
 ---
 
 Look on this page for some of my favourite photographs taken during a journey to Cambodia in January 2025.

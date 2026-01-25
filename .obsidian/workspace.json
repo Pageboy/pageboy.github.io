@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/apple-drop.md",
+                "file": "_photographs/travels-in-cambodia.md",
                 "mode": "preview",
                 "source": true,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "apple-drop"
+              "title": "travels-in-cambodia"
             }
           }
         ],
@@ -238,10 +238,10 @@
   },
   "active": "10d2d5af66a48ac8",
   "lastOpenFiles": [
+    "_portfolio/apple-drop.md",
     "_site/portfolio/apple-drop/index.html",
     "_site/portfolio/apple-drop",
     "_portfolio/sumac-tree.md",
-    "_portfolio/apple-drop.md",
     "_site/photographs/cornmarket-street/index.html",
     "_site/photographs/cornmarket-street",
     "_site/portfolio/sumac-tree/index.html",
@@ -265,7 +265,6 @@
     "_articles/2019-07-14-the-lowest-bridge-on-the-thames.md",
     "_site/articles/index.html",
     "_site/artcles/index.html",
-    "_site/artcles",
     "_photographs/pomegranate-on-the-tree.md",
     "_photographs/deli_mainsail.md",
     "_photographs/killed_rabbit.md",
