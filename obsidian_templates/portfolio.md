@@ -1,14 +1,15 @@
 ---
-date: 
-updated: 
-title: 
-image: 
+date:
+updated:
+title:
+image:
 layout: art
 tags:
   - art
 excerpt_separator: <!--and-->
 solo: false
-caption: 
+caption:
 forsale:
 published: false
+flickr_share:
 ---

@@ -46,6 +46,11 @@ layout: default
     <a href="{{ page.nft }}" title="Buy this as an NFT" target="_blank">NFT</a>
   </button>
   {% endif %}
+
+   <!-- Flickr share -->
+{% if page.flickr_share %}
+  <p style="color:#869387;text-align:center;font-size:.8em"><i class="fa fa-flickr"><a href="{{page.flickr_share}}" title="Go to the Flickr site">Images are hosted on my Flickr site</a></i></p>
+{% endif %}
   <!-- Tag list for portfolio -->
   {% capture tag_list %}{{ page.tags | join: "|"}}{% endcapture %} {% include
   tags_list.html tags=tag_list %}

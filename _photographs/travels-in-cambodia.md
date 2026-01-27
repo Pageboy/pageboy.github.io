@@ -5,8 +5,9 @@ date: 2025-01-23T17:20:00.000+00:00
 image: https://live.staticflickr.com/65535/54291183890_8aaea0cff3_h.jpg
 caption: Angkor Thom
 flickr_album: ""
-updated: 2026-01-25
-tags: Cambodia,temples,journey
+updated: 2026-01-26
+tags:
+  - travel
 slug: travels-in-cambodia
 datetime: 2025-10-02 10:46
 summary: Stone smiles, river Buddhas, and silent bones — Cambodia whispers through temples, waters, and shadows. Every frame a doorway; every step, a prayer.
