@@ -1,5 +1,5 @@
 ---
-date: 2026-01-26
+date: 2026-01-29T18:00:00
 updated: 2026-01-29
 title: Travels in Mexico
 image: https://live.staticflickr.com/65535/55062347108_f34a9c09bd_h.jpg
@@ -20,6 +20,8 @@ January 2026, a trip to Mexico. First to Mexico city and then to the Yucatan Pen
 
 The itinerary of this trip was as follows:
 Mexico City - Cancun - Playa del Carmen - laguna Chabela - Valladolid - Merida - Chichen Itza - Uxmal - Ría Celesún - Tulum - Holbox
+
+See a selection of my photos through the link below.
 
 <!--and-->
 
