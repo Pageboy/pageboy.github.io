@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_photographs/travels-in-mexico.md",
+                "file": "_portfolio/hibiscus.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "travels-in-mexico"
+              "title": "hibiscus"
             }
           }
         ],
@@ -262,6 +262,10 @@
   },
   "active": "6d888b8a8de97591",
   "lastOpenFiles": [
+    "_site/portfolio/hibiscus/index.html",
+    "_site/portfolio/hibiscus",
+    "_photographs/travels-in-mexico.md",
+    "_portfolio/hibiscus.md",
     "_site/photographs/travels-in-mexico/index.html",
     "_site/photographs/travels-in-mexico",
     "_portfolio/hawthorn.md",
@@ -269,7 +273,6 @@
     "_site/portfolio/hawthorn",
     "obsidian_templates/photograph.md",
     "obsidian_templates/portfolio.md",
-    "_photographs/travels-in-mexico.md",
     "_photographs/wall-in-sintra-portugal.md",
     "_photographs/elephant-in-sri-lanka.md",
     "_photographs/travels-in-cambodia.md",
@@ -281,7 +284,6 @@
     "_site/photographs/cornmarket-street/index.html",
     "_site/photographs/cornmarket-street",
     "_site/portfolio/sumac-tree/index.html",
-    "_site/portfolio/sumac-tree",
     "_site/images/xmas2025.png",
     "_portfolio/turpentine-tree.md",
     "_portfolio/pistachio-red.md",
@@ -299,7 +301,6 @@
     "_articles/2019-07-14-the-lowest-bridge-on-the-thames.md",
     "_photographs/pomegranate-on-the-tree.md",
     "_photographs/deli_mainsail.md",
-    "_photographs/killed_rabbit.md",
     "uploads/img_0105.jpg",
     "uploads/img_1056.jpg",
     "_site/uploads/z-form.jpg",

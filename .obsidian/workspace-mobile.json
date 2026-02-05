@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "obsidian_templates/photograph.md",
+                "file": "_portfolio/hibiscus.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "photograph"
+              "title": "hibiscus"
             }
           }
         ]
@@ -210,6 +210,7 @@
   },
   "active": "5bc89c0b59696e19",
   "lastOpenFiles": [
+    "obsidian_templates/photograph.md",
     "_photographs/palm-tree-curves.md",
     "_photographs/light-entertainment.md",
     "_portfolio/palm-tree-curves.md",
@@ -242,7 +243,6 @@
     "_photographs/bracken.md",
     "_articles/the-proportions-in-my-work.md",
     "_portfolio/palm-lily-arcs.md",
-    "_portfolio/ionian-pebbles.md",
     "_site/photographs/dorchester-abbey/index.html",
     "_site/photographs/dorchester-abbey",
     "_site/Untitled.canvas",
