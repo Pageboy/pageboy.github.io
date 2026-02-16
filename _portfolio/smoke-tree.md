@@ -8,7 +8,7 @@ tags:
   - art
   - portrait format
 published: true
-updated: 2025-11-05
+updated: 2026-02-13
 ---
 In amongst the leaves and branches of the exotic Smoke Tree, the camera finds the variation of pastel colours that contrast with the bright leaves.
 

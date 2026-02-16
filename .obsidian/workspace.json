@@ -78,9 +78,33 @@
               "icon": "lucide-file",
               "title": "hibiscus"
             }
+          },
+          {
+            "id": "2830276f2af0122f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_portfolio/orchard-apples.md",
+                "mode": "preview",
+                "source": true,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "orchard-apples"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -260,12 +284,14 @@
       "templates:Insert template": false
     }
   },
-  "active": "6d888b8a8de97591",
+  "active": "2830276f2af0122f",
   "lastOpenFiles": [
+    "_portfolio/hibiscus.md",
+    "_portfolio/orchard-apples.md",
+    "_portfolio/smoke-tree.md",
     "_site/portfolio/hibiscus/index.html",
     "_site/portfolio/hibiscus",
     "_photographs/travels-in-mexico.md",
-    "_portfolio/hibiscus.md",
     "_site/photographs/travels-in-mexico/index.html",
     "_site/photographs/travels-in-mexico",
     "_portfolio/hawthorn.md",
@@ -283,7 +309,6 @@
     "_portfolio/sumac-tree.md",
     "_site/photographs/cornmarket-street/index.html",
     "_site/photographs/cornmarket-street",
-    "_site/portfolio/sumac-tree/index.html",
     "_site/images/xmas2025.png",
     "_portfolio/turpentine-tree.md",
     "_portfolio/pistachio-red.md",
@@ -300,7 +325,6 @@
     "_articles/arcs-of-oxford.md",
     "_articles/2019-07-14-the-lowest-bridge-on-the-thames.md",
     "_photographs/pomegranate-on-the-tree.md",
-    "_photographs/deli_mainsail.md",
     "uploads/img_0105.jpg",
     "uploads/img_1056.jpg",
     "_site/uploads/z-form.jpg",
