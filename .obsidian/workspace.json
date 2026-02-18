@@ -85,8 +85,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/orchard-apples.md",
-                "mode": "source",
+                "file": "_portfolio/plume-thistle-arc.md",
+                "mode": "preview",
                 "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -100,7 +100,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "orchard-apples"
+              "title": "plume-thistle-arc"
             }
           }
         ],
@@ -286,8 +286,8 @@
   },
   "active": "2830276f2af0122f",
   "lastOpenFiles": [
-    "_portfolio/hibiscus.md",
     "_portfolio/orchard-apples.md",
+    "_portfolio/hibiscus.md",
     "_portfolio/smoke-tree.md",
     "_site/portfolio/hibiscus/index.html",
     "_site/portfolio/hibiscus",
