@@ -85,7 +85,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/plume-thistle-arc.md",
+                "file": "_portfolio/sycamore-maple.md",
                 "mode": "preview",
                 "source": true,
                 "backlinks": true,
@@ -100,7 +100,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "plume-thistle-arc"
+              "title": "sycamore-maple"
             }
           }
         ],
@@ -286,6 +286,8 @@
   },
   "active": "2830276f2af0122f",
   "lastOpenFiles": [
+    "_portfolio/gold-gorse.md",
+    "_portfolio/plume-thistle-arc.md",
     "_portfolio/orchard-apples.md",
     "_portfolio/hibiscus.md",
     "_portfolio/smoke-tree.md",
@@ -323,8 +325,6 @@
     "_site/uploads/instagrey.jpeg",
     "uploads/instagrey.jpeg",
     "_articles/arcs-of-oxford.md",
-    "_articles/2019-07-14-the-lowest-bridge-on-the-thames.md",
-    "_photographs/pomegranate-on-the-tree.md",
     "uploads/img_0105.jpg",
     "uploads/img_1056.jpg",
     "_site/uploads/z-form.jpg",
