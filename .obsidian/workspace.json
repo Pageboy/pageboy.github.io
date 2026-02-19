@@ -85,7 +85,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/hawthorn.md",
+                "file": "_portfolio/orchard-apples.md",
                 "mode": "preview",
                 "source": true,
                 "backlinks": true,
@@ -100,7 +100,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "hawthorn"
+              "title": "orchard-apples"
             }
           }
         ],
@@ -286,6 +286,7 @@
   },
   "active": "2830276f2af0122f",
   "lastOpenFiles": [
+    "_portfolio/hawthorn.md",
     "_portfolio/tree-tangle.md",
     "_portfolio/tree-fruits.md",
     "_portfolio/year-s-end-colours.md",
@@ -297,7 +298,6 @@
     "_portfolio/sumac-tree.md",
     "_portfolio/poppy-red.md",
     "_portfolio/apple-drop.md",
-    "_portfolio/hawthorn.md",
     "_portfolio/hibiscus.md",
     "_portfolio/orchard-apples.md",
     "_portfolio/buckeye-botanised.md",

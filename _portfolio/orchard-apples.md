@@ -8,7 +8,7 @@ tags:
   - art
   - offset-construct
 excerpt_separator: <!--and-->
-solo: true
+solo: false
 caption: Apples in an Orchard
 forsale:
 published: true
