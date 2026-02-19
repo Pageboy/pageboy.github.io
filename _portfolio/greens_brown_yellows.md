@@ -5,7 +5,7 @@ layout: art
 image: https://live.staticflickr.com/65535/49398803246_f2d51067ec_3k.jpg
 tags:
   - art
-  - square series
+  - square-series
 published: true
 updated: 2025-11-05
 ---

@@ -6,7 +6,7 @@ image: https://live.staticflickr.com/65535/51889762624_0ccd4824c1_h_d.jpg
 nft: https://opensea.io/assets/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/48162648330355413914028108631647327469322174667090404439099707898610434703364/
 tags:
   - art
-  - square series
+  - square-series
 published: true
 updated: 2025-11-05
 ---

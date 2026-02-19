@@ -6,7 +6,7 @@ image: https://live.staticflickr.com/65535/49327401042_3e6072778a_3k.jpg
 forsale:
 tags:
   - art
-  - square series
+  - square-series
 published: true
 updated: 2025-11-05
 ---

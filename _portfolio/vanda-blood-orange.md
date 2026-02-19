@@ -6,7 +6,7 @@ image: https://live.staticflickr.com/65535/53579226636_72c6ba531f_h_d.jpg
 caption: Vanda orchid, Kandy
 tags:
   - art
-  - square series
+  - square-series
 published: true
 updated: 2025-11-05
 ---

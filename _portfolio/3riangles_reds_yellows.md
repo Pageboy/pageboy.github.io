@@ -6,7 +6,7 @@ image: https://live.staticflickr.com/65535/49300571742_ac15490c76_b_d.jpg
 nft: https://foundation.app/@pageboy/geo1x1/5?ref=0x6A7B17cA34184aE20f2679F06a4Bb0c592e83cAD
 tags:
   - art
-  - square series
+  - square-series
 updated: 2025-11-05
 published: true
 ---

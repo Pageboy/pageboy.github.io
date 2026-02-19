@@ -7,7 +7,7 @@ caption: At La Nav
 nft: https://foundation.app/@pageboy/geo1x1/2?ref=0x6A7B17cA34184aE20f2679F06a4Bb0c592e83cAD
 tags:
   - art
-  - square series
+  - square-series
 published: true
 updated: 2025-11-05
 ---

@@ -5,7 +5,7 @@ date: 2020-04-03 15:12
 image: https://live.staticflickr.com/65535/49389023191_ec94c37003_3k.jpg
 tags:
   - art
-  - square series
+  - square-series
 published: true
 updated: 2025-11-05
 ---

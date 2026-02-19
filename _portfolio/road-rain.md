@@ -6,7 +6,7 @@ image: https://live.staticflickr.com/65535/52492492402_5455a59ccd_h_d.jpg
 caption: "Curved road wet with rain "
 tags:
   - art
-  - square series
+  - square-series
 published: true
 updated: 2025-11-05
 ---
