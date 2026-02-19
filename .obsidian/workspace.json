@@ -83,13 +83,24 @@
             "id": "2830276f2af0122f",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "bases/Portfolio.base",
-                "viewName": "Table"
+                "file": "_portfolio/buckeye-botanised.md",
+                "mode": "preview",
+                "source": true,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-table",
-              "title": "Portfolio"
+              "icon": "lucide-file",
+              "title": "buckeye-botanised"
             }
           }
         ],
@@ -275,6 +286,8 @@
   },
   "active": "2830276f2af0122f",
   "lastOpenFiles": [
+    "_portfolio/poppy-red.md",
+    "bases/Portfolio.base",
     "_portfolio/wall-mix.md",
     "_portfolio/meadow-grass.md",
     "_portfolio/lantana.md",
@@ -303,15 +316,12 @@
     "_site/portfolio/apple-drop",
     "_portfolio/sumac-tree.md",
     "_site/photographs/cornmarket-street/index.html",
-    "_site/photographs/cornmarket-street",
     "_site/images/xmas2025.png",
     "_portfolio/turpentine-tree.md",
     "_portfolio/pistachio-red.md",
     "_portfolio/palm-lily-arcs.md",
     "_photographs/oxford-wall-with-random-repairs.md",
-    "_portfolio/poppy-red.md",
     "_photographs/cornmarket-street.md",
-    "_articles/colour-search-november.md",
     "_site/uploads/instagrey.jpeg",
     "uploads/instagrey.jpeg",
     "uploads/img_0105.jpg",
