@@ -7,6 +7,7 @@ caption: Rainbow through windscreen
 published: false
 tags:
   - art
-  - golden section
+  - golden-section
+updated: 2026-02-19
 ---
 Downpours keep us down but the rainbow brings elation. In the parked car, waiting for the rain to stop, the sky is painted with the curve of prism colours. Don’t start the wipers - the rain drops on glass add to the spectacle.

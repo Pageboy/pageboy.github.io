@@ -6,8 +6,8 @@ image: https://live.staticflickr.com/65535/54638062097_d7bf158a68_h.jpg
 caption: Buckeye in the Botanical Gardens
 tags:
   - art
-  - golden section
+  - golden-section
 published: true
-updated: 2025-11-05
+updated: 2026-02-19
 ---
 In the Oxford Botanical Gardens, the young Buckeye plant displays its striking maroon leaves. As summer unfolds, these rich hues will gradually shift to green. The colours in the arcs and rectangles echo the hues and tones found by the camera's sensor.

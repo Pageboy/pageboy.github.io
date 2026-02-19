@@ -8,9 +8,9 @@ nft: https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/
 forsale:
 tags:
   - art
-  - golden section
+  - golden-section
 published: true
-updated: 2025-11-05
+updated: 2026-02-19
 ---
 A visit to the maple tree copse with changing colours for the winter coming.
 

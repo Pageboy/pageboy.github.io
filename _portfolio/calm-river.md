@@ -5,9 +5,9 @@ date: 2022-09-06T15:28:12.647Z
 image: https://live.staticflickr.com/65535/52338741698_4d261aa77c_h_d.jpg
 tags:
   - art
-  - golden section
+  - golden-section
 published: true
-updated: 2025-11-05
+updated: 2026-02-19
 ---
 
 The journey on the river shows the ripples covering the drifting forms.

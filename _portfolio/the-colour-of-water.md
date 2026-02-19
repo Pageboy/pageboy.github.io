@@ -8,7 +8,8 @@ published: false
 forsale:
 tags:
   - art
-  - golden section
+  - golden-section
+updated: 2026-02-19
 ---
 The river water has it’s own colour and mixes this with a palette of sky and surroundings. This colour further sweeps through a geometry of triangles and curves within a _golden rectangle_. 
 

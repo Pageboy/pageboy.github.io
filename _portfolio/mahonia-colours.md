@@ -6,9 +6,9 @@ image: https://live.staticflickr.com/65535/53360255279_46e2d3754f_h_d.jpg
 caption: Oregon Grape
 tags:
   - art
-  - golden section
+  - golden-section
 published: true
-updated: 2025-11-05
+updated: 2026-02-19
 ---
 As hues shift within the Autumn garden, our gaze is drawn to a small emblem of America—the Oregon Grape.
 

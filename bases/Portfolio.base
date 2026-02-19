@@ -11,6 +11,7 @@ views:
       - date
       - updated
       - image
+      - tags
     sort:
       - property: date
         direction: ASC

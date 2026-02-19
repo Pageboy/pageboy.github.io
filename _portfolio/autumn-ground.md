@@ -7,9 +7,9 @@ caption: Wet Walking
 forsale:
 tags:
   - art
-  - golden section
+  - golden-section
 published: true
-updated: 2025-11-05
+updated: 2026-02-19
 ---
 Leaves not yet rotted keep their colour on the wet ground. Eyes to the path on the grey day see the rich mixture of tones.
 

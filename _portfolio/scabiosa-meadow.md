@@ -6,9 +6,9 @@ image: https://live.staticflickr.com/65535/53134480888_2d5553ed34_h_d.jpg
 caption: Pincushion flowers in the meadow
 tags:
   - art
-  - golden section
+  - golden-section
 published: true
-updated: 2025-11-05
+updated: 2026-02-19
 ---
 Many varieties of wild flowers cover the ungrazed meadow, but noticeable are the lavender coloured  *Pincushion* flowers that are raised above all with their long stems.
 

@@ -6,9 +6,9 @@ image: https://live.staticflickr.com/65535/52927688506_2cf014bfdf_h_d.jpg
 caption: Bluebells and iris blades
 tags:
   - art
-  - golden section
+  - golden-section
 published: true
-updated: 2025-11-05
+updated: 2026-02-19
 ---
 Arcs and segments filled with colours of the garden.
 

@@ -7,9 +7,9 @@ caption: Arc over the cypress branches
 tags:
   - art
   - triptych
-  - golden section
+  - golden-section
 published: true
-updated: 2025-11-05
+updated: 2026-02-19
 ---
 As Summer gives way to the cooler Autumn, the branches of the Cypress trees take on warmer tones.
 

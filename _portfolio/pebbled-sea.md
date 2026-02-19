@@ -7,9 +7,9 @@ caption: 2 geometries over a pebbled triangle.
 nft: ""
 tags:
   - art
-  - golden section
+  - golden-section
 published: true
-updated: 2025-11-05
+updated: 2026-02-19
 ---
 Beach times between swims, the camera captures the sea washing over the pebbles.
 

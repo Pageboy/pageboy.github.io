@@ -6,9 +6,9 @@ image: https://live.staticflickr.com/65535/53234169866_14196d7169_h_d.jpg
 caption: Great Knapweed in August Grass
 tags:
   - art
-  - golden section
+  - golden-section
 published: true
-updated: 2025-11-05
+updated: 2026-02-19
 ---
 The colour of the Summer grasses range from yellow-ochres to lush, verdant greens and forms a contrasting background to the vibrant purple-pink ragged-crowns of the knapweed that dot the field.
 

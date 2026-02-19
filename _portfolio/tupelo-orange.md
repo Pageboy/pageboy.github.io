@@ -7,9 +7,9 @@ nft: ""
 forsale:
 tags:
   - art
-  - golden section
+  - golden-section
 published: true
-updated: 2025-11-05
+updated: 2026-02-19
 ---
 Trees in the arboretum come from many parts of the world and we benefit from the collectors of saplings and seeds.
 

@@ -7,9 +7,9 @@ caption: Thames winter flow
 forsale: HUMFTSRHH325E
 tags:
   - art
-  - golden section
+  - golden-section
 published: true
-updated: 2025-11-05
+updated: 2026-02-19
 ---
 The Thames rushes through the weir, its paddles fully open.
 

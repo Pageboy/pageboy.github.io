@@ -83,24 +83,13 @@
             "id": "2830276f2af0122f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "bases",
               "state": {
-                "file": "_portfolio/meadow-grass.md",
-                "mode": "preview",
-                "source": true,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "file": "bases/Portfolio.base",
+                "viewName": "Table"
               },
-              "icon": "lucide-file",
-              "title": "meadow-grass"
+              "icon": "lucide-table",
+              "title": "Portfolio"
             }
           }
         ],
@@ -286,8 +275,9 @@
   },
   "active": "2830276f2af0122f",
   "lastOpenFiles": [
-    "_portfolio/lantana.md",
+    "_portfolio/wall-mix.md",
     "_portfolio/meadow-grass.md",
+    "_portfolio/lantana.md",
     "_portfolio/sycamore-maple.md",
     "_portfolio/gold-gorse.md",
     "_portfolio/plume-thistle-arc.md",
@@ -322,7 +312,6 @@
     "_portfolio/poppy-red.md",
     "_photographs/cornmarket-street.md",
     "_articles/colour-search-november.md",
-    "obsidian_templates/blog.md",
     "_site/uploads/instagrey.jpeg",
     "uploads/instagrey.jpeg",
     "uploads/img_0105.jpg",

@@ -7,9 +7,9 @@ caption: Orange lichen
 nft: https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/48162648330355413914028108631647327469322174667090404439099707912904085864449/
 tags:
   - art
-  - golden section
+  - golden-section
 published: true
-updated: 2025-11-05
+updated: 2026-02-19
 ---
 A little way back from the waves at the shore, the rocks are hosting colours of the sun. 
 

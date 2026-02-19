@@ -7,7 +7,8 @@ forsale:
 published: false
 tags:
   - art
-  - golden section
+  - golden-section
+updated: 2026-02-19
 ---
 Edges of the fields and in the public orchard we find the fruit that can be taken home. The colours of the juice stain our fingers; watch out the white trousers!
 

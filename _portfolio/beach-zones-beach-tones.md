@@ -6,9 +6,9 @@ image: https://live.staticflickr.com/65535/53200456494_6cfce22253_h_d.jpg
 caption: Pebbles on the Ionian Shore
 tags:
   - art
-  - golden section
+  - golden-section
 published: true
-updated: 2025-11-05
+updated: 2026-02-19
 ---
 The sea pounds the shore, tumbling the stones into pebbles of infinitely varied shapes and sizes.
 

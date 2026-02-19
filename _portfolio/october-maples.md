@@ -5,9 +5,9 @@ date: 2022-11-06T18:49:28.468Z
 image: https://live.staticflickr.com/65535/52481114432_7647e5f575_h_d.jpg
 tags:
   - art
-  - golden section
+  - golden-section
 published: true
-updated: 2025-11-05
+updated: 2026-02-19
 ---
 
 The trees are showing their fireworks and we blink to find that the trees are bare.
