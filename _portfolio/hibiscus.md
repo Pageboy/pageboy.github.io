@@ -1,11 +1,12 @@
 ---
 date: 2026-01-30
-updated: 2026-02-13
+updated: 2026-02-19
 title: Mexican Hibiscus
 image: https://live.staticflickr.com/65535/55068789495_4aa793eda5_h.jpg
 layout: art
 tags:
   - art
+  - offset-construct
 excerpt_separator: <!--and-->
 solo: false
 caption:

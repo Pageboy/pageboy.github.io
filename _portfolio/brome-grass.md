@@ -1,14 +1,13 @@
 ---
 date: 2025-08-15T13:00:00
-updated: 2025-10-30
+updated: 2026-02-19
 title: Brome Grass
 image: https://live.staticflickr.com/65535/54729514855_7c885408e1_h.jpg
 layout: art
 excerpt_separator: <!--and-->
 tags:
   - art
-  - square
-  - zeta-series
+  - offset-construct
 caption: Red and green grass
 forsale:
 published: true

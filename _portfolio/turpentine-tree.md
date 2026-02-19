@@ -1,13 +1,13 @@
 ---
 date: 2025-09-10
-updated: 2025-12-26
+updated: 2026-02-19
 title: Turpentine Tree
 image: https://live.staticflickr.com/65535/54997377525_5407f9dcb9_h.jpg
 layout: art
 tags:
   - art
   - square
-  - zeta-series
+  - offset-construct
 caption: Pistache
 forsale:
 published: true

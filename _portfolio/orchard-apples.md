@@ -6,6 +6,7 @@ image: https://live.staticflickr.com/65535/55093878589_4b629e4f8c_h.jpg
 layout: art
 tags:
   - art
+  - offset-construct
 excerpt_separator: <!--and-->
 solo: true
 caption: Apples in an Orchard

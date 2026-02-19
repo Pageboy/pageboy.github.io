@@ -1,12 +1,12 @@
 ---
 date: 2025-11-23
-updated: 2026-01-05
+updated: 2026-02-19
 title: Sumac Tree
 image: https://live.staticflickr.com/65535/54942018068_1cf2589ef7_h.jpg
 layout: art
 tags:
   - art
-  - zeta-series
+  - offset-construct
 excerpt_separator: <!--and-->
 solo: false
 caption: Sumac Staghorn in a village garden

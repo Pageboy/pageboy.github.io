@@ -1,11 +1,12 @@
 ---
 date: 2026-01-05
-updated: 2026-01-27
+updated: 2026-02-19
 title: Apple Drop
 image: https://live.staticflickr.com/65535/54940431532_9052f7cc5e_h.jpg
 layout: art
 tags:
   - art
+  - offset-construct
 excerpt_separator: <!--and-->
 solo: false
 caption:

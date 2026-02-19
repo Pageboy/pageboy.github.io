@@ -1,13 +1,12 @@
 ---
 date: 2025-09-22
-updated: 2025-10-30
+updated: 2026-02-19
 title: Sea Splash with yellow rock
 image: https://live.staticflickr.com/65535/54805141295_1b924b963a_h.jpg
 layout: art
 tags:
   - art
-  - square
-  - zeta-series
+  - offset-construct
 caption: Arcs over the sea splash and rock, Alati, Paxos
 forsale:
 published: true

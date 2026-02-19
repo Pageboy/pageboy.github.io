@@ -1,12 +1,12 @@
 ---
 date: 2025-11-07
-updated: 2025-11-07
+updated: 2026-02-19
 title: Wisteria Autumn Colours
 image: https://live.staticflickr.com/65535/54907530876_b4d7126058_h.jpg
 layout: art
 tags:
   - art
-  - zeta-series
+  - offset-construct
 excerpt_separator: <!--and-->
 solo: true
 caption: The colours of the wisteria in Autumn

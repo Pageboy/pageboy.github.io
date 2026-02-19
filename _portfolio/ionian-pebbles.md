@@ -1,13 +1,12 @@
 ---
 date: 2025-09-26T00:00:00
-updated: 2025-10-30
+updated: 2026-02-19
 title: Ionian pebbles
 image: https://live.staticflickr.com/65535/54810239047_84474eb035_h.jpg
 layout: art
 tags:
   - art
-  - square
-  - zeta-series
+  - offset-construct
 excerpt_separator: <!--and-->
 caption: Arcs and pebbles
 forsale:

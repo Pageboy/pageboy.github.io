@@ -1,11 +1,12 @@
 ---
 date: 2026-01-27
-updated: 2026-01-27
+updated: 2026-02-19
 title: Hawthorn
 image: https://live.staticflickr.com/65535/55063868080_062f82af7e_h.jpg
 layout: art
 tags:
   - art
+  - offset-construct
 excerpt_separator: <!--and-->
 solo: false
 caption:
