@@ -85,7 +85,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/sycamore-maple.md",
+                "file": "_portfolio/meadow-grass.md",
                 "mode": "preview",
                 "source": true,
                 "backlinks": true,
@@ -100,7 +100,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "sycamore-maple"
+              "title": "meadow-grass"
             }
           }
         ],
@@ -286,6 +286,9 @@
   },
   "active": "2830276f2af0122f",
   "lastOpenFiles": [
+    "_portfolio/lantana.md",
+    "_portfolio/meadow-grass.md",
+    "_portfolio/sycamore-maple.md",
     "_portfolio/gold-gorse.md",
     "_portfolio/plume-thistle-arc.md",
     "_portfolio/orchard-apples.md",
@@ -320,11 +323,8 @@
     "_photographs/cornmarket-street.md",
     "_articles/colour-search-november.md",
     "obsidian_templates/blog.md",
-    "_articles/2022-08-09-beale-to-oxford.md",
-    "_portfolio/wisteria-autumn.md",
     "_site/uploads/instagrey.jpeg",
     "uploads/instagrey.jpeg",
-    "_articles/arcs-of-oxford.md",
     "uploads/img_0105.jpg",
     "uploads/img_1056.jpg",
     "_site/uploads/z-form.jpg",
