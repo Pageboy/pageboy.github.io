@@ -14,7 +14,7 @@ views:
       - tags
     sort:
       - property: date
-        direction: ASC
+        direction: DESC
     columnSize:
       file.name: 231
       note.title: 247

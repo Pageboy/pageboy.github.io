@@ -8,6 +8,7 @@ published: false
 forsale:
 tags:
   - art
-  - portrait format
+  - portrait
+updated: 2026-02-19
 ---
 Lean over the stream to see trees leaning over. Leafless winter reveals triangles formed by the branches. Colours are reflected in the flowing waters that sweep through the shadows.

@@ -5,9 +5,9 @@ date: 2024-12-09T14:29:00.000Z
 image: https://live.staticflickr.com/65535/54193125561_e7d7f0dd98_h_d.jpg
 tags:
   - art
-  - portrait format
+  - portrait
 published: true
-updated: 2025-11-05
+updated: 2026-02-19
 ---
 During a walk through the winter forest, the contrasting colors at ground level appear to amplify each other's vibrancy.
 

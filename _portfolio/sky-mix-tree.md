@@ -7,9 +7,9 @@ caption: Sun tree
 forsale:
 tags:
   - art
-  - portrait format
+  - portrait
 published: true
-updated: 2025-11-05
+updated: 2026-02-19
 ---
 Against the cloudless sky the sun catches the branches of the leafless tree. 
 

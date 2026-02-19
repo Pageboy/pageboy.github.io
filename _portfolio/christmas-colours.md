@@ -6,9 +6,9 @@ image: https://live.staticflickr.com/65535/53401628496_caae18d9b2_h_d.jpg
 caption: Garden in late December
 tags:
   - art
-  - portrait format
+  - portrait
 published: true
-updated: 2025-11-05
+updated: 2026-02-19
 ---
 
 

@@ -6,9 +6,9 @@ image: https://live.staticflickr.com/65535/53268283345_7866797a89_h_d.jpg
 caption: Riverside Purple Aster
 tags:
   - art
-  - portrait format
+  - portrait
 published: true
-updated: 2025-11-05
+updated: 2026-02-19
 ---
 Along the bank of the river the aster flowers are silhouetted against the rippling flow.
 

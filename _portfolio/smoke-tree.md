@@ -6,9 +6,9 @@ image: https://live.staticflickr.com/65535/54415775166_b7f09367af_h_d.jpg
 forsale: 823LANXSMR3J6
 tags:
   - art
-  - portrait format
+  - portrait
 published: true
-updated: 2026-02-13
+updated: 2026-02-19
 ---
 In amongst the leaves and branches of the exotic Smoke Tree, the camera finds the variation of pastel colours that contrast with the bright leaves.
 

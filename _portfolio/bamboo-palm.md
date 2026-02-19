@@ -6,8 +6,8 @@ image: https://live.staticflickr.com/65535/54362785078_b4a73ddaba_h_d.jpg
 caption: Through the leaves of the palm
 tags:
   - art
-  - portrait format
+  - portrait
 published: true
-updated: 2025-11-05
+updated: 2026-02-19
 ---
 The intense blue of the tropical sky is seen through the sweeping arcs of the palm leaves.

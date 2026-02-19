@@ -7,9 +7,9 @@ caption: Rectangle divided and rouged
 forsale:
 tags:
   - art
-  - portrait format
+  - portrait
 published: true
-updated: 2025-11-05
+updated: 2026-02-19
 ---
 Oaks overhang the paths; their leaves have scattered over the ground mixing a rusty colour palette.
 

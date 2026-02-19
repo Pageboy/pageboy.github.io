@@ -7,6 +7,7 @@ caption: Iced blades of grass
 published: false
 tags:
   - art
-  - portrait formatp
+  - portraitp
+updated: 2026-02-19
 ---
 Temperature dropping and the moisture on the grass turns to ice. The frost crystals reflect the sky as the greens are covered. Close-up, the blades hold their sharp edges waiting for the thaw to release them from the cold grip.
