@@ -85,7 +85,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/maple-grass-in-the-autumn-garden.md",
+                "file": "_portfolio/lenten-rose.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -100,7 +100,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "maple-grass-in-the-autumn-garden"
+              "title": "lenten-rose"
             }
           }
         ],
@@ -286,6 +286,10 @@
   },
   "active": "2830276f2af0122f",
   "lastOpenFiles": [
+    "_portfolio/palm-lily-arcs.md",
+    "_portfolio/meadowsweet.md",
+    "_portfolio/lenten-rose.md",
+    "_portfolio/maple-grass-in-the-autumn-garden.md",
     "_portfolio/buckeye-botanised.md",
     "bases/Portfolio.base",
     "_portfolio/orchard-apples.md",
@@ -311,13 +315,10 @@
     "_portfolio/smoke-tree.md",
     "_site/portfolio/hibiscus/index.html",
     "_site/portfolio/hibiscus",
-    "_photographs/travels-in-mexico.md",
     "_site/photographs/travels-in-mexico/index.html",
     "_site/photographs/travels-in-mexico",
     "_site/portfolio/hawthorn/index.html",
     "_site/portfolio/hawthorn",
-    "obsidian_templates/photograph.md",
-    "obsidian_templates/portfolio.md",
     "_site/portfolio/apple-drop/index.html",
     "_site/portfolio/apple-drop",
     "_site/photographs/cornmarket-street/index.html",
