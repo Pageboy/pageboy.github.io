@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/lenten-rose.md",
+                "file": "pages/about.md",
                 "mode": "source",
                 "source": true,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "lenten-rose"
+              "title": "about"
             }
           },
           {
@@ -262,10 +262,12 @@
   },
   "active": "10d2d5af66a48ac8",
   "lastOpenFiles": [
+    "pages/artworks.md",
+    "pages/home.md",
+    "_portfolio/lenten-rose.md",
     "pages/about.md",
     "uploads/inthestudio050326.jpeg",
     "uploads/_N726377.jpeg",
-    "_portfolio/lenten-rose.md",
     "_portfolio/apple-drop.md",
     "_portfolio/sumac-tree.md",
     "_portfolio/palmatum.md",
@@ -289,8 +291,6 @@
     "_portfolio/wisteria-autumn.md",
     "_portfolio/poppy-red.md",
     "_portfolio/wall-mix.md",
-    "_portfolio/meadow-grass.md",
-    "_portfolio/lantana.md",
     "_site/portfolio/hibiscus/index.html",
     "_site/portfolio/hibiscus",
     "_site/photographs/travels-in-mexico/index.html",
