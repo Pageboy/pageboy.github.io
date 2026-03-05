@@ -17,6 +17,6 @@ Other work that you can find here:
 - [Some projects including _Megalithic Landscapes_](/projects)
 - [My photographs](https://www.chrisjennings.net/photographs)
 
-![Studio View](../uploads/inthestudio050326.jpeg "Chris and some recent work")
+![Studio View with Lenten Rose and Agapanthus](../uploads/inthestudio050326.jpeg "Chris and some recent work")
 
 I have divided my recent work here into into series; mainly in respect of the proportions.

@@ -43,25 +43,26 @@ var import_obsidian2 = require("obsidian");
 var import_obsidian = require("obsidian");
 
 // src/file_embedder.ts
-var import_fs = __toESM(require("fs"));
-var import_path = __toESM(require("path"));
+var import_fs = __toESM(require("fs"), 1);
+var import_path = __toESM(require("path"), 1);
 var FileEmbedder = class {
   constructor(attachmentsFolder) {
     this.attachmentsFolder = attachmentsFolder;
   }
-  embedLinkFor(filePath) {
-    const filename = import_path.default.basename(filePath);
+  embedLinkFor(filename) {
     return "![[" + filename + "]]\n";
   }
-  copyFileToAttachmentsDir(filePath) {
+  async copyFileToAttachmentsDir(file) {
     import_fs.default.mkdirSync(this.attachmentsFolder, { recursive: true });
-    const fileName = import_path.default.basename(filePath);
-    import_fs.default.copyFileSync(filePath, import_path.default.resolve(this.attachmentsFolder, fileName));
+    const destination = import_path.default.resolve(this.attachmentsFolder, file.name);
+    const buffer = await file.arrayBuffer();
+    import_fs.default.writeFileSync(destination, Buffer.from(buffer));
+    return destination;
   }
 };
 
 // src/file_modal.ts
-var import_path2 = __toESM(require("path"));
+var import_path2 = __toESM(require("path"), 1);
 var FileModal = class extends import_obsidian.Modal {
   constructor(app) {
     super(app);
@@ -76,28 +77,40 @@ var FileModal = class extends import_obsidian.Modal {
       new import_obsidian.Notice("Canceled adding images");
       this.close();
     });
-    input.addEventListener("change", () => {
+    input.addEventListener("change", async () => {
       this.close();
       const attachmentsDest = this.getAttachmentsDestination();
       const fileEmbedder = new FileEmbedder(attachmentsDest);
       const fileList = Array.from(input.files || []);
-      fileList.forEach((file) => {
-        const filePath = file.path;
-        fileEmbedder.copyFileToAttachmentsDir(filePath);
-        const embedLinkToFile = fileEmbedder.embedLinkFor(filePath);
-        this.addText(embedLinkToFile);
-      });
-      new import_obsidian.Notice(`Added ${fileList.length} images`);
+      let failedCount = 0;
+      for (const file of fileList) {
+        try {
+          await fileEmbedder.copyFileToAttachmentsDir(file);
+          const embedLinkToFile = fileEmbedder.embedLinkFor(file.name);
+          this.addText(embedLinkToFile);
+        } catch (error) {
+          failedCount++;
+          console.error(error);
+        }
+      }
+      if (failedCount > 0) {
+        new import_obsidian.Notice(
+          `Added ${fileList.length - failedCount} images; ${failedCount} failed to be inserted`
+        );
+      } else {
+        new import_obsidian.Notice(`Added ${fileList.length} images`);
+      }
     });
     input.click();
   }
   getAttachmentsDestination() {
-    const attachementFolder = this.app.vault.config.attachmentFolderPath;
+    var _a;
+    const attachmentFolder = (_a = this.app.vault.config.attachmentFolderPath) != null ? _a : "/";
     let basePath = this.app.vault.adapter.basePath;
-    if (attachementFolder.startsWith("./")) {
+    if (attachmentFolder.startsWith("./")) {
       basePath = import_path2.default.join(basePath, this.app.workspace.getActiveFile().parent.path);
     }
-    return import_path2.default.join(basePath, attachementFolder);
+    return import_path2.default.join(basePath, attachmentFolder);
   }
   addText(text) {
     const view = this.app.workspace.getActiveViewOfType(import_obsidian.MarkdownView);
