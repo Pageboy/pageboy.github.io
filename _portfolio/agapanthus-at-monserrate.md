@@ -9,6 +9,7 @@ tags:
   - golden-section
 updated: 2026-03-05
 published: true
+flickr_share: https://flic.kr/p/2rZFrpw
 ---
 In the beautiful gardens of the palace of Monserrate in Sintra, Portugal, the Agapanthus flowers display their blooms against the forest of cork oaks.
 
