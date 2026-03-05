@@ -37,8 +37,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pages/about.md",
-                "mode": "preview",
+                "file": "_portfolio/lenten-rose.md",
+                "mode": "source",
                 "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "about"
+              "title": "lenten-rose"
             }
           },
           {
@@ -262,6 +262,7 @@
   },
   "active": "10d2d5af66a48ac8",
   "lastOpenFiles": [
+    "pages/about.md",
     "uploads/inthestudio050326.jpeg",
     "uploads/_N726377.jpeg",
     "_portfolio/lenten-rose.md",
@@ -309,7 +310,6 @@
     "uploads/img_1059.jpg",
     "newsletters/November 2025.canvas",
     "newsletters/Untitled 1.canvas",
-    "uploads/z-form.jpg.jpg",
     "docs/private/Teaching_Hold/Multiplatform Publishing/Assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/Assignment 2.canvas",
