@@ -13,6 +13,8 @@ views:
       - image
       - tags
     sort:
+      - property: file.name
+        direction: ASC
       - property: date
         direction: DESC
     columnSize:

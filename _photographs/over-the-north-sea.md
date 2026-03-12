@@ -1,10 +1,10 @@
 ---
 date: 2025-09-15
-updated: 2025-09-19
+updated: 2026-03-07
 title: Over the North Sea
 image: /uploads/flyingovernorthsea.jpg
 caption: From seat 25A to the North Sea
-source:
+source: Apple iPhone 16 Pro
 layout: photo
 tags:
   - observations

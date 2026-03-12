@@ -78,9 +78,33 @@
               "icon": "lucide-file",
               "title": "palmatum"
             }
+          },
+          {
+            "id": "a93eb490be0ffb46",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_portfolio/buckeye-botanised.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "buckeye-botanised"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -260,8 +284,11 @@
       "templates:Insert template": false
     }
   },
-  "active": "a9ac8459ddead1f6",
+  "active": "a93eb490be0ffb46",
   "lastOpenFiles": [
+    "bases/Portfolio.base",
+    "_portfolio/buckeye-botanised.md",
+    "bases/Photographs.base",
     "pages/artworks.md",
     "pages/home.md",
     "_portfolio/lenten-rose.md",
@@ -272,13 +299,11 @@
     "_portfolio/sumac-tree.md",
     "_portfolio/palmatum.md",
     "_portfolio/plume-thistle-arc.md",
-    "_portfolio/buckeye-botanised.md",
     "_portfolio/agapanthus-at-monserrate.md",
     "_portfolio/hibiscus.md",
     "_portfolio/palm-lily-arcs.md",
     "_portfolio/meadowsweet.md",
     "_portfolio/maple-grass-in-the-autumn-garden.md",
-    "bases/Portfolio.base",
     "_portfolio/orchard-apples.md",
     "_portfolio/hawthorn.md",
     "_portfolio/tree-tangle.md",
@@ -290,7 +315,6 @@
     "_portfolio/ionian-pebbles.md",
     "_portfolio/wisteria-autumn.md",
     "_portfolio/poppy-red.md",
-    "_portfolio/wall-mix.md",
     "_site/portfolio/hibiscus/index.html",
     "_site/portfolio/hibiscus",
     "_site/photographs/travels-in-mexico/index.html",
@@ -299,7 +323,6 @@
     "_site/portfolio/hawthorn",
     "_site/portfolio/apple-drop/index.html",
     "_site/portfolio/apple-drop",
-    "_site/photographs/cornmarket-street/index.html",
     "_site/images/xmas2025.png",
     "_site/uploads/instagrey.jpeg",
     "uploads/instagrey.jpeg",

@@ -12,10 +12,12 @@ views:
       - image
       - published
     sort:
-      - property: title
+      - property: file.name
         direction: ASC
       - property: date
         direction: DESC
+      - property: title
+        direction: ASC
     columnSize:
       file.name: 205
       note.title: 282
