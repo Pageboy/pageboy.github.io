@@ -61,11 +61,11 @@
             "state": {
               "type": "bases",
               "state": {
-                "file": "bases/Articles.base",
+                "file": "bases/Portfolio.base",
                 "viewName": "Table"
               },
               "icon": "lucide-table",
-              "title": "Articles"
+              "title": "Portfolio"
             }
           }
         ],
@@ -251,6 +251,7 @@
   },
   "active": "a93eb490be0ffb46",
   "lastOpenFiles": [
+    "bases/Articles.base",
     "bases/Portfolio.base",
     "_portfolio/buckeye-botanised.md",
     "bases/Photographs.base",
