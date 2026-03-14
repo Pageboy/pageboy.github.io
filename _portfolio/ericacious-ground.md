@@ -7,8 +7,8 @@ caption: "Peony and herbivore "
 tags:
   - art
   - golden-section
-published: true
-updated: 2026-02-19
+published: false
+updated: 2026-03-14
 ---
 Rich colours sweep over the garden when we have more daylight hours.
 

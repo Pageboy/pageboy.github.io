@@ -7,8 +7,8 @@ caption: Red leaves on the Pistachioio tree
 tags:
   - art
   - golden-section
-published: true
-updated: 2026-02-19
+published: false
+updated: 2026-03-14
 ---
 In the warm Mediterranean soil the Pistache grow in abundance. When a branch of the pistachio tree dies back or experiences stress, its leaves often turn a fiery red or orange hue.
 

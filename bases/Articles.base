@@ -10,6 +10,8 @@ views:
       - published
       - file.ctime
     sort:
+      - property: file.ctime
+        direction: ASC
       - property: title
         direction: DESC
     columnSize:

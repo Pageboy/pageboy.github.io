@@ -8,30 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4427579dde050b11",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_portfolio/sumac-tree.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "sumac-tree"
-            }
-          },
-          {
             "id": "10d2d5af66a48ac8",
             "type": "leaf",
             "state": {
@@ -83,28 +59,17 @@
             "id": "a93eb490be0ffb46",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "bases",
               "state": {
-                "file": "_portfolio/buckeye-botanised.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "file": "bases/Articles.base",
+                "viewName": "Table"
               },
-              "icon": "lucide-file",
-              "title": "buckeye-botanised"
+              "icon": "lucide-table",
+              "title": "Articles"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
