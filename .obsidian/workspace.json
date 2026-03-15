@@ -61,11 +61,11 @@
             "state": {
               "type": "bases",
               "state": {
-                "file": "bases/Portfolio.base",
+                "file": "bases/Articles.base",
                 "viewName": "Table"
               },
               "icon": "lucide-table",
-              "title": "Portfolio"
+              "title": "Articles"
             }
           }
         ],
@@ -251,8 +251,11 @@
   },
   "active": "a93eb490be0ffb46",
   "lastOpenFiles": [
+    "_articles/a-walk-up-wittenham-clumps.md",
     "bases/Articles.base",
     "bases/Portfolio.base",
+    "obsidian_templates/portfolio.md",
+    "_portfolio/beach-stones-on-the-street.md",
     "_portfolio/buckeye-botanised.md",
     "bases/Photographs.base",
     "pages/artworks.md",
@@ -279,8 +282,6 @@
     "_portfolio/berberis.md",
     "_portfolio/sea-splash-and-rock.md",
     "_portfolio/ionian-pebbles.md",
-    "_portfolio/wisteria-autumn.md",
-    "_portfolio/poppy-red.md",
     "_site/portfolio/hibiscus/index.html",
     "_site/portfolio/hibiscus",
     "_site/photographs/travels-in-mexico/index.html",
@@ -288,7 +289,6 @@
     "_site/portfolio/hawthorn/index.html",
     "_site/portfolio/hawthorn",
     "_site/portfolio/apple-drop/index.html",
-    "_site/portfolio/apple-drop",
     "_site/images/xmas2025.png",
     "_site/uploads/instagrey.jpeg",
     "uploads/instagrey.jpeg",

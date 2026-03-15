@@ -1,14 +1,14 @@
 ---
 title: A Walk up Wittenham Clumps
 date: 2025-10-12
-updated: 2025-10-15
+updated: 2026-03-15
 layout: post
 image: ../uploads/viewfromwittenhamclumps.jpg
 caption: The view from the top of Wittenham Clumps
 excerpt_separator: <!--and-->
 flickr_album:
 tags:
-published: false
+published: true
 ---
 I love to take _Perspectief_ (my Dutch cruiser) downstream from Oxford to a favourite mooring near to Dorchester-on-Thames. The great thing about this location is that there are some wonderful walks around the village and, as you will see, a serious climb up to the top of Wittenham Clumps.
 
