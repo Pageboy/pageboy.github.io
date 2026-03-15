@@ -1,11 +1,12 @@
 ---
+layout: post
 title: Cobbles and Shingle. Grounds and Beaches
 date: 2020-01-25T00:00:00.000Z
 image: /uploads/shingle.jpg
 caption: Shingle
 tags:
   - observations
-updated: 2025-11-05
+updated: 2026-03-15
 published: true
 ---
 

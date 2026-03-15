@@ -8,7 +8,7 @@ caption: Kings Arms, Sandford, 1890
 tags:
   - boat
   - cruising
-updated: 2025-08-18
+updated: 2026-03-15
 ---
 From our Osney Moorings to a view of the Carfax Conduit at Nuneham, takes us through Iffley and Sandford Locks. This is a favourite excursion because it gives us a chance to get back to Sandford in time for a lunch at the fine establishment of the King's Arms.
 
@@ -28,4 +28,4 @@ We turned Perspectief round at a sighting of the Carfax Conduit (now a folly in 
 
 ![Carfax Conduit at Nuneham from Alden's Oxford guide (1890)](/uploads/carfaxconduit.jpg "Carfax Conduit at Nuneham from Alden's Oxford guide (1890)")
 
-![A view of Nunenham House from the Thames](/uploads/P1030162.jpg "A view of Nunenham House from the Thames")
+![A view of Nunenham House from the Thames](/uploads/p1030162.jpg "A view of Nunenham House from the Thames")

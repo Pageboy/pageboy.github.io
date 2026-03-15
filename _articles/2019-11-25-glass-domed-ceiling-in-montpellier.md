@@ -9,7 +9,7 @@ comments:
 tags:
   - travel
 published: true
-updated: 2025-11-05
+updated: 2026-03-15
 ---
 
 This is the ceiling in the Halles Laissac in Montpellier. The ceiling is a glass dome and :
@@ -26,4 +26,4 @@ Here is my picture again:
 
 ### I took this picture of tomatoes in the same Fruit market.
 
-![Tomatoes in Montpellier](https://live.staticflickr.com/65535/49210211787_711b08ed94_k.jpg)](https://live.staticflickr.com/65535/49210211787_711b08ed94_k.jpg "Tomatoes in Montpellier](https://live.staticflickr.com/65535/49210211787_711b08ed94_k.jpg)")
+![Tomatoes in Montpellier](https://live.staticflickr.com/65535/49210211787_711b08ed94_k.jpg)

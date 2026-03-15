@@ -10,7 +10,7 @@ tags:
   - boat
   - cruising
   - Perspectief
-updated: 2025-08-18
+updated: 2026-03-15
 ---
 
 As we cruise up and down the Thames, we are struck by the variety of scenes that drift past; marking the boundary between the water and the land.
