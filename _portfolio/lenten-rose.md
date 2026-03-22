@@ -1,6 +1,6 @@
 ---
 date: 2026-02-20
-updated: 2026-03-05
+updated: 2026-03-22
 title:
 image: https://live.staticflickr.com/65535/55106244380_7f84735660_h.jpg
 layout: art
@@ -8,7 +8,7 @@ tags:
   - art
   - triptych
 excerpt_separator: <!--and-->
-solo: true
+solo: false
 caption:
 forsale:
 published: true
