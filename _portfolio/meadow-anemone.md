@@ -1,6 +1,6 @@
 ---
 date: 2026-03-22
-updated: 2026-03-22
+updated: 2026-03-25
 title: Meadow Anemone
 image: https://live.staticflickr.com/65535/55148562301_d5afa6e080_h.jpg
 layout: art
@@ -8,7 +8,7 @@ tags:
   - art
   - square-series
 excerpt_separator: <!--and-->
-solo: true
+solo: false
 caption:
 forsale:
 published: true
