@@ -32,66 +32,6 @@
             }
           },
           {
-            "id": "6d888b8a8de97591",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_portfolio/palmatum.md",
-                "mode": "source",
-                "source": true,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "palmatum"
-            }
-          },
-          {
-            "id": "a93eb490be0ffb46",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_portfolio/meadow-anemone.md",
-                "mode": "source",
-                "source": true,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "meadow-anemone"
-            }
-          },
-          {
-            "id": "9b890811690fe92e",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.12.7"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.12.7"
-            }
-          },
-          {
             "id": "381f0dc8e662604e",
             "type": "leaf",
             "state": {
@@ -116,7 +56,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -298,10 +238,11 @@
   },
   "active": "381f0dc8e662604e",
   "lastOpenFiles": [
+    "bases/Portfolio.base",
+    "_portfolio/poppy-red.md",
     "_portfolio/lenten-rose.md",
     "_portfolio/meadow-anemone.md",
     "_portfolio/turpentine-tree.md",
-    "bases/Portfolio.base",
     "bases/Articles.base",
     "_articles/a-walk-up-wittenham-clumps.md",
     "obsidian_templates/portfolio.md",
@@ -327,8 +268,6 @@
     "_portfolio/tree-tangle.md",
     "_portfolio/tree-fruits.md",
     "_portfolio/year-s-end-colours.md",
-    "_portfolio/brome-grass.md",
-    "_portfolio/berberis.md",
     "_site/portfolio/hibiscus/index.html",
     "_site/portfolio/hibiscus",
     "_site/photographs/travels-in-mexico/index.html",

@@ -11,6 +11,7 @@ solo: false
 caption:
 forsale:
 published: true
+flickr_share: https://flic.kr/p/2s3Zzra
 ---
 
 Amid a field of green, one poppy stands alone—its brilliant shade of red burning brighter in its solitude.
