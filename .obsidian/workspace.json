@@ -78,9 +78,45 @@
               "icon": "lucide-file",
               "title": "meadow-anemone"
             }
+          },
+          {
+            "id": "9b890811690fe92e",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.12.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.12.7"
+            }
+          },
+          {
+            "id": "381f0dc8e662604e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_portfolio/poppy-red.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "poppy-red"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -260,7 +296,7 @@
       "templates:Insert template": false
     }
   },
-  "active": "a93eb490be0ffb46",
+  "active": "381f0dc8e662604e",
   "lastOpenFiles": [
     "_portfolio/lenten-rose.md",
     "_portfolio/meadow-anemone.md",
