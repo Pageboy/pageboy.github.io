@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/begonia.md",
+                "file": "_portfolio/poppy_red.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "begonia"
+              "title": "poppy_red"
             }
           }
         ],
@@ -238,15 +238,16 @@
   },
   "active": "4c9d47e556265325",
   "lastOpenFiles": [
-    "_portfolio/poppy-red.md",
-    "_portfolio/begonia.md",
-    "_portfolio/meadow-anemone.md",
+    "obsidian_templates/portfolio.md",
+    "_portfolio/dogwood-autumn.md",
     "bases/Portfolio.base",
+    "_portfolio/begonia.md",
+    "_portfolio/poppy_red.md",
+    "_portfolio/meadow-anemone.md",
     "_portfolio/lenten-rose.md",
     "_portfolio/turpentine-tree.md",
     "bases/Articles.base",
     "_articles/a-walk-up-wittenham-clumps.md",
-    "obsidian_templates/portfolio.md",
     "_portfolio/beach-stones-on-the-street.md",
     "_portfolio/buckeye-botanised.md",
     "bases/Photographs.base",
@@ -268,7 +269,6 @@
     "_portfolio/hawthorn.md",
     "_portfolio/tree-tangle.md",
     "_portfolio/tree-fruits.md",
-    "_portfolio/year-s-end-colours.md",
     "_site/portfolio/hibiscus/index.html",
     "_site/portfolio/hibiscus",
     "_site/photographs/travels-in-mexico/index.html",
