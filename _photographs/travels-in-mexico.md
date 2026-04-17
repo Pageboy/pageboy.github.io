@@ -1,6 +1,6 @@
 ---
 date: 2026-01-29T18:00:00
-updated: 2026-01-29
+updated: 2026-04-17
 title: Travels in Mexico
 image: https://live.staticflickr.com/65535/55062347108_f34a9c09bd_h.jpg
 caption: Chichen Itza Great Pyramid
@@ -10,7 +10,7 @@ tags:
   - architecture
   - buildings
   - archeology
-solo: true
+solo: false
 published: true
 flickr_album: flickr72177720331672446
 flickr_share: https://flic.kr/p/2rTEVsd

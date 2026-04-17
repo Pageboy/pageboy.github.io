@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_photographs/brickwork-in-toulouse.md",
-                "mode": "source",
+                "file": "_photographs/travels-in-mexico.md",
+                "mode": "preview",
                 "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "brickwork-in-toulouse"
+              "title": "travels-in-mexico"
             }
           }
         ]
@@ -210,8 +210,8 @@
   },
   "active": "5bc89c0b59696e19",
   "lastOpenFiles": [
-    "_photographs/wall-in-sintra-portugal.md",
     "_photographs/brickwork-in-toulouse.md",
+    "_photographs/wall-in-sintra-portugal.md",
     "_portfolio/hibiscus.md",
     "obsidian_templates/photograph.md",
     "_photographs/palm-tree-curves.md",
