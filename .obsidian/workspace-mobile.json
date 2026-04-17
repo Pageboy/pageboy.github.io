@@ -13,9 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/hibiscus.md",
+                "file": "_photographs/brickwork-in-toulouse.md",
                 "mode": "source",
-                "source": false,
+                "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
                   "collapseAll": false,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "hibiscus"
+              "title": "brickwork-in-toulouse"
             }
           }
         ]
@@ -210,6 +210,9 @@
   },
   "active": "5bc89c0b59696e19",
   "lastOpenFiles": [
+    "_photographs/wall-in-sintra-portugal.md",
+    "_photographs/brickwork-in-toulouse.md",
+    "_portfolio/hibiscus.md",
     "obsidian_templates/photograph.md",
     "_photographs/palm-tree-curves.md",
     "_photographs/light-entertainment.md",
@@ -240,9 +243,6 @@
     "obsidian_templates/newsletter.md",
     "november-2025.md",
     "newsletters/october-25.md",
-    "_photographs/bracken.md",
-    "_articles/the-proportions-in-my-work.md",
-    "_portfolio/palm-lily-arcs.md",
     "_site/photographs/dorchester-abbey/index.html",
     "_site/photographs/dorchester-abbey",
     "_site/Untitled.canvas",
