@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_photographs/travels-in-mexico.md",
+                "file": "_portfolio/cuckoo-flower.md",
                 "mode": "preview",
                 "source": true,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "travels-in-mexico"
+              "title": "cuckoo-flower"
             }
           }
         ]
@@ -190,7 +190,7 @@
         }
       }
     ],
-    "currentTab": 4
+    "currentTab": 2
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -210,6 +210,7 @@
   },
   "active": "5bc89c0b59696e19",
   "lastOpenFiles": [
+    "_photographs/travels-in-mexico.md",
     "_photographs/brickwork-in-toulouse.md",
     "_photographs/wall-in-sintra-portugal.md",
     "_portfolio/hibiscus.md",
@@ -242,7 +243,6 @@
     "newsletters/untitled.md",
     "obsidian_templates/newsletter.md",
     "november-2025.md",
-    "newsletters/october-25.md",
     "_site/photographs/dorchester-abbey/index.html",
     "_site/photographs/dorchester-abbey",
     "_site/Untitled.canvas",

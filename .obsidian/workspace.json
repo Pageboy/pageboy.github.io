@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/poppy_red.md",
+                "file": "_portfolio/cuckoo-flower.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "poppy_red"
+              "title": "cuckoo-flower"
             }
           }
         ],
@@ -238,11 +238,12 @@
   },
   "active": "4c9d47e556265325",
   "lastOpenFiles": [
+    "_portfolio/poppy_red.md",
+    "_portfolio/cuckoo-flower.md",
     "obsidian_templates/portfolio.md",
     "_portfolio/dogwood-autumn.md",
     "bases/Portfolio.base",
     "_portfolio/begonia.md",
-    "_portfolio/poppy_red.md",
     "_portfolio/meadow-anemone.md",
     "_portfolio/lenten-rose.md",
     "_portfolio/turpentine-tree.md",
@@ -268,7 +269,6 @@
     "_portfolio/orchard-apples.md",
     "_portfolio/hawthorn.md",
     "_portfolio/tree-tangle.md",
-    "_portfolio/tree-fruits.md",
     "_site/portfolio/hibiscus/index.html",
     "_site/portfolio/hibiscus",
     "_site/photographs/travels-in-mexico/index.html",
