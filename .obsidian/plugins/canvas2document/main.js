@@ -86,13 +86,186 @@ var Canvas2DocumentPlugin = class extends import_obsidian.Plugin {
       id: "run-conversion",
       name: "Step 1 - Convert canvas to a longform document",
       callback: async () => {
-        const canvStruct = await this.readCanvasStruct();
-        if (canvStruct == false) {
-          new import_obsidian.Notice(`this is not a canvas file`);
-          return;
+        let selectedNodes = [];
+        let totalNodes = 0;
+        let selectedNodesCount = 0;
+        let colorValues_length = 0;
+        let nodesWithColorCount = 0;
+        let nodesWithOutColorCount = 0;
+        let colorCounts = /* @__PURE__ */ new Map();
+        const canvasView = this.app.workspace.getActiveViewOfType(import_obsidian.ItemView);
+        if ((canvasView == null ? void 0 : canvasView.getViewType()) == "canvas") {
+          const canvas = canvasView.canvas;
+          const selection = Array.from(canvas.selection);
+          if (selection && selection.length > 0) {
+            selectedNodes = selection.map(
+              (node) => ({
+                id: node.id,
+                color: node.color
+              })
+            );
+          } else {
+            selectedNodes = [];
+          }
+          const canvStruct = await this.readCanvasStruct();
+          if (canvStruct == false) {
+            new import_obsidian.Notice(`this is not a canvas file`);
+            return;
+          }
+          let [totalNodes2, selectedNodesCount2, colorValues_length2, nodesWithColorCount2, nodesWithOutColorCount2, colorCounts2, colorNodeIds, NoColorNodeIds, full_data] = await this.readCanvasData_pre(canvStruct, selectedNodes);
+          const modal = new import_obsidian.Modal(this.app);
+          modal.titleEl.setText("Canvas2Document conversion - step 1");
+          const header = modal.contentEl.createDiv();
+          header.addClass("modal-header");
+          header.createEl("h2", { text: "Select conversion mode:" });
+          header.createEl("p").innerHTML = "<em>Choose which nodes from your canvas you want to convert into the target document. You can select all nodes, only selected nodes, or filter by color tags.</em>";
+          const radioGroup = modal.contentEl.createDiv();
+          radioGroup.addClasses(["modal-content"]);
+          let selectedOption = "all";
+          const createRadioOption = (value, label) => {
+            const container = radioGroup.createDiv();
+            container.addClass("radio-container");
+            const radio = container.createEl("input", { type: "radio", value });
+            radio.name = "conversion-mode";
+            radio.checked = value === selectedOption;
+            radio.onchange = () => {
+              selectedOption = value;
+            };
+            container.createEl("label", { text: label }).insertAfter(radio);
+          };
+          createRadioOption("all", `all - Convert all nodes  (${totalNodes2} total)`);
+          createRadioOption("selected", `selected - Convert selected nodes only (${selectedNodesCount2} selected)`);
+          createRadioOption("anycolor", `any color - Convert nodes tagged with any color (${nodesWithColorCount2} with any color tags)`);
+          createRadioOption("nocolor", `nocolor - Convert nodes not tagged with any color (${nodesWithOutColorCount2} with no color tags)`);
+          createRadioOption("color", "single color - Convert defined color tagged nodes ");
+          let selectedColor = "";
+          if (colorValues_length2.length > 0) {
+            const usedColors = /* @__PURE__ */ new Set();
+            Object.entries(colorCounts2).forEach(([color, count]) => {
+              usedColors.add(color);
+            });
+            const colorMapping = {
+              "1": "#BF616A",
+              "2": "#D08770",
+              "3": "#EBCB8B",
+              "4": "#A3BE8C",
+              "5": "#88C0D0",
+              "6": "#B48EAD"
+            };
+            const getMappedColor = (colorValue) => {
+              if (colorMapping[colorValue]) {
+                return colorMapping[colorValue];
+              }
+              return colorValue;
+            };
+            const colorDropdown = radioGroup.createDiv();
+            colorDropdown.addClass("dropdown-container");
+            const label = colorDropdown.createEl("label", { text: "Filter by color: " });
+            const select = colorDropdown.createEl("select");
+            select.createEl("option", { text: "Select color", value: "" });
+            usedColors.forEach((color) => {
+              const count = colorCounts2[color];
+              const optionEl = select.createEl("option", { text: `${color} (${count} nodes)`, value: color });
+              if (!select.dataset.colorListener) {
+                select.addEventListener("change", () => {
+                  const val = select.value;
+                  if (!val) {
+                    select.style.backgroundColor = "";
+                    select.style.color = "";
+                    selectedColor = "";
+                    return;
+                  }
+                  try {
+                    const getRGB = (c) => {
+                      var _a, _b;
+                      if (c.startsWith("rgb")) {
+                        const nums = (_b = (_a = c.match(/\d+/g)) == null ? void 0 : _a.map(Number)) != null ? _b : [0, 0, 0];
+                        return nums.slice(0, 3);
+                      }
+                      let hex = c.replace("#", "").trim();
+                      if (hex.length === 3) hex = hex.split("").map((ch) => ch + ch).join("");
+                      const bigint = parseInt(hex, 16);
+                      return [bigint >> 16 & 255, bigint >> 8 & 255, bigint & 255];
+                    };
+                    const [r, g, b] = getRGB(val);
+                    const yiq = (r * 299 + g * 587 + b * 114) / 1e3;
+                    select.style.backgroundColor = getMappedColor(val);
+                    select.style.color = yiq >= 128 ? "#000" : "#fff";
+                  } catch (e) {
+                    select.style.backgroundColor = "";
+                    select.style.color = "";
+                  }
+                  selectedColor = val;
+                });
+                select.dataset.colorListener = "1";
+              }
+              try {
+                const getRGB = (c) => {
+                  var _a, _b;
+                  if (c.startsWith("rgb")) {
+                    const nums = (_b = (_a = c.match(/\d+/g)) == null ? void 0 : _a.map(Number)) != null ? _b : [0, 0, 0];
+                    return nums.slice(0, 3);
+                  }
+                  let hex = c.replace("#", "").trim();
+                  if (hex.length === 3) hex = hex.split("").map((ch) => ch + ch).join("");
+                  const bigint = parseInt(hex, 16);
+                  return [bigint >> 16 & 255, bigint >> 8 & 255, bigint & 255];
+                };
+                const [r, g, b] = getRGB(color);
+                const yiq = (r * 299 + g * 587 + b * 114) / 1e3;
+                optionEl.style.backgroundColor = getMappedColor(color);
+                optionEl.style.color = yiq >= 128 ? "#000" : "#fff";
+              } catch (e) {
+              }
+            });
+            select.onchange = () => {
+              selectedColor = select.value;
+            };
+          }
+          const buttonDiv = modal.contentEl.createDiv();
+          buttonDiv.addClasses(["modal-button-container"]);
+          let selectionMode2 = "all";
+          buttonDiv.createEl("button", { text: "Continue" }).onclick = async () => {
+            if (selectedOption == "selected" && selection.length == 0) {
+              new import_obsidian.Notice(`You have selected 'Convert selected nodes only' but no nodes are selected. Please select nodes or choose another conversion mode.`);
+              return;
+            }
+            if (selectedOption == "color" && selectedColor == "") {
+              new import_obsidian.Notice(`You have selected 'Convert color tagged nodes' but no color is selected. Please select a color or choose another conversion mode.`);
+              return;
+            }
+            if (selectedOption == "selected") {
+              selectionMode2 = "selected";
+            }
+            if (selectedOption == "anycolor") {
+              let nodeList = Object.values(colorNodeIds).flat();
+              selectedNodes = nodeList.map((id) => {
+                const node = full_data.nodes.find((n) => n.id === id);
+                return { id, color: (node == null ? void 0 : node.color) || "none" };
+              });
+              selectionMode2 = "selected";
+            }
+            if (selectedOption == "nocolor") {
+              let nodeList = Object.values(NoColorNodeIds).flat();
+              selectedNodes = nodeList.map((id) => {
+                const node = full_data.nodes.find((n) => n.id === id);
+                return { id, color: (node == null ? void 0 : node.color) || "none" };
+              });
+              selectionMode2 = "selected";
+            }
+            if (selectedOption == "color") {
+              selectedNodes = colorNodeIds[selectedColor].map((id) => ({ id, color: selectedColor }));
+              selectionMode2 = "selected";
+            }
+            let [contents, myparsed_data] = await this.readCanvasData(canvStruct, selectedNodes, selectionMode2, selectedColor);
+            const result = await this.writeCanvDocFile(contents, canvStruct, myparsed_data);
+            modal.close();
+          };
+          buttonDiv.createEl("button", { text: "Cancel" }).onclick = () => {
+            modal.close();
+          };
+          modal.open();
         }
-        let [contents, myparsed_data] = await this.readCanvasData(canvStruct);
-        const result = await this.writeCanvDocFile(contents, canvStruct, myparsed_data);
       }
     });
     this.addCommand({
@@ -243,16 +416,17 @@ var Canvas2DocumentPlugin = class extends import_obsidian.Plugin {
     return;
   }
   async readCanvasStruct() {
-    let activeFile = this.app.workspace.getActiveFile();
-    if (!activeFile || activeFile.extension != "canvas") {
-      return false;
+    const canvasView = this.app.workspace.getActiveViewOfType(import_obsidian.ItemView);
+    if ((canvasView == null ? void 0 : canvasView.getViewType()) == "canvas") {
+      const canvasFile = canvasView.file;
+      const path2 = canvasFile == null ? void 0 : canvasFile.path;
+      let content = this.app.vault.cachedRead(canvasFile);
+      return content;
     } else {
-      let mdFolderPath = path.dirname(activeFile.path);
+      return false;
     }
-    let content = this.app.vault.cachedRead(activeFile);
-    return content;
   }
-  async findAllXChildren(startGeneration, myparsed_data, fileContents, handledNodes, limitrecurseNodes, runcounterfunc, runcounterforeach) {
+  async findAllXChildren(startGeneration, myparsed_data, fileContents, handledNodes, limitrecurseNodes, runcounterfunc, runcounterforeach, selectedNodes) {
     runcounterfunc++;
     if (runcounterfunc > 30) {
       return false;
@@ -265,7 +439,14 @@ var Canvas2DocumentPlugin = class extends import_obsidian.Plugin {
       const nodeentry = myparsed_data.nodes.find((entry) => entry.id === child);
       if (!handledNodes.has(child)) {
         const result = await this.formatNode(nodeentry, 6);
-        fileContents.push(result);
+        if (selectionMode == "selected" && selectedNodes.length > 0) {
+          const foundSelected = selectedNodes.find((entry) => entry.id === child);
+          if (foundSelected) {
+            fileContents.push(result);
+          }
+        } else {
+          fileContents.push(result);
+        }
         handledNodes.add(child);
       } else {
         limitrecurseNodes++;
@@ -275,7 +456,7 @@ var Canvas2DocumentPlugin = class extends import_obsidian.Plugin {
       }
       let children = myparsed_data.edges2.filter((edge) => edge.fromNode === child).map((edge) => edge.toNode);
       if (children.length > 0) {
-        const continueRecursion = await this.findAllXChildren(children, myparsed_data, fileContents, handledNodes, limitrecurseNodes, runcounterfunc, runcounterforeach);
+        const continueRecursion = await this.findAllXChildren(children, myparsed_data, fileContents, handledNodes, limitrecurseNodes, runcounterfunc, runcounterforeach, selectedNodes);
         if (!continueRecursion) return false;
       }
     }
@@ -283,12 +464,19 @@ var Canvas2DocumentPlugin = class extends import_obsidian.Plugin {
     limitrecurseNodes++;
     return limitrecurseNodes <= 30;
   }
-  async traverseNodes(initialNodes, myparsed_data, fileContents, handledNodes) {
+  async traverseNodes(initialNodes, myparsed_data, fileContents, handledNodes, selectedNodes, selectionMode2) {
     for (const node of initialNodes) {
       const nodeentry = myparsed_data.nodes.find((entry) => entry.id === node);
       if (!handledNodes.has(node)) {
         const result = await this.formatNode(nodeentry, 1);
-        fileContents.push(result);
+        if (selectionMode2 == "selected" && selectedNodes.length > 0) {
+          const foundSelected = selectedNodes.find((entry) => entry.id === node);
+          if (foundSelected) {
+            fileContents.push(result);
+          }
+        } else {
+          fileContents.push(result);
+        }
       }
       handledNodes.add(node);
       const children1 = myparsed_data.edges2.filter((edge) => edge.fromNode === node).map((edge) => edge.toNode);
@@ -296,7 +484,14 @@ var Canvas2DocumentPlugin = class extends import_obsidian.Plugin {
         const nodeentry2 = myparsed_data.nodes.find((entry) => entry.id === child1);
         if (!handledNodes.has(child1)) {
           const result = await this.formatNode(nodeentry2, 2);
-          fileContents.push(result);
+          if (selectionMode2 == "selected" && selectedNodes.length > 0) {
+            const foundSelected = selectedNodes.find((entry) => entry.id === child1);
+            if (foundSelected) {
+              fileContents.push(result);
+            }
+          } else {
+            fileContents.push(result);
+          }
         }
         handledNodes.add(child1);
         const children2 = myparsed_data.edges2.filter((edge) => edge.fromNode === child1).map((edge) => edge.toNode);
@@ -304,7 +499,14 @@ var Canvas2DocumentPlugin = class extends import_obsidian.Plugin {
           const nodeentry3 = myparsed_data.nodes.find((entry) => entry.id === child2);
           if (!handledNodes.has(child2)) {
             const result = await this.formatNode(nodeentry3, 3);
-            fileContents.push(result);
+            if (selectionMode2 == "selected" && selectedNodes.length > 0) {
+              const foundSelected = selectedNodes.find((entry) => entry.id === child2);
+              if (foundSelected) {
+                fileContents.push(result);
+              }
+            } else {
+              fileContents.push(result);
+            }
           }
           handledNodes.add(child2);
           const children3 = myparsed_data.edges2.filter((edge) => edge.fromNode === child2).map((edge) => edge.toNode);
@@ -312,7 +514,14 @@ var Canvas2DocumentPlugin = class extends import_obsidian.Plugin {
             const nodeentry4 = myparsed_data.nodes.find((entry) => entry.id === child3);
             if (!handledNodes.has(child3)) {
               const result = await this.formatNode(nodeentry4, 4);
-              fileContents.push(result);
+              if (selectionMode2 == "selected" && selectedNodes.length > 0) {
+                const foundSelected = selectedNodes.find((entry) => entry.id === child3);
+                if (foundSelected) {
+                  fileContents.push(result);
+                }
+              } else {
+                fileContents.push(result);
+              }
             }
             handledNodes.add(child3);
             const children4 = myparsed_data.edges2.filter((edge) => edge.fromNode === child3).map((edge) => edge.toNode);
@@ -320,7 +529,14 @@ var Canvas2DocumentPlugin = class extends import_obsidian.Plugin {
               const nodeentry5 = myparsed_data.nodes.find((entry) => entry.id === child4);
               if (!handledNodes.has(child4)) {
                 const result = await this.formatNode(nodeentry5, 5);
-                fileContents.push(result);
+                if (selectionMode2 == "selected" && selectedNodes.length > 0) {
+                  const foundSelected = selectedNodes.find((entry) => entry.id === child4);
+                  if (foundSelected) {
+                    fileContents.push(result);
+                  }
+                } else {
+                  fileContents.push(result);
+                }
               }
               handledNodes.add(child4);
               const children5 = myparsed_data.edges2.filter((edge) => edge.fromNode === child4).map((edge) => edge.toNode);
@@ -328,14 +544,21 @@ var Canvas2DocumentPlugin = class extends import_obsidian.Plugin {
                 const nodeentry6 = myparsed_data.nodes.find((entry) => entry.id === child5);
                 if (!handledNodes.has(child5)) {
                   const result2 = await this.formatNode(nodeentry6, 6);
-                  fileContents.push(result2);
+                  if (selectionMode2 == "selected" && selectedNodes.length > 0) {
+                    const foundSelected = selectedNodes.find((entry) => entry.id === child5);
+                    if (foundSelected) {
+                      fileContents.push(result2);
+                    }
+                  } else {
+                    fileContents.push(result2);
+                  }
                 }
                 handledNodes.add(child5);
                 const children6 = myparsed_data.edges2.filter((edge) => edge.fromNode === child5).map((edge) => edge.toNode);
                 let runcounterfunc = 0;
                 let runcounterforeach = 0;
                 let limitrecurseNodes = 0;
-                const result = await this.findAllXChildren(children6, myparsed_data, fileContents, handledNodes, limitrecurseNodes, runcounterfunc, runcounterforeach);
+                const result = await this.findAllXChildren(children6, myparsed_data, fileContents, handledNodes, limitrecurseNodes, runcounterfunc, runcounterforeach, selectedNodes);
               }
             }
           }
@@ -343,7 +566,47 @@ var Canvas2DocumentPlugin = class extends import_obsidian.Plugin {
       }
     }
   }
-  async readCanvasData(struct) {
+  async readCanvasData_pre(struct, selectedNodes) {
+    const myparsed_data = JSON.parse(struct);
+    const totalNodes = myparsed_data.nodes.length;
+    const selectedNodesCount = selectedNodes.length;
+    const colorValues = /* @__PURE__ */ new Set();
+    const colorCounts = /* @__PURE__ */ new Map();
+    let nodesWithColorCount = 0;
+    let nodesWithOutColorCount = 0;
+    const colorNodeIds = /* @__PURE__ */ new Map();
+    const NoColorNodeIds = /* @__PURE__ */ new Map();
+    myparsed_data.nodes.forEach((node) => {
+      var _a;
+      if (node.color) {
+        colorValues.add(node.color);
+        colorCounts.set(node.color, ((_a = colorCounts.get(node.color)) != null ? _a : 0) + 1);
+        if (!colorNodeIds.has(node.color)) {
+          colorNodeIds.set(node.color, []);
+        }
+        colorNodeIds.get(node.color).push(node.id);
+        nodesWithColorCount++;
+      } else {
+        if (!NoColorNodeIds.has("nonecolor")) {
+          NoColorNodeIds.set("nonecolor", []);
+        }
+        NoColorNodeIds.get("nonecolor").push(node.id);
+        nodesWithOutColorCount++;
+      }
+    });
+    return [
+      totalNodes,
+      selectedNodesCount,
+      colorValues.size > 0 ? Array.from(colorValues) : [],
+      nodesWithColorCount,
+      nodesWithOutColorCount,
+      Object.fromEntries(colorCounts),
+      Object.fromEntries(colorNodeIds),
+      Object.fromEntries(NoColorNodeIds),
+      myparsed_data
+    ];
+  }
+  async readCanvasData(struct, selectedNodes, selectionMode2, selectedColor) {
     const fileContents = [];
     let myparsed_data = JSON.parse(struct);
     const singleNodeIDs = /* @__PURE__ */ new Set();
@@ -352,7 +615,14 @@ var Canvas2DocumentPlugin = class extends import_obsidian.Plugin {
       if (node.type === "group") {
         groupNodes.add(node.id);
       } else {
-        singleNodeIDs.add(node.id);
+        if (selectionMode2 == "selected" && selectedNodes.length > 0) {
+          const foundSelected = selectedNodes.find((entry) => entry.id === node.id);
+          if (foundSelected) {
+            singleNodeIDs.add(node.id);
+          }
+        } else {
+          singleNodeIDs.add(node.id);
+        }
       }
     });
     const fromNodes = /* @__PURE__ */ new Set();
@@ -363,7 +633,15 @@ var Canvas2DocumentPlugin = class extends import_obsidian.Plugin {
       } else {
         fromNodes.add(edge.fromNode);
         toNodes.add(edge.toNode);
-        groupClearedEdges.push(edge);
+        if (selectionMode2 == "selected" && selectedNodes.length > 0) {
+          const fromNodeSelected = selectedNodes.find((entry) => entry.id === edge.fromNode);
+          const toNodeSelected = selectedNodes.find((entry) => entry.id === edge.toNode);
+          if (fromNodeSelected && toNodeSelected) {
+            groupClearedEdges.push(edge);
+          }
+        } else {
+          groupClearedEdges.push(edge);
+        }
       }
     });
     myparsed_data.edges2 = groupClearedEdges;
@@ -373,10 +651,10 @@ var Canvas2DocumentPlugin = class extends import_obsidian.Plugin {
     if (nodesWithoutParents.length === 0) {
       nodesWithoutParents = [...singleNodeIDs];
     }
-    const traverseresult = await this.traverseNodes(nodesWithoutParents, myparsed_data, fileContents, handledNodes);
+    const traverseresult = await this.traverseNodes(nodesWithoutParents, myparsed_data, fileContents, handledNodes, selectedNodes, selectionMode2);
     const diff = new Set([...singleNodeIDs].filter((x) => !handledNodes.has(x)));
     if (diff.size > 0) {
-      const traverseresult2 = await this.traverseNodes(diff, myparsed_data, fileContents, handledNodes);
+      const traverseresult2 = await this.traverseNodes(diff, myparsed_data, fileContents, handledNodes, selectedNodes, selectionMode2);
     }
     return [fileContents, myparsed_data];
   }
@@ -416,11 +694,11 @@ var Canvas2DocumentPlugin = class extends import_obsidian.Plugin {
     }
   }
   async writeCanvDocFile(content, convStruct, myparsed_data) {
-    let activeFile = this.app.workspace.getActiveFile();
-    let mdFolderPath = path.dirname(activeFile.path);
+    const canvasView = this.app.workspace.getActiveViewOfType(import_obsidian.ItemView);
+    const activeFile = canvasView.file;
+    let mdFolderPath = path.dirname(activeFile == null ? void 0 : activeFile.path);
     let writeworkdir = mdFolderPath + "/" + activeFile.basename + "_canvas2doc-data";
     this.fsadapter.mkdir(writeworkdir);
-    let canvasFile;
     let canvasFilename;
     if (mdFolderPath == ".") {
       canvasFilename = activeFile.basename + "_fromCanvas.md";
@@ -439,12 +717,15 @@ var Canvas2DocumentPlugin = class extends import_obsidian.Plugin {
         contentString += "\n\n" + heading + " _card " + element[5] + "\n";
         contentString += element[2] + " ^" + element[0] + "\n\n";
         contentString += "> [!tip] link navigation from the canvas\n";
+        let foundsometolinks = false;
+        let foundsomefromlinks = false;
         for (const edge of myparsed_data.edges2) {
           if (edge.fromNode == element[0]) {
             const found = content.find((element2) => element2[0] == edge.toNode);
             const firstline = found[5].split("\n")[0];
             const found5 = firstline.replace(/#/g, "");
             contentString += "> linking to: [[#^" + edge.toNode + "|" + found5 + "]]\n";
+            foundsometolinks = true;
           }
           if (edge.toNode == element[0]) {
             const found = content.find((element2) => element2[0] == edge.fromNode);
@@ -456,7 +737,14 @@ var Canvas2DocumentPlugin = class extends import_obsidian.Plugin {
             } else {
               contentString += "> linked from: [[#^" + edge.fromNode + "|" + found5 + "]]\n";
             }
+            foundsomefromlinks = true;
           }
+        }
+        if (!foundsomefromlinks) {
+          contentString += "> No links from this node\n";
+        }
+        if (!foundsometolinks) {
+          contentString += "> No links to other nodes from this node\n";
         }
         contentString += "\n ![[" + cnfname + "]]\n\n";
         let canvasnodeFile;
@@ -471,12 +759,15 @@ var Canvas2DocumentPlugin = class extends import_obsidian.Plugin {
         contentString += "\n\n" + heading + " _link " + element[5] + "\n";
         contentString += element[2] + " ^" + element[0] + "\n\n";
         contentString += "> [!tip] link navigation from the canvas\n";
+        let foundsometolinks = false;
+        let foundsomefromlinks = false;
         for (const edge of myparsed_data.edges2) {
           if (edge.fromNode == element[0]) {
             const found = content.find((element2) => element2[0] == edge.toNode);
             const firstline = found[5].split("\n")[0];
             const found5 = firstline.replace(/#/g, "");
             contentString += "> linking to: [[#^" + edge.toNode + "|" + found5 + "]]\n";
+            foundsometolinks = true;
           }
           if (edge.toNode == element[0]) {
             const found = content.find((element2) => element2[0] == edge.fromNode);
@@ -488,7 +779,14 @@ var Canvas2DocumentPlugin = class extends import_obsidian.Plugin {
             } else {
               contentString += "> linked from: [[#^" + edge.fromNode + "|" + found5 + "]]\n";
             }
+            foundsomefromlinks = true;
           }
+        }
+        if (!foundsomefromlinks) {
+          contentString += "> No links from this node\n";
+        }
+        if (!foundsometolinks) {
+          contentString += "> No links to other nodes from this node\n";
         }
         if (element[4] == "contentyoutube") {
           contentString += "\n ![](" + element[2] + ")\n\n";
@@ -500,12 +798,15 @@ var Canvas2DocumentPlugin = class extends import_obsidian.Plugin {
           contentString += "\n\n" + heading + " _Media " + element[5] + "\n";
           contentString += element[2] + " ^" + element[0] + "\n\n";
           contentString += "> [!tip] link navigation from the canvas\n";
+          let foundsometolinks = false;
+          let foundsomefromlinks = false;
           for (const edge of myparsed_data.edges2) {
             if (edge.fromNode == element[0]) {
               const found = content.find((element2) => element2[0] == edge.toNode);
               const firstline = found[5].split("\n")[0];
               const found5 = firstline.replace(/#/g, "");
               contentString += "> linking to: [[#^" + edge.toNode + "|" + found5 + "]]\n";
+              foundsometolinks = true;
             }
             if (edge.toNode == element[0]) {
               const found = content.find((element2) => element2[0] == edge.fromNode);
@@ -517,7 +818,14 @@ var Canvas2DocumentPlugin = class extends import_obsidian.Plugin {
               } else {
                 contentString += "> linked from: [[#^" + edge.fromNode + "|" + found5 + "]]\n";
               }
+              foundsomefromlinks = true;
             }
+          }
+          if (!foundsomefromlinks) {
+            contentString += "> No links from this node\n";
+          }
+          if (!foundsometolinks) {
+            contentString += "> No links to other nodes from this node\n";
           }
           if (element[4] == "contentpdf") {
             contentString += "\n ![[" + element[2] + "]]\n\n";
@@ -528,12 +836,15 @@ var Canvas2DocumentPlugin = class extends import_obsidian.Plugin {
           contentString += "\n\n" + heading + " _noteFile " + element[5] + "\n";
           contentString += element[2] + " ^" + element[0] + "\n\n";
           contentString += "> [!tip] link navigation from the canvas\n";
+          let foundsometolinks = false;
+          let foundsomefromlinks = false;
           for (const edge of myparsed_data.edges2) {
             if (edge.fromNode == element[0]) {
               const found = content.find((element2) => element2[0] == edge.toNode);
               const firstline = found[5].split("\n")[0];
               const found5 = firstline.replace(/#/g, "");
               contentString += "> linking to: [[#^" + edge.toNode + "|" + found5 + "]]\n";
+              foundsometolinks = true;
             }
             if (edge.toNode == element[0]) {
               const found = content.find((element2) => element2[0] == edge.fromNode);
@@ -545,7 +856,14 @@ var Canvas2DocumentPlugin = class extends import_obsidian.Plugin {
               } else {
                 contentString += "> linked from: [[#^" + edge.fromNode + "|" + found5 + "]]\n";
               }
+              foundsomefromlinks = true;
             }
+          }
+          if (!foundsomefromlinks) {
+            contentString += "> No links from this node\n";
+          }
+          if (!foundsometolinks) {
+            contentString += "> No links to other nodes from this node\n";
           }
           contentString += "\n ![[" + element[2] + "]]\n\n";
         }

@@ -28,13 +28,222 @@ __export(main_exports, {
   default: () => VaultFileRenamerPlugin
 });
 module.exports = __toCommonJS(main_exports);
-var import_obsidian3 = require("obsidian");
+var import_obsidian5 = require("obsidian");
+
+// defaults.ts
+var DEFAULT_SETTINGS = {
+  enabled: false,
+  // Safer default: only .md. Users can expand this list.
+  targetExtensions: ["md"],
+  // When targetExtensions is empty (i.e., all), exclude none by default.
+  excludedExtensions: [],
+  // Avoid touching Obsidian internals by default.
+  blacklistedFolders: [".obsidian"],
+  // No file-level blacklist by default.
+  blacklistedFiles: [],
+  // Default rules matching the original behavior:
+  // 1. Normalize NFD (accents) -> Handled in code, or we can make it a rule?
+  // For now, we will treat the original normalization as a "Built-in Standardizer"
+  // but we'll add the custom rules array for users to override/append.
+  rules: [
+    {
+      name: "Spaces to Dashes",
+      pattern: "\\s+",
+      replace: "-",
+      active: true,
+      description: "Replaces all spaces with dashes."
+    },
+    {
+      name: "Remove Special Chars",
+      pattern: "[^a-z0-9\\-_.]",
+      replace: "",
+      active: true,
+      description: "Removes anything that isn't a letter, number, dash, underscore, or dot."
+    }
+  ],
+  useCreationDate: false,
+  dateFormat: "YYYY-MM-DD"
+};
+
+// renaming-service.ts
+var import_obsidian = require("obsidian");
+var RenamingService = class {
+  constructor(app, settings, saveSettingsCallback) {
+    this.renamingInProgress = /* @__PURE__ */ new Set();
+    this.app = app;
+    this.settings = settings;
+    this.saveSettingsCallback = saveSettingsCallback;
+  }
+  updateSettings(newSettings) {
+    this.settings = newSettings;
+  }
+  async standardizeAll() {
+    await this.standardizeAllFolders(this.app.vault.getRoot());
+    const files = this.app.vault.getFiles();
+    for (const file of files) {
+      await this.standardizeFile(file);
+    }
+  }
+  async standardizeAllFolders(folder) {
+    for (const child of folder.children) {
+      if (child instanceof import_obsidian.TFolder) {
+        await this.standardizeAllFolders(child);
+        await this.standardizeFolder(child);
+      }
+    }
+  }
+  async standardizeFile(file) {
+    if (this.renamingInProgress.has(file.path)) return;
+    if (this.isUnderBlacklistedFolder(file.path)) return;
+    if (this.isBlacklistedFile(file.path)) return;
+    if (!this.isAllowedFileType(file)) return;
+    const dotIndex = file.name.lastIndexOf(".");
+    let nameNoExt = file.name;
+    let ext = "";
+    if (dotIndex > 0) {
+      nameNoExt = file.name.substring(0, dotIndex);
+      ext = file.name.substring(dotIndex);
+    }
+    let nameToProcess = nameNoExt;
+    const obsidianDuplicateRegex = /^(.*?)(\s\d+)$/;
+    const match = nameToProcess.match(obsidianDuplicateRegex);
+    if (match) {
+      nameToProcess = match[1];
+    }
+    const standardizedNameNoExt = this.applyRules(
+      nameToProcess,
+      file.stat.ctime
+    );
+    const standardizedExt = ext.toLowerCase();
+    const finalName = standardizedNameNoExt + standardizedExt;
+    const folderPath = file.parent ? file.parent.path : "";
+    const newPath = (0, import_obsidian.normalizePath)(
+      folderPath ? `${folderPath}/${finalName}` : finalName
+    );
+    if (file.path === newPath) return;
+    const uniquePath = this.getUniquePath(newPath, file);
+    if (uniquePath === file.path) return;
+    const oldPath = file.path;
+    this.renamingInProgress.add(oldPath);
+    this.renamingInProgress.add(uniquePath);
+    try {
+      await this.app.vault.rename(file, uniquePath);
+    } catch (error) {
+      console.error(`Error renaming file ${oldPath}:`, error);
+    } finally {
+      this.renamingInProgress.delete(oldPath);
+      setTimeout(() => this.renamingInProgress.delete(uniquePath), 1e3);
+    }
+  }
+  async standardizeFolder(folder) {
+    if (this.renamingInProgress.has(folder.path)) return;
+    if (this.isUnderBlacklistedFolder(folder.path)) return;
+    const standardizedName = this.applyRules(folder.name, Date.now());
+    const parentPath = folder.parent ? folder.parent.path : "";
+    const newPath = (0, import_obsidian.normalizePath)(
+      parentPath ? `${parentPath}/${standardizedName}` : standardizedName
+    );
+    if (folder.path === newPath) return;
+    const uniquePath = this.getUniquePath(newPath, folder);
+    if (uniquePath === folder.path) return;
+    const oldPath = folder.path;
+    this.renamingInProgress.add(oldPath);
+    this.renamingInProgress.add(uniquePath);
+    try {
+      await this.app.vault.rename(folder, uniquePath);
+    } catch (error) {
+      console.error(`Error renaming folder ${folder.path}:`, error);
+    } finally {
+      this.renamingInProgress.delete(oldPath);
+      setTimeout(() => this.renamingInProgress.delete(uniquePath), 1e3);
+    }
+  }
+  getUniquePath(desiredPath, item) {
+    let collisionFreePath = desiredPath;
+    let counter = 2;
+    const isFile = item instanceof import_obsidian.TFile;
+    let base = "";
+    let ext = "";
+    if (isFile) {
+      const name = desiredPath.split("/").pop() || "";
+      const dotIndex = name.lastIndexOf(".");
+      if (dotIndex > 0) {
+        base = desiredPath.substring(0, desiredPath.lastIndexOf("."));
+        ext = desiredPath.substring(desiredPath.lastIndexOf("."));
+      } else {
+        base = desiredPath;
+        ext = "";
+      }
+    } else {
+      base = desiredPath;
+      ext = "";
+    }
+    while (this.app.vault.getAbstractFileByPath(collisionFreePath) && this.app.vault.getAbstractFileByPath(collisionFreePath) !== item) {
+      collisionFreePath = (0, import_obsidian.normalizePath)(`${base}-${counter}${ext}`);
+      counter++;
+    }
+    return collisionFreePath;
+  }
+  applyRules(originalName, fileCreationTime) {
+    let name = originalName.toLowerCase();
+    name = name.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    for (const rule of this.settings.rules) {
+      if (!rule.active) continue;
+      try {
+        const regex = new RegExp(rule.pattern, "g");
+        let replacement = rule.replace;
+        if (this.settings.useCreationDate && replacement.includes("{{DATE}}")) {
+          const format = this.settings.dateFormat || "YYYY-MM-DD";
+          const dateStr = (0, import_obsidian.moment)(
+            fileCreationTime || Date.now()
+          ).format(format);
+          replacement = replacement.replace(/{{DATE}}/g, dateStr);
+        }
+        name = name.replace(regex, replacement);
+      } catch (e) {
+        console.warn(`Invalid regex in rule "${rule.name}":`, e);
+      }
+    }
+    if (name.trim() === "") return "unnamed";
+    return name;
+  }
+  // ... Blacklist checks ...
+  isUnderBlacklistedFolder(pathInVault) {
+    const normalizedTarget = (0, import_obsidian.normalizePath)(pathInVault);
+    const blacklisted = this.settings.blacklistedFolders.map(
+      (p) => (0, import_obsidian.normalizePath)(p)
+    );
+    return blacklisted.some((blk) => {
+      if (blk === "" || blk === "/") return false;
+      return normalizedTarget === blk || normalizedTarget.startsWith(blk + "/");
+    });
+  }
+  isBlacklistedFile(pathInVault) {
+    const normalizedTarget = (0, import_obsidian.normalizePath)(pathInVault);
+    const files = this.settings.blacklistedFiles.map(
+      (p) => (0, import_obsidian.normalizePath)(p)
+    );
+    return files.includes(normalizedTarget);
+  }
+  isAllowedFileType(file) {
+    const allowList = this.settings.targetExtensions.map((e) => e.trim().toLowerCase()).filter(Boolean);
+    const excludeList = this.settings.excludedExtensions.map((e) => e.trim().toLowerCase()).filter(Boolean);
+    const ext = (file.extension || "").toLowerCase();
+    if (excludeList.includes(ext)) return false;
+    if (allowList.length > 0) return allowList.includes(ext);
+    return true;
+  }
+};
+
+// settings-tab.ts
+var import_obsidian4 = require("obsidian");
 
 // folder-suggest.ts
-var import_obsidian = require("obsidian");
-var FolderSuggest = class extends import_obsidian.AbstractInputSuggest {
+var import_obsidian2 = require("obsidian");
+var FolderSuggest = class extends import_obsidian2.AbstractInputSuggest {
   constructor(app, inputEl, onSelect) {
     super(app, inputEl);
+    this.inputEl = inputEl;
     const vaultFolders = app.vault.getAllFolders(true).map((f) => f.path);
     this.folders = Array.from(new Set(["/"].concat(vaultFolders)));
     this.onSelectCb = onSelect;
@@ -60,10 +269,11 @@ var FolderSuggest = class extends import_obsidian.AbstractInputSuggest {
 };
 
 // file-suggest.ts
-var import_obsidian2 = require("obsidian");
-var FileSuggest = class extends import_obsidian2.AbstractInputSuggest {
+var import_obsidian3 = require("obsidian");
+var FileSuggest = class extends import_obsidian3.AbstractInputSuggest {
   constructor(app, inputEl, onSelect) {
     super(app, inputEl);
+    this.inputEl = inputEl;
     this.files = app.vault.getFiles().map((f) => f.path);
     this.onSelectCb = onSelect;
   }
@@ -87,44 +297,270 @@ var FileSuggest = class extends import_obsidian2.AbstractInputSuggest {
   }
 };
 
-// main.ts
-var DEFAULT_SETTINGS = {
-  enabled: false,
-  // Safer default: only .md. Users can expand this list.
-  targetExtensions: ["md"],
-  // When targetExtensions is empty (i.e., all), exclude none by default.
-  excludedExtensions: [],
-  // Avoid touching Obsidian internals by default.
-  blacklistedFolders: [".obsidian"],
-  // No file-level blacklist by default.
-  blacklistedFiles: []
-};
-var VaultFileRenamerPlugin = class extends import_obsidian3.Plugin {
-  constructor() {
-    super(...arguments);
-    this.renamingInProgress = /* @__PURE__ */ new Set();
+// settings-tab.ts
+var VaultFileRenamerSettingTab = class extends import_obsidian4.PluginSettingTab {
+  constructor(app, plugin) {
+    super(app, plugin);
+    this.plugin = plugin;
   }
+  display() {
+    const { containerEl } = this;
+    containerEl.empty();
+    containerEl.addClass("vfr-settings-container");
+    containerEl.createEl("h2", { text: "Vault File Renamer \u2013 Settings" });
+    new import_obsidian4.Setting(containerEl).setName("Automatically rename").setDesc(
+      "When enabled, files and folders will be standardized on create/rename."
+    ).addToggle(
+      (toggle) => toggle.setValue(this.plugin.settings.enabled).onChange(async (value) => {
+        this.plugin.settings.enabled = value;
+        await this.plugin.saveSettings();
+        new import_obsidian4.Notice(
+          value ? "Auto-rename enabled." : "Auto-rename disabled."
+        );
+      })
+    );
+    new import_obsidian4.Setting(containerEl).setName("Standardize everything now").setDesc("Run an immediate sweep across the whole vault.").addButton(
+      (btn) => btn.setButtonText("Run").onClick(async () => {
+        await this.plugin.renamingService.standardizeAll();
+        new import_obsidian4.Notice("Sweep completed.");
+      })
+    );
+    containerEl.createEl("h3", { text: "Extensions" });
+    new import_obsidian4.Setting(containerEl).setName("Target extensions (allow-list)").setDesc("Extensions to rename. Empty = all.").addText((text) => {
+      text.setPlaceholder("md, canvas, png").setValue(this.plugin.settings.targetExtensions.join(", ")).onChange(async (value) => {
+        this.plugin.settings.targetExtensions = value.split(",").map((s) => s.trim()).filter(Boolean);
+        await this.plugin.saveSettings();
+      });
+    });
+    new import_obsidian4.Setting(containerEl).setName("Excluded extensions").setDesc("Extensions to NEVER rename.").addText((text) => {
+      text.setPlaceholder("tmp, xml").setValue(
+        this.plugin.settings.excludedExtensions.join(", ")
+      ).onChange(async (value) => {
+        this.plugin.settings.excludedExtensions = value.split(",").map((s) => s.trim()).filter(Boolean);
+        await this.plugin.saveSettings();
+      });
+    });
+    containerEl.createEl("h3", { text: "Renaming Rules" });
+    containerEl.createEl("p", {
+      text: "Rules are applied in order. You can use valid JavaScript Regex. Default is: lowercase -> NFD normalization -> My Rules."
+    });
+    const rulesContainer = containerEl.createDiv({ cls: "vfr-rules-list" });
+    this.renderRulesList(rulesContainer);
+    new import_obsidian4.Setting(containerEl).setName("Add new rule").addButton(
+      (btn) => btn.setButtonText("Add Rule").onClick(async () => {
+        this.plugin.settings.rules.push({
+          name: "New Rule",
+          pattern: "",
+          replace: "",
+          active: true
+        });
+        await this.plugin.saveSettings();
+        this.renderRulesList(rulesContainer);
+      })
+    );
+    containerEl.createEl("h3", { text: "Variables" });
+    new import_obsidian4.Setting(containerEl).setName("Enable {{DATE}} variable").setDesc(
+      "If enabled, you can use {{DATE}} in your rule replacements to insert the file creation date."
+    ).addToggle(
+      (t) => t.setValue(this.plugin.settings.useCreationDate).onChange(async (v) => {
+        this.plugin.settings.useCreationDate = v;
+        await this.plugin.saveSettings();
+      })
+    );
+    new import_obsidian4.Setting(containerEl).setName("Date format").setDesc("Moment.js format (e.g. YYYY-MM-DD).").addText(
+      (t) => t.setValue(this.plugin.settings.dateFormat).onChange(async (v) => {
+        this.plugin.settings.dateFormat = v;
+        await this.plugin.saveSettings();
+      })
+    );
+    containerEl.createEl("h3", { text: "Blacklists" });
+    const folderBlock = containerEl.createDiv();
+    let folderSearchInput = null;
+    new import_obsidian4.Setting(folderBlock).setName("Add folder to blacklist").setDesc(
+      "Search to add existing folders, or type a name and click 'Add' manually."
+    ).addSearch((search) => {
+      folderSearchInput = search;
+      new FolderSuggest(this.app, search.inputEl, async (picked) => {
+        this.addBlacklistFolder(picked, folderBlock);
+        search.setValue("");
+      });
+    }).addButton((btn) => {
+      btn.setButtonText("Add").setTooltip("Add manually").onClick(async () => {
+        if (folderSearchInput) {
+          this.addBlacklistFolder(
+            folderSearchInput.getValue(),
+            folderBlock
+          );
+          folderSearchInput.setValue("");
+        }
+      });
+    });
+    this.renderFolderBlacklistList(folderBlock);
+    const fileBlock = containerEl.createDiv();
+    let fileSearchInput = null;
+    new import_obsidian4.Setting(fileBlock).setName("Add file to blacklist").setDesc(
+      "Search to add existing files, or type a name and click 'Add' manually."
+    ).addSearch((search) => {
+      fileSearchInput = search;
+      new FileSuggest(this.app, search.inputEl, async (picked) => {
+        this.addBlacklistFile(picked, fileBlock);
+        search.setValue("");
+      });
+    }).addButton((btn) => {
+      btn.setButtonText("Add").setTooltip("Add manually").onClick(async () => {
+        if (fileSearchInput) {
+          this.addBlacklistFile(
+            fileSearchInput.getValue(),
+            fileBlock
+          );
+          fileSearchInput.setValue("");
+        }
+      });
+    });
+    this.renderFileBlacklistList(fileBlock);
+  }
+  renderRulesList(container) {
+    container.empty();
+    this.plugin.settings.rules.forEach((rule, index) => {
+      const row = container.createDiv({ cls: "vfr-rule-row" });
+      const toggleDiv = row.createDiv({ cls: "vfr-toggle-compact" });
+      const toggle = new import_obsidian4.Setting(toggleDiv).addToggle(
+        (t) => t.setValue(rule.active).onChange(async (v) => {
+          rule.active = v;
+          await this.plugin.saveSettings();
+        })
+      );
+      const nameInput = row.createEl("input", {
+        type: "text",
+        value: rule.name,
+        cls: "vfr-rule-input-name"
+      });
+      nameInput.placeholder = "Rule name";
+      nameInput.onchange = async () => {
+        rule.name = nameInput.value;
+        await this.plugin.saveSettings();
+      };
+      const patternInput = row.createEl("input", {
+        type: "text",
+        value: rule.pattern,
+        cls: "vfr-rule-input-pattern"
+      });
+      patternInput.placeholder = "Regex pattern";
+      patternInput.onchange = async () => {
+        rule.pattern = patternInput.value;
+        await this.plugin.saveSettings();
+      };
+      row.createEl("span", { text: "\u2192" });
+      const replaceInput = row.createEl("input", {
+        type: "text",
+        value: rule.replace,
+        cls: "vfr-rule-input-replace"
+      });
+      replaceInput.placeholder = "Replacement";
+      replaceInput.onchange = async () => {
+        rule.replace = replaceInput.value;
+        await this.plugin.saveSettings();
+      };
+      const delBtn = row.createEl("button", { text: "\u{1F5D1}\uFE0F" });
+      delBtn.onclick = async () => {
+        this.plugin.settings.rules.splice(index, 1);
+        await this.plugin.saveSettings();
+        this.renderRulesList(container);
+      };
+    });
+  }
+  renderFolderBlacklistList(containerEl) {
+    const listId = "vfr-folder-list";
+    let list = containerEl.querySelector(`.${listId}`);
+    if (!list) list = containerEl.createDiv({ cls: listId });
+    list.empty();
+    if (this.plugin.settings.blacklistedFolders.length === 0) return;
+    this.plugin.settings.blacklistedFolders.forEach((p) => {
+      this.createBlacklistRow(list, p, async () => {
+        this.plugin.settings.blacklistedFolders = this.plugin.settings.blacklistedFolders.filter(
+          (x) => x !== p
+        );
+        await this.plugin.saveSettings();
+        this.renderFolderBlacklistList(containerEl);
+      });
+    });
+  }
+  renderFileBlacklistList(containerEl) {
+    const listId = "vfr-file-list";
+    let list = containerEl.querySelector(`.${listId}`);
+    if (!list) list = containerEl.createDiv({ cls: listId });
+    list.empty();
+    if (this.plugin.settings.blacklistedFiles.length === 0) return;
+    this.plugin.settings.blacklistedFiles.forEach((p) => {
+      this.createBlacklistRow(list, p, async () => {
+        this.plugin.settings.blacklistedFiles = this.plugin.settings.blacklistedFiles.filter(
+          (x) => x !== p
+        );
+        await this.plugin.saveSettings();
+        this.renderFileBlacklistList(containerEl);
+      });
+    });
+  }
+  // Helper for uniform rows
+  createBlacklistRow(parent, text, onDelete) {
+    new import_obsidian4.Setting(parent).setName(text).addButton((btn) => btn.setButtonText("Remove").onClick(onDelete));
+  }
+  async addBlacklistFolder(raw, container) {
+    const norm = (0, import_obsidian4.normalizePath)(raw);
+    if (!norm || norm === "/") return;
+    if (this.plugin.settings.blacklistedFolders.includes(norm)) return;
+    this.plugin.settings.blacklistedFolders.push(norm);
+    await this.plugin.saveSettings();
+    this.renderFolderBlacklistList(container);
+  }
+  async addBlacklistFile(raw, container) {
+    const norm = (0, import_obsidian4.normalizePath)(raw);
+    if (!norm) return;
+    if (this.plugin.settings.blacklistedFiles.includes(norm)) return;
+    this.plugin.settings.blacklistedFiles.push(norm);
+    await this.plugin.saveSettings();
+    this.renderFileBlacklistList(container);
+  }
+};
+
+// main.ts
+var VaultFileRenamerPlugin = class extends import_obsidian5.Plugin {
   async onload() {
     await this.loadSettings();
+    this.renamingService = new RenamingService(
+      this.app,
+      this.settings,
+      this.saveSettings.bind(this)
+    );
     this.registerEvent(
       this.app.vault.on("create", async (item) => {
-        if (!this.settings.enabled)
-          return;
-        if (item instanceof import_obsidian3.TFile) {
-          setTimeout(() => this.standardizeFile(item), 50);
-        } else if (item instanceof import_obsidian3.TFolder) {
-          setTimeout(() => this.standardizeFolder(item), 50);
+        if (!this.settings.enabled) return;
+        if (item instanceof import_obsidian5.TFile) {
+          setTimeout(
+            () => this.renamingService.standardizeFile(item),
+            100
+          );
+        } else if (item instanceof import_obsidian5.TFolder) {
+          setTimeout(
+            () => this.renamingService.standardizeFolder(item),
+            100
+          );
         }
       })
     );
     this.registerEvent(
       this.app.vault.on("rename", async (item) => {
-        if (!this.settings.enabled)
-          return;
-        if (item instanceof import_obsidian3.TFile) {
-          setTimeout(() => this.standardizeFile(item), 50);
-        } else if (item instanceof import_obsidian3.TFolder) {
-          setTimeout(() => this.standardizeFolder(item), 50);
+        if (!this.settings.enabled) return;
+        if (item instanceof import_obsidian5.TFile) {
+          setTimeout(
+            () => this.renamingService.standardizeFile(item),
+            100
+          );
+        } else if (item instanceof import_obsidian5.TFolder) {
+          setTimeout(
+            () => this.renamingService.standardizeFolder(item),
+            100
+          );
         }
       })
     );
@@ -132,158 +568,16 @@ var VaultFileRenamerPlugin = class extends import_obsidian3.Plugin {
       id: "vfr-standardize-all-now",
       name: "Standardize everything now",
       callback: async () => {
-        await this.standardizeAll();
-        new import_obsidian3.Notice("Vault File Renamer: sweep completed.");
+        await this.renamingService.standardizeAll();
+        new import_obsidian5.Notice("Vault File Renamer: sweep completed.");
       }
     });
-    const ribbonIconEl = this.addRibbonIcon(
-      "dice",
-      "Vault File Renamer",
-      () => {
-        new import_obsidian3.Notice(
-          this.settings.enabled ? "Vault File Renamer is ACTIVE (auto-rename)." : "Vault File Renamer is DISABLED."
-        );
-      }
-    );
-    ribbonIconEl.addClass("vault-file-renamer-ribbon");
+    this.addRibbonIcon("dice", "Vault File Renamer", () => {
+      new import_obsidian5.Notice(
+        this.settings.enabled ? "Vault File Renamer is ACTIVE." : "Vault File Renamer is DISABLED."
+      );
+    });
     this.addSettingTab(new VaultFileRenamerSettingTab(this.app, this));
-  }
-  onunload() {
-  }
-  /** Sweep the entire vault (respects blacklists and extensions). */
-  async standardizeAll() {
-    await this.standardizeAllFolders(this.app.vault.getRoot());
-    const files = this.app.vault.getFiles();
-    for (const file of files) {
-      await this.standardizeFile(file);
-    }
-  }
-  async standardizeAllFolders(folder) {
-    for (const child of folder.children) {
-      if (child instanceof import_obsidian3.TFolder) {
-        await this.standardizeAllFolders(child);
-        await this.standardizeFolder(child);
-      }
-    }
-  }
-  isUnderBlacklistedFolder(pathInVault) {
-    const normalizedTarget = (0, import_obsidian3.normalizePath)(pathInVault);
-    const blacklisted = this.settings.blacklistedFolders.map(
-      (p) => (0, import_obsidian3.normalizePath)(p)
-    );
-    return blacklisted.some((blk) => {
-      if (blk === "" || blk === "/")
-        return false;
-      return normalizedTarget === blk || normalizedTarget.startsWith(blk + "/");
-    });
-  }
-  isBlacklistedFile(pathInVault) {
-    const normalizedTarget = (0, import_obsidian3.normalizePath)(pathInVault);
-    const files = this.settings.blacklistedFiles.map(
-      (p) => (0, import_obsidian3.normalizePath)(p)
-    );
-    return files.includes(normalizedTarget);
-  }
-  /**
-   * Decide whether a file extension is eligible for renaming.
-   * Priority order:
-   * 1) If extension is in excludedExtensions => NEVER rename (wins over allow-list).
-   * 2) If targetExtensions (allow-list) is non-empty => only rename if included.
-   * 3) If allow-list is empty => rename ALL except excluded (handled in #1).
-   */
-  isAllowedFileType(file) {
-    const allowList = this.settings.targetExtensions.map((e) => e.trim().toLowerCase()).filter(Boolean);
-    const excludeList = this.settings.excludedExtensions.map((e) => e.trim().toLowerCase()).filter(Boolean);
-    const ext = (file.extension || "").toLowerCase();
-    if (excludeList.includes(ext))
-      return false;
-    if (allowList.length > 0) {
-      return allowList.includes(ext);
-    }
-    return true;
-  }
-  async standardizeFile(file) {
-    if (this.renamingInProgress.has(file.path))
-      return;
-    if (this.isUnderBlacklistedFolder(file.path))
-      return;
-    if (this.isBlacklistedFile(file.path))
-      return;
-    if (!this.isAllowedFileType(file))
-      return;
-    const newBaseName = this.generateStandardName(file.name);
-    const folderPath = file.parent ? file.parent.path : "";
-    const newPath = (0, import_obsidian3.normalizePath)(
-      folderPath ? `${folderPath}/${newBaseName}` : newBaseName
-    );
-    if (file.path === newPath)
-      return;
-    const existing = this.app.vault.getAbstractFileByPath(newPath);
-    if (existing && existing !== file) {
-      new import_obsidian3.Notice(
-        `A file named "${newBaseName}" already exists. Skipping.`
-      );
-      return;
-    }
-    this.renamingInProgress.add(file.path);
-    try {
-      await this.app.vault.rename(file, newPath);
-    } catch (error) {
-      console.error(`Error renaming file ${file.path}:`, error);
-    } finally {
-      this.renamingInProgress.delete(file.path);
-    }
-  }
-  async standardizeFolder(folder) {
-    if (this.renamingInProgress.has(folder.path))
-      return;
-    if (this.isUnderBlacklistedFolder(folder.path))
-      return;
-    const newBaseName = this.generateStandardNameForFolder(folder.name);
-    const parentPath = folder.parent ? folder.parent.path : "";
-    const newPath = (0, import_obsidian3.normalizePath)(
-      parentPath ? `${parentPath}/${newBaseName}` : newBaseName
-    );
-    if (folder.path === newPath)
-      return;
-    const existing = this.app.vault.getAbstractFileByPath(newPath);
-    if (existing && existing !== folder) {
-      new import_obsidian3.Notice(
-        `A folder named "${newBaseName}" already exists. Skipping.`
-      );
-      return;
-    }
-    this.renamingInProgress.add(folder.path);
-    try {
-      await this.app.vault.rename(folder, newPath);
-    } catch (error) {
-      console.error(`Error renaming folder ${folder.path}:`, error);
-    } finally {
-      this.renamingInProgress.delete(folder.path);
-    }
-  }
-  // Standardizes file names (keeps extension)
-  generateStandardName(originalName) {
-    const dotIndex = originalName.lastIndexOf(".");
-    let base = originalName;
-    let extension = "";
-    if (dotIndex > 0) {
-      base = originalName.substring(0, dotIndex);
-      extension = originalName.substring(dotIndex).toLowerCase();
-    }
-    base = base.toLowerCase();
-    base = base.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-    base = base.replace(/\s+/g, "-");
-    base = base.replace(/[^a-z0-9\-_.]/g, "-");
-    return base + extension;
-  }
-  // Standardizes folder names
-  generateStandardNameForFolder(originalName) {
-    let base = originalName.toLowerCase();
-    base = base.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-    base = base.replace(/\s+/g, "-");
-    base = base.replace(/[^a-z0-9\-_.]/g, "-");
-    return base;
   }
   async loadSettings() {
     this.settings = Object.assign(
@@ -291,235 +585,15 @@ var VaultFileRenamerPlugin = class extends import_obsidian3.Plugin {
       DEFAULT_SETTINGS,
       await this.loadData()
     );
-    this.settings.blacklistedFolders = Array.from(
-      new Set(
-        (this.settings.blacklistedFolders || []).map((p) => p.trim()).filter((p) => p !== "/" && p !== "")
-      )
-    );
-    this.settings.targetExtensions = Array.from(
-      new Set(
-        (this.settings.targetExtensions || []).map((e) => e.trim().toLowerCase()).filter(Boolean)
-      )
-    );
-    this.settings.excludedExtensions = Array.from(
-      new Set(
-        (this.settings.excludedExtensions || []).map((e) => e.trim().toLowerCase()).filter(Boolean)
-      )
-    );
-    this.settings.blacklistedFiles = Array.from(
-      new Set(
-        (this.settings.blacklistedFiles || []).map((p) => p.trim()).filter(Boolean)
-      )
-    );
+    if (!this.settings.rules) {
+      this.settings.rules = DEFAULT_SETTINGS.rules;
+    }
   }
   async saveSettings() {
     await this.saveData(this.settings);
-  }
-};
-var VaultFileRenamerSettingTab = class extends import_obsidian3.PluginSettingTab {
-  constructor(app, plugin) {
-    super(app, plugin);
-    this.plugin = plugin;
-  }
-  renderFolderBlacklistList(containerEl) {
-    const existing = containerEl.querySelector(".vfr-blacklist-list");
-    if (existing)
-      existing.remove();
-    const list = containerEl.createDiv({ cls: "vfr-blacklist-list" });
-    if (this.plugin.settings.blacklistedFolders.length === 0) {
-      list.createEl("div", { text: "No folders in the blacklist." });
-      return;
+    if (this.renamingService) {
+      this.renamingService.updateSettings(this.settings);
     }
-    for (const p of this.plugin.settings.blacklistedFolders) {
-      const row = list.createDiv({ cls: "vfr-bl-row" });
-      row.createEl("code", { text: p });
-      const btn = row.createEl("button", { text: "Remove" });
-      btn.onclick = async () => {
-        this.plugin.settings.blacklistedFolders = this.plugin.settings.blacklistedFolders.filter(
-          (x) => x !== p
-        );
-        await this.plugin.saveSettings();
-        this.renderFolderBlacklistList(containerEl);
-      };
-    }
-  }
-  renderFileBlacklistList(containerEl) {
-    const existing = containerEl.querySelector(".vfr-file-blacklist-list");
-    if (existing)
-      existing.remove();
-    const list = containerEl.createDiv({ cls: "vfr-file-blacklist-list" });
-    if (this.plugin.settings.blacklistedFiles.length === 0) {
-      list.createEl("div", { text: "No files in the blacklist." });
-      return;
-    }
-    for (const p of this.plugin.settings.blacklistedFiles) {
-      const row = list.createDiv({ cls: "vfr-bl-row" });
-      row.createEl("code", { text: p });
-      const btn = row.createEl("button", { text: "Remove" });
-      btn.onclick = async () => {
-        this.plugin.settings.blacklistedFiles = this.plugin.settings.blacklistedFiles.filter(
-          (x) => x !== p
-        );
-        await this.plugin.saveSettings();
-        this.renderFileBlacklistList(containerEl);
-      };
-    }
-  }
-  display() {
-    const { containerEl } = this;
-    containerEl.empty();
-    containerEl.createEl("h2", { text: "Vault File Renamer \u2013 Settings" });
-    new import_obsidian3.Setting(containerEl).setName("Automatically rename").setDesc(
-      "When enabled, files and folders will be standardized on create/rename."
-    ).addToggle(
-      (toggle) => toggle.setValue(this.plugin.settings.enabled).onChange(async (value) => {
-        this.plugin.settings.enabled = value;
-        await this.plugin.saveSettings();
-        new import_obsidian3.Notice(
-          value ? "Auto-rename enabled." : "Auto-rename disabled."
-        );
-      })
-    );
-    new import_obsidian3.Setting(containerEl).setName("Target extensions (allow-list)").setDesc(
-      "Which file types to rename. Comma-separated. Example: md, canvas, png. Empty = all."
-    ).addText((text) => {
-      text.setPlaceholder("md, canvas, png").setValue(this.plugin.settings.targetExtensions.join(", ")).onChange(async (value) => {
-        const parts = value.split(",").map((s) => s.trim().toLowerCase()).filter(Boolean);
-        this.plugin.settings.targetExtensions = Array.from(
-          new Set(parts)
-        );
-        await this.plugin.saveSettings();
-      });
-    });
-    new import_obsidian3.Setting(containerEl).setName("Excluded extensions (highest priority)").setDesc(
-      "These extensions are NEVER renamed. They override the allow-list. Example: tmp, xml"
-    ).addText((text) => {
-      text.setPlaceholder("tmp, xml").setValue(
-        this.plugin.settings.excludedExtensions.join(", ")
-      ).onChange(async (value) => {
-        const parts = value.split(",").map((s) => s.trim().toLowerCase()).filter(Boolean);
-        this.plugin.settings.excludedExtensions = Array.from(
-          new Set(parts)
-        );
-        await this.plugin.saveSettings();
-      });
-    });
-    new import_obsidian3.Setting(containerEl).setName("Standardize everything now").setDesc(
-      "Run an immediate sweep across the whole vault (respects blacklists/extensions)."
-    ).addButton(
-      (btn) => btn.setButtonText("Run").onClick(async () => {
-        await this.plugin.standardizeAll();
-        new import_obsidian3.Notice("Sweep completed.");
-      })
-    );
-    containerEl.createEl("h3", { text: "Folder blacklist" });
-    const folderBlock = containerEl.createDiv();
-    new import_obsidian3.Setting(folderBlock).setName("Add folder to blacklist").setDesc(
-      "Files and subfolders under these paths will NOT be renamed."
-    ).addSearch((search) => {
-      var _a;
-      search.setPlaceholder("e.g., Personal Area/Private").setValue("").onChange((_) => {
-      });
-      new FolderSuggest(this.app, search.inputEl, async (picked) => {
-        const normalized = (0, import_obsidian3.normalizePath)(picked);
-        if (!normalized || normalized === "/") {
-          new import_obsidian3.Notice("Invalid folder.");
-          return;
-        }
-        if (this.plugin.settings.blacklistedFolders.includes(
-          normalized
-        )) {
-          new import_obsidian3.Notice("This folder is already in the blacklist.");
-          return;
-        }
-        this.plugin.settings.blacklistedFolders.push(normalized);
-        await this.plugin.saveSettings();
-        this.renderFolderBlacklistList(folderBlock);
-        search.setValue("");
-        new import_obsidian3.Notice(`Added to blacklist: ${normalized}`);
-      });
-      const addBtn = createEl("button", { text: "Add" });
-      addBtn.style.marginLeft = "8px";
-      addBtn.onclick = async () => {
-        let raw = search.getValue().trim();
-        if (!raw)
-          return;
-        const normalized = (0, import_obsidian3.normalizePath)(raw);
-        if (!normalized || normalized === "/") {
-          new import_obsidian3.Notice("Invalid folder.");
-          return;
-        }
-        if (this.plugin.settings.blacklistedFolders.includes(
-          normalized
-        )) {
-          new import_obsidian3.Notice("This folder is already in the blacklist.");
-          return;
-        }
-        this.plugin.settings.blacklistedFolders.push(normalized);
-        await this.plugin.saveSettings();
-        search.setValue("");
-        this.renderFolderBlacklistList(folderBlock);
-        new import_obsidian3.Notice(`Added to blacklist: ${normalized}`);
-      };
-      (_a = search.inputEl.parentElement) == null ? void 0 : _a.appendChild(addBtn);
-    });
-    this.renderFolderBlacklistList(folderBlock);
-    containerEl.createEl("h3", { text: "File blacklist" });
-    const fileBlock = containerEl.createDiv();
-    new import_obsidian3.Setting(fileBlock).setName("Add file to blacklist").setDesc(
-      "These files will NEVER be renamed (exact path match). Useful for files without extension."
-    ).addSearch((search) => {
-      var _a;
-      search.setPlaceholder("e.g., Settings/README or Config").setValue("").onChange((_) => {
-      });
-      new FileSuggest(this.app, search.inputEl, async (picked) => {
-        const normalized = (0, import_obsidian3.normalizePath)(picked);
-        if (!normalized) {
-          new import_obsidian3.Notice("Invalid file path.");
-          return;
-        }
-        if (this.plugin.settings.blacklistedFiles.includes(
-          normalized
-        )) {
-          new import_obsidian3.Notice("This file is already in the blacklist.");
-          return;
-        }
-        this.plugin.settings.blacklistedFiles.push(normalized);
-        await this.plugin.saveSettings();
-        this.renderFileBlacklistList(fileBlock);
-        search.setValue("");
-        new import_obsidian3.Notice(`Added to blacklist: ${normalized}`);
-      });
-      const addBtn = createEl("button", { text: "Add" });
-      addBtn.style.marginLeft = "8px";
-      addBtn.onclick = async () => {
-        let raw = search.getValue().trim();
-        if (!raw)
-          return;
-        const normalized = (0, import_obsidian3.normalizePath)(raw);
-        if (!normalized) {
-          new import_obsidian3.Notice("Invalid file path.");
-          return;
-        }
-        if (this.plugin.settings.blacklistedFiles.includes(
-          normalized
-        )) {
-          new import_obsidian3.Notice("This file is already in the blacklist.");
-          return;
-        }
-        this.plugin.settings.blacklistedFiles.push(normalized);
-        await this.plugin.saveSettings();
-        search.setValue("");
-        this.renderFileBlacklistList(fileBlock);
-        new import_obsidian3.Notice(`Added to blacklist: ${normalized}`);
-      };
-      (_a = search.inputEl.parentElement) == null ? void 0 : _a.appendChild(addBtn);
-    });
-    this.renderFileBlacklistList(fileBlock);
-    const tip = containerEl.createEl("p");
-    tip.setText(
-      "Tip: for safety, the plugin ignores '.obsidian' by default. You may remove it if you wish."
-    );
   }
 };
 
