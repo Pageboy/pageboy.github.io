@@ -11,9 +11,9 @@ views:
       - file.ctime
     sort:
       - property: file.ctime
-        direction: ASC
-      - property: title
         direction: DESC
+      - property: title
+        direction: ASC
     columnSize:
       note.title: 272
       file.name: 319

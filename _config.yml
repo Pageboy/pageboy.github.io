@@ -8,6 +8,10 @@ collections:
     title: Blog
     output: true
     layout: blog
+  newsletters:
+    title: News
+    output: true
+    layout: blog
   blog:
     title: Blog
     output: true

@@ -1,0 +1,40 @@
+<div class="posts">
+
+{%- assign newsletters = site.newsletters | sort: 'date' | reverse -%}
+    {%- for newsletter in newsletters limit:100 -%}
+    
+    <div class="post-teaser">
+        {% if newsletter.image %}
+        {%- assign image_url = newsletter.image | remove: "[]" | remove: "(" | remove: ")" -%}
+        {% assign image_url = image_url | replace: "uploads", "/uploads" | replace: "../uploads", "/uploads" | replace: "//uploads", "/uploads" -%}
+        <div class="post-img">
+            <a aria-label="{{ newsletter.title }}" href="{{ newsletter.url | relative_url }}">
+              {%- if newsletter.caption -%}
+                <img alt="{{ newsletter.caption }}" src="{{ image_url }}">
+              {%- else -%}
+                <img alt="{{ newsletter.title }}" src="{{ image_url }}">
+              {%- endif -%}
+
+            </a>
+        </div>
+        {% endif %}
+        <span>
+          <header>
+            <h2>
+              <a aria-label="{{ newsletter.title }}" class="post-link" href="{{ newsletter.url | relative_url }}">
+                {{ newsletter.title }} &#10132;
+              </a>
+            </h2>
+            {% include post_info.html newsletter=newsletter %}
+          </header>
+          <div class="excerpt">
+              {{ newsletter.excerpt | replace: "_uploads", "uploads" | replace: "uploads", "/uploads" | replace: "//", "/" }}
+          </div>
+      </span>
+    </div>
+    
+    {% endfor %}
+
+</div>
+
+<!-- {% include blog_nav.html %} -->
