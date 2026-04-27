@@ -5,10 +5,10 @@ title: Oxfordshire Artweeks 2026
 image:
 caption:
 source:
-layout: photo
+layout: post
 tags:
 solo: false
-published: false
+published: true
 flickr_album: flickr
 flickr_share:
 excerpt_separator: <!--and-->
