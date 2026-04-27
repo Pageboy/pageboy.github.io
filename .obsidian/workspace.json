@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_newsletters/oxfordshire-artweeks.md",
+                "file": "_newsletters/oxfordshire-artweeks-2026.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "oxfordshire-artweeks"
+              "title": "oxfordshire-artweeks-2026"
             }
           }
         ]
@@ -213,8 +213,10 @@
   },
   "active": "6261dc950bbba4c2",
   "lastOpenFiles": [
+    "pages/newsletters.md",
+    "pages/blog-copy.md",
     "obsidian_templates/newsletters.md",
-    "_newsletters/oxfordshire-artweeks.md",
+    "_newsletters/oxfordshire-artweeks-2026.md",
     "_newsletters/untitled-2.md",
     "_newsletters/untitled.md",
     "obsidian_templates/photograph.md",
@@ -243,8 +245,6 @@
     "_portfolio/apple-drop.md",
     "_portfolio/sumac-tree.md",
     "_portfolio/palmatum.md",
-    "_portfolio/plume-thistle-arc.md",
-    "_portfolio/agapanthus-at-monserrate.md",
     "_site/portfolio/hibiscus/index.html",
     "_site/portfolio/hibiscus",
     "_site/photographs/travels-in-mexico/index.html",
