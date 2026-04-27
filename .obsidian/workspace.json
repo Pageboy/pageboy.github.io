@@ -4,17 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "02b6d9c7100acefc",
+        "id": "37699994a12d9e44",
         "type": "tabs",
         "children": [
           {
-            "id": "ef077e6560b3b8a4",
+            "id": "6261dc950bbba4c2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "_newsletters/oxfordshire-artweeks.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "oxfordshire-artweeks"
             }
           }
         ]
@@ -197,10 +211,12 @@
       "templates:Insert template": false
     }
   },
-  "active": "ef077e6560b3b8a4",
+  "active": "6261dc950bbba4c2",
   "lastOpenFiles": [
-    "_newsletters/untitled.md",
     "obsidian_templates/newsletters.md",
+    "_newsletters/oxfordshire-artweeks.md",
+    "_newsletters/untitled-2.md",
+    "_newsletters/untitled.md",
     "obsidian_templates/photograph.md",
     "obsidian_templates/portfolio.md",
     "_articles/colour-search-november.md",
@@ -229,8 +245,6 @@
     "_portfolio/palmatum.md",
     "_portfolio/plume-thistle-arc.md",
     "_portfolio/agapanthus-at-monserrate.md",
-    "_portfolio/hibiscus.md",
-    "_portfolio/palm-lily-arcs.md",
     "_site/portfolio/hibiscus/index.html",
     "_site/portfolio/hibiscus",
     "_site/photographs/travels-in-mexico/index.html",
