@@ -11,7 +11,7 @@ collections:
   newsletters:
     title: News
     output: true
-    layout: blog
+    layout: newsletters
   blog:
     title: Blog
     output: true
@@ -153,5 +153,4 @@ exclude:
   - Gemfile
   - README.md
   - obsidian_templates
-  - newsletters
   - admin
