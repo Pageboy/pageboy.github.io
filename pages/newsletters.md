@@ -2,7 +2,7 @@
 title: News from Chris.Jennings.Art
 popup: News
 permalink: /newsletters/
-layout: blog
+layout: newsletters
 image: uploads/log.jpg
 description:
 gridlayout: false
