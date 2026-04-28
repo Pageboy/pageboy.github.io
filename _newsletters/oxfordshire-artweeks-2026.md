@@ -16,7 +16,7 @@ flickr_share:
 excerpt_separator: <!--and-->
 ---
 
-<h2 style="text-align:center; font-size:48px">Private View</h2>
+<h2 style="padding:0;text-align:center; font-size:48px;line-height:.8;">Private View</h2>
 
 **I am opening my studio during Oxfordshire Artweeks and you are warmly invited to a _private view_ on Saturday 16th May 5pm onwards**
 
@@ -29,9 +29,6 @@ If you cannot make it to the private view, then please come and find me during m
 ### Where?
 
 10 Hernes Road, Oxford, OX2 7PU
-
-///frost.puts.patio
-
 - Parking on the street
 - bus to Squitchey lane
 - lock your bike in the front garden
