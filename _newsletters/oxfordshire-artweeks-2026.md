@@ -37,5 +37,5 @@ If you cannot make it to the private view, then please come and find me during m
 - lock your bike in the front garden
 
 <div style="width:200px;margin:0 auto;">
-<img alt="Artweeks Logo" style="width: 100%;margin:auto;text-align:center;" src="../uploads/oxawlogo.jpg">
+<img alt="Artweeks Logo" style="width: 100%;margin:auto;text-align:center;" src="https://www.chrisjennings.net/uploads/oxawlogo.jpg">
 </div>
