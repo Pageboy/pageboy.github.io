@@ -1659,6 +1659,12 @@ section.photo img {
       color:#4f93ce;
   }
 
+   .photo span {
+    display:block;
+      text-align: center;
+  }
+
+
 
   .video-box { 
     position: relative; 

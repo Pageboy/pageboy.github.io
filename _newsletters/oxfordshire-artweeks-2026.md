@@ -16,10 +16,11 @@ flickr_share:
 excerpt_separator: <!--and-->
 ---
 
-<h2 style="padding:0;text-align:center; font-size:48px;line-height:.8;">Private View</h2>
+<h2 style="padding:0;text-align:center; margin-bottom:10px;font-size:36px;line-height:.8;">Private View</h2>
 
-**I am opening my studio during Oxfordshire Artweeks and you are warmly invited to a _private view_ on Saturday 16th May 5pm onwards**
 
+**I am opening my studio during Oxfordshire Artweeks and you are warmly invited to a _private view_ on Saturday 16th May 6pm onwards**
+<!--and-->
 You can see work in my studio, in the garden, and also in the house. Drinks and nibbles will be provided.
 
 Let's hope for some good weather on that day because we have a lovely garden!
