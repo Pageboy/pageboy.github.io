@@ -213,6 +213,8 @@
   },
   "active": "6261dc950bbba4c2",
   "lastOpenFiles": [
+    "admin/emailnewsletter.mjml",
+    "admin/emailtemplate copy.mjml",
     "_site/newsfeed.xml",
     "newsfeed.xml",
     "_site/feed copy.xml",
@@ -226,8 +228,6 @@
     "_site/portfolio/cuckoo-flower/index.html",
     "_site/portfolio/cuckoo-flower",
     "_site/portfolio/begonia/index.html",
-    "_site/portfolio/begonia",
-    "_site/portfolio/meadow-anemone/index.html",
     "_site/uploads/inthestudio050326.jpeg",
     "pages/newsletters.md",
     "pages/blog-copy.md",
