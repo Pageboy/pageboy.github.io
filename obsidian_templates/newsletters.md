@@ -5,7 +5,7 @@ title:
 image:
 caption:
 source:
-layout: post
+layout: photo
 tags:
 solo: false
 published: false

@@ -7,19 +7,20 @@ caption: Marigold
 source:
 layout: photo
 tags:
+  - exhibition
+  - personal
 solo: false
 published: true
 flickr_album: flickr
 flickr_share:
 excerpt_separator: <!--and-->
 ---
-### Invitation!
 
-#### Private View
+<h2 style="text-align:center; font-size:48px">Private View</h2>
 
-**I am opening my studio during Oxfordshire Artweeks an you are warmly invited to a _private view_ on Saturday 16th May 5pm onwards**
+**I am opening my studio during Oxfordshire Artweeks and you are warmly invited to a _private view_ on Saturday 16th May 5pm onwards**
 
-You can see work in my studio in the garden and also in the house. Drinks and nibbles will be provided.
+You can see work in my studio, in the garden, and also in the house. Drinks and nibbles will be provided.
 
 Let's hope for some good weather on that day because we have a lovely garden!
 
@@ -34,5 +35,4 @@ Let's hope for some good weather on that day because we have a lovely garden!
 - lock your bike in the front garden
 
 
-
-![Artweeks Logo](../uploads/OAW-logo%201200x1200.jpg)
+<img style="margin:auto;text-align:center;" src="../uploads/oxawlogo" width="200">

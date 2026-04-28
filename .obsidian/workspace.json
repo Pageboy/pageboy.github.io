@@ -15,7 +15,7 @@
               "state": {
                 "file": "_newsletters/oxfordshire-artweeks-2026.md",
                 "mode": "source",
-                "source": false,
+                "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
                   "collapseAll": false,
@@ -211,8 +211,11 @@
       "templates:Insert template": false
     }
   },
-  "active": "6261dc950bbba4c2",
+  "active": "d886f93a66ee3a62",
   "lastOpenFiles": [
+    "_site/uploads/oxawlogo.jpg",
+    "obsidian_templates/newsletters.md",
+    "_newsletters/oxfordshire-artweeks-2026.md",
     "admin/emailnewsletter.mjml",
     "admin/emailtemplate copy.mjml",
     "_site/newsfeed.xml",
@@ -222,17 +225,14 @@
     "_site/uploads/marigold.jpg",
     "uploads/marigold.jpg",
     "_site/uploads/OAW-logo 1200x1200.jpg",
-    "uploads/OAW-logo 1200x1200.jpg",
+    "uploads/oxawlogo.jpg",
     "_site/photographs/brickwork-in-toulouse/index.html",
     "_site/photographs/brickwork-in-toulouse",
     "_site/portfolio/cuckoo-flower/index.html",
     "_site/portfolio/cuckoo-flower",
-    "_site/portfolio/begonia/index.html",
     "_site/uploads/inthestudio050326.jpeg",
     "pages/newsletters.md",
     "pages/blog-copy.md",
-    "obsidian_templates/newsletters.md",
-    "_newsletters/oxfordshire-artweeks-2026.md",
     "_newsletters/untitled-2.md",
     "_newsletters/untitled.md",
     "obsidian_templates/photograph.md",
