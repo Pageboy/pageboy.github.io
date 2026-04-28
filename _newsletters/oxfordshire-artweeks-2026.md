@@ -24,15 +24,15 @@ You can see work in my studio, in the garden, and also in the house. Drinks and 
 
 Let's hope for some good weather on that day because we have a lovely garden!
 
- > If you cannot make it to the private view, then please come and find me during my published open days on  16, 17, 18, 22, 23, 24 May (11-6)
+If you cannot make it to the private view, then please come and find me during my published open days on  16th, 17th, 18th, 22nd, 23rd and 24th May (11am-6pm)
 
-#### Where? ####
+### Where?
 
 10 Hernes Road, Oxford, OX2 7PU
-
+///frost.puts.patio
 - Parking on the street
 - bus to Squitchey lane
 - lock your bike in the front garden
 
 
-<img style="margin:auto;text-align:center;" src="../uploads/oxawlogo" width="200">
+<img style="margin:auto;text-align:center;" src="../uploads/oxawlogo.jpg" width="200">
