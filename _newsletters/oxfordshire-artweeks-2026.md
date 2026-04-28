@@ -29,10 +29,13 @@ If you cannot make it to the private view, then please come and find me during m
 ### Where?
 
 10 Hernes Road, Oxford, OX2 7PU
+
 ///frost.puts.patio
+
 - Parking on the street
 - bus to Squitchey lane
 - lock your bike in the front garden
 
-
-<img style="margin:auto;text-align:center;" src="../uploads/oxawlogo.jpg" width="200">
+<div style="width:200px;margin:0 auto;">
+<img alt="Artweeks Logo" style="width: 100%;margin:auto;text-align:center;" src="../uploads/oxawlogo.jpg">
+</div>
