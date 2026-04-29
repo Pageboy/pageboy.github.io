@@ -15,9 +15,8 @@ flickr_album: flickr
 flickr_share:
 excerpt_separator: <!--and-->
 ---
-<div style="text-align:center;">
 ## Private View
-</div>
+
 **I am opening my studio during Oxfordshire Artweeks and you are warmly invited to a _private view_ on Saturday 16th May 6pm onwards**
 
 You can see work in my studio, in the garden, and also in the house. Drinks and nibbles will be provided.
