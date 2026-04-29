@@ -1,6 +1,6 @@
 ---
 date: 2026-03-27
-updated: 2026-04-28
+updated: 2026-04-29
 title: Oxfordshire Artweeks 2026
 image: /uploads/marigold.jpg
 caption: Marigold
@@ -15,9 +15,9 @@ flickr_album: flickr
 flickr_share:
 excerpt_separator: <!--and-->
 ---
-
-<h2 style="padding:0;text-align:center; margin-bottom:10px;font-size:36px;line-height:.8;">Private View</h2>
-
+<div style="text-align:center;">
+## Private View
+</div>
 **I am opening my studio during Oxfordshire Artweeks and you are warmly invited to a _private view_ on Saturday 16th May 6pm onwards**
 
 You can see work in my studio, in the garden, and also in the house. Drinks and nibbles will be provided.
