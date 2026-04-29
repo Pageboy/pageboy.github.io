@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_newsletters/oxfordshire-artweeks-2026.md",
+                "file": "_newsletters/oxfordshire-artweeks-26.md",
                 "mode": "preview",
                 "source": true,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "oxfordshire-artweeks-2026"
+              "title": "oxfordshire-artweeks-26"
             }
           }
         ]
@@ -214,18 +214,20 @@
   "active": "856d8c7d0cdd1f9a",
   "lastOpenFiles": [
     "_newsletters/oxfordshire-artweeks-2026.md",
+    "_newsletters/oxfordshire-artweeks-26.md",
+    "_site/newsletters/oxfordshire-artweeks-26/index.html",
+    "_site/newsletters/oxfordshire-artweeks-26",
+    "_site/newsletters/untitled.md",
+    "obsidian_templates/newsletters.md",
     "_site/newsletters/oxfordshire-artweeks-2026/index.html",
     "_site/newsletters/oxfordshire-artweeks-2026",
     "_layouts/newsletter.html",
     "_layouts/photo copy.html",
     "_site/uploads/oxawlogo.jpg",
-    "obsidian_templates/newsletters.md",
     "admin/emailnewsletter.mjml",
     "admin/emailtemplate copy.mjml",
     "_site/newsfeed.xml",
     "newsfeed.xml",
-    "_site/feed copy.xml",
-    "feed copy.xml",
     "_site/uploads/marigold.jpg",
     "uploads/marigold.jpg",
     "_site/uploads/OAW-logo 1200x1200.jpg",
@@ -234,7 +236,6 @@
     "pages/newsletters.md",
     "pages/blog-copy.md",
     "_newsletters/untitled-2.md",
-    "_newsletters/untitled.md",
     "obsidian_templates/photograph.md",
     "obsidian_templates/portfolio.md",
     "_articles/colour-search-november.md",
@@ -256,7 +257,6 @@
     "uploads/inthestudio050326.jpeg",
     "uploads/_N726377.jpeg",
     "_portfolio/apple-drop.md",
-    "_portfolio/sumac-tree.md",
     "_site/images/xmas2025.png",
     "_site/uploads/instagrey.jpeg",
     "newsletters/Untitled 1.canvas",

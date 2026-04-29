@@ -1654,6 +1654,12 @@ section.photo img {
     width:25%;
   }
 
+   body.newsletters .excerpt img {
+    display:block;
+    margin:0 auto;
+    width:450px !important;
+  }
+
   .photo p {
       /* text-align: center; */
   }
