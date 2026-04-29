@@ -34,4 +34,4 @@ If you cannot make it to the private view, then please come and find me during m
 - lock your bike in the front garden
 
 
-![Artweeks Logo](https://www.chrisjennings.net/uploads/oxawlogo.jpg)
+![Artweeks Logo](../uploads/oxawlogo.jpg)

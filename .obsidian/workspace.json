@@ -14,8 +14,8 @@
               "type": "markdown",
               "state": {
                 "file": "_newsletters/oxfordshire-artweeks-2026.md",
-                "mode": "source",
-                "source": false,
+                "mode": "preview",
+                "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
                   "collapseAll": false,
