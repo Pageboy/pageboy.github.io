@@ -1,5 +1,5 @@
 ---
-date: 2026-04-29T10:00:00
+date: 2026-04-29T12:00:00
 updated: 2026-04-29
 title: Oxfordshire Artweeks 2026
 image: /uploads/marigold.jpg
