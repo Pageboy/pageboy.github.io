@@ -1650,7 +1650,7 @@ section.photo img {
     display:block;
   }
 
-  body.newsletter section.photo img {
+  body.newsletter section.photo div img {
     width:25%;
   }
 
