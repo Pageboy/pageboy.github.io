@@ -33,4 +33,4 @@ If you cannot make it to the private view, then please come and find me during m
 - bus to Squitchey lane
 - lock your bike in the front garden
 
-![Artweeks Logo](../uploads/oxawlogo.jpg)
+![Artweeks Logo](https://www.chrisjennings.net/uploads/oxawlogo.jpg)

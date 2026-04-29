@@ -4,18 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "e67be1b7dccc07f8",
+        "id": "8811ea36f8274846",
         "type": "tabs",
         "children": [
           {
-            "id": "856d8c7d0cdd1f9a",
+            "id": "1c1aff90953d6c4d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "_newsletters/oxfordshire-artweeks-26.md",
-                "mode": "preview",
-                "source": true,
+                "mode": "source",
+                "source": false,
                 "backlinks": true,
                 "backlinkOpts": {
                   "collapseAll": false,
@@ -211,10 +211,10 @@
       "templates:Insert template": false
     }
   },
-  "active": "856d8c7d0cdd1f9a",
+  "active": "1c1aff90953d6c4d",
   "lastOpenFiles": [
-    "_newsletters/oxfordshire-artweeks-2026.md",
     "_newsletters/oxfordshire-artweeks-26.md",
+    "_newsletters/oxfordshire-artweeks-2026.md",
     "_site/newsletters/oxfordshire-artweeks-26/index.html",
     "_site/newsletters/oxfordshire-artweeks-26",
     "_site/newsletters/untitled.md",
