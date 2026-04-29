@@ -14,6 +14,7 @@ published: true
 flickr_album: flickr
 flickr_share:
 excerpt_separator: <!--and-->
+collection: newsletters
 ---
 ## Private View
 

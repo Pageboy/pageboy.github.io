@@ -8,7 +8,7 @@
 
   {% assign title = site.title | default: site.name %}
   {% if page.collection != "posts" %}
-    {% assign collection = page.collection | capitalize %}
+    {% assign collection = page.collections | capitalize %}
     {% assign title = title | append: " | " | append: collection %}
   {% endif %}
   {% if page.category %}
