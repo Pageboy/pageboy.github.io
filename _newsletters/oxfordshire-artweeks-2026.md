@@ -1,5 +1,5 @@
 ---
-date: 2026-03-29
+date: 2026-03-29T10:00:00
 updated: 2026-04-29
 title: Oxfordshire Artweeks 2026
 image: /uploads/marigold.jpg
@@ -10,7 +10,7 @@ tags:
   - exhibition
   - personal
 solo: false
-published: false
+published: true
 flickr_album: flickr
 flickr_share:
 excerpt_separator: <!--and-->

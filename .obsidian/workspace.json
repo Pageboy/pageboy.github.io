@@ -4,18 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "37699994a12d9e44",
+        "id": "e67be1b7dccc07f8",
         "type": "tabs",
         "children": [
           {
-            "id": "6261dc950bbba4c2",
+            "id": "856d8c7d0cdd1f9a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "_newsletters/oxfordshire-artweeks-2026.md",
-                "mode": "preview",
-                "source": true,
+                "mode": "source",
+                "source": false,
                 "backlinks": true,
                 "backlinkOpts": {
                   "collapseAll": false,
@@ -211,13 +211,15 @@
       "templates:Insert template": false
     }
   },
-  "active": "6261dc950bbba4c2",
+  "active": "856d8c7d0cdd1f9a",
   "lastOpenFiles": [
+    "_newsletters/oxfordshire-artweeks-2026.md",
+    "_site/newsletters/oxfordshire-artweeks-2026/index.html",
+    "_site/newsletters/oxfordshire-artweeks-2026",
     "_layouts/newsletter.html",
     "_layouts/photo copy.html",
     "_site/uploads/oxawlogo.jpg",
     "obsidian_templates/newsletters.md",
-    "_newsletters/oxfordshire-artweeks-2026.md",
     "admin/emailnewsletter.mjml",
     "admin/emailtemplate copy.mjml",
     "_site/newsfeed.xml",
@@ -228,9 +230,6 @@
     "uploads/marigold.jpg",
     "_site/uploads/OAW-logo 1200x1200.jpg",
     "uploads/oxawlogo.jpg",
-    "_site/photographs/brickwork-in-toulouse/index.html",
-    "_site/photographs/brickwork-in-toulouse",
-    "_site/portfolio/cuckoo-flower/index.html",
     "_site/uploads/inthestudio050326.jpeg",
     "pages/newsletters.md",
     "pages/blog-copy.md",
