@@ -28,7 +28,7 @@
             {% include post_info.html newsletter=newsletter %}
           </header>
           <div class="excerpt">
-              {{ newsletter.excerpt | replace: "_uploads", "uploads" | replace: "uploads", "/uploads" | replace: "//", "/" }}
+              {{ newsletter.excerpt | replace: "_uploads", "uploads" | replace: "uploads", "/uploads" }}
           </div>
       </span>
     </div>

@@ -15,7 +15,7 @@
               "state": {
                 "file": "_newsletters/oxfordshire-artweeks-26.md",
                 "mode": "source",
-                "source": false,
+                "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
                   "collapseAll": false,
