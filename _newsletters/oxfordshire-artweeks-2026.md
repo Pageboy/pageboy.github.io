@@ -5,7 +5,7 @@ title: Oxfordshire Artweeks 2026
 image: /uploads/marigold.jpg
 caption: Marigold
 source:
-layout: photo
+layout: newsletter
 tags:
   - exhibition
   - personal

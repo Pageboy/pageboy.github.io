@@ -1,0 +1,69 @@
+---
+layout: default
+---
+
+<article>
+  <header id="artmain">
+      <h1 id="{{ page.title | escape }}" class="title">{{ page.title }}</h1>
+    {%- if page.subtitle -%}
+    <h2 class="subtitle">{{ page.subtitle }}</h2>
+    {%- endif -%}
+
+  </header>
+  <section class="post-content photo">
+  <p>
+    <img src="{{ page.image }}" alt="{{ page.caption }}">
+  </p>
+  {% include post_info.html post=page %}
+  <div class="main">
+ {{ content | replace: "../uploads", "/uploads" }}
+
+  {%- assign flickr_album = page.flickr_album | replace: "flickr", "" -%}
+        {% unless flickr_album == empty or flickr_album == null or flickr_album == "" %}
+      <!-- <p style="color:#869387;"><i class="fa fa-flickr"></i> Here is a gallery of these images kept on <a title="go to Flickr" href="https://www.flickr.com/photos/chrisjennings/albums/{{page.flickr_album}}">Flickr</a></p> -->
+                <div class="gallerycontainer content">
+                  <p class="info">Here is a my gallery of related images held on Flickr.</p>
+                        <p class="info">Click each image here for an enlarged view.</p>
+                <div id="gallery"></div>
+                <script type="text/javascript" charset="utf-8">
+
+                $(function() {
+                  // create a gallery with custom options
+                  var options = {
+                    apiKey: '{{site.flickr_key}}',
+                    flickrId: '{{site.flickr_id}}',
+                    photosetId: '{{flickr_album | remove: "flickr"}}',
+                    captions: true,
+                    small: 'medium',
+                    large: 'original'
+                  };
+
+                  $('#gallery').fancyPhotoset(options);
+
+                });
+                </script>
+
+                <p style="color:#869387;text-align:center;"><i class="fa fa-flickr"></i> <a href="https://www.flickr.com/photos/chrisjennings/albums/{{page.flickr_album | remove: 'flickr'}}">See this gallery on Flickr</a></p>
+                </div>
+
+                {% endunless %}
+  </div>
+  </section>
+  <!-- Social media shares -->
+  {% include share_buttons.html %}
+
+  <!-- Flickr share -->
+{% if page.flickr_share %}
+  <p style="color:#869387;text-align:center;font-size:.8em"><i class="fa fa-flickr"><a href="{{page.flickr_share}}" title="Go to the Flickr site">Hosted on my Flickr site</a></i></p>
+{% endif %}
+
+  <!-- Tag list for portfolio -->
+  {% capture tag_list %}{{ page.tags | join: "|"}}{% endcapture %}
+  {% include tags_list.html tags=tag_list %}
+
+</article>
+
+<!-- Post navigation -->
+{% if site.post_navigation %}
+  {% include art_nav.html %}
+{% endif %}

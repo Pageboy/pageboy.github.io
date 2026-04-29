@@ -1650,6 +1650,10 @@ section.photo img {
     display:block;
   }
 
+  body.newsletter section.photo .main img {
+    width:25%;
+  }
+
   .photo p {
       /* text-align: center; */
   }

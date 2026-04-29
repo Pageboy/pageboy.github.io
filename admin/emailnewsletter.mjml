@@ -4,7 +4,7 @@
     <mj-font name="Ubuntu" href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700"></mj-font>
     <mj-font name="Roboto Slab" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900"></mj-font>
      <mj-attributes>
-      <mj-class name="header" padding="10px 0" color="#1D83A8" font-size="30px" line-height="40px" font-family="'Roboto Slab', Helvetica, Arial, sans-serif" />
+      <mj-class name="header" padding="10px 0" color="#829395" font-size="30px" line-height="40px" font-family="'Roboto Slab', Helvetica, Arial, sans-serif" />
       <mj-class name="intro" color="#333333" font-size="15px" font-family="'Ubuntu','avenir-next',sans-serif" padding="0 14px 5px 14px" line-height="1.6" font-weight="500" />
       <mj-class name="paragraph" color="#333333" font-size="15px" font-family="'Ubuntu','avenir-next',sans-serif" padding="0 10px"line-height="1.5" font-weight="400" />
       <mj-class name="post" padding="0 14px 5px 14px" color="#333333" padding="0 14px 5px 14px" font-size="15px" font-family="'Ubuntu','avenir-next',sans-serif" line-height="1.5" />
@@ -26,11 +26,9 @@
     </mj-section>
     <mj-section background-color="#FFFFFF" padding="0 0 8px 0">
       <mj-column>
-        <mj-image src="https://www.chrisjennings.net/uploads/newsletterbannergreen.jpg" alt="Choppy Sea" align="center" border="none" padding="0px">
+        <mj-image src="https://www.chrisjennings.net/uploads/newsletterbanner.png" alt="bluegreen" align="center" border="none" padding="0px">
         </mj-image>
-        <mj-text mj-class="header" align="center"><b>The Latest from Me</b></mj-text>
-        <mj-text mj-class="intro">Hello!</mj-text>
-        <mj-text mj-class="intro">Here is the latest work I have posted on the {{newsletter.name}} website. Follow the links to see the full content:</mj-text>
+        <mj-text mj-class="header" align="center"><b>Latest News</b></mj-text>
       </mj-column>
     </mj-section>
         {{#articles}}
@@ -46,6 +44,9 @@
     <mj-section background-color="#FFFFFF" padding="0 0 8px 0">
       <mj-column>
           <mj-text mj-class="paragraph">{{{description}}}</mj-text>
+          <mj-button href="{{{link}}}" font-family="Ubuntu" background-color="#1D83A8" color="white">
+          Read more on my website
+         </mj-button>
       </mj-column>
     </mj-section>
         {{/articles}}
