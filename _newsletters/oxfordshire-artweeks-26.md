@@ -1,9 +1,9 @@
 ---
 date: 2026-04-29T12:00:00
-updated: 2026-04-29
+updated: 2026-05-03
 title: Oxfordshire Artweeks 2026
-image: /uploads/marigold.jpg
-caption: Marigold
+image: /uploads/squarebells.jpg
+caption: Bluebells in the Woods
 source:
 layout: newsletter
 tags:

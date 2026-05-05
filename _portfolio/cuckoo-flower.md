@@ -1,6 +1,6 @@
 ---
 date: 2026-04-21
-updated: 2026-04-21
+updated: 2026-05-05
 title: Cuckoo Flower
 image: https://live.staticflickr.com/65535/55221466823_e6b9a1988c_h.jpg
 layout: art
@@ -19,3 +19,7 @@ In early spring, English woods are carpeted with the rich blues of **bluebells**
 <!--and-->
 
 In this piece, I divide the square into two vertical rectangles - one in the *golden ratio*  and then a linking rectangle that contains the photograph. From the colours in this image I construct two arcs to bring the centre into sharp focus.  
+
+![Cuckoo Flower in the studio](https://live.staticflickr.com/65535/55250356298_d987f822cd_h.jpg)
+
+**UV varnished archival ink on fine art paper bonded to a panel 565mm x 565mm**

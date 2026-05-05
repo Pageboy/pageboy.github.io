@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_newsletters/oxfordshire-artweeks-26.md",
+                "file": "_portfolio/cuckoo-flower.md",
                 "mode": "source",
                 "source": true,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "oxfordshire-artweeks-26"
+              "title": "cuckoo-flower"
             }
           }
         ]
@@ -213,10 +213,13 @@
   },
   "active": "1c1aff90953d6c4d",
   "lastOpenFiles": [
+    "_portfolio/meadow-anemone.md",
+    "_portfolio/cuckoo-flower.md",
+    "_newsletters/oxfordshire-artweeks-26.md",
+    "uploads/squarebells.jpg",
     "_site/uploads/rsvp.png",
     "uploads/rsvp.png",
     "_newsletters/oxfordshire-artweeks-2026.md",
-    "_newsletters/oxfordshire-artweeks-26.md",
     "_site/newsletters/oxfordshire-artweeks-26/index.html",
     "_site/newsletters/oxfordshire-artweeks-26",
     "_site/newsletters/untitled.md",
@@ -244,11 +247,9 @@
     "pages/about.md",
     "newsletters/November 2025.canvas",
     "newsletters/november-2025_fromcanvas.md",
-    "_portfolio/cuckoo-flower.md",
     "_portfolio/poppy_red.md",
     "_portfolio/dogwood-autumn.md",
     "_portfolio/begonia.md",
-    "_portfolio/meadow-anemone.md",
     "_portfolio/lenten-rose.md",
     "_portfolio/turpentine-tree.md",
     "_articles/a-walk-up-wittenham-clumps.md",
@@ -257,9 +258,7 @@
     "pages/artworks.md",
     "pages/home.md",
     "uploads/inthestudio050326.jpeg",
-    "uploads/_N726377.jpeg",
     "_portfolio/apple-drop.md",
-    "_site/images/xmas2025.png",
     "newsletters/Untitled 1.canvas",
     "docs/private/Teaching_Hold/Multiplatform Publishing/Assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/assignment1.canvas",
