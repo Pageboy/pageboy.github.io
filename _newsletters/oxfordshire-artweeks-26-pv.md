@@ -1,7 +1,7 @@
 ---
-date: 2026-04-29T12:00:00
-updated: 2026-05-03
-title: Oxfordshire Artweeks 2026
+date: 2026-05-10T12:00:00
+updated: 2026-05-10
+title: Oxfordshire Artweeks 2026 Private View
 image: /uploads/squarebells.jpg
 caption: Bluebells in the Woods
 source:
