@@ -1,6 +1,6 @@
 ---
 date: 2026-03-22
-updated: 2026-03-25
+updated: 2026-05-05
 title: Meadow Anemone
 image: https://live.staticflickr.com/65535/55148562301_d5afa6e080_h.jpg
 layout: art
@@ -21,9 +21,7 @@ I have partitioned the square into _golden rectangles_ and smaller squares, po
 
 <!--and-->
 
-
 ![In the studio](https://live.staticflickr.com/65535/55161678944_380a3f515a_h.jpg)
-
 
 
 **UV varnished archival ink on fine art paper bonded to a panel 565mm x 565mm**

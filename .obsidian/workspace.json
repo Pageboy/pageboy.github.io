@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/cuckoo-flower.md",
-                "mode": "source",
+                "file": "_portfolio/marigold.md",
+                "mode": "preview",
                 "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "cuckoo-flower"
+              "title": "marigold"
             }
           }
         ]
@@ -213,8 +213,10 @@
   },
   "active": "1c1aff90953d6c4d",
   "lastOpenFiles": [
-    "_portfolio/meadow-anemone.md",
     "_portfolio/cuckoo-flower.md",
+    "_portfolio/marigold.md",
+    "_portfolio/bluebell-woods.md",
+    "_portfolio/meadow-anemone.md",
     "_newsletters/oxfordshire-artweeks-26.md",
     "uploads/squarebells.jpg",
     "_site/uploads/rsvp.png",
@@ -258,7 +260,6 @@
     "pages/artworks.md",
     "pages/home.md",
     "uploads/inthestudio050326.jpeg",
-    "_portfolio/apple-drop.md",
     "newsletters/Untitled 1.canvas",
     "docs/private/Teaching_Hold/Multiplatform Publishing/Assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/assignment1.canvas",
