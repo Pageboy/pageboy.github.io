@@ -2,7 +2,7 @@
 date: 2026-05-05
 updated: 2026-05-10
 title: Bluebells in the Woods
-image: https://live.staticflickr.com/65535/55249421902_4fd9340ffb_h.jpg
+image: https://live.staticflickr.com/65535/55249421902_486fd6802c_b.jpg
 layout: art
 tags:
   - art
