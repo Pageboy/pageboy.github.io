@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_newsletters/oxfordshire-artweeks-26-pv.md",
+                "file": "_portfolio/bluebell-woods.md",
                 "mode": "preview",
                 "source": true,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "oxfordshire-artweeks-26-pv"
+              "title": "bluebell-woods"
             }
           }
         ]
@@ -213,11 +213,11 @@
   },
   "active": "d7ecd3a762bd06c8",
   "lastOpenFiles": [
+    "_newsletters/oxfordshire-artweeks-26-pv.md",
     "_portfolio/bluebell-woods.md",
     "_portfolio/marigold.md",
     "_portfolio/cuckoo-flower.md",
     "_portfolio/meadow-anemone.md",
-    "_newsletters/oxfordshire-artweeks-26-pv.md",
     "uploads/squarebells.jpg",
     "_site/uploads/rsvp.png",
     "uploads/rsvp.png",

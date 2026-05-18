@@ -1,6 +1,6 @@
 ---
 date: 2026-05-05
-updated: 2026-05-10
+updated: 2026-05-17
 title: Bluebells in the Woods
 image: https://live.staticflickr.com/65535/55249421902_486fd6802c_b.jpg
 layout: art
@@ -11,7 +11,7 @@ excerpt_separator: <!--and-->
 solo: false
 caption:
 forsale:
-published: false
+published: true
 flickr_share: https://flic.kr/p/2sbcJgG
 ---
 

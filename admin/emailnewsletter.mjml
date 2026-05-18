@@ -9,7 +9,7 @@
       <mj-class name="paragraph" color="#333333" font-size="15px" font-family="'Ubuntu','avenir-next',sans-serif" padding="0 10px"line-height="1.5" font-weight="400" />
       <mj-class name="post" padding="0 14px 5px 14px" color="#333333" padding="0 14px 5px 14px" font-size="15px" font-family="'Ubuntu','avenir-next',sans-serif" line-height="1.5" />
       <mj-class name="link" color="#4eb00cff" text-decoration="none" font-size="22px" />
-      <mj-class name="post_title" padding="14px" color="#2d5201ff" font-size="22px" font-weight="700" />
+      <mj-class name="post_title" padding="14px" align="center" color="#C085B0" font-size="32px" font-weight="800" />
       <mj-class name="entry_image" padding="0 14px 7px 14px" border="1px solid silver"/>
       <mj-class name="readmore" padding="12px 0" align="center" font-size="16px" color="#1D83A8" />
       <mj-all font-family="'Ubuntu','avenir-next',sans-serif"></mj-all>
@@ -20,6 +20,35 @@
       .rollover:hover .rollover-second { max-height: none !important; display: block !important; }
       .rollover span { font-size: 0px; }
     </mj-style>
+      <mj-style>
+      .paragraph div {
+      color:#333333;
+      font-size:15px !important;
+      font-family:'Ubuntu','avenir-next',sans-serif !important;
+      padding:0 10px;
+      line-height:1.6 !important;
+      font-weight:400;
+      }
+    </mj-style>
+    <mj-style>
+      .paragraph div h2 {
+      text-align: center !important;
+      color: #6552E0 !important;
+      font-size: 30px !important;
+      padding: 2px 0 !important;
+      margin-top:3px !important;
+      line-height:0.8 !important;
+      }
+    </mj-style>
+       <mj-style>
+      .paragraph div img {
+      text-align: center !important;
+      border:1px solid grey !important;
+      display:block !important;
+      width:20% !important;
+      margin:0 auto;
+      }
+    </mj-style>
   </mj-head>
     <mj-body background-color="#ffffff">
     <mj-section background-color="#ffffff" padding="12px">
@@ -28,13 +57,12 @@
       <mj-column>
         <mj-image src="https://www.chrisjennings.net/uploads/newsletterbanner.png" alt="bluegreen" align="center" border="none" padding="0px">
         </mj-image>
-        <mj-text mj-class="header" align="center"><b>Latest News</b></mj-text>
       </mj-column>
     </mj-section>
         {{#articles}}
     <mj-section background-color="#FFFFFF" padding="0 0 8px 0">
       <mj-column>    
-          <mj-text mj-class="post_title"><a style="text-decoration: none; color: inherit;" href="{{{link}}}" mj-class="link">{{title}} &#10132; </a></mj-text>
+          <mj-text mj-class="post_title">{{title}}</mj-text>
           {{#thumbnail}}
           <mj-image mj-class="entry_image" src="{{thumbnail}}">
           </mj-image>
@@ -43,10 +71,9 @@
     </mj-section>      
     <mj-section background-color="#FFFFFF" padding="0 0 8px 0">
       <mj-column>
-          <mj-text mj-class="paragraph">{{{description}}}</mj-text>
-          <mj-button href="{{{link}}}" font-family="Ubuntu" background-color="#1D83A8" color="white">
-          Read more on my website
-         </mj-button>
+          <mj-text css-class="paragraph">{{{description}}}</mj-text>
+         <mj-image href="mailto:chrisjennings@me.com?subject=Artweeks%20Private%20View&body=Thanks%20for%20the%20invite%0A%0AI%20would%20love%20to%20come!" src="https://www.chrisjennings.net/uploads/rsvp.png" title="Let me know if you are coming" alt="rsvp" align="center" border="none" padding="0px" width="90px">
+        </mj-image>
       </mj-column>
     </mj-section>
         {{/articles}}
@@ -54,6 +81,9 @@
     {{#socials}}
       <mj-section>
         <mj-column>
+          <mj-text mj-class="readmore" font-family="'Ubuntu','avenir-next',sans-serif" align="center" font-size="22px" line-height="1">
+          <a href="https://www.chrisjennings.net" mj-class="link" style="text-decoration: none; color: inherit;">Visit my Website &#10132;</a>
+        </mj-text>
           <mj-social font-size="14px" icon-size="32px" mode="horizontal">
             {{#socials.twitter}}
               <mj-social-element name="twitter" href="{{{.}}}" src="https://eventuallycoding.com/images/rssfeedpulse/twitter.png" />
@@ -76,7 +106,7 @@
     <mj-section background-color="#FAFAFA" padding="20px">
       <mj-column>
         <mj-text mj-class="paragraph" align="center" font-size="12px" line-height="1.5">
-          <a href="{{newsletter.url}}" mj-class="link">{{newsletter.name}}</a> © {{currentYear}}. All Rights Reserved.
+        {{newsletter.name}} © {{currentYear}}. All Rights Reserved.
         </mj-text>
          <mj-text mj-class="paragraph" align="center" font-size="12px" line-height="1.5">
           10 Hernes Road, Oxford, UK
