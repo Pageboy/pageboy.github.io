@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/bluebell-woods.md",
+                "file": "_portfolio/peacock-flower.md",
                 "mode": "preview",
                 "source": true,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "bluebell-woods"
+              "title": "peacock-flower"
             }
           }
         ]
@@ -189,7 +189,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -213,8 +213,9 @@
   },
   "active": "d7ecd3a762bd06c8",
   "lastOpenFiles": [
-    "_newsletters/oxfordshire-artweeks-26-pv.md",
     "_portfolio/bluebell-woods.md",
+    "_portfolio/peacock-flower.md",
+    "_newsletters/oxfordshire-artweeks-26-pv.md",
     "_portfolio/marigold.md",
     "_portfolio/cuckoo-flower.md",
     "_portfolio/meadow-anemone.md",
@@ -258,7 +259,6 @@
     "_portfolio/beach-stones-on-the-street.md",
     "_portfolio/buckeye-botanised.md",
     "pages/artworks.md",
-    "pages/home.md",
     "uploads/inthestudio050326.jpeg",
     "newsletters/Untitled 1.canvas",
     "docs/private/Teaching_Hold/Multiplatform Publishing/Assignment1.canvas",
