@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/peacock-flower.md",
+                "file": "_portfolio/palmatum.md",
                 "mode": "preview",
                 "source": true,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "peacock-flower"
+              "title": "palmatum"
             }
           }
         ]
@@ -213,8 +213,9 @@
   },
   "active": "d7ecd3a762bd06c8",
   "lastOpenFiles": [
-    "_portfolio/bluebell-woods.md",
+    "_portfolio/plume-thistle-arc.md",
     "_portfolio/peacock-flower.md",
+    "_portfolio/bluebell-woods.md",
     "_newsletters/oxfordshire-artweeks-26-pv.md",
     "_portfolio/marigold.md",
     "_portfolio/cuckoo-flower.md",
@@ -258,7 +259,6 @@
     "_articles/a-walk-up-wittenham-clumps.md",
     "_portfolio/beach-stones-on-the-street.md",
     "_portfolio/buckeye-botanised.md",
-    "pages/artworks.md",
     "uploads/inthestudio050326.jpeg",
     "newsletters/Untitled 1.canvas",
     "docs/private/Teaching_Hold/Multiplatform Publishing/Assignment1.canvas",
