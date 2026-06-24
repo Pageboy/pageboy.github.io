@@ -8,7 +8,8 @@ tags:
   - art
   - root2A
 published: true
-updated: 2025-11-05
+updated: 2026-06-24
+nft: https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/48162648330355413914028108631647327469322174667090404439099707904107992842241
 ---
 We waited for the wisteria to come into flower and we were not disappointed.
 

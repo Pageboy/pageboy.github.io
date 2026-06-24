@@ -12,4 +12,5 @@ caption:
 forsale:
 published: false
 flickr_share:
+nft:
 ---

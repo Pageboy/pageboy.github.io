@@ -4,18 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "fcfdd4078a68ad2f",
+        "id": "261a0773df3cb01a",
         "type": "tabs",
         "children": [
           {
-            "id": "d7ecd3a762bd06c8",
+            "id": "76b5931dde1cddce",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/lantana.md",
-                "mode": "preview",
-                "source": true,
+                "file": "_portfolio/august-rain-vivid-colour.md",
+                "mode": "source",
+                "source": false,
                 "backlinks": true,
                 "backlinkOpts": {
                   "collapseAll": false,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "lantana"
+              "title": "august-rain-vivid-colour"
             }
           }
         ]
@@ -211,16 +211,17 @@
       "templates:Insert template": false
     }
   },
-  "active": "d7ecd3a762bd06c8",
+  "active": "76b5931dde1cddce",
   "lastOpenFiles": [
-    "_portfolio/peacock-flower.md",
+    "obsidian_templates/portfolio.md",
+    "_portfolio/wisteria-wisdom.md",
+    "_portfolio/wood-rings.md",
     "_portfolio/lantana.md",
+    "_portfolio/peacock-flower.md",
     "_portfolio/sea_sand_dunes.md",
     "_portfolio/sea-colours.md",
     "_portfolio/scabiosa-meadow.md",
     "_portfolio/wet-and-dry-shore.md",
-    "_portfolio/wood-rings.md",
-    "_portfolio/wisteria-wisdom.md",
     "_portfolio/wild-river-sweep.md",
     "_portfolio/palmatum.md",
     "_portfolio/plume-thistle-arc.md",
@@ -255,7 +256,6 @@
     "pages/blog-copy.md",
     "_newsletters/untitled-2.md",
     "obsidian_templates/photograph.md",
-    "obsidian_templates/portfolio.md",
     "_articles/colour-search-november.md",
     "pages/about.md",
     "newsletters/November 2025.canvas",

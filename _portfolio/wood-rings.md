@@ -8,7 +8,8 @@ tags:
   - landscape
   - art
 published: true
-updated: 2025-11-05
+updated: 2026-06-24
+nft: https://opensea.io/item/polygon/0x2953399124f0cbb46d2cbacd8a89cf0599974963/48162648330355413914028108631647327469322174667090404439099707918401644003332
 ---
 In the forest some trees are harvested, piled safely and revealing their aged rings.
 
