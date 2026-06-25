@@ -299,13 +299,13 @@ article, .comments, .feature-image .post-content, .feature-image footer,
     text-decoration: none
 }
 
-.button_nft {
+.button .nft {
     border-radius: 0.3em;
     border: 1px solid;
     display: block;
     margin: 1em auto;
     padding: 0.5em 0.75em;
-    background: #04396a;
+    background: #dd9208;
     color:white;
     width:50%;
     font-size: .8em;
@@ -313,7 +313,7 @@ article, .comments, .feature-image .post-content, .feature-image footer,
 }
 
 a.button_nft:hover {
-    background: #337ab7;
+    background: #7933b7;
     border: 1px solid #337ab7;
     color: #fff;
     text-decoration: none
@@ -1573,7 +1573,7 @@ section.art img {
     margin:0 auto 12px auto;
     padding:.5em;
     /* height:2em; */
-    background-color: #92bb90;
+    background-color: #da21be;
     color:white;
   }
 
@@ -1702,12 +1702,12 @@ section.sale {
     padding: .5em 1em;
     margin:1em auto 1em auto;
     padding:.5em 1em;
-    width:65%;
+    width:45%;
 }
 
 .sale h2 {
     font-size: 1.3em;
-    color: #768020;
+    color: #a7583b;
 }
 
 .sale h3 {

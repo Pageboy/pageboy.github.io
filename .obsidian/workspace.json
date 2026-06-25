@@ -13,9 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/august-rain-vivid-colour.md",
-                "mode": "source",
-                "source": false,
+                "file": "_portfolio/peacock-flower.md",
+                "mode": "preview",
+                "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
                   "collapseAll": false,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "august-rain-vivid-colour"
+              "title": "peacock-flower"
             }
           }
         ]
@@ -50,7 +50,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "byCreatedTime",
+                "sortOrder": "alphabetical",
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
@@ -213,6 +213,23 @@
   },
   "active": "76b5931dde1cddce",
   "lastOpenFiles": [
+    "_site/portfolio/peacock-flower/index.html",
+    "_site/portfolio/peacock-flower",
+    "_site/portfolio/marigold/index.html",
+    "_site/portfolio/marigold",
+    "_site/portfolio/bluebell-woods/index.html",
+    "_site/portfolio/bluebell-woods",
+    "_site/newsletters/oxfordshire-artweeks-26-pv/index.html",
+    "_site/newsletters/oxfordshire-artweeks-26-pv",
+    "_site/uploads/squarebells.jpg",
+    "_portfolio/asphalt-series-3.md",
+    "_portfolio/rainday.md",
+    "_portfolio/rust_on_chain_links.md",
+    "_portfolio/rushes_reeds_river.md",
+    "_portfolio/shore-shallows.md",
+    "_portfolio/tupelo-orange.md",
+    "_portfolio/beach-zones-beach-tones.md",
+    "_portfolio/august-rain-vivid-colour.md",
     "obsidian_templates/portfolio.md",
     "_portfolio/wisteria-wisdom.md",
     "_portfolio/wood-rings.md",
@@ -233,33 +250,16 @@
     "uploads/squarebells.jpg",
     "_site/uploads/rsvp.png",
     "uploads/rsvp.png",
-    "_newsletters/oxfordshire-artweeks-2026.md",
     "_site/newsletters/oxfordshire-artweeks-26/index.html",
     "_site/newsletters/oxfordshire-artweeks-26",
-    "_site/newsletters/untitled.md",
-    "obsidian_templates/newsletters.md",
     "_site/newsletters/oxfordshire-artweeks-2026/index.html",
-    "_site/newsletters/oxfordshire-artweeks-2026",
-    "_layouts/newsletter.html",
-    "_layouts/photo copy.html",
     "_site/uploads/oxawlogo.jpg",
-    "admin/emailnewsletter.mjml",
-    "admin/emailtemplate copy.mjml",
-    "_site/newsfeed.xml",
-    "newsfeed.xml",
     "_site/uploads/marigold.jpg",
     "uploads/marigold.jpg",
     "_site/uploads/OAW-logo 1200x1200.jpg",
     "uploads/oxawlogo.jpg",
     "_site/uploads/inthestudio050326.jpeg",
-    "pages/newsletters.md",
-    "pages/blog-copy.md",
-    "_newsletters/untitled-2.md",
-    "obsidian_templates/photograph.md",
-    "_articles/colour-search-november.md",
-    "pages/about.md",
     "newsletters/November 2025.canvas",
-    "uploads/inthestudio050326.jpeg",
     "newsletters/Untitled 1.canvas",
     "docs/private/Teaching_Hold/Multiplatform Publishing/Assignment1.canvas",
     "docs/private/Teaching_Hold/DigitalProduct/assignment1.canvas",

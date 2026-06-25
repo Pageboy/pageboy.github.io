@@ -8,7 +8,8 @@ tags:
   - art
   - golden-section
 published: true
-updated: 2026-02-19
+updated: 2026-06-25
+nft: https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/48162648330355413914028108631647327469322174667090404439099707901908969586692
 ---
 The sea pounds the shore, tumbling the stones into pebbles of infinitely varied shapes and sizes.
 
