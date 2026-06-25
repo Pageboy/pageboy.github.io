@@ -8,9 +8,10 @@ tags:
   - art
   - golden-section
 published: true
-updated: 2026-06-23
+updated: 2026-06-25
 flickr_share: https://flic.kr/p/2r27mF4
 excerpt_separator: <!--and-->
+nft: https://opensea.io/item/ethereum/0xc23d44ad0140e5b6332fc7ce32f48ce75b0a4017/2
 ---
 
 In the green houses of the Oxford Botanical Gardens we find glorious colours that inspire composition for this combination of curves, lines and rectangles. The Golden Rectangle its subdivided to provide balance and focus.
