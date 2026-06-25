@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/lantana.md",
+                "file": "_portfolio/marigold.md",
                 "mode": "preview",
                 "source": true,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "lantana"
+              "title": "marigold"
             }
           }
         ]
@@ -210,6 +210,7 @@
   },
   "active": "5bc89c0b59696e19",
   "lastOpenFiles": [
+    "_portfolio/lantana.md",
     "_portfolio/cuckoo-flower.md",
     "_photographs/travels-in-mexico.md",
     "_photographs/brickwork-in-toulouse.md",
@@ -242,7 +243,6 @@
     "newsletters/November 25.md",
     "newsletters/november-25.md",
     "newsletters/untitled.md",
-    "obsidian_templates/newsletter.md",
     "_site/photographs/dorchester-abbey/index.html",
     "_site/photographs/dorchester-abbey",
     "_site/Untitled.canvas",
