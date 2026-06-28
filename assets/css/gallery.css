@@ -85,7 +85,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  margin: 0;
+  /* margin: 0; */
 }
 
 #gallery ul {
@@ -99,6 +99,7 @@
   -ms-flex-pack: distribute;
   justify-content: space-between;
   /* justify-content: flex-start; */
+  /* justify-items: center; */
 }
 
 #gallery li {
