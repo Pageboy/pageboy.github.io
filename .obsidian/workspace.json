@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/peacock-flower.md",
-                "mode": "preview",
+                "file": "pages/statement.md",
+                "mode": "source",
                 "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "peacock-flower"
+              "title": "statement"
             }
           }
         ]
@@ -213,6 +213,7 @@
   },
   "active": "76b5931dde1cddce",
   "lastOpenFiles": [
+    "_portfolio/peacock-flower.md",
     "_site/portfolio/peacock-flower/index.html",
     "_site/portfolio/peacock-flower",
     "_site/portfolio/marigold/index.html",
@@ -234,7 +235,6 @@
     "_portfolio/wisteria-wisdom.md",
     "_portfolio/wood-rings.md",
     "_portfolio/lantana.md",
-    "_portfolio/peacock-flower.md",
     "_portfolio/sea_sand_dunes.md",
     "_portfolio/sea-colours.md",
     "_portfolio/scabiosa-meadow.md",
@@ -252,7 +252,6 @@
     "uploads/rsvp.png",
     "_site/newsletters/oxfordshire-artweeks-26/index.html",
     "_site/newsletters/oxfordshire-artweeks-26",
-    "_site/newsletters/oxfordshire-artweeks-2026/index.html",
     "_site/uploads/oxawlogo.jpg",
     "_site/uploads/marigold.jpg",
     "uploads/marigold.jpg",
