@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pages/statement.md",
-                "mode": "source",
+                "file": "_articles/exhibition-at-the-john-radcliffe-hospital.md",
+                "mode": "preview",
                 "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "statement"
+              "title": "exhibition-at-the-john-radcliffe-hospital"
             }
           }
         ]
@@ -213,6 +213,19 @@
   },
   "active": "76b5931dde1cddce",
   "lastOpenFiles": [
+    "_articles/2022-07-14-wallingford-to-pangbourne.md",
+    "_articles/exhibition-at-the-john-radcliffe-hospital.md",
+    "_articles/a-walk-up-wittenham-clumps.md",
+    "_articles/2019-07-14-the-lowest-bridge-on-the-thames.md",
+    "_articles/2019-08-09-air-draft.md",
+    "_articles/2019-06-08-maiden-voyage.md",
+    "_newsletters/oxfordshire-artweeks-26-pv.md",
+    "_articles/arcs-of-oxford.md",
+    "obsidian_templates/blog.md",
+    "obsidian_templates/newsletters.md",
+    "obsidian_templates/photograph.md",
+    "obsidian_templates/portfolio.md",
+    "pages/statement.md",
     "_portfolio/peacock-flower.md",
     "_site/portfolio/peacock-flower/index.html",
     "_site/portfolio/peacock-flower",
@@ -231,22 +244,10 @@
     "_portfolio/tupelo-orange.md",
     "_portfolio/beach-zones-beach-tones.md",
     "_portfolio/august-rain-vivid-colour.md",
-    "obsidian_templates/portfolio.md",
     "_portfolio/wisteria-wisdom.md",
     "_portfolio/wood-rings.md",
     "_portfolio/lantana.md",
     "_portfolio/sea_sand_dunes.md",
-    "_portfolio/sea-colours.md",
-    "_portfolio/scabiosa-meadow.md",
-    "_portfolio/wet-and-dry-shore.md",
-    "_portfolio/wild-river-sweep.md",
-    "_portfolio/palmatum.md",
-    "_portfolio/plume-thistle-arc.md",
-    "_portfolio/bluebell-woods.md",
-    "_newsletters/oxfordshire-artweeks-26-pv.md",
-    "_portfolio/marigold.md",
-    "_portfolio/cuckoo-flower.md",
-    "_portfolio/meadow-anemone.md",
     "uploads/squarebells.jpg",
     "_site/uploads/rsvp.png",
     "uploads/rsvp.png",
