@@ -12,11 +12,11 @@ published: true
 ---
 My local health service in Oxford, has always supported art, with various locations for the display of work. The John Radcliffe Hospital was the location (from 1988 to 2019) of my _Three Segments_ [sculpture](https://www.chrisjennings.net/projects/three_segments/), and I am now displaying some of my recent work in the corridor of the main building.
 
-Of course, I don't want to wish anyone a visit to hospital, but, if you happened to be there, then you can find the corridor along from the main entrance; just follow the signs for x-ray.
-
-![View along the corridor](https://live.staticflickr.com/65535/55379938091_0963d64de2_b.jpg)
+Of course, I don't want to wish anyone a visit to hospital, but, if you do happen to be there, then you can find the corridor along from the main entrance; just follow the signs for x-ray.
 
 <!--and-->
+
+![View along the corridor](https://live.staticflickr.com/65535/55379938091_0963d64de2_b.jpg)
 
 !['Palm Lily Arcs', 'Cuckoo Flower', and 'Marigold' at the John Radcliffe Hospital](https://live.staticflickr.com/65535/55380118549_7af41a9163_b.jpg)
 
