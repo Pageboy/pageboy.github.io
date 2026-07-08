@@ -8,8 +8,8 @@ date: 2022-02-08T09:40:51.247Z
 flickr_album: 72157710628205710
 tags:
   - boat
-image: 
-updated: 2025-08-18
+image:
+updated: 2026-07-08
 ---
 
 ### Here's What I know about this boat

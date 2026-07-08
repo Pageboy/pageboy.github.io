@@ -1,15 +1,15 @@
 ---
-title: Blog
+title: Articles
 popup: Read a mix of articles on the blog
 permalink: /articles/
 layout: blog
-image: uploads/log.jpg
+image:
 description:
 gridlayout: true
 order: 3
-hide: true
+hide: false
 date: 2025-09-14
 updated: 2025-11-06
 ---
 
-Gathering images and geometry with simple captions. Taking shapes and triangles for a walk in the landscape and around my photograph collections.
+Here are some articles and news items. You can also find my archive of notes made (mostly for teaching) on my [Notes site here](https://notes.chrisjennings.net). You will also spot some posts about cruising on the river with my boat _Perspectief_. 
