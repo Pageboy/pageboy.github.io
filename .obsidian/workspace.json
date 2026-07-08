@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "_articles/exhibition-at-the-john-radcliffe-hospital.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -213,6 +213,8 @@
   },
   "active": "76b5931dde1cddce",
   "lastOpenFiles": [
+    "_site/articles/exhibition-at-the-john-radcliffe-hospital/index.html",
+    "_site/articles/exhibition-at-the-john-radcliffe-hospital",
     "_articles/2022-07-14-wallingford-to-pangbourne.md",
     "_articles/exhibition-at-the-john-radcliffe-hospital.md",
     "_articles/a-walk-up-wittenham-clumps.md",
@@ -247,12 +249,10 @@
     "_portfolio/wisteria-wisdom.md",
     "_portfolio/wood-rings.md",
     "_portfolio/lantana.md",
-    "_portfolio/sea_sand_dunes.md",
     "uploads/squarebells.jpg",
     "_site/uploads/rsvp.png",
     "uploads/rsvp.png",
     "_site/newsletters/oxfordshire-artweeks-26/index.html",
-    "_site/newsletters/oxfordshire-artweeks-26",
     "_site/uploads/oxawlogo.jpg",
     "_site/uploads/marigold.jpg",
     "uploads/marigold.jpg",

@@ -28,7 +28,7 @@
             {% include post_info.html article=article %}
           </header>
           <div class="excerpt">
-              {{ article.excerpt | replace: "_uploads", "uploads" | replace: "uploads", "/uploads" | replace: "//", "/" }}
+              {{ article.excerpt | replace: "_uploads", "uploads" | replace: "uploads", "/uploads" }}
           </div>
       </span>
     </div>
