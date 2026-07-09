@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_articles/exhibition-at-the-john-radcliffe-hospital.md",
-                "mode": "source",
+                "file": "_portfolio/cypress.md",
+                "mode": "preview",
                 "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "exhibition-at-the-john-radcliffe-hospital"
+              "title": "cypress"
             }
           }
         ]
@@ -213,10 +213,11 @@
   },
   "active": "76b5931dde1cddce",
   "lastOpenFiles": [
+    "_portfolio/clover-skies.md",
+    "_articles/exhibition-at-the-john-radcliffe-hospital.md",
     "_site/articles/exhibition-at-the-john-radcliffe-hospital/index.html",
     "_site/articles/exhibition-at-the-john-radcliffe-hospital",
     "_articles/2022-07-14-wallingford-to-pangbourne.md",
-    "_articles/exhibition-at-the-john-radcliffe-hospital.md",
     "_articles/a-walk-up-wittenham-clumps.md",
     "_articles/2019-07-14-the-lowest-bridge-on-the-thames.md",
     "_articles/2019-08-09-air-draft.md",
@@ -252,7 +253,6 @@
     "uploads/squarebells.jpg",
     "_site/uploads/rsvp.png",
     "uploads/rsvp.png",
-    "_site/newsletters/oxfordshire-artweeks-26/index.html",
     "_site/uploads/oxawlogo.jpg",
     "_site/uploads/marigold.jpg",
     "uploads/marigold.jpg",

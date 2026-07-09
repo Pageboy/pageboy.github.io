@@ -12,6 +12,7 @@
   "update-time-on-edit",
   "auto-template-trigger",
   "vault-file-renamer",
-  "copy-document-as-html",
-  "pretty-properties"
+  "pretty-properties",
+  "copy-as-html",
+  "pubcopy"
 ]

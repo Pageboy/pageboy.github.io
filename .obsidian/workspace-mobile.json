@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/marigold.md",
+                "file": "_articles/exhibition-at-the-john-radcliffe-hospital.md",
                 "mode": "preview",
                 "source": true,
                 "backlinks": true,
@@ -28,10 +28,131 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "marigold"
+              "title": "exhibition-at-the-john-radcliffe-hospital"
+            }
+          },
+          {
+            "id": "110141ce2ee41cab",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_articles/exhibition-at-the-john-radcliffe-hospital.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "exhibition-at-the-john-radcliffe-hospital"
+            }
+          },
+          {
+            "id": "2d9f281a9ebf8e14",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_articles/exhibition-at-the-john-radcliffe-hospital.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "exhibition-at-the-john-radcliffe-hospital"
+            }
+          },
+          {
+            "id": "2c46262a15de7946",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_portfolio/olive-arcs.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "olive-arcs"
+            }
+          },
+          {
+            "id": "fc1799bbf341ea9f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_photographs/the-oxford-ox.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "the-oxford-ox"
+            }
+          },
+          {
+            "id": "fe13aa665a7410b5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_photographs/the-oxford-ox.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "the-oxford-ox"
             }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -46,7 +167,7 @@
         "state": {
           "type": "file-explorer",
           "state": {
-            "sortOrder": "alphabetical",
+            "sortOrder": "byCreatedTime",
             "autoReveal": false
           },
           "icon": "lucide-folder-closed",
@@ -208,14 +329,20 @@
       "templates:Insert template": false
     }
   },
-  "active": "5bc89c0b59696e19",
+  "active": "fe13aa665a7410b5",
   "lastOpenFiles": [
+    "_photographs/brickwork-in-toulouse.md",
+    "_photographs/killed_rabbit.md",
+    "_portfolio/lenten-rose.md",
+    "_portfolio/hibiscus.md",
+    "_portfolio/olive-arcs.md",
+    "bases/Portfolio.base",
+    "_articles/exhibition-at-the-john-radcliffe-hospital.md",
+    "_portfolio/marigold.md",
     "_portfolio/lantana.md",
     "_portfolio/cuckoo-flower.md",
     "_photographs/travels-in-mexico.md",
-    "_photographs/brickwork-in-toulouse.md",
     "_photographs/wall-in-sintra-portugal.md",
-    "_portfolio/hibiscus.md",
     "obsidian_templates/photograph.md",
     "_photographs/palm-tree-curves.md",
     "_photographs/light-entertainment.md",
@@ -237,19 +364,13 @@
     "newsletters/november-2025_fromcanvas.md",
     "newsletters/november-2025_canvas2doc-data/newdoc-node_8f0a14f5182fa571_fromcanvas.md",
     "newsletters/november-2025_canvas2doc-data/newdoc-node_3bbda5c240175ad4_fromcanvas.md",
-    "newsletters/november-2025_canvas2doc-data/newdoc-node_6ce341e5d6e950d4_fromcanvas.md",
-    "newsletters/november-2025_canvas2doc-data/newdoc-node_62a634ca49d1f317_fromcanvas.md",
     "newsletters/november-2025_canvas2doc-data",
-    "newsletters/November 25.md",
-    "newsletters/november-25.md",
-    "newsletters/untitled.md",
     "_site/photographs/dorchester-abbey/index.html",
     "_site/photographs/dorchester-abbey",
     "_site/Untitled.canvas",
     "Untitled.canvas",
     "_site/photographs/two-windows-on-paxos/index.html",
     "_site/photographs/two-windows-on-paxos",
-    "_site/Untitled.base",
     "uploads/newsletterbanner.png",
     "uploads/newsletterbannergreen.png",
     "_site/uploads/poppy.jpg",

@@ -1,0 +1,769 @@
+/* Ribbon icon */
+.substack-ribbon-class {
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+.substack-ribbon-class:hover {
+    color: var(--text-normal);
+}
+
+/* Modal styling */
+.substack-modal-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.substack-modal-content button {
+    margin-top: 15px;
+    padding: 8px 16px;
+    background-color: var(--interactive-accent);
+    color: var(--text-on-accent);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.substack-modal-content button:hover {
+    background-color: var(--interactive-accent-hover);
+}
+
+/* Settings tab styling */
+.substack-settings .setting-item {
+    border-bottom: 1px solid var(--background-modifier-border);
+    padding: 18px 0;
+}
+
+.substack-settings .setting-item:last-child {
+    border-bottom: none;
+}
+
+.substack-settings .setting-item-info {
+    margin-bottom: 8px;
+}
+
+.substack-settings .setting-item-name {
+    font-weight: 500;
+    color: var(--text-normal);
+}
+
+.substack-settings .setting-item-description {
+    color: var(--text-muted);
+    font-size: 0.9em;
+    margin-top: 4px;
+}
+
+/* Version section styling */
+.substack-version-wrapper {
+    padding-top: 20px;
+    border-top: 1px solid var(--background-modifier-border);
+    text-align: center;
+}
+
+.substack-version-content {
+    padding: 20px 0;
+}
+
+.substack-version-name {
+    font-weight: 500;
+    color: var(--text-normal);
+    margin: 0 0 8px 0;
+}
+
+.substack-version-author {
+    color: var(--text-muted);
+    margin: 0 0 8px 0;
+}
+
+.substack-version-number {
+    color: var(--text-muted);
+    font-size: 0.85em;
+    opacity: 0.8;
+}
+
+/* Input full width */
+.substack-input-full-width {
+    width: 100%;
+}
+
+/* Muted setting for less prominent options */
+.substack-setting-muted {
+    opacity: 0.7;
+}
+
+/* Post Composer Modal styling */
+.substack-field-container {
+    margin-bottom: 1rem;
+}
+
+.substack-field-container label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--text-normal);
+}
+
+.substack-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    background-color: var(--background-primary);
+    color: var(--text-normal);
+}
+
+.substack-input:focus {
+    border-color: var(--interactive-accent);
+    outline: none;
+}
+
+.substack-select {
+    width: 100%;
+    padding: 8px 12px;
+    min-height: 36px;
+    line-height: 1.4;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    background-color: var(--background-primary);
+    color: var(--text-normal);
+    font-size: 14px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 16px;
+    padding-right: 32px;
+}
+
+.substack-select:focus {
+    border-color: var(--interactive-accent);
+    outline: none;
+}
+
+.substack-preview-container {
+    margin-bottom: 1rem;
+}
+
+.substack-preview {
+    max-height: 150px;
+    overflow-y: auto;
+    padding: 12px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    background-color: var(--background-secondary);
+    font-size: 0.9em;
+    color: var(--text-muted);
+    white-space: pre-wrap;
+}
+
+.substack-button-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.substack-cancel-button {
+    flex: 1;
+    padding: 8px 16px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    background-color: var(--background-primary);
+    color: var(--text-normal);
+    cursor: pointer;
+}
+
+.substack-cancel-button:hover {
+    background-color: var(--background-secondary);
+}
+
+.substack-draft-button {
+    flex: 1;
+    padding: 8px 16px;
+    border: 1px solid var(--interactive-accent);
+    border-radius: 4px;
+    background-color: var(--background-primary);
+    color: var(--interactive-accent);
+    cursor: pointer;
+}
+
+.substack-draft-button:hover {
+    background-color: var(--interactive-accent);
+    color: var(--text-on-accent);
+}
+
+.substack-draft-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.substack-publish-button {
+    flex: 1;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--interactive-accent);
+    color: var(--text-on-accent);
+    cursor: pointer;
+}
+
+.substack-publish-button:hover {
+    background-color: var(--interactive-accent-hover);
+}
+
+.substack-publish-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.substack-note-text {
+    margin-top: 1rem;
+    font-size: 0.9em;
+    color: var(--text-muted);
+}
+
+/* Label row with refresh button */
+.substack-label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.substack-refresh-button {
+    padding: 2px 8px;
+    font-size: 0.8em;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    background-color: var(--background-primary);
+    color: var(--text-muted);
+    cursor: pointer;
+}
+
+.substack-refresh-button:hover {
+    background-color: var(--background-secondary);
+    color: var(--text-normal);
+}
+
+.substack-refresh-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* WordPress Post Composer Modal styling */
+.wordpress-field-container {
+    margin-bottom: 1rem;
+}
+
+.wordpress-field-container label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--text-normal);
+}
+
+.wordpress-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    background-color: var(--background-primary);
+    color: var(--text-normal);
+}
+
+.wordpress-input:focus {
+    border-color: var(--interactive-accent);
+    outline: none;
+}
+
+.wordpress-select {
+    width: 100%;
+    padding: 8px 12px;
+    min-height: 36px;
+    line-height: 1.4;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    background-color: var(--background-primary);
+    color: var(--text-normal);
+    font-size: 14px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 16px;
+    padding-right: 32px;
+}
+
+.wordpress-select:focus {
+    border-color: var(--interactive-accent);
+    outline: none;
+}
+
+.wordpress-preview-container {
+    margin-bottom: 1rem;
+}
+
+.wordpress-preview {
+    max-height: 150px;
+    overflow-y: auto;
+    padding: 12px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    background-color: var(--background-secondary);
+    font-size: 0.9em;
+    color: var(--text-muted);
+    white-space: pre-wrap;
+}
+
+.wordpress-button-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.wordpress-cancel-button,
+.wordpress-draft-button,
+.wordpress-publish-button {
+    min-width: 120px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    flex: 1;
+}
+
+.wordpress-cancel-button {
+    border: 1px solid var(--background-modifier-border);
+    background-color: var(--background-primary);
+    color: var(--text-normal);
+}
+
+.wordpress-cancel-button:hover {
+    background-color: var(--background-secondary);
+}
+
+.wordpress-draft-button {
+    border: 1px solid var(--interactive-accent);
+    background-color: var(--background-primary);
+    color: var(--interactive-accent);
+}
+
+.wordpress-draft-button:hover {
+    background-color: var(--interactive-accent);
+    color: var(--text-on-accent);
+}
+
+.wordpress-draft-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.wordpress-publish-button {
+    border: none;
+    background-color: var(--interactive-accent);
+    color: var(--text-on-accent);
+}
+
+.wordpress-publish-button:hover {
+    background-color: var(--interactive-accent-hover);
+}
+
+.wordpress-publish-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.wordpress-note-text {
+    margin-top: 1rem;
+    font-size: 0.9em;
+    color: var(--text-muted);
+}
+
+/* WordPress Server Settings */
+.wordpress-server-container {
+    margin-left: 1rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--background-modifier-border);
+}
+
+.wordpress-server-container .setting-item {
+    padding: 8px 0;
+}
+
+/* WordPress Modal Buttons */
+.wordpress-modal-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 1.5rem;
+    justify-content: flex-end;
+}
+
+.wordpress-modal-buttons button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.wordpress-modal-buttons button:first-child {
+    border: 1px solid var(--background-modifier-border);
+    background-color: var(--background-primary);
+    color: var(--text-normal);
+}
+
+.wordpress-modal-buttons button:first-child:hover {
+    background-color: var(--background-secondary);
+}
+
+/* WordPress Category Textarea */
+.wordpress-category-textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 8px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    background-color: var(--background-primary);
+    color: var(--text-normal);
+    font-family: monospace;
+    font-size: 12px;
+}
+
+/* LinkedIn Post Composer Modal styling */
+.linkedin-field-container {
+    margin-bottom: 1rem;
+}
+
+.linkedin-field-container label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--text-normal);
+}
+
+.linkedin-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    background-color: var(--background-primary);
+    color: var(--text-normal);
+}
+
+.linkedin-input:focus {
+    border-color: var(--interactive-accent);
+    outline: none;
+}
+
+.linkedin-select {
+    width: 100%;
+    padding: 8px 12px;
+    min-height: 36px;
+    line-height: 1.4;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    background-color: var(--background-primary);
+    color: var(--text-normal);
+    font-size: 14px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 16px;
+    padding-right: 32px;
+}
+
+.linkedin-select:focus {
+    border-color: var(--interactive-accent);
+    outline: none;
+}
+
+.linkedin-preview {
+    width: 100%;
+    min-height: 200px;
+    padding: 12px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    background-color: var(--background-secondary);
+    font-size: 0.9em;
+    color: var(--text-normal);
+    resize: vertical;
+    font-family: inherit;
+}
+
+.linkedin-counter {
+    margin-top: 0.5rem;
+    font-size: 0.85em;
+    color: var(--text-muted);
+    text-align: right;
+}
+
+.linkedin-button-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.linkedin-cancel-button {
+    flex: 1;
+    padding: 8px 16px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    background-color: var(--background-primary);
+    color: var(--text-normal);
+    cursor: pointer;
+}
+
+.linkedin-cancel-button:hover {
+    background-color: var(--background-secondary);
+}
+
+.linkedin-publish-button {
+    flex: 1;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #0a66c2;
+    color: white;
+    cursor: pointer;
+}
+
+.linkedin-publish-button:hover {
+    background-color: #004182;
+}
+
+.linkedin-publish-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.linkedin-note-text {
+    margin-top: 1rem;
+    font-size: 0.9em;
+    color: var(--text-muted);
+}
+
+/* LinkedIn ribbon icon */
+.linkedin-ribbon-class {
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+.linkedin-ribbon-class:hover {
+    color: #0a66c2;
+}
+
+/* LinkedIn checkbox inline */
+.linkedin-checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.linkedin-checkbox-label {
+    margin: 0;
+}
+
+/* Notebook Selection Modal */
+.notebook-selection-modal {
+    padding: 1rem;
+}
+
+.notebook-selection-modal h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.notebook-selection-desc {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.notebook-list {
+    margin-bottom: 1rem;
+}
+
+.notebook-list h4 {
+    font-size: 0.85em;
+    color: var(--text-muted);
+    margin: 0.5rem 0;
+}
+
+.notebook-btn {
+    display: block;
+    width: 100%;
+    padding: 8px 12px;
+    margin: 4px 0;
+    background: var(--background-secondary);
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: left;
+    color: var(--text-normal);
+    transition: background 0.15s ease;
+}
+
+.notebook-btn:hover {
+    background: var(--background-modifier-hover);
+}
+
+.fallback-btn {
+    opacity: 0.7;
+}
+
+.notebook-cancel {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--background-modifier-border);
+}
+
+.cancel-btn {
+    background: transparent;
+    color: var(--text-muted);
+}
+
+.cancel-btn:hover {
+    color: var(--text-normal);
+}
+
+/* Custom notebook input */
+.notebook-custom-input {
+    display: flex;
+    gap: 8px;
+}
+
+.notebook-input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    background: var(--background-primary);
+    color: var(--text-normal);
+}
+
+/* Pipeline Config Modal */
+.pipeline-config-modal {
+    padding: 1rem;
+    min-width: 350px;
+}
+
+.pipeline-config-modal h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.config-section {
+    margin-bottom: 1.5rem;
+}
+
+.config-section h4 {
+    font-size: 0.9em;
+    color: var(--text-muted);
+    margin: 0 0 0.5rem 0;
+}
+
+.config-select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    background: var(--background-primary);
+    color: var(--text-normal);
+    font-size: 14px;
+}
+
+.config-custom {
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85em;
+    color: var(--text-muted);
+}
+
+.config-input {
+    flex: 1;
+    padding: 6px 10px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    background: var(--background-primary);
+    color: var(--text-normal);
+    font-size: 13px;
+}
+
+.config-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--background-modifier-border);
+}
+
+.config-btn {
+    padding: 8px 16px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    background: var(--background-secondary);
+    color: var(--text-normal);
+    cursor: pointer;
+}
+
+.config-btn:hover {
+    background: var(--background-modifier-hover);
+}
+
+.config-btn-primary {
+    background: var(--interactive-accent);
+    color: var(--text-on-accent);
+    border-color: var(--interactive-accent);
+}
+
+.config-btn-primary:hover {
+    background: var(--interactive-accent-hover);
+}
+
+/* New notebook modal */
+.new-notebook-modal {
+    padding: 1rem;
+    min-width: 400px;
+}
+
+.notebook-uuid-input {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 1rem 0;
+}
+
+.url-input {
+    font-family: monospace;
+    font-size: 12px;
+}
+
+/* Shared utilities */
+.batch-notice-container { max-height: 400px; overflow-y: auto; }
+.batch-notice-header { font-weight: bold; margin-bottom: 8px; border-bottom: 1px solid var(--text-muted); padding-bottom: 4px; }
+.batch-notice-line { padding: 2px 0; }
+.settings-cursor-text { cursor: text; }
+.batch-publish-buttons { display: flex; gap: 10px; justify-content: flex-end; margin-top: 20px; }
+
+/* WordPress */
+.wordpress-info-banner { background: var(--background-modifier-success, #d4edda); color: var(--text-success, #155724); padding: 8px 12px; border-radius: 4px; margin-bottom: 12px; font-size: 13px; }
+.wordpress-warning-banner { background: var(--background-modifier-warning, #fff3cd); color: var(--text-warning, #856404); padding: 8px 12px; border-radius: 4px; margin-bottom: 12px; font-size: 13px; }
+.wordpress-option-container { margin-top: 12px; display: flex; align-items: center; gap: 8px; }
+.wordpress-category-hidden { display: none; }
+
+/* Substack */
+.substack-section-hidden { display: none; }
+
+/* LinkedIn */
+.linkedin-section-hidden { display: none; }
+.linkedin-counter-warning { color: orange; }
+.linkedin-counter-error { color: red; }
+
+/* TikZ rendering */
+.tikz-render-container { position: fixed; left: -9999px; top: -9999px; }

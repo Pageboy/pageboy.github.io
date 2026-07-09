@@ -1,0 +1,7 @@
+{
+  "stripFrontmatter": false,
+  "stripTags": true,
+  "stripWikilinks": true,
+  "imageHandling": "always-url",
+  "showNotification": true
+}
