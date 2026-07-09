@@ -133,7 +133,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_photographs/the-oxford-ox.md",
+                "file": "_photographs/brickwork-in-toulouse.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -148,7 +148,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "the-oxford-ox"
+              "title": "brickwork-in-toulouse"
             }
           }
         ],
@@ -289,16 +289,6 @@
         }
       },
       {
-        "id": "43d4bdbda7573bcb",
-        "type": "leaf",
-        "state": {
-          "type": "side-panel-control-view",
-          "state": {},
-          "icon": "viewIcon",
-          "title": "Markdown-Autocomplete"
-        }
-      },
-      {
         "id": "9f9b4eda0356dd6d",
         "type": "leaf",
         "state": {
@@ -309,9 +299,19 @@
           "icon": "lucide-file-signature",
           "title": "Footnotes"
         }
+      },
+      {
+        "id": "e02b2ab4d210cee0",
+        "type": "leaf",
+        "state": {
+          "type": "side-panel-control-view",
+          "state": {},
+          "icon": "viewIcon",
+          "title": "Markdown-Autocomplete"
+        }
       }
     ],
-    "currentTab": 2
+    "currentTab": 5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -331,6 +331,11 @@
   },
   "active": "fe13aa665a7410b5",
   "lastOpenFiles": [
+    "_photographs/the-oxford-ox.md",
+    "_photographs/ribwort.md",
+    "_site/photographs/ribwort",
+    "uploads/_N726950 1.jpeg",
+    "uploads/_N726950.jpeg",
     "_photographs/brickwork-in-toulouse.md",
     "_photographs/killed_rabbit.md",
     "_portfolio/lenten-rose.md",
@@ -361,16 +366,12 @@
     "_portfolio/3riangles_reds_yellows.md",
     "newsletters/Untitled.canvas",
     "newsletters/November 2025.canvas",
-    "newsletters/november-2025_fromcanvas.md",
-    "newsletters/november-2025_canvas2doc-data/newdoc-node_8f0a14f5182fa571_fromcanvas.md",
-    "newsletters/november-2025_canvas2doc-data/newdoc-node_3bbda5c240175ad4_fromcanvas.md",
     "newsletters/november-2025_canvas2doc-data",
     "_site/photographs/dorchester-abbey/index.html",
     "_site/photographs/dorchester-abbey",
     "_site/Untitled.canvas",
     "Untitled.canvas",
     "_site/photographs/two-windows-on-paxos/index.html",
-    "_site/photographs/two-windows-on-paxos",
     "uploads/newsletterbanner.png",
     "uploads/newsletterbannergreen.png",
     "_site/uploads/poppy.jpg",
@@ -379,8 +380,6 @@
     "_site/uploads/tim-boote-unsplash.jpg",
     "_site/uploads/fb148110-2532-4402-8ac5-a80e0c591af1_1_102_a.jpeg",
     "_site/uploads/IMG_1344.jpeg",
-    "_site/uploads/img_4485.jpeg",
-    "uploads/IMG_1344.jpeg",
     "docs/Teaching/DigitalProduct/Assignment 2.canvas",
     "docs/Teaching/DigitalProduct/assignment1.canvas"
   ]
