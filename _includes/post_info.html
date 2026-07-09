@@ -1,5 +1,8 @@
 {%- assign date = include.post.date -%}
 <div class="post-info">
+   {%- if page.source -%}
+    <p class="meta"><b>Source:</b> {{ page.source }}</p>
+   {%- endif -%}
     <p class="meta">
       {{ date | date: "%B %-d, %Y" }}
     </p>
