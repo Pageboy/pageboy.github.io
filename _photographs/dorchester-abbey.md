@@ -1,10 +1,10 @@
 ---
 date: 2025-09-22
-updated: 2025-10-11
+updated: 2026-07-09
 title: Dorchester Abbey Arched recess
 image: https://live.staticflickr.com/65535/54802592175_bc75724b95_h.jpg
 caption: Arched recess in the corner of the building
-source: Nikon 7ii
+source: Nikon 7ii 40mm
 layout: photo
 excerpt_separator: <!--and-->
 tags:

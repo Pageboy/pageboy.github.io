@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/cypress.md",
+                "file": "_photographs/ribwort.md",
                 "mode": "preview",
                 "source": true,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "cypress"
+              "title": "ribwort"
             }
           }
         ]
@@ -50,7 +50,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical",
+                "sortOrder": "byModifiedTime",
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
@@ -208,14 +208,16 @@
       "audio-recorder:Start/stop recording": false,
       "obsidian-markdown-formatting-assistant-plugin:Open Markdown Formatting Assistant": false,
       "obsidian-git:Open Git source control": false,
-      "templates:Insert template": false,
-      "content-publisher:Publish to Substack": false
+      "templates:Insert template": false
     }
   },
   "active": "76b5931dde1cddce",
   "lastOpenFiles": [
+    "_site/photographs/palm-tree-curves/index.html",
+    "_site/photographs/palm-tree-curves",
     "_site/photographs/ribwort/index.html",
     "_site/photographs/ribwort",
+    "_portfolio/cypress.md",
     "uploads/_N726950 1.jpeg",
     "uploads/_N726950.jpeg",
     "_photographs/ribwort.md",
@@ -242,8 +244,6 @@
     "_site/portfolio/marigold/index.html",
     "_site/portfolio/marigold",
     "_site/portfolio/bluebell-woods/index.html",
-    "_site/portfolio/bluebell-woods",
-    "_site/newsletters/oxfordshire-artweeks-26-pv/index.html",
     "_site/uploads/squarebells.jpg",
     "_portfolio/asphalt-series-3.md",
     "_portfolio/rainday.md",
@@ -252,7 +252,6 @@
     "_portfolio/shore-shallows.md",
     "_portfolio/tupelo-orange.md",
     "_portfolio/beach-zones-beach-tones.md",
-    "_portfolio/august-rain-vivid-colour.md",
     "uploads/squarebells.jpg",
     "_site/uploads/rsvp.png",
     "uploads/rsvp.png",

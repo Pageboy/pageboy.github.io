@@ -8,6 +8,7 @@ tags:
   - nature
   - photography
 published: true
-updated: 2025-11-05
+updated: 2026-07-09
+source: Nikon 7ii 24-120mm f4
 ---
 Source: Nikon 7ii
