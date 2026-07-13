@@ -17,4 +17,4 @@ nft: https://opensea.io/item/ethereum/0xc23d44ad0140e5b6332fc7ce32f48ce75b0a4017
 ---
 Exotic plants add richness to our daily walks through the neighbourhood. Where front gardens have not been surrendered to large cars—a growing trend with the rise of electric vehicles—colourful blooms spill over fences, releasing their fragrance as we pass.
 
-Here, I have used the vibrant magenta-pink of the _hydrangea_ to fill these sweeping arcs, setting them in vivid contrast against the varied greens of the large leaves that dominate the photograph.
+Here, I have used the vibrant magenta-pink of the _hydrangea_ to fill these sweeping arcs, setting them in vivid contrast against the varied greens of the large leaves that dominate in the photograph.
