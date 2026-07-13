@@ -11,7 +11,7 @@ excerpt_separator: <!--and-->
 solo: false
 caption: Magenta-pink of the Lacecap
 forsale:
-published: false
+published: true
 flickr_share: https://flic.kr/p/2soF6QD
 nft: https://opensea.io/item/ethereum/0xc23d44ad0140e5b6332fc7ce32f48ce75b0a4017/5
 ---
