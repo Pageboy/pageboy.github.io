@@ -37,16 +37,16 @@ var import_obsidian25 = require("obsidian");
 // src/Settings/metaEditSettingsTab.ts
 var import_obsidian3 = require("obsidian");
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/version.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/version.js
 var PUBLIC_VERSION = "5";
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/disclose-version.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/disclose-version.js
 var _a;
 if (typeof window !== "undefined") {
   ((_a = window.__svelte ?? (window.__svelte = {})).v ?? (_a.v = /* @__PURE__ */ new Set())).add(PUBLIC_VERSION);
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/constants.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/constants.js
 var EACH_ITEM_REACTIVE = 1;
 var EACH_INDEX_REACTIVE = 1 << 1;
 var EACH_IS_CONTROLLED = 1 << 2;
@@ -78,7 +78,7 @@ var NAMESPACE_HTML = "http://www.w3.org/1999/xhtml";
 var node_env = globalThis.process?.env?.NODE_ENV;
 var dev_fallback_default = node_env && !node_env.toLowerCase().startsWith("prod");
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/shared/utils.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/shared/utils.js
 var is_array = Array.isArray;
 var index_of = Array.prototype.indexOf;
 var includes = Array.prototype.includes;
@@ -108,7 +108,7 @@ function deferred() {
   return { promise, resolve, reject };
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/constants.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/constants.js
 var DERIVED = 1 << 1;
 var EFFECT = 1 << 2;
 var RENDER_EFFECT = 1 << 3;
@@ -159,7 +159,7 @@ var IS_XHTML = (
 var TEXT_NODE = 3;
 var COMMENT_NODE = 8;
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/shared/errors.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/shared/errors.js
 function invariant_violation(message) {
   if (dev_fallback_default) {
     const error = new Error(`invariant_violation
@@ -172,7 +172,7 @@ https://svelte.dev/e/invariant_violation`);
   }
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/errors.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/errors.js
 function async_derived_orphan() {
   if (dev_fallback_default) {
     const error = new Error(`async_derived_orphan
@@ -350,7 +350,7 @@ https://svelte.dev/e/svelte_boundary_reset_onerror`);
   }
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/warnings.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/warnings.js
 var bold = "font-weight: bold";
 var normal = "font-weight: normal";
 function await_reactivity_loss(name) {
@@ -448,7 +448,7 @@ https://svelte.dev/e/svelte_boundary_reset_noop`, bold, normal);
   }
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/dom/hydration.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/hydration.js
 var hydrating = false;
 function set_hydrating(value) {
   hydrating = value;
@@ -519,7 +519,7 @@ function read_hydration_instruction(node) {
   );
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/reactivity/equality.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/reactivity/equality.js
 function equals(value) {
   return value === this.v;
 }
@@ -530,12 +530,12 @@ function safe_equals(value) {
   return !safe_not_equal(value, this.v);
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/flags/index.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/flags/index.js
 var async_mode_flag = false;
 var legacy_mode_flag = false;
 var tracing_mode_flag = false;
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/shared/warnings.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/shared/warnings.js
 var bold2 = "font-weight: bold";
 var normal2 = "font-weight: normal";
 function state_snapshot_uncloneable(properties) {
@@ -554,7 +554,7 @@ https://svelte.dev/e/state_snapshot_uncloneable`,
   }
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/shared/clone.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/shared/clone.js
 var empty = [];
 function snapshot(value, skip_warning = false, no_tojson = false) {
   if (dev_fallback_default && !skip_warning) {
@@ -663,7 +663,7 @@ function clone(value, cloned, path, paths, original = null, no_tojson = false) {
   }
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/dev/tracing.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dev/tracing.js
 var tracing_expressions = null;
 function tag(source2, label) {
   source2.label = label;
@@ -675,7 +675,7 @@ function tag_proxy(value, label) {
   return value;
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/shared/dev.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/shared/dev.js
 function get_error(label) {
   const error = new Error();
   const stack2 = get_stack();
@@ -725,7 +725,7 @@ function invariant(condition, message) {
   if (!condition) invariant_violation(message);
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/context.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/context.js
 var component_context = null;
 function set_component_context(context) {
   component_context = context;
@@ -784,7 +784,7 @@ function is_runes() {
   return !legacy_mode_flag || component_context !== null && component_context.l === null;
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/dom/task.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/task.js
 var micro_tasks = [];
 function run_micro_tasks() {
   var tasks = micro_tasks;
@@ -806,7 +806,7 @@ function flush_tasks() {
   }
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/error-handling.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/error-handling.js
 var adjustments = /* @__PURE__ */ new WeakMap();
 function handle_error(error) {
   var effect2 = active_effect;
@@ -879,7 +879,7 @@ function apply_adjustments(error) {
   }
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/reactivity/status.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/reactivity/status.js
 var STATUS_MASK = ~(DIRTY | MAYBE_DIRTY | CLEAN);
 function set_signal_status(signal, status) {
   signal.f = signal.f & STATUS_MASK | status;
@@ -892,7 +892,7 @@ function update_derived_status(derived2) {
   }
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/reactivity/utils.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/reactivity/utils.js
 function clear_marked(deps) {
   if (deps === null) return;
   for (const dep of deps) {
@@ -916,7 +916,7 @@ function defer_effect(effect2, dirty_effects, maybe_dirty_effects) {
   set_signal_status(effect2, CLEAN);
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/reactivity/store.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/reactivity/store.js
 var legacy_is_updating_store = false;
 var is_store_binding = false;
 function capture_store_binding(fn) {
@@ -929,7 +929,7 @@ function capture_store_binding(fn) {
   }
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/reactivity/create-subscriber.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/reactivity/create-subscriber.js
 function createSubscriber(start) {
   let subscribers = 0;
   let version = source(0);
@@ -960,7 +960,7 @@ function createSubscriber(start) {
   };
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/dom/blocks/boundary.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/blocks/boundary.js
 var flags = EFFECT_TRANSPARENT | EFFECT_PRESERVED;
 function boundary(node, props, children, transform_error) {
   new Boundary(node, props, children, transform_error);
@@ -1381,7 +1381,7 @@ handle_error_fn = function(error) {
   });
 };
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/reactivity/async.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/reactivity/async.js
 function flatten(blockers, sync, async2, fn) {
   const d = is_runes() ? derived : derived_safe_equal;
   var pending3 = blockers.filter((b) => !b.settled);
@@ -1488,7 +1488,7 @@ function increment_pending() {
   };
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/reactivity/deriveds.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/reactivity/deriveds.js
 var reactivity_loss_tracker = null;
 function set_reactivity_loss_tracker(v) {
   reactivity_loss_tracker = v;
@@ -1766,7 +1766,7 @@ function unfreeze_derived_effects(derived2) {
   }
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/reactivity/batch.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/reactivity/batch.js
 var first_batch = null;
 var last_batch = null;
 var current_batch = null;
@@ -2623,7 +2623,7 @@ function reset_all(effect2) {
   }
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/reactivity/sources.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/reactivity/sources.js
 var eager_effects = /* @__PURE__ */ new Set();
 var old_values = /* @__PURE__ */ new Map();
 function set_eager_effects(v) {
@@ -2809,7 +2809,7 @@ function mark_reactions(signal, status, updated_during_traversal) {
   }
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/proxy.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/proxy.js
 var regex_is_valid_identifier = /^[a-zA-Z_$][a-zA-Z_$0-9]*$/;
 function proxy(value) {
   if (typeof value !== "object" || value === null || STATE_SYMBOL in value) {
@@ -3091,7 +3091,7 @@ function inspectable_array(array) {
   });
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/dev/equality.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dev/equality.js
 function init_array_prototype_warnings() {
   const array_prototype2 = Array.prototype;
   const cleanup = Array.__svelte_cleanup;
@@ -3142,7 +3142,7 @@ function init_array_prototype_warnings() {
   };
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/dom/operations.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/operations.js
 var $window;
 var $document;
 var is_firefox;
@@ -3303,7 +3303,7 @@ function merge_text_nodes(text2) {
   }
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/dom/elements/misc.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/elements/misc.js
 var listening_to_form_reset = false;
 function add_form_reset_listener() {
   if (!listening_to_form_reset) {
@@ -3329,7 +3329,7 @@ function add_form_reset_listener() {
   }
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/dom/elements/bindings/shared.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/elements/bindings/shared.js
 function without_reactive_context(fn) {
   var previous_reaction = active_reaction;
   var previous_effect = active_effect;
@@ -3359,7 +3359,7 @@ function listen_to_event_and_reset_event(element2, event2, handler, on_reset = h
   add_form_reset_listener();
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/reactivity/effects.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/reactivity/effects.js
 function validate_effect(rune) {
   if (active_effect === null) {
     if (active_reaction === null) {
@@ -3703,10 +3703,10 @@ function move_effect(effect2, fragment) {
   }
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/legacy.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/legacy.js
 var captured_signals = null;
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/runtime.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/runtime.js
 var is_updating_effect = false;
 var is_destroying_effect = false;
 function set_is_destroying_effect(value) {
@@ -4199,7 +4199,7 @@ function deep_read(value, visited = /* @__PURE__ */ new Set()) {
   }
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/dom/elements/events.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/elements/events.js
 var event_symbol = /* @__PURE__ */ Symbol("events");
 var all_registered_events = /* @__PURE__ */ new Set();
 var root_event_handles = /* @__PURE__ */ new Set();
@@ -4333,7 +4333,7 @@ function handle_event_propagation(event2) {
   }
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/dom/reconciler.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/reconciler.js
 var policy = (
   // We gotta write it like this because after downleveling the pure comment may end up in the wrong location
   globalThis?.window?.trustedTypes && /* @__PURE__ */ globalThis.window.trustedTypes.createPolicy("svelte-trusted-html", {
@@ -4355,7 +4355,7 @@ function create_fragment_from_html(html2) {
   return elem.content;
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/dom/template.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/template.js
 function assign_nodes(start, end) {
   var effect2 = (
     /** @type {Effect} */
@@ -4422,7 +4422,7 @@ function append(anchor, dom) {
   );
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/utils.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/utils.js
 var DOM_BOOLEAN_ATTRIBUTES = [
   "allowfullscreen",
   "async",
@@ -4504,7 +4504,7 @@ var RUNES = (
   ]
 );
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/render.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/render.js
 var should_intro = true;
 function set_text(text2, value) {
   var _a2;
@@ -4681,7 +4681,7 @@ function unmount(component2, options) {
   return Promise.resolve();
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/dom/blocks/branches.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/blocks/branches.js
 var _batches, _onscreen, _offscreen, _outroing, _transition, _commit, _discard;
 var BranchManager = class {
   /**
@@ -4862,7 +4862,7 @@ _transition = new WeakMap();
 _commit = new WeakMap();
 _discard = new WeakMap();
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/index-client.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/index-client.js
 if (dev_fallback_default) {
   let throw_rune_error = function(rune) {
     if (!(rune in globalThis)) {
@@ -4890,7 +4890,7 @@ if (dev_fallback_default) {
   throw_rune_error("$bindable");
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/dev/css.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dev/css.js
 var all_styles = /* @__PURE__ */ new Map();
 function register_style(hash2, style) {
   var styles = all_styles.get(hash2);
@@ -4901,7 +4901,7 @@ function register_style(hash2, style) {
   styles.add(style);
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/dom/blocks/if.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/blocks/if.js
 function if_block(node, fn, elseif = false) {
   var marker;
   if (hydrating) {
@@ -4940,7 +4940,7 @@ function if_block(node, fn, elseif = false) {
   }, flags2);
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/dom/blocks/each.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/blocks/each.js
 function pause_effects(state2, to_destroy, controlled_anchor) {
   var transitions = [];
   var length = to_destroy.length;
@@ -5414,7 +5414,7 @@ function validate_each_keys(array, key_fn) {
   }
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/dom/css.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/css.js
 function append_styles(anchor, css) {
   effect(() => {
     var root7 = anchor.getRootNode();
@@ -5441,7 +5441,7 @@ function append_styles(anchor, css) {
   });
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/dom/elements/actions.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/elements/actions.js
 function action(dom, action2, get_value) {
   effect(() => {
     var payload = untrack(() => action2(dom, get_value?.()) || {});
@@ -5470,7 +5470,7 @@ function action(dom, action2, get_value) {
   });
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/shared/attributes.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/shared/attributes.js
 var whitespace = [..." 	\n\r\f\xA0\v\uFEFF"];
 function to_class(value, hash2, directives) {
   var classname = value == null ? "" : "" + value;
@@ -5498,7 +5498,7 @@ function to_class(value, hash2, directives) {
   return classname === "" ? null : classname;
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/dom/elements/class.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/elements/class.js
 function set_class(dom, is_html, value, hash2, prev_classes, next_classes) {
   var prev = (
     /** @type {any} */
@@ -5527,7 +5527,7 @@ function set_class(dom, is_html, value, hash2, prev_classes, next_classes) {
   return next_classes;
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/dom/elements/bindings/select.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/elements/bindings/select.js
 function select_option(select, value, mounting = false) {
   if (select.multiple) {
     if (value == void 0) {
@@ -5622,7 +5622,7 @@ function get_option_value(option) {
   }
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/dom/elements/attributes.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/elements/attributes.js
 var IS_CUSTOM_ELEMENT = /* @__PURE__ */ Symbol("is custom element");
 var IS_HTML = /* @__PURE__ */ Symbol("is html");
 var LINK_TAG = IS_XHTML ? "link" : "LINK";
@@ -5760,7 +5760,7 @@ function srcset_url_equal(element2, srcset) {
   );
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/dom/elements/bindings/input.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/elements/bindings/input.js
 function bind_value(input, get3, set2 = get3) {
   var batches = /* @__PURE__ */ new WeakSet();
   listen_to_event_and_reset_event(input, "input", async (is_reset) => {
@@ -5854,7 +5854,7 @@ function to_number(value) {
   return value === "" ? null : +value;
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/dom/elements/bindings/this.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/elements/bindings/this.js
 function is_bound_this(bound_value, element_or_component) {
   return bound_value === element_or_component || bound_value?.[STATE_SYMBOL] === element_or_component;
 }
@@ -5902,7 +5902,7 @@ function bind_this(element_or_component = {}, update2, get_value, get_parts) {
   return element_or_component;
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/reactivity/props.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/reactivity/props.js
 function prop(props, key2, flags2, fallback2) {
   var runes = !legacy_mode_flag || (flags2 & PROPS_IS_RUNES) !== 0;
   var bindable = (flags2 & PROPS_IS_BINDABLE) !== 0;
@@ -6034,7 +6034,7 @@ function prop(props, key2, flags2, fallback2) {
   );
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/legacy/legacy-client.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/legacy/legacy-client.js
 function createClassComponent(options) {
   return new Svelte4Component(options);
 }
@@ -6134,7 +6134,7 @@ var Svelte4Component = class {
 _events = new WeakMap();
 _instance = new WeakMap();
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.62.0/node_modules/svelte/src/internal/client/dom/elements/custom-element.js
+// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/elements/custom-element.js
 var SvelteElement;
 if (typeof HTMLElement === "function") {
   SvelteElement = class extends HTMLElement {
@@ -7820,16 +7820,34 @@ function matchFenceLine(line) {
   const match = line.match(CODE_FENCE);
   if (!match) return null;
   const run3 = match[1];
-  return { char: run3[0], len: run3.length, bare: line.slice(match[0].length).trim() === "" };
+  const infoString = line.slice(match[0].length).trim();
+  return { char: run3[0], len: run3.length, bare: infoString === "", infoString };
 }
-function nextFenceState(openFence, line) {
+function nextFenceState(openFences, line) {
   const fence = matchFenceLine(line);
-  if (!fence) return { open: openFence, boundary: null };
-  if (openFence === null) return { open: { char: fence.char, len: fence.len }, boundary: "open" };
-  if (fence.char === openFence.char && fence.len >= openFence.len && fence.bare) {
-    return { open: null, boundary: "close" };
+  if (!fence) return { open: openFences, boundary: null };
+  const openFence = openFences[openFences.length - 1];
+  if (!openFence) {
+    return {
+      open: [{ char: fence.char, len: fence.len, readable: fence.infoString.startsWith("ad-") }],
+      boundary: "open"
+    };
   }
-  return { open: openFence, boundary: null };
+  if (fence.char === openFence.char && fence.len >= openFence.len && fence.bare) {
+    return { open: openFences.slice(0, -1), boundary: "close" };
+  }
+  const canOpenNestedFence = openFence.readable && (fence.char !== openFence.char || fence.len < openFence.len);
+  if (canOpenNestedFence) {
+    return {
+      open: [...openFences, {
+        char: fence.char,
+        len: fence.len,
+        readable: fence.infoString.startsWith("ad-")
+      }],
+      boundary: "open"
+    };
+  }
+  return { open: openFences, boundary: null };
 }
 var MetaEditParser = class {
   constructor(app) {
@@ -8002,7 +8020,7 @@ var MetaEditParser = class {
   *walkInlineContentLines(content) {
     const lines = this.splitContentLines(content);
     const frontmatterInfo = this.getFrontmatterInfo(content);
-    let openFence = null;
+    let openFences = [];
     for (let index2 = 0; index2 < lines.length; index2++) {
       const line = lines[index2];
       const inFrontmatter = frontmatterInfo?.exists === true && line.start < frontmatterInfo.contentStart;
@@ -8010,14 +8028,14 @@ var MetaEditParser = class {
         yield { ...line, index: index2, inFrontmatter, fenceBoundary: null, readable: false };
         continue;
       }
-      const { open, boundary: boundary2 } = nextFenceState(openFence, line.text);
-      openFence = open;
+      const { open, boundary: boundary2 } = nextFenceState(openFences, line.text);
+      openFences = open;
       yield {
         ...line,
         index: index2,
         inFrontmatter: false,
         fenceBoundary: boundary2,
-        readable: boundary2 === null && openFence === null
+        readable: boundary2 === null && openFences.every((fence) => fence.readable)
       };
     }
   }
@@ -8143,7 +8161,8 @@ var MetaEditParser = class {
    * returned index is into `content.split(/\r?\n/)` (the same split
    * {@link splitContentLines} performs), so a caller can splice directly.
    *
-   * Guarantees: the index is never inside YAML frontmatter or a fenced code block.
+   * Guarantees: the index is never inside YAML frontmatter or an ordinary fenced
+   * code block. Admonition `ad-*` fences remain valid metadata regions.
    * - "afterLastMatch": just after the last body line that declares `name` (full-line
    *   or bracketed), falling back to "end" when there is no such field.
    * - "end": just after the last body content line or trailing closing code fence.
@@ -9947,7 +9966,8 @@ var MetaController = class {
    * {@link updatePropertyInFile}, which replaces every existing instance.
    *
    * Placement is computed by {@link MetaEditParser.computeInlineInsertIndex} so the
-   * field is never inserted inside frontmatter or a fenced code block. The write goes
+   * field is never inserted inside frontmatter or an ordinary fenced code block.
+   * Admonition `ad-*` fences remain readable metadata containers. The write goes
    * through the per-file queue, so it serializes with other MetaEdit writes instead of
    * racing them (the previous implementation read and wrote outside the queue, and
    * silently no-opped when the chosen line index was 0).

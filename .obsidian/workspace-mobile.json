@@ -157,7 +157,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_photographs/palm-tree-curves.md",
+                "file": "_portfolio/lacecap-hydrangea.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -172,11 +172,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "palm-tree-curves"
+              "title": "lacecap-hydrangea"
+            }
+          },
+          {
+            "id": "4ae99e546d220d75",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_portfolio/lacecap-hydrangea.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "lacecap-hydrangea"
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -353,8 +377,9 @@
       "templates:Insert template": false
     }
   },
-  "active": "0f1f78cad7200a17",
+  "active": "4ae99e546d220d75",
   "lastOpenFiles": [
+    "_photographs/palm-tree-curves.md",
     "_site/photographs/ribwort/index.html",
     "_site/photographs/palm-tree-curves/index.html",
     "_site/photographs/palm-tree-curves",
@@ -377,7 +402,6 @@
     "_photographs/travels-in-mexico.md",
     "_photographs/wall-in-sintra-portugal.md",
     "obsidian_templates/photograph.md",
-    "_photographs/palm-tree-curves.md",
     "_photographs/light-entertainment.md",
     "_portfolio/palm-tree-curves.md",
     "_portfolio/sumac-tree.md",
@@ -394,7 +418,6 @@
     "newsletters/Untitled.canvas",
     "newsletters/November 2025.canvas",
     "newsletters/november-2025_canvas2doc-data",
-    "_site/photographs/dorchester-abbey/index.html",
     "_site/Untitled.canvas",
     "Untitled.canvas",
     "uploads/newsletterbanner.png",

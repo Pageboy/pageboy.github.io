@@ -14,5 +14,6 @@
   "vault-file-renamer",
   "pretty-properties",
   "copy-as-html",
-  "pubcopy"
+  "pubcopy",
+  "content-publisher"
 ]
