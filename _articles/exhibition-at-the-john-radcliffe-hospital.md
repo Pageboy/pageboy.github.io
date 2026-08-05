@@ -26,3 +26,7 @@ Of course, I don't want to wish anyone a visit to hospital, but, if you do happe
 <div class="video-box">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rAb142DCCcg?si=2Z7yfiIV1e-As9Us" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
+
+### Further details
+
+I also displayed information at the beginning of the exhibition. [You can download the PDF here](../uploads/jr_exhibition_flyer.pdf)
