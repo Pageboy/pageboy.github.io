@@ -1,7 +1,7 @@
 ---
 title: Exhibition at the John Radcliffe Hospital, Oxford
 date: 2026-07-08
-updated: 2026-07-08
+updated: 2026-08-05
 layout: post
 image: https://live.staticflickr.com/65535/55380107804_628005f2e2_b.jpg
 caption: Just installed, with a pleased artist
@@ -19,6 +19,8 @@ Of course, I don't want to wish anyone a visit to hospital, but, if you do happe
 ![View along the corridor](https://live.staticflickr.com/65535/55379938091_0963d64de2_b.jpg)
 
 !['Palm Lily Arcs', 'Cuckoo Flower', and 'Marigold' at the John Radcliffe Hospital](https://live.staticflickr.com/65535/55380118549_7af41a9163_b.jpg)
+
+![Visitors observing some works](https://live.staticflickr.com/65535/55444608981_ac3f9e3b6c_b.jpg)
 
 
 <div class="video-box">
