@@ -37,7 +37,7 @@
       options = this.options;
       element = $(this.element);
       domId = "fancyPhotoset-" + options.photosetId;
-      jsonUrl = "https://api.flickr.com/services/rest/?" + "method=flickr.photosets.getPhotos&" + ("api_key=" + options.apiKey + "&") + ("photoset_id=" + options.photosetId + "&") + ("user_id=" + options.flickrId + "&") + "extras=description,url_sq,url_t,url_s,url_m,url_o&" + "format=json&jsoncallback=?";
+      jsonUrl = "https://api.flickr.com/services/rest/?" + "method=flickr.photosets.getPhotos&" + ("api_key=" + options.apiKey + "&") + ("photoset_id=" + options.photosetId + "&") + ("user_id=" + options.flickrId + "&") + "extras=description,url_sq,url_t,url_s,url_m,url_l,url_o&" + "format=json&jsoncallback=?";
       element.append(($("<ul/>")).attr("id", domId).addClass("fancyPhotoset"));
       return $.getJSON(jsonUrl, function(data) {
         $.each(data.photoset.photo, function(index, photo) {
@@ -78,7 +78,7 @@
         thumbnail: photo.url_t,
         small: photo.url_s,
         medium: photo.url_m,
-        original: photo.url_o
+        large: photo.url_l
       }[options.size];
     };
     return FancyPhotoset;

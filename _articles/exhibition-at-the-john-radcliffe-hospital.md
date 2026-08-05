@@ -3,7 +3,7 @@ title: Exhibition at the John Radcliffe Hospital, Oxford
 date: 2026-07-08
 updated: 2026-07-08
 layout: post
-image: https://live.staticflickr.com/65535/55380107804_690c8a96a8_b.jpg
+image: https://live.staticflickr.com/65535/55380107804_628005f2e2_b.jpg
 caption: Just installed, with a pleased artist
 excerpt_separator: <!--and-->
 flickr_album: flickr

@@ -22,7 +22,7 @@ layout: default
         {% unless flickr_album == empty or flickr_album == null or flickr_album == "" %}
       <!-- <p style="color:#869387;"><i class="fa fa-flickr"></i> Here is a gallery of these images kept on <a title="go to Flickr" href="https://www.flickr.com/photos/chrisjennings/albums/{{page.flickr_album}}">Flickr</a></p> -->
                 <div class="gallerycontainer content">
-                  <p class="info" style="color:#869387;"><i class="fa fa-flickr"></i>Here is a my <a title="go to Flickr" href="https://www.flickr.com/photos/chrisjennings/albums/{{page.flickr_album}}">gallery of related images held on Flickr</a>.
+                  <p class="info" style="color:#869387;"><i class="fa fa-flickr"></i>Here is a my <a title="go to Flickr" href="https://www.flickr.com/photos/chrisjennings/albums/{{flickr_album}}">gallery of related images held on Flickr</a>.
                   </p>
                   <p class="info">Click each image here for an enlarged view.</p>
                 <div id="gallery"></div>
@@ -36,7 +36,7 @@ layout: default
                     photosetId: '{{flickr_album | remove: "flickr"}}',
                     captions: true,
                     small: 'medium',
-                    large: 'original'
+                    large: 'large'
                   };
 
                   $('#gallery').fancyPhotoset(options);
