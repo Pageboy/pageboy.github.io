@@ -19,4 +19,6 @@ Many churches across Oxfordshire and Gloucestershire have a circular carved mark
 
 I recently noticed this example on the church at Fulbrook, Oxfordshire, and have added it to my growing collection of photographs of these fascinating carvings, which you can see on the page for this entry.
 
+This seems to be in such good condition that I wonder if it replaces another one found on the wall nearer to the door of the church.
+
 <!--and-->
