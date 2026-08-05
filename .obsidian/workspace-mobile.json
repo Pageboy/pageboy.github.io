@@ -181,9 +181,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/lacecap-hydrangea.md",
-                "mode": "source",
-                "source": false,
+                "file": "_photographs/mass-clock-fulbrook.md",
+                "mode": "preview",
+                "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
                   "collapseAll": false,
@@ -196,7 +196,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "lacecap-hydrangea"
+              "title": "mass-clock-fulbrook"
             }
           }
         ],
@@ -216,7 +216,9 @@
           "type": "file-explorer",
           "state": {
             "sortOrder": "byCreatedTime",
-            "autoReveal": false
+            "autoReveal": false,
+            "showSearch": false,
+            "searchQuery": ""
           },
           "icon": "lucide-folder-closed",
           "title": "Files"
@@ -379,6 +381,8 @@
   },
   "active": "4ae99e546d220d75",
   "lastOpenFiles": [
+    "_portfolio/lacecap-hydrangea.md",
+    "_photographs/mass-clock-fulbrook.md",
     "_photographs/palm-tree-curves.md",
     "_site/photographs/ribwort/index.html",
     "_site/photographs/palm-tree-curves/index.html",
@@ -414,7 +418,6 @@
     "_photographs/two-windows-on-paxos.md",
     "_photographs/dorchester-abbey.md",
     "_photographs/rivers-edge.md",
-    "_portfolio/3riangles_reds_yellows.md",
     "newsletters/Untitled.canvas",
     "newsletters/November 2025.canvas",
     "newsletters/november-2025_canvas2doc-data",
