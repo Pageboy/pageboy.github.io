@@ -15,8 +15,8 @@ flickr_album: flickr72177720334999011
 flickr_share:
 excerpt_separator: <!--and-->
 ---
-Many of the churches around Oxfordshire and Gloucestershire have, on their exterior walls a circular marked carving, with a centre. These so called _mass clocks_ are, effectively primitive sundials, used by the priest to determine the approximate time for the purpose of calling the congregation to attend the mass.
+Many churches across Oxfordshire and Gloucestershire have a circular carved marking with a central hole on their exterior walls. These so-called _mass clocks_ are, in effect, primitive sundials. They were used by the priest to determine the approximate time for calling the congregation to attend Mass.
 
-I noticed this one recently on the church at Fulbrook in Oxfordshire, and I have added to my collection of these photographs which you can see below.
+I recently noticed this example on the church at Fulbrook, Oxfordshire, and have added it to my growing collection of photographs of these fascinating carvings, which you can see on the page for this entry.
 
 <!--and-->
