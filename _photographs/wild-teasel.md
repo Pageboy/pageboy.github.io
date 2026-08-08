@@ -11,7 +11,7 @@ tags:
 solo: false
 published: true
 flickr_album: flickr
-flickr_share:
+flickr_share: https://flic.kr/p/2stS2kg
 excerpt_separator: <!--and-->
 ---
 A walk along the Thames path from Pangbourne Meadow, where I often moor my boat.
