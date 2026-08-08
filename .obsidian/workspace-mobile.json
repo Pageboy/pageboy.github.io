@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_photographs/wild-teasel.md",
+                "file": "_portfolio/elderberry.md",
                 "mode": "preview",
                 "source": true,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "wild-teasel"
+              "title": "elderberry"
             }
           }
         ]
@@ -203,8 +203,9 @@
   },
   "active": "2ed436f9fce1a450",
   "lastOpenFiles": [
-    "_photographs/mass-clock-fulbrook.md",
     "_photographs/wild-teasel.md",
+    "_portfolio/elderberry.md",
+    "_photographs/mass-clock-fulbrook.md",
     "_photographs/palm-tree-curves.md",
     "_articles/exhibition-at-the-john-radcliffe-hospital.md",
     "_portfolio/lacecap-hydrangea.md",
@@ -239,7 +240,6 @@
     "_articles/untitled.md",
     "_photographs/antonrock.md",
     "_photographs/two-windows-on-paxos.md",
-    "_photographs/dorchester-abbey.md",
     "newsletters/Untitled.canvas",
     "newsletters/November 2025.canvas",
     "newsletters/november-2025_canvas2doc-data",
