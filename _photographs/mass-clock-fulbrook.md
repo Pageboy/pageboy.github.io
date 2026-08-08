@@ -1,10 +1,10 @@
 ---
 date: 2026-08-05
-updated: 2026-08-05
+updated: 2026-08-08
 title: Mass Clock in Fulbrook
 image: https://live.staticflickr.com/65535/55444499815_32218b57ba_b.jpg
 caption: South wall of St James the Great Church, Oxfordshire
-source:
+source: Nikon 7ii
 layout: photo
 tags:
   - church
