@@ -3,5 +3,7 @@
   "stripTags": true,
   "stripWikilinks": true,
   "imageHandling": "always-url",
-  "showNotification": true
+  "tableHandling": "list",
+  "showNotification": true,
+  "lastRunVersion": "1.6.2"
 }

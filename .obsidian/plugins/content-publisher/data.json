@@ -56,11 +56,11 @@
       "custom_config": {}
     }
   ],
-  "defaultSectionId": 236184,
+  "defaultSectionId": 279661,
   "defaultAudience": "everyone",
   "defaultTags": [],
   "paidSubscribersEnabled": false,
-  "defaultAddWordPressLink": false,
+  "defaultAddWordPressLink": true,
   "wordpressEnabled": false,
   "wordpressBaseUrl": "",
   "wordpressUsername": "",

@@ -15,4 +15,6 @@ published: true
 flickr_share: https://flic.kr/p/2su1Edd
 nft:
 ---
+![Elderberries in the hedge](https://live.staticflickr.com/65535/55450958940_fee39733c4_b.jpg)
+
 My camera finds a rare splash of colour in the leafy hedgerows of the Windrush Valley. These elderberries could be gathered to make a refreshing drink, but we walk on, stopping instead to pick the occasional plump blackberry.

@@ -37,8 +37,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_articles/exhibition-at-the-john-radcliffe-hospital.md",
-                "mode": "preview",
+                "file": "_photographs/palm-tree-curves.md",
+                "mode": "source",
                 "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -52,7 +52,21 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "exhibition-at-the-john-radcliffe-hospital"
+              "title": "palm-tree-curves"
+            }
+          },
+          {
+            "id": "debaa039f52dba28",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://github.com/roomi-fields",
+                "title": "roomi-fields · GitHub",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "roomi-fields · GitHub"
             }
           }
         ],
@@ -224,7 +238,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "content-publisher:Publish to Substack": false,
       "vault-file-renamer:Vault File Renamer": false,
       "bases:Create new base": false,
       "workspaces:Manage workspace layouts": false,
@@ -236,18 +249,22 @@
       "audio-recorder:Start/stop recording": false,
       "obsidian-markdown-formatting-assistant-plugin:Open Markdown Formatting Assistant": false,
       "obsidian-git:Open Git source control": false,
-      "templates:Insert template": false
+      "templates:Insert template": false,
+      "content-publisher:Publish to Substack": false
     }
   },
   "active": "67cd70e37cd6cdcf",
   "lastOpenFiles": [
+    "_photographs/palm-tree-curves.md",
+    "_portfolio/elderberry.md",
+    "_portfolio/lacecap-hydrangea.md",
+    "_articles/exhibition-at-the-john-radcliffe-hospital.md",
     "_photographs/wild-teasel.md",
     "_photographs/untitled.md",
     "_site/uploads/jr_exhibition_flyer_1.pdf",
     "_site/uploads/jr_exhibition_flyer.pdf",
     "uploads/jr_exhibition_flyer_1.pdf",
     "uploads/jr_exhibition_flyer.pdf",
-    "_portfolio/lacecap-hydrangea.md",
     "_photographs/ribwort.md",
     "_site/photographs/palm-tree-curves/index.html",
     "_site/photographs/palm-tree-curves",
@@ -257,7 +274,6 @@
     "uploads/_N726950 1.jpeg",
     "uploads/_N726950.jpeg",
     "_portfolio/clover-skies.md",
-    "_articles/exhibition-at-the-john-radcliffe-hospital.md",
     "_site/articles/exhibition-at-the-john-radcliffe-hospital/index.html",
     "_site/articles/exhibition-at-the-john-radcliffe-hospital",
     "_articles/2022-07-14-wallingford-to-pangbourne.md",
@@ -278,8 +294,6 @@
     "_portfolio/rainday.md",
     "_portfolio/rust_on_chain_links.md",
     "_portfolio/rushes_reeds_river.md",
-    "_portfolio/shore-shallows.md",
-    "_portfolio/tupelo-orange.md",
     "uploads/squarebells.jpg",
     "_site/uploads/rsvp.png",
     "uploads/rsvp.png",
