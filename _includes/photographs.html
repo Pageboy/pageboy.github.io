@@ -7,6 +7,13 @@
   {%- else -%}
   <div class="post-teaser toShow">
   {%- endif -%}
+          <header>
+            <h2>
+              <a aria-label="{{ art.title }}" class="post-link" href="{{ art.url | relative_url }}">
+                {{ art.title }} &#10132;
+              </a>
+            </h2>
+          </header>
         {% if art.image %}
         {% assign image_url = art.image | replace: "../uploads", "/uploads" -%}
         <div class="post-img">
@@ -21,22 +28,17 @@
         </div>
         {% endif %}
         <span>
-          <header>
-            <h2>
-              <a aria-label="{{ art.title }}" class="post-link" href="{{ art.url | relative_url }}">
-                {{ art.title }} &#10132;
-              </a>
-            </h2>
-          </header>
-          {%- assign date = art.date -%}
+  
+
+          <div class="excerpt">
+              {{ art.excerpt }}
+          </div>
+                    {%- assign date = art.date -%}
 <div class="post-info">
     <p class="meta">
       {{ date | date: "%B %-d, %Y" }}
     </p>
 </div>
-          <div class="excerpt">
-              {{ art.excerpt }}
-          </div>
       </span>
     </div>
     {% endfor %}

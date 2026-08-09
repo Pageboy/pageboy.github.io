@@ -11,12 +11,16 @@ layout: default
 
   </header>
   <section class="post-content photo">
+
+   {%- if page.image -%} 
   <p>
     <img src="{{ page.image }}" alt="{{ page.caption }}">
   </p>
-  {% include post_info.html post=page %}
+  {%- endif -%}
 
  {{ content | replace: "../uploads", "/uploads" }}
+
+ {%- include post_info.html post=page -%}
 
   {%- assign flickr_album = page.flickr_album | replace: "flickr", "" -%}
         {% unless flickr_album == empty or flickr_album == null or flickr_album == "" %}
@@ -50,7 +54,7 @@ layout: default
                 {% endunless %}
   </section>
   <!-- Social media shares -->
-  {% include share_buttons.html %}
+  {%- include share_buttons.html -%}
 
   <!-- Flickr share -->
 {% if page.flickr_share %}

@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/elderberry.md",
+                "file": "_photographs/palm-tree-curves.md",
                 "mode": "source",
                 "source": true,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "elderberry"
+              "title": "palm-tree-curves"
             }
           },
           {
@@ -279,11 +279,15 @@
   },
   "active": "7c02918dea127692",
   "lastOpenFiles": [
+    "_portfolio/elderberry.md",
+    "_site/photographs/wild-teasel/index.html",
+    "_site/photographs/wild-teasel",
+    "_site/portfolio/elderberry/index.html",
+    "_site/portfolio/elderberry",
     "_photographs/pomegranate-on-the-tree.md",
     "_photographs/palm-tree-curves.md",
     "obsidian_templates/photograph.md",
     "_photographs/statue-inset.md",
-    "_portfolio/elderberry.md",
     "_portfolio/lacecap-hydrangea.md",
     "_articles/exhibition-at-the-john-radcliffe-hospital.md",
     "_photographs/wild-teasel.md",
@@ -294,14 +298,10 @@
     "_photographs/ribwort.md",
     "_site/photographs/palm-tree-curves/index.html",
     "_site/photographs/palm-tree-curves",
-    "_site/photographs/ribwort/index.html",
-    "_site/photographs/ribwort",
     "_portfolio/cypress.md",
     "uploads/_N726950 1.jpeg",
     "uploads/_N726950.jpeg",
     "_portfolio/clover-skies.md",
-    "_site/articles/exhibition-at-the-john-radcliffe-hospital/index.html",
-    "_site/articles/exhibition-at-the-john-radcliffe-hospital",
     "_articles/2022-07-14-wallingford-to-pangbourne.md",
     "_articles/a-walk-up-wittenham-clumps.md",
     "_articles/2019-07-14-the-lowest-bridge-on-the-thames.md",
@@ -317,7 +317,6 @@
     "_site/uploads/squarebells.jpg",
     "_portfolio/asphalt-series-3.md",
     "_portfolio/rainday.md",
-    "_portfolio/rust_on_chain_links.md",
     "uploads/squarebells.jpg",
     "_site/uploads/rsvp.png",
     "uploads/rsvp.png",
