@@ -61,8 +61,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "obsidian_templates/photograph.md",
-                "mode": "preview",
+                "file": "_portfolio/elderberry.md",
+                "mode": "source",
                 "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "photograph"
+              "title": "elderberry"
             }
           },
           {
@@ -279,9 +279,10 @@
   },
   "active": "7c02918dea127692",
   "lastOpenFiles": [
-    "_photographs/statue-inset.md",
-    "obsidian_templates/photograph.md",
+    "_photographs/pomegranate-on-the-tree.md",
     "_photographs/palm-tree-curves.md",
+    "obsidian_templates/photograph.md",
+    "_photographs/statue-inset.md",
     "_portfolio/elderberry.md",
     "_portfolio/lacecap-hydrangea.md",
     "_articles/exhibition-at-the-john-radcliffe-hospital.md",
