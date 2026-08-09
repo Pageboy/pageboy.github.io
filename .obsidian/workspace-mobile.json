@@ -15,7 +15,7 @@
               "state": {
                 "file": "_photographs/pomegranate-on-the-tree.md",
                 "mode": "source",
-                "source": false,
+                "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
                   "collapseAll": false,
@@ -213,7 +213,10 @@
   },
   "active": "67e00a65d9daee33",
   "lastOpenFiles": [
+    "obsidian_templates/photograph.md",
     "_photographs/pomegranate-on-the-tree.md",
+    "_photographs/statue-inset.md",
+    "_photographs/untitled.md",
     "_portfolio/elderberry.md",
     "_photographs/wild-teasel.md",
     "_photographs/mass-clock-fulbrook.md",
@@ -240,7 +243,6 @@
     "_portfolio/cuckoo-flower.md",
     "_photographs/travels-in-mexico.md",
     "_photographs/wall-in-sintra-portugal.md",
-    "obsidian_templates/photograph.md",
     "_photographs/light-entertainment.md",
     "_portfolio/palm-tree-curves.md",
     "_portfolio/sumac-tree.md",
@@ -248,8 +250,6 @@
     "_articles/Untitled.base",
     "_articles/2019-06-08-maiden-voyage.md",
     "_articles/Articles.base",
-    "_articles/untitled.md",
-    "_photographs/antonrock.md",
     "newsletters/Untitled.canvas",
     "newsletters/November 2025.canvas",
     "newsletters/november-2025_canvas2doc-data",

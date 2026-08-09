@@ -2,10 +2,12 @@
 date:
 updated:
 title:
+subtitle:
 image:
 caption:
 source:
 layout: photo
+section: Photography
 tags:
 solo: false
 published: false
