@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/elderberry.md",
+                "file": "_photographs/statue-inset.md",
                 "mode": "source",
                 "source": true,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "elderberry"
+              "title": "statue-inset"
             }
           }
         ]
@@ -213,12 +213,16 @@
   },
   "active": "67e00a65d9daee33",
   "lastOpenFiles": [
+    "_portfolio/elderberry.md",
+    "_site/photographs/wild-teasel/index.html",
+    "_site/photographs/wild-teasel",
+    "_site/portfolio/elderberry/index.html",
+    "_site/portfolio/elderberry",
     "_photographs/palm-tree-curves.md",
     "_photographs/pomegranate-on-the-tree.md",
     "obsidian_templates/photograph.md",
     "_photographs/statue-inset.md",
     "_photographs/untitled.md",
-    "_portfolio/elderberry.md",
     "_photographs/wild-teasel.md",
     "_photographs/mass-clock-fulbrook.md",
     "_articles/exhibition-at-the-john-radcliffe-hospital.md",
@@ -246,13 +250,8 @@
     "_photographs/light-entertainment.md",
     "_portfolio/palm-tree-curves.md",
     "_portfolio/sumac-tree.md",
-    "bases/Articles.base",
-    "_articles/Untitled.base",
-    "_articles/2019-06-08-maiden-voyage.md",
-    "_articles/Articles.base",
     "newsletters/Untitled.canvas",
     "newsletters/November 2025.canvas",
-    "newsletters/november-2025_canvas2doc-data",
     "_site/Untitled.canvas",
     "Untitled.canvas",
     "uploads/newsletterbanner.png",

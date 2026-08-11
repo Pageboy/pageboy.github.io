@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_photographs/palm-tree-curves.md",
+                "file": "_portfolio/haws-in-the-hedge.md",
                 "mode": "source",
                 "source": true,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "palm-tree-curves"
+              "title": "haws-in-the-hedge"
             }
           },
           {
@@ -279,13 +279,16 @@
   },
   "active": "7c02918dea127692",
   "lastOpenFiles": [
+    "_site/portfolio/haws-in-the-hedge/index.html",
+    "_site/portfolio/haws-in-the-hedge",
+    "_photographs/palm-tree-curves.md",
+    "_portfolio/haws-in-the-hedge.md",
     "_portfolio/elderberry.md",
     "_site/photographs/wild-teasel/index.html",
     "_site/photographs/wild-teasel",
     "_site/portfolio/elderberry/index.html",
     "_site/portfolio/elderberry",
     "_photographs/pomegranate-on-the-tree.md",
-    "_photographs/palm-tree-curves.md",
     "obsidian_templates/photograph.md",
     "_photographs/statue-inset.md",
     "_portfolio/lacecap-hydrangea.md",
@@ -297,7 +300,6 @@
     "uploads/jr_exhibition_flyer.pdf",
     "_photographs/ribwort.md",
     "_site/photographs/palm-tree-curves/index.html",
-    "_site/photographs/palm-tree-curves",
     "_portfolio/cypress.md",
     "uploads/_N726950 1.jpeg",
     "uploads/_N726950.jpeg",
@@ -316,7 +318,6 @@
     "_portfolio/peacock-flower.md",
     "_site/uploads/squarebells.jpg",
     "_portfolio/asphalt-series-3.md",
-    "_portfolio/rainday.md",
     "uploads/squarebells.jpg",
     "_site/uploads/rsvp.png",
     "uploads/rsvp.png",
