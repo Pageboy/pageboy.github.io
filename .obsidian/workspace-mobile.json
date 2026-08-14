@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_photographs/statue-inset.md",
-                "mode": "source",
+                "file": "_portfolio/haws-in-the-hedge.md",
+                "mode": "preview",
                 "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "statue-inset"
+              "title": "haws-in-the-hedge"
             }
           }
         ]
@@ -213,6 +213,10 @@
   },
   "active": "67e00a65d9daee33",
   "lastOpenFiles": [
+    "_photographs/statue-inset.md",
+    "_site/portfolio/haws-in-the-hedge/index.html",
+    "_site/portfolio/haws-in-the-hedge",
+    "_portfolio/haws-in-the-hedge.md",
     "_portfolio/elderberry.md",
     "_site/photographs/wild-teasel/index.html",
     "_site/photographs/wild-teasel",
@@ -221,7 +225,6 @@
     "_photographs/palm-tree-curves.md",
     "_photographs/pomegranate-on-the-tree.md",
     "obsidian_templates/photograph.md",
-    "_photographs/statue-inset.md",
     "_photographs/untitled.md",
     "_photographs/wild-teasel.md",
     "_photographs/mass-clock-fulbrook.md",
@@ -234,14 +237,12 @@
     "_site/photographs/palm-tree-curves/index.html",
     "_site/photographs/palm-tree-curves",
     "_site/photographs/ribwort",
-    "bases/Photographs.base",
     "_photographs/brickwork-in-toulouse.md",
     "uploads/_N726950 1.jpeg",
     "uploads/_N726950.jpeg",
     "_photographs/killed_rabbit.md",
     "_portfolio/lenten-rose.md",
     "_portfolio/hibiscus.md",
-    "bases/Portfolio.base",
     "_portfolio/marigold.md",
     "_portfolio/lantana.md",
     "_portfolio/cuckoo-flower.md",
@@ -249,7 +250,6 @@
     "_photographs/wall-in-sintra-portugal.md",
     "_photographs/light-entertainment.md",
     "_portfolio/palm-tree-curves.md",
-    "_portfolio/sumac-tree.md",
     "newsletters/Untitled.canvas",
     "newsletters/November 2025.canvas",
     "_site/Untitled.canvas",

@@ -1,11 +1,12 @@
 ---
 date: 2026-08-11
-updated: 2026-08-11
+updated: 2026-08-14
 title: Haws in the Hedge
 image: https://live.staticflickr.com/65535/55457368561_1a75d99e6e_b.jpg
 layout: art
 tags:
   - art
+  - square-series
 excerpt_separator: <!--and-->
 solo: false
 caption: Orange Haws of the Hawthorn Bush
