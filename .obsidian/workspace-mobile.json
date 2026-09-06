@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/haws-in-the-hedge.md",
+                "file": "_photographs/woodbine.md",
                 "mode": "preview",
                 "source": true,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "haws-in-the-hedge"
+              "title": "woodbine"
             }
           }
         ]
@@ -213,10 +213,11 @@
   },
   "active": "67e00a65d9daee33",
   "lastOpenFiles": [
+    "_portfolio/haws-in-the-hedge.md",
+    "_photographs/woodbine.md",
     "_photographs/statue-inset.md",
     "_site/portfolio/haws-in-the-hedge/index.html",
     "_site/portfolio/haws-in-the-hedge",
-    "_portfolio/haws-in-the-hedge.md",
     "_portfolio/elderberry.md",
     "_site/photographs/wild-teasel/index.html",
     "_site/photographs/wild-teasel",
@@ -225,7 +226,7 @@
     "_photographs/palm-tree-curves.md",
     "_photographs/pomegranate-on-the-tree.md",
     "obsidian_templates/photograph.md",
-    "_photographs/untitled.md",
+    "_photographs/woodbine.md",
     "_photographs/wild-teasel.md",
     "_photographs/mass-clock-fulbrook.md",
     "_articles/exhibition-at-the-john-radcliffe-hospital.md",
