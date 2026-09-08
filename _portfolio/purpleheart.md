@@ -2,7 +2,7 @@
 date: 2026-09-08
 updated: 2026-09-08
 title: Purple Heart
-image: https://live.staticflickr.com/65535/55515682495_e80d96c2d1_b.jpg
+image: https://live.staticflickr.com/65535/55515682495_e80d96c2d1_c.jpg
 layout: art
 tags:
   - art
