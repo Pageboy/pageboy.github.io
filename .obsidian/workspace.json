@@ -85,7 +85,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_articles/arcs-of-oxford.md",
+                "file": "pages/perspectiefgallery.md",
                 "mode": "preview",
                 "source": true,
                 "backlinks": true,
@@ -100,7 +100,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "arcs-of-oxford"
+              "title": "perspectiefgallery"
             }
           },
           {
@@ -303,6 +303,7 @@
   },
   "active": "34ed4c2ae9adb882",
   "lastOpenFiles": [
+    "_articles/arcs-of-oxford.md",
     "_portfolio/trumpet-vine.md",
     "_portfolio/5triangles.md",
     "_portfolio/sea_sand_dunes.md",
@@ -338,7 +339,6 @@
     "_articles/2019-08-09-air-draft.md",
     "_articles/2019-06-08-maiden-voyage.md",
     "_newsletters/oxfordshire-artweeks-26-pv.md",
-    "_articles/arcs-of-oxford.md",
     "obsidian_templates/blog.md",
     "obsidian_templates/newsletters.md",
     "_site/uploads/squarebells.jpg",
