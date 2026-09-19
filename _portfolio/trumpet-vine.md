@@ -11,7 +11,7 @@ excerpt_separator: <!--and-->
 solo: false
 caption:
 forsale:
-published: false
+published: true
 flickr_share: https://flic.kr/p/2sBydvA
 nft:
 ---

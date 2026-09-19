@@ -2,12 +2,12 @@
 title: 5 Triangles with leaves, spring grasses and orange flowers
 date: 2020-03-03 15:12
 layout: art
-image: https://live.staticflickr.com/65535/49301704676_fc1b47305f_o.jpg
+image: https://live.staticflickr.com/65535/49301704676_0cbf3c6af6_c.jpg
 tags:
   - art
   - square-series
 published: true
-updated: 2025-11-05
+updated: 2026-09-18
 ---
 
 - Spring Grasses with yellow
