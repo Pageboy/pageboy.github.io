@@ -1,6 +1,6 @@
 ---
 date: 2026-01-29T18:00:00
-updated: 2026-04-17
+updated: 2026-10-01
 title: Travels in Mexico
 image: https://live.staticflickr.com/65535/55062347108_f34a9c09bd_h.jpg
 caption: Chichen Itza Great Pyramid
