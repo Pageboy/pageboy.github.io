@@ -85,9 +85,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/bougainvillea.md",
+                "file": "_portfolio/wheat-waiting.md",
                 "mode": "source",
-                "source": true,
+                "source": false,
                 "backlinks": true,
                 "backlinkOpts": {
                   "collapseAll": false,
@@ -100,7 +100,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "bougainvillea"
+              "title": "wheat-waiting"
             }
           }
         ],
@@ -289,10 +289,11 @@
   },
   "active": "34ed4c2ae9adb882",
   "lastOpenFiles": [
+    "bases/Portfolio.base",
+    "_portfolio/bougainvillea.md",
     "_portfolio/palm-lily-arcs.md",
     "_site/uploads/Pasted image 20261001120831.png",
     "uploads/Pasted image 20261001120831.png",
-    "bases/Portfolio.base",
     "_portfolio/meadow-grass.md",
     "_portfolio/smoke-tree.md",
     "_portfolio/august-rain-vivid-colour.md",
@@ -300,7 +301,6 @@
     "_site/portfolio/bougainvillea",
     "_portfolio/beech-twins-with-lichen-colours.md",
     "_portfolio/ash-arc.md",
-    "_portfolio/bougainvillea.md",
     "pages/perspectiefgallery.md",
     "_articles/arcs-of-oxford.md",
     "_portfolio/trumpet-vine.md",
@@ -328,7 +328,6 @@
     "_portfolio/cypress.md",
     "uploads/_N726950 1.jpeg",
     "uploads/_N726950.jpeg",
-    "_portfolio/clover-skies.md",
     "_site/uploads/squarebells.jpg",
     "uploads/squarebells.jpg",
     "_site/uploads/rsvp.png",
