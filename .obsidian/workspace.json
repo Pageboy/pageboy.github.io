@@ -85,7 +85,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/bougainvillea.md",
+                "file": "_portfolio/ash-arc.md",
                 "mode": "preview",
                 "source": true,
                 "backlinks": true,
@@ -100,7 +100,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "bougainvillea"
+              "title": "ash-arc"
             }
           },
           {
@@ -303,13 +303,13 @@
   },
   "active": "34ed4c2ae9adb882",
   "lastOpenFiles": [
-    "pages/perspectiefgallery.md",
+    "bases/Portfolio.base",
     "_portfolio/bougainvillea.md",
+    "pages/perspectiefgallery.md",
     "_articles/arcs-of-oxford.md",
     "_portfolio/trumpet-vine.md",
     "_portfolio/5triangles.md",
     "_portfolio/sea_sand_dunes.md",
-    "bases/Portfolio.base",
     "_portfolio/rainday.md",
     "_portfolio/road-rain.md",
     "_site/portfolio/trumpet-vine/index.html",
@@ -340,7 +340,6 @@
     "_articles/2019-07-14-the-lowest-bridge-on-the-thames.md",
     "_articles/2019-08-09-air-draft.md",
     "_articles/2019-06-08-maiden-voyage.md",
-    "_newsletters/oxfordshire-artweeks-26-pv.md",
     "_site/uploads/squarebells.jpg",
     "uploads/squarebells.jpg",
     "_site/uploads/rsvp.png",
