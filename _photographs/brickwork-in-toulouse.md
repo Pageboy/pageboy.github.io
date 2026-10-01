@@ -1,8 +1,8 @@
 ---
 date: 2026-04-17
-updated: 2026-08-09
+updated: 2026-10-01
 title: Brickwork in Toulouse, France
-image: https://live.staticflickr.com/65535/55207257088_f258e48802_6k.jpg
+image: https://live.staticflickr.com/65535/55207257088_921ae53409_b.jpg
 caption: Wall inside the Saint Sermin Basilica, Toulouse, France
 source: Nikon 7ii 40mm
 layout: photo

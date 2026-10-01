@@ -85,7 +85,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_photographs/travels-in-mexico.md",
+                "file": "_photographs/brickwork-in-toulouse.md",
                 "mode": "preview",
                 "source": true,
                 "backlinks": true,
@@ -100,7 +100,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "travels-in-mexico"
+              "title": "brickwork-in-toulouse"
             }
           }
         ],
@@ -290,6 +290,7 @@
   "active": "34ed4c2ae9adb882",
   "lastOpenFiles": [
     "bases/Photographs.base",
+    "_photographs/travels-in-mexico.md",
     "_portfolio/wheat-waiting.md",
     "bases/Portfolio.base",
     "_portfolio/bougainvillea.md",
@@ -316,7 +317,6 @@
     "_site/photographs/woodbine",
     "_site/portfolio/purpleheart/index.html",
     "_site/portfolio/purpleheart",
-    "_site/portfolio/haws-in-the-hedge/index.html",
     "_photographs/palm-tree-curves.md",
     "_portfolio/haws-in-the-hedge.md",
     "_portfolio/elderberry.md",
@@ -326,7 +326,6 @@
     "_portfolio/lacecap-hydrangea.md",
     "_articles/exhibition-at-the-john-radcliffe-hospital.md",
     "_photographs/wild-teasel.md",
-    "_photographs/ribwort.md",
     "uploads/_N726950 1.jpeg",
     "uploads/_N726950.jpeg",
     "_site/uploads/squarebells.jpg",
