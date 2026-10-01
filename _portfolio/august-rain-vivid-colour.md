@@ -8,8 +8,9 @@ tags:
   - art
   - root2A
 published: true
-updated: 2026-06-24
+updated: 2026-10-01
 nft: https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/48162648330355413914028108631647327469322174667090404439099707903008481214465
+flickr_share: https://flic.kr/p/2oTWvmP
 ---
 The August rain has painted the garden with glossy colour.
 
@@ -17,4 +18,4 @@ The fiery oranges and reds contrast with the blades of green that shun the water
 
 **UV varnished archival ink on fine art paper bonded to panel 400mm x 565mm**
 
-![In the studio](https://live.staticflickr.com/65535/53259755834_58e0745dba_h_d.jpg "In the studio")
+![In the studio](https://live.staticflickr.com/65535/53259755834_58e0745dba_h_d.jpg)
