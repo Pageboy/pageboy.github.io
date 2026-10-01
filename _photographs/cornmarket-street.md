@@ -1,8 +1,8 @@
 ---
 date: 2025-11-21
-updated: 2025-11-21
+updated: 2026-10-01
 title: Cornmarket Street Interior
-image: https://live.staticflickr.com/65535/54936796777_96efabe2fe_h.jpg
+image: https://live.staticflickr.com/65535/54936796777_de8a1cdf3f_b.jpg
 caption: Pret a manger Interior
 source: Nikon 7ii 28mm f2.8
 layout: photo

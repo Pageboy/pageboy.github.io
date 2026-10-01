@@ -1,8 +1,8 @@
 ---
 date: 2025-10-28
-updated: 2025-10-28
+updated: 2026-10-01
 title: Lewes Castle Entrance Archway
-image: https://live.staticflickr.com/65535/54880270322_a887d99d0d_h.jpg
+image: https://live.staticflickr.com/65535/54880270322_0b579b07eb_b_d.jpg
 caption: Lewes Castle in Sussex
 source: Nikon 7ii 28mm f2.8
 layout: photo

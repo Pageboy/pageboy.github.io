@@ -1,12 +1,15 @@
 ---
 date: 2025-09-24
-updated: 2025-10-04
+updated: 2026-10-01
 title: St Gabriel’s Church, Charmouth
-image: https://live.staticflickr.com/65535/54802791679_9cbcfb3830_h.jpg
+image: https://live.staticflickr.com/65535/54802791679_9cbcfb3830_h.jpg?s=eyJpIjo1NDgwMjc5MTY3OSwiZSI6MTc5MDg3NTIyMCwicyI6IjllNjhjMzUwODIyNmU2ZGM1NzgzM2I5NTVjYmY2OTIzN2ExZjQwMjQiLCJ2IjoxfQ
 caption: The remains of St Gabriels Chapel
 source: Apple iPhone 16 Pro
 layout: photo
-tags: architecture,photography,impermanence
+tags:
+  - arc
+  - architecture
+  - buildings
 published: true
 flickr_album: flickr72177720323722839
 slug: arched-doorway-st-gabriels-church
