@@ -85,8 +85,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/august-rain-vivid-colour.md",
-                "mode": "preview",
+                "file": "_portfolio/bougainvillea.md",
+                "mode": "source",
                 "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -100,21 +100,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "august-rain-vivid-colour"
-            }
-          },
-          {
-            "id": "debaa039f52dba28",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://github.com/roomi-fields",
-                "title": "roomi-fields · GitHub",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "roomi-fields · GitHub"
+              "title": "bougainvillea"
             }
           }
         ],
@@ -303,7 +289,15 @@
   },
   "active": "34ed4c2ae9adb882",
   "lastOpenFiles": [
+    "_portfolio/palm-lily-arcs.md",
+    "_site/uploads/Pasted image 20261001120831.png",
+    "uploads/Pasted image 20261001120831.png",
     "bases/Portfolio.base",
+    "_portfolio/meadow-grass.md",
+    "_portfolio/smoke-tree.md",
+    "_portfolio/august-rain-vivid-colour.md",
+    "_site/portfolio/bougainvillea/index.html",
+    "_site/portfolio/bougainvillea",
     "_portfolio/beech-twins-with-lichen-colours.md",
     "_portfolio/ash-arc.md",
     "_portfolio/bougainvillea.md",
@@ -321,11 +315,9 @@
     "_site/portfolio/purpleheart/index.html",
     "_site/portfolio/purpleheart",
     "_site/portfolio/haws-in-the-hedge/index.html",
-    "_site/portfolio/haws-in-the-hedge",
     "_photographs/palm-tree-curves.md",
     "_portfolio/haws-in-the-hedge.md",
     "_portfolio/elderberry.md",
-    "_site/photographs/wild-teasel/index.html",
     "_photographs/pomegranate-on-the-tree.md",
     "obsidian_templates/photograph.md",
     "_photographs/statue-inset.md",
@@ -337,17 +329,12 @@
     "uploads/_N726950 1.jpeg",
     "uploads/_N726950.jpeg",
     "_portfolio/clover-skies.md",
-    "_articles/2022-07-14-wallingford-to-pangbourne.md",
-    "_articles/a-walk-up-wittenham-clumps.md",
-    "_articles/2019-07-14-the-lowest-bridge-on-the-thames.md",
     "_site/uploads/squarebells.jpg",
     "uploads/squarebells.jpg",
     "_site/uploads/rsvp.png",
     "uploads/rsvp.png",
     "_site/uploads/oxawlogo.jpg",
     "_site/uploads/marigold.jpg",
-    "uploads/marigold.jpg",
-    "_site/uploads/OAW-logo 1200x1200.jpg",
     "newsletters/November 2025.canvas",
     "newsletters/Untitled 1.canvas",
     "docs/private/Teaching_Hold/Multiplatform Publishing/Assignment1.canvas",

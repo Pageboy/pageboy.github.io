@@ -1,6 +1,6 @@
 ---
 date: 2026-09-29
-updated: 2026-09-29
+updated: 2026-10-01
 title: Bougainvillea
 image: https://live.staticflickr.com/65535/55559014099_56040beaf2_c.jpg
 layout: art
