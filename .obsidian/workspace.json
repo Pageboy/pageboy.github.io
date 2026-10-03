@@ -61,8 +61,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_projects/folding-geometry.md",
-                "mode": "preview",
+                "file": "pages/perspectiefgallery.md",
+                "mode": "source",
                 "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "folding-geometry"
+              "title": "perspectiefgallery"
             }
           }
         ],
@@ -315,9 +315,14 @@
   },
   "active": "34ed4c2ae9adb882",
   "lastOpenFiles": [
+    "pages/perspectief.md",
+    "pages/statement.md",
+    "uploads/artwork/53058778522_45dbf9474b_h.jpg",
+    "uploads/artwork/53511325188_42a447f277_h.jpg",
+    "uploads/artwork/53299807933_9663242d3d_h.jpg",
+    "_projects/folding-geometry.md",
     "_site/uploads/artwork/52801802359_25ee087209_h.jpg",
     "uploads/artwork/52801802359_25ee087209_h.jpg",
-    "_projects/folding-geometry.md",
     "pages/earlywork.md",
     "_projects/leiden_oxford.md",
     "_projects/galeri_lang_malmo.md",
@@ -346,14 +351,9 @@
     "_projects/megalithic-landscapes.md",
     "_projects/walls.md",
     "_projects/wallmarkings.md",
-    "_photographs/travels-in-cambodia.md",
     "_site/uploads/photos/54310614933_7a897549d2_h.jpg",
     "uploads/photos/54310614933_7a897549d2_h.jpg",
     "_site/uploads/photos/54310269311_7d2ce16924_h.jpg",
-    "uploads/photos/54310269311_7d2ce16924_h.jpg",
-    "_site/uploads/photos/54310707090_4bdd00ec78_h.jpg",
-    "uploads/photos/54310707090_4bdd00ec78_h.jpg",
-    "_site/uploads/photos/54311931197_8b35ad66a6_h.jpg",
     "bases/Photographs.base",
     "bases/Articles.base",
     "_site/uploads/photos/tobeadjusted",

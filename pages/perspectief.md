@@ -4,13 +4,13 @@ hide: true
 permalink: /perspectief/
 order: 5
 date: 2022-06-06T13:30:29.690Z
-icon: fa-anchor
 flickr_album: 72157710628205710
 subtitle: A Perspectief on Cruising
 title: My Boat
 tags:
   - boat
 image: /uploads/cliftohamdenbridge.jpg
+updated: 2026-10-03
 ---
 **Perspectief** is a Dutch cruiser created from steel and first launched in 1987. The boat was made by Z-Yachts in Holland and is 8.5 metres long.
 
