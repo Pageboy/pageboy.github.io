@@ -1,8 +1,8 @@
 ---
 date: 2026-07-09
-updated: 2026-07-09
+updated: 2026-10-02
 title: Ribwort Plantain
-image: https://live.staticflickr.com/65535/55383688330_16256cfb4c_b.jpg
+image: /uploads/photos/ribwort_55383688330_o.jpg
 caption: Ribwort in May, Oxfordshire
 source: Nikon 7ii 40mm
 layout: photo

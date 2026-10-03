@@ -2,12 +2,13 @@
 title: Megalithic Landscapes
 date: 2019-11-18 00:00:00 Z
 layout: project
-flickr_album: 72157638454280223
+flickr_album: flickr72157638454280223
 order: 15
 image: /uploads/brodgar.jpg
 caption:
 tags:
   - photography
+updated: 2026-10-03
 ---
 
 The mysterious standing stones and stone circles of the British Isles are the remains of a culture that existed some 4,000 years ago. The photographs on this page show a selection of the many hundreds that exist, often in remote and desolate places, throughout the country. Archaeologists associate the sites with the Neolithic (late Stone Age) and early Bronze Age periods, but the question of their purpose remains largely unresolved.

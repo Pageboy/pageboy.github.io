@@ -3,11 +3,12 @@ layout: page
 title: Chris Jennings
 published: true
 permalink: /cv/
-subtitle: 
+subtitle:
 date: 2021-01-24T23:33:42.725Z
 image: uploads/watersedge.jpg
 order: 8
 hide: true
+updated: 2026-10-02
 ---
 |              	|  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Curriculum Vitae**                                                                	|
 |-------------:	|:------:	|------------------------------------------------------------------------------------	|

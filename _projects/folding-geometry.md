@@ -2,12 +2,13 @@
 layout: project
 title: Folding Geometry
 date: 2023-12-18T19:37:04.242Z
-image: https://live.staticflickr.com/65535/52801802359_25ee087209_h_d.jpg
+image: /uploads/artwork/52801802359_25ee087209_h.jpg
 caption: Arc 1
 flickr_album: "72177720313462602"
 order: 8
 tags:
-  - early work
+  - earlywork
+updated: 2026-10-03
 ---
 Works on paper and wood from 1983-5. The idea for these pieces came from the [Landscape series](https://www.chrisjennings.net/projects/folding_pieces/), but take a more geometric abstract approach.
 

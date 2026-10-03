@@ -5,12 +5,13 @@ layout: post
 published: true
 image: /uploads/asimiagarden0.jpg
 caption: Asima in the garden
-flickr_album: 72157714238083198
+flickr_album: 72157714238083200
 comments:
 tags:
   - observations
   - photography
   - lockdown
+updated: 2026-10-02
 ---
 
 So much to see in this small world between the fences. Plenty of time to get down and closeup to the world of plants and insects. Abundant greenness sprinkled with colour, pierced with sharpness. Home to our beautiful cat who is surprised that we are spending so much time on her planet.

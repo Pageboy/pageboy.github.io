@@ -1,7 +1,7 @@
 ---
 date: 2025-07-24
-updated: 2025-11-05
-image: https://live.staticflickr.com/65535/54676220231_54b2a4a87c_h.jpg
+updated: 2026-10-03
+image: /uploads/photos/incoming-tide-over-a-rock-covered-with-sea-lettuce_54676220231_o.jpg
 title: Incoming Tide over a rock covered with Sea Lettuce
 layout: photo
 caption: Sea Lettuce

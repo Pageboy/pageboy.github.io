@@ -7,7 +7,8 @@ caption: View of gallery
 flickr_album: "72177720307376093"
 order: 13
 tags:
-  - 'early work'
-  - 'exhibition'
+  - earlywork
+  - exhibition
+updated: 2026-10-03
 ---
 An exhibition of Folding Pieces at the Axiom Centre for the Arts, Cheltenham, Gloucestershire. August 1984

@@ -2,12 +2,12 @@
 layout: photo
 title: Weeping Pine
 date: 2022-04-29T09:34:31.042Z
-image: https://live.staticflickr.com/65535/52027755804_93017c29ad_h_d.jpg
+image: /uploads/photos/52027755804_93017c29ad_h.jpg
 caption: Cut and Stacked, Wytham Woods
 flickr_share: https://flic.kr/p/2ngvRbu
 tags:
   - landscape
 published: true
-updated: 2025-11-05
+updated: 2026-10-03
 ---
 Spring in Wytham Woods, Bluebells

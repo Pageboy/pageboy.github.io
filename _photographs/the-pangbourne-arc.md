@@ -1,8 +1,8 @@
 ---
 date: 2025-08-15T00:00:00
-updated: 2025-11-05
+updated: 2026-10-02
 title: The Pangbourne Arc
-image: https://live.staticflickr.com/65535/54724799488_ec22d131b7_h.jpg
+image: /uploads/photos/arche-de-pangbourne_54724799488_o.jpg
 caption: The railway bridge in Pangbourne
 source: Apple iPhone 16 Pro
 layout: photo

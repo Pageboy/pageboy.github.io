@@ -1,9 +1,9 @@
 ---
 title: A Walk up Wittenham Clumps
 date: 2025-10-12
-updated: 2026-03-15
+updated: 2026-10-03
 layout: post
-image: ../uploads/viewfromwittenhamclumps.jpg
+image: /uploads/photos/viewfromwittenhamclumps.jpg
 caption: The view from the top of Wittenham Clumps
 excerpt_separator: <!--and-->
 flickr_album:
@@ -26,7 +26,7 @@ To begin with we need to make our way along the towpath of the going upstream to
 
 There are some lovely trees between the towpath and the river and this one is particularly impressive.
 
-![Reaching out River tree](https://live.staticflickr.com/65535/51226192583_5b521365ee_h.jpg)
+![Reaching out River tree](/uploads/photos/51226192583_72550c8756_k.jpg)
 
 ### Pooh Sticks Bridge
 
@@ -38,7 +38,7 @@ Quite soon we come to the footbridge across the Thames. This bridge was used for
 
 After the bridge we are effectively on an island formed by the 2 streams; the main navigable Thames and the streams that rejoin a little further down. Up a steep walk (although made for cars to reach the lock keeper’s house), we come to St Peters Church, Little Wittenham. This charming parish church of Saint Peter has a 14th-century west bell tower.
 
-![St Peters Church, Little Wittenham](https://live.staticflickr.com/65535/51345629404_8ccb24f59f_h.jpg)
+![St Peters Church, Little Wittenham](/uploads/photos/51345629404_23d4e9df93_k.jpg)
 
 Across from the Church we enter through a gate. This means we are entering the land managed by the [Earth Trust](https://earthtrust.org.uk/).
 

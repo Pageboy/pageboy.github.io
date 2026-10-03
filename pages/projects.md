@@ -1,12 +1,14 @@
 ---
 title: Projects
 popup: I have a number of projects that you can explore here
-permalink: "/projects/"
+permalink: /projects/
 layout: projects
 description:
 hide: true
 gridlayout: true
 order: 3
+date: 2025-09-14
+updated: 2026-10-02
 ---
 
 Here are some projects that I have created. These are like 'memes', collections of things. I continue to add to these occasionally; if I spot an interesting wall, then I will add a photo.

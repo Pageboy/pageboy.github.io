@@ -21,7 +21,7 @@ layout: default
                   var options = {
                     apiKey: '{{site.flickr_key}}',
                     flickrId: '{{site.flickr_id}}',
-                    photosetId: '{{page.flickr_album}}',
+                    photosetId: '{{flickr-album}}',
                     captions: true,
                     small: 'medium',
                     large: 'large'
@@ -33,7 +33,7 @@ layout: default
                 </script>
 
 {{ content | replace: "_uploads", "uploads" }}
-                <p style="color:#869387;text-align:center;"><i class="fa fa-flickr"></i> <a href="https://www.flickr.com/photos/chrisjennings/albums/{{page.flickr_album}}">See this gallery on Flickr</a></p>
+                <p style="color:#869387;text-align:center;"><i class="fa fa-flickr"></i> <a href="https://www.flickr.com/photos/chrisjennings/albums/{{flickr-album}}">See this gallery on Flickr</a></p>
                 </div>
 
                 {% endif %}

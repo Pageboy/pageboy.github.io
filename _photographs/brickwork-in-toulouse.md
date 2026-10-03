@@ -1,8 +1,8 @@
 ---
 date: 2026-04-17
-updated: 2026-10-01
+updated: 2026-10-02
 title: Brickwork in Toulouse, France
-image: https://live.staticflickr.com/65535/55207257088_921ae53409_b.jpg
+image: /uploads/photos/a-mixture-of-wall-methods-in-basilica-saint-sermin-toulouse-france_55207257088_o.jpg
 caption: Wall inside the Saint Sermin Basilica, Toulouse, France
 source: Nikon 7ii 40mm
 layout: photo
@@ -23,5 +23,5 @@ The city of Toulouse, in Southern France, is known as the _La Ville Rose_ (The 
 
 Within the northern arm of the transept a section of the stone facing has been removed to reveal the red brickwork. No explanation is to found for this, but it may have been intended to highlight—or even celebrate—the craftsmanship of the masons responsible for much of the basilica’s construction. 
 
-I have added this photograph (together with 2 more from Toulouse) to my collection of _walls_ which you can see if you read this on my [web site](https://www.chrisjenings.net/photographs/brickwork-in-toulouse/).
+I have added this photograph (together with 2 more from Toulouse) to my collection of _walls_ .
 

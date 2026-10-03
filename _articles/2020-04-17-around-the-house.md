@@ -5,11 +5,12 @@ layout: post
 published: true
 image: /uploads/dsc_6088.jpg
 caption: Close up of a carpet
-flickr_album: 72157713928021958
+flickr_album: 72157713928021950
 comments:
 tags:
   - observations
   - lockdown
+updated: 2026-10-02
 ---
 
 So this self isolating is rather frustrating, I'm sure you will agree. But here's the thing; if you are cooped up inside your own house maybe there are some details that you never really noticed. Maybe you just take for granted the corners here and there that might make an interesting picture.

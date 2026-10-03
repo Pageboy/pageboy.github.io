@@ -7,7 +7,8 @@ caption: View of gallery with fellow artists
 flickr_album: "72177720307397789"
 order: 14
 tags:
-  - 'early work'
-  - 'exhibition'
+  - earlywork
+  - exhibition
+updated: 2026-10-03
 ---
 As part of the Oxford Art Group, these works were exhibited in Leiden alongside 5 other Oxford based artists.

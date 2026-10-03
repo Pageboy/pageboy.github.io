@@ -1,8 +1,8 @@
 ---
 date: 2025-08-22
-updated: 2025-08-22
+updated: 2026-10-03
 title: Still Waters on the Thames
-image: /uploads/img_4485.jpeg
+image: /uploads/photos/img_4485.jpeg
 caption: The Thames at Pangbourne
 source: Nikon 7ii
 layout: photo

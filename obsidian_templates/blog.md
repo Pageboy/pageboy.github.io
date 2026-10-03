@@ -1,12 +1,12 @@
 ---
-title: 
-date: 
-updated: 
+title:
+date:
+updated:
 layout: post
-image: 
-caption: 
+image:
+caption:
 excerpt_separator: <!--and-->
 flickr_album: flickr
-tags: 
+tags:
 published: false
 ---

@@ -1,7 +1,7 @@
 ---
 date: 2022-06-24T00:00:00
-updated: 2026-01-25
-image: https://live.staticflickr.com/39/78431791_ea365a3d22_h.jpg
+updated: 2026-10-03
+image: /uploads/photos/78431791_83388b8dab_k.jpg
 title: The Oxford Ox
 caption: The Ox at the Said Business School
 layout: photo

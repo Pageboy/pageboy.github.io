@@ -1,8 +1,8 @@
 ---
 date: 2025-09-19
-updated: 2025-09-19
+updated: 2026-10-02
 title: Two Windows
-image: https://live.staticflickr.com/65535/54794571090_b46bec0afe_h.jpg
+image: /uploads/photos/2-windows-agios-estavramenos-fontana-paxos_54794571090_o.jpg
 caption: Church windows, Fontana
 source: Nikon 7ii
 layout: photo

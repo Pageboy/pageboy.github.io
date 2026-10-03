@@ -2,12 +2,12 @@
 layout: photo
 title: Bridges on the Thames
 date: 2025-01-05T15:31:00.000+00:00
-image: https://live.staticflickr.com/65535/54307154949_686fde7999_h_d.jpg
+image: /uploads/photos/road-bridge-over-the-thames-at-clifton-hampden_54307154949_o.jpg
 caption: Clifton Hampden
 flickr_album: "72157719717623568"
 tags:
 published: true
-updated: 2025-11-05
+updated: 2026-10-03
 ---
 See a gallery of other bridge photos and a video on the Thames.
 

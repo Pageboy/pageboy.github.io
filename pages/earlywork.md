@@ -1,12 +1,14 @@
 ---
 title: Early Work
 popup: Explore my early art work
-permalink: "/earlywork/"
+permalink: /earlywork/
 layout: earlywork
 description:
 hide: false
 gridlayout: true
 order: 2
+date: 2025-09-14
+updated: 2026-10-02
 ---
 
 A retrospective of my early work. This represents all the types of art work that I did until 1990. Some of this work was photographed with 35mm Ektachrome transparency film and digitized with an Epson V800 scanner (some dust may remain!).

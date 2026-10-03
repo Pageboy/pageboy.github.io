@@ -15,6 +15,26 @@
   display: none;
 }
 
+/* src/components/shared/ink-svg-preview-theme.scss */
+.theme-dark .markdown-preview-view img:is([alt=InkWriting], [alt=InkDrawing]) {
+  filter: invert(1);
+}
+.ddc_ink_writing-embed-preview path,
+.ddc_ink_drawing-embed-preview path {
+  fill: var(--text-normal) !important;
+}
+.ddc_ink_drawing-embed-preview .ddc_ink_drawing-placeholder path {
+  stroke: var(--text-normal) !important;
+}
+.ddc_ink_drawing-embed-preview .ddc_ink_drawing-placeholder rect,
+.ddc_ink_drawing-embed-preview .ddc_ink_drawing-placeholder circle {
+  stroke: var(--text-normal) !important;
+}
+.ddc_ink_drawing-embed-preview .frame-children rect,
+.ddc_ink_drawing-embed-preview .frame-children circle {
+  stroke: var(--text-normal);
+}
+
 /* src/components/dom-components/support-button-set.scss */
 .ddc_ink_support-btn-set .setting-item {
   border-top: none !important;
@@ -3848,6 +3868,10 @@ input.ddc_ink_line-height-input {
   width: 1.5em !important;
   height: 1.5em !important;
 }
+.ink_extended-writing-menu button svg[fill=none] {
+  fill: none;
+  stroke: currentColor;
+}
 
 /* src/components/jsx-components/overflow-menu/overflow-menu.scss */
 .ddc_ink_overflow-button-and-menu {
@@ -3880,21 +3904,6 @@ input.ddc_ink_line-height-input {
 }
 
 /* src/components/formats/current/drawing/drawing-embed/drawing-embed.scss */
-.ddc_ink_writing-embed-preview path,
-.ddc_ink_drawing-embed-preview path {
-  fill: var(--text-normal) !important;
-}
-.ddc_ink_drawing-embed-preview .ddc_ink_drawing-placeholder path {
-  stroke: var(--text-normal) !important;
-}
-.ddc_ink_drawing-embed-preview .ddc_ink_drawing-placeholder rect,
-.ddc_ink_drawing-embed-preview .ddc_ink_drawing-placeholder circle {
-  stroke: var(--text-normal) !important;
-}
-.ddc_ink_drawing-embed-preview .frame-children rect,
-.ddc_ink_drawing-embed-preview .frame-children circle {
-  stroke: var(--text-normal);
-}
 .ddc_ink_resize-container--boox .ddc_ink_writing-editor,
 .ddc_ink_resize-container--boox .ddc_ink_drawing-editor,
 .ddc_ink_boox-eink .ddc_ink_writing-editor,
@@ -4195,6 +4204,7 @@ a[href*="type=inkDrawing"] {
 }
 .ddc_ink_resize-container {
   width: 100%;
+  position: relative;
 }
 .ddc_ink_resize-container.ddc_ink_smooth-transition {
   transition-property: height;
@@ -4527,21 +4537,6 @@ a[href*="type=inkWriting"] {
 }
 
 /* src/components/formats/current/writing/writing-embed-preview/writing-embed-preview.scss */
-.ddc_ink_writing-embed-preview path,
-.ddc_ink_drawing-embed-preview path {
-  fill: var(--text-normal) !important;
-}
-.ddc_ink_drawing-embed-preview .ddc_ink_drawing-placeholder path {
-  stroke: var(--text-normal) !important;
-}
-.ddc_ink_drawing-embed-preview .ddc_ink_drawing-placeholder rect,
-.ddc_ink_drawing-embed-preview .ddc_ink_drawing-placeholder circle {
-  stroke: var(--text-normal) !important;
-}
-.ddc_ink_drawing-embed-preview .frame-children rect,
-.ddc_ink_drawing-embed-preview .frame-children circle {
-  stroke: var(--text-normal);
-}
 .ddc_ink_writing-embed-preview {
   pointer-events: none;
   overflow: visible;
@@ -4581,7 +4576,7 @@ a[href*="type=inkWriting"] {
 }
 
 /* src/components/jsx-components/finger-blocker/finger-blocker.scss */
-.ink-cm-scroller--scroll-pinned {
+.ink-cm-scroller--scroll-locked {
   overflow: hidden;
   scrollbar-color: transparent transparent;
 }
@@ -4593,21 +4588,6 @@ a[href*="type=inkWriting"] {
 }
 
 /* src/logic/utils/svg-edit-button.scss */
-.ddc_ink_writing-embed-preview path,
-.ddc_ink_drawing-embed-preview path {
-  fill: var(--text-normal) !important;
-}
-.ddc_ink_drawing-embed-preview .ddc_ink_drawing-placeholder path {
-  stroke: var(--text-normal) !important;
-}
-.ddc_ink_drawing-embed-preview .ddc_ink_drawing-placeholder rect,
-.ddc_ink_drawing-embed-preview .ddc_ink_drawing-placeholder circle {
-  stroke: var(--text-normal) !important;
-}
-.ddc_ink_drawing-embed-preview .frame-children rect,
-.ddc_ink_drawing-embed-preview .frame-children circle {
-  stroke: var(--text-normal);
-}
 .ddc_ink_svg-view-content--anchor {
   position: relative;
 }
@@ -4713,49 +4693,45 @@ a[href*="type=inkWriting"] {
 }
 .ddc_ink_embed .ddc_ink_drawing-editor {
   overflow: visible;
-  container-type: inline-size;
-  container-name: ink-drawing-embed-toolbar;
 }
 .ddc_ink_embed .ddc_ink_drawing-editor .ink_primary-menu-bar,
 .ddc_ink_embed .ddc_ink_drawing-editor .ink_tool-menu {
   transition: none;
 }
-@container ink-drawing-embed-toolbar (max-width: 22rem) {
-  .ddc_ink_embed .ddc_ink_drawing-editor .ink_primary-menu-bar {
-    left: 50%;
-    right: auto;
-    width: max-content;
-    min-width: 100%;
-    max-width: none;
-    justify-content: center;
-    gap: 0;
-    transform: translateX(-50%);
-  }
-  .ddc_ink_embed .ddc_ink_drawing-editor .ink_primary-menu-bar.ddc_ink_active {
-    transform: translate(-50%, -100%);
-  }
-  .ddc_ink_embed .ddc_ink_drawing-editor .ink_menu-bar_full {
-    flex-grow: 0;
-    width: auto;
-    justify-content: flex-start;
-    gap: 0;
-  }
-  .ddc_ink_embed .ddc_ink_drawing-editor .ink_quick-menu,
-  .ddc_ink_embed .ddc_ink_drawing-editor .ink_tool-menu {
-    border-inline-end: 1px solid var(--background-modifier-border);
-    padding-inline-end: 8px;
-    margin-inline-end: 8px;
-  }
-  .ddc_ink_embed .ddc_ink_drawing-editor .ink_tool-menu,
-  .ddc_ink_embed .ddc_ink_drawing-editor.ink_dominant-hand_left .ink_tool-menu {
-    position: static;
-    top: auto;
-    left: auto;
-    transform: none;
-  }
-  .ddc_ink_embed .ddc_ink_drawing-editor .ink_other-menu {
-    display: none;
-  }
+.ddc_ink_embed .ddc_ink_drawing-editor.ddc_ink_toolbar-compact .ink_primary-menu-bar {
+  left: 50%;
+  right: auto;
+  width: max-content;
+  min-width: 100%;
+  max-width: none;
+  justify-content: center;
+  gap: 0;
+  transform: translateX(-50%);
+}
+.ddc_ink_embed .ddc_ink_drawing-editor.ddc_ink_toolbar-compact .ink_primary-menu-bar.ddc_ink_active {
+  transform: translate(-50%, -100%);
+}
+.ddc_ink_embed .ddc_ink_drawing-editor.ddc_ink_toolbar-compact .ink_menu-bar_full {
+  flex-grow: 0;
+  width: auto;
+  justify-content: flex-start;
+  gap: 0;
+}
+.ddc_ink_embed .ddc_ink_drawing-editor.ddc_ink_toolbar-compact .ink_quick-menu,
+.ddc_ink_embed .ddc_ink_drawing-editor.ddc_ink_toolbar-compact .ink_tool-menu {
+  border-inline-end: 1px solid var(--background-modifier-border);
+  padding-inline-end: 8px;
+  margin-inline-end: 8px;
+}
+.ddc_ink_embed .ddc_ink_drawing-editor.ddc_ink_toolbar-compact .ink_tool-menu,
+.ddc_ink_embed .ddc_ink_drawing-editor.ddc_ink_toolbar-compact.ink_dominant-hand_left .ink_tool-menu {
+  position: static;
+  top: auto;
+  left: auto;
+  transform: none;
+}
+.ddc_ink_embed .ddc_ink_drawing-editor.ddc_ink_toolbar-compact .ink_other-menu {
+  display: none;
 }
 
 /* src/components/jsx-components/extended-drawing-menu/extended-drawing-menu.scss */
@@ -4801,6 +4777,10 @@ a[href*="type=inkWriting"] {
   height: 1.5em !important;
   fill: currentColor;
 }
+.ink_extended-writing-menu button svg[fill=none] {
+  fill: none;
+  stroke: currentColor;
+}
 .ink_extended-writing-menu .ddc_ink_btn-group {
   display: inline-flex;
   gap: 0;
@@ -4828,9 +4808,24 @@ a[href*="type=inkWriting"] {
   color: var(--text-on-accent);
   fill: var(--text-on-accent);
 }
+.ink_extended-writing-menu .ddc_ink_btn-group .ddc_ink_btn-group__btn--frame {
+  width: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  padding-inline: 0.65em !important;
+}
+.ink_extended-writing-menu .ddc_ink_btn-group .ddc_ink_btn-group__btn-label {
+  font-size: var(--font-ui-small);
+  line-height: 1;
+}
 .ink_extended-writing-menu .ddc_ink_btn-group .ddc_ink_btn-group__btn--accent svg {
   width: 1.65em !important;
   height: 1.65em !important;
+}
+.ink_extended-writing-menu .ddc_ink_btn-group .ddc_ink_btn-group__btn--frame svg {
+  padding: 0.2em;
+  box-sizing: content-box;
 }
 
 /* src/components/jsx-components/resize-handle/resize-handle.scss */
@@ -4869,21 +4864,6 @@ a[href*="type=inkWriting"] {
 }
 
 /* src/components/formats/current/drawing/drawing-embed-preview/drawing-embed-preview.scss */
-.ddc_ink_writing-embed-preview path,
-.ddc_ink_drawing-embed-preview path {
-  fill: var(--text-normal) !important;
-}
-.ddc_ink_drawing-embed-preview .ddc_ink_drawing-placeholder path {
-  stroke: var(--text-normal) !important;
-}
-.ddc_ink_drawing-embed-preview .ddc_ink_drawing-placeholder rect,
-.ddc_ink_drawing-embed-preview .ddc_ink_drawing-placeholder circle {
-  stroke: var(--text-normal) !important;
-}
-.ddc_ink_drawing-embed-preview .frame-children rect,
-.ddc_ink_drawing-embed-preview .frame-children circle {
-  stroke: var(--text-normal);
-}
 .ddc_ink_drawing-embed-preview {
   pointer-events: none;
   display: flex;
@@ -4935,21 +4915,6 @@ a[href*="type=inkWriting"] {
 }
 
 /* src/components/dom-components/modals/svg-picker-modal/svg-picker-modal.scss */
-.ddc_ink_writing-embed-preview path,
-.ddc_ink_drawing-embed-preview path {
-  fill: var(--text-normal) !important;
-}
-.ddc_ink_drawing-embed-preview .ddc_ink_drawing-placeholder path {
-  stroke: var(--text-normal) !important;
-}
-.ddc_ink_drawing-embed-preview .ddc_ink_drawing-placeholder rect,
-.ddc_ink_drawing-embed-preview .ddc_ink_drawing-placeholder circle {
-  stroke: var(--text-normal) !important;
-}
-.ddc_ink_drawing-embed-preview .frame-children rect,
-.ddc_ink_drawing-embed-preview .frame-children circle {
-  stroke: var(--text-normal);
-}
 .ink-svg-picker-item {
   cursor: pointer;
   border: 1px solid var(--background-modifier-border);
@@ -5107,7 +5072,7 @@ a[href*="type=inkWriting"] {
 }
 
 /* src/components/formats/v1-code-blocks/writing/tldraw-writing-editor/finger-blocker/finger-blocker.scss */
-.ink-cm-scroller--scroll-pinned {
+.ink-cm-scroller--scroll-locked {
   overflow: hidden;
   scrollbar-color: transparent transparent;
 }
@@ -8196,7 +8161,7 @@ a[href*="type=inkWriting"] {
 }
 
 /* src/components/formats/v1-code-blocks/drawing/tldraw-drawing-editor/finger-blocker/finger-blocker.scss */
-.ink-cm-scroller--scroll-pinned {
+.ink-cm-scroller--scroll-locked {
   overflow: hidden;
   scrollbar-color: transparent transparent;
 }

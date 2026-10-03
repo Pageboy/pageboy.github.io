@@ -1,6 +1,6 @@
 ---
 title: Portfolio
-permalink: "/portfolio/"
+permalink: /portfolio/
 image: uploads/portfolioback.jpg
 flickr_album:
 icon:
@@ -8,6 +8,8 @@ layout: portfolio
 section: art
 order: 1
 hide: true
+date: 2025-09-14
+updated: 2026-10-02
 ---
 Gathering images and geometry with simple captions. Taking shapes and triangles for a walk in the landscape and around my photograph collections.
 

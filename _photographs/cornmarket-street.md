@@ -1,8 +1,8 @@
 ---
 date: 2025-11-21
-updated: 2026-10-01
+updated: 2026-10-02
 title: Cornmarket Street Interior
-image: https://live.staticflickr.com/65535/54936796777_de8a1cdf3f_b.jpg
+image: /uploads/photos/cornmarket-street-oxford_54936796777_o.jpg
 caption: Pret a manger Interior
 source: Nikon 7ii 28mm f2.8
 layout: photo

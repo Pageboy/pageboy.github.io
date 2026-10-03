@@ -8,30 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "76b5931dde1cddce",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_portfolio/lacecap-hydrangea.md",
-                "mode": "source",
-                "source": true,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "lacecap-hydrangea"
-            }
-          },
-          {
             "id": "67cd70e37cd6cdcf",
             "type": "leaf",
             "state": {
@@ -85,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_photographs/arched-doorway-st-gabriels-church.md",
+                "file": "_projects/folding-geometry.md",
                 "mode": "preview",
                 "source": true,
                 "backlinks": true,
@@ -100,11 +76,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "arched-doorway-st-gabriels-church"
+              "title": "folding-geometry"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -163,7 +139,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 260.5
+    "width": 352.16796875
   },
   "right": {
     "id": "13fd9d4d78d9f053",
@@ -225,8 +201,8 @@
             "state": {
               "type": "calendar",
               "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
+              "icon": "lucide-ghost",
+              "title": "calendar"
             }
           },
           {
@@ -254,13 +230,13 @@
             }
           },
           {
-            "id": "51dcffb09b1ed331",
+            "id": "399f0b6da580786c",
             "type": "leaf",
             "state": {
               "type": "side-panel-control-view",
               "state": {},
               "icon": "viewIcon",
-              "title": "Markdown-Autocomplete"
+              "title": "Markdown Formatting Assistant"
             }
           }
         ],
@@ -268,11 +244,11 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300.5
+    "width": 300.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "vault-file-renamer:Vault File Renamer": false,
       "bases:Create new base": false,
       "workspaces:Manage workspace layouts": false,
       "switcher:Open quick switcher": false,
@@ -281,59 +257,110 @@
       "daily-notes:Open today's daily note": false,
       "command-palette:Open command palette": false,
       "audio-recorder:Start/stop recording": false,
+      "templates:Insert template": false,
       "obsidian-markdown-formatting-assistant-plugin:Open Markdown Formatting Assistant": false,
       "obsidian-git:Open Git source control": false,
-      "templates:Insert template": false,
+      "vault-file-renamer:Vault File Renamer": false,
       "content-publisher:Publish to Substack": false
     }
   },
+  "floating": {
+    "id": "07ab01a90e6e8247",
+    "type": "floating",
+    "children": [
+      {
+        "id": "e7f138d9d079c1ab",
+        "type": "window",
+        "children": [
+          {
+            "id": "3771b7cbbc77e990",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "76b5931dde1cddce",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "_portfolio/lacecap-hydrangea.md",
+                    "mode": "source",
+                    "source": true,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "lacecap-hydrangea"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 804,
+        "y": 56,
+        "width": 600,
+        "height": 600,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
   "active": "34ed4c2ae9adb882",
   "lastOpenFiles": [
+    "_site/uploads/artwork/52801802359_25ee087209_h.jpg",
+    "uploads/artwork/52801802359_25ee087209_h.jpg",
+    "_projects/folding-geometry.md",
+    "pages/earlywork.md",
+    "_projects/leiden_oxford.md",
+    "_projects/galeri_lang_malmo.md",
+    "_projects/bradford_university_gallery.md",
+    "_projects/folding_pieces.md",
+    "_projects/mirror_drawings.md",
+    "_projects/printmaking.md",
+    "_projects/stoneandmirrors.md",
+    "_projects/works_on_paper.md",
+    "_projects/turning_drawings.md",
+    "_projects/solentris.md",
+    "_projects/three_segments.md",
+    "_projects/upstairs_gallery_oxford.md",
+    "_projects/axiom_arts_centre.md",
+    "_projects/turning_pieces.md",
+    "_projects/cut_paper_works.md",
+    "_projects/sv_paintings.md",
+    "_projects/drawings_for_folding_pieces.md",
+    "_site/projects/folding_pieces/index.html",
+    "_site/projects/folding_pieces",
+    "_site/uploads/artwork/52801995703_ff1a59257b_h.jpg",
+    "_site/uploads/artwork",
+    "uploads/artwork/52801995703_ff1a59257b_h.jpg",
+    "_projects/thebookinart.md",
+    "_projects/images-of-book-pages.md",
+    "_projects/megalithic-landscapes.md",
+    "_projects/walls.md",
+    "_projects/wallmarkings.md",
+    "_photographs/travels-in-cambodia.md",
+    "_site/uploads/photos/54310614933_7a897549d2_h.jpg",
+    "uploads/photos/54310614933_7a897549d2_h.jpg",
+    "_site/uploads/photos/54310269311_7d2ce16924_h.jpg",
+    "uploads/photos/54310269311_7d2ce16924_h.jpg",
+    "_site/uploads/photos/54310707090_4bdd00ec78_h.jpg",
+    "uploads/photos/54310707090_4bdd00ec78_h.jpg",
+    "_site/uploads/photos/54311931197_8b35ad66a6_h.jpg",
     "bases/Photographs.base",
-    "_photographs/lewes-castle-entrance-arch.md",
-    "_photographs/cornmarket-street.md",
-    "_photographs/palm-tree-curves.md",
-    "_photographs/travels-in-mexico.md",
-    "_photographs/brickwork-in-toulouse.md",
-    "_portfolio/wheat-waiting.md",
-    "bases/Portfolio.base",
-    "_portfolio/bougainvillea.md",
-    "_portfolio/palm-lily-arcs.md",
-    "_site/uploads/Pasted image 20261001120831.png",
-    "uploads/Pasted image 20261001120831.png",
-    "_portfolio/meadow-grass.md",
-    "_portfolio/smoke-tree.md",
-    "_portfolio/august-rain-vivid-colour.md",
-    "_site/portfolio/bougainvillea/index.html",
-    "_site/portfolio/bougainvillea",
-    "_portfolio/beech-twins-with-lichen-colours.md",
-    "_portfolio/ash-arc.md",
-    "pages/perspectiefgallery.md",
-    "_articles/arcs-of-oxford.md",
-    "_portfolio/trumpet-vine.md",
-    "_portfolio/5triangles.md",
-    "_portfolio/sea_sand_dunes.md",
-    "_portfolio/rainday.md",
-    "_portfolio/road-rain.md",
-    "_site/portfolio/trumpet-vine/index.html",
-    "_site/portfolio/trumpet-vine",
-    "_site/photographs/woodbine/index.html",
-    "_site/photographs/woodbine",
-    "_site/portfolio/purpleheart/index.html",
-    "_site/portfolio/purpleheart",
-    "_portfolio/haws-in-the-hedge.md",
-    "_portfolio/elderberry.md",
-    "_photographs/pomegranate-on-the-tree.md",
-    "obsidian_templates/photograph.md",
-    "_photographs/statue-inset.md",
-    "uploads/_N726950 1.jpeg",
-    "uploads/_N726950.jpeg",
-    "_site/uploads/squarebells.jpg",
-    "uploads/squarebells.jpg",
-    "_site/uploads/rsvp.png",
-    "uploads/rsvp.png",
-    "_site/uploads/oxawlogo.jpg",
-    "_site/uploads/marigold.jpg",
+    "bases/Articles.base",
+    "_site/uploads/photos/tobeadjusted",
+    "uploads/photos/tobeadjusted",
+    "uploads/photos/untitled folder",
+    "_site/uploads/photos",
+    "uploads/artwork",
     "newsletters/November 2025.canvas",
     "newsletters/Untitled 1.canvas",
     "docs/private/Teaching_Hold/Multiplatform Publishing/Assignment1.canvas",

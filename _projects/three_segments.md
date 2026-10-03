@@ -7,8 +7,9 @@ caption: View of the 3 segments sculpture
 flickr_album: "72177720307356116"
 order: 10
 tags:
-  - 'early work'
-  - 'public sculpture'
+  - earlywork
+  - public sculpture
+updated: 2026-10-03
 ---
 *Three Segments*  was a kinetic sculpture built for the John Radcliffe Hospital in 1987-88. The sculpture was positioned on the roundabout adjacent to the entrances to the main hospital and the maternity hospital. 
 

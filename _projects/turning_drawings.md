@@ -7,7 +7,8 @@ caption: Turner Drawing
 flickr_album: "72177720307396854"
 order: 9
 tags:
-  - 'early work'
+  - earlywork
+updated: 2026-10-03
 ---
 These drawings were a direct development from the Turning Pieces, wall pieces. Shapes are chosen and then rotated to different positions in the drawing.
 

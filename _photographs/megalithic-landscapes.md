@@ -2,11 +2,11 @@
 layout: photo
 title: Megalithic Landscapes
 date: 2018-02-16T23:18:00.000+00:00
-image: https://live.staticflickr.com/65535/54319778972_5a0b42391a_h_d.jpg
+image: /uploads/photos/ballochroy-knapdale-scotland_54319778972_o.jpg
 caption: Ballochroy stones, Knapdale, Scotland
 flickr_album: "72157638454280223"
 published: true
-updated: 2026-07-09
+updated: 2026-10-02
 source: Mamiya 645
 ---
 I am looking at my collection of photographs of standing stones and stone circles in the UK.  These photographs were taken as part of a project to document them in the landscape. The photographs were taken between 1973 and 1985.

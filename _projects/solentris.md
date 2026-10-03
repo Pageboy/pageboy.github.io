@@ -7,8 +7,9 @@ caption: View of the Solentris sculpture
 flickr_album: "72177720307355346"
 order: 11
 tags:
-  - early work
+  - earlywork
   - public sculpture
+updated: 2026-10-03
 ---
 *Solentris* was a kinetic sculpture created for the Southampton General Hospital in 1986-7. The sculpture consisted of three triangles made from aluminium mast section and welded together at the corners. Each triangle was connected through a steel cable via bearings. They were alternated so that the centre triangle was inverted. They were balanced so as to rotate randomly about the cable.
 

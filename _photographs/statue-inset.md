@@ -1,9 +1,9 @@
 ---
 date: 2026-08-09
-updated: 2026-08-09
+updated: 2026-10-02
 title: Statue Inset with no statue
 subtitle: At Cliveden House
-image:
+image: /uploads/photos/empty-sculpture-position-cliveden-hose-berkshire_55361765826_o.jpg
 caption: Where did the staue go?
 source: Nikon 7ii 40mm
 layout: photo
@@ -17,8 +17,6 @@ flickr_album: flickr
 flickr_share:
 excerpt_separator: <!--and-->
 ---
-
-![Rough brickwork showing place for statue](https://live.staticflickr.com/65535/55452697349_c89d80fefd_b.jpg)
 
 Cliveden House
 

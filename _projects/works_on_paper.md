@@ -7,7 +7,8 @@ caption: Facing Triangles
 flickr_album: "72177720300542608"
 order: 4
 tags:
-  - 'early work'
+  - earlywork
+updated: 2026-10-03
 ---
 
 This series of works on paper come from 1982. I was inspired by the notion that the combination of 3 items invokes harmony. I was struck by the phrase from Chinese Literature:

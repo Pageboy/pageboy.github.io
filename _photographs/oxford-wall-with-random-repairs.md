@@ -1,8 +1,8 @@
 ---
 date: 2025-12-03
-updated: 2025-12-03
+updated: 2026-10-03
 title: Oxford Wall with random repairs
-image: https://live.staticflickr.com/65535/54927244504_3dd5199168_h.jpg
+image: /uploads/photos/54927244504_3dd5199168_h.jpg
 caption: Random repairs
 source: Nikon 7ii 40mm Voigtlander
 layout: photo

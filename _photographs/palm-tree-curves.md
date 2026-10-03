@@ -1,9 +1,9 @@
 ---
 date: 2026-01-24
-updated: 2026-10-01
+updated: 2026-10-02
 title: Palm Tree Curves
 subtitle: The Island of Holbox
-image: https://live.staticflickr.com/65535/55051706966_0f3d98c3bf_h.jpg?s=eyJpIjo1NTA1MTcwNjk2NiwiZSI6MTc5MDg3MjU5NywicyI6IjMxNzg2YmQ4ZmUzZGRiZDc0NjVkZDA1YjYzN2Q4N2JjMmJjNzcxNWMiLCJ2IjoxfQ
+image: /uploads/photos/palm-tree-curves_55051706966_o.jpg
 caption: The curving palm leaves
 source: Nikon 7ii
 layout: photo

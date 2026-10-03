@@ -1,8 +1,8 @@
 ---
 date: 2026-01-29T18:00:00
-updated: 2026-10-01
+updated: 2026-10-02
 title: Travels in Mexico
-image: https://live.staticflickr.com/65535/55062347108_f34a9c09bd_h.jpg?s=eyJpIjo1NTA2MjM0NzEwOCwiZSI6MTc5MDg3MTQ3NiwicyI6ImNmMjhmZGEwMGY2ZTI2MTYzYWY1N2U5MTU0OTk4NzkwZWNkNjk1YjUiLCJ2IjoxfQ
+image: /uploads/photos/chichen-itza-the-main-pyramid-restored_55062347108_o.jpg
 caption: Chichen Itza Great Pyramid
 source: Nikon 7ii 24-120mm f4
 layout: photo
@@ -16,10 +16,6 @@ flickr_album: flickr72177720331672446
 flickr_share: https://flic.kr/p/2rTEVsd
 excerpt_separator: <!--and-->
 ---
-
-
-
-
 
 January 2026, a trip to Mexico. First to Mexico city and then to the Yucatan Peninsula to view the Mayan ruins and some colonial cities.
 

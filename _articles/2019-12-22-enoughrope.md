@@ -2,13 +2,13 @@
 layout: post
 title: Enough Rope
 date: 2019-12-22T19:38:00.000Z
-image: /uploads/tim-boote-unsplash.jpg
+image: /uploads/photos/tim-boote-unsplash.jpg
 caption: Photo by Tim Boote on Unsplash
 flickr_album: "72157711862222001"
 tags:
   - observations
   - photography
-updated: 2026-03-15
+updated: 2026-10-03
 published: true
 ---
 

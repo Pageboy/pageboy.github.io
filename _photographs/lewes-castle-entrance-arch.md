@@ -1,8 +1,8 @@
 ---
 date: 2025-10-28
-updated: 2026-10-01
+updated: 2026-10-02
 title: Lewes Castle Entrance Archway
-image: https://live.staticflickr.com/65535/54880270322_0b579b07eb_b_d.jpg
+image: /uploads/photos/gateway-to-lewes-castle-sussex_54880270322_o.jpg
 caption: Lewes Castle in Sussex
 source: Nikon 7ii 28mm f2.8
 layout: photo
@@ -17,6 +17,7 @@ flickr_album: flickr72177720323722839
 The Norman castle in this Sussex town boasts a captivating archway fashioned from sandstones of many hues — soft reds, warm yellows, and muted browns. Centuries of weathering have roughened the stone surfaces, giving the arch a rugged, beauty that stands out against the flint walls.
 
 The first arch rises in a graceful, pointed _lancet_ style, while the second curves more gently in a simple, rounded form.
+
 
 <!--and-->
 

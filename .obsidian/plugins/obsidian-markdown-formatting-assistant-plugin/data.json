@@ -1,22 +1,15 @@
 {
-  "triggerChar": "\\",
+  "language": "auto",
   "sidePaneSideLeft": false,
+  "panelAlignment": "center",
   "savedColors": [
     "#ff0000"
-  ],
-  "aviabileRegions": [
-    "textEdit",
-    "tabels",
-    "html",
-    "latex",
-    "greekLetters",
-    "colors"
   ],
   "regionSettings": [
     {
       "name": "textEdit",
       "active": true,
-      "visible": true
+      "visible": false
     },
     {
       "name": "tables",
@@ -48,5 +41,35 @@
       "active": true,
       "visible": true
     }
+  ],
+  "tableAlignment": "default",
+  "calloutTitles": true,
+  "toolbar": {
+    "enabled": false,
+    "commands": [
+      "obsidian-markdown-formatting-assistant-plugin:h1",
+      "obsidian-markdown-formatting-assistant-plugin:h2",
+      "obsidian-markdown-formatting-assistant-plugin:h3",
+      "obsidian-markdown-formatting-assistant-plugin:bold",
+      "obsidian-markdown-formatting-assistant-plugin:italic",
+      "obsidian-markdown-formatting-assistant-plugin:strikethrough",
+      "obsidian-markdown-formatting-assistant-plugin:highlight",
+      "obsidian-markdown-formatting-assistant-plugin:codeInline",
+      "obsidian-markdown-formatting-assistant-plugin:blockquote",
+      "obsidian-markdown-formatting-assistant-plugin:bulletList",
+      "obsidian-markdown-formatting-assistant-plugin:numberList",
+      "obsidian-markdown-formatting-assistant-plugin:checkList",
+      "obsidian-markdown-formatting-assistant-plugin:link"
+    ],
+    "alignment": "left"
+  },
+  "triggerChar": "\\",
+  "aviabileRegions": [
+    "textEdit",
+    "tabels",
+    "html",
+    "latex",
+    "greekLetters",
+    "colors"
   ]
 }

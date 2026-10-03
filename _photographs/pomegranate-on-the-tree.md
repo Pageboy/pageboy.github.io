@@ -1,9 +1,9 @@
 ---
 date: 2025-11-05
-updated: 2026-08-09
+updated: 2026-10-02
 title: Partially eaten pomegranate on the tree
 subtitle:
-image: https://live.staticflickr.com/65535/54885637231_4f81628637_b.jpg
+image: /uploads/photos/n72_2345jpg_54885637231_o.jpg
 caption: On the island of Paxos in the Ionian Sea
 source: Nikon 7ii
 layout: photo

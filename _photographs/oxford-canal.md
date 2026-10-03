@@ -2,11 +2,11 @@
 layout: photo
 title: Oxford Canal
 date: 2022-04-07T17:26:23.103Z
-image: https://live.staticflickr.com/65535/51988695356_fc1e02a98d_h_d.jpg
+image: /uploads/photos/51988695356_fc1e02a98d_h.jpg
 caption: Bollard
 tags:
   - landscape
 published: true
-updated: 2025-11-05
+updated: 2026-10-03
 ---
 A bollard by the Oxford canal at Shipton Lock
