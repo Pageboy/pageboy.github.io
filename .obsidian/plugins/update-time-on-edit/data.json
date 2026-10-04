@@ -93,7 +93,7 @@
     "docs/photos/Wall in Sintra, Portugal.md": "3b59d905aa182330ed40d17ff063442fd4612403d88d08b383979d3c5e2e6162",
     "docs/photos/Lichen on Beech.md": "a5f6962ce3c6d35d0699361c730c95e33221f30bd518286ddfbfb612fd9843b8",
     "docs 2/photos/Wall in Sintra, Portugal.md": "cafd84b056e65300f08b4aae152e15e4cb055b38cebb373843041494dd6c37d9",
-    "_photographs/travels-in-cambodia.md": "8fb124fae70e7709f1f8eac443c09095a6fa1083589143f5df246d138c6143d4",
+    "_photographs/travels-in-cambodia.md": "ea2a90aaf0b4ef90c8e0477192886efec52f475ccbc1065a7e665331f5323911",
     "readme.md": "6762850db2e93da3bd7f5d26d0cc5c5c089d84ad57485a7c388dbb41571ee1b6",
     "_photographs/the-oxford-ox.md": "b43b5a2781d8da13fb9721fc42b50471c9e14bd42af6a55428df99fc31973df4",
     "_portfolio/year-s-end-colours.md": "33f17a308b43f29c1ec9a2185099b1861f3a88dc47994a4192aca0abb1d38e3d",
@@ -192,7 +192,7 @@
     "_portfolio/rushes_reeds_river.md": "4bbedbfc88ad8904459fb53c5519f68d50ff41259769a6da83cc68601349a774",
     "_portfolio/lapped_sand.md": "184b8edc0db895f51db217ea9309b78c19877f14ce90b8a7979a88d0bee0382e",
     "_portfolio/rainday.md": "649750047d3f81587d031afd3ed7d802cd9dc217de70d2976150e6d53c92b6fb",
-    "_portfolio/moorblues.md": "397229dd86a8ddf72492e2e63cc79cb7a97a155c8a0f5b7a25f998e90a1569bd",
+    "_portfolio/moorblues.md": "600335ced4dc3af624997321aca4b900c049903f979670f4529639285cc4bd22",
     "_portfolio/rivers-edge.md": "3a707ef01dad8e0d9f9d976a0a2e36e6cac00c6b58a900b859a7b99593ba76f3",
     "_portfolio/spring-green.md": "4cf1a7592c4786a92ba0dd3d66d0326722d1dcc7aa835ee3de93830beb550feb",
     "_portfolio/surface-reed.md": "3f42833469a10e91f83b963fd7753af0d5733ba5f20ed5611f89b1192eca0be3",
@@ -312,7 +312,7 @@
     "_portfolio/iced-ground.md": "8aba9508aaf373b2b03f47466b5e118ccd96927333410948ee19d2cd0c721518",
     "_portfolio/lean-over-water.md": "663c6046504c65e49450f4d9be336d4ed21dda5c7f12b8e1ecd377ae23b574fd",
     "_portfolio/sky-tree.md": "80ebe463472e4377d842cf9051f50be91963bb6543966d169df032cd12ecfd51",
-    "_portfolio/lenten-rose.md": "800ff70d7ff34c9326532eb6765774945b170fa24df4ae2234e632e38cfc37a8",
+    "_portfolio/lenten-rose.md": "29541d0009837c0fcb5f72ac04e86c61d95d61d49dcbf4e1119a29003044f550",
     "pages/about.md": "15ae264ec53be10aa43bc5814eb45867b9feba3a639da7915c7f9c57dba98499",
     "_articles/2019-08-30-banks-of-england.md": "69b121bf5fdb7b86d03bc4c4e8679fba7f48fc37950e2e2e784bf520919c1aeb",
     "_articles/2019-07-12-the-kings-arms-at-sandford.md": "e827d711def6ae75318bf9fccaaf3fad060bd6e7c5bec83bd74b82f768696d6d",
@@ -382,6 +382,7 @@
     "_projects/folding-geometry.md": "95c79468613964e2e03c5fcd1c95bd83826f6049623fa1262c23db6524b83f48",
     "_projects/turning_pieces.md": "95a0260e32bbd1e392755e4e08d117586bcb3a17c35735a37a8383a4970151ab",
     "_projects/solentris.md": "2e256ffe6e05f1e19ce9041829930789f3431c4d2258246c53bec5b51c2cf471",
-    "pages/perspectief.md": "cd18f9ffb3802ce94a85b33eb5b097b8337589b9dbfd2e374febdfbb6e43d7b1"
+    "pages/perspectief.md": "cd18f9ffb3802ce94a85b33eb5b097b8337589b9dbfd2e374febdfbb6e43d7b1",
+    "_articles/projects.md": "8a941e45e4c7233c81f91af73791d3993e5490271896cf6bb76b19c0b78bb65a"
   }
 }

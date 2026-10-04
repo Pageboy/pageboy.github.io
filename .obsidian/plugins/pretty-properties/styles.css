@@ -830,6 +830,8 @@ body.is-mobile .pp-cover {
     width: fit-content;
     padding-right: var(--pill-padding-x);
     --pill-border-width: 0;
+
+    line-height: normal;
 }
 
 
@@ -1021,37 +1023,6 @@ body {
 
 
 
-.property-color-setting-button.color-red svg {
-  color: var(--color-red)
-}
-
-.property-color-setting-button.color-orange svg {
-  color: var(--color-orange)
-}
-
-.property-color-setting-button.color-yellow svg {
-  color: var(--color-yellow)
-}
-
-.property-color-setting-button.color-green svg {
-  color: var(--color-green)
-}
-
-.property-color-setting-button.color-cyan svg {
-  color: var(--color-cyan)
-}
-
-.property-color-setting-button.color-blue svg {
-  color: var(--color-blue)
-}
-
-.property-color-setting-button.color-purple svg {
-  color: var(--color-purple)
-}
-
-.property-color-setting-button.color-pink svg {
-  color: var(--color-pink)
-}
 
 .setting-group .setting-item.pp-settings-tabs {
   padding: 10px 5px;
@@ -1308,11 +1279,11 @@ body:not(.show-hidden-properties) .hover-popover .metadata-property.is-empty.pp-
 	opacity: 0;
 }
 
-.pp-formatted-value-overlay > *:first-child {
-	margin-top: 0;
-}
-.pp-formatted-value-overlay > *:last-child {
+
+.pp-formatted-value-overlay > * {
+  margin-top: 0;
 	margin-bottom: 0;
+  display: inline-block;
 }
 
 
@@ -1413,6 +1384,26 @@ body:not(.show-hidden-properties) .hover-popover .metadata-property.is-empty.pp-
   padding-left: var(--tag-padding-x);
   padding-right: var(--tag-padding-x);
 }
+
+
+
+
+
+
+.pp-pill-padding-all .metadata-input-longtext .pp-property-select-button,
+.pp-pill-padding-colored .metadata-input-longtext.colored .pp-property-select-button,
+.pp-pill-padding-non-transparent .metadata-input-longtext.colored .pp-property-select-button,
+
+.pp-pill-padding-all .pp-formatted-value-overlay.text-overlay .pp-property-select-button,
+.pp-pill-padding-colored .pp-formatted-value-overlay.text-overlay.colored .pp-property-select-button,
+.pp-pill-padding-non-transparent .pp-formatted-value-overlay.text-overlay.colored .pp-property-select-button
+
+{
+  margin-right: calc(0px - var(--tag-padding-x) / 2);
+}
+
+
+
 
 
 .pp-pill-padding-all .metadata-input-number {
@@ -1604,30 +1595,7 @@ body:not(.show-hidden-properties) .hover-popover .metadata-property.is-empty.pp-
 
 
 
-button.longtext-color-button {
-  margin: 2px;
-  border: none;
-  box-shadow: none;
-  background-color: var(--background-primary);
-  height: calc(var(--input-height) - 4px);
-  width: 2.5em;
-  display: none;
-  color: var(--text-muted);
-  padding: unset;
-  position: absolute;
-  right: 0;
-  top: 0;
-  opacity: 0.2;
-}
 
-button.longtext-color-button:hover {
-  background-color: var(--background-primary-alt);
-  opacity: 1;
-}
-
-.metadata-property-value:hover button.longtext-color-button, .longtext-color-button:active {
-  display: flex;
-}
 
 .markdown-preview-view .metadata-property-value:hover .metadata-input-longtext,
 .markdown-source-view .metadata-property-value:hover .metadata-input-longtext,
@@ -1883,12 +1851,6 @@ button.longtext-color-button:hover {
 
 
 
-button.bare-button {
-  box-shadow: none;
-  background-color: transparent;
-}
-
-
 
 
 
@@ -1942,6 +1904,16 @@ button.cover-has-format {
 }
 
 
+.pp-settings-list-rule-inner-container > * {
+  margin-left: 2em;
+}
+
+
+.pp-settings-list-options-inner-container > .setting-item {
+  margin-left: 2em;
+}
+
+
 
  .metadata-property .multi-select-container .multi-select-pill {
   line-height: 1.4;
@@ -1984,18 +1956,83 @@ button.cover-has-format {
 
 
 
-.metadata-property button.pp-property-select-button {
-  margin: 0 0 0 6px;
+button.pp-property-select-button {
   background-color: transparent;
   box-shadow: none;
   padding: 0;
-  --icon-size: 1.1em;
+
   color: inherit;
-  height: unset;
+
   vertical-align: middle;
   opacity: 0.5;
+
+  height: 100%;
+  margin: auto 0 auto 0;
+
+  display: inline-block;
+
+
+  margin-left: calc(var(--tag-padding-x) / 2);
+  
+
+
 }
 
-.metadata-property button.pp-property-select-button:hover {
+
+button.pp-property-select-button  svg {
+  display: block;
+}
+
+.is-empty button.pp-property-select-button {
+  margin-left: 0;
+}
+
+button.pp-property-select-button:hover {
   opacity: 1;
 }
+
+
+.is-mobile button.pp-property-select-button {
+  margin: 0.1em 0 0.1em 6px;
+  --icon-size: 1.3em;
+}
+
+
+
+.metadata-input-longtext:focus .pp-property-select-button {
+  display: none;
+}
+
+
+
+
+
+
+button.longtext-color-button {
+  margin: 2px;
+  border: none;
+  box-shadow: none;
+  background-color: var(--background-primary);
+  height: calc(var(--input-height) - 4px);
+  width: 2.5em;
+  display: none;
+  color: var(--text-muted);
+  padding: unset;
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 0.2;
+}
+
+button.longtext-color-button:hover {
+  background-color: var(--background-primary-alt);
+  opacity: 1;
+}
+
+.metadata-property-value:hover button.longtext-color-button, .longtext-color-button:active {
+  display: flex;
+}
+
+
+
+

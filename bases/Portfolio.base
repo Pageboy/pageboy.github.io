@@ -13,10 +13,12 @@ views:
       - image
       - tags
     sort:
-      - property: file.name
+      - property: title
         direction: ASC
       - property: date
         direction: DESC
+      - property: file.name
+        direction: ASC
     columnSize:
       file.name: 231
       note.title: 247

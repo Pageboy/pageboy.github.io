@@ -1,7 +1,7 @@
 ---
 date: 2026-02-20
-updated: 2026-03-22
-title:
+updated: 2026-10-04
+title: Lenten Rose
 image: https://live.staticflickr.com/65535/55106244380_7f84735660_h.jpg
 layout: art
 tags:

@@ -11,7 +11,6 @@ tags:
 slug: travels-in-cambodia
 datetime: 2025-10-02 10:46
 summary: Stone smiles, river Buddhas, and silent bones — Cambodia whispers through temples, waters, and shadows. Every frame a doorway; every step, a prayer.
-cover_image_url: ""
 published: true
 flickr_share: https://flic.kr/s/aHBqjBZpjU
 ---
@@ -20,7 +19,7 @@ Look on this page for some of my favourite photographs taken during a journey to
 
 ![Artificial Window at Bayon Temple](/uploads/photos/54290751521_c5370120c5_h.jpg)
 
-![A huge task to rebuild collapsed wall at Angkor Wat](https://live.staticflickr.com/65535/54289874077_3d03bb2035_h.jpg)
+![A huge task to rebuild collapsed wall at Angkor Wat](/uploads/photos/54289874077_3d03bb2035_h.jpg)
 
 ![Amazing wall construction with interlocking stones](/uploads/photos/54291000953_63b5abb39d_h.jpg)
 
@@ -53,7 +52,5 @@ Look on this page for some of my favourite photographs taken during a journey to
 
 ![Boat on the Tatai River](/uploads/photos/54310707090_4bdd00ec78_h.jpg)
 
-
-![Building at the edge of the sea on Koh Rong Island](/uploads/photos//54310269311_7d2ce16924_h.jpg)
 
 ![Preparing fish for drying in the sun](/uploads/photos/54310614933_7a897549d2_h.jpg)
