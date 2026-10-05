@@ -1,8 +1,8 @@
 ---
 date: 2025-09-10
-updated: 2026-03-22
+updated: 2026-10-05
 title: Turpentine Tree
-image: https://live.staticflickr.com/65535/54997377525_5407f9dcb9_h.jpg
+image: /uploads/artwork/54997377525_5407f9dcb9_h.jpg
 layout: art
 tags:
   - art
@@ -21,4 +21,4 @@ Work in progress and ready for 3 panels. Overall dimensions will be 915mm square
 > 3 panels bolted together - 3 x 465mm x 350mm with an overall size of 915mm x 915mm
 > Each of these rectangles is a _golden rectangle_ 
 
-![In the studio](https://live.staticflickr.com/65535/55161772980_c90257ab8b_h.jpg)
+![In the studio](/uploads/artwork/55161772980_c90257ab8b_h.jpg)

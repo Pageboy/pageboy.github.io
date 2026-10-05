@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/haws-in-the-hedge.md",
-                "mode": "source",
+                "file": "_portfolio/agapanthus-at-monserrate.md",
+                "mode": "preview",
                 "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -28,24 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "haws-in-the-hedge"
-            }
-          },
-          {
-            "id": "34ed4c2ae9adb882",
-            "type": "leaf",
-            "state": {
-              "type": "bases",
-              "state": {
-                "file": "bases/Portfolio.base",
-                "viewName": "Table"
-              },
-              "icon": "lucide-table",
-              "title": "Portfolio"
+              "title": "agapanthus-at-monserrate"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -104,7 +90,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 267.5234375
+    "width": 375.07421875
   },
   "right": {
     "id": "13fd9d4d78d9f053",
@@ -278,30 +264,39 @@
       }
     ]
   },
-  "active": "34ed4c2ae9adb882",
+  "active": "7c02918dea127692",
   "lastOpenFiles": [
+    "_site/uploads/artwork/54612999956_eae895e6de_h.jpg",
+    "_site/uploads/54612999956_eae895e6de_h.jpg",
+    "uploads/artwork/54612999956_eae895e6de_h.jpg",
+    "_portfolio/agapanthus-at-monserrate.md",
+    "_site/uploads/artwork/55130346848_c03e118da3_h.jpg",
+    "uploads/artwork/55130346848_c03e118da3_h.jpg",
+    "bases/Portfolio.base",
+    "_portfolio/buckeye-botanised.md",
+    "_site/uploads/artwork/55104719776_c83505c952_h.jpg",
+    "uploads/artwork/55104719776_c83505c952_h.jpg",
+    "_site/uploads/artwork/55143985876_35d73640a4_h.jpg",
+    "uploads/artwork/55143985876_35d73640a4_h.jpg",
+    "_portfolio/berberis.md",
+    "_site/uploads/artwork/54728755234_9e2252b866_h.jpg",
+    "_site/uploads/54728755234_9e2252b866_h.jpg",
+    "_portfolio/turpentine-tree.md",
+    "_portfolio/haws-in-the-hedge.md",
+    "_portfolio/moorblues.md",
     "bases/Projects.base",
     "bases/Articles.base",
     "bases/Untitled.base",
     "_articles/projects.md",
     "bases/Photographs.base",
-    "bases/Portfolio.base",
     "_portfolio/lenten-rose.md",
     "_photographs/travels-in-mexico.md",
     "_photographs/arched-doorway-st-gabriels-church.md",
     "_photographs/travels-in-cambodia.md",
-    "_site/uploads/artwork/53511325188_42a447f277_h.jpg",
-    "_site/uploads/artwork/53299807933_9663242d3d_h.jpg",
-    "_site/uploads/artwork/53058778522_45dbf9474b_h.jpg",
     "pages/perspectiefgallery.md",
     "pages/perspectief.md",
     "pages/statement.md",
-    "uploads/artwork/53058778522_45dbf9474b_h.jpg",
-    "uploads/artwork/53511325188_42a447f277_h.jpg",
-    "uploads/artwork/53299807933_9663242d3d_h.jpg",
     "_projects/folding-geometry.md",
-    "_site/uploads/artwork/52801802359_25ee087209_h.jpg",
-    "uploads/artwork/52801802359_25ee087209_h.jpg",
     "pages/earlywork.md",
     "_projects/leiden_oxford.md",
     "_projects/galeri_lang_malmo.md",
@@ -312,20 +307,11 @@
     "_projects/stoneandmirrors.md",
     "_projects/works_on_paper.md",
     "_projects/turning_drawings.md",
-    "_projects/solentris.md",
-    "_projects/three_segments.md",
-    "_projects/upstairs_gallery_oxford.md",
-    "_projects/axiom_arts_centre.md",
-    "_projects/turning_pieces.md",
-    "_projects/cut_paper_works.md",
     "_site/projects/folding_pieces/index.html",
     "_site/projects/folding_pieces",
-    "_site/uploads/artwork/52801995703_ff1a59257b_h.jpg",
     "_site/uploads/artwork",
-    "uploads/artwork/52801995703_ff1a59257b_h.jpg",
     "_site/uploads/photos/tobeadjusted",
     "uploads/photos/tobeadjusted",
-    "uploads/photos/untitled folder",
     "newsletters/November 2025.canvas",
     "newsletters/Untitled 1.canvas",
     "docs/private/Teaching_Hold/Multiplatform Publishing/Assignment1.canvas",
