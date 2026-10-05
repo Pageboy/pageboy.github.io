@@ -37,11 +37,11 @@
             "state": {
               "type": "bases",
               "state": {
-                "file": "bases/Projects.base",
+                "file": "bases/Portfolio.base",
                 "viewName": "Table"
               },
               "icon": "lucide-table",
-              "title": "Projects"
+              "title": "Portfolio"
             }
           }
         ],
@@ -104,7 +104,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 352.16796875
+    "width": 267.5234375
   },
   "right": {
     "id": "13fd9d4d78d9f053",
@@ -280,8 +280,8 @@
   },
   "active": "34ed4c2ae9adb882",
   "lastOpenFiles": [
-    "bases/Articles.base",
     "bases/Projects.base",
+    "bases/Articles.base",
     "bases/Untitled.base",
     "_articles/projects.md",
     "bases/Photographs.base",

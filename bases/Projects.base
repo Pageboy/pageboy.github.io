@@ -8,11 +8,13 @@ views:
       and:
         - file.inFolder("_projects")
     order:
+      - title
+      - file.basename
       - file.ctime
       - flickr_album
       - image
-      - title
       - tags
+      - published
     sort:
       - property: file.name
         direction: DESC
