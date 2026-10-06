@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "261a0773df3cb01a",
+        "id": "f67acf28fe3e6857",
         "type": "tabs",
         "children": [
           {
-            "id": "7c02918dea127692",
+            "id": "9762853557da0911",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/agapanthus-at-monserrate.md",
+                "file": "_portfolio/olive-arcs.md",
                 "mode": "preview",
                 "source": true,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "agapanthus-at-monserrate"
+              "title": "olive-arcs"
             }
           }
         ]
@@ -264,23 +264,25 @@
       }
     ]
   },
-  "active": "7c02918dea127692",
+  "active": "9762853557da0911",
   "lastOpenFiles": [
+    "_site/uploads/artwork/olive-arcs-onthewall.jpg",
+    "uploads/artwork/olive-arcs-onthewall.jpg",
+    "_site/uploads/artwork/olive-arcs-studio.jpg",
+    "bases/Portfolio.base",
+    "_portfolio/palmatum.md",
+    "_site/uploads/artwork/N72_2734.jpg",
+    "uploads/artwork/olive-arcs-studio.jpg",
+    "uploads/artwork/palmatum-studio.jpg",
+    "_site/uploads/artwork/palmatum-studio.jpg",
+    "_portfolio/smoke-tree.md",
+    "_portfolio/agapanthus-at-monserrate.md",
     "_site/uploads/artwork/54612999956_eae895e6de_h.jpg",
     "_site/uploads/54612999956_eae895e6de_h.jpg",
     "uploads/artwork/54612999956_eae895e6de_h.jpg",
-    "_portfolio/agapanthus-at-monserrate.md",
     "_site/uploads/artwork/55130346848_c03e118da3_h.jpg",
-    "uploads/artwork/55130346848_c03e118da3_h.jpg",
-    "bases/Portfolio.base",
     "_portfolio/buckeye-botanised.md",
-    "_site/uploads/artwork/55104719776_c83505c952_h.jpg",
-    "uploads/artwork/55104719776_c83505c952_h.jpg",
-    "_site/uploads/artwork/55143985876_35d73640a4_h.jpg",
-    "uploads/artwork/55143985876_35d73640a4_h.jpg",
     "_portfolio/berberis.md",
-    "_site/uploads/artwork/54728755234_9e2252b866_h.jpg",
-    "_site/uploads/54728755234_9e2252b866_h.jpg",
     "_portfolio/turpentine-tree.md",
     "_portfolio/haws-in-the-hedge.md",
     "_portfolio/moorblues.md",
@@ -305,8 +307,6 @@
     "_projects/mirror_drawings.md",
     "_projects/printmaking.md",
     "_projects/stoneandmirrors.md",
-    "_projects/works_on_paper.md",
-    "_projects/turning_drawings.md",
     "_site/projects/folding_pieces/index.html",
     "_site/projects/folding_pieces",
     "_site/uploads/artwork",

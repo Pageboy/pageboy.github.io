@@ -8,12 +8,14 @@ tags:
   - art
   - portrait
 published: true
-updated: 2026-02-19
+updated: 2026-10-06
 ---
 The ancient olive trees on the Greek island stand heavy with fruit. In early September, the olives glow a brilliant green under the Mediterranean sun, though they won’t be ready for harvest until later in the year.
 
-![Olive Arcs in the Studio](https://live.staticflickr.com/65535/54085074452_a3de9ac538_h_d.jpg "Olive Arcs in the studio")
+![Olive Arcs in the Studio](/uploads/artwork/olive-arcs-studio.jpg "Olive Arcs in the studio")
 
 **UV varnished archival ink on fine art paper bonded to 3 panels, bolted together - overall 915mm x 566mm**
 
-![On the wall in the studio](https://live.staticflickr.com/65535/54192320652_2cd039d062_h_d.jpg "On the wall in the studio")
+![On the wall in the studio](/uploads/artwork/olive-arcs-onthewall.jpg "On the wall in the studio")
+
+
