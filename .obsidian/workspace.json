@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/olive-arcs.md",
-                "mode": "preview",
+                "file": "_portfolio/agapanthus-at-monserrate.md",
+                "mode": "source",
                 "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "olive-arcs"
+              "title": "agapanthus-at-monserrate"
             }
           }
         ]
@@ -266,10 +266,13 @@
   },
   "active": "9762853557da0911",
   "lastOpenFiles": [
+    "_site/uploads/artwork/agapanthus-studio.jpg",
+    "uploads/artwork/agapanthus-studio.jpg",
+    "bases/Portfolio.base",
+    "_portfolio/olive-arcs.md",
     "_site/uploads/artwork/olive-arcs-onthewall.jpg",
     "uploads/artwork/olive-arcs-onthewall.jpg",
     "_site/uploads/artwork/olive-arcs-studio.jpg",
-    "bases/Portfolio.base",
     "_portfolio/palmatum.md",
     "_site/uploads/artwork/N72_2734.jpg",
     "uploads/artwork/olive-arcs-studio.jpg",
@@ -279,8 +282,6 @@
     "_portfolio/agapanthus-at-monserrate.md",
     "_site/uploads/artwork/54612999956_eae895e6de_h.jpg",
     "_site/uploads/54612999956_eae895e6de_h.jpg",
-    "uploads/artwork/54612999956_eae895e6de_h.jpg",
-    "_site/uploads/artwork/55130346848_c03e118da3_h.jpg",
     "_portfolio/buckeye-botanised.md",
     "_portfolio/berberis.md",
     "_portfolio/turpentine-tree.md",
@@ -306,7 +307,6 @@
     "_projects/folding_pieces.md",
     "_projects/mirror_drawings.md",
     "_projects/printmaking.md",
-    "_projects/stoneandmirrors.md",
     "_site/projects/folding_pieces/index.html",
     "_site/projects/folding_pieces",
     "_site/uploads/artwork",
