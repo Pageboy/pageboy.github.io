@@ -6,8 +6,8 @@ image: https://live.staticflickr.com/65535/49466262646_aed3d5684b_3k.jpg
 tags:
   - art
   - square-series
-published: true
-updated: 2025-11-05
+published: false
+updated: 2026-10-07
 ---
 
 - The rippling surface

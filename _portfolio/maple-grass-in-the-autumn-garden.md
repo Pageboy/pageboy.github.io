@@ -7,8 +7,8 @@ caption: The garden grass is covered with maple leaves
 tags:
   - art
   - root2A
-published: true
-updated: 2026-02-20
+published: false
+updated: 2026-10-07
 flickr_share: https://flic.kr/p/2pfxhJX
 ---
 Before the great *leaf pickup* begins in our garden, the grounded maple leaves form a spectacle of colours; oranges, yellows and browns contrasting against the viridian greens of the cropped grass.

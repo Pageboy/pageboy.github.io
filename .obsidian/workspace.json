@@ -11,24 +11,13 @@
             "id": "9762853557da0911",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "bases",
               "state": {
-                "file": "_portfolio/agapanthus-at-monserrate.md",
-                "mode": "source",
-                "source": true,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "file": "bases/Portfolio.base",
+                "viewName": "Table"
               },
-              "icon": "lucide-file",
-              "title": "agapanthus-at-monserrate"
+              "icon": "lucide-table",
+              "title": "Portfolio"
             }
           }
         ]
@@ -266,6 +255,7 @@
   },
   "active": "9762853557da0911",
   "lastOpenFiles": [
+    "_portfolio/agapanthus-at-monserrate.md",
     "_site/uploads/artwork/agapanthus-studio.jpg",
     "uploads/artwork/agapanthus-studio.jpg",
     "bases/Portfolio.base",
@@ -279,9 +269,7 @@
     "uploads/artwork/palmatum-studio.jpg",
     "_site/uploads/artwork/palmatum-studio.jpg",
     "_portfolio/smoke-tree.md",
-    "_portfolio/agapanthus-at-monserrate.md",
     "_site/uploads/artwork/54612999956_eae895e6de_h.jpg",
-    "_site/uploads/54612999956_eae895e6de_h.jpg",
     "_portfolio/buckeye-botanised.md",
     "_portfolio/berberis.md",
     "_portfolio/turpentine-tree.md",

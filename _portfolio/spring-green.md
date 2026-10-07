@@ -10,8 +10,8 @@ tags:
   - art
   - landscape
   - nature
-published: true
-updated: 2025-11-05
+published: false
+updated: 2026-10-07
 ---
 Short grasses overlaid with shapes of green. Look at these veins in the leaf cropped into the hexagon. The shapes anchor to the centre with balanced structure and shades of green.
 
