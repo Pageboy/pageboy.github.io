@@ -1,8 +1,8 @@
 ---
 date: 2026-09-29
-updated: 2026-10-01
+updated: 2026-10-08
 title: Bougainvillea
-image: https://live.staticflickr.com/65535/55559014099_56040beaf2_c.jpg
+image: /uploads/artwork/55559014099_56040beaf2_c.jpg
 layout: art
 tags:
   - art
@@ -12,7 +12,7 @@ solo: false
 caption:
 forsale:
 published: true
-flickr_share: https://flic.kr/p/2sDytfc
+flickr_share:
 nft:
 ---
 In the warm Mediterranean climate, village balconies are often festooned with cascading *Bougainvillea*. In the summer sun, the rich magenta and fandango hues seem to throb with colour.
