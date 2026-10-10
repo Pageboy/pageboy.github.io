@@ -11,24 +11,13 @@
             "id": "9762853557da0911",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "bases",
               "state": {
-                "file": "_portfolio/bougainvillea.md",
-                "mode": "preview",
-                "source": true,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "file": "bases/Portfolio.base",
+                "viewName": "Table"
               },
-              "icon": "lucide-file",
-              "title": "bougainvillea"
+              "icon": "lucide-table",
+              "title": "Portfolio"
             }
           }
         ]
@@ -217,10 +206,12 @@
   },
   "active": "9762853557da0911",
   "lastOpenFiles": [
-    "obsidian_templates/photograph.md",
-    "_portfolio/bougainvillea.md",
-    "uploads/artwork/55559014099_56040beaf2_c.jpg",
+    "_portfolio/beach-zones-beach-tones.md",
+    "uploads/artwork/53226454096_3c8e88c00f_h.jpg",
     "bases/Portfolio.base",
+    "_portfolio/bougainvillea.md",
+    "obsidian_templates/photograph.md",
+    "uploads/artwork/55559014099_56040beaf2_c.jpg",
     "_portfolio/lacecap-hydrangea.md",
     "_portfolio/agapanthus-at-monserrate.md",
     "_site/uploads/artwork/agapanthus-studio.jpg",
@@ -233,7 +224,6 @@
     "_site/uploads/artwork/N72_2734.jpg",
     "uploads/artwork/olive-arcs-studio.jpg",
     "uploads/artwork/palmatum-studio.jpg",
-    "_site/uploads/artwork/palmatum-studio.jpg",
     "_portfolio/smoke-tree.md",
     "_portfolio/buckeye-botanised.md",
     "_portfolio/berberis.md",
@@ -257,7 +247,6 @@
     "_projects/leiden_oxford.md",
     "_projects/galeri_lang_malmo.md",
     "_projects/bradford_university_gallery.md",
-    "_projects/folding_pieces.md",
     "_site/projects/folding_pieces/index.html",
     "_site/projects/folding_pieces",
     "_site/uploads/artwork",

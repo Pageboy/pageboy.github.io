@@ -8,7 +8,7 @@ tags:
   - art
   - golden-section
 published: true
-updated: 2026-06-25
+updated: 2026-10-09
 nft: https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/48162648330355413914028108631647327469322174667090404439099707901908969586692
 ---
 The sea pounds the shore, tumbling the stones into pebbles of infinitely varied shapes and sizes.
@@ -17,4 +17,4 @@ The mixture of rock types gives us plenty of grey and pastel hues to choose from
 
 Available as a unique 2 panel structure 912mm x 562mm.  Hannamuelle German etching paper mounted and varnished. Panels are bolted together in the rear. See this studio view.
 
-![On panels](https://live.staticflickr.com/65535/53226454096_3c8e88c00f_h_d.jpg "On panels")
+![On panels](/uploads/artwork/53226454096_3c8e88c00f_h.jpg "On panels")

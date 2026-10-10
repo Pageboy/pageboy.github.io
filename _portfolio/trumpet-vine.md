@@ -1,6 +1,6 @@
 ---
 date: 2026-09-18
-updated: 2026-09-18
+updated: 2026-10-10
 title: Trumpet Vine
 image: https://live.staticflickr.com/65535/55536331540_af8c07cd6d_c.jpg
 layout: art
@@ -11,7 +11,7 @@ excerpt_separator: <!--and-->
 solo: false
 caption:
 forsale:
-published: true
+published: false
 flickr_share: https://flic.kr/p/2sBydvA
 nft:
 ---

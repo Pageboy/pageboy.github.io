@@ -8,6 +8,7 @@ tags:
   - art
   - portrait
   - format
-updated: 2025-07-24
+updated: 2026-10-10
+published: false
 ---
 In our winter garden reds and greens combine to signal the end of the year. Pushing through the shaded borders are leaves; some delicate as paper but others spiked and rubbery, complementing each other through shape and colour.
