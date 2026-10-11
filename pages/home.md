@@ -1,7 +1,7 @@
 ---
 hide: true
 layout: portfolio
-title: Chris Jennings
+title: Chris Jennings art and projects
 popup: My art ordered by the latest at the top
 permalink: /
 order: 1
@@ -9,6 +9,7 @@ section: art
 date: 2022-12-22T14:44:28.645Z
 gridlayout: true
 icon: fa-connectdevelop
+updated: 2026-10-11
 ---
 Hello and welcome to the Chris.Jennings.Art web site. You will find my recent work here arranged by series. You can explore the [Portfolio](/portfolio/) where I have arranged all of the work in date order.
 

@@ -61,6 +61,14 @@ h4 {
     font-size: 1.15em;
 }
 
+h1.homepage {
+        position:fixed !important;
+        top: -100px;
+        left:-800px;
+        /* display: hide; */
+    }
+
+
 @media screen and (max-width: 768px) {
     h1 {
         font-size: 2em;
@@ -482,6 +490,7 @@ flex: 1 1 500px;
       font-size: .9em;
     }
 
+    
     .site-header {
 
       padding-bottom: 10px !important;

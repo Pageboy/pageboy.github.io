@@ -74,7 +74,7 @@ defaults:
       flickr_album:
 baseurl:
 url: https://www.chrisjennings.net
-description: Projects past and present from the artist Chris Jennings
+description: This website shows the art work that the artist Chris Jennings is currently working on as well as the review of previous projects amd exhibitions. The site also includes photographs which are posted in a seperate section.
 avatar: assets/img/home.png
 favicon: assets/img/logo.png
 flickr_key: 6a751024fcc480f70610ed1f98220880

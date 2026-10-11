@@ -11,8 +11,11 @@
         {{ site.navbar-title }}
       </a>
 		</p>
-    
+    {%-if page.layout =="portfolio" -%}
+  <h1 class="homepage">{{page.title}}</h1>
+  {%- endif -%}
 	</div>
+
     <!-- Toggle menu -->
     <nav class="clear">
     <a aria-label="pull" id="pull" class="toggle" href="#">
