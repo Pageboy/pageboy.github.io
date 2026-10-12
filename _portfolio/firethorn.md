@@ -2,7 +2,7 @@
 date: 2026-10-12
 updated: 2026-10-12
 title: Firethorn
-image: uploads/artwork/firethorn.jpg
+image: /uploads/artwork/firethorn.jpg
 layout: art
 tags:
   - art
