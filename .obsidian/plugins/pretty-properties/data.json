@@ -109,11 +109,64 @@
   "hideAddPropertyButton": false,
   "dontShowColorMigrationMessage": false,
   "propertyColors": {
-    "tags": {}
+    "tags": {},
+    "excerpt_separator": {
+      "<!--and-->": {
+        "pillColor": "red",
+        "textColor": "default"
+      }
+    }
   },
   "propertyColorSettingRevealed": "",
   "coverClassesMigrated2": true,
+  "propertySelectOptions": {},
   "enablePropertySearch": true,
+  "enableSetNNColors": false,
+  "enableSetPPColorsFromNN": false,
+  "extraColors": [],
+  "themeColors": [
+    {
+      "name": "red",
+      "enabled": true
+    },
+    {
+      "name": "orange",
+      "enabled": true
+    },
+    {
+      "name": "yellow",
+      "enabled": true
+    },
+    {
+      "name": "green",
+      "enabled": true
+    },
+    {
+      "name": "cyan",
+      "enabled": true
+    },
+    {
+      "name": "blue",
+      "enabled": true
+    },
+    {
+      "name": "purple",
+      "enabled": true
+    },
+    {
+      "name": "pink",
+      "enabled": true
+    },
+    {
+      "name": "accent",
+      "enabled": true
+    }
+  ],
+  "showThemeColors": false,
+  "showExtraColors": false,
+  "showProgressBars": false,
+  "showSelectionButtons": false,
+  "propertySelectSettingRevealed": "",
   "allTasksCount": "tasks",
   "completedTasksCount": "tasks_completed",
   "uncompletedTasksCount": "tasks_uncompleted",

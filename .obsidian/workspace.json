@@ -11,13 +11,24 @@
             "id": "9762853557da0911",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "bases/Portfolio.base",
-                "viewName": "Table"
+                "file": "_portfolio/firethorn.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-table",
-              "title": "Portfolio"
+              "icon": "lucide-file",
+              "title": "firethorn"
             }
           }
         ]
@@ -206,10 +217,12 @@
   },
   "active": "9762853557da0911",
   "lastOpenFiles": [
+    "bases/Portfolio.base",
+    "_portfolio/firethorn.md",
+    "uploads/artwork/firethorn.jpg",
     "_site/uploads/artwork/55559014099_56040beaf2_c.jpg",
     "_portfolio/beach-zones-beach-tones.md",
     "uploads/artwork/53226454096_3c8e88c00f_h.jpg",
-    "bases/Portfolio.base",
     "_portfolio/bougainvillea.md",
     "obsidian_templates/photograph.md",
     "uploads/artwork/55559014099_56040beaf2_c.jpg",
@@ -223,8 +236,6 @@
     "_site/uploads/artwork/olive-arcs-studio.jpg",
     "_portfolio/palmatum.md",
     "_site/uploads/artwork/N72_2734.jpg",
-    "uploads/artwork/olive-arcs-studio.jpg",
-    "uploads/artwork/palmatum-studio.jpg",
     "_portfolio/smoke-tree.md",
     "_portfolio/buckeye-botanised.md",
     "_portfolio/berberis.md",
@@ -246,7 +257,6 @@
     "_projects/folding-geometry.md",
     "pages/earlywork.md",
     "_projects/leiden_oxford.md",
-    "_projects/galeri_lang_malmo.md",
     "_site/projects/folding_pieces/index.html",
     "_site/projects/folding_pieces",
     "_site/uploads/artwork",
