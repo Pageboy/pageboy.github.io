@@ -13,9 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_portfolio/firethorn.md",
-                "mode": "source",
-                "source": false,
+                "file": "pages/cv.md",
+                "mode": "preview",
+                "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
                   "collapseAll": false,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "firethorn"
+              "title": "cv"
             }
           }
         ]
@@ -217,8 +217,10 @@
   },
   "active": "3cf21be821776c12",
   "lastOpenFiles": [
-    "_portfolio/agapanthus-at-monserrate.md",
+    "pages/statement.md",
+    "pages/cv.md",
     "_portfolio/firethorn.md",
+    "_portfolio/agapanthus-at-monserrate.md",
     "bases/Portfolio.base",
     "uploads/artwork/firethorn.jpg",
     "_site/uploads/artwork/55559014099_56040beaf2_c.jpg",
@@ -253,7 +255,6 @@
     "_photographs/travels-in-cambodia.md",
     "pages/perspectiefgallery.md",
     "pages/perspectief.md",
-    "pages/statement.md",
     "_projects/folding-geometry.md",
     "pages/earlywork.md",
     "_projects/leiden_oxford.md",
