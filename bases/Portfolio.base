@@ -12,11 +12,12 @@ views:
       - updated
       - image
       - tags
+      - nft
     sort:
+      - property: date
+        direction: ASC
       - property: title
         direction: ASC
-      - property: date
-        direction: DESC
       - property: file.name
         direction: ASC
     columnSize:

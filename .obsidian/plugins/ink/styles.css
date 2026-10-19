@@ -35,6 +35,410 @@
   stroke: var(--text-normal);
 }
 
+/* src/styles/ink-workspace-chrome.scss */
+body.ddc_ink_hide-workspace-chrome .workspace-ribbon,
+body.ddc_ink_hide-workspace-chrome .workspace-tab-header-container,
+body.ddc_ink_hide-workspace-chrome .view-header,
+body.ddc_ink_hide-workspace-chrome .status-bar {
+  display: none;
+}
+body.mod-macos.ddc_ink_hide-workspace-chrome:not(.is-fullscreen) .ink_quick-menu {
+  margin-left: calc(5 * var(--font-ui-small) + 8px);
+}
+body.ddc_ink_hide-workspace-chrome .ddc_ink_drawing-editor .ink_tool-menu,
+body.ddc_ink_hide-workspace-chrome .ddc_ink_drawing-editor.ink_dominant-hand_left .ink_tool-menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* src/styles/ink-writing-guide-lines.scss */
+.ink-writing-guide-line,
+.ddc_ink_writing-editor .ink-writing-guide-line,
+.ddc_ink_writing-embed-preview line,
+.ink-type-writing-line {
+  stroke: currentColor;
+  stroke-opacity: 0.3;
+  stroke-width: 1px;
+  vector-effect: non-scaling-stroke;
+}
+
+/* src/styles/ink-grayscale-screen-chrome.scss */
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ink_menu-bar button,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ink_tool-menu button,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ink_extended-writing-menu button,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ink_extended-drawing-menu button,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ink_transition_menu button,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ink_expand-lines-button button,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ddc_ink_resize-handle,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ddc_ink_svg-edit-button,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ddc_ink_display-mode-toggle,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ink_modify-menu button {
+  box-sizing: border-box;
+  border: 2px solid var(--text-normal);
+  color: var(--text-normal);
+  fill: var(--text-normal);
+  background-color: var(--background-primary);
+}
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ink_menu-bar button:hover,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ink_tool-menu button:hover,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ink_extended-writing-menu button:hover,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ink_extended-drawing-menu button:hover,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ink_transition_menu button:hover,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ink_expand-lines-button button:hover,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ddc_ink_resize-handle:hover,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ddc_ink_svg-edit-button:hover,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ddc_ink_display-mode-toggle:hover,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ink_modify-menu button:hover {
+  background-color: var(--background-primary-alt);
+  color: var(--text-normal);
+  fill: var(--text-normal);
+}
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ink_menu-bar button:disabled,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ink_tool-menu button:disabled,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ink_extended-writing-menu button:disabled,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ink_extended-drawing-menu button:disabled,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ink_transition_menu button:disabled,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ink_expand-lines-button button:disabled,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ddc_ink_resize-handle:disabled,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ddc_ink_svg-edit-button:disabled,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ddc_ink_display-mode-toggle:disabled,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ink_modify-menu button:disabled {
+  opacity: 1;
+}
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ddc_ink_overflow-button-and-menu .ddc_ink_dropdown {
+  border: 2px solid var(--text-normal);
+  background-color: var(--background-primary);
+  color: var(--text-normal);
+  fill: var(--text-normal);
+}
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ink_tool-menu button:disabled,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ink_menu-bar button.ink_menu-toggle--active {
+  background-color: #ffffff;
+  color: #000000;
+  fill: #000000;
+  border: 2px solid var(--text-normal);
+}
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ink_tool-menu button:disabled:hover,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ink_menu-bar button.ink_menu-toggle--active:hover {
+  background-color: #ffffff;
+  color: #000000;
+  fill: #000000;
+  border-color: var(--text-normal);
+}
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ink-canvas-lasso {
+  fill: color-mix(in srgb, #ffffff 14%, transparent);
+  stroke: #ffffff;
+  stroke-width: 2px;
+  vector-effect: non-scaling-stroke;
+}
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ink-canvas-selection-bounds-underlay .ink-canvas-selection-bounds-fill {
+  fill: color-mix(in srgb, #ffffff 14%, transparent);
+}
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ink-canvas-selection-overlay .ink-canvas-selection-bounds {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2px;
+  vector-effect: non-scaling-stroke;
+}
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ink-canvas-selection-overlay .ink-canvas-selection-handle-dot {
+  fill: #ffffff;
+  stroke: #000000;
+}
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ink-canvas-selection-overlay .ink-canvas-selection-handle-icon {
+  color: #000000;
+}
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ink-svg-canvas .ink-stroke--selected {
+  stroke: #000000;
+  stroke-width: 4px;
+  vector-effect: non-scaling-stroke;
+  paint-order: stroke fill;
+}
+body.theme-light.ddc_ink_style-for-grayscale-screen .ink_menu-bar button,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ink_tool-menu button,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ink_extended-writing-menu button,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ink_extended-drawing-menu button,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ink_transition_menu button,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ink_expand-lines-button button,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ddc_ink_resize-handle,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ddc_ink_svg-edit-button,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ddc_ink_display-mode-toggle,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ink_modify-menu button {
+  box-sizing: border-box;
+  border: 2px solid var(--text-normal);
+  color: var(--text-normal);
+  fill: var(--text-normal);
+  background-color: var(--background-primary);
+}
+body.theme-light.ddc_ink_style-for-grayscale-screen .ink_menu-bar button:hover,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ink_tool-menu button:hover,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ink_extended-writing-menu button:hover,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ink_extended-drawing-menu button:hover,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ink_transition_menu button:hover,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ink_expand-lines-button button:hover,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ddc_ink_resize-handle:hover,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ddc_ink_svg-edit-button:hover,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ddc_ink_display-mode-toggle:hover,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ink_modify-menu button:hover {
+  background-color: var(--background-primary-alt);
+  color: var(--text-normal);
+  fill: var(--text-normal);
+}
+body.theme-light.ddc_ink_style-for-grayscale-screen .ink_menu-bar button:disabled,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ink_tool-menu button:disabled,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ink_extended-writing-menu button:disabled,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ink_extended-drawing-menu button:disabled,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ink_transition_menu button:disabled,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ink_expand-lines-button button:disabled,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ddc_ink_resize-handle:disabled,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ddc_ink_svg-edit-button:disabled,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ddc_ink_display-mode-toggle:disabled,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ink_modify-menu button:disabled {
+  opacity: 1;
+}
+body.theme-light.ddc_ink_style-for-grayscale-screen .ddc_ink_overflow-button-and-menu .ddc_ink_dropdown {
+  border: 2px solid var(--text-normal);
+  background-color: var(--background-primary);
+  color: var(--text-normal);
+  fill: var(--text-normal);
+}
+body.theme-light.ddc_ink_style-for-grayscale-screen .ink_tool-menu button:disabled,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ink_menu-bar button.ink_menu-toggle--active {
+  background-color: #000000;
+  color: #ffffff;
+  fill: #ffffff;
+  border: 2px solid var(--text-normal);
+}
+body.theme-light.ddc_ink_style-for-grayscale-screen .ink_tool-menu button:disabled:hover,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ink_menu-bar button.ink_menu-toggle--active:hover {
+  background-color: #000000;
+  color: #ffffff;
+  fill: #ffffff;
+  border-color: var(--text-normal);
+}
+body.theme-light.ddc_ink_style-for-grayscale-screen .ink-canvas-lasso {
+  fill: color-mix(in srgb, #000000 14%, transparent);
+  stroke: #000000;
+  stroke-width: 2px;
+  vector-effect: non-scaling-stroke;
+}
+body.theme-light.ddc_ink_style-for-grayscale-screen .ink-canvas-selection-bounds-underlay .ink-canvas-selection-bounds-fill {
+  fill: color-mix(in srgb, #000000 14%, transparent);
+}
+body.theme-light.ddc_ink_style-for-grayscale-screen .ink-canvas-selection-overlay .ink-canvas-selection-bounds {
+  fill: none;
+  stroke: #000000;
+  stroke-width: 2px;
+  vector-effect: non-scaling-stroke;
+}
+body.theme-light.ddc_ink_style-for-grayscale-screen .ink-canvas-selection-overlay .ink-canvas-selection-handle-dot {
+  fill: #000000;
+  stroke: #ffffff;
+}
+body.theme-light.ddc_ink_style-for-grayscale-screen .ink-canvas-selection-overlay .ink-canvas-selection-handle-icon {
+  color: #ffffff;
+}
+body.theme-light.ddc_ink_style-for-grayscale-screen .ink-svg-canvas .ink-stroke--selected {
+  stroke: #ffffff;
+  stroke-width: 4px;
+  vector-effect: non-scaling-stroke;
+  paint-order: stroke fill;
+}
+body.ddc_ink_style-for-grayscale-screen .ink-writing-guide-line,
+body.ddc_ink_style-for-grayscale-screen .ddc_ink_writing-editor .ink-writing-guide-line,
+body.ddc_ink_style-for-grayscale-screen .ddc_ink_writing-embed-preview line,
+body.ddc_ink_style-for-grayscale-screen .ink-type-writing-line {
+  stroke-opacity: 0.5;
+}
+body.ddc_ink_style-for-grayscale-screen .notice:has(.ddc_ink_notice),
+body.ddc_ink_style-for-grayscale-screen .notice.ddc_ink_notice,
+body.ddc_ink_style-for-grayscale-screen .ddc_ink_notice,
+body.ddc_ink_style-for-grayscale-screen .ddc_ink_notice button,
+body.ddc_ink_style-for-grayscale-screen .ddc_ink_notice blockquote,
+body.ddc_ink_style-for-grayscale-screen .ddc_ink_notice q.ddc_ink_notice-inline-quote,
+body.ddc_ink_style-for-grayscale-screen .ink_menu-bar button,
+body.ddc_ink_style-for-grayscale-screen .ink_tool-menu button,
+body.ddc_ink_style-for-grayscale-screen .ink_transition_menu button,
+body.ddc_ink_style-for-grayscale-screen .ink_extended-writing-menu button,
+body.ddc_ink_style-for-grayscale-screen .ink_extended-drawing-menu button,
+body.ddc_ink_style-for-grayscale-screen .ink_expand-lines-button button,
+body.ddc_ink_style-for-grayscale-screen .ink_modify-menu button,
+body.ddc_ink_style-for-grayscale-screen .ddc_ink_resize-handle,
+body.ddc_ink_style-for-grayscale-screen .ddc_ink_svg-edit-button,
+body.ddc_ink_style-for-grayscale-screen .ddc_ink_display-mode-toggle,
+body.ddc_ink_style-for-grayscale-screen .ddc_ink_overflow-button-and-menu .ddc_ink_dropdown,
+body.ddc_ink_style-for-grayscale-screen .ddc_ink_pending-banner,
+body.ddc_ink_style-for-grayscale-screen .ddc_ink_pending-banner__btn {
+  box-shadow: none !important;
+}
+body.ddc_ink_style-for-grayscale-screen .ddc_ink_writing-embed-preview.ddc_ink_visible-background {
+  border: 2px solid var(--text-normal);
+  background-color: var(--background-primary);
+}
+body.ddc_ink_style-for-grayscale-screen .ddc_ink_drawing-embed-preview.ddc_ink_visible-background {
+  background-color: var(--background-primary);
+}
+body.ddc_ink_style-for-grayscale-screen .ddc_ink_drawing-embed-preview.ddc_ink_visible-frame {
+  border: 2px solid var(--text-normal);
+}
+body.ddc_ink_style-for-grayscale-screen .ddc_ink_transcript-view.ddc_ink_transcript-view--framed {
+  border: 2px solid var(--text-normal);
+}
+body.ddc_ink_style-for-grayscale-screen .ddc_ink_writing-editor,
+body.ddc_ink_style-for-grayscale-screen .ddc_ink_drawing-editor {
+  outline: 2px solid var(--text-normal);
+}
+body.ddc_ink_style-for-grayscale-screen .ddc_ink_embed .ddc_ink_writing-editor,
+body.ddc_ink_style-for-grayscale-screen .ddc_ink_embed .ddc_ink_drawing-editor {
+  border-radius: 20px;
+}
+body.ddc_ink_style-for-grayscale-screen .ddc_ink_embed .ddc_ink_writing-editor .ink-svg-canvas-container,
+body.ddc_ink_style-for-grayscale-screen .ddc_ink_embed .ddc_ink_drawing-editor .ink-svg-canvas-container {
+  border-radius: 20px;
+}
+body.ddc_ink_style-for-grayscale-screen .ink-adaptive-grid .ink-grid-dot {
+  fill: var(--text-normal);
+}
+body.ddc_ink_style-for-grayscale-screen .ddc_ink_pending-banner {
+  border: 2px solid var(--text-normal);
+  background-color: var(--background-primary-alt);
+}
+body.ddc_ink_style-for-grayscale-screen .ddc_ink_pending-banner .ddc_ink_pending-banner__btn {
+  border: 2px solid var(--text-normal);
+  color: var(--text-normal);
+  background-color: var(--background-primary);
+}
+body.ddc_ink_style-for-grayscale-screen .ddc_ink_pending-banner .ddc_ink_pending-banner__btn:hover {
+  background-color: var(--background-primary-alt);
+}
+body.ddc_ink_style-for-grayscale-screen .ddc_ink_pending-banner .ddc_ink_pending-banner__btn--primary {
+  background-color: var(--text-normal);
+  color: var(--background-primary);
+  border-color: var(--text-normal);
+}
+body.ddc_ink_style-for-grayscale-screen .ddc_ink_pending-banner .ddc_ink_pending-banner__btn--primary:hover {
+  opacity: 0.9;
+}
+body.ddc_ink_style-for-grayscale-screen .ddc_ink_embed .ddc_ink_drawing-editor.ddc_ink_toolbar-compact .ink_quick-menu,
+body.ddc_ink_style-for-grayscale-screen .ddc_ink_embed .ddc_ink_drawing-editor.ddc_ink_toolbar-compact .ink_tool-menu {
+  border-inline-end-color: var(--text-normal);
+}
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ddc_ink_writing-editor:not(.ddc_ink_editor-wrapper--loading) .ink-svg-canvas-container,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ddc_ink_drawing-editor:not(.ddc_ink_editor-wrapper--loading) .ink-svg-canvas-container {
+  background-color: #000000;
+}
+body.theme-dark.ddc_ink_style-for-grayscale-screen .notice:has(.ddc_ink_notice),
+body.theme-dark.ddc_ink_style-for-grayscale-screen .notice.ddc_ink_notice {
+  background-color: #000000 !important;
+  border: 1px solid #ffffff !important;
+  outline: 1px solid #ffffff;
+}
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ddc_ink_notice {
+  color: #ffffff;
+}
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ddc_ink_notice p.ddc_ink_notice-label,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ddc_ink_notice h1,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ddc_ink_notice h2,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ddc_ink_notice p,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ddc_ink_notice ul li,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ddc_ink_notice ol li {
+  color: #ffffff;
+}
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ddc_ink_notice ul li::marker,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ddc_ink_notice ol li::marker {
+  color: #ffffff;
+}
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ddc_ink_notice blockquote,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ddc_ink_notice q.ddc_ink_notice-inline-quote {
+  color: #ffffff;
+  background-color: #000000;
+  outline-color: #ffffff;
+}
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ddc_ink_notice .ddc_ink_notice-footer-links a {
+  color: #ffffff;
+}
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ddc_ink_notice a.ddc_ink_tertiary-text-link {
+  color: #ffffff;
+}
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ddc_ink_notice a.ddc_ink_tertiary-text-link:hover {
+  color: #ffffff;
+  opacity: 0.75;
+}
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ddc_ink_notice button.ddc_ink_primary-btn,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ddc_ink_notice button.ddc_ink_almostuseful-link-account-btn {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+}
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ddc_ink_notice button.ddc_ink_primary-btn:hover,
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ddc_ink_notice button.ddc_ink_almostuseful-link-account-btn:hover {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+}
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ddc_ink_notice .ddc_ink_notice-cta-bar button.ddc_ink_tertiary-btn {
+  color: #ffffff;
+}
+body.theme-dark.ddc_ink_style-for-grayscale-screen .ddc_ink_notice .ddc_ink_notice-cta-bar button.ddc_ink_tertiary-btn:hover {
+  color: #ffffff;
+}
+body.theme-light.ddc_ink_style-for-grayscale-screen .ddc_ink_writing-editor:not(.ddc_ink_editor-wrapper--loading) .ink-svg-canvas-container,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ddc_ink_drawing-editor:not(.ddc_ink_editor-wrapper--loading) .ink-svg-canvas-container {
+  background-color: #ffffff;
+}
+body.theme-light.ddc_ink_style-for-grayscale-screen .notice:has(.ddc_ink_notice),
+body.theme-light.ddc_ink_style-for-grayscale-screen .notice.ddc_ink_notice {
+  background-color: #ffffff !important;
+  border: 1px solid #000000 !important;
+  outline: 1px solid #000000;
+}
+body.theme-light.ddc_ink_style-for-grayscale-screen .ddc_ink_notice {
+  color: #000000;
+}
+body.theme-light.ddc_ink_style-for-grayscale-screen .ddc_ink_notice p.ddc_ink_notice-label,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ddc_ink_notice h1,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ddc_ink_notice h2,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ddc_ink_notice p,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ddc_ink_notice ul li,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ddc_ink_notice ol li {
+  color: #000000;
+}
+body.theme-light.ddc_ink_style-for-grayscale-screen .ddc_ink_notice ul li::marker,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ddc_ink_notice ol li::marker {
+  color: #000000;
+}
+body.theme-light.ddc_ink_style-for-grayscale-screen .ddc_ink_notice blockquote,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ddc_ink_notice q.ddc_ink_notice-inline-quote {
+  color: #000000;
+  background-color: #ffffff;
+  outline-color: #000000;
+}
+body.theme-light.ddc_ink_style-for-grayscale-screen .ddc_ink_notice .ddc_ink_notice-footer-links a {
+  color: #000000;
+}
+body.theme-light.ddc_ink_style-for-grayscale-screen .ddc_ink_notice a.ddc_ink_tertiary-text-link {
+  color: #000000;
+}
+body.theme-light.ddc_ink_style-for-grayscale-screen .ddc_ink_notice a.ddc_ink_tertiary-text-link:hover {
+  color: #000000;
+  opacity: 0.75;
+}
+body.theme-light.ddc_ink_style-for-grayscale-screen .ddc_ink_notice button.ddc_ink_primary-btn,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ddc_ink_notice button.ddc_ink_almostuseful-link-account-btn {
+  color: #ffffff !important;
+  background-color: #000000 !important;
+}
+body.theme-light.ddc_ink_style-for-grayscale-screen .ddc_ink_notice button.ddc_ink_primary-btn:hover,
+body.theme-light.ddc_ink_style-for-grayscale-screen .ddc_ink_notice button.ddc_ink_almostuseful-link-account-btn:hover {
+  color: #ffffff !important;
+  background-color: #000000 !important;
+}
+body.theme-light.ddc_ink_style-for-grayscale-screen .ddc_ink_notice .ddc_ink_notice-cta-bar button.ddc_ink_tertiary-btn {
+  color: #000000;
+}
+body.theme-light.ddc_ink_style-for-grayscale-screen .ddc_ink_notice .ddc_ink_notice-cta-bar button.ddc_ink_tertiary-btn:hover {
+  color: #000000;
+}
+
 /* src/components/dom-components/support-button-set.scss */
 .ddc_ink_support-btn-set .setting-item {
   border-top: none !important;
@@ -217,6 +621,10 @@
 .ddc_ink_controls-section .ddc_ink_collapse-arrow.ddc_ink_expanded {
   transform: translateY(-50%) rotate(90deg);
 }
+.ddc_ink_controls-section .ddc_ink_setting--nested {
+  padding-inline-start: 1.25em;
+  border-inline-start: 2px solid var(--background-modifier-border);
+}
 .ddc_ink_controls-section .ddc_ink_setting:first-child {
   margin-block-start: 0;
 }
@@ -287,6 +695,65 @@ input.ddc_ink_line-height-input {
 }
 
 /* src/components/dom-components/notice-components.scss */
+a.ddc_ink_tertiary-text-link,
+button.ddc_ink_tertiary-text-link {
+  color: var(--text-faint);
+  font-size: var(--font-ui-small);
+  line-height: var(--font-ui-small);
+  text-decoration: underline;
+  cursor: var(--cursor);
+  background: none;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+a.ddc_ink_tertiary-text-link:hover,
+button.ddc_ink_tertiary-text-link:hover {
+  color: var(--text-normal);
+}
+.ddc_ink_almostuseful-link-account-cta-stack {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.825em;
+}
+.ddc_ink_almostuseful-link-account-cta-stack--centered {
+  align-items: center;
+}
+.ddc_ink_almostuseful-link-account-cta-stack .ddc_ink_almostuseful-create-account-link--align-end {
+  align-self: flex-end;
+}
+.ddc_ink_almostuseful-link-account-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55em;
+  padding: 0.7em 1.4em;
+  font-size: var(--font-ui-medium);
+  height: auto;
+  min-height: 2.75em;
+  color: var(--text-on-accent);
+  margin-bottom: 0;
+}
+.ddc_ink_almostuseful-link-account-btn.is-busy {
+  pointer-events: none;
+  background-color: var(--background-modifier-border) !important;
+  color: var(--text-muted) !important;
+  box-shadow: none !important;
+}
+.ddc_ink_almostuseful-link-account-btn-icon {
+  display: inline-flex;
+  align-items: center;
+  --icon-size: 1.15em;
+}
+.ddc_ink_almostuseful-link-account-btn-icon svg {
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+.ddc_ink_almostuseful-link-account-btn-icon circle,
+.ddc_ink_almostuseful-link-account-btn-icon path {
+  stroke: currentColor;
+}
 .notice:has(.ddc_ink_notice),
 .notice.ddc_ink_notice {
   border-radius: var(--radius-m) !important;
@@ -406,8 +873,20 @@ input.ddc_ink_line-height-input {
   flex-wrap: wrap;
   gap: var(--size-4-2);
 }
-.ddc_ink_notice .ddc_ink_notice-body-cta-row button.ddc_ink_primary-btn {
+.ddc_ink_notice .ddc_ink_notice-body-cta-row button.ddc_ink_primary-btn,
+.ddc_ink_notice .ddc_ink_notice-body-cta-row button.ddc_ink_almostuseful-link-account-btn,
+.ddc_ink_notice .ddc_ink_notice-body-cta-row a.ddc_ink_tertiary-text-link {
   pointer-events: all;
+}
+.ddc_ink_notice .ddc_ink_notice-body-cta-row--stacked {
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+.ddc_ink_notice .ddc_ink_notice-body-cta-row--centered {
+  align-items: center;
+  text-align: center;
 }
 .ddc_ink_notice button.ddc_ink_primary-btn {
   color: var(--text-on-accent);
@@ -431,6 +910,11 @@ input.ddc_ink_line-height-input {
 }
 .ddc_ink_notice .ddc_ink_notice-cta-bar button.ddc_ink_tertiary-btn {
   color: var(--text-faint);
+  font-size: var(--font-ui-small);
+  line-height: var(--font-ui-small);
+  text-decoration: underline;
+  cursor: var(--cursor);
+  text-decoration: none;
   background: none;
   box-shadow: none;
   margin-inline: 0;
@@ -438,10 +922,11 @@ input.ddc_ink_line-height-input {
   padding-block: 0 !important;
   display: inline-flex;
   align-items: center;
-  line-height: var(--font-ui-small) !important;
 }
 .ddc_ink_notice .ddc_ink_notice-cta-bar button.ddc_ink_tertiary-btn:hover {
   color: var(--text-normal);
+}
+.ddc_ink_notice .ddc_ink_notice-cta-bar button.ddc_ink_tertiary-btn:hover {
   text-decoration: underline;
 }
 
@@ -702,6 +1187,65 @@ input.ddc_ink_line-height-input {
 }
 
 /* src/components/dom-components/tabs/settings-tab/almostuseful-account-section.scss */
+a.ddc_ink_tertiary-text-link,
+button.ddc_ink_tertiary-text-link {
+  color: var(--text-faint);
+  font-size: var(--font-ui-small);
+  line-height: var(--font-ui-small);
+  text-decoration: underline;
+  cursor: var(--cursor);
+  background: none;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+a.ddc_ink_tertiary-text-link:hover,
+button.ddc_ink_tertiary-text-link:hover {
+  color: var(--text-normal);
+}
+.ddc_ink_almostuseful-link-account-cta-stack {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.825em;
+}
+.ddc_ink_almostuseful-link-account-cta-stack--centered {
+  align-items: center;
+}
+.ddc_ink_almostuseful-link-account-cta-stack .ddc_ink_almostuseful-create-account-link--align-end {
+  align-self: flex-end;
+}
+.ddc_ink_almostuseful-link-account-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55em;
+  padding: 0.7em 1.4em;
+  font-size: var(--font-ui-medium);
+  height: auto;
+  min-height: 2.75em;
+  color: var(--text-on-accent);
+  margin-bottom: 0;
+}
+.ddc_ink_almostuseful-link-account-btn.is-busy {
+  pointer-events: none;
+  background-color: var(--background-modifier-border) !important;
+  color: var(--text-muted) !important;
+  box-shadow: none !important;
+}
+.ddc_ink_almostuseful-link-account-btn-icon {
+  display: inline-flex;
+  align-items: center;
+  --icon-size: 1.15em;
+}
+.ddc_ink_almostuseful-link-account-btn-icon svg {
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+.ddc_ink_almostuseful-link-account-btn-icon circle,
+.ddc_ink_almostuseful-link-account-btn-icon path {
+  stroke: currentColor;
+}
 .ddc_ink_almostuseful-account-section .ddc_ink_controls-section {
   box-shadow: 0 0 0 2px var(--interactive-accent) inset;
 }
@@ -767,36 +1311,8 @@ input.ddc_ink_line-height-input {
   padding-inline-start: 0;
 }
 .ddc_ink_almostuseful-link-account-setting .setting-item-control {
-  align-items: center;
-}
-.ddc_ink_almostuseful-link-account-setting .ddc_ink_almostuseful-link-account-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55em;
-  padding: 0.7em 1.4em;
-  font-size: var(--font-ui-medium);
-  height: auto;
-  min-height: 2.75em;
-  color: var(--text-on-accent);
-}
-.ddc_ink_almostuseful-link-account-setting .ddc_ink_almostuseful-link-account-btn.is-busy {
-  pointer-events: none;
-  background-color: var(--background-modifier-border) !important;
-  color: var(--text-muted) !important;
-  box-shadow: none !important;
-}
-.ddc_ink_almostuseful-link-account-setting .ddc_ink_almostuseful-link-account-btn-icon {
-  display: inline-flex;
-  align-items: center;
-  --icon-size: 1.15em;
-}
-.ddc_ink_almostuseful-link-account-setting .ddc_ink_almostuseful-link-account-btn-icon svg {
-  width: var(--icon-size);
-  height: var(--icon-size);
-}
-.ddc_ink_almostuseful-link-account-setting .ddc_ink_almostuseful-link-account-btn-icon circle,
-.ddc_ink_almostuseful-link-account-setting .ddc_ink_almostuseful-link-account-btn-icon path {
-  stroke: currentColor;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .ddc_ink_almostuseful-handoff-card {
   display: flex;
@@ -936,21 +1452,6 @@ input.ddc_ink_line-height-input {
   border-radius: var(--radius-l);
   padding: 0.8em;
   padding-inline-start: 1em;
-}
-.ddc_ink_almostuseful-early-access-card {
-  margin-bottom: 0;
-}
-.ddc_ink_almostuseful-early-access-card .ddc_ink_legacy-migrate-card-desc {
-  margin-bottom: 0;
-}
-.ddc_ink_almostuseful-early-access-card .ddc_ink_legacy-migrate-card-desc a {
-  text-decoration: underline;
-}
-.theme-dark .ddc_ink_almostuseful-early-access-card .ddc_ink_legacy-migrate-card-desc a {
-  color: hsl(220deg, 65%, 38%);
-}
-.theme-light .ddc_ink_almostuseful-early-access-card .ddc_ink_legacy-migrate-card-desc a {
-  color: hsl(220deg, 85%, 78%);
 }
 .ddc_ink_almostuseful-settings-card-title-row {
   display: flex;
@@ -4148,7 +4649,7 @@ input.ddc_ink_line-height-input {
   border-radius: 20px;
   background-color: var(--color-base-05);
 }
-.ddc_ink_writing-editor line {
+.ddc_ink_writing-editor .tl-container line {
   stroke: var(--color-base-50);
   stroke-width: 2px;
 }
@@ -4362,33 +4863,9 @@ input.ddc_ink_line-height-input {
 
 /* src/components/formats/current/drawing/drawing-embed/drawing-embed.scss */
 .ddc_ink_resize-container--boox .ddc_ink_writing-editor,
-.ddc_ink_resize-container--boox .ddc_ink_drawing-editor,
-.ddc_ink_boox-eink .ddc_ink_writing-editor,
-.ddc_ink_boox-eink .ddc_ink_drawing-editor {
-  overflow: hidden;
-  outline-color: color-mix(in srgb, var(--text-normal) 20%, transparent);
-}
-.ddc_ink_resize-container--boox .ddc_ink_writing-embed-preview.ddc_ink_visible-background,
-.ddc_ink_boox-eink .ddc_ink_writing-embed-preview.ddc_ink_visible-background {
-  border-color: var(--text-normal);
-  border-width: 2px;
-}
-.ddc_ink_resize-container--boox .ddc_ink_writing-embed-preview line,
-.ddc_ink_boox-eink .ddc_ink_writing-embed-preview line {
-  stroke: var(--text-normal);
-  stroke-opacity: 1;
-}
-.ddc_ink_resize-container--boox .ddc_ink_drawing-embed-preview.ddc_ink_visible-frame,
-.ddc_ink_boox-eink .ddc_ink_drawing-embed-preview.ddc_ink_visible-frame {
-  border-color: var(--text-normal);
-}
-.ddc_ink_resize-container--boox .ink-adaptive-grid .ink-grid-dot,
-.ddc_ink_boox-eink .ink-adaptive-grid .ink-grid-dot {
-  fill: var(--text-normal);
-}
-.ddc_ink_resize-container--boox .ddc_ink_writing-editor,
 .ddc_ink_resize-container--boox .ddc_ink_drawing-editor {
   border-radius: 20px;
+  overflow: hidden;
 }
 .ddc_ink_resize-container.ddc_ink_resize-container--boox,
 .ddc_ink_resize-container.ddc_ink_resize-container--boox .ddc_ink_drawing-editor {
@@ -4564,7 +5041,7 @@ a[href*="type=inkDrawing"] {
   width: 100%;
   height: 100%;
 }
-.ddc_ink_embed .ddc_ink_writing-editor.ddc_ink_boox-eink {
+.ddc_ink_embed .ddc_ink_resize-container--boox .ddc_ink_writing-editor {
   overflow: visible;
 }
 .ddc_ink_writing-editor.ddc_ink_dedicated-editor .ddc_ink_writing-dedicated-scroller {
@@ -4638,6 +5115,7 @@ a[href*="type=inkDrawing"] {
 .ink_expand-lines-button {
   position: absolute;
   right: 8px;
+  bottom: 8px;
   display: flex;
   flex-direction: row;
   pointer-events: auto;
@@ -4647,6 +5125,14 @@ a[href*="type=inkDrawing"] {
   height: 2.5em;
   border-radius: 0.8em;
   padding: 0 !important;
+  background-color: var(--interactive-normal);
+  color: var(--color-base-60);
+  fill: var(--color-base-60);
+}
+.ink_expand-lines-button button:hover {
+  background-color: var(--interactive-hover);
+  color: var(--color-base-100);
+  fill: var(--color-base-100);
 }
 .ink_expand-lines-button button svg {
   width: 1.5em !important;
@@ -4658,33 +5144,9 @@ a[href*="type=inkDrawing"] {
 
 /* src/components/formats/current/writing/writing-embed/writing-embed.scss */
 .ddc_ink_resize-container--boox .ddc_ink_writing-editor,
-.ddc_ink_resize-container--boox .ddc_ink_drawing-editor,
-.ddc_ink_boox-eink .ddc_ink_writing-editor,
-.ddc_ink_boox-eink .ddc_ink_drawing-editor {
-  overflow: hidden;
-  outline-color: color-mix(in srgb, var(--text-normal) 20%, transparent);
-}
-.ddc_ink_resize-container--boox .ddc_ink_writing-embed-preview.ddc_ink_visible-background,
-.ddc_ink_boox-eink .ddc_ink_writing-embed-preview.ddc_ink_visible-background {
-  border-color: var(--text-normal);
-  border-width: 2px;
-}
-.ddc_ink_resize-container--boox .ddc_ink_writing-embed-preview line,
-.ddc_ink_boox-eink .ddc_ink_writing-embed-preview line {
-  stroke: var(--text-normal);
-  stroke-opacity: 1;
-}
-.ddc_ink_resize-container--boox .ddc_ink_drawing-embed-preview.ddc_ink_visible-frame,
-.ddc_ink_boox-eink .ddc_ink_drawing-embed-preview.ddc_ink_visible-frame {
-  border-color: var(--text-normal);
-}
-.ddc_ink_resize-container--boox .ink-adaptive-grid .ink-grid-dot,
-.ddc_ink_boox-eink .ink-adaptive-grid .ink-grid-dot {
-  fill: var(--text-normal);
-}
-.ddc_ink_resize-container--boox .ddc_ink_writing-editor,
 .ddc_ink_resize-container--boox .ddc_ink_drawing-editor {
   border-radius: 20px;
+  overflow: hidden;
 }
 .ddc_ink_resize-container {
   width: 100%;
@@ -5035,11 +5497,6 @@ a[href*="type=inkWriting"] {
   border-radius: 20px;
   background-color: var(--color-base-05);
 }
-.ddc_ink_writing-embed-preview line {
-  stroke: var(--color-base-50);
-  stroke-width: 2px;
-  stroke-opacity: 0.5;
-}
 .ddc_ink_writing-embed-preview:not(.ddc_ink_visible-lines) line {
   display: none;
 }
@@ -5141,8 +5598,50 @@ a[href*="type=inkWriting"] {
     opacity: 0.3;
   }
 }
+.ink-svg-canvas {
+  color: var(--text-normal);
+}
+.ink-svg-canvas .ink-stroke--selected {
+  filter: saturate(1.35);
+}
 .ink-svg-canvas [data-stroke-group].ink-stroke--pending-erase {
   animation: ink-stroke-pending-erase 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+
+/* src/ink-canvas/selection-overlay.scss */
+.ink-canvas-selection-bounds-underlay {
+  pointer-events: none;
+}
+.ink-canvas-selection-bounds-underlay .ink-canvas-selection-bounds-fill {
+  fill: color-mix(in srgb, var(--interactive-accent) 14%, transparent);
+  stroke: none;
+}
+.ink-canvas-selection-overlay {
+  pointer-events: none;
+}
+.ink-canvas-selection-overlay .ink-canvas-selection-bounds {
+  fill: none;
+  stroke: var(--interactive-accent);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+.ink-canvas-selection-overlay .ink-canvas-selection-handle-dot {
+  fill: var(--interactive-accent);
+  stroke: var(--background-primary, #fff);
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+}
+.ink-canvas-selection-overlay .ink-canvas-selection-handle-icon {
+  color: var(--text-on-accent, var(--text-normal));
+  pointer-events: none;
+}
+.ink-canvas-selection-overlay .ink-canvas-selection-handle-icon--resize path {
+  fill: currentColor;
+}
+.ink-canvas-selection-overlay .ink-canvas-selection-handle-icon--rotate path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
 }
 
 /* src/components/jsx-components/finger-blocker/finger-blocker.scss */
@@ -5662,11 +6161,6 @@ a[href*="type=inkWriting"] {
   border: solid 1px var(--color-base-20);
   border-radius: 20px;
   background-color: var(--color-base-05);
-}
-.ddc_ink_writing-embed-preview line {
-  stroke: var(--color-base-50);
-  stroke-width: 2px;
-  stroke-opacity: 0.5;
 }
 .ddc_ink_writing-embed-preview:not(.ddc_ink_visible-lines) line {
   display: none;

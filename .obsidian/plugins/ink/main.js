@@ -15334,9 +15334,9 @@ var require_ie8_dom_define = __commonJS({
     "use strict";
     var DESCRIPTORS = require_descriptors();
     var fails = require_fails();
-    var createElement64 = require_document_create_element();
+    var createElement68 = require_document_create_element();
     module2.exports = !DESCRIPTORS && !fails(function() {
-      return Object.defineProperty(createElement64("div"), "a", {
+      return Object.defineProperty(createElement68("div"), "a", {
         get: function() {
           return 7;
         }
@@ -20147,16 +20147,16 @@ var require_use_gesture_core_cjs_prod = __commonJS({
         this._gestureKey = gestureKey;
       }
       add(element, device, action, handler, options) {
-        const listeners = this._listeners;
+        const listeners2 = this._listeners;
         const type = actions_dist_useGestureCoreActions.toDomEventType(device, action);
         const _options = this._gestureKey ? this._ctrl.config[this._gestureKey].eventOptions : {};
         const eventOptions = actions_dist_useGestureCoreActions._objectSpread2(actions_dist_useGestureCoreActions._objectSpread2({}, _options), options);
         element.addEventListener(type, handler, eventOptions);
         const remove2 = () => {
           element.removeEventListener(type, handler, eventOptions);
-          listeners.delete(remove2);
+          listeners2.delete(remove2);
         };
-        listeners.add(remove2);
+        listeners2.add(remove2);
         return remove2;
       }
       clean() {
@@ -20469,7 +20469,7 @@ var require_eventemitter3 = __commonJS({
       }
       return names;
     };
-    EventEmitter2.prototype.listeners = function listeners(event) {
+    EventEmitter2.prototype.listeners = function listeners2(event) {
       var evt = prefix ? prefix + event : event, handlers = this._events[evt];
       if (!handlers)
         return [];
@@ -20481,63 +20481,63 @@ var require_eventemitter3 = __commonJS({
       return ee2;
     };
     EventEmitter2.prototype.listenerCount = function listenerCount(event) {
-      var evt = prefix ? prefix + event : event, listeners = this._events[evt];
-      if (!listeners)
+      var evt = prefix ? prefix + event : event, listeners2 = this._events[evt];
+      if (!listeners2)
         return 0;
-      if (listeners.fn)
+      if (listeners2.fn)
         return 1;
-      return listeners.length;
+      return listeners2.length;
     };
     EventEmitter2.prototype.emit = function emit(event, a1, a22, a3, a4, a5) {
       var evt = prefix ? prefix + event : event;
       if (!this._events[evt])
         return false;
-      var listeners = this._events[evt], len = arguments.length, args, i3;
-      if (listeners.fn) {
-        if (listeners.once)
-          this.removeListener(event, listeners.fn, void 0, true);
+      var listeners2 = this._events[evt], len = arguments.length, args, i3;
+      if (listeners2.fn) {
+        if (listeners2.once)
+          this.removeListener(event, listeners2.fn, void 0, true);
         switch (len) {
           case 1:
-            return listeners.fn.call(listeners.context), true;
+            return listeners2.fn.call(listeners2.context), true;
           case 2:
-            return listeners.fn.call(listeners.context, a1), true;
+            return listeners2.fn.call(listeners2.context, a1), true;
           case 3:
-            return listeners.fn.call(listeners.context, a1, a22), true;
+            return listeners2.fn.call(listeners2.context, a1, a22), true;
           case 4:
-            return listeners.fn.call(listeners.context, a1, a22, a3), true;
+            return listeners2.fn.call(listeners2.context, a1, a22, a3), true;
           case 5:
-            return listeners.fn.call(listeners.context, a1, a22, a3, a4), true;
+            return listeners2.fn.call(listeners2.context, a1, a22, a3, a4), true;
           case 6:
-            return listeners.fn.call(listeners.context, a1, a22, a3, a4, a5), true;
+            return listeners2.fn.call(listeners2.context, a1, a22, a3, a4, a5), true;
         }
         for (i3 = 1, args = new Array(len - 1); i3 < len; i3++) {
           args[i3 - 1] = arguments[i3];
         }
-        listeners.fn.apply(listeners.context, args);
+        listeners2.fn.apply(listeners2.context, args);
       } else {
-        var length = listeners.length, j2;
+        var length = listeners2.length, j2;
         for (i3 = 0; i3 < length; i3++) {
-          if (listeners[i3].once)
-            this.removeListener(event, listeners[i3].fn, void 0, true);
+          if (listeners2[i3].once)
+            this.removeListener(event, listeners2[i3].fn, void 0, true);
           switch (len) {
             case 1:
-              listeners[i3].fn.call(listeners[i3].context);
+              listeners2[i3].fn.call(listeners2[i3].context);
               break;
             case 2:
-              listeners[i3].fn.call(listeners[i3].context, a1);
+              listeners2[i3].fn.call(listeners2[i3].context, a1);
               break;
             case 3:
-              listeners[i3].fn.call(listeners[i3].context, a1, a22);
+              listeners2[i3].fn.call(listeners2[i3].context, a1, a22);
               break;
             case 4:
-              listeners[i3].fn.call(listeners[i3].context, a1, a22, a3);
+              listeners2[i3].fn.call(listeners2[i3].context, a1, a22, a3);
               break;
             default:
               if (!args)
                 for (j2 = 1, args = new Array(len - 1); j2 < len; j2++) {
                   args[j2 - 1] = arguments[j2];
                 }
-              listeners[i3].fn.apply(listeners[i3].context, args);
+              listeners2[i3].fn.apply(listeners2[i3].context, args);
           }
         }
       }
@@ -20557,15 +20557,15 @@ var require_eventemitter3 = __commonJS({
         clearEvent(this, evt);
         return this;
       }
-      var listeners = this._events[evt];
-      if (listeners.fn) {
-        if (listeners.fn === fn3 && (!once || listeners.once) && (!context || listeners.context === context)) {
+      var listeners2 = this._events[evt];
+      if (listeners2.fn) {
+        if (listeners2.fn === fn3 && (!once || listeners2.once) && (!context || listeners2.context === context)) {
           clearEvent(this, evt);
         }
       } else {
-        for (var i3 = 0, events = [], length = listeners.length; i3 < length; i3++) {
-          if (listeners[i3].fn !== fn3 || once && !listeners[i3].once || context && listeners[i3].context !== context) {
-            events.push(listeners[i3]);
+        for (var i3 = 0, events = [], length = listeners2.length; i3 < length; i3++) {
+          if (listeners2[i3].fn !== fn3 || once && !listeners2[i3].once || context && listeners2[i3].context !== context) {
+            events.push(listeners2[i3]);
           }
         }
         if (events.length)
@@ -21520,7 +21520,7 @@ __export(main_exports, {
   inkPluginAtom: () => inkPluginAtom
 });
 module.exports = __toCommonJS(main_exports);
-var import_obsidian56 = require("obsidian");
+var import_obsidian55 = require("obsidian");
 
 // src/types/plugin-settings_0_5_0.ts
 var DEFAULT_PLUGIN_SETTINGS_0_5_0 = {
@@ -21608,7 +21608,7 @@ function createSupportButtonSet(containerEl) {
 }
 
 // src/components/dom-components/tabs/settings-tab/settings-tab.ts
-var import_obsidian15 = require("obsidian");
+var import_obsidian16 = require("obsidian");
 
 // src/components/dom-components/modals/confirmation-modal/confirmation-modal.ts
 var import_obsidian2 = require("obsidian");
@@ -21695,12 +21695,6 @@ function createNoticeLabel(noticeParent, noticeNumber, noticeTotal) {
 }
 function createNoticeBodyCtaRow(scrollAreaEl) {
   return scrollAreaEl.createDiv("ddc_ink_notice-body-cta-row");
-}
-function createNoticeBodyCtaButton(parentEl, label) {
-  const buttonEl = parentEl.createEl("button");
-  buttonEl.setText(label);
-  buttonEl.classList.add("ddc_ink_primary-btn");
-  return buttonEl;
 }
 function createNoticeCtaBar(footerEl, props) {
   let primaryBtnEl = null;
@@ -21865,6 +21859,25 @@ function showDevelopmentWelcomeTip(plugin) {
 // src/components/dom-components/version-notices.ts
 var semVer = __toESM(require_semver2());
 
+// src/components/dom-components/almostuseful-link-account-button.ts
+var import_obsidian4 = require("obsidian");
+function applyAlmostUsefulLinkAccountButtonChrome(buttonEl) {
+  buttonEl.addClass("mod-cta");
+  buttonEl.addClass("ddc_ink_primary-btn");
+  buttonEl.addClass("ddc_ink_almostuseful-link-account-btn");
+  buttonEl.empty();
+  const iconEl = buttonEl.createSpan({ cls: "ddc_ink_almostuseful-link-account-btn-icon" });
+  (0, import_obsidian4.setIcon)(iconEl, "ddc_ink_link_account_user");
+  buttonEl.createSpan({
+    cls: "ddc_ink_almostuseful-link-account-btn-label",
+    text: "Link account"
+  });
+}
+function decorateAlmostUsefulLinkAccountButton(button) {
+  button.setCta();
+  applyAlmostUsefulLinkAccountButtonChrome(button.buttonEl);
+}
+
 // src/logic/almostuseful/almostuseful-constants.ts
 var ALMOSTUSEFUL_CLIENT_ID = "ink";
 var ALMOSTUSEFUL_CLIENT_DISPLAY_NAME = "Ink";
@@ -21878,10 +21891,10 @@ var ALMOSTUSEFUL_SESSION_CHANGED_EVENT = "ddc-ink-almostuseful-session-changed";
 var ALMOSTUSEFUL_USAGE_CACHE_STORAGE_SUFFIX = "almostuseful_usage_cache_v3";
 
 // src/logic/almostuseful/almostuseful-login.ts
-var import_obsidian6 = require("obsidian");
+var import_obsidian7 = require("obsidian");
 
 // src/logic/almostuseful/almostuseful-device.ts
-var import_obsidian4 = require("obsidian");
+var import_obsidian5 = require("obsidian");
 
 // src/logic/almostuseful/portal-device-label.ts
 var PORTAL_DEVICE_LABEL_MAX_LENGTH = 80;
@@ -21929,7 +21942,7 @@ var manifest_default = {
   name: "Ink",
   author: "Dale de Silva",
   description: "Hand write or draw directly between paragraphs in your notes using a digital pen, stylus, or Apple pencil. Useful for handwriting, sketches, scribbles, or even math equations and scientific notation. Runs on the tldraw framework and drawing provides an infinite canvas.",
-  version: "0.6.0",
+  version: "0.6.1",
   minAppVersion: "1.8.7",
   main: "main.js",
   authorUrl: "https://designdebt.club",
@@ -22030,7 +22043,7 @@ function readOrCreateAlmostUsefulDeviceInstall() {
 }
 function almostUsefulDeviceLabel() {
   const userAgent = readUserAgent();
-  if (import_obsidian4.Platform.isIosApp) {
+  if (import_obsidian5.Platform.isIosApp) {
     return resolvePortalDeviceLabelFromHints({
       formFactor: /iPad/i.test(userAgent) ? "iPad" : "iPhone"
     });
@@ -22038,22 +22051,22 @@ function almostUsefulDeviceLabel() {
   if (isIpadUserAgent(userAgent)) {
     return resolvePortalDeviceLabelFromHints({ formFactor: "iPad" });
   }
-  if (import_obsidian4.Platform.isMobileApp) {
+  if (import_obsidian5.Platform.isMobileApp) {
     return resolvePortalDeviceLabelFromHints({
       modelName: parseEinkVendorFromUserAgent(userAgent),
       formFactor: resolveAndroidFormFactor(userAgent)
     });
   }
-  if (import_obsidian4.Platform.isMacOS) {
+  if (import_obsidian5.Platform.isMacOS) {
     const productLine = readMacProductLine();
     if (productLine)
       return normalizePortalDeviceLabel(productLine);
     return PORTAL_DEVICE_LABEL_FALLBACK;
   }
-  if (import_obsidian4.Platform.isWin) {
+  if (import_obsidian5.Platform.isWin) {
     return resolvePortalDeviceLabelFromHints({ osFamily: "Windows PC" });
   }
-  if (import_obsidian4.Platform.isLinux) {
+  if (import_obsidian5.Platform.isLinux) {
     return resolvePortalDeviceLabelFromHints({ osFamily: "Linux PC" });
   }
   return PORTAL_DEVICE_LABEL_FALLBACK;
@@ -22066,7 +22079,7 @@ function readUserAgent() {
 function isIpadUserAgent(userAgent) {
   if (/iPad/i.test(userAgent))
     return true;
-  if (!import_obsidian4.Platform.isMacOS || typeof navigator === "undefined")
+  if (!import_obsidian5.Platform.isMacOS || typeof navigator === "undefined")
     return false;
   if (navigator.maxTouchPoints <= 1)
     return false;
@@ -22088,7 +22101,7 @@ function resolveAndroidFormFactor(userAgent) {
   return /Mobile/i.test(userAgent) ? "Android phone" : "Android tablet";
 }
 function readMacProductLine() {
-  if (!import_obsidian4.Platform.isDesktop || !import_obsidian4.Platform.isMacOS)
+  if (!import_obsidian5.Platform.isDesktop || !import_obsidian5.Platform.isMacOS)
     return null;
   const fromIdentifier = readAppleModelIdentifier();
   if (fromIdentifier)
@@ -22322,7 +22335,7 @@ async function persistAlmostUsefulTokenResponse(response) {
 }
 
 // src/logic/almostuseful/almostuseful-http.ts
-var import_obsidian5 = require("obsidian");
+var import_obsidian6 = require("obsidian");
 async function almostUsefulRequestJson(params) {
   const headers = {
     "Content-Type": "application/json"
@@ -22334,7 +22347,7 @@ async function almostUsefulRequestJson(params) {
   if (params.body !== void 0) {
     body = JSON.stringify(params.body);
   }
-  const response = await (0, import_obsidian5.requestUrl)({
+  const response = await (0, import_obsidian6.requestUrl)({
     url: params.url,
     method: params.method,
     headers,
@@ -22407,7 +22420,7 @@ var INITIAL_FOREGROUND_POLL_DELAY_MS = 1e4;
 var DEVICE_CODE_ISSUE_TIMEOUT_MS = 2e4;
 var SLOW_DOWN_EXTRA_MS = 5e3;
 function openAlmostUsefulBrowserUrl(url) {
-  if (import_obsidian6.Platform.isDesktop) {
+  if (import_obsidian7.Platform.isDesktop) {
     const electron = require("electron");
     void electron.shell.openExternal(url);
     return;
@@ -22655,27 +22668,36 @@ function showRecentChanges(plugin) {
 }
 function showChanges(plugin) {
   const { noticeBody, scrollAreaEl, footerEl } = createNoticeTemplate(1, 2);
-  scrollAreaEl.createEl("h1").setText(`Changes in Ink v0.6`);
-  scrollAreaEl.createEl("h2").setText("Handwriting transcriptions (OCR)");
-  const inviteOnlyParagraphEl = scrollAreaEl.createEl("p");
-  inviteOnlyParagraphEl.appendText("This requires an ");
-  inviteOnlyParagraphEl.createEl("strong").setText("Almost Useful");
-  inviteOnlyParagraphEl.appendText(" account for processing and is currently invite only.");
+  scrollAreaEl.createEl("h1").setText(`Changes in Ink v0.6.1`);
+  const changesListEl = scrollAreaEl.createEl("ul");
+  changesListEl.createEl("li").setText("Handwriting transcriptions available to all (requires an Almost Useful account).");
+  changesListEl.createEl("li").setText("Fuller full screen mode.");
+  changesListEl.createEl("li").setText("Better selections and transformations.");
+  changesListEl.createEl("li").setText("High contrast mode.");
   const bodyCtaRowEl = createNoticeBodyCtaRow(scrollAreaEl);
-  const joinWaitlistBtnEl = createNoticeBodyCtaButton(bodyCtaRowEl, "Join the waitlist");
-  const logInBtnEl = createNoticeBodyCtaButton(bodyCtaRowEl, "Log in");
+  bodyCtaRowEl.classList.add("ddc_ink_notice-body-cta-row--stacked");
+  bodyCtaRowEl.classList.add("ddc_ink_notice-body-cta-row--centered");
+  const linkAccountCtaStackEl = bodyCtaRowEl.createDiv("ddc_ink_almostuseful-link-account-cta-stack ddc_ink_almostuseful-link-account-cta-stack--centered");
+  const linkAccountBtnEl = linkAccountCtaStackEl.createEl("button", { type: "button" });
+  applyAlmostUsefulLinkAccountButtonChrome(linkAccountBtnEl);
+  const createAccountLinkEl = linkAccountCtaStackEl.createEl("a", {
+    cls: "ddc_ink_tertiary-text-link",
+    text: "Create account",
+    href: "#"
+  });
   const { tertiaryBtnEl } = createNoticeCtaBar(footerEl, {
     footerLink: {
-      href: "https://youtu.be/ujXUf8ighSM",
+      href: "https://youtu.be/oyKH5mgfGFY",
       label: "View feature demos"
     },
     tertiaryLabel: "Dismiss"
   });
   const notice = launchPersistentNotice(noticeBody);
-  joinWaitlistBtnEl.addEventListener("click", () => {
-    openAlmostUsefulBrowserUrl(ALMOSTUSEFUL_PORTAL_ORIGIN);
+  createAccountLinkEl.addEventListener("click", (event) => {
+    event.preventDefault();
+    openAlmostUsefulBrowserUrl(`${ALMOSTUSEFUL_PORTAL_ORIGIN}/auth/sign-up`);
   });
-  logInBtnEl.addEventListener("click", () => {
+  linkAccountBtnEl.addEventListener("click", () => {
     openInkSettingsTab(plugin);
   });
   if (tertiaryBtnEl) {
@@ -22688,7 +22710,7 @@ function showChanges(plugin) {
 }
 
 // src/components/dom-components/toggle-accordion-setting.ts
-var import_obsidian7 = require("obsidian");
+var import_obsidian8 = require("obsidian");
 var ToggleAccordionSetting = class {
   constructor(containerEl) {
     this.containerEl = containerEl;
@@ -22696,7 +22718,7 @@ var ToggleAccordionSetting = class {
     this.sectionHeaderEl = this.sectionEl.createDiv("ddc_ink_toggle-accordion-header");
     this.sectionContentEl = this.sectionEl.createDiv("ddc_ink_toggle-accordion-content");
     this.sectionContentInnerEl = this.sectionContentEl.createDiv("ddc_ink_toggle-accordion-content-inner");
-    this.toggleSetting = new import_obsidian7.Setting(this.sectionHeaderEl).setClass("ddc_ink_setting").addToggle((toggle) => this.toggle = toggle);
+    this.toggleSetting = new import_obsidian8.Setting(this.sectionHeaderEl).setClass("ddc_ink_setting").addToggle((toggle) => this.toggle = toggle);
     return this;
   }
   setName(name) {
@@ -22730,11 +22752,11 @@ var ToggleAccordionSetting = class {
 };
 
 // src/components/dom-components/two-way-toggle-setting/two-way-toggle-setting.ts
-var import_obsidian8 = require("obsidian");
+var import_obsidian9 = require("obsidian");
 var TwoWayToggleSetting = class {
   constructor(containerEl) {
     this.containerEl = containerEl;
-    this.setting = new import_obsidian8.Setting(containerEl).setClass("ddc_ink_setting").setClass("ddc_ink_two-way-toggle-setting");
+    this.setting = new import_obsidian9.Setting(containerEl).setClass("ddc_ink_setting").setClass("ddc_ink_two-way-toggle-setting");
     this.setting.addButton((button) => {
       this.rightButton = button;
       button.buttonEl.classList.add("ddc_ink_two-way-toggle-option", "ddc_ink_two-way-toggle-option--start");
@@ -22803,7 +22825,7 @@ var TwoWayToggleSetting = class {
 };
 
 // src/components/dom-components/three-way-toggle-setting/three-way-toggle-setting.ts
-var import_obsidian9 = require("obsidian");
+var import_obsidian10 = require("obsidian");
 var THREE_WAY_POSITION_CLASSES = [
   "ddc_ink_three-way-toggle-option--start",
   "ddc_ink_three-way-toggle-option--middle",
@@ -22814,7 +22836,7 @@ var ThreeWayToggleSetting = class {
     this.buttons = [];
     this.options = [];
     this.containerEl = containerEl;
-    this.setting = new import_obsidian9.Setting(containerEl).setClass("ddc_ink_setting").setClass("ddc_ink_three-way-toggle-setting");
+    this.setting = new import_obsidian10.Setting(containerEl).setClass("ddc_ink_setting").setClass("ddc_ink_three-way-toggle-setting");
     for (let i3 = 0; i3 < 3; i3++) {
       const buttonIndex = i3;
       this.setting.addButton((button) => {
@@ -23308,10 +23330,10 @@ var buildStore = (getAtomState) => {
     const atomState = getAtomState(atom3);
     const mounted = mountAtom(pending, atom3, atomState);
     flushPending(pending);
-    const listeners = mounted.l;
-    listeners.add(listener);
+    const listeners2 = mounted.l;
+    listeners2.add(listener);
     return () => {
-      listeners.delete(listener);
+      listeners2.delete(listener);
       const pending2 = createPending();
       unmountAtom(pending2, atom3, atomState);
       flushPending(pending2);
@@ -23476,7 +23498,7 @@ function useDominantHand() {
 }
 
 // src/logic/utils/tldraw-svg-migration-logic.ts
-var import_obsidian11 = require("obsidian");
+var import_obsidian12 = require("obsidian");
 
 // src/stores/global-store.ts
 var globalsAtom = atom();
@@ -24221,7 +24243,7 @@ function renderWritingStrokesToSvg(strokes, snapshot, pageWidth, padding = 0) {
   const lineCount = Math.floor(height / lineHeight);
   for (let i3 = 1; i3 <= lineCount; i3++) {
     const y3 = i3 * lineHeight;
-    guideMarkup += `<line x1="${margin}" y1="${y3}" x2="${pageWidth - margin}" y2="${y3}" stroke="${DEFAULT_CONTENT_COLOUR_WRITING_LINE}" stroke-opacity="0.5" class="${INK_SVG_WRITING_LINE_CLASS}" />
+    guideMarkup += `<line x1="${margin}" y1="${y3}" x2="${pageWidth - margin}" y2="${y3}" stroke="${DEFAULT_CONTENT_COLOUR_WRITING_LINE}" stroke-opacity="0.3" class="${INK_SVG_WRITING_LINE_CLASS}" />
 `;
   }
   const viewBox = `0 0 ${pageWidth} ${height}`;
@@ -24664,7 +24686,7 @@ async function buildDrawingEmbedSettingsFromFile(plugin, file) {
 }
 
 // src/logic/utils/migration-logic.ts
-var import_obsidian10 = require("obsidian");
+var import_obsidian11 = require("obsidian");
 
 // src/logic/utils/writing-embed-aspect-ratio.ts
 function parseSvgViewBoxAspectRatio(svgString) {
@@ -24887,7 +24909,7 @@ async function scanVaultForLegacyEmbeds(vault, onProgress) {
     affectedNoteSet.set(note.path, note);
     for (const block of blocks) {
       const legacyFile = vault.getAbstractFileByPath(block.filepath);
-      if (legacyFile instanceof import_obsidian10.TFile) {
+      if (legacyFile instanceof import_obsidian11.TFile) {
         addLegacyFileToMap(legacyFileMap, legacyFile, block.embedType);
       }
       const entry = legacyFileMap.get(block.filepath);
@@ -24956,7 +24978,7 @@ async function executeMigration(vault, fileManager, scanResult, onProgress, opti
           writingAspectRatioBySvgPath.set(outputSvgPath, writingAspectRatio);
         }
       }
-      if (existing instanceof import_obsidian10.TFile) {
+      if (existing instanceof import_obsidian11.TFile) {
         try {
           await vault.modify(existing, svgStr);
         } catch (err) {
@@ -25121,12 +25143,12 @@ async function resolveTldrawSvgFileKind(vault, file) {
   return null;
 }
 function resolveEmbedPath(vault, resolveLinkPath, linkpath, sourceNotePath) {
-  const normalized = (0, import_obsidian11.normalizePath)(linkpath);
+  const normalized = (0, import_obsidian12.normalizePath)(linkpath);
   const resolved = resolveLinkPath(normalized, sourceNotePath);
   if (resolved)
     return resolved;
   const byPath = vault.getAbstractFileByPath(normalized);
-  if (byPath instanceof import_obsidian11.TFile)
+  if (byPath instanceof import_obsidian12.TFile)
     return byPath.path;
   return null;
 }
@@ -25158,7 +25180,7 @@ async function scanVaultForTldrawInkSvgFiles(vault, resolveLinkPath, onProgress)
         continue;
       if (!fileMap.has(canonicalPath)) {
         const svgFile = vault.getAbstractFileByPath(canonicalPath);
-        if (!(svgFile instanceof import_obsidian11.TFile))
+        if (!(svgFile instanceof import_obsidian12.TFile))
           continue;
         let checkPromise = pendingChecks.get(canonicalPath);
         if (!checkPromise) {
@@ -25349,6 +25371,7 @@ var DEVICE_SETTINGS_STORAGE_KEY = "deviceSettings_v1";
 var DEFAULT_DEVICE_SETTINGS_V1 = {
   pluginVersion: PLUGIN_VERSION,
   booxConnectionEnabled: false,
+  highContrastUserInterface: false,
   fingerDrawingEnabled: false,
   strokeInputTreatAs: {
     inkWriting: "auto",
@@ -25394,6 +25417,18 @@ function mergeWithDefaults(partial) {
   }
   const lastDetected = isLastDetectedStrokeInput(partial.lastDetectedStrokeInput) ? partial.lastDetectedStrokeInput : base.lastDetectedStrokeInput;
   const booxConnectionEnabled = typeof partial.booxConnectionEnabled === "boolean" ? partial.booxConnectionEnabled : base.booxConnectionEnabled;
+  const legacyPartial = partial;
+  const hasStoredHighContrastUserInterface = "highContrastUserInterface" in partial || "highContrastStyling" in partial || "styleForGrayscaleScreenEnabled" in partial;
+  let highContrastUserInterface = base.highContrastUserInterface;
+  if (typeof partial.highContrastUserInterface === "boolean") {
+    highContrastUserInterface = partial.highContrastUserInterface;
+  } else if (typeof legacyPartial.highContrastStyling === "boolean") {
+    highContrastUserInterface = legacyPartial.highContrastStyling;
+  } else if (typeof legacyPartial.styleForGrayscaleScreenEnabled === "boolean") {
+    highContrastUserInterface = legacyPartial.styleForGrayscaleScreenEnabled;
+  } else if (!hasStoredHighContrastUserInterface && booxConnectionEnabled) {
+    highContrastUserInterface = true;
+  }
   const fingerDrawingEnabled = typeof partial.fingerDrawingEnabled === "boolean" ? partial.fingerDrawingEnabled : base.fingerDrawingEnabled;
   const stylusSideButtonTemporaryErase = typeof partial.stylusSideButtonTemporaryErase === "boolean" ? partial.stylusSideButtonTemporaryErase : base.stylusSideButtonTemporaryErase;
   const inkCloseCount = typeof partial.inkCloseCount === "number" && partial.inkCloseCount >= 0 ? partial.inkCloseCount : base.inkCloseCount;
@@ -25401,6 +25436,7 @@ function mergeWithDefaults(partial) {
   return {
     pluginVersion: PLUGIN_VERSION,
     booxConnectionEnabled,
+    highContrastUserInterface,
     fingerDrawingEnabled,
     stylusSideButtonTemporaryErase,
     strokeInputTreatAs: {
@@ -25463,6 +25499,12 @@ function getBooxConnectionEnabled() {
 function setBooxConnectionEnabled(enabled) {
   patchDeviceSettings({ booxConnectionEnabled: enabled });
 }
+function getHighContrastUserInterface() {
+  return readDeviceSettings().highContrastUserInterface;
+}
+function setHighContrastUserInterface(enabled) {
+  patchDeviceSettings({ highContrastUserInterface: enabled });
+}
 function resetBooxConnectionToDefault() {
   setBooxConnectionEnabled(DEFAULT_DEVICE_SETTINGS_V1.booxConnectionEnabled);
 }
@@ -25483,7 +25525,8 @@ function setStylusSideButtonTemporaryEraseEnabled(enabled) {
 }
 function resetExperimentalDeviceSettingsToDefault() {
   patchDeviceSettings({
-    stylusSideButtonTemporaryErase: DEFAULT_DEVICE_SETTINGS_V1.stylusSideButtonTemporaryErase
+    stylusSideButtonTemporaryErase: DEFAULT_DEVICE_SETTINGS_V1.stylusSideButtonTemporaryErase,
+    highContrastUserInterface: DEFAULT_DEVICE_SETTINGS_V1.highContrastUserInterface
   });
 }
 function deviceStorageAlreadyHasBooxField() {
@@ -25561,8 +25604,18 @@ function subscribeDeviceSettingsChanged(onChange) {
   };
 }
 
+// src/logic/device-settings/high-contrast-user-interface-body-class.ts
+var INK_HIGH_CONTRAST_USER_INTERFACE_BODY_CLASS = "ddc_ink_style-for-grayscale-screen";
+function applyHighContrastUserInterfaceBodyClass() {
+  const shouldApply = getHighContrastUserInterface();
+  document.body.classList.toggle(INK_HIGH_CONTRAST_USER_INTERFACE_BODY_CLASS, shouldApply);
+}
+function releaseHighContrastUserInterfaceBodyClassOnPluginUnload() {
+  document.body.classList.remove(INK_HIGH_CONTRAST_USER_INTERFACE_BODY_CLASS);
+}
+
 // src/components/dom-components/tabs/settings-tab/almostuseful-account-section.ts
-var import_obsidian14 = require("obsidian");
+var import_obsidian15 = require("obsidian");
 
 // src/logic/almostuseful/almostuseful-usage.ts
 async function fetchAlmostUsefulBurndown(session) {
@@ -27732,7 +27785,7 @@ function createTippy(reference2, passedProps) {
   var lastTriggerEvent;
   var currentTransitionEndListener;
   var onFirstUpdate;
-  var listeners = [];
+  var listeners2 = [];
   var debouncedOnMouseMove = debounce2(onMouseMove, props.interactiveDebounce);
   var currentTarget;
   var id = idCounter++;
@@ -27973,7 +28026,7 @@ function createTippy(reference2, passedProps) {
     var nodes = normalizeToArray(instance.props.triggerTarget || reference2);
     nodes.forEach(function(node) {
       node.addEventListener(eventType, handler, options);
-      listeners.push({
+      listeners2.push({
         node,
         eventType,
         handler,
@@ -28009,11 +28062,11 @@ function createTippy(reference2, passedProps) {
     });
   }
   function removeListeners() {
-    listeners.forEach(function(_ref) {
+    listeners2.forEach(function(_ref) {
       var node = _ref.node, eventType = _ref.eventType, handler = _ref.handler, options = _ref.options;
       node.removeEventListener(eventType, handler, options);
     });
-    listeners = [];
+    listeners2 = [];
   }
   function onTrigger2(event) {
     var _lastTriggerEvent;
@@ -29151,7 +29204,7 @@ function appendLegendItem(legend, swatchClass, label) {
 }
 
 // src/logic/handwriting-transcription-queue.ts
-var import_obsidian13 = require("obsidian");
+var import_obsidian14 = require("obsidian");
 
 // src/logic/almostuseful/almostuseful-handwriting-transcription.ts
 var HANDWRITING_TRANSCRIPTION_JOB_PATH = "/api/jobs/handwriting-transcription";
@@ -35273,7 +35326,7 @@ var saveWriteFileTranscript = async (plugin, fileRef, transcript, transcriptionF
 };
 
 // src/logic/handwriting-transcription-apply.ts
-var import_obsidian12 = require("obsidian");
+var import_obsidian13 = require("obsidian");
 var import_state = require("@codemirror/state");
 async function findNotesContainingInkEmbedAnyAlt(plugin, svgFilePath, fileType) {
   const mdFiles = plugin.app.vault.getMarkdownFiles();
@@ -35340,7 +35393,7 @@ function patchInkEmbedTranscriptAltsInOpenMarkdownEditor(plugin, note, svgFilePa
   let didFindOpenEditor = false;
   for (const leaf of leaves) {
     const view = leaf.view;
-    if (!(view instanceof import_obsidian12.MarkdownView))
+    if (!(view instanceof import_obsidian13.MarkdownView))
       continue;
     if (view.file?.path !== note.path)
       continue;
@@ -35614,7 +35667,7 @@ function initHandwritingTranscriptionQueue(plugin) {
     kickHandwritingTranscriptionQueue();
   });
   plugin.registerEvent(plugin.app.vault.on("modify", (file) => {
-    if (!(file instanceof import_obsidian13.TFile))
+    if (!(file instanceof import_obsidian14.TFile))
       return;
     if (!file.path.toLowerCase().endsWith(".svg"))
       return;
@@ -35688,7 +35741,7 @@ async function enqueueAuto(filePath) {
   if (!hasLinkedAlmostUsefulAccount())
     return;
   const file = plugin.app.vault.getAbstractFileByPath(filePath);
-  if (!(file instanceof import_obsidian13.TFile))
+  if (!(file instanceof import_obsidian14.TFile))
     return;
   const svgFileContent = await plugin.app.vault.read(file);
   const pageData = extractInkJsonFromSvg(svgFileContent);
@@ -35727,23 +35780,23 @@ async function enqueueAuto(filePath) {
 }
 async function enqueueManualTranscription(options) {
   if (!hasLinkedAlmostUsefulAccount()) {
-    new import_obsidian13.Notice("Transcription requires an Almost Useful account. Link your account in Ink's settings.");
+    new import_obsidian14.Notice("Transcription requires an Almost Useful account. Link your account in Ink's settings.");
     return;
   }
   const pageData = extractInkJsonFromSvg(options.svgFileContent);
   if (!pageData) {
-    new import_obsidian13.Notice("Could not read ink file for transcription");
+    new import_obsidian14.Notice("Could not read ink file for transcription");
     return;
   }
   if (!inkFileHasStrokes2(pageData)) {
-    new import_obsidian13.Notice("Nothing to transcribe");
+    new import_obsidian14.Notice("Nothing to transcribe");
     return;
   }
   const liveBboxCells = serializeBboxCellsAtLastTranscription(pageData);
   dropStaleTerminalRejections(options.file.path, liveBboxCells);
   const blocked = matchingTerminalRejection(options.file.path, liveBboxCells);
   if (blocked) {
-    new import_obsidian13.Notice(blocked.notice);
+    new import_obsidian14.Notice(blocked.notice);
     return;
   }
   const pendingJob = {
@@ -35754,12 +35807,12 @@ async function enqueueManualTranscription(options) {
     enqueuedAt: new Date().toISOString()
   };
   if (shouldSkipEnqueueBecauseInflightUnchanged(pendingJob)) {
-    new import_obsidian13.Notice("Transcription already in progress for this file");
+    new import_obsidian14.Notice("Transcription already in progress for this file");
     return;
   }
   upsertPendingJob(pendingJob, { svgFileContent: options.svgFileContent, promoteManual: true });
   if (inflightJob && inflightJob.filePath !== options.file.path) {
-    new import_obsidian13.Notice("Transcription will start when the current job finishes");
+    new import_obsidian14.Notice("Transcription will start when the current job finishes");
   }
   kickHandwritingTranscriptionQueue();
 }
@@ -35869,7 +35922,7 @@ function resumePendingJobsAfterHeldTranscripts(plugin) {
     if (runnableCount === 0)
       return;
     const fileWord = runnableCount === 1 ? "file" : "files";
-    new import_obsidian13.Notice(`Resuming handwriting transcription (${runnableCount} ${fileWord})`);
+    new import_obsidian14.Notice(`Resuming handwriting transcription (${runnableCount} ${fileWord})`);
     launchGraceTimerId = window.setTimeout(() => {
       launchGraceTimerId = null;
       kickHandwritingTranscriptionQueue();
@@ -35901,7 +35954,7 @@ async function pruneUnrunnablePendingJobs() {
     if (job.reason === "auto" && !isAutoTranscribeEnabled(plugin, job.fileType))
       continue;
     const file = plugin.app.vault.getAbstractFileByPath(job.filePath);
-    if (!(file instanceof import_obsidian13.TFile))
+    if (!(file instanceof import_obsidian14.TFile))
       continue;
     try {
       const svgFileContent = await plugin.app.vault.read(file);
@@ -35980,7 +36033,7 @@ function showRetryableNoticeOnce(filePath, message) {
   if (retryNoticeShownForPath.has(filePath))
     return;
   retryNoticeShownForPath.add(filePath);
-  new import_obsidian13.Notice(message);
+  new import_obsidian14.Notice(message);
 }
 function requeuePendingJob(job, options) {
   if (!hasLinkedAlmostUsefulAccount())
@@ -36129,7 +36182,7 @@ async function runTranscriptionJob(job) {
       return;
     }
     const file = plugin.app.vault.getAbstractFileByPath(job.filePath);
-    if (!(file instanceof import_obsidian13.TFile))
+    if (!(file instanceof import_obsidian14.TFile))
       return;
     if (getHandwritingTranscriptionSession(job.filePath) && job.reason === "auto") {
       const blob = readHandwritingTranscriptionQueueBlob();
@@ -36182,7 +36235,7 @@ async function runTranscriptionJob(job) {
       return;
     }
     const fileAfter = plugin.app.vault.getAbstractFileByPath(job.filePath);
-    if (!(fileAfter instanceof import_obsidian13.TFile))
+    if (!(fileAfter instanceof import_obsidian14.TFile))
       return;
     const svgAfter = await plugin.app.vault.read(fileAfter);
     const pageAfter = extractInkJsonFromSvg(svgAfter);
@@ -36211,7 +36264,7 @@ async function runTranscriptionJob(job) {
       const jobError = asHandwritingTranscriptionJobError(error2);
       if (!jobError.retryable) {
         const notice = handwritingTranscriptionNoticeForError(jobError);
-        new import_obsidian13.Notice(notice);
+        new import_obsidian14.Notice(notice);
         rememberTerminalRejection(job.filePath, rejectionBboxCells, jobError, notice);
       } else if (!isDeviceNetworkOnline()) {
         requeuePendingJob(job, { atFront: true });
@@ -36279,7 +36332,7 @@ async function publishHeldTranscript(held) {
   if (!plugin)
     return false;
   const file = plugin.app.vault.getAbstractFileByPath(held.filePath);
-  if (!(file instanceof import_obsidian13.TFile))
+  if (!(file instanceof import_obsidian14.TFile))
     return true;
   await saveWriteFileTranscript(plugin, file, held.transcript, {
     lastTranscriptionAt: held.lastTranscriptionAt,
@@ -36312,7 +36365,7 @@ function insertAlmostUsefulAccountSection(containerEl, _plugin, onRerender) {
   if (isAlmostUsefulAccountSectionExpanded)
     wrapperEl.classList.add("ddc_ink_expanded");
   const sectionEl = wrapperEl.createDiv("ddc_ink_controls-section");
-  const headerSetting = new import_obsidian14.Setting(sectionEl).setClass("ddc_ink_controls-header").setClass("ddc_ink_controls-header--clickable").setName(almostUsefulAccountSectionTitle(session));
+  const headerSetting = new import_obsidian15.Setting(sectionEl).setClass("ddc_ink_controls-header").setClass("ddc_ink_controls-header--clickable").setName(almostUsefulAccountSectionTitle(session));
   const arrowEl = headerSetting.settingEl.createSpan("ddc_ink_collapse-arrow");
   arrowEl.setText("\u203A");
   if (isAlmostUsefulAccountSectionExpanded)
@@ -36323,11 +36376,10 @@ function insertAlmostUsefulAccountSection(containerEl, _plugin, onRerender) {
   });
   const contentEl = sectionEl.createDiv("ddc_ink_controls-content ddc_ink_almostuseful-account");
   if (!session) {
-    insertAlmostUsefulEarlyAccessCard(contentEl, portalOrigin);
     if (pending) {
       insertDeviceSignInCodeCard(contentEl, pending, onRerender);
     } else {
-      new import_obsidian14.Setting(contentEl).setClass("ddc_ink_setting").setClass("ddc_ink_almostuseful-link-account-setting").setName("Link account").setDesc("Create and link an Almost Useful account to utilise handwriting transcription. Almost Useful is an accounts portal created by Dale de Silva, the developer of Ink.").addButton((button) => {
+      const linkAccountSetting = new import_obsidian15.Setting(contentEl).setClass("ddc_ink_setting").setClass("ddc_ink_almostuseful-link-account-setting").setName("Link account").setDesc("Create and link an Almost Useful account to utilise handwriting transcription. Almost Useful is an accounts portal created by Dale de Silva, the developer of Ink.").addButton((button) => {
         decorateAlmostUsefulLinkAccountButton(button);
         button.onClick(() => {
           if (button.buttonEl.disabled)
@@ -36336,22 +36388,24 @@ function insertAlmostUsefulAccountSection(containerEl, _plugin, onRerender) {
           void startAlmostUsefulBrowserLogin().then((result) => {
             if (!result.ok) {
               setAlmostUsefulLinkAccountButtonBusy(button, false);
-              new import_obsidian14.Notice(result.error);
+              new import_obsidian15.Notice(result.error);
               return;
             }
             onRerender();
           }).catch(() => {
             setAlmostUsefulLinkAccountButtonBusy(button, false);
-            new import_obsidian14.Notice("Could not start Almost Useful sign-in. Try again.");
+            new import_obsidian15.Notice("Could not start Almost Useful sign-in. Try again.");
           });
         });
       });
+      const linkAccountCtaStackEl = wrapAlmostUsefulLinkAccountCtaStack(linkAccountSetting.controlEl);
+      appendAlmostUsefulCreateAccountLink(linkAccountCtaStackEl, portalOrigin, true);
     }
     insertHandwritingTranscriptionPrivacyDisclosure(contentEl);
     insertTranscriptionQueueSection(contentEl);
     return;
   }
-  new import_obsidian14.Setting(contentEl).setClass("ddc_ink_bare-setting").setClass("ddc_ink_bare-setting--left").setClass("ddc_ink_button-set").setClass("ddc_ink_almostuseful-account-actions").addButton((button) => {
+  new import_obsidian15.Setting(contentEl).setClass("ddc_ink_bare-setting").setClass("ddc_ink_bare-setting--left").setClass("ddc_ink_button-set").setClass("ddc_ink_almostuseful-account-actions").addButton((button) => {
     button.setButtonText("Manage account");
     button.onClick(() => {
       openAlmostUsefulBrowserUrl(`${portalOrigin}/account`);
@@ -36369,21 +36423,27 @@ function insertAlmostUsefulAccountSection(containerEl, _plugin, onRerender) {
   insertHandwritingTranscriptionPrivacyDisclosure(contentEl);
   insertTranscriptionQueueSection(contentEl);
 }
-function insertAlmostUsefulEarlyAccessCard(contentEl, portalOrigin) {
-  const cardEl = contentEl.createDiv("ddc_ink_legacy-migrate-card ddc_ink_almostuseful-early-access-card");
-  cardEl.createDiv({
-    cls: "ddc_ink_legacy-migrate-card-title",
-    text: "Early access"
+function wrapAlmostUsefulLinkAccountCtaStack(controlEl) {
+  const stackEl = controlEl.createDiv("ddc_ink_almostuseful-link-account-cta-stack");
+  const buttonEl = controlEl.querySelector("button.ddc_ink_almostuseful-link-account-btn");
+  if (buttonEl?.parentElement === controlEl) {
+    stackEl.appendChild(buttonEl);
+  }
+  return stackEl;
+}
+function appendAlmostUsefulCreateAccountLink(parentEl, portalOrigin, isAlignEnd = false) {
+  const linkEl = parentEl.createEl("a", {
+    cls: isAlignEnd ? "ddc_ink_tertiary-text-link ddc_ink_almostuseful-create-account-link--align-end" : "ddc_ink_tertiary-text-link",
+    text: "Create account",
+    href: "#"
   });
-  const bodyEl = cardEl.createDiv({ cls: "ddc_ink_legacy-migrate-card-desc" });
-  bodyEl.appendText("Almost Useful is currently in early access and is invite-only. If you have an account, sign in, or apply for an invite ");
-  const portalLinkEl = bodyEl.createEl("a", { href: portalOrigin, text: "here" });
-  portalLinkEl.setAttr("target", "_blank");
-  portalLinkEl.setAttr("rel", "noopener");
-  bodyEl.appendText(".");
+  linkEl.addEventListener("click", (event) => {
+    event.preventDefault();
+    openAlmostUsefulBrowserUrl(`${portalOrigin}/auth/sign-up`);
+  });
 }
 function insertHandwritingTranscriptionPrivacyDisclosure(contentEl) {
-  new import_obsidian14.Setting(contentEl).setClass("ddc_ink_setting").setClass("ddc_ink_almostuseful-processing-data-setting").setName("Processing your data").setDesc(handwritingTranscriptionProcessingDataSettingDesc());
+  new import_obsidian15.Setting(contentEl).setClass("ddc_ink_setting").setClass("ddc_ink_almostuseful-processing-data-setting").setName("Processing your data").setDesc(handwritingTranscriptionProcessingDataSettingDesc());
 }
 function handwritingTranscriptionProcessingDataSettingDesc() {
   const frag = createFragment();
@@ -36394,9 +36454,7 @@ function handwritingTranscriptionProcessingDataSettingDesc() {
   descEl.createEl("strong").setText("Almost Useful");
   descEl.appendText("'s servers, then to ");
   descEl.createEl("strong").setText("OpenRouter");
-  descEl.appendText(", which passes it to ");
-  descEl.createEl("strong").setText("Google's Gemini");
-  descEl.appendText(" model to read it. The transcript is returned to your app via the same route and stored in the SVG file as metadata and in all Markdown notes it is embedded in.");
+  descEl.appendText(", which passes it to the AI model provider to read it. The transcript is returned to your app via the same route and stored in the SVG file as metadata and in all Markdown notes it is embedded in.");
   const retentionEl = descEl.createSpan({ cls: "ddc_ink_almostuseful-processing-data-retention" });
   retentionEl.createEl("strong").setText("Almost Useful does not store the SVG or transcript");
   retentionEl.appendText(" on its servers after processing.");
@@ -36442,7 +36500,7 @@ function insertTranscriptionQueueSection(contentEl) {
       const rowEl = listEl.createDiv("ddc_ink_almostuseful-transcription-queue-row");
       if (queueItem.isProcessing) {
         const spinnerEl = rowEl.createSpan("ddc_ink_almostuseful-transcription-queue-spinner");
-        (0, import_obsidian14.setIcon)(spinnerEl, "loader-2");
+        (0, import_obsidian15.setIcon)(spinnerEl, "loader-2");
       }
       const labelEl = rowEl.createSpan("ddc_ink_almostuseful-transcription-queue-label");
       const fileName = queueItem.filePath.split("/").pop() ?? queueItem.filePath;
@@ -36453,7 +36511,7 @@ function insertTranscriptionQueueSection(contentEl) {
         type: "button",
         attr: { "aria-label": `Remove ${fileName} from transcription queue` }
       });
-      (0, import_obsidian14.setIcon)(removeButtonEl, "cross");
+      (0, import_obsidian15.setIcon)(removeButtonEl, "cross");
       removeButtonEl.addEventListener("click", (event) => {
         event.stopPropagation();
         removeHandwritingTranscriptionFromQueue(queueItem.filePath);
@@ -36462,17 +36520,6 @@ function insertTranscriptionQueueSection(contentEl) {
   };
   paintQueueList();
   transcriptionQueueUnsubscribe = subscribeHandwritingTranscriptionQueueChanged(paintQueueList);
-}
-function decorateAlmostUsefulLinkAccountButton(button) {
-  button.setCta();
-  button.buttonEl.addClass("ddc_ink_almostuseful-link-account-btn");
-  button.buttonEl.empty();
-  const iconEl = button.buttonEl.createSpan({ cls: "ddc_ink_almostuseful-link-account-btn-icon" });
-  (0, import_obsidian14.setIcon)(iconEl, "ddc_ink_link_account_user");
-  button.buttonEl.createSpan({
-    cls: "ddc_ink_almostuseful-link-account-btn-label",
-    text: "Link account"
-  });
 }
 function setAlmostUsefulLinkAccountButtonBusy(button, isBusy) {
   button.setDisabled(isBusy);
@@ -36565,7 +36612,7 @@ function insertDeviceSignInCodeCard(contentEl, initialPending, onRerender) {
         copyButtonEl.setText("Copy code");
       }, COPIED_LABEL_DURATION_MS);
     }, () => {
-      new import_obsidian14.Notice("Could not copy the code. Type it on the website instead.");
+      new import_obsidian15.Notice("Could not copy the code. Type it on the website instead.");
     });
   });
   openWebsiteButtonEl.addEventListener("click", () => {
@@ -36585,7 +36632,7 @@ function insertDeviceSignInCodeCard(contentEl, initialPending, onRerender) {
         onRerender();
       },
       onError: (message) => {
-        new import_obsidian14.Notice(message);
+        new import_obsidian15.Notice(message);
       }
     });
   };
@@ -36602,7 +36649,7 @@ function insertDeviceSignInCodeCard(contentEl, initialPending, onRerender) {
       renewEl.disabled = false;
       renewEl.removeClass("is-busy");
       if (!result.ok) {
-        new import_obsidian14.Notice(result.error);
+        new import_obsidian15.Notice(result.error);
         return;
       }
       displayedPending = result.pending;
@@ -36615,7 +36662,7 @@ function insertDeviceSignInCodeCard(contentEl, initialPending, onRerender) {
       isRenewing = false;
       renewEl.disabled = false;
       renewEl.removeClass("is-busy");
-      new import_obsidian14.Notice("Could not start Almost Useful sign-in. Try again.");
+      new import_obsidian15.Notice("Could not start Almost Useful sign-in. Try again.");
     });
   });
   cancelButtonEl.addEventListener("click", () => {
@@ -36634,7 +36681,7 @@ async function loadUsageInto(hostEl, session, portalOrigin) {
   refreshButtonEl.type = "button";
   refreshButtonEl.className = "clickable-icon ddc_ink_almostuseful-refresh";
   refreshButtonEl.setAttribute("aria-label", "Refresh credit usage");
-  (0, import_obsidian14.setIcon)(refreshButtonEl, "refresh-cw");
+  (0, import_obsidian15.setIcon)(refreshButtonEl, "refresh-cw");
   const chartsHostEl = hostEl.createDiv("ddc_ink_almostuseful-usage-charts");
   const cachedPools = readAlmostUsefulUsageCache(session.userId);
   let paintedPools = cachedPools ?? [];
@@ -36650,7 +36697,7 @@ async function loadUsageInto(hostEl, session, portalOrigin) {
       chartsHostEl.createEl("p", {
         text: "No subscription activated"
       });
-      new import_obsidian14.Setting(chartsHostEl).setClass("ddc_ink_bare-setting").setClass("ddc_ink_bare-setting--left").addButton((button) => {
+      new import_obsidian15.Setting(chartsHostEl).setClass("ddc_ink_bare-setting").setClass("ddc_ink_bare-setting--left").addButton((button) => {
         button.setButtonText("Open products").setCta();
         button.onClick(() => {
           openAlmostUsefulBrowserUrl(`${portalOrigin}/account/products`);
@@ -36709,7 +36756,7 @@ function openInkSettingsTab(plugin) {
   setting.open();
   setting.openTabById(plugin.manifest.id);
 }
-var MySettingsTab = class extends import_obsidian15.PluginSettingTab {
+var MySettingsTab = class extends import_obsidian16.PluginSettingTab {
   constructor(app, plugin) {
     super(app, plugin);
     this.legacyMigrateScanGeneration = 0;
@@ -36741,6 +36788,7 @@ var MySettingsTab = class extends import_obsidian15.PluginSettingTab {
     let writingSectionEl;
     let drawingSectionEl;
     let booxCompanionToggle;
+    let highContrastUserInterfaceToggle;
     let fingerDrawingToggle;
     let stylusSideButtonTemporaryEraseToggle;
     insertHighLevelSettings(containerEl, this.plugin, (show) => {
@@ -36755,6 +36803,8 @@ var MySettingsTab = class extends import_obsidian15.PluginSettingTab {
         drawingSectionEl.classList.remove("ddc_ink_expanded");
     }, (toggle) => {
       fingerDrawingToggle = toggle;
+    }, (toggle) => {
+      highContrastUserInterfaceToggle = toggle;
     });
     insertTldrawSvgMigrateSection(containerEl, this.plugin);
     containerEl.createEl("hr");
@@ -36773,11 +36823,12 @@ var MySettingsTab = class extends import_obsidian15.PluginSettingTab {
         strokeInputToggles[1].setDesc(strokeInputTreatAsSettingDesc("inkDrawing"));
       }
       booxCompanionToggle?.setValue(getBooxConnectionEnabled());
+      highContrastUserInterfaceToggle?.setValue(getHighContrastUserInterface());
       fingerDrawingToggle?.setValue(getFingerDrawingEnabled());
       stylusSideButtonTemporaryEraseToggle?.setValue(getStylusSideButtonTemporaryEraseEnabled());
     });
     insertFileOrganisationSection(containerEl, this.plugin);
-    new import_obsidian15.Setting(containerEl).setClass("ddc_ink_bare-setting").addButton((button) => {
+    new import_obsidian16.Setting(containerEl).setClass("ddc_ink_bare-setting").addButton((button) => {
       button.setButtonText("Reset settings\u2026");
       button.onClick(() => {
         new ConfirmationModal({
@@ -36828,7 +36879,7 @@ function insertGettingStartedSection(containerEl, plugin) {
   if (isExpanded)
     wrapperEl.classList.add("ddc_ink_expanded");
   const sectionEl = wrapperEl.createDiv("ddc_ink_controls-section");
-  const headerSetting = new import_obsidian15.Setting(sectionEl).setClass("ddc_ink_controls-header").setClass("ddc_ink_controls-header--clickable").setName("Getting started").setDesc("Tips for using Ink, compatibility with other processes, and migrating from older versions.");
+  const headerSetting = new import_obsidian16.Setting(sectionEl).setClass("ddc_ink_controls-header").setClass("ddc_ink_controls-header--clickable").setName("Getting started").setDesc("Tips for using Ink, compatibility with other processes, and migrating from older versions.");
   const arrowEl = headerSetting.settingEl.createSpan("ddc_ink_collapse-arrow");
   arrowEl.setText("\u203A");
   if (isExpanded)
@@ -36858,7 +36909,7 @@ function insertGettingStartedSection(containerEl, plugin) {
   tipsGridEl.createDiv("ddc_ink_tips-desc").setText(`Hold cmd/ctrl to switch to eraser temporarily.`);
   tipsGridEl.createDiv("ddc_ink_tips-label").setText("Obsidian Sync");
   tipsGridEl.createDiv("ddc_ink_tips-desc").setText(`If using "Obsidian Sync", turn on "sync all other types" in the Obsidian Sync settings.`);
-  new import_obsidian15.Setting(contentEl).setClass("ddc_ink_bare-setting").setClass("ddc_ink_bare-setting--no-bottom-margin").addButton((btn) => {
+  new import_obsidian16.Setting(contentEl).setClass("ddc_ink_bare-setting").setClass("ddc_ink_bare-setting--no-bottom-margin").addButton((btn) => {
     btn.setButtonText("View recent changes");
     btn.onClick(() => showRecentChanges(plugin));
   }).addButton((btn) => {
@@ -36879,7 +36930,7 @@ function insertMigrateSection(containerEl, plugin, onPermanentMigrationFinished)
     cls: "ddc_ink_legacy-migrate-card-desc",
     text: "This version of Ink uses a new SVG format. Migrate legacy .writing/.drawing files and older Ink SVG files still on the previous format to unlock newer features."
   });
-  new import_obsidian15.Setting(cardEl).setClass("ddc_ink_bare-setting").setClass("ddc_ink_bare-setting--left").setClass("ddc_ink_legacy-migrate-card-action").addButton((button) => {
+  new import_obsidian16.Setting(cardEl).setClass("ddc_ink_bare-setting").setClass("ddc_ink_bare-setting--left").setClass("ddc_ink_legacy-migrate-card-action").addButton((button) => {
     button.setCta();
     button.setButtonText("Show migration options\u2026");
     button.onClick(() => plugin.openMigrationModal(onPermanentMigrationFinished));
@@ -36887,7 +36938,7 @@ function insertMigrateSection(containerEl, plugin, onPermanentMigrationFinished)
   return wrapperEl;
 }
 function insertTldrawSvgMigrateSection(containerEl, plugin) {
-  new import_obsidian15.Setting(containerEl).setClass("ddc_ink_setting").setName("Developer: Migrate tldraw SVG to ink-canvas").setDesc("Bulk-convert v2 SVG files still on <tldraw> metadata (referenced by embeds) to ink-canvas in place. Drawing embed viewBox is refit to stroke bounds.").addButton((button) => {
+  new import_obsidian16.Setting(containerEl).setClass("ddc_ink_setting").setName("Developer: Migrate tldraw SVG to ink-canvas").setDesc("Bulk-convert v2 SVG files still on <tldraw> metadata (referenced by embeds) to ink-canvas in place. Drawing embed viewBox is refit to stroke bounds.").addButton((button) => {
     button.setButtonText("Migrate tldraw SVGs\u2026");
     button.onClick(() => plugin.openTldrawSvgMigrationModal());
   });
@@ -36895,7 +36946,7 @@ function insertTldrawSvgMigrateSection(containerEl, plugin) {
 function insertPluginDevelopmentSection(containerEl) {
   const wrapperEl = containerEl.createDiv("ddc_ink_section");
   const sectionEl = wrapperEl.createDiv("ddc_ink_controls-section");
-  new import_obsidian15.Setting(sectionEl).setClass("ddc_ink_controls-header").setName("Plugin development").setDesc("For information on this plugin's development, visit the links below.");
+  new import_obsidian16.Setting(sectionEl).setClass("ddc_ink_controls-header").setName("Plugin development").setDesc("For information on this plugin's development, visit the links below.");
   const contentEl = sectionEl.createDiv("ddc_ink_controls-content");
   const tipsGridEl = contentEl.createDiv("ddc_ink_tips-grid");
   const addLinkRow = (parent, href, label, description) => {
@@ -36910,8 +36961,8 @@ function insertPluginDevelopmentSection(containerEl) {
   addLinkRow(tipsGridEl, "https://youtu.be/plrnx7J_Avc", "View feature demos", "Short videos demonstrating Ink's features.");
   addLinkRow(tipsGridEl, "https://github.com/daledesilva/obsidian_ink/issues", "Request feature / Report bug", "Submit feature requests, report bugs, or join the discussion.");
 }
-function insertHighLevelSettings(containerEl, plugin, onToggleWriting, onToggleDrawing, onFingerDrawingToggleReady) {
-  new import_obsidian15.Setting(containerEl).setClass("ddc_ink_setting").setName("Enable writing").setDesc("If disabled, you will not be able to add new writing embeds and those already embedded will appear as raw code. Existing writing files will be hidden in Obsidian but still exist on disk. Changing this setting will require a restart of Obsidian to take effect.").addToggle((toggle) => {
+function insertHighLevelSettings(containerEl, plugin, onToggleWriting, onToggleDrawing, onFingerDrawingToggleReady, onHighContrastUserInterfaceReady) {
+  new import_obsidian16.Setting(containerEl).setClass("ddc_ink_setting").setName("Enable writing").setDesc("If disabled, you will not be able to add new writing embeds and those already embedded will appear as raw code. Existing writing files will be hidden in Obsidian but still exist on disk. Changing this setting will require a restart of Obsidian to take effect.").addToggle((toggle) => {
     toggle.setValue(plugin.settings.writingEnabled);
     toggle.onChange(async (value) => {
       plugin.settings.writingEnabled = value;
@@ -36919,7 +36970,7 @@ function insertHighLevelSettings(containerEl, plugin, onToggleWriting, onToggleD
       onToggleWriting(value);
     });
   });
-  new import_obsidian15.Setting(containerEl).setClass("ddc_ink_setting").setName("Enable drawing").setDesc("If disabled, you will not be able to add new drawing embeds and those already embedded will appear as raw code. Existing drawing files will be hidden in Obsidian but still exist on disk. Changing this setting will require a restart of Obsidian to take effect.").addToggle((toggle) => {
+  new import_obsidian16.Setting(containerEl).setClass("ddc_ink_setting").setName("Enable drawing").setDesc("If disabled, you will not be able to add new drawing embeds and those already embedded will appear as raw code. Existing drawing files will be hidden in Obsidian but still exist on disk. Changing this setting will require a restart of Obsidian to take effect.").addToggle((toggle) => {
     toggle.setValue(plugin.settings.drawingEnabled);
     toggle.onChange(async (value) => {
       plugin.settings.drawingEnabled = value;
@@ -36927,23 +36978,31 @@ function insertHighLevelSettings(containerEl, plugin, onToggleWriting, onToggleD
       onToggleDrawing(value);
     });
   });
-  new import_obsidian15.Setting(containerEl).setClass("ddc_ink_setting").setName("Enable finger drawing").setDesc("Shows a toolbar toggle while editing so you can draw with your finger on touch devices. When off, fingers scroll the note as usual.").addToggle((toggle) => {
+  new import_obsidian16.Setting(containerEl).setClass("ddc_ink_setting").setName("Enable finger drawing").setDesc("Shows a toolbar toggle while editing so you can draw with your finger on touch devices. When off, fingers scroll the note as usual.").addToggle((toggle) => {
     toggle.setValue(getFingerDrawingEnabled());
     onFingerDrawingToggleReady?.(toggle);
     toggle.onChange((value) => {
       setFingerDrawingEnabled(value);
     });
   });
-  new TwoWayToggleSetting(containerEl).setName("Dominant hand").setDesc("Which side undo/redo and extend controls appear on while editing.").setOptionPair("right", "Right", "left", "Left").setValue(plugin.settings.dominantHand).onChange(async (value) => {
+  new TwoWayToggleSetting(containerEl).setName("Dominant hand").setDesc("Which side undo/redo and extend controls appear on while editing.").setOptionPair("left", "Left", "right", "Right").setValue(plugin.settings.dominantHand).onChange(async (value) => {
     plugin.settings.dominantHand = value;
     setDominantHand(value);
     await plugin.saveSettings();
+  });
+  new import_obsidian16.Setting(containerEl).setClass("ddc_ink_setting").setName("High contrast user interface").setDesc("Uses high-contrast borders and controls across Ink embeds and editors \u2014 suited to e-ink and grayscale displays.").addToggle((toggle) => {
+    toggle.setValue(getHighContrastUserInterface());
+    onHighContrastUserInterfaceReady?.(toggle);
+    toggle.onChange((value) => {
+      setHighContrastUserInterface(value);
+      applyHighContrastUserInterfaceBodyClass();
+    });
   });
 }
 function insertExperimentalChangesSection(containerEl, plugin, onBooxToggleReady, onStylusSideButtonTemporaryEraseReady) {
   const wrapperEl = containerEl.createDiv("ddc_ink_section-wrapper");
   const controlsEl = wrapperEl.createDiv("ddc_ink_controls-section");
-  const headerSetting = new import_obsidian15.Setting(controlsEl).setClass("ddc_ink_controls-header").setClass("ddc_ink_controls-header--clickable").setName("Experimental changes").setDesc("Features under active testing. They may not work on all devices and might be removed or changed in the next release. Expand for details.");
+  const headerSetting = new import_obsidian16.Setting(controlsEl).setClass("ddc_ink_controls-header").setClass("ddc_ink_controls-header--clickable").setName("Experimental changes").setDesc("Features under active testing. They may not work on all devices and might be removed or changed in the next release. Expand for details.");
   const arrowEl = headerSetting.settingEl.createSpan("ddc_ink_collapse-arrow");
   arrowEl.setText("\u203A");
   headerSetting.settingEl.addEventListener("click", () => {
@@ -36951,7 +37010,7 @@ function insertExperimentalChangesSection(containerEl, plugin, onBooxToggleReady
     arrowEl.classList.toggle("ddc_ink_expanded", expanded);
   });
   const contentEl = controlsEl.createDiv("ddc_ink_controls-content");
-  new import_obsidian15.Setting(contentEl).setClass("ddc_ink_setting").setName("Enable Boox companion app").setDesc("Connects to the Boox companion app for passing through smoother pen strokes on supported tablets.").addToggle((toggle) => {
+  new import_obsidian16.Setting(contentEl).setClass("ddc_ink_setting").setName("Enable Boox companion app").setDesc("Connects to the Boox companion app for passing through smoother pen strokes on supported tablets.").addToggle((toggle) => {
     toggle.setValue(getBooxConnectionEnabled());
     onBooxToggleReady?.(toggle);
     toggle.onChange((value) => {
@@ -36959,7 +37018,7 @@ function insertExperimentalChangesSection(containerEl, plugin, onBooxToggleReady
       plugin.booxConnection.onSettingsChanged();
     });
   });
-  new import_obsidian15.Setting(contentEl).setClass("ddc_ink_setting").setName("Side button temporary eraser").setDesc("While held, the pen barrel button (button 2) erases instead of panning. May conflict with right-click pan on some setups.").addToggle((toggle) => {
+  new import_obsidian16.Setting(contentEl).setClass("ddc_ink_setting").setName("Side button temporary eraser").setDesc("While held, the pen barrel button (button 2) erases instead of panning. May conflict with right-click pan on some setups.").addToggle((toggle) => {
     toggle.setValue(getStylusSideButtonTemporaryEraseEnabled());
     onStylusSideButtonTemporaryEraseReady?.(toggle);
     toggle.onChange((value) => {
@@ -36994,7 +37053,7 @@ function insertFileOrganisationSection(containerEl, plugin) {
       activeBtn.setCta();
       activeBtn.setDisabled(true);
     };
-    new import_obsidian15.Setting(container).setClass("ddc_ink_button-set").setName(`Where should Ink files be saved when created in a note?`).addButton((button) => {
+    new import_obsidian16.Setting(container).setClass("ddc_ink_button-set").setName(`Where should Ink files be saved when created in a note?`).addButton((button) => {
       obsidianBtn = button;
       button.setButtonText("Obsidian attachment folder");
       button.setClass("ddc_ink_left-most");
@@ -37034,7 +37093,7 @@ function insertFileOrganisationSection(containerEl, plugin) {
         setActiveLocationButton("note");
       });
     });
-    let inputSettingEl = new import_obsidian15.Setting(container).setClass("ddc_ink_setting").setName("Writing files subfolder").addText((textItem) => {
+    let inputSettingEl = new import_obsidian16.Setting(container).setClass("ddc_ink_setting").setName("Writing files subfolder").addText((textItem) => {
       textItem.setValue(plugin.settings.writingSubfolder.toString());
       textItem.setPlaceholder(DEFAULT_SETTINGS.writingSubfolder.toString());
       textItem.inputEl.addEventListener("blur", (_ev) => {
@@ -37046,7 +37105,7 @@ function insertFileOrganisationSection(containerEl, plugin) {
       });
     });
     inputSettingEl.settingEl.classList.add("ddc_ink_input-medium");
-    inputSettingEl = new import_obsidian15.Setting(container).setClass("ddc_ink_setting").setName("Drawing files subfolder").addText((textItem) => {
+    inputSettingEl = new import_obsidian16.Setting(container).setClass("ddc_ink_setting").setName("Drawing files subfolder").addText((textItem) => {
       textItem.setValue(plugin.settings.drawingSubfolder.toString());
       textItem.setPlaceholder(DEFAULT_SETTINGS.drawingSubfolder.toString());
       textItem.inputEl.addEventListener("blur", (_ev) => {
@@ -37108,24 +37167,24 @@ function insertStrokeInputTreatAsSetting(contentEl, editorKind) {
 function insertDrawingSettings(containerEl, plugin, strokeInputToggles) {
   const wrapperEl = containerEl.createDiv("ddc_ink_section-wrapper");
   const sectionEl = wrapperEl.createDiv("ddc_ink_controls-section");
-  new import_obsidian15.Setting(sectionEl).setClass("ddc_ink_controls-header").setName("Drawing").setDesc(`While editing a Markdown file, run the action 'insert new hand drawn section' to embed a drawing canvas.`);
+  new import_obsidian16.Setting(sectionEl).setClass("ddc_ink_controls-header").setName("Drawing").setDesc(`While editing a Markdown file, run the action 'insert new hand drawn section' to embed a drawing canvas.`);
   const contentEl = sectionEl.createDiv("ddc_ink_controls-content");
   strokeInputToggles.push(insertStrokeInputTreatAsSetting(contentEl, "inkDrawing"));
-  new import_obsidian15.Setting(contentEl).setClass("ddc_ink_setting").setName("Show grid in new drawings").addToggle((toggle) => {
+  new import_obsidian16.Setting(contentEl).setClass("ddc_ink_setting").setName("Show grid in new drawings").addToggle((toggle) => {
     toggle.setValue(plugin.settings.drawingGridEnabledByDefault);
     toggle.onChange(async (value) => {
       plugin.settings.drawingGridEnabledByDefault = value;
       await plugin.saveSettings();
     });
   });
-  new import_obsidian15.Setting(contentEl).setClass("ddc_ink_setting").setName("Show frame around drawing when not editing").addToggle((toggle) => {
+  new import_obsidian16.Setting(contentEl).setClass("ddc_ink_setting").setName("Show frame around drawing when not editing").addToggle((toggle) => {
     toggle.setValue(plugin.settings.drawingFrameWhenLocked);
     toggle.onChange(async (value) => {
       plugin.settings.drawingFrameWhenLocked = value;
       await plugin.saveSettings();
     });
   });
-  new import_obsidian15.Setting(contentEl).setClass("ddc_ink_setting").setName("Show background when not editing").addToggle((toggle) => {
+  new import_obsidian16.Setting(contentEl).setClass("ddc_ink_setting").setName("Show background when not editing").addToggle((toggle) => {
     toggle.setValue(plugin.settings.drawingBackgroundWhenLocked);
     toggle.onChange(async (value) => {
       plugin.settings.drawingBackgroundWhenLocked = value;
@@ -37134,7 +37193,7 @@ function insertDrawingSettings(containerEl, plugin, strokeInputToggles) {
   });
   let setDrawingThresholdVisible = (_visible) => {
   };
-  new import_obsidian15.Setting(contentEl).setClass("ddc_ink_setting").setName("Automatically transcribe drawings").setDesc(autoTranscribeOnCloseSettingDesc("inkDrawing")).addToggle((toggle) => {
+  new import_obsidian16.Setting(contentEl).setClass("ddc_ink_setting").setName("Automatically transcribe drawings").setDesc(autoTranscribeOnCloseSettingDesc("inkDrawing")).addToggle((toggle) => {
     toggle.setValue(plugin.settings.drawingAutoTranscribeOnClose);
     toggle.onChange(async (value) => {
       plugin.settings.drawingAutoTranscribeOnClose = value;
@@ -37166,24 +37225,24 @@ function insertWritingSettings(containerEl, plugin, strokeInputToggles) {
   };
   const wrapperEl = containerEl.createDiv("ddc_ink_section-wrapper");
   const sectionEl = wrapperEl.createDiv("ddc_ink_controls-section");
-  new import_obsidian15.Setting(sectionEl).setClass("ddc_ink_controls-header").setName("Writing").setDesc(`While editing a Markdown file, run the action 'new handwriting section' to embed a section for writing with a pen.`);
+  new import_obsidian16.Setting(sectionEl).setClass("ddc_ink_controls-header").setName("Writing").setDesc(`While editing a Markdown file, run the action 'new handwriting section' to embed a section for writing with a pen.`);
   const contentEl = sectionEl.createDiv("ddc_ink_controls-content");
   strokeInputToggles.push(insertStrokeInputTreatAsSetting(contentEl, "inkWriting"));
-  new import_obsidian15.Setting(contentEl).setClass("ddc_ink_setting").setName("Show ruled lines when not editing").addToggle((toggle) => {
+  new import_obsidian16.Setting(contentEl).setClass("ddc_ink_setting").setName("Show ruled lines when not editing").addToggle((toggle) => {
     toggle.setValue(plugin.settings.writingLinesWhenLocked);
     toggle.onChange(async (value) => {
       plugin.settings.writingLinesWhenLocked = value;
       await plugin.saveSettings();
     });
   });
-  new import_obsidian15.Setting(contentEl).setClass("ddc_ink_setting").setName("Show background when not editing").addToggle((toggle) => {
+  new import_obsidian16.Setting(contentEl).setClass("ddc_ink_setting").setName("Show background when not editing").addToggle((toggle) => {
     toggle.setValue(plugin.settings.writingBackgroundWhenLocked);
     toggle.onChange(async (value) => {
       plugin.settings.writingBackgroundWhenLocked = value;
       await plugin.saveSettings();
     });
   });
-  new import_obsidian15.Setting(contentEl).setClass("ddc_ink_setting").setName("Line height").setDesc(`Height in pixels of each ruled line. Only affects new writing embeds.`).addSlider((slider) => {
+  new import_obsidian16.Setting(contentEl).setClass("ddc_ink_setting").setName("Line height").setDesc(`Height in pixels of each ruled line. Only affects new writing embeds.`).addSlider((slider) => {
     lineHeightSliderComponent = slider;
     const currentValue = plugin.settings.writingLineHeight ?? DEFAULT_SETTINGS.writingLineHeight;
     slider.setLimits(50, 400, 10).setValue(currentValue);
@@ -37211,7 +37270,7 @@ function insertWritingSettings(containerEl, plugin, strokeInputToggles) {
       }
     });
   });
-  new import_obsidian15.Setting(contentEl).setClass("ddc_ink_setting").setName("Buffer lines when editing").setDesc(`Number of empty lines shown below your writing while editing. Writing reaches the last line before the embed extends in height.`).addText((textItem) => {
+  new import_obsidian16.Setting(contentEl).setClass("ddc_ink_setting").setName("Buffer lines when editing").setDesc(`Number of empty lines shown below your writing while editing. Writing reaches the last line before the embed extends in height.`).addText((textItem) => {
     textItem.setValue(plugin.settings.writingBufferLines.toString());
     textItem.setPlaceholder(DEFAULT_SETTINGS.writingBufferLines.toString());
     textItem.inputEl.addEventListener("blur", () => {
@@ -37224,7 +37283,7 @@ function insertWritingSettings(containerEl, plugin, strokeInputToggles) {
   });
   let setWritingThresholdVisible = (_visible) => {
   };
-  new import_obsidian15.Setting(contentEl).setClass("ddc_ink_setting").setName("Automatically transcribe writing").setDesc(autoTranscribeOnCloseSettingDesc("inkWriting")).addToggle((toggle) => {
+  new import_obsidian16.Setting(contentEl).setClass("ddc_ink_setting").setName("Automatically transcribe writing").setDesc(autoTranscribeOnCloseSettingDesc("inkWriting")).addToggle((toggle) => {
     toggle.setValue(plugin.settings.writingAutoTranscribeOnClose);
     toggle.onChange(async (value) => {
       plugin.settings.writingAutoTranscribeOnClose = value;
@@ -37244,7 +37303,7 @@ function insertWritingLimitations(containerEl) {
 function insertPrereleaseWarning(containerEl, plugin) {
   const wrapperEl = containerEl.createDiv("ddc_ink_section-wrapper");
   const controlsEl = wrapperEl.createDiv("ddc_ink_controls-section");
-  const headerSetting = new import_obsidian15.Setting(controlsEl).setClass("ddc_ink_controls-header").setClass("ddc_ink_controls-header--clickable").setName("This plugin is in beta").setDesc("Always back up your files. Expand for details.");
+  const headerSetting = new import_obsidian16.Setting(controlsEl).setClass("ddc_ink_controls-header").setClass("ddc_ink_controls-header--clickable").setName("This plugin is in beta").setDesc("Always back up your files. Expand for details.");
   const arrowEl = headerSetting.settingEl.createSpan("ddc_ink_collapse-arrow");
   arrowEl.setText("\u203A");
   headerSetting.settingEl.addEventListener("click", () => {
@@ -37253,7 +37312,7 @@ function insertPrereleaseWarning(containerEl, plugin) {
   });
   const contentEl = controlsEl.createDiv("ddc_ink_controls-content");
   contentEl.createEl("p", { text: `Beta means the plugin is still evolving. Changes to embed formats and file-handling features, even when thoroughly tested, may occasionally introduce issues that affect your vault. Always keep backups of your data.` });
-  new import_obsidian15.Setting(contentEl).setClass("ddc_ink_setting").setName("Enable debug logging").setDesc("When enabled, debug information is written to an ink-debug.md file in your vault root. This includes writing and drawing activity, so do not enable this unless you are actively troubleshooting a bug to provide logs for a bug report. Disable it again once you're done.").addToggle((toggle) => {
+  new import_obsidian16.Setting(contentEl).setClass("ddc_ink_setting").setName("Enable debug logging").setDesc("When enabled, debug information is written to an ink-debug.md file in your vault root. This includes writing and drawing activity, so do not enable this unless you are actively troubleshooting a bug to provide logs for a bug report. Disable it again once you're done.").addToggle((toggle) => {
     toggle.setValue(plugin.settings.debugLoggingEnabled);
     toggle.onChange(async (value) => {
       plugin.settings.debugLoggingEnabled = value;
@@ -37264,7 +37323,7 @@ function insertPrereleaseWarning(containerEl, plugin) {
 function insertAutoTranscribeChangeThresholdSetting(containerEl, plugin, fileType, isAutoEnabled) {
   const settingsKey = fileType === "inkWriting" ? "writingAutoTranscribeChangeThresholdPercent" : "drawingAutoTranscribeChangeThresholdPercent";
   let percentTextComponent;
-  const thresholdSetting = new import_obsidian15.Setting(containerEl).setClass("ddc_ink_setting").setName("Re-transcribe when ink file changes significantly").setDesc("0% always transcribes on close or sync; 95% only when ink is almost entirely different. Manual triggered  transcriptions ignore this.").addSlider((slider) => {
+  const thresholdSetting = new import_obsidian16.Setting(containerEl).setClass("ddc_ink_setting").setName("Re-transcribe when ink file changes significantly").setDesc("0% always transcribes on close or sync; 95% only when ink is almost entirely different. Manual triggered  transcriptions ignore this.").addSlider((slider) => {
     const currentValue = clampAutoTranscribeChangeThresholdPercent(plugin.settings[settingsKey]);
     slider.setLimits(0, AUTO_TRANSCRIBE_CHANGE_THRESHOLD_MAX_PERCENT, 1).setValue(currentValue);
     slider.sliderEl.addEventListener("input", () => {
@@ -37291,8 +37350,8 @@ function insertAutoTranscribeChangeThresholdSetting(containerEl, plugin, fileTyp
 }
 
 // src/components/formats/v1-code-blocks/drawing/widgets/writing-embed-widget.tsx
-var import_obsidian43 = require("obsidian");
-var React122 = __toESM(require_react());
+var import_obsidian42 = require("obsidian");
+var React127 = __toESM(require_react());
 var import_client6 = __toESM(require_client());
 
 // src/logic/utils/embed.ts
@@ -37367,8 +37426,8 @@ var buildFileStr_v1 = (pageData) => {
 };
 
 // src/components/formats/v1-code-blocks/writing/writing-embed-editor/writing-embed.tsx
-var React121 = __toESM(require_react());
-var import_react142 = __toESM(require_react());
+var React126 = __toESM(require_react());
+var import_react143 = __toESM(require_react());
 
 // node_modules/@tldraw/editor/dist-esm/index.mjs
 var import_at = __toESM(require_at2(), 1);
@@ -93087,7 +93146,7 @@ var tldrawFileValidator = validation_exports.object({
 });
 
 // src/components/formats/v1-code-blocks/writing/tldraw-writing-editor/tldraw-writing-editor.tsx
-var import_react141 = __toESM(require_react());
+var import_react142 = __toESM(require_react());
 
 // src/components/formats/v1-code-blocks/utils/tldraw-helpers.ts
 var import_react120 = __toESM(require_react());
@@ -93745,9 +93804,11 @@ var ExpandIcon = (props) => /* @__PURE__ */ React75.createElement("svg", {
   viewBox: "0 -960 960 960",
   width: 24,
   ...props
+}, /* @__PURE__ */ React75.createElement("g", {
+  transform: "rotate(-90 480 -480)"
 }, /* @__PURE__ */ React75.createElement("path", {
-  d: "M200-200v-240h80v160h160v80H200Zm480-320v-160H520v-80h240v240h-80Z"
-}));
+  d: "M280-280h120q17 0 28.5 11.5T440-240q0 17-11.5 28.5T400-200H240q-17 0-28.5-11.5T200-240v-160q0-17 11.5-28.5T240-440q17 0 28.5 11.5T280-400v120Zm400-400H560q-17 0-28.5-11.5T520-720q0-17 11.5-28.5T560-760h160q17 0 28.5 11.5T760-720v160q0 17-11.5 28.5T720-520q-17 0-28.5-11.5T680-560v-120Z"
+})));
 
 // src/components/jsx-components/writing-menu/writing-menu.tsx
 var import_classnames30 = __toESM(require_classnames());
@@ -94099,6 +94160,7 @@ var TooltipButton = ({
     placement: "top"
   }, /* @__PURE__ */ React77.createElement("button", {
     className,
+    "aria-label": tooltip,
     disabled,
     onPointerEnter: handlePointerEnter,
     onMouseDown,
@@ -94170,7 +94232,7 @@ var WritingMenu = (props) => {
 };
 
 // src/components/formats/v1-code-blocks/writing/tldraw-writing-editor/tldraw-writing-editor.tsx
-var React119 = __toESM(require_react());
+var React124 = __toESM(require_react());
 
 // src/components/formats/v1-code-blocks/utils/build-file-data.ts
 var buildWritingFileData_v1 = (props) => {
@@ -94292,7 +94354,7 @@ var OverflowIcon = (props) => /* @__PURE__ */ React81.createElement("svg", {
 }));
 
 // src/components/jsx-components/overflow-menu/show-menu-options.ts
-var import_obsidian16 = require("obsidian");
+var import_obsidian17 = require("obsidian");
 function isSeparator(option) {
   return "separator" in option && option.separator === true;
 }
@@ -94316,7 +94378,7 @@ function populateMenu(menu, options) {
   });
 }
 function buildMenuFromOptions(options) {
-  const menu = new import_obsidian16.Menu();
+  const menu = new import_obsidian17.Menu();
   populateMenu(menu, options);
   return menu;
 }
@@ -94446,25 +94508,25 @@ async function getInkFileData(file) {
 }
 
 // src/logic/utils/legacy-ink-notice.ts
-var import_obsidian42 = require("obsidian");
-
-// src/logic/utils/migrate-legacy-ink-on-open.ts
 var import_obsidian41 = require("obsidian");
 
-// src/components/formats/current/ink-embeds-extension/ink-embed-refresh.ts
+// src/logic/utils/migrate-legacy-ink-on-open.ts
 var import_obsidian40 = require("obsidian");
+
+// src/components/formats/current/ink-embeds-extension/ink-embed-refresh.ts
+var import_obsidian39 = require("obsidian");
 
 // src/components/formats/current/drawing/drawing-embed-extension/drawing-embed-extension.tsx
 var import_language = require("@codemirror/language");
 var import_state32 = require("@codemirror/state");
 var import_view2 = require("@codemirror/view");
-var import_obsidian38 = require("obsidian");
-var React116 = __toESM(require_react());
+var import_obsidian37 = require("obsidian");
+var React121 = __toESM(require_react());
 var import_client4 = __toESM(require_client());
 
 // src/components/formats/current/drawing/drawing-embed/drawing-embed.tsx
-var React115 = __toESM(require_react());
-var import_react140 = __toESM(require_react());
+var React120 = __toESM(require_react());
+var import_react141 = __toESM(require_react());
 
 // src/logic/device-settings/use-boox-connection-enabled.ts
 var import_react123 = __toESM(require_react());
@@ -94489,17 +94551,17 @@ function getFullPageWidth(childEl) {
 
 // src/components/formats/current/writing/writing-view/writing-view.tsx
 var import_obsidian30 = require("obsidian");
-var React106 = __toESM(require_react());
+var React112 = __toESM(require_react());
 var import_client2 = __toESM(require_client());
 
 // src/components/formats/current/writing/writing-editor/writing-editor.tsx
-var React105 = __toESM(require_react());
-var import_react138 = __toESM(require_react());
-var import_obsidian27 = require("obsidian");
+var React111 = __toESM(require_react());
+var import_react139 = __toESM(require_react());
+var import_obsidian28 = require("obsidian");
 var import_classnames37 = __toESM(require_classnames());
 
 // src/components/jsx-components/drawing-menu/ink-canvas-drawing-menu.tsx
-var React87 = __toESM(require_react());
+var React89 = __toESM(require_react());
 
 // src/graphics/icons/draw-icon.tsx
 var React85 = __toESM(require_react());
@@ -94513,9 +94575,23 @@ var DrawIcon = (props) => /* @__PURE__ */ React85.createElement("svg", {
   d: "M554-120q-54 0-91-37t-37-89q0-76 61.5-137.5T641-460q-3-36-18-54.5T582-533q-30 0-65 25t-83 82q-78 93-114.5 121T241-277q-51 0-86-38t-35-92q0-54 23.5-110.5T223-653q19-26 28-44t9-29q0-7-2.5-10.5T250-740q-5 0-12 3t-15 11q-15 14-34.5 15T155-724q-15-16-15.5-37.5T155-797q24-21 48-32t47-11q46 0 78 32t32 80q0 29-15 64t-50 84q-38 54-56.5 95T220-413q0 17 5.5 26.5T241-377q10 0 17.5-5.5T286-409q13-14 31-34.5t44-50.5q63-75 114-107t107-32q67 0 110 45t49 123h49q21 0 35.5 14.5T840-415q0 21-14.5 35.5T790-365h-49q-8 112-58.5 178.5T554-120Zm2-100q32 0 54-36.5T640-358q-46 11-80 43.5T526-250q0 14 8 22t22 8Z"
 }));
 
-// src/graphics/icons/pointer-icon.tsx
+// src/graphics/icons/close-fullscreen-icon.tsx
 var React86 = __toESM(require_react());
-var PointerIcon = (props) => /* @__PURE__ */ React86.createElement("svg", {
+var CloseFullscreenIcon = (props) => /* @__PURE__ */ React86.createElement("svg", {
+  xmlns: "http://www.w3.org/2000/svg",
+  height: 24,
+  viewBox: "0 -960 960 960",
+  width: 24,
+  ...props
+}, /* @__PURE__ */ React86.createElement("g", {
+  transform: "rotate(-90 480 -480)"
+}, /* @__PURE__ */ React86.createElement("path", {
+  d: "M360-360H240q-17 0-28.5-11.5T200-400q0-17 11.5-28.5T240-440h160q17 0 28.5 11.5T440-400v160q0 17-11.5 28.5T400-200q-17 0-28.5-11.5T360-240v-120Zm240-240h120q17 0 28.5 11.5T760-560q0 17-11.5 28.5T720-520H560q-17 0-28.5-11.5T520-560v-160q0-17 11.5-28.5T560-760q17 0 28.5 11.5T600-720v120Z"
+})));
+
+// src/graphics/icons/locate-icon.tsx
+var React87 = __toESM(require_react());
+var LocateIcon = (props) => /* @__PURE__ */ React87.createElement("svg", {
   xmlns: "http://www.w3.org/2000/svg",
   width: "1em",
   height: "1em",
@@ -94526,15 +94602,58 @@ var PointerIcon = (props) => /* @__PURE__ */ React86.createElement("svg", {
   strokeLinecap: "round",
   strokeLinejoin: "round",
   ...props
-}, /* @__PURE__ */ React86.createElement("path", {
+}, /* @__PURE__ */ React87.createElement("line", {
+  x1: "2",
+  x2: "5",
+  y1: "12",
+  y2: "12"
+}), /* @__PURE__ */ React87.createElement("line", {
+  x1: "19",
+  x2: "22",
+  y1: "12",
+  y2: "12"
+}), /* @__PURE__ */ React87.createElement("line", {
+  x1: "12",
+  x2: "12",
+  y1: "2",
+  y2: "5"
+}), /* @__PURE__ */ React87.createElement("line", {
+  x1: "12",
+  x2: "12",
+  y1: "19",
+  y2: "22"
+}), /* @__PURE__ */ React87.createElement("circle", {
+  cx: "12",
+  cy: "12",
+  r: "7"
+}), /* @__PURE__ */ React87.createElement("circle", {
+  cx: "12",
+  cy: "12",
+  r: "3"
+}));
+
+// src/graphics/icons/pointer-icon.tsx
+var React88 = __toESM(require_react());
+var PointerIcon = (props) => /* @__PURE__ */ React88.createElement("svg", {
+  xmlns: "http://www.w3.org/2000/svg",
+  width: "1em",
+  height: "1em",
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "2",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  ...props
+}, /* @__PURE__ */ React88.createElement("path", {
   d: "M22 14a8 8 0 0 1-8 8"
-}), /* @__PURE__ */ React86.createElement("path", {
+}), /* @__PURE__ */ React88.createElement("path", {
   d: "M18 11v-1a2 2 0 0 0-2-2a2 2 0 0 0-2 2"
-}), /* @__PURE__ */ React86.createElement("path", {
+}), /* @__PURE__ */ React88.createElement("path", {
   d: "M14 10V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1"
-}), /* @__PURE__ */ React86.createElement("path", {
+}), /* @__PURE__ */ React88.createElement("path", {
   d: "M10 9.5V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v10"
-}), /* @__PURE__ */ React86.createElement("path", {
+}), /* @__PURE__ */ React88.createElement("path", {
   d: "M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"
 }));
 
@@ -94547,9 +94666,9 @@ function inkToolToMenuTool(inkTool) {
     return "eraser" /* eraser */;
   return "draw" /* draw */;
 }
-var InkCanvasDrawingMenu = React87.forwardRef((props, ref) => {
-  const [curTool, setCurTool] = React87.useState("draw" /* draw */);
-  React87.useEffect(() => {
+var InkCanvasDrawingMenu = React89.forwardRef((props, ref) => {
+  const [curTool, setCurTool] = React89.useState("draw" /* draw */);
+  React89.useEffect(() => {
     let unsubscribe;
     let pollId;
     const trySubscribe = () => {
@@ -94599,54 +94718,68 @@ var InkCanvasDrawingMenu = React87.forwardRef((props, ref) => {
     setCurTool("eraser" /* eraser */);
     props.onActivateTool?.("erase");
   }
-  return /* @__PURE__ */ React87.createElement(React87.Fragment, null, /* @__PURE__ */ React87.createElement("div", {
+  const showEmbedFullScreen = Boolean(props.onExpandClick);
+  const showDedicatedFullScreen = Boolean(!props.onExpandClick && !props.isWorkspaceChromeHidden && props.onEnterWorkspaceChrome);
+  const showExitFullScreen = Boolean(!props.onExpandClick && props.isWorkspaceChromeHidden);
+  const showLocate = Boolean(!props.onExpandClick && !props.isWorkspaceChromeHidden && props.onLocateFile);
+  const showQuickMenu = Boolean(props.showFingerDrawingToggle || showEmbedFullScreen || showDedicatedFullScreen || showExitFullScreen || showLocate);
+  return /* @__PURE__ */ React89.createElement(React89.Fragment, null, /* @__PURE__ */ React89.createElement("div", {
     ref,
     className: (0, import_classnames32.default)([
       "ink_menu-bar",
       "ink_menu-bar_full"
     ])
-  }, (props.showFingerDrawingToggle || props.onExpandClick) && /* @__PURE__ */ React87.createElement("div", {
+  }, showQuickMenu && /* @__PURE__ */ React89.createElement("div", {
     className: "ink_quick-menu"
-  }, props.onExpandClick && /* @__PURE__ */ React87.createElement(TooltipButton, {
-    tooltip: "Open in full view",
+  }, showEmbedFullScreen && /* @__PURE__ */ React89.createElement(TooltipButton, {
+    tooltip: "Full screen",
     onClick: () => props.onExpandClick?.()
-  }, /* @__PURE__ */ React87.createElement(ExpandIcon, null)), props.showFingerDrawingToggle && /* @__PURE__ */ React87.createElement(TooltipButton, {
+  }, /* @__PURE__ */ React89.createElement(ExpandIcon, null)), showDedicatedFullScreen && /* @__PURE__ */ React89.createElement(TooltipButton, {
+    tooltip: "Full screen",
+    onClick: () => props.onEnterWorkspaceChrome?.()
+  }, /* @__PURE__ */ React89.createElement(ExpandIcon, null)), showLocate && /* @__PURE__ */ React89.createElement(TooltipButton, {
+    tooltip: "Locate",
+    onClick: () => props.onLocateFile?.()
+  }, /* @__PURE__ */ React89.createElement(LocateIcon, null)), showExitFullScreen && /* @__PURE__ */ React89.createElement(TooltipButton, {
+    tooltip: "Exit full screen",
+    onClick: () => props.onExitWorkspaceChrome?.()
+  }, /* @__PURE__ */ React89.createElement(CloseFullscreenIcon, null)), props.showFingerDrawingToggle && /* @__PURE__ */ React89.createElement(TooltipButton, {
     tooltip: props.isFingerDrawingActive ? "Enable drawing with finger" : "Disable drawing with finger",
     className: props.isFingerDrawingActive ? "ink_menu-toggle--active" : void 0,
     onClick: () => props.onFingerDrawingToggle?.()
-  }, /* @__PURE__ */ React87.createElement(PointerIcon, null))), /* @__PURE__ */ React87.createElement("div", {
+  }, /* @__PURE__ */ React89.createElement(PointerIcon, null))), /* @__PURE__ */ React89.createElement("div", {
     className: "ink_tool-menu"
-  }, /* @__PURE__ */ React87.createElement(TooltipButton, {
+  }, /* @__PURE__ */ React89.createElement(TooltipButton, {
     tooltip: "Select",
     onClick: activateSelectTool,
     disabled: curTool === "select" /* select */
-  }, /* @__PURE__ */ React87.createElement(SelectIcon, null)), /* @__PURE__ */ React87.createElement(TooltipButton, {
+  }, /* @__PURE__ */ React89.createElement(SelectIcon, null)), /* @__PURE__ */ React89.createElement(TooltipButton, {
     tooltip: "Draw",
     onClick: activateDrawTool,
     disabled: curTool === "draw" /* draw */
-  }, /* @__PURE__ */ React87.createElement(DrawIcon, null)), /* @__PURE__ */ React87.createElement(TooltipButton, {
+  }, /* @__PURE__ */ React89.createElement(DrawIcon, null)), /* @__PURE__ */ React89.createElement(TooltipButton, {
     tooltip: "Erase",
     onClick: activateEraseTool,
     disabled: curTool === "eraser" /* eraser */
-  }, /* @__PURE__ */ React87.createElement(EraseIcon, null))), /* @__PURE__ */ React87.createElement("div", {
+  }, /* @__PURE__ */ React89.createElement(EraseIcon, null))), /* @__PURE__ */ React89.createElement("div", {
     className: "ink_other-menu"
   })));
 });
 
 // src/components/jsx-components/secondary-menu-bar/secondary-menu-bar.tsx
 var import_classnames33 = __toESM(require_classnames());
-var React88 = __toESM(require_react());
+var React90 = __toESM(require_react());
 var SecondaryMenuBar = (props) => {
-  const scrollContainerElRef = React88.useRef(null);
-  const SecondaryMenuBarElRef = React88.useRef(null);
-  const [menuActive] = React88.useState(true);
-  React88.useEffect(() => {
+  const scrollContainerElRef = React90.useRef(null);
+  const SecondaryMenuBarElRef = React90.useRef(null);
+  const [menuActive] = React90.useState(true);
+  React90.useEffect(() => {
     initScrollHandler();
     return () => {
       cleanUpScrollHandler();
     };
   });
-  return /* @__PURE__ */ React88.createElement(React88.Fragment, null, /* @__PURE__ */ React88.createElement("div", {
+  return /* @__PURE__ */ React90.createElement(React90.Fragment, null, /* @__PURE__ */ React90.createElement("div", {
     ref: SecondaryMenuBarElRef,
     className: (0, import_classnames33.default)([
       "ink_secondary-menu-bar",
@@ -94698,29 +94831,29 @@ var SecondaryMenuBar = (props) => {
 };
 
 // src/components/jsx-components/ink-canvas-modify-menu/ink-canvas-modify-menu.tsx
-var React91 = __toESM(require_react());
+var React93 = __toESM(require_react());
 
 // src/graphics/icons/undo-icon.tsx
-var React89 = __toESM(require_react());
-var UndoIcon = (props) => /* @__PURE__ */ React89.createElement("svg", {
+var React91 = __toESM(require_react());
+var UndoIcon = (props) => /* @__PURE__ */ React91.createElement("svg", {
   xmlns: "http://www.w3.org/2000/svg",
   height: 24,
   viewBox: "0 -960 960 960",
   width: 24,
   ...props
-}, /* @__PURE__ */ React89.createElement("path", {
+}, /* @__PURE__ */ React91.createElement("path", {
   d: "M320-200q-17 0-28.5-11.5T280-240q0-17 11.5-28.5T320-280h244q63 0 109.5-40T720-420q0-60-46.5-100T564-560H312l76 76q11 11 11 28t-11 28q-11 11-28 11t-28-11L188-572q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l144-144q11-11 28-11t28 11q11 11 11 28t-11 28l-76 76h252q97 0 166.5 63T800-420q0 94-69.5 157T564-200H320Z"
 }));
 
 // src/graphics/icons/redo-icon.tsx
-var React90 = __toESM(require_react());
-var RedoIcon = (props) => /* @__PURE__ */ React90.createElement("svg", {
+var React92 = __toESM(require_react());
+var RedoIcon = (props) => /* @__PURE__ */ React92.createElement("svg", {
   xmlns: "http://www.w3.org/2000/svg",
   height: 24,
   viewBox: "0 -960 960 960",
   width: 24,
   ...props
-}, /* @__PURE__ */ React90.createElement("path", {
+}, /* @__PURE__ */ React92.createElement("path", {
   d: "M648-560H396q-63 0-109.5 40T240-420q0 60 46.5 100T396-280h244q17 0 28.5 11.5T680-240q0 17-11.5 28.5T640-200H396q-97 0-166.5-63T160-420q0-94 69.5-157T396-640h252l-76-76q-11-11-11-28t11-28q11-11 28-11t28 11l144 144q6 6 8.5 13t2.5 15q0 8-2.5 15t-8.5 13L628-428q-11 11-28 11t-28-11q-11-11-11-28t11-28l76-76Z"
 }));
 
@@ -94799,13 +94932,13 @@ function getActiveEmbedIdForLeaf(workspaceLeafId) {
 
 // src/logic/undo-redo/obsidian-undo-depth.ts
 var import_commands = require("@codemirror/commands");
-var import_obsidian17 = require("obsidian");
+var import_obsidian18 = require("obsidian");
 function getMarkdownViewForLeaf(plugin, leafId) {
   let found = null;
   plugin.app.workspace.iterateAllLeaves((leaf) => {
     if (found)
       return;
-    if (leaf.id === leafId && leaf.view instanceof import_obsidian17.MarkdownView) {
+    if (leaf.id === leafId && leaf.view instanceof import_obsidian18.MarkdownView) {
       found = leaf.view;
     }
   });
@@ -95072,10 +95205,10 @@ function popEmbedRedoAndPushToUndo(leafId, embedId) {
 }
 
 // src/components/jsx-components/ink-canvas-modify-menu/ink-canvas-modify-menu.tsx
-var InkCanvasModifyMenu = React91.forwardRef((props, ref) => {
-  const [canUndo, setCanUndo] = React91.useState(false);
-  const [canRedo, setCanRedo] = React91.useState(false);
-  React91.useEffect(() => {
+var InkCanvasModifyMenu = React93.forwardRef((props, ref) => {
+  const [canUndo, setCanUndo] = React93.useState(false);
+  const [canRedo, setCanRedo] = React93.useState(false);
+  React93.useEffect(() => {
     const intervalId = window.setInterval(() => {
       const editor = props.getEditor();
       if (!editor)
@@ -95127,48 +95260,48 @@ var InkCanvasModifyMenu = React91.forwardRef((props, ref) => {
     }
     props.onStoreChange();
   }
-  return /* @__PURE__ */ React91.createElement(React91.Fragment, null, /* @__PURE__ */ React91.createElement("div", {
+  return /* @__PURE__ */ React93.createElement(React93.Fragment, null, /* @__PURE__ */ React93.createElement("div", {
     ref,
     className: (0, import_classnames34.default)([
       "ink_menu-bar",
       "ink_menu-bar_floating"
     ])
-  }, /* @__PURE__ */ React91.createElement("div", {
+  }, /* @__PURE__ */ React93.createElement("div", {
     className: "ink_modify-menu"
-  }, /* @__PURE__ */ React91.createElement(TooltipButton, {
+  }, /* @__PURE__ */ React93.createElement(TooltipButton, {
     tooltip: "Redo",
     onClick: redo,
     disabled: !canRedo
-  }, /* @__PURE__ */ React91.createElement(RedoIcon, null)), /* @__PURE__ */ React91.createElement(TooltipButton, {
+  }, /* @__PURE__ */ React93.createElement(RedoIcon, null)), /* @__PURE__ */ React93.createElement(TooltipButton, {
     tooltip: "Undo",
     onClick: undo,
     disabled: !canUndo
-  }, /* @__PURE__ */ React91.createElement(UndoIcon, null)))));
+  }, /* @__PURE__ */ React93.createElement(UndoIcon, null)))));
 });
 
 // src/components/jsx-components/expand-lines-button/expand-lines-button.tsx
-var React93 = __toESM(require_react());
+var React95 = __toESM(require_react());
 
 // src/graphics/icons/chevron-down-icon.tsx
-var React92 = __toESM(require_react());
-var ChevronDownIcon = (props) => /* @__PURE__ */ React92.createElement("svg", {
+var React94 = __toESM(require_react());
+var ChevronDownIcon = (props) => /* @__PURE__ */ React94.createElement("svg", {
   xmlns: "http://www.w3.org/2000/svg",
   height: 24,
   viewBox: "0 -960 960 960",
   width: 24,
   ...props
-}, /* @__PURE__ */ React92.createElement("path", {
+}, /* @__PURE__ */ React94.createElement("path", {
   d: "M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"
 }));
 
 // src/components/jsx-components/expand-lines-button/expand-lines-button.tsx
 var ExpandLinesButton = (props) => {
-  return /* @__PURE__ */ React93.createElement(React93.Fragment, null, /* @__PURE__ */ React93.createElement("div", {
+  return /* @__PURE__ */ React95.createElement(React95.Fragment, null, /* @__PURE__ */ React95.createElement("div", {
     className: "ink_expand-lines-button"
-  }, /* @__PURE__ */ React93.createElement(TooltipButton, {
+  }, /* @__PURE__ */ React95.createElement(TooltipButton, {
     tooltip: "Add more lines",
     onClick: props.onExpandLines
-  }, /* @__PURE__ */ React93.createElement(ChevronDownIcon, null))));
+  }, /* @__PURE__ */ React95.createElement(ChevronDownIcon, null))));
 };
 
 // src/connections/boox/boox-embed-corner-radius.ts
@@ -95263,14 +95396,14 @@ function restoreEmbedCmScrollerScroll(wrapperEl) {
 }
 
 // src/components/formats/current/writing/writing-embed/writing-embed.tsx
-var React101 = __toESM(require_react());
+var React103 = __toESM(require_react());
 var import_react132 = __toESM(require_react());
 
 // src/components/dom-components/modals/file-conversion-modal/file-conversion-modal.ts
-var import_obsidian21 = require("obsidian");
+var import_obsidian22 = require("obsidian");
 
 // src/logic/utils/convert-file-embeds.ts
-var import_obsidian20 = require("obsidian");
+var import_obsidian21 = require("obsidian");
 
 // src/ink-canvas/fit-strokes-for-mode-conversion.ts
 function cloneStrokes(strokes) {
@@ -95553,7 +95686,7 @@ var createFoldersForFilepath = async (plugin, filePath) => {
 };
 
 // src/logic/utils/file-manipulation.ts
-var import_obsidian19 = require("obsidian");
+var import_obsidian20 = require("obsidian");
 
 // src/logic/utils/getDateFilename.ts
 function getDateFilename() {
@@ -95570,7 +95703,7 @@ function getDateFilename() {
 }
 
 // src/logic/utils/getVersionedFilepath.ts
-var import_obsidian18 = require("obsidian");
+var import_obsidian19 = require("obsidian");
 
 // src/logic/utils/parseFilepath.ts
 function parseFilepath(filepath) {
@@ -95602,7 +95735,7 @@ var getVersionedFilepath = async (plugin, seedFilepath) => {
     return `${pathAndVersionedBasename}.${ext}`;
   } catch (err) {
     console.warn(err);
-    new import_obsidian18.Notice(`There was an error finding a non-conflicting filename.`, 0);
+    new import_obsidian19.Notice(`There was an error finding a non-conflicting filename.`, 0);
     return "";
   }
 };
@@ -95700,7 +95833,7 @@ var getNewTimestampedWritingSvgFilepath = async (plugin, instigatingFile) => {
 var getNewTimestampedFilepath = async (plugin, ext, folderPath) => {
   const filename = getDateFilename() + "." + ext;
   const versionedFilepath = await getVersionedFilepath(plugin, `${folderPath}/${filename}`);
-  return (0, import_obsidian19.normalizePath)(versionedFilepath);
+  return (0, import_obsidian20.normalizePath)(versionedFilepath);
 };
 
 // src/components/formats/current/utils/duplicate-files.ts
@@ -95792,7 +95925,7 @@ async function buildDrawingEmbedLineForConvertedFile(vault, newSvgPath) {
   let embedSettings;
   try {
     const svgFile = vault.getAbstractFileByPath(newSvgPath);
-    if (!(svgFile instanceof import_obsidian20.TFile)) {
+    if (!(svgFile instanceof import_obsidian21.TFile)) {
       return buildDrawingEmbed(newSvgPath).trim();
     }
     const svgString = await vault.read(svgFile);
@@ -95807,7 +95940,7 @@ async function buildDrawingEmbedLineForConvertedFile(vault, newSvgPath) {
 async function buildWritingEmbedLineForConvertedFile(vault, newSvgPath) {
   try {
     const svgFile = vault.getAbstractFileByPath(newSvgPath);
-    if (!(svgFile instanceof import_obsidian20.TFile)) {
+    if (!(svgFile instanceof import_obsidian21.TFile)) {
       return buildWritingEmbed(newSvgPath).trim();
     }
     const svgString = await vault.read(svgFile);
@@ -95939,7 +96072,7 @@ async function executeFileConversion(plugin, file, toType, affectedNotes, moveTo
 
 // src/components/dom-components/modals/file-conversion-modal/file-conversion-modal.ts
 var EMBED_LIST_CAP = 10;
-var FileConversionModal = class extends import_obsidian21.Modal {
+var FileConversionModal = class extends import_obsidian22.Modal {
   constructor(plugin, file, toType, opts) {
     super(plugin.app);
     this.phase = 0 /* Scanning */;
@@ -96249,11 +96382,11 @@ var FileConversionModal = class extends import_obsidian21.Modal {
 };
 
 // src/logic/utils/remove-embed-flow.ts
-var import_obsidian23 = require("obsidian");
+var import_obsidian24 = require("obsidian");
 
 // src/components/dom-components/modals/remove-embed-modal/remove-embed-modal.ts
-var import_obsidian22 = require("obsidian");
-var RemoveEmbedModal = class extends import_obsidian22.Modal {
+var import_obsidian23 = require("obsidian");
+var RemoveEmbedModal = class extends import_obsidian23.Modal {
   constructor(plugin, embeddedFile, embedType, opts) {
     super(plugin.app);
     this.phase = 0 /* Scanning */;
@@ -96368,12 +96501,126 @@ function openRemoveEmbedFlow(plugin, embeddedFile, sourceMdFile, embedType, remo
           await removeAllEmbedsOfFileFromNote(plugin.app.vault, sourceMdFile, embeddedFile.path, embedType);
           await plugin.app.fileManager.trashFile(embeddedFile);
         } catch (err) {
-          new import_obsidian23.Notice("Failed to remove and delete file: " + String(err));
+          new import_obsidian24.Notice("Failed to remove and delete file: " + String(err));
         }
       })();
     }
   });
   modal.open();
+}
+
+// src/logic/utils/ink-workspace-chrome.ts
+var INK_WORKSPACE_CHROME_HIDDEN_CLASS = "ddc_ink_hide-workspace-chrome";
+var chromeHiddenLeafId = null;
+var openedFromEmbed = false;
+var sidebarSnapshot = null;
+var pendingHideForNextDedicatedView = false;
+var leafListenerRegistered = false;
+var listeners = /* @__PURE__ */ new Set();
+function subscribeInkWorkspaceChrome(listener) {
+  listeners.add(listener);
+  return () => {
+    listeners.delete(listener);
+  };
+}
+function isInkWorkspaceChromeHiddenForLeaf(leafId) {
+  return chromeHiddenLeafId === leafId;
+}
+function wasInkWorkspaceOpenedFromEmbed(leafId) {
+  return chromeHiddenLeafId === leafId && openedFromEmbed;
+}
+function leafHasBackHistory(leaf) {
+  return leaf.history.backHistory.length > 0;
+}
+function requestInkWorkspaceChromeForNextDedicatedView() {
+  pendingHideForNextDedicatedView = true;
+}
+function cancelPendingInkWorkspaceChromeHide() {
+  pendingHideForNextDedicatedView = false;
+}
+function applyPendingInkWorkspaceChromeHide(leafId) {
+  if (!pendingHideForNextDedicatedView)
+    return;
+  pendingHideForNextDedicatedView = false;
+  enterInkWorkspaceChromeHidden(leafId, {
+    collapseSidebars: false,
+    openedFromEmbed: true
+  });
+}
+function enterInkWorkspaceChromeHidden(leafId, options) {
+  ensureActiveLeafListener();
+  const isDifferentLeaf = chromeHiddenLeafId !== leafId;
+  if (isDifferentLeaf) {
+    restoreSidebarSnapshot();
+    sidebarSnapshot = null;
+    openedFromEmbed = options.openedFromEmbed;
+    chromeHiddenLeafId = leafId;
+  }
+  if (options.collapseSidebars && !sidebarSnapshot) {
+    const { workspace } = getGlobals().plugin.app;
+    sidebarSnapshot = {
+      leftWasCollapsed: workspace.leftSplit.collapsed,
+      rightWasCollapsed: workspace.rightSplit.collapsed
+    };
+    workspace.leftSplit.collapse();
+    workspace.rightSplit.collapse();
+  }
+  syncBodyClass();
+  notifyListeners();
+}
+function exitInkWorkspaceChromeHidden(leafId) {
+  if (chromeHiddenLeafId !== leafId)
+    return;
+  restoreSidebarSnapshot();
+  sidebarSnapshot = null;
+  openedFromEmbed = false;
+  chromeHiddenLeafId = null;
+  syncBodyClass();
+  notifyListeners();
+}
+function navigateInkLeafBack(leafId) {
+  const leaf = getGlobals().plugin.app.workspace.getLeafById(leafId);
+  if (!leaf)
+    return;
+  if (!leafHasBackHistory(leaf))
+    return;
+  void leaf.history.back();
+}
+function releaseInkWorkspaceChromeOnPluginUnload() {
+  pendingHideForNextDedicatedView = false;
+  if (chromeHiddenLeafId) {
+    exitInkWorkspaceChromeHidden(chromeHiddenLeafId);
+    return;
+  }
+  document.body.classList.remove(INK_WORKSPACE_CHROME_HIDDEN_CLASS);
+  notifyListeners();
+}
+function ensureActiveLeafListener() {
+  if (leafListenerRegistered)
+    return;
+  leafListenerRegistered = true;
+  const plugin = getGlobals().plugin;
+  plugin.registerEvent(plugin.app.workspace.on("active-leaf-change", () => {
+    syncBodyClass();
+  }));
+}
+function syncBodyClass() {
+  const activeLeafId = getGlobals().plugin.app.workspace.activeLeaf?.id ?? null;
+  const shouldHide = chromeHiddenLeafId != null && activeLeafId === chromeHiddenLeafId;
+  document.body.classList.toggle(INK_WORKSPACE_CHROME_HIDDEN_CLASS, shouldHide);
+}
+function restoreSidebarSnapshot() {
+  if (!sidebarSnapshot)
+    return;
+  const { workspace } = getGlobals().plugin.app;
+  if (!sidebarSnapshot.leftWasCollapsed)
+    workspace.leftSplit.expand();
+  if (!sidebarSnapshot.rightWasCollapsed)
+    workspace.rightSplit.expand();
+}
+function notifyListeners() {
+  for (const listener of listeners)
+    listener();
 }
 
 // src/components/dom-components/auto-transcribe-account-notice.ts
@@ -96419,17 +96666,17 @@ function showAutoTranscribeAccountNotice(plugin) {
 }
 
 // src/components/formats/current/writing/writing-embed/writing-embed.tsx
-var import_obsidian26 = require("obsidian");
+var import_obsidian27 = require("obsidian");
 
 // src/components/formats/current/writing/writing-embed-preview/writing-embed-preview.tsx
 var import_classnames35 = __toESM(require_classnames());
-var React95 = __toESM(require_react());
+var React97 = __toESM(require_react());
 
 // node_modules/react-inlinesvg/dist/index.mjs
 var import_react125 = __toESM(require_react(), 1);
 
 // node_modules/react-from-dom/dist/index.mjs
-var React94 = __toESM(require_react(), 1);
+var React96 = __toESM(require_react(), 1);
 var styleToObject = (input) => {
   if (typeof input !== "string") {
     return {};
@@ -96817,7 +97064,7 @@ function getReactNode(node, options) {
   const { key, level, ...rest } = options;
   switch (node.nodeType) {
     case 1: {
-      return React94.createElement(parseName(node.nodeName), parseAttributes(node, key), parseChildren(node.childNodes, level, rest));
+      return React96.createElement(parseName(node.nodeName), parseAttributes(node, key), parseChildren(node.childNodes, level, rest));
     }
     case 3: {
       const nodeText = node.nodeValue?.toString() ?? "";
@@ -97507,18 +97754,18 @@ var WritingEmbedPreviewWrapper = (props) => {
   const embedsInEditMode = useAtomValue(embedsInEditModeAtom);
   const previewActive = !props.embedId || !embedsInEditMode.has(props.embedId);
   if (previewActive) {
-    return /* @__PURE__ */ React95.createElement(WritingEmbedPreview, {
+    return /* @__PURE__ */ React97.createElement(WritingEmbedPreview, {
       ...props
     });
   } else {
-    return /* @__PURE__ */ React95.createElement(React95.Fragment, null);
+    return /* @__PURE__ */ React97.createElement(React97.Fragment, null);
   }
 };
 var WritingEmbedPreview = (props) => {
-  const containerElRef = React95.useRef(null);
-  const [fileSrc, setFileSrc] = React95.useState(empty_writing_embed_default);
+  const containerElRef = React97.useRef(null);
+  const [fileSrc, setFileSrc] = React97.useState(empty_writing_embed_default);
   const hasStrokes = useInkFileHasStrokes(props.writingFile, props.plugin.app.vault);
-  React95.useEffect(() => {
+  React97.useEffect(() => {
     refreshSrc();
     const onModify = (modifiedFile) => {
       if (!props.writingFile)
@@ -97533,7 +97780,7 @@ var WritingEmbedPreview = (props) => {
     };
   }, [props.writingFile]);
   const isImg = fileSrc.slice(0, 4) === "data";
-  return /* @__PURE__ */ React95.createElement(React95.Fragment, null, /* @__PURE__ */ React95.createElement("div", {
+  return /* @__PURE__ */ React97.createElement(React97.Fragment, null, /* @__PURE__ */ React97.createElement("div", {
     ref: containerElRef,
     className: (0, import_classnames35.default)([
       "ddc_ink_writing-embed-preview",
@@ -97547,7 +97794,7 @@ var WritingEmbedPreview = (props) => {
       pointerEvents: "all"
     },
     onClick: props.onClick
-  }, isImg && /* @__PURE__ */ React95.createElement(React95.Fragment, null, /* @__PURE__ */ React95.createElement("img", {
+  }, isImg && /* @__PURE__ */ React97.createElement(React97.Fragment, null, /* @__PURE__ */ React97.createElement("img", {
     src: fileSrc,
     key: fileSrc,
     style: {
@@ -97557,7 +97804,7 @@ var WritingEmbedPreview = (props) => {
       pointerEvents: "all"
     },
     onLoad
-  })), !isImg && /* @__PURE__ */ React95.createElement(React95.Fragment, null, /* @__PURE__ */ React95.createElement(InlineSVG, {
+  })), !isImg && /* @__PURE__ */ React97.createElement(React97.Fragment, null, /* @__PURE__ */ React97.createElement(InlineSVG, {
     src: fileSrc,
     cacheRequests: true,
     key: fileSrc,
@@ -97612,32 +97859,32 @@ function clearActiveInkEmbed(embedId) {
 }
 
 // src/logic/utils/copy-embed-to-clipboard.ts
-var import_obsidian24 = require("obsidian");
+var import_obsidian25 = require("obsidian");
 async function copyEmbedMarkdownToClipboard(embedStr) {
   if (!embedStr) {
-    new import_obsidian24.Notice("Nothing to copy");
+    new import_obsidian25.Notice("Nothing to copy");
     return false;
   }
   try {
     await navigator.clipboard.writeText(embedStr);
-    new import_obsidian24.Notice("Embed copied to clipboard");
+    new import_obsidian25.Notice("Embed copied to clipboard");
     return true;
   } catch {
-    new import_obsidian24.Notice("Failed to copy embed to clipboard");
+    new import_obsidian25.Notice("Failed to copy embed to clipboard");
     return false;
   }
 }
 
 // src/components/jsx-components/embed-preview-context-menu/embed-preview-context-menu.tsx
-var React96 = __toESM(require_react());
+var React98 = __toESM(require_react());
 var LONG_PRESS_MS = 500;
 var LONG_PRESS_MOVE_THRESHOLD_PX = 10;
 var EmbedPreviewContextMenu = (props) => {
-  const wrapperRef = React96.useRef(null);
-  const longPressTimerRef = React96.useRef(null);
-  const longPressStartRef = React96.useRef(null);
-  const longPressHandledRef = React96.useRef(false);
-  React96.useEffect(() => {
+  const wrapperRef = React98.useRef(null);
+  const longPressTimerRef = React98.useRef(null);
+  const longPressStartRef = React98.useRef(null);
+  const longPressHandledRef = React98.useRef(false);
+  React98.useEffect(() => {
     return () => {
       if (longPressTimerRef.current) {
         window.clearTimeout(longPressTimerRef.current);
@@ -97698,7 +97945,7 @@ var EmbedPreviewContextMenu = (props) => {
   }
   const layout = props.layout ?? "fill";
   const wrapperStyle = layout === "content" ? { position: "relative", width: "100%" } : { position: "absolute", width: "100%", height: "100%" };
-  return /* @__PURE__ */ React96.createElement("div", {
+  return /* @__PURE__ */ React98.createElement("div", {
     ref: wrapperRef,
     className: "ddc_ink_embed-preview-context-menu",
     style: wrapperStyle,
@@ -97869,9 +98116,9 @@ function useLockedInkTranscriptMode(filePath, transcript, isEditing) {
 }
 
 // src/components/formats/current/ink-transcript-view/ink-transcript-view.tsx
-var React100 = __toESM(require_react());
+var React102 = __toESM(require_react());
 var import_react131 = __toESM(require_react());
-var import_obsidian25 = require("obsidian");
+var import_obsidian26 = require("obsidian");
 
 // src/logic/use-handwriting-transcription-queue-status.ts
 var import_react130 = __toESM(require_react());
@@ -97896,8 +98143,8 @@ function useHandwritingTranscriptionQueueStatus(filePath) {
 }
 
 // src/graphics/icons/text-mode-icon.tsx
-var React97 = __toESM(require_react());
-var TextModeIcon = (props) => /* @__PURE__ */ React97.createElement("svg", {
+var React99 = __toESM(require_react());
+var TextModeIcon = (props) => /* @__PURE__ */ React99.createElement("svg", {
   xmlns: "http://www.w3.org/2000/svg",
   width: "1em",
   height: "1em",
@@ -97909,21 +98156,21 @@ var TextModeIcon = (props) => /* @__PURE__ */ React97.createElement("svg", {
   strokeLinejoin: "round",
   "aria-hidden": "true",
   ...props
-}, /* @__PURE__ */ React97.createElement("path", {
+}, /* @__PURE__ */ React99.createElement("path", {
   d: "m2 16 4.039-9.69a.5.5 0 0 1 .923 0L11 16"
-}), /* @__PURE__ */ React97.createElement("path", {
+}), /* @__PURE__ */ React99.createElement("path", {
   d: "M22 9v7"
-}), /* @__PURE__ */ React97.createElement("path", {
+}), /* @__PURE__ */ React99.createElement("path", {
   d: "M3.304 13h6.392"
-}), /* @__PURE__ */ React97.createElement("circle", {
+}), /* @__PURE__ */ React99.createElement("circle", {
   cx: "18.5",
   cy: "12.5",
   r: "3.5"
 }));
 
 // src/graphics/icons/loader-2-icon.tsx
-var React98 = __toESM(require_react());
-var Loader2Icon = (props) => /* @__PURE__ */ React98.createElement("svg", {
+var React100 = __toESM(require_react());
+var Loader2Icon = (props) => /* @__PURE__ */ React100.createElement("svg", {
   xmlns: "http://www.w3.org/2000/svg",
   width: "1em",
   height: "1em",
@@ -97935,13 +98182,13 @@ var Loader2Icon = (props) => /* @__PURE__ */ React98.createElement("svg", {
   strokeLinejoin: "round",
   "aria-hidden": "true",
   ...props
-}, /* @__PURE__ */ React98.createElement("path", {
+}, /* @__PURE__ */ React100.createElement("path", {
   d: "M21 12a9 9 0 1 1-6.219-8.56"
 }));
 
 // src/graphics/icons/clock-icon.tsx
-var React99 = __toESM(require_react());
-var ClockIcon = (props) => /* @__PURE__ */ React99.createElement("svg", {
+var React101 = __toESM(require_react());
+var ClockIcon = (props) => /* @__PURE__ */ React101.createElement("svg", {
   xmlns: "http://www.w3.org/2000/svg",
   width: "1em",
   height: "1em",
@@ -97953,11 +98200,11 @@ var ClockIcon = (props) => /* @__PURE__ */ React99.createElement("svg", {
   strokeLinejoin: "round",
   "aria-hidden": "true",
   ...props
-}, /* @__PURE__ */ React99.createElement("circle", {
+}, /* @__PURE__ */ React101.createElement("circle", {
   cx: "12",
   cy: "12",
   r: "10"
-}), /* @__PURE__ */ React99.createElement("polyline", {
+}), /* @__PURE__ */ React101.createElement("polyline", {
   points: "12 6 12 12 16 14"
 }));
 
@@ -97970,7 +98217,7 @@ function InkTranscriptView(props) {
     const hostEl = hostRef.current;
     if (!hostEl)
       return;
-    const mount = new import_obsidian25.Component();
+    const mount = new import_obsidian26.Component();
     if (props.parentComponent) {
       props.parentComponent.addChild(mount);
     } else {
@@ -97984,7 +98231,7 @@ function InkTranscriptView(props) {
       onHeightChangeRef.current?.(hostEl.scrollHeight);
     };
     const markdown = normalizeInkTranscriptMarkdown(props.markdown);
-    void import_obsidian25.MarkdownRenderer.render(props.app, markdown, hostEl, props.sourcePath, mount).then(() => {
+    void import_obsidian26.MarkdownRenderer.render(props.app, markdown, hostEl, props.sourcePath, mount).then(() => {
       inkEmbedScheduleAfterLayout(() => {
         reportHeight();
       });
@@ -98004,7 +98251,7 @@ function InkTranscriptView(props) {
       hostEl.replaceChildren();
     };
   }, [props.app, props.markdown, props.sourcePath, props.parentComponent]);
-  return /* @__PURE__ */ React100.createElement("div", {
+  return /* @__PURE__ */ React102.createElement("div", {
     ref: hostRef,
     className: "ddc_ink_transcript-view ddc_ink_transcript-view--framed markdown-rendered",
     onMouseDown: (event) => {
@@ -98019,15 +98266,15 @@ function InkEmbedTranscriptControls(props) {
   let statusTooltip = "Transcription queued";
   if (queueStatus === "processing")
     statusTooltip = "Transcribing\u2026";
-  return /* @__PURE__ */ React100.createElement("div", {
+  return /* @__PURE__ */ React102.createElement("div", {
     className: "ddc_ink_display-mode-controls"
-  }, queueStatus && /* @__PURE__ */ React100.createElement(TooltipButton, {
+  }, queueStatus && /* @__PURE__ */ React102.createElement(TooltipButton, {
     tooltip: statusTooltip,
     className: `ddc_ink_transcript-queue-status ddc_ink_transcript-queue-status--${queueStatus}`,
     onMouseDown: (event) => {
       event.stopPropagation();
     }
-  }, queueStatus === "processing" ? /* @__PURE__ */ React100.createElement(Loader2Icon, null) : /* @__PURE__ */ React100.createElement(ClockIcon, null)), props.hasTranscript && /* @__PURE__ */ React100.createElement(InkEmbedDisplayModeSwitch, {
+  }, queueStatus === "processing" ? /* @__PURE__ */ React102.createElement(Loader2Icon, null) : /* @__PURE__ */ React102.createElement(ClockIcon, null)), props.hasTranscript && /* @__PURE__ */ React102.createElement(InkEmbedDisplayModeSwitch, {
     filePath: props.filePath,
     inkIconKind: props.inkIconKind
   }));
@@ -98042,7 +98289,7 @@ function InkEmbedDisplayModeSwitch(props) {
   if (mode === "text") {
     ariaLabel = "Show ink";
   }
-  return /* @__PURE__ */ React100.createElement(TooltipButton, {
+  return /* @__PURE__ */ React102.createElement(TooltipButton, {
     tooltip: ariaLabel,
     className: "ddc_ink_display-mode-toggle",
     onMouseDown: (event) => {
@@ -98051,7 +98298,7 @@ function InkEmbedDisplayModeSwitch(props) {
     onClick: () => {
       setInkEmbedDisplayMode(props.filePath, nextMode);
     }
-  }, mode === "text" ? props.inkIconKind === "drawing" ? /* @__PURE__ */ React100.createElement(DrawIcon, null) : /* @__PURE__ */ React100.createElement(WriteIcon, null) : /* @__PURE__ */ React100.createElement(TextModeIcon, null));
+  }, mode === "text" ? props.inkIconKind === "drawing" ? /* @__PURE__ */ React102.createElement(DrawIcon, null) : /* @__PURE__ */ React102.createElement(WriteIcon, null) : /* @__PURE__ */ React102.createElement(TextModeIcon, null));
 }
 
 // src/components/formats/current/writing/writing-embed/writing-embed.tsx
@@ -98074,8 +98321,8 @@ function WritingEmbed(props) {
   const { hasTranscript, showTranscript } = useLockedInkTranscriptMode(props.writingFileRef?.path, transcript, isThisEmbedEditing);
   const showTranscriptRef = (0, import_react132.useRef)(false);
   showTranscriptRef.current = showTranscript;
-  const [writingFormat, setWritingFormat] = React101.useState("unknown");
-  React101.useLayoutEffect(() => {
+  const [writingFormat, setWritingFormat] = React103.useState("unknown");
+  React103.useLayoutEffect(() => {
     const resizeContainer = resizeContainerElRef.current;
     if (!resizeContainer)
       return;
@@ -98093,7 +98340,7 @@ function WritingEmbed(props) {
     resizeContainer.classList.remove("ddc_ink_smooth-transition");
     const containerWidth = resizeContainer.getBoundingClientRect().width || defaultInitialWidth;
     const remountReserveHeightPx = props.remountReserveHeightPx;
-    const shouldApplyRemountReserveToInner = isThisEmbedEditing && !!remountReserveHeightPx && remountReserveHeightPx > 0;
+    const shouldApplyRemountReserveToInner = isThisEmbedEditing && !!remountReserveHeightPx && remountReserveHeightPx > 0 && !isBooxConnectionEnabled;
     if (shouldApplyRemountReserveToInner && remountReserveHeightPx) {
       resizeContainer.style.height = remountReserveHeightPx + "px";
       previousHeightRef.current = remountReserveHeightPx;
@@ -98106,7 +98353,7 @@ function WritingEmbed(props) {
       widgetRootEl: embedContainerElRef.current?.closest(".ddc_ink_widget-root")
     });
   }, [props.writingFileRef?.path, props.embedSettings?.embedDisplay?.aspectRatio, isThisEmbedEditing, props.remountReserveHeightPx, showTranscript]);
-  React101.useEffect(() => {
+  React103.useEffect(() => {
     if (!props.writingFileRef || isThisEmbedEditing)
       return;
     let cancelled = false;
@@ -98139,7 +98386,7 @@ function WritingEmbed(props) {
       props.plugin.app.vault.offref(eventRef);
     };
   }, [props.writingFileRef?.path, props.embedSettings?.embedDisplay?.aspectRatio, isThisEmbedEditing]);
-  React101.useEffect(() => {
+  React103.useEffect(() => {
     if (!props.writingFileRef)
       return;
     setWritingFormat("unknown");
@@ -98153,14 +98400,14 @@ function WritingEmbed(props) {
       setWritingFormat(engine);
     }).catch(() => setWritingFormat("unknown"));
   }, [props.writingFileRef]);
-  React101.useEffect(() => {
+  React103.useEffect(() => {
     if (embedShouldActivateImmediately() && props.embedId) {
       window.setTimeout(() => {
         void switchToEditMode();
       }, 200);
     }
   }, []);
-  React101.useEffect(() => {
+  React103.useEffect(() => {
     if (!props.workspaceLeafId)
       return;
     const plugin = getGlobals().plugin;
@@ -98176,7 +98423,7 @@ function WritingEmbed(props) {
   function handleCopyEmbed(_source) {
     const embedStr = props.getEmbedMarkdown?.() ?? null;
     if (!embedStr) {
-      new import_obsidian26.Notice("Could not read embed Markdown to copy");
+      new import_obsidian27.Notice("Could not read embed Markdown to copy");
       return;
     }
     void copyEmbedMarkdownToClipboard(embedStr);
@@ -98207,13 +98454,13 @@ function WritingEmbed(props) {
   function handleCopyTranscript() {
     const text = transcript?.trim() ?? "";
     if (!text) {
-      new import_obsidian26.Notice("No transcript to copy");
+      new import_obsidian27.Notice("No transcript to copy");
       return;
     }
     void navigator.clipboard.writeText(text).then(() => {
-      new import_obsidian26.Notice("Transcript copied to clipboard");
+      new import_obsidian27.Notice("Transcript copied to clipboard");
     }).catch(() => {
-      new import_obsidian26.Notice("Failed to copy transcript to clipboard");
+      new import_obsidian27.Notice("Failed to copy transcript to clipboard");
     });
   }
   async function updateTranscriptFromLockedEmbed() {
@@ -98237,7 +98484,7 @@ function WritingEmbed(props) {
       {
         text: "Open writing",
         action: () => {
-          void openInDedicatedView();
+          void openInDedicatedView({ enterFullScreen: false });
         }
       },
       { separator: true }
@@ -98257,7 +98504,7 @@ function WritingEmbed(props) {
     {
       text: "Open writing",
       action: () => {
-        void openInDedicatedView();
+        void openInDedicatedView({ enterFullScreen: false });
       }
     },
     { separator: true },
@@ -98305,20 +98552,20 @@ function WritingEmbed(props) {
     }
   ];
   if (!props.writingFileRef) {
-    return /* @__PURE__ */ React101.createElement(React101.Fragment, null, /* @__PURE__ */ React101.createElement("div", {
+    return /* @__PURE__ */ React103.createElement(React103.Fragment, null, /* @__PURE__ */ React103.createElement("div", {
       className: "ddc_ink_embed ddc_ink_writing-embed"
-    }, /* @__PURE__ */ React101.createElement("div", {
+    }, /* @__PURE__ */ React103.createElement("div", {
       className: "ddc_ink_pending-banner ddc_ink_pending-banner--not-found"
-    }, /* @__PURE__ */ React101.createElement("span", {
+    }, /* @__PURE__ */ React103.createElement("span", {
       className: "ddc_ink_pending-banner__title"
-    }, "Writing file not found: ", props.partialEmbedFilepath), /* @__PURE__ */ React101.createElement("div", {
+    }, "Writing file not found: ", props.partialEmbedFilepath), /* @__PURE__ */ React103.createElement("div", {
       className: "ddc_ink_pending-banner__actions"
-    }, /* @__PURE__ */ React101.createElement("button", {
+    }, /* @__PURE__ */ React103.createElement("button", {
       className: "ddc_ink_pending-banner__btn ddc_ink_pending-banner__btn--primary",
       onClick: () => props.locateFile?.()
     }, "Locate file")))));
   }
-  return /* @__PURE__ */ React101.createElement(React101.Fragment, null, /* @__PURE__ */ React101.createElement("div", {
+  return /* @__PURE__ */ React103.createElement(React103.Fragment, null, /* @__PURE__ */ React103.createElement("div", {
     ref: embedContainerElRef,
     className: (0, import_classnames36.default)([
       "ddc_ink_embed",
@@ -98329,46 +98576,46 @@ function WritingEmbed(props) {
       paddingTop: "1em",
       paddingBottom: "1em"
     }
-  }, props.isPendingPaste && props.writingFileRef && /* @__PURE__ */ React101.createElement("div", {
+  }, props.isPendingPaste && props.writingFileRef && /* @__PURE__ */ React103.createElement("div", {
     className: "ddc_ink_pending-banner"
-  }, /* @__PURE__ */ React101.createElement("span", {
+  }, /* @__PURE__ */ React103.createElement("span", {
     className: "ddc_ink_pending-banner__title"
-  }, "Copied embed \u2014 reference source or duplicate?"), /* @__PURE__ */ React101.createElement("div", {
+  }, "Copied embed \u2014 reference source or duplicate?"), /* @__PURE__ */ React103.createElement("div", {
     className: "ddc_ink_pending-banner__actions"
-  }, /* @__PURE__ */ React101.createElement("button", {
+  }, /* @__PURE__ */ React103.createElement("button", {
     className: "ddc_ink_pending-banner__btn ddc_ink_pending-banner__btn--primary",
     onClick: () => props.resolveAsReference?.()
-  }, "Reference existing file"), /* @__PURE__ */ React101.createElement("button", {
+  }, "Reference existing file"), /* @__PURE__ */ React103.createElement("button", {
     className: "ddc_ink_pending-banner__btn ddc_ink_pending-banner__btn--primary",
     onClick: () => void props.resolveAsDuplicate?.()
-  }, "Make duplicate"))), props.writingFileRef && /* @__PURE__ */ React101.createElement("div", {
+  }, "Make duplicate"))), props.writingFileRef && /* @__PURE__ */ React103.createElement("div", {
     className: (0, import_classnames36.default)([
       "ddc_ink_resize-container",
       isBooxConnectionEnabled && "ddc_ink_resize-container--boox"
     ]),
     ref: resizeContainerElRef
-  }, showTranscript && transcript && /* @__PURE__ */ React101.createElement(EmbedPreviewContextMenu, {
+  }, showTranscript && transcript && /* @__PURE__ */ React103.createElement(EmbedPreviewContextMenu, {
     menuOptions: lockedEmbedMenuOptions(true),
     layout: "content"
-  }, /* @__PURE__ */ React101.createElement(InkTranscriptView, {
+  }, /* @__PURE__ */ React103.createElement(InkTranscriptView, {
     app: props.plugin.app,
     markdown: transcript,
     sourcePath: props.sourceMdFile?.path ?? "",
     onHeightChange: applyTranscriptHeight
-  })), !showTranscript && /* @__PURE__ */ React101.createElement(EmbedPreviewContextMenu, {
+  })), !showTranscript && /* @__PURE__ */ React103.createElement(EmbedPreviewContextMenu, {
     menuOptions: lockedEmbedMenuOptions(hasTranscript)
-  }, /* @__PURE__ */ React101.createElement(WritingEmbedPreviewWrapper, {
+  }, /* @__PURE__ */ React103.createElement(WritingEmbedPreviewWrapper, {
     embedId: props.embedId,
     plugin: props.plugin,
     onResize: (height) => applySizingWhilePreviewing(height),
     writingFile: props.writingFileRef,
     onClick: props.isPendingPaste ? () => {
     } : () => void switchToEditMode()
-  })), !isThisEmbedEditing && /* @__PURE__ */ React101.createElement(InkEmbedTranscriptControls, {
+  })), !isThisEmbedEditing && /* @__PURE__ */ React103.createElement(InkEmbedTranscriptControls, {
     filePath: props.writingFileRef.path,
     inkIconKind: "writing",
     hasTranscript
-  }), (writingFormat === "ink-canvas" || writingFormat === "tldraw") && props.writingFileRef && /* @__PURE__ */ React101.createElement(WritingEditorWrapper, {
+  }), (writingFormat === "ink-canvas" || writingFormat === "tldraw") && props.writingFileRef && /* @__PURE__ */ React103.createElement(WritingEditorWrapper, {
     plugin: props.plugin,
     workspaceLeafId: props.workspaceLeafId,
     embedId: props.embedId,
@@ -98385,9 +98632,10 @@ function WritingEmbed(props) {
   function registerEditorControls(handlers) {
     editorControlsRef.current = handlers;
   }
-  async function openInDedicatedView() {
+  async function openInDedicatedView(options) {
     if (!props.writingFileRef)
       return;
+    const enterFullScreen = options?.enterFullScreen !== false;
     dismissLegacyInkNoticesForFile(props.writingFileRef.path);
     if (editorControlsRef.current) {
       await editorControlsRef.current.saveAndHalt();
@@ -98401,7 +98649,21 @@ function WritingEmbed(props) {
       });
     }
     editorControlsRef.current = void 0;
-    await openInkFileInView(props.writingFileRef, "inkWriting");
+    if (enterFullScreen) {
+      requestInkWorkspaceChromeForNextDedicatedView();
+    }
+    try {
+      if (enterFullScreen) {
+        await openInkFileInView(props.writingFileRef, "inkWriting");
+      } else {
+        await openInkFileInViewAndLocate(props.writingFileRef, "inkWriting");
+      }
+    } catch (error2) {
+      if (enterFullScreen) {
+        cancelPendingInkWorkspaceChromeHide();
+      }
+      throw error2;
+    }
   }
   function applySizingWhilePreviewing(height) {
     if (!height)
@@ -98538,7 +98800,7 @@ function syncObsidianOnlyBeforeKeyboard(leafId) {
 }
 
 // src/ink-canvas/ink-svg-canvas.tsx
-var import_react137 = __toESM(require_react());
+var import_react138 = __toESM(require_react());
 
 // src/ink-canvas/stroke-store.ts
 var StrokeStore = class {
@@ -98586,6 +98848,14 @@ var StrokeStore = class {
       }
     }
     this.notify({ type: "updateOffsets", ids: Array.from(offsets.keys()) });
+  }
+  updateStrokes(strokesById) {
+    for (const [id, stroke] of strokesById) {
+      if (this.strokes.has(id)) {
+        this.strokes.set(id, stroke);
+      }
+    }
+    this.notify({ type: "updateStrokes", ids: Array.from(strokesById.keys()) });
   }
   getById(id) {
     return this.strokes.get(id);
@@ -98892,6 +99162,12 @@ function computeDedicatedWritingPageHeight(scrollTopPx, viewportHeightPx, zoom, 
   const minFromViewport = pageBottomVisible + 10 * lineHeight;
   return Math.max(minFromViewport, invitingContentHeight);
 }
+function rescaleDedicatedWritingScrollTop(prevScrollTopPx, prevZoom, nextZoom, menubarPadPx) {
+  if (prevScrollTopPx <= menubarPadPx)
+    return prevScrollTopPx;
+  const contentScrollTopPx = prevScrollTopPx - menubarPadPx;
+  return menubarPadPx + contentScrollTopPx * (nextZoom / prevZoom);
+}
 
 // src/ink-canvas/commands.ts
 var AddStrokeCommand = class {
@@ -98917,6 +99193,37 @@ var RemoveStrokesCommand = class {
   }
   unapply() {
     this.store.addMany(this.removedStrokes);
+  }
+};
+var TransformStrokesCommand = class {
+  constructor(store, nextStrokes) {
+    this.store = store;
+    this.nextStrokes = nextStrokes.map((stroke) => ({
+      ...stroke,
+      points: stroke.points.map((point) => [...point]),
+      style: { ...stroke.style },
+      offset: { ...stroke.offset }
+    }));
+    this.previousStrokes = nextStrokes.map((stroke) => store.getById(stroke.id)).filter((stroke) => stroke !== void 0).map((stroke) => ({
+      ...stroke,
+      points: stroke.points.map((point) => [...point]),
+      style: { ...stroke.style },
+      offset: { ...stroke.offset }
+    }));
+  }
+  apply() {
+    const map = /* @__PURE__ */ new Map();
+    for (const stroke of this.nextStrokes) {
+      map.set(stroke.id, stroke);
+    }
+    this.store.updateStrokes(map);
+  }
+  unapply() {
+    const map = /* @__PURE__ */ new Map();
+    for (const stroke of this.previousStrokes) {
+      map.set(stroke.id, stroke);
+    }
+    this.store.updateStrokes(map);
   }
 };
 var MoveStrokesCommand = class {
@@ -99529,19 +99836,369 @@ function scheduleEraseRemoval(ctx, strokeIds) {
   }, remainingMs);
 }
 
+// src/ink-canvas/selection-bounds.ts
+var SELECTION_BOUNDS_PADDING_SCREEN_PX = 10;
+var SELECTION_BOUNDS_CORNER_RADIUS_SCREEN_PX = 10;
+function selectionBoundsPaddingPageUnits(cameraZoom) {
+  return SELECTION_BOUNDS_PADDING_SCREEN_PX / cameraZoom;
+}
+var SELECTION_HANDLE_HIT_RADIUS_SCREEN_PX = 10;
+function getSelectionBoundsForStrokes(strokes, paddingPageUnits) {
+  if (strokes.length === 0)
+    return null;
+  const tight = computeStrokesBounds(strokes);
+  if (!Number.isFinite(tight.minX))
+    return null;
+  return {
+    minX: tight.minX - paddingPageUnits,
+    minY: tight.minY - paddingPageUnits,
+    maxX: tight.maxX + paddingPageUnits,
+    maxY: tight.maxY + paddingPageUnits,
+    width: tight.width + paddingPageUnits * 2,
+    height: tight.height + paddingPageUnits * 2
+  };
+}
+function selectionBoundsCenter(bounds) {
+  return {
+    x: (bounds.minX + bounds.maxX) / 2,
+    y: (bounds.minY + bounds.maxY) / 2
+  };
+}
+function expandBoundsToMinimumSize(bounds, minPageSize) {
+  if (bounds.width >= minPageSize && bounds.height >= minPageSize)
+    return bounds;
+  const cx = (bounds.minX + bounds.maxX) / 2;
+  const cy = (bounds.minY + bounds.maxY) / 2;
+  const width = Math.max(bounds.width, minPageSize);
+  const height = Math.max(bounds.height, minPageSize);
+  return {
+    minX: cx - width / 2,
+    minY: cy - height / 2,
+    maxX: cx + width / 2,
+    maxY: cy + height / 2,
+    width,
+    height
+  };
+}
+
+// src/ink-canvas/selection-chrome.ts
+function selectionChromeFromBounds(bounds) {
+  return {
+    center: selectionBoundsCenter(bounds),
+    width: bounds.width,
+    height: bounds.height,
+    rotationRad: 0
+  };
+}
+function rotatePagePointAround(point, center, rotationRad) {
+  const cos = Math.cos(rotationRad);
+  const sin = Math.sin(rotationRad);
+  const dx = point.x - center.x;
+  const dy = point.y - center.y;
+  return {
+    x: center.x + dx * cos - dy * sin,
+    y: center.y + dx * sin + dy * cos
+  };
+}
+function pagePointToChromeLocal(pagePoint, chrome) {
+  const cos = Math.cos(-chrome.rotationRad);
+  const sin = Math.sin(-chrome.rotationRad);
+  const dx = pagePoint.x - chrome.center.x;
+  const dy = pagePoint.y - chrome.center.y;
+  return {
+    x: dx * cos - dy * sin,
+    y: dx * sin + dy * cos
+  };
+}
+function isPagePointInChrome(pagePoint, chrome) {
+  const local = pagePointToChromeLocal(pagePoint, chrome);
+  const halfW = chrome.width / 2;
+  const halfH = chrome.height / 2;
+  return local.x >= -halfW && local.x <= halfW && local.y >= -halfH && local.y <= halfH;
+}
+function getChromeHandlePositionsLocal(chrome, dominantHand) {
+  const halfW = chrome.width / 2;
+  const halfH = chrome.height / 2;
+  if (dominantHand === "left") {
+    return {
+      resize: { x: -halfW, y: halfH },
+      rotate: { x: -halfW, y: -halfH }
+    };
+  }
+  return {
+    resize: { x: halfW, y: halfH },
+    rotate: { x: halfW, y: -halfH }
+  };
+}
+function getChromeHandlePositions(chrome, dominantHand) {
+  const pivot = chrome.center;
+  const local = getChromeHandlePositionsLocal(chrome, dominantHand);
+  return {
+    pivot,
+    resize: rotatePagePointAround({ x: pivot.x + local.resize.x, y: pivot.y + local.resize.y }, pivot, chrome.rotationRad),
+    rotate: rotatePagePointAround({ x: pivot.x + local.rotate.x, y: pivot.y + local.rotate.y }, pivot, chrome.rotationRad)
+  };
+}
+function hitTestChromeHandle(pagePoint, chrome, dominantHand, tolerancePageUnits) {
+  const handles = getChromeHandlePositions(chrome, dominantHand);
+  const resizeDist = Math.hypot(pagePoint.x - handles.resize.x, pagePoint.y - handles.resize.y);
+  if (resizeDist <= tolerancePageUnits)
+    return "resize";
+  const rotateDist = Math.hypot(pagePoint.x - handles.rotate.x, pagePoint.y - handles.rotate.y);
+  if (rotateDist <= tolerancePageUnits)
+    return "rotate";
+  return null;
+}
+function translateSelectionChrome(chrome, deltaX, deltaY) {
+  return {
+    ...chrome,
+    center: {
+      x: chrome.center.x + deltaX,
+      y: chrome.center.y + deltaY
+    }
+  };
+}
+function applyScaleToSelectionChrome(chrome, scale) {
+  if (scale === 1)
+    return chrome;
+  return {
+    ...chrome,
+    width: chrome.width * scale,
+    height: chrome.height * scale
+  };
+}
+function applyRotationToSelectionChrome(chrome, rotationRad) {
+  if (rotationRad === 0)
+    return chrome;
+  return {
+    ...chrome,
+    rotationRad: chrome.rotationRad + rotationRad
+  };
+}
+var EMPTY_SELECTION_CHROME_PREVIEW = {
+  scale: 1,
+  rotationRad: 0,
+  translateX: 0,
+  translateY: 0
+};
+function getEffectiveChrome(chrome, preview) {
+  if (!preview)
+    return chrome;
+  let next = {
+    ...chrome,
+    center: {
+      x: chrome.center.x + preview.translateX,
+      y: chrome.center.y + preview.translateY
+    }
+  };
+  if (preview.scale !== 1)
+    next = applyScaleToSelectionChrome(next, preview.scale);
+  if (preview.rotationRad !== 0)
+    next = applyRotationToSelectionChrome(next, preview.rotationRad);
+  return next;
+}
+
+// src/ink-canvas/selection-transform.ts
+function cloneStroke(stroke) {
+  return {
+    ...stroke,
+    points: stroke.points.map((point) => [...point]),
+    style: { ...stroke.style },
+    offset: { x: stroke.offset.x, y: stroke.offset.y }
+  };
+}
+function transformWorldPoint(wx, wy, pivot, scale, rotationRad) {
+  let x2 = wx - pivot.x;
+  let y3 = wy - pivot.y;
+  x2 *= scale;
+  y3 *= scale;
+  if (rotationRad !== 0) {
+    const cos = Math.cos(rotationRad);
+    const sin = Math.sin(rotationRad);
+    const rx = x2 * cos - y3 * sin;
+    const ry = x2 * sin + y3 * cos;
+    x2 = rx;
+    y3 = ry;
+  }
+  return { x: x2 + pivot.x, y: y3 + pivot.y };
+}
+function transformStrokesAroundPivot(strokes, pivot, scale, rotationRad) {
+  if (scale === 1 && rotationRad === 0) {
+    return strokes.map(cloneStroke);
+  }
+  return strokes.map((stroke) => {
+    const nextPoints = stroke.points.map(([x2, y3, pressure]) => {
+      const wx = x2 + stroke.offset.x;
+      const wy = y3 + stroke.offset.y;
+      const transformed = transformWorldPoint(wx, wy, pivot, scale, rotationRad);
+      return [transformed.x, transformed.y, pressure];
+    });
+    return {
+      ...stroke,
+      points: nextPoints,
+      offset: { x: 0, y: 0 },
+      style: {
+        ...stroke.style,
+        size: stroke.style.size * scale
+      }
+    };
+  });
+}
+function scaleFactorFromPointerDistance(pivot, startPage, currentPage) {
+  const startDist = Math.hypot(startPage.x - pivot.x, startPage.y - pivot.y);
+  const currentDist = Math.hypot(currentPage.x - pivot.x, currentPage.y - pivot.y);
+  if (startDist < 1e-6)
+    return 1;
+  return currentDist / startDist;
+}
+function rotationDeltaFromPointers(pivot, startPage, currentPage) {
+  const a0 = Math.atan2(startPage.y - pivot.y, startPage.x - pivot.x);
+  const a1 = Math.atan2(currentPage.y - pivot.y, currentPage.x - pivot.x);
+  return a1 - a0;
+}
+function rotationDeltaForDominantHand(dominantHand, pivot, startPage, currentPage) {
+  const delta = rotationDeltaFromPointers(pivot, startPage, currentPage);
+  return dominantHand === "left" ? -delta : delta;
+}
+
+// src/ink-canvas/utils/lasso-stroke-selection.ts
+function strokeIntersectsLassoPolygon(stroke, lasso) {
+  if (lasso.length < 3 || stroke.points.length === 0)
+    return false;
+  const worldPoints = stroke.points.map((point) => ({
+    x: point[0] + stroke.offset.x,
+    y: point[1] + stroke.offset.y
+  }));
+  for (const point of worldPoints) {
+    if (isPointInPolygon2(point.x, point.y, lasso))
+      return true;
+  }
+  for (let i3 = 0; i3 < worldPoints.length - 1; i3++) {
+    if (segmentIntersectsPolygon(worldPoints[i3], worldPoints[i3 + 1], lasso))
+      return true;
+  }
+  const rendered = getRenderedStrokeData(stroke);
+  const bounds = {
+    minX: rendered.bounds.minX + stroke.offset.x,
+    minY: rendered.bounds.minY + stroke.offset.y,
+    maxX: rendered.bounds.maxX + stroke.offset.x,
+    maxY: rendered.bounds.maxY + stroke.offset.y
+  };
+  return boundsIntersectsPolygon(bounds, lasso);
+}
+function boundsIntersectsPolygon(bounds, polygon) {
+  const corners = [
+    { x: bounds.minX, y: bounds.minY },
+    { x: bounds.maxX, y: bounds.minY },
+    { x: bounds.maxX, y: bounds.maxY },
+    { x: bounds.minX, y: bounds.maxY }
+  ];
+  for (const corner of corners) {
+    if (isPointInPolygon2(corner.x, corner.y, polygon))
+      return true;
+  }
+  const bboxEdges = [
+    [corners[0], corners[1]],
+    [corners[1], corners[2]],
+    [corners[2], corners[3]],
+    [corners[3], corners[0]]
+  ];
+  for (const [a3, b2] of bboxEdges) {
+    if (segmentIntersectsPolygon(a3, b2, polygon))
+      return true;
+  }
+  for (const vertex of polygon) {
+    if (vertex.x >= bounds.minX && vertex.x <= bounds.maxX && vertex.y >= bounds.minY && vertex.y <= bounds.maxY) {
+      return true;
+    }
+  }
+  return false;
+}
+function segmentIntersectsPolygon(a3, b2, polygon) {
+  const n3 = polygon.length;
+  for (let i3 = 0, j2 = n3 - 1; i3 < n3; j2 = i3++) {
+    const c4 = polygon[j2];
+    const d2 = polygon[i3];
+    if (segmentsIntersect(a3, b2, c4, d2))
+      return true;
+  }
+  return false;
+}
+function segmentsIntersect(a3, b2, c4, d2) {
+  const denominator = (b2.x - a3.x) * (d2.y - c4.y) - (b2.y - a3.y) * (d2.x - c4.x);
+  if (denominator === 0)
+    return false;
+  const t4 = ((c4.x - a3.x) * (d2.y - c4.y) - (c4.y - a3.y) * (d2.x - c4.x)) / denominator;
+  const u3 = ((c4.x - a3.x) * (b2.y - a3.y) - (c4.y - a3.y) * (b2.x - a3.x)) / denominator;
+  return t4 >= 0 && t4 <= 1 && u3 >= 0 && u3 <= 1;
+}
+function isPointInPolygon2(x2, y3, polygon) {
+  let inside = false;
+  const n3 = polygon.length;
+  for (let i3 = 0, j2 = n3 - 1; i3 < n3; j2 = i3++) {
+    const xi = polygon[i3].x;
+    const yi = polygon[i3].y;
+    const xj = polygon[j2].x;
+    const yj = polygon[j2].y;
+    const intersect = yi > y3 !== yj > y3 && x2 < (xj - xi) * (y3 - yi) / (yj - yi) + xi;
+    if (intersect)
+      inside = !inside;
+  }
+  return inside;
+}
+
 // src/ink-canvas/tools/select-tool.ts
 var phase = "idle";
 var lassoPoints = [];
 var dragStartPage = null;
 var dragAccumulatedDelta = { x: 0, y: 0 };
+var transformPivot = null;
+var transformStartPage = null;
+var transformPreviewScale = 1;
+var transformPreviewRotationRad = 0;
+var transformBaseOffsets = /* @__PURE__ */ new Map();
+var SELECT_STROKE_DRAG_THRESHOLD_SCREEN_PX = 6;
+var strokeDragCandidateId = null;
+var strokeDragCandidateStartClient = null;
+var lassoGestureStartClient = null;
+var lassoGestureStartPage = null;
+var lassoGestureMaxScreenDisplacement = 0;
+function resetLassoGestureTracking() {
+  lassoGestureStartClient = null;
+  lassoGestureStartPage = null;
+  lassoGestureMaxScreenDisplacement = 0;
+}
+function recordLassoGestureClientPosition(clientX, clientY) {
+  if (!lassoGestureStartClient)
+    return;
+  const displacement = Math.hypot(clientX - lassoGestureStartClient.x, clientY - lassoGestureStartClient.y);
+  if (displacement > lassoGestureMaxScreenDisplacement) {
+    lassoGestureMaxScreenDisplacement = displacement;
+  }
+}
+var MIN_BOUNDS_PAGE_FOR_HANDLES = 24;
 function selectToolPointerDown(e3, ctx) {
   const camera = ctx.getCamera();
   const containerRect = ctx.getContainerRect();
   const pagePoint = screenToPage(camera, containerRect, e3.clientX, e3.clientY);
   const selected = ctx.getSelectedStrokeIds();
+  const tolerancePage = SELECTION_HANDLE_HIT_RADIUS_SCREEN_PX / camera.zoom;
+  const chrome = ctx.getSelectionChrome();
+  if (!ctx.writingMode && selected.size > 0 && chrome) {
+    const handleHit = hitTestChromeHandle(pagePoint, chrome, ctx.getDominantHand(), tolerancePage);
+    if (handleHit === "resize") {
+      const handles = getChromeHandlePositions(chrome, ctx.getDominantHand());
+      beginTransformGesture(ctx, "resizing", pagePoint, handles.pivot);
+      return;
+    }
+    if (handleHit === "rotate") {
+      const handles = getChromeHandlePositions(chrome, ctx.getDominantHand());
+      beginTransformGesture(ctx, "rotating", pagePoint, handles.pivot);
+      return;
+    }
+  }
   if (selected.size > 0) {
-    const hitId = hitTestSingleStroke(e3, ctx);
-    if (hitId && selected.has(hitId)) {
+    if (chrome && isPagePointInChrome(pagePoint, chrome)) {
       phase = "dragging";
       dragStartPage = pagePoint;
       dragAccumulatedDelta = { x: 0, y: 0 };
@@ -99550,13 +100207,38 @@ function selectToolPointerDown(e3, ctx) {
   }
   phase = "lasso";
   lassoPoints = [pagePoint];
-  if (!e3.shiftKey) {
-    ctx.setSelectedStrokeIds(/* @__PURE__ */ new Set());
-    ctx.onSelectionChange?.();
+  lassoGestureStartClient = { x: e3.clientX, y: e3.clientY };
+  lassoGestureStartPage = pagePoint;
+  lassoGestureMaxScreenDisplacement = 0;
+  strokeDragCandidateId = null;
+  strokeDragCandidateStartClient = null;
+  const hitId = hitTestSingleStroke(e3, ctx);
+  if (hitId && selected.has(hitId)) {
+    strokeDragCandidateId = hitId;
+    strokeDragCandidateStartClient = { x: e3.clientX, y: e3.clientY };
   }
 }
 function selectToolPointerMove(e3, ctx) {
   if (phase === "lasso") {
+    if (strokeDragCandidateId && strokeDragCandidateStartClient && lassoPoints.length > 0) {
+      const dx = e3.clientX - strokeDragCandidateStartClient.x;
+      const dy = e3.clientY - strokeDragCandidateStartClient.y;
+      if (Math.hypot(dx, dy) >= SELECT_STROKE_DRAG_THRESHOLD_SCREEN_PX) {
+        const camera2 = ctx.getCamera();
+        const containerRect2 = ctx.getContainerRect();
+        const pagePoint2 = screenToPage(camera2, containerRect2, e3.clientX, e3.clientY);
+        phase = "dragging";
+        dragStartPage = pagePoint2;
+        dragAccumulatedDelta = { x: 0, y: 0 };
+        strokeDragCandidateId = null;
+        strokeDragCandidateStartClient = null;
+        clearLassoVisual(ctx);
+        lassoPoints = [];
+        resetLassoGestureTracking();
+        return;
+      }
+    }
+    recordLassoGestureClientPosition(e3.clientX, e3.clientY);
     const camera = ctx.getCamera();
     const containerRect = ctx.getContainerRect();
     const pagePoint = screenToPage(camera, containerRect, e3.clientX, e3.clientY);
@@ -99578,7 +100260,43 @@ function selectToolPointerMove(e3, ctx) {
     };
     moveSelectionVisuals(ctx, delta.x, delta.y);
     dragAccumulatedDelta = { x: dx, y: dy };
+    publishSelectionPreview(ctx);
     return;
+  }
+  if (phase === "resizing" || phase === "rotating") {
+    const camera = ctx.getCamera();
+    const containerRect = ctx.getContainerRect();
+    const pagePoint = screenToPage(camera, containerRect, e3.clientX, e3.clientY);
+    if (!transformPivot || !transformStartPage)
+      return;
+    if (phase === "resizing") {
+      transformPreviewScale = scaleFactorFromPointerDistance(transformPivot, transformStartPage, pagePoint);
+      transformPreviewRotationRad = 0;
+    } else {
+      transformPreviewRotationRad = rotationDeltaForDominantHand(ctx.getDominantHand(), transformPivot, transformStartPage, pagePoint);
+      transformPreviewScale = 1;
+    }
+    applyTransformPreviewToDom(ctx);
+    publishSelectionPreview(ctx);
+    return;
+  }
+}
+function publishSelectionPreview(ctx) {
+  if (phase === "dragging") {
+    ctx.setSelectionPreview({
+      ...EMPTY_SELECTION_CHROME_PREVIEW,
+      translateX: dragAccumulatedDelta.x,
+      translateY: dragAccumulatedDelta.y
+    });
+    return;
+  }
+  if (phase === "resizing" || phase === "rotating") {
+    ctx.setSelectionPreview({
+      scale: transformPreviewScale,
+      rotationRad: transformPreviewRotationRad,
+      translateX: 0,
+      translateY: 0
+    });
   }
 }
 function selectToolPointerUp(_e, ctx) {
@@ -99592,85 +100310,114 @@ function selectToolPointerUp(_e, ctx) {
     phase = "idle";
     return;
   }
+  if (phase === "resizing" || phase === "rotating") {
+    finishTransform(ctx);
+    phase = "idle";
+    return;
+  }
 }
 function selectToolPointerCancel(_e, ctx) {
+  if (phase === "dragging" || phase === "resizing" || phase === "rotating") {
+    revertSelectionVisuals(ctx);
+  }
   phase = "idle";
   lassoPoints = [];
   dragStartPage = null;
+  dragAccumulatedDelta = { x: 0, y: 0 };
+  strokeDragCandidateId = null;
+  strokeDragCandidateStartClient = null;
+  resetTransformGestureState();
+  resetLassoGestureTracking();
   clearLassoVisual(ctx);
 }
+function isSelectToolActive() {
+  return phase !== "idle";
+}
+function getSelectedStrokes(ctx) {
+  const ids = ctx.getSelectedStrokeIds();
+  const strokes = [];
+  for (const id of ids) {
+    const stroke = ctx.store.getById(id);
+    if (stroke)
+      strokes.push(stroke);
+  }
+  return strokes;
+}
+function getContextSelectionBounds(ctx) {
+  const strokes = getSelectedStrokes(ctx);
+  const paddingPage = selectionBoundsPaddingPageUnits(ctx.getCamera().zoom);
+  const bounds = getSelectionBoundsForStrokes(strokes, paddingPage);
+  if (!bounds)
+    return null;
+  const minSize = MIN_BOUNDS_PAGE_FOR_HANDLES / ctx.getCamera().zoom;
+  return expandBoundsToMinimumSize(bounds, minSize);
+}
 function finishLasso(e3, ctx) {
+  const isShortTapGesture = lassoGestureMaxScreenDisplacement < SELECT_STROKE_DRAG_THRESHOLD_SCREEN_PX;
+  if (isShortTapGesture) {
+    const selected2 = ctx.getSelectedStrokeIds();
+    const chrome = ctx.getSelectionChrome();
+    const tapPagePoint = lassoGestureStartPage;
+    if (selected2.size > 0 && chrome && tapPagePoint && !isPagePointInChrome(tapPagePoint, chrome)) {
+      ctx.setSelectedStrokeIds(/* @__PURE__ */ new Set());
+      ctx.onSelectionChange?.();
+    } else {
+      handleTapSelect(e3, ctx);
+    }
+    clearLassoVisual(ctx);
+    lassoPoints = [];
+    strokeDragCandidateId = null;
+    strokeDragCandidateStartClient = null;
+    resetLassoGestureTracking();
+    return;
+  }
   if (lassoPoints.length < 3) {
     handleTapSelect(e3, ctx);
     clearLassoVisual(ctx);
     lassoPoints = [];
+    resetLassoGestureTracking();
     return;
   }
   const allStrokes = ctx.store.getAll();
   const selected = new Set(ctx.getSelectedStrokeIds());
   for (const stroke of allStrokes) {
-    const isInside = isStrokeInsideLasso(stroke, lassoPoints);
-    if (isInside)
+    if (!strokeIntersectsLassoPolygon(stroke, lassoPoints))
+      continue;
+    if (selected.has(stroke.id))
+      selected.delete(stroke.id);
+    else
       selected.add(stroke.id);
   }
   ctx.setSelectedStrokeIds(selected);
   ctx.onSelectionChange?.();
   clearLassoVisual(ctx);
   lassoPoints = [];
+  strokeDragCandidateId = null;
+  strokeDragCandidateStartClient = null;
+  resetLassoGestureTracking();
 }
 function handleTapSelect(e3, ctx) {
-  const hitId = hitTestSingleStroke(e3, ctx);
   const next = new Set(ctx.getSelectedStrokeIds());
-  if (hitId) {
-    if (e3.shiftKey) {
-      if (next.has(hitId))
-        next.delete(hitId);
-      else
-        next.add(hitId);
-    } else {
-      next.clear();
-      next.add(hitId);
-    }
+  if (strokeDragCandidateId) {
+    next.delete(strokeDragCandidateId);
+    strokeDragCandidateId = null;
+    strokeDragCandidateStartClient = null;
     ctx.setSelectedStrokeIds(next);
     ctx.onSelectionChange?.();
     return;
   }
-  if (!e3.shiftKey) {
-    ctx.setSelectedStrokeIds(/* @__PURE__ */ new Set());
+  const hitId = hitTestSingleStroke(e3, ctx);
+  if (hitId) {
+    if (next.has(hitId))
+      next.delete(hitId);
+    else
+      next.add(hitId);
+    ctx.setSelectedStrokeIds(next);
     ctx.onSelectionChange?.();
+    return;
   }
-}
-function isStrokeInsideLasso(stroke, lasso) {
-  if (stroke.points.length === 0)
-    return false;
-  let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
-  for (const pt of stroke.points) {
-    const px = pt[0] + stroke.offset.x;
-    const py = pt[1] + stroke.offset.y;
-    if (px < minX)
-      minX = px;
-    if (py < minY)
-      minY = py;
-    if (px > maxX)
-      maxX = px;
-    if (py > maxY)
-      maxY = py;
-  }
-  const cx = (minX + maxX) / 2;
-  const cy = (minY + maxY) / 2;
-  return isPointInPolygon2(cx, cy, lasso);
-}
-function isPointInPolygon2(x2, y3, polygon) {
-  let inside = false;
-  const n3 = polygon.length;
-  for (let i3 = 0, j2 = n3 - 1; i3 < n3; j2 = i3++) {
-    const xi = polygon[i3].x, yi = polygon[i3].y;
-    const xj = polygon[j2].x, yj = polygon[j2].y;
-    const intersect = yi > y3 !== yj > y3 && x2 < (xj - xi) * (y3 - yi) / (yj - yi) + xi;
-    if (intersect)
-      inside = !inside;
-  }
-  return inside;
+  ctx.setSelectedStrokeIds(/* @__PURE__ */ new Set());
+  ctx.onSelectionChange?.();
 }
 function updateLassoVisual(ctx) {
   const svg = ctx.getSvgElement();
@@ -99680,8 +100427,8 @@ function updateLassoVisual(ctx) {
   if (!lassoEl) {
     lassoEl = svg.createSvg("polygon");
     lassoEl.classList.add("ink-canvas-lasso");
-    lassoEl.setAttribute("fill", "rgba(0, 123, 255, 0.08)");
-    lassoEl.setAttribute("stroke", "rgba(0, 123, 255, 0.5)");
+    lassoEl.setAttribute("fill", "color-mix(in srgb, var(--interactive-accent) 14%, transparent)");
+    lassoEl.setAttribute("stroke", "var(--interactive-accent)");
     lassoEl.setAttribute("stroke-width", "1");
     lassoEl.setAttribute("stroke-dasharray", "4 2");
   }
@@ -99699,17 +100446,25 @@ function clearLassoVisual(ctx) {
 }
 function finishDrag(ctx) {
   if (dragAccumulatedDelta.x === 0 && dragAccumulatedDelta.y === 0) {
+    ctx.setSelectionPreview(null);
     dragStartPage = null;
     return;
   }
   const selected = ctx.getSelectedStrokeIds();
   if (selected.size === 0) {
+    ctx.setSelectionPreview(null);
     dragStartPage = null;
     return;
   }
   const ids = Array.from(selected);
   const command = new MoveStrokesCommand(ctx.store, ids, dragAccumulatedDelta.x, dragAccumulatedDelta.y);
   ctx.undoManager.execute(command);
+  const chrome = ctx.getSelectionChrome();
+  if (chrome) {
+    ctx.setSelectionChrome(translateSelectionChrome(chrome, dragAccumulatedDelta.x, dragAccumulatedDelta.y));
+  }
+  ctx.setSelectionPreview(null);
+  syncStrokeGroupTransformsFromStore(ctx, ids);
   dragStartPage = null;
   dragAccumulatedDelta = { x: 0, y: 0 };
 }
@@ -99731,6 +100486,108 @@ function moveSelectionVisuals(ctx, dx, dy) {
     group.setAttribute("data-offset-y", String(newY));
   }
 }
+function beginTransformGesture(ctx, nextPhase, pagePoint, pivot) {
+  phase = nextPhase;
+  transformPivot = pivot;
+  transformStartPage = pagePoint;
+  transformPreviewScale = 1;
+  transformPreviewRotationRad = 0;
+  transformBaseOffsets = /* @__PURE__ */ new Map();
+  ctx.setSelectionPreview({ ...EMPTY_SELECTION_CHROME_PREVIEW });
+  for (const id of ctx.getSelectedStrokeIds()) {
+    const stroke = ctx.store.getById(id);
+    if (!stroke)
+      continue;
+    transformBaseOffsets.set(id, { ...stroke.offset });
+  }
+}
+function resetTransformGestureState() {
+  transformPivot = null;
+  transformStartPage = null;
+  transformPreviewScale = 1;
+  transformPreviewRotationRad = 0;
+  transformBaseOffsets = /* @__PURE__ */ new Map();
+}
+function buildPivotTransformAttribute(pivot, scale, rotationRad, offsetX, offsetY) {
+  const rotateDeg = rotationRad * 180 / Math.PI;
+  return [
+    `translate(${pivot.x}, ${pivot.y})`,
+    `rotate(${rotateDeg})`,
+    `scale(${scale})`,
+    `translate(${-pivot.x}, ${-pivot.y})`,
+    `translate(${offsetX}, ${offsetY})`
+  ].join(" ");
+}
+function applyTransformPreviewToDom(ctx) {
+  const svg = ctx.getSvgElement();
+  if (!svg || !transformPivot)
+    return;
+  const scale = transformPreviewScale;
+  const rotationRad = transformPreviewRotationRad;
+  for (const id of ctx.getSelectedStrokeIds()) {
+    const group = svg.querySelector(`[data-stroke-group][data-stroke-id="${id}"]`);
+    const baseOffset = transformBaseOffsets.get(id);
+    if (!group || !baseOffset)
+      continue;
+    group.setAttribute("transform", buildPivotTransformAttribute(transformPivot, scale, rotationRad, baseOffset.x, baseOffset.y));
+  }
+}
+function finishTransform(ctx) {
+  const selectedIds = Array.from(ctx.getSelectedStrokeIds());
+  const strokes = getSelectedStrokes(ctx);
+  const pivot = transformPivot;
+  const isNoOp = transformPreviewScale === 1 && transformPreviewRotationRad === 0;
+  if (!pivot || isNoOp || strokes.length === 0) {
+    ctx.setSelectionPreview(null);
+    revertSelectionVisuals(ctx);
+    return;
+  }
+  const nextStrokes = transformStrokesAroundPivot(strokes, pivot, transformPreviewScale, transformPreviewRotationRad);
+  const command = new TransformStrokesCommand(ctx.store, nextStrokes);
+  ctx.undoManager.execute(command);
+  const chrome = ctx.getSelectionChrome();
+  if (chrome) {
+    let nextChrome = chrome;
+    if (transformPreviewScale !== 1) {
+      nextChrome = applyScaleToSelectionChrome(nextChrome, transformPreviewScale);
+    }
+    if (transformPreviewRotationRad !== 0) {
+      nextChrome = applyRotationToSelectionChrome(nextChrome, transformPreviewRotationRad);
+    }
+    ctx.setSelectionChrome(nextChrome);
+  }
+  ctx.setSelectionPreview(null);
+  syncStrokeGroupTransformsFromStore(ctx, selectedIds);
+  resetTransformGestureState();
+}
+function revertSelectionVisuals(ctx) {
+  const ids = Array.from(ctx.getSelectedStrokeIds());
+  ctx.setSelectionPreview(null);
+  syncStrokeGroupTransformsFromStore(ctx, ids);
+  resetTransformGestureState();
+  dragStartPage = null;
+  dragAccumulatedDelta = { x: 0, y: 0 };
+}
+function syncStrokeGroupTransformsFromStore(ctx, ids) {
+  const svg = ctx.getSvgElement();
+  if (!svg)
+    return;
+  for (const id of ids) {
+    const stroke = ctx.store.getById(id);
+    const group = svg.querySelector(`[data-stroke-group][data-stroke-id="${id}"]`);
+    if (!stroke || !group)
+      continue;
+    const ox = stroke.offset.x;
+    const oy = stroke.offset.y;
+    group.setAttribute("data-offset-x", String(ox));
+    group.setAttribute("data-offset-y", String(oy));
+    if (ox !== 0 || oy !== 0) {
+      group.setAttribute("transform", `translate(${ox}, ${oy})`);
+    } else {
+      group.removeAttribute("transform");
+    }
+  }
+}
 function hitTestSingleStroke(e3, ctx) {
   const svg = ctx.getSvgElement();
   if (!svg)
@@ -99738,8 +100595,174 @@ function hitTestSingleStroke(e3, ctx) {
   return getStrokeIdAtClientPoint(svg, e3.clientX, e3.clientY);
 }
 
+// src/ink-canvas/selection-overlay.tsx
+var React106 = __toESM(require_react());
+
+// src/graphics/icons/resize-diagonal-icon.tsx
+var React104 = __toESM(require_react());
+var ResizeDiagonalIcon = (props) => /* @__PURE__ */ React104.createElement("svg", {
+  xmlns: "http://www.w3.org/2000/svg",
+  height: "1em",
+  viewBox: "0 0 24 24",
+  width: "1em",
+  ...props
+}, /* @__PURE__ */ React104.createElement("path", {
+  d: "M19.071 12.414a1 1 0 0 1 1 1v5.657a1 1 0 0 1-1 1h-5.657a1 1 0 0 1 0-2h4.657v-4.657a1 1 0 0 1 1-1ZM3.929 4.929a1 1 0 0 1 1-1h5.657a1 1 0 0 1 0 2H5.929v4.657a1 1 0 0 1-2 0V4.929Z"
+}), /* @__PURE__ */ React104.createElement("path", {
+  d: "M4.222 4.222a.999.999 0 0 1 1.414 0l14.142 14.142a.999.999 0 1 1-1.414 1.414L4.222 5.636a.999.999 0 0 1 0-1.414Z"
+}));
+
+// src/graphics/icons/rotate-handle-icon.tsx
+var React105 = __toESM(require_react());
+var RotateHandleIcon = (props) => {
+  const { direction = "clockwise", ...svgProps } = props;
+  const isCounterclockwise = direction === "counterclockwise";
+  return /* @__PURE__ */ React105.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 24 24",
+    width: 24,
+    height: 24,
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: 2,
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    ...svgProps
+  }, isCounterclockwise ? /* @__PURE__ */ React105.createElement(React105.Fragment, null, /* @__PURE__ */ React105.createElement("path", {
+    d: "M3 7v6h6"
+  }), /* @__PURE__ */ React105.createElement("path", {
+    d: "M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13"
+  })) : /* @__PURE__ */ React105.createElement(React105.Fragment, null, /* @__PURE__ */ React105.createElement("path", {
+    d: "M21 7v6h-6"
+  }), /* @__PURE__ */ React105.createElement("path", {
+    d: "M3 17a9 9 0 0 1 9-9 9 9 0 0 1 6 2.3l3 2.7"
+  })));
+};
+
+// src/ink-canvas/selection-overlay.tsx
+var RESIZE_ICON_SCREEN_PX = 11;
+var ROTATE_ICON_SCREEN_PX = 12;
+var ROTATE_ICON_EXTRA_DEG = 50;
+var HANDLE_ICON_VIEW_SIZE = 24;
+function getSelectionChromeRectLayout(props) {
+  const effectiveChrome = getEffectiveChrome(props.chrome, props.preview);
+  const cornerRadiusPage = SELECTION_BOUNDS_CORNER_RADIUS_SCREEN_PX / props.cameraZoom;
+  const halfW = effectiveChrome.width / 2;
+  const halfH = effectiveChrome.height / 2;
+  const rotateDeg = effectiveChrome.rotationRad * 180 / Math.PI;
+  const cx = effectiveChrome.center.x;
+  const cy = effectiveChrome.center.y;
+  return {
+    transform: `translate(${cx}, ${cy}) rotate(${rotateDeg})`,
+    halfW,
+    halfH,
+    width: effectiveChrome.width,
+    height: effectiveChrome.height,
+    cornerRadiusPage
+  };
+}
+var SelectionBoundsFillUnderlay = (props) => {
+  const layout = getSelectionChromeRectLayout(props);
+  return /* @__PURE__ */ React106.createElement("g", {
+    className: "ink-canvas-selection-bounds-underlay",
+    pointerEvents: "none"
+  }, /* @__PURE__ */ React106.createElement("g", {
+    transform: layout.transform
+  }, /* @__PURE__ */ React106.createElement("rect", {
+    className: "ink-canvas-selection-bounds-fill",
+    x: -layout.halfW,
+    y: -layout.halfH,
+    width: layout.width,
+    height: layout.height,
+    rx: layout.cornerRadiusPage,
+    ry: layout.cornerRadiusPage
+  })));
+};
+var SelectionOverlay = (props) => {
+  const effectiveChrome = getEffectiveChrome(props.chrome, props.preview);
+  const zoom = props.cameraZoom;
+  const layout = getSelectionChromeRectLayout(props);
+  const handleRadiusPage = SELECTION_HANDLE_HIT_RADIUS_SCREEN_PX / zoom;
+  const resizeIconSizePage = RESIZE_ICON_SCREEN_PX / zoom;
+  const rotateIconSizePage = ROTATE_ICON_SCREEN_PX / zoom;
+  const handlesLocal = getChromeHandlePositionsLocal(effectiveChrome, props.dominantHand);
+  const shouldFlipHandleIcons = props.dominantHand === "left";
+  return /* @__PURE__ */ React106.createElement("g", {
+    ref: props.overlayRef,
+    className: "ink-canvas-selection-overlay"
+  }, /* @__PURE__ */ React106.createElement("g", {
+    transform: layout.transform
+  }, /* @__PURE__ */ React106.createElement("rect", {
+    className: "ink-canvas-selection-bounds",
+    x: -layout.halfW,
+    y: -layout.halfH,
+    width: layout.width,
+    height: layout.height,
+    rx: layout.cornerRadiusPage,
+    ry: layout.cornerRadiusPage
+  }), !props.writingMode && /* @__PURE__ */ React106.createElement(React106.Fragment, null, /* @__PURE__ */ React106.createElement(SelectionCornerHandle, {
+    cx: handlesLocal.resize.x,
+    cy: handlesLocal.resize.y,
+    r: handleRadiusPage,
+    iconSizePage: resizeIconSizePage,
+    iconKind: "resize",
+    flipIconX: shouldFlipHandleIcons
+  }), /* @__PURE__ */ React106.createElement(SelectionCornerHandle, {
+    cx: handlesLocal.rotate.x,
+    cy: handlesLocal.rotate.y,
+    r: handleRadiusPage,
+    iconSizePage: rotateIconSizePage,
+    iconKind: "rotate",
+    extraRotateDeg: shouldFlipHandleIcons ? -ROTATE_ICON_EXTRA_DEG : ROTATE_ICON_EXTRA_DEG,
+    flipIconX: false,
+    rotateIconDirection: shouldFlipHandleIcons ? "counterclockwise" : "clockwise"
+  }))));
+};
+function SelectionCornerHandle(props) {
+  const extraRotate = props.extraRotateDeg ?? 0;
+  const iconScale = props.iconSizePage / HANDLE_ICON_VIEW_SIZE;
+  const iconScaleX = (props.flipIconX ? -1 : 1) * iconScale;
+  return /* @__PURE__ */ React106.createElement("g", {
+    transform: `translate(${props.cx}, ${props.cy})`
+  }, /* @__PURE__ */ React106.createElement("circle", {
+    className: "ink-canvas-selection-handle-dot",
+    cx: 0,
+    cy: 0,
+    r: props.r
+  }), /* @__PURE__ */ React106.createElement("g", {
+    className: `ink-canvas-selection-handle-icon ink-canvas-selection-handle-icon--${props.iconKind}`,
+    transform: `rotate(${extraRotate}) scale(${iconScaleX}, ${iconScale}) translate(${-HANDLE_ICON_VIEW_SIZE / 2}, ${-HANDLE_ICON_VIEW_SIZE / 2})`
+  }, props.iconKind === "resize" ? /* @__PURE__ */ React106.createElement(ResizeDiagonalIcon, {
+    width: HANDLE_ICON_VIEW_SIZE,
+    height: HANDLE_ICON_VIEW_SIZE
+  }) : /* @__PURE__ */ React106.createElement(RotateHandleIcon, {
+    width: HANDLE_ICON_VIEW_SIZE,
+    height: HANDLE_ICON_VIEW_SIZE,
+    direction: props.rotateIconDirection ?? "clockwise"
+  })));
+}
+
+// src/ink-canvas/selection-context-menu.ts
+var SELECTION_CONTEXT_MENU_LONG_PRESS_MS = 500;
+var SELECTION_CONTEXT_MENU_LONG_PRESS_MOVE_THRESHOLD_PX = 10;
+function buildSelectionStrokeContextMenuOptions(deleteSelectedStrokes) {
+  return [
+    {
+      text: "Delete",
+      destructive: true,
+      action: deleteSelectedStrokes
+    }
+  ];
+}
+function isPagePointOnSelectionChrome(pagePoint, tool, selectedStrokeCount, chrome, preview) {
+  if (tool !== "select" || selectedStrokeCount === 0 || !chrome)
+    return false;
+  const effectiveChrome = getEffectiveChrome(chrome, preview);
+  return isPagePointInChrome(pagePoint, effectiveChrome);
+}
+
 // src/components/jsx-components/finger-blocker/finger-blocker.tsx
-var React102 = __toESM(require_react());
+var React107 = __toESM(require_react());
 
 // src/ink-canvas/utils/stylus-eraser-pointer.ts
 var STYLUS_ERASER_POINTER_BUTTON = 5;
@@ -99870,58 +100893,58 @@ function FingerBlocker({
   onTouchGestureSessionStart,
   enableStylusSideButtonTemporaryErase = false
 }) {
-  const blockerRef = React102.useRef(null);
-  const pointerDownRef = React102.useRef(false);
-  const recentPenInputRef = React102.useRef(false);
-  const isPenDownRef = React102.useRef(false);
-  const lockedScrollPosRef = React102.useRef(null);
-  const activeScrollerRef = React102.useRef(null);
-  const currentTldrawToolIdRef = React102.useRef(null);
-  const tldrawToolCleanupMap = React102.useRef(/* @__PURE__ */ new Map());
-  const activeTouchPointerDataRef = React102.useRef(/* @__PURE__ */ new Map());
-  const twoFingerModeActiveRef = React102.useRef(false);
-  const prevTwoFingerMidpointRef = React102.useRef({ x: 0, y: 0 });
-  const prevTwoFingerDistanceRef = React102.useRef(0);
-  const prevCameraLockedRef = React102.useRef(false);
-  const twoFingerVerticalPanActiveRef = React102.useRef(false);
-  const prevVerticalPanMidpointRef = React102.useRef({ x: 0, y: 0 });
-  const prevSingleFingerVerticalPanClientYByPointerRef = React102.useRef(/* @__PURE__ */ new Map());
-  const onVerticalTouchPanRef = React102.useRef(onVerticalTouchPan);
-  const onDrawingEmbedTwoFingerGestureRef = React102.useRef(onDrawingEmbedTwoFingerGesture);
-  const onEmbedTwoFingerGestureEndRef = React102.useRef(onEmbedTwoFingerGestureEnd);
-  const onPanGestureEndRef = React102.useRef(onPanGestureEnd);
-  const onTouchGestureSessionStartRef = React102.useRef(onTouchGestureSessionStart);
-  React102.useEffect(() => {
+  const blockerRef = React107.useRef(null);
+  const pointerDownRef = React107.useRef(false);
+  const recentPenInputRef = React107.useRef(false);
+  const isPenDownRef = React107.useRef(false);
+  const lockedScrollPosRef = React107.useRef(null);
+  const activeScrollerRef = React107.useRef(null);
+  const currentTldrawToolIdRef = React107.useRef(null);
+  const tldrawToolCleanupMap = React107.useRef(/* @__PURE__ */ new Map());
+  const activeTouchPointerDataRef = React107.useRef(/* @__PURE__ */ new Map());
+  const twoFingerModeActiveRef = React107.useRef(false);
+  const prevTwoFingerMidpointRef = React107.useRef({ x: 0, y: 0 });
+  const prevTwoFingerDistanceRef = React107.useRef(0);
+  const prevCameraLockedRef = React107.useRef(false);
+  const twoFingerVerticalPanActiveRef = React107.useRef(false);
+  const prevVerticalPanMidpointRef = React107.useRef({ x: 0, y: 0 });
+  const prevSingleFingerVerticalPanClientYByPointerRef = React107.useRef(/* @__PURE__ */ new Map());
+  const onVerticalTouchPanRef = React107.useRef(onVerticalTouchPan);
+  const onDrawingEmbedTwoFingerGestureRef = React107.useRef(onDrawingEmbedTwoFingerGesture);
+  const onEmbedTwoFingerGestureEndRef = React107.useRef(onEmbedTwoFingerGestureEnd);
+  const onPanGestureEndRef = React107.useRef(onPanGestureEnd);
+  const onTouchGestureSessionStartRef = React107.useRef(onTouchGestureSessionStart);
+  React107.useEffect(() => {
     onTouchGestureSessionStartRef.current = onTouchGestureSessionStart;
   }, [onTouchGestureSessionStart]);
-  const touchGestureModeRef = React102.useRef(touchGestureMode);
+  const touchGestureModeRef = React107.useRef(touchGestureMode);
   touchGestureModeRef.current = touchGestureMode;
-  const touchGestureSessionActiveRef = React102.useRef(false);
-  const dedicatedWritingAxisLockedRef = React102.useRef("none");
-  const dedicatedWritingGestureStartClientRef = React102.useRef(/* @__PURE__ */ new Map());
-  const verticalPanConsumedRef = React102.useRef(false);
-  const embedPanZoomPointerIdsRef = React102.useRef(/* @__PURE__ */ new Set());
-  const middleButtonPanPointerIdsRef = React102.useRef(/* @__PURE__ */ new Set());
-  const stylusEraserPointerIdsRef = React102.useRef(/* @__PURE__ */ new Set());
-  const stylusSideButtonErasePointerIdsRef = React102.useRef(/* @__PURE__ */ new Set());
-  const enableStylusSideButtonTemporaryEraseRef = React102.useRef(enableStylusSideButtonTemporaryErase);
+  const touchGestureSessionActiveRef = React107.useRef(false);
+  const dedicatedWritingAxisLockedRef = React107.useRef("none");
+  const dedicatedWritingGestureStartClientRef = React107.useRef(/* @__PURE__ */ new Map());
+  const verticalPanConsumedRef = React107.useRef(false);
+  const embedPanZoomPointerIdsRef = React107.useRef(/* @__PURE__ */ new Set());
+  const middleButtonPanPointerIdsRef = React107.useRef(/* @__PURE__ */ new Set());
+  const stylusEraserPointerIdsRef = React107.useRef(/* @__PURE__ */ new Set());
+  const stylusSideButtonErasePointerIdsRef = React107.useRef(/* @__PURE__ */ new Set());
+  const enableStylusSideButtonTemporaryEraseRef = React107.useRef(enableStylusSideButtonTemporaryErase);
   enableStylusSideButtonTemporaryEraseRef.current = enableStylusSideButtonTemporaryErase;
-  const fingerDrawingPointerIdsRef = React102.useRef(/* @__PURE__ */ new Set());
-  const forwardFingerToCanvasRef = React102.useRef(forwardFingerToCanvas);
+  const fingerDrawingPointerIdsRef = React107.useRef(/* @__PURE__ */ new Set());
+  const forwardFingerToCanvasRef = React107.useRef(forwardFingerToCanvas);
   forwardFingerToCanvasRef.current = forwardFingerToCanvas;
-  React102.useEffect(() => {
+  React107.useEffect(() => {
     onVerticalTouchPanRef.current = onVerticalTouchPan;
   }, [onVerticalTouchPan]);
-  React102.useEffect(() => {
+  React107.useEffect(() => {
     onDrawingEmbedTwoFingerGestureRef.current = onDrawingEmbedTwoFingerGesture;
   }, [onDrawingEmbedTwoFingerGesture]);
-  React102.useEffect(() => {
+  React107.useEffect(() => {
     onEmbedTwoFingerGestureEndRef.current = onEmbedTwoFingerGestureEnd;
   }, [onEmbedTwoFingerGestureEnd]);
-  React102.useEffect(() => {
+  React107.useEffect(() => {
     onPanGestureEndRef.current = onPanGestureEnd;
   }, [onPanGestureEnd]);
-  React102.useEffect(() => {
+  React107.useEffect(() => {
     const onVisibilityOrPageHide = () => {
       clearAllInkCmScrollerScrollLocks("visibilitychange-or-pagehide");
       isPenDownRef.current = false;
@@ -99978,7 +101001,7 @@ function FingerBlocker({
       active.blur();
     }
   };
-  React102.useEffect(() => {
+  React107.useEffect(() => {
     const element = blockerRef.current;
     if (!element)
       return;
@@ -100679,7 +101702,7 @@ function FingerBlocker({
       }
     };
   }, [forwardPenToCanvas, forwardFingerToCanvas, enableTwoFingerGestures, onVerticalTouchPan, touchGestureMode]);
-  React102.useEffect(() => {
+  React107.useEffect(() => {
     const scroller = getScroller();
     if (!scroller)
       return;
@@ -100800,7 +101823,7 @@ function FingerBlocker({
       }
     };
   };
-  React102.useEffect(() => {
+  React107.useEffect(() => {
     if (!getTlEditor)
       return;
     const resolveTlEditor = getTlEditor;
@@ -100834,7 +101857,7 @@ function FingerBlocker({
       tldrawToolCleanupMap.current.clear();
     };
   }, [getTlEditor]);
-  return /* @__PURE__ */ React102.createElement("div", {
+  return /* @__PURE__ */ React107.createElement("div", {
     ref: blockerRef,
     style: {
       position: "absolute",
@@ -100878,11 +101901,24 @@ function useResolvedStrokeInputTreatAs(editorKind) {
   return value;
 }
 
-// src/logic/device-settings/use-stylus-side-button-temporary-erase.ts
+// src/logic/device-settings/use-high-contrast-user-interface.ts
 var import_react135 = __toESM(require_react());
-function useStylusSideButtonTemporaryEraseEnabled() {
-  const [isEnabled, setIsEnabled] = (0, import_react135.useState)(() => getStylusSideButtonTemporaryEraseEnabled());
+function useHighContrastUserInterface() {
+  const [isEnabled, setIsEnabled] = (0, import_react135.useState)(() => getHighContrastUserInterface());
   (0, import_react135.useEffect)(() => {
+    setIsEnabled(getHighContrastUserInterface());
+    return subscribeDeviceSettingsChanged(() => {
+      setIsEnabled(getHighContrastUserInterface());
+    });
+  }, []);
+  return isEnabled;
+}
+
+// src/logic/device-settings/use-stylus-side-button-temporary-erase.ts
+var import_react136 = __toESM(require_react());
+function useStylusSideButtonTemporaryEraseEnabled() {
+  const [isEnabled, setIsEnabled] = (0, import_react136.useState)(() => getStylusSideButtonTemporaryEraseEnabled());
+  (0, import_react136.useEffect)(() => {
     setIsEnabled(getStylusSideButtonTemporaryEraseEnabled());
     return subscribeDeviceSettingsChanged(() => {
       setIsEnabled(getStylusSideButtonTemporaryEraseEnabled());
@@ -100892,7 +101928,7 @@ function useStylusSideButtonTemporaryEraseEnabled() {
 }
 
 // src/ink-canvas/ink-adaptive-grid.tsx
-var import_react136 = __toESM(require_react());
+var import_react137 = __toESM(require_react());
 var INK_GRID_SIZE = 10;
 var INK_GRID_STEPS = [
   { min: -1, mid: 0.15, step: 64 },
@@ -100903,6 +101939,7 @@ var INK_GRID_STEPS = [
 var INK_GRID_TIER_PEAK_OPACITY = [1, 0.6, 0.35, 0.25];
 var INK_GRID_TIER_DOT_RADIUS = [1, 1, 1.25, 1.5];
 var INK_GRID_BOOX_ZOOM_FADE_SCALE = 0.5;
+var INK_GRID_GRAYSCALE_SCREEN_ZOOM_FADE_SCALE = INK_GRID_BOOX_ZOOM_FADE_SCALE;
 function modulate5(value, rangeA, rangeB) {
   const [fromLow, fromHigh] = rangeA;
   const [toLow, toHigh] = rangeB;
@@ -100928,12 +101965,12 @@ function computeLayerOpacity(tierIndex, z, min4, mid, zoomFadeScale = 1) {
 }
 function InkAdaptiveGrid(props) {
   const { x: x2, y: y3, z, gridSize = INK_GRID_SIZE, className, zoomFadeScale = 1 } = props;
-  const reactId = (0, import_react136.useId)();
+  const reactId = (0, import_react137.useId)();
   const patternIdPrefix = `ink_grid_${reactId.replace(/:/g, "")}`;
-  return /* @__PURE__ */ import_react136.default.createElement("g", {
+  return /* @__PURE__ */ import_react137.default.createElement("g", {
     className: className ?? "ink-adaptive-grid",
     pointerEvents: "none"
-  }, /* @__PURE__ */ import_react136.default.createElement("defs", null, INK_GRID_STEPS.map(({ min: min4, mid, step }, tierIndex) => {
+  }, /* @__PURE__ */ import_react137.default.createElement("defs", null, INK_GRID_STEPS.map(({ min: min4, mid, step }, tierIndex) => {
     const cellSize = step * gridSize * z;
     const xOffset = 0.5 + x2 * z;
     const yOffset = 0.5 + y3 * z;
@@ -100941,13 +101978,13 @@ function InkAdaptiveGrid(props) {
     const gridYOrigin = yOffset > 0 ? yOffset % cellSize : cellSize + yOffset % cellSize;
     const opacity = computeLayerOpacity(tierIndex, z, min4, mid, zoomFadeScale);
     const dotRadius = INK_GRID_TIER_DOT_RADIUS[tierIndex] ?? 1;
-    return /* @__PURE__ */ import_react136.default.createElement("pattern", {
+    return /* @__PURE__ */ import_react137.default.createElement("pattern", {
       key: tierIndex,
       id: `${patternIdPrefix}_${step}`,
       width: cellSize,
       height: cellSize,
       patternUnits: "userSpaceOnUse"
-    }, /* @__PURE__ */ import_react136.default.createElement("circle", {
+    }, /* @__PURE__ */ import_react137.default.createElement("circle", {
       className: "ink-grid-dot",
       "data-ink-grid-tier": tierIndex,
       cx: gridXOrigin,
@@ -100955,7 +101992,7 @@ function InkAdaptiveGrid(props) {
       r: dotRadius,
       opacity
     }));
-  })), INK_GRID_STEPS.map(({ step }, tierIndex) => /* @__PURE__ */ import_react136.default.createElement("rect", {
+  })), INK_GRID_STEPS.map(({ step }, tierIndex) => /* @__PURE__ */ import_react137.default.createElement("rect", {
     key: tierIndex,
     x: "0",
     y: "0",
@@ -100985,72 +102022,83 @@ function InkSvgCanvas(props) {
   const writingMode = props.writingMode ?? false;
   const strokeInputEditorKind = writingMode ? "inkWriting" : "inkDrawing";
   const strokeInputTreatAsPreference = useStrokeInputTreatAs(strokeInputEditorKind);
-  const strokeInputTreatAsPreferenceRef = (0, import_react137.useRef)(strokeInputTreatAsPreference);
+  const strokeInputTreatAsPreferenceRef = (0, import_react138.useRef)(strokeInputTreatAsPreference);
   strokeInputTreatAsPreferenceRef.current = strokeInputTreatAsPreference;
   const resolvedStrokeInputTreatAs = useResolvedStrokeInputTreatAs(strokeInputEditorKind);
-  const resolvedStrokeInputTreatAsRef = (0, import_react137.useRef)(resolvedStrokeInputTreatAs);
+  const resolvedStrokeInputTreatAsRef = (0, import_react138.useRef)(resolvedStrokeInputTreatAs);
   resolvedStrokeInputTreatAsRef.current = resolvedStrokeInputTreatAs;
-  const isBooxConnectionEnabled = useBooxConnectionEnabled();
+  const isHighContrastUserInterface = useHighContrastUserInterface();
   const isStylusSideButtonTemporaryEraseEnabled = useStylusSideButtonTemporaryEraseEnabled();
-  const isStylusSideButtonTemporaryEraseEnabledRef = (0, import_react137.useRef)(isStylusSideButtonTemporaryEraseEnabled);
+  const isStylusSideButtonTemporaryEraseEnabledRef = (0, import_react138.useRef)(isStylusSideButtonTemporaryEraseEnabled);
   isStylusSideButtonTemporaryEraseEnabledRef.current = isStylusSideButtonTemporaryEraseEnabled;
+  const dominantHand = useDominantHand();
+  const dominantHandRef = (0, import_react138.useRef)(dominantHand);
+  dominantHandRef.current = dominantHand;
+  const selectionOverlayRef = (0, import_react138.useRef)(null);
   const pageWidth = props.pageWidth ?? WRITING_PAGE_WIDTH;
   const writingBufferLines = props.writingBufferLines ?? 3;
   const writingLineHeight = props.initialSnapshot?.writingLineHeight ?? WRITING_LINE_HEIGHT;
-  const contentMaxYRef = (0, import_react137.useRef)(0);
-  const canvasWrapperRef = (0, import_react137.useRef)(null);
-  const containerRef = (0, import_react137.useRef)(null);
-  const svgRef = (0, import_react137.useRef)(null);
-  const liveStrokeRef = (0, import_react137.useRef)(null);
-  const cameraGroupRef = (0, import_react137.useRef)(null);
+  const contentMaxYRef = (0, import_react138.useRef)(0);
+  const canvasWrapperRef = (0, import_react138.useRef)(null);
+  const containerRef = (0, import_react138.useRef)(null);
+  const svgRef = (0, import_react138.useRef)(null);
+  const liveStrokeRef = (0, import_react138.useRef)(null);
+  const cameraGroupRef = (0, import_react138.useRef)(null);
   function computeInitialPageHeight() {
     const strokes2 = props.initialSnapshot?.strokes ?? [];
     const contentHeight = strokes2.length > 0 ? computeApproxContentMaxY(strokes2) : 0;
     contentMaxYRef.current = contentHeight;
     return cropWritingStrokeHeightInvitingly2(contentHeight, writingBufferLines, writingLineHeight);
   }
-  const pageHeightRef = (0, import_react137.useRef)(computeInitialPageHeight());
-  const [pageHeightState, setPageHeightState] = (0, import_react137.useState)(() => pageHeightRef.current);
+  const pageHeightRef = (0, import_react138.useRef)(computeInitialPageHeight());
+  const [pageHeightState, setPageHeightState] = (0, import_react138.useState)(() => pageHeightRef.current);
   pageHeightRef.current = pageHeightState;
-  const storeRef = (0, import_react137.useRef)(null);
+  const storeRef = (0, import_react138.useRef)(null);
   if (!storeRef.current) {
     storeRef.current = new StrokeStore();
     if (props.initialSnapshot)
       storeRef.current.replaceAll(props.initialSnapshot.strokes);
   }
-  const undoManagerRef = (0, import_react137.useRef)(new UndoManager());
-  const [tool, setTool] = (0, import_react137.useState)("draw");
-  const [strokeStyle, setStrokeStyle] = (0, import_react137.useState)({ ...DEFAULT_STROKE_STYLE });
-  const [camera, setCameraState] = (0, import_react137.useState)({ x: 0, y: 0, zoom: 1 });
-  const [gridEnabled, setGridEnabledState] = (0, import_react137.useState)(props.initialSnapshot?.gridEnabled ?? (writingMode ? false : DEFAULT_SETTINGS.drawingGridEnabledByDefault));
-  const [selectedIds, setSelectedIds] = (0, import_react137.useState)(/* @__PURE__ */ new Set());
-  const [, forceRender] = (0, import_react137.useState)(0);
-  const [viewportRevision, setViewportRevision] = (0, import_react137.useState)(0);
-  const strokeBoundsCacheRef = (0, import_react137.useRef)(/* @__PURE__ */ new Map());
-  const strokePathDCacheRef = (0, import_react137.useRef)(/* @__PURE__ */ new Map());
-  const cameraRef = (0, import_react137.useRef)(camera);
+  const undoManagerRef = (0, import_react138.useRef)(new UndoManager());
+  const [tool, setTool] = (0, import_react138.useState)("draw");
+  const [strokeStyle, setStrokeStyle] = (0, import_react138.useState)({ ...DEFAULT_STROKE_STYLE });
+  const [camera, setCameraState] = (0, import_react138.useState)({ x: 0, y: 0, zoom: 1 });
+  const [gridEnabled, setGridEnabledState] = (0, import_react138.useState)(props.initialSnapshot?.gridEnabled ?? (writingMode ? false : DEFAULT_SETTINGS.drawingGridEnabledByDefault));
+  const [selectedIds, setSelectedIds] = (0, import_react138.useState)(/* @__PURE__ */ new Set());
+  const [selectionChrome, setSelectionChrome] = (0, import_react138.useState)(null);
+  const [selectionPreview, setSelectionPreview] = (0, import_react138.useState)(null);
+  const selectionChromeRef = (0, import_react138.useRef)(null);
+  selectionChromeRef.current = selectionChrome;
+  const selectionPreviewRef = (0, import_react138.useRef)(null);
+  selectionPreviewRef.current = selectionPreview;
+  const selectedIdsSignatureRef = (0, import_react138.useRef)("");
+  const [, forceRender] = (0, import_react138.useState)(0);
+  const [viewportRevision, setViewportRevision] = (0, import_react138.useState)(0);
+  const strokeBoundsCacheRef = (0, import_react138.useRef)(/* @__PURE__ */ new Map());
+  const strokePathDCacheRef = (0, import_react138.useRef)(/* @__PURE__ */ new Map());
+  const cameraRef = (0, import_react138.useRef)(camera);
   cameraRef.current = camera;
-  const onCameraChangeRef = (0, import_react137.useRef)(props.onCameraChange);
+  const onCameraChangeRef = (0, import_react138.useRef)(props.onCameraChange);
   onCameraChangeRef.current = props.onCameraChange;
-  const emitCameraChange = (0, import_react137.useCallback)((nextCamera, meta) => {
+  const emitCameraChange = (0, import_react138.useCallback)((nextCamera, meta) => {
     const rect = containerRef.current?.getBoundingClientRect() ?? new DOMRect();
     onCameraChangeRef.current?.({ ...nextCamera }, rect, meta);
   }, []);
-  const commitUserCameraState = (0, import_react137.useCallback)((computeNext) => {
+  const commitUserCameraState = (0, import_react138.useCallback)((computeNext) => {
     const nextCamera = computeNext(cameraRef.current);
     cameraRef.current = nextCamera;
     setCameraState(nextCamera);
     emitCameraChange(nextCamera, { source: "user" });
   }, [emitCameraChange]);
-  const gridEnabledRef = (0, import_react137.useRef)(gridEnabled);
+  const gridEnabledRef = (0, import_react138.useRef)(gridEnabled);
   gridEnabledRef.current = gridEnabled;
-  const onChangeRef = (0, import_react137.useRef)(props.onChange);
+  const onChangeRef = (0, import_react138.useRef)(props.onChange);
   onChangeRef.current = props.onChange;
-  const onInteractionChangeRef = (0, import_react137.useRef)(props.onInteractionChange);
+  const onInteractionChangeRef = (0, import_react138.useRef)(props.onInteractionChange);
   onInteractionChangeRef.current = props.onInteractionChange;
-  const onEmbedUndoStackPushRef = (0, import_react137.useRef)(props.onEmbedUndoStackPush);
+  const onEmbedUndoStackPushRef = (0, import_react138.useRef)(props.onEmbedUndoStackPush);
   onEmbedUndoStackPushRef.current = props.onEmbedUndoStackPush;
-  const setGridEnabledHandlerRef = (0, import_react137.useRef)(() => {
+  const setGridEnabledHandlerRef = (0, import_react138.useRef)(() => {
   });
   setGridEnabledHandlerRef.current = (enabled) => {
     gridEnabledRef.current = enabled;
@@ -101058,42 +102106,66 @@ function InkSvgCanvas(props) {
     forceRender((n3) => n3 + 1);
     onChangeRef.current?.();
   };
-  const toolRef = (0, import_react137.useRef)(tool);
+  const toolRef = (0, import_react138.useRef)(tool);
   toolRef.current = tool;
-  const toolChangeListenersRef = (0, import_react137.useRef)(/* @__PURE__ */ new Set());
-  const applyToolChange = (0, import_react137.useCallback)((nextTool) => {
+  const toolChangeListenersRef = (0, import_react138.useRef)(/* @__PURE__ */ new Set());
+  const selectCtxRef = (0, import_react138.useRef)(null);
+  const onLeaveSelectToolRef = (0, import_react138.useRef)(() => {
+  });
+  const applyToolChange = (0, import_react138.useCallback)((nextTool) => {
+    if (toolRef.current === "select" && nextTool !== "select") {
+      onLeaveSelectToolRef.current();
+    }
     setTool(nextTool);
     toolChangeListenersRef.current.forEach((listener) => listener(nextTool));
   }, []);
-  const strokeStyleRef = (0, import_react137.useRef)(strokeStyle);
+  const strokeStyleRef = (0, import_react138.useRef)(strokeStyle);
   strokeStyleRef.current = strokeStyle;
-  const selectedIdsRef = (0, import_react137.useRef)(selectedIds);
+  const selectedIdsRef = (0, import_react138.useRef)(selectedIds);
   selectedIdsRef.current = selectedIds;
-  const panMomentumRef = (0, import_react137.useRef)(null);
-  (0, import_react137.useEffect)(() => {
+  (0, import_react138.useEffect)(() => {
+    const signature = [...selectedIds].sort().join(",");
+    if (signature === selectedIdsSignatureRef.current)
+      return;
+    selectedIdsSignatureRef.current = signature;
+    setSelectionPreview(null);
+    if (selectedIds.size === 0) {
+      setSelectionChrome(null);
+      return;
+    }
+    const bounds = getContextSelectionBounds({
+      store: storeRef.current,
+      getSelectedStrokeIds: () => selectedIds,
+      getCamera: () => cameraRef.current
+    });
+    if (bounds)
+      setSelectionChrome(selectionChromeFromBounds(bounds));
+  }, [selectedIds]);
+  const panMomentumRef = (0, import_react138.useRef)(null);
+  (0, import_react138.useEffect)(() => {
     panMomentumRef.current = createPanMomentumController({
       axis: "xy"
     });
     return () => panMomentumRef.current?.cancel();
   }, []);
-  const applyPanScreenDeltaImmediate = (0, import_react137.useCallback)((deltaScreenX, deltaScreenY) => {
+  const applyPanScreenDeltaImmediate = (0, import_react138.useCallback)((deltaScreenX, deltaScreenY) => {
     if (writingMode && !props.isEmbedded) {
       return false;
     }
     commitUserCameraState((prev) => panByScreenDelta(prev, deltaScreenX, deltaScreenY));
     return true;
   }, [writingMode, props.isEmbedded, commitUserCameraState]);
-  const applyPanScreenDelta = (0, import_react137.useCallback)((deltaScreenX, deltaScreenY) => {
+  const applyPanScreenDelta = (0, import_react138.useCallback)((deltaScreenX, deltaScreenY) => {
     panMomentumRef.current?.recordScreenDelta(deltaScreenX, deltaScreenY);
     applyPanScreenDeltaImmediate(deltaScreenX, deltaScreenY);
   }, [applyPanScreenDeltaImmediate]);
-  const releasePanMomentum = (0, import_react137.useCallback)(() => {
+  const releasePanMomentum = (0, import_react138.useCallback)(() => {
     panMomentumRef.current?.release((deltaScreenX, deltaScreenY) => applyPanScreenDeltaImmediate(deltaScreenX, deltaScreenY));
   }, [applyPanScreenDeltaImmediate]);
-  const cancelPanMomentum = (0, import_react137.useCallback)(() => {
+  const cancelPanMomentum = (0, import_react138.useCallback)(() => {
     panMomentumRef.current?.cancel();
   }, []);
-  const resetWritingCamera = (0, import_react137.useCallback)((preserveY = false) => {
+  const resetWritingCamera = (0, import_react138.useCallback)((preserveY = false) => {
     const container = containerRef.current;
     if (!container)
       return;
@@ -101101,7 +102173,7 @@ function InkSvgCanvas(props) {
     const prevY = preserveY ? cameraRef.current.y : 0;
     setCameraState({ x: 0, y: prevY, zoom });
   }, [pageWidth]);
-  (0, import_react137.useLayoutEffect)(() => {
+  (0, import_react138.useLayoutEffect)(() => {
     if (writingMode) {
       resetWritingCamera(false);
       return;
@@ -101161,7 +102233,7 @@ function InkSvgCanvas(props) {
     setCameraState(fittedCamera);
     emitCameraChange(fittedCamera, { source: "init" });
   }, []);
-  (0, import_react137.useEffect)(() => {
+  (0, import_react138.useEffect)(() => {
     const unsubStore = storeRef.current.subscribe((change) => {
       invalidateStrokeCaches(change);
       forceRender((n3) => n3 + 1);
@@ -101210,7 +102282,7 @@ function InkSvgCanvas(props) {
         strokePathDCacheRef.current.delete(id);
     }
   }
-  (0, import_react137.useEffect)(() => {
+  (0, import_react138.useEffect)(() => {
     const container = containerRef.current;
     if (!container)
       return;
@@ -101243,7 +102315,7 @@ function InkSvgCanvas(props) {
       visualViewport?.removeEventListener("resize", bumpViewportRevision);
     };
   }, [props.isEmbedded, writingMode]);
-  (0, import_react137.useEffect)(() => {
+  (0, import_react138.useEffect)(() => {
     if (!writingMode)
       return;
     const container = containerRef.current;
@@ -101260,7 +102332,7 @@ function InkSvgCanvas(props) {
     resizeObserver.observe(container);
     return () => resizeObserver.disconnect();
   }, [writingMode, props.isEmbedded, resetWritingCamera]);
-  (0, import_react137.useEffect)(() => {
+  (0, import_react138.useEffect)(() => {
     if (writingMode)
       return;
     const container = containerRef.current;
@@ -101311,7 +102383,7 @@ function InkSvgCanvas(props) {
     resizeObserver.observe(container);
     return () => resizeObserver.disconnect();
   }, [writingMode, props.isEmbedded, emitCameraChange]);
-  (0, import_react137.useEffect)(() => {
+  (0, import_react138.useEffect)(() => {
     if (!props.onEditorReady)
       return;
     const editor = {
@@ -101344,14 +102416,7 @@ function InkSvgCanvas(props) {
       isGridEnabled: () => gridEnabledRef.current,
       setGridEnabled: (enabled) => setGridEnabledHandlerRef.current(enabled),
       getSelectedStrokeIds: () => new Set(selectedIdsRef.current),
-      deleteSelectedStrokes: () => {
-        const ids = Array.from(selectedIdsRef.current);
-        if (ids.length === 0)
-          return;
-        const cmd = new RemoveStrokesCommand(storeRef.current, ids);
-        undoManagerRef.current.execute(cmd);
-        setSelectedIds(/* @__PURE__ */ new Set());
-      },
+      deleteSelectedStrokes: () => deleteSelectedStrokesRef.current(),
       getSnapshot: () => ({
         version: 1,
         strokes: storeRef.current.getAll(),
@@ -101386,7 +102451,7 @@ function InkSvgCanvas(props) {
     };
     props.onEditorReady(editor);
   }, []);
-  const getContainerRect = (0, import_react137.useCallback)(() => {
+  const getContainerRect = (0, import_react138.useCallback)(() => {
     return containerRef.current?.getBoundingClientRect() ?? new DOMRect();
   }, []);
   const drawCtx = {
@@ -101415,30 +102480,75 @@ function InkSvgCanvas(props) {
     getCamera: () => cameraRef.current,
     getContainerRect,
     getSvgElement: () => svgRef.current,
+    getSelectionOverlayElement: () => selectionOverlayRef.current,
     getSelectedStrokeIds: () => selectedIdsRef.current,
-    setSelectedStrokeIds: (ids) => setSelectedIds(ids)
+    setSelectedStrokeIds: (ids) => setSelectedIds(ids),
+    getSelectionChrome: () => selectionChromeRef.current,
+    setSelectionChrome: (chrome) => {
+      selectionChromeRef.current = chrome;
+      setSelectionChrome(chrome);
+    },
+    setSelectionPreview: (preview) => setSelectionPreview(preview),
+    writingMode,
+    getDominantHand: () => dominantHandRef.current
   };
-  const isPanning = (0, import_react137.useRef)(false);
-  const lastPanPoint = (0, import_react137.useRef)(null);
-  const isRightDraggingRef = (0, import_react137.useRef)(false);
-  const rightDragStartPointRef = (0, import_react137.useRef)({ x: 0, y: 0 });
-  const rightDragInitialCameraRef = (0, import_react137.useRef)({ x: 0, y: 0, zoom: 1 });
-  const rightDragFocalScreenRef = (0, import_react137.useRef)({ x: 0, y: 0 });
-  const rightDragMovedRef = (0, import_react137.useRef)(false);
-  const isSpaceHeldRef = (0, import_react137.useRef)(false);
-  const isPointerOverCanvasRef = (0, import_react137.useRef)(false);
-  const isModKeyHeldRef = (0, import_react137.useRef)(false);
-  const isTemporaryEraseModeRef = (0, import_react137.useRef)(false);
-  const temporaryEraseSourceRef = (0, import_react137.useRef)(null);
-  const toolBeforeTemporaryEraseRef = (0, import_react137.useRef)(null);
-  const lastCanvasPointerRef = (0, import_react137.useRef)(null);
-  const suppressPrimaryPointerUntilUpRef = (0, import_react137.useRef)(false);
-  const [cursorStyle, setCursorStyle] = (0, import_react137.useState)(void 0);
-  const isBooxInputLockedRef = (0, import_react137.useRef)(props.isBooxInputLocked ?? false);
+  selectCtxRef.current = selectCtx;
+  onLeaveSelectToolRef.current = () => {
+    if (isSelectToolActive()) {
+      selectToolPointerCancel({}, selectCtx);
+    }
+    setSelectionPreview(null);
+  };
+  const isPanning = (0, import_react138.useRef)(false);
+  const lastPanPoint = (0, import_react138.useRef)(null);
+  const selectionLongPressTimerRef = (0, import_react138.useRef)(null);
+  const selectionLongPressStartRef = (0, import_react138.useRef)(null);
+  const selectionLongPressHandledRef = (0, import_react138.useRef)(false);
+  const isTouchSelectGestureRef = (0, import_react138.useRef)(false);
+  const deleteSelectedStrokes = (0, import_react138.useCallback)(() => {
+    const ids = Array.from(selectedIdsRef.current);
+    if (ids.length === 0)
+      return;
+    const cmd = new RemoveStrokesCommand(storeRef.current, ids);
+    undoManagerRef.current.execute(cmd);
+    setSelectedIds(/* @__PURE__ */ new Set());
+  }, []);
+  const deleteSelectedStrokesRef = (0, import_react138.useRef)(deleteSelectedStrokes);
+  deleteSelectedStrokesRef.current = deleteSelectedStrokes;
+  const isClientPointOnSelectionChrome = (0, import_react138.useCallback)((clientX, clientY) => {
+    const containerRect2 = containerRef.current?.getBoundingClientRect() ?? new DOMRect();
+    const pagePoint = screenToPage(cameraRef.current, containerRect2, clientX, clientY);
+    return isPagePointOnSelectionChrome(pagePoint, toolRef.current, selectedIdsRef.current.size, selectionChromeRef.current, selectionPreviewRef.current);
+  }, []);
+  const showSelectionContextMenuAt = (0, import_react138.useCallback)((clientX, clientY) => {
+    showMenuOptionsAtPosition(buildSelectionStrokeContextMenuOptions(() => deleteSelectedStrokesRef.current()), { x: clientX, y: clientY });
+  }, []);
+  const clearSelectionLongPressTimer = (0, import_react138.useCallback)(() => {
+    if (selectionLongPressTimerRef.current !== null) {
+      window.clearTimeout(selectionLongPressTimerRef.current);
+      selectionLongPressTimerRef.current = null;
+    }
+    selectionLongPressStartRef.current = null;
+  }, []);
+  const isRightDraggingRef = (0, import_react138.useRef)(false);
+  const rightDragStartPointRef = (0, import_react138.useRef)({ x: 0, y: 0 });
+  const rightDragInitialCameraRef = (0, import_react138.useRef)({ x: 0, y: 0, zoom: 1 });
+  const rightDragFocalScreenRef = (0, import_react138.useRef)({ x: 0, y: 0 });
+  const rightDragMovedRef = (0, import_react138.useRef)(false);
+  const isSpaceHeldRef = (0, import_react138.useRef)(false);
+  const isPointerOverCanvasRef = (0, import_react138.useRef)(false);
+  const isModKeyHeldRef = (0, import_react138.useRef)(false);
+  const isTemporaryEraseModeRef = (0, import_react138.useRef)(false);
+  const temporaryEraseSourceRef = (0, import_react138.useRef)(null);
+  const toolBeforeTemporaryEraseRef = (0, import_react138.useRef)(null);
+  const lastCanvasPointerRef = (0, import_react138.useRef)(null);
+  const suppressPrimaryPointerUntilUpRef = (0, import_react138.useRef)(false);
+  const [cursorStyle, setCursorStyle] = (0, import_react138.useState)(void 0);
+  const isBooxInputLockedRef = (0, import_react138.useRef)(props.isBooxInputLocked ?? false);
   isBooxInputLockedRef.current = props.isBooxInputLocked ?? false;
-  const isFingerDrawingActiveRef = (0, import_react137.useRef)(props.isFingerDrawingActive ?? false);
+  const isFingerDrawingActiveRef = (0, import_react138.useRef)(props.isFingerDrawingActive ?? false);
   isFingerDrawingActiveRef.current = props.isFingerDrawingActive ?? false;
-  (0, import_react137.useEffect)(() => {
+  (0, import_react138.useEffect)(() => {
     if (!props.isBooxInputLocked)
       return;
     if (isTemporaryEraseModeRef.current) {
@@ -101455,19 +102565,19 @@ function InkSvgCanvas(props) {
     eraseToolPointerCancel({}, eraseCtx);
     selectToolPointerCancel({}, selectCtx);
   }, [props.isBooxInputLocked]);
-  (0, import_react137.useEffect)(() => {
+  (0, import_react138.useEffect)(() => {
     if (props.isFingerDrawingActive)
       return;
     drawToolPointerCancel({}, drawCtx);
     eraseToolPointerCancel({}, eraseCtx);
     selectToolPointerCancel({}, selectCtx);
   }, [props.isFingerDrawingActive]);
-  const shouldModTemporaryEraseActivate = (0, import_react137.useCallback)(() => {
+  const shouldModTemporaryEraseActivate = (0, import_react138.useCallback)(() => {
     const last7 = lastCanvasPointerRef.current;
     const hasActiveCanvasPointer = last7 !== null && last7.buttons !== 0;
     return isPointerOverCanvasRef.current || hasActiveCanvasPointer;
   }, []);
-  const beginTemporaryEraseMode = (0, import_react137.useCallback)((opts) => {
+  const beginTemporaryEraseMode = (0, import_react138.useCallback)((opts) => {
     if (isTemporaryEraseModeRef.current) {
       if (opts.pointerDownEvent) {
         eraseToolPointerDown(opts.pointerDownEvent, eraseCtx);
@@ -101496,7 +102606,7 @@ function InkSvgCanvas(props) {
       eraseToolPointerDown(createPointerEventFromLastCanvasPointer(last7), eraseCtx);
     }
   }, [shouldModTemporaryEraseActivate]);
-  const endTemporaryEraseMode = (0, import_react137.useCallback)((source) => {
+  const endTemporaryEraseMode = (0, import_react138.useCallback)((source) => {
     if (!isTemporaryEraseModeRef.current)
       return;
     if (source !== null && temporaryEraseSourceRef.current !== source)
@@ -101513,9 +102623,9 @@ function InkSvgCanvas(props) {
       suppressPrimaryPointerUntilUpRef.current = true;
     }
   }, []);
-  const beginTemporaryEraseModeRef = (0, import_react137.useRef)(beginTemporaryEraseMode);
+  const beginTemporaryEraseModeRef = (0, import_react138.useRef)(beginTemporaryEraseMode);
   beginTemporaryEraseModeRef.current = beginTemporaryEraseMode;
-  const endTemporaryEraseModeRef = (0, import_react137.useRef)(endTemporaryEraseMode);
+  const endTemporaryEraseModeRef = (0, import_react138.useRef)(endTemporaryEraseMode);
   endTemporaryEraseModeRef.current = endTemporaryEraseMode;
   const recordCanvasPointer = (e3) => {
     lastCanvasPointerRef.current = {
@@ -101533,9 +102643,34 @@ function InkSvgCanvas(props) {
     e3.target.setPointerCapture(e3.pointerId);
     setCursorStyle("grabbing");
   };
-  const handlePointerDown = (0, import_react137.useCallback)((e3) => {
-    if (e3.pointerType === "touch" && !isFingerDrawingActiveRef.current)
+  const handlePointerDown = (0, import_react138.useCallback)((e3) => {
+    if (e3.pointerType === "touch" && !isFingerDrawingActiveRef.current) {
+      if (toolRef.current === "select" && isClientPointOnSelectionChrome(e3.clientX, e3.clientY)) {
+        selectionLongPressHandledRef.current = false;
+        selectionLongPressStartRef.current = { x: e3.clientX, y: e3.clientY };
+        clearSelectionLongPressTimer();
+        selectionLongPressTimerRef.current = window.setTimeout(() => {
+          selectionLongPressTimerRef.current = null;
+          selectionLongPressHandledRef.current = true;
+          selectionLongPressStartRef.current = null;
+          showSelectionContextMenuAt(e3.clientX, e3.clientY);
+        }, SELECTION_CONTEXT_MENU_LONG_PRESS_MS);
+        e3.target.setPointerCapture(e3.pointerId);
+        return;
+      }
+      if (toolRef.current === "select") {
+        isTouchSelectGestureRef.current = true;
+        onInteractionChangeRef.current?.(true);
+        recordCanvasPointer(e3);
+        isPointerOverCanvasRef.current = true;
+        if (!isBooxInputLockedRef.current) {
+          selectToolPointerDown(e3.nativeEvent, selectCtx);
+        }
+        e3.target.setPointerCapture(e3.pointerId);
+        return;
+      }
       return;
+    }
     onInteractionChangeRef.current?.(true);
     recordCanvasPointer(e3);
     isPointerOverCanvasRef.current = true;
@@ -101569,6 +102704,10 @@ function InkSvgCanvas(props) {
     if (e3.button === 2) {
       e3.nativeEvent.stopPropagation();
       const isModHeld = e3.ctrlKey || e3.metaKey;
+      if (!isModHeld && isClientPointOnSelectionChrome(e3.clientX, e3.clientY)) {
+        e3.target.setPointerCapture(e3.pointerId);
+        return;
+      }
       if (isModHeld) {
         if (writingMode)
           return;
@@ -101603,10 +102742,25 @@ function InkSvgCanvas(props) {
         selectToolPointerDown(e3.nativeEvent, selectCtx);
     }
     e3.target.setPointerCapture(e3.pointerId);
-  }, [tool]);
-  const handlePointerMove = (0, import_react137.useCallback)((e3) => {
-    if (e3.pointerType === "touch" && !isFingerDrawingActiveRef.current)
+  }, [tool, isClientPointOnSelectionChrome, clearSelectionLongPressTimer, showSelectionContextMenuAt]);
+  const handlePointerMove = (0, import_react138.useCallback)((e3) => {
+    if (e3.pointerType === "touch" && !isFingerDrawingActiveRef.current) {
+      if (isTouchSelectGestureRef.current) {
+        recordCanvasPointer(e3);
+        if (!isBooxInputLockedRef.current) {
+          selectToolPointerMove(e3.nativeEvent, selectCtx);
+        }
+        return;
+      }
+      if (selectionLongPressStartRef.current && selectionLongPressTimerRef.current) {
+        const dx = e3.clientX - selectionLongPressStartRef.current.x;
+        const dy = e3.clientY - selectionLongPressStartRef.current.y;
+        if (Math.hypot(dx, dy) > SELECTION_CONTEXT_MENU_LONG_PRESS_MOVE_THRESHOLD_PX) {
+          clearSelectionLongPressTimer();
+        }
+      }
       return;
+    }
     recordCanvasPointer(e3);
     if (suppressPrimaryPointerUntilUpRef.current)
       return;
@@ -101653,9 +102807,25 @@ function InkSvgCanvas(props) {
         selectToolPointerMove(e3.nativeEvent, selectCtx);
     }
   }, [tool]);
-  const handlePointerUp = (0, import_react137.useCallback)((e3) => {
-    if (e3.pointerType === "touch" && !isFingerDrawingActiveRef.current)
+  const handlePointerUp = (0, import_react138.useCallback)((e3) => {
+    if (e3.pointerType === "touch" && !isFingerDrawingActiveRef.current) {
+      if (isTouchSelectGestureRef.current) {
+        isTouchSelectGestureRef.current = false;
+        onInteractionChangeRef.current?.(false);
+        recordCanvasPointer(e3);
+        if (!isBooxInputLockedRef.current) {
+          selectToolPointerUp(e3.nativeEvent, selectCtx);
+        }
+        return;
+      }
+      clearSelectionLongPressTimer();
+      if (selectionLongPressHandledRef.current) {
+        e3.preventDefault();
+        e3.stopPropagation();
+        selectionLongPressHandledRef.current = false;
+      }
       return;
+    }
     onInteractionChangeRef.current?.(false);
     recordCanvasPointer(e3);
     if (suppressPrimaryPointerUntilUpRef.current && e3.button === 0) {
@@ -101687,10 +102857,22 @@ function InkSvgCanvas(props) {
     } else if (isStylusSideButtonTemporaryEraseEnabledRef.current && temporaryEraseSourceRef.current === "sideButton" && isStylusSideButtonPointerDown(e3.nativeEvent)) {
       endTemporaryEraseMode("sideButton");
     }
-  }, [tool, releasePanMomentum, applyToolChange]);
-  const handlePointerCancel = (0, import_react137.useCallback)((e3) => {
-    if (e3.pointerType === "touch" && !isFingerDrawingActiveRef.current)
+  }, [tool, releasePanMomentum, applyToolChange, clearSelectionLongPressTimer]);
+  const handlePointerCancel = (0, import_react138.useCallback)((e3) => {
+    if (e3.pointerType === "touch" && !isFingerDrawingActiveRef.current) {
+      if (isTouchSelectGestureRef.current) {
+        isTouchSelectGestureRef.current = false;
+        onInteractionChangeRef.current?.(false);
+        recordCanvasPointer(e3);
+        if (!isBooxInputLockedRef.current) {
+          selectToolPointerCancel(e3.nativeEvent, selectCtx);
+        }
+        return;
+      }
+      clearSelectionLongPressTimer();
+      selectionLongPressHandledRef.current = false;
       return;
+    }
     onInteractionChangeRef.current?.(false);
     recordCanvasPointer(e3);
     if (suppressPrimaryPointerUntilUpRef.current) {
@@ -101720,7 +102902,7 @@ function InkSvgCanvas(props) {
       endTemporaryEraseMode(temporaryEraseSourceRef.current);
     }
   }, [tool, endTemporaryEraseMode]);
-  const handleDrawingEmbedTwoFingerGesture = (0, import_react137.useCallback)((params) => {
+  const handleDrawingEmbedTwoFingerGesture = (0, import_react138.useCallback)((params) => {
     const { deltaX, deltaY, anchorX, anchorY, distanceRatio } = params;
     if (deltaX !== 0 || deltaY !== 0) {
       panMomentumRef.current?.recordScreenDelta(deltaX, deltaY);
@@ -101736,32 +102918,42 @@ function InkSvgCanvas(props) {
       };
     });
   }, [commitUserCameraState]);
-  const handleEmbedTwoFingerGestureEnd = (0, import_react137.useCallback)(() => {
+  const handleEmbedTwoFingerGestureEnd = (0, import_react138.useCallback)(() => {
     releasePanMomentum();
     props.onBooxEmbedGeometryChange?.();
   }, [releasePanMomentum, props.onBooxEmbedGeometryChange]);
-  (0, import_react137.useEffect)(() => {
+  const isClientPointOnSelectionChromeRef = (0, import_react138.useRef)(isClientPointOnSelectionChrome);
+  isClientPointOnSelectionChromeRef.current = isClientPointOnSelectionChrome;
+  const showSelectionContextMenuAtRef = (0, import_react138.useRef)(showSelectionContextMenuAt);
+  showSelectionContextMenuAtRef.current = showSelectionContextMenuAt;
+  (0, import_react138.useEffect)(() => {
     const container = containerRef.current;
     if (!container)
       return;
-    const suppressContextMenu = (e3) => {
+    const handleContextMenu = (e3) => {
+      if (isClientPointOnSelectionChromeRef.current(e3.clientX, e3.clientY)) {
+        e3.preventDefault();
+        e3.stopPropagation();
+        showSelectionContextMenuAtRef.current(e3.clientX, e3.clientY);
+        return;
+      }
       e3.preventDefault();
       e3.stopPropagation();
     };
-    container.addEventListener("contextmenu", suppressContextMenu, { capture: true });
-    return () => container.removeEventListener("contextmenu", suppressContextMenu, { capture: true });
+    container.addEventListener("contextmenu", handleContextMenu, { capture: true });
+    return () => container.removeEventListener("contextmenu", handleContextMenu, { capture: true });
   }, []);
-  const wheelIdleTimerRef = (0, import_react137.useRef)(null);
-  const modifierWheelZoomDirectionResolverRef = (0, import_react137.useRef)(createModifierWheelZoomDirectionResolver());
-  const commitUserCameraStateRef = (0, import_react137.useRef)(commitUserCameraState);
+  const wheelIdleTimerRef = (0, import_react138.useRef)(null);
+  const modifierWheelZoomDirectionResolverRef = (0, import_react138.useRef)(createModifierWheelZoomDirectionResolver());
+  const commitUserCameraStateRef = (0, import_react138.useRef)(commitUserCameraState);
   commitUserCameraStateRef.current = commitUserCameraState;
-  const applyPanScreenDeltaRef = (0, import_react137.useRef)(applyPanScreenDelta);
+  const applyPanScreenDeltaRef = (0, import_react138.useRef)(applyPanScreenDelta);
   applyPanScreenDeltaRef.current = applyPanScreenDelta;
-  const releasePanMomentumRef = (0, import_react137.useRef)(releasePanMomentum);
+  const releasePanMomentumRef = (0, import_react138.useRef)(releasePanMomentum);
   releasePanMomentumRef.current = releasePanMomentum;
-  const cancelPanMomentumRef = (0, import_react137.useRef)(cancelPanMomentum);
+  const cancelPanMomentumRef = (0, import_react138.useRef)(cancelPanMomentum);
   cancelPanMomentumRef.current = cancelPanMomentum;
-  (0, import_react137.useEffect)(() => {
+  (0, import_react138.useEffect)(() => {
     const svg = svgRef.current;
     if (!svg)
       return;
@@ -101815,7 +103007,7 @@ function InkSvgCanvas(props) {
       svg.removeEventListener("wheel", handleWheelNative);
     };
   }, [writingMode, props.isEmbedded]);
-  (0, import_react137.useEffect)(() => {
+  (0, import_react138.useEffect)(() => {
     const handleKeyDown = (e3) => {
       const shouldActivate = e3.key === " " && !e3.repeat && !e3.metaKey && !e3.ctrlKey && isPointerOverCanvasRef.current && !props.isEmbedded && !writingMode;
       if (!shouldActivate)
@@ -101838,7 +103030,7 @@ function InkSvgCanvas(props) {
       window.removeEventListener("keyup", handleKeyUp, true);
     };
   }, []);
-  (0, import_react137.useEffect)(() => {
+  (0, import_react138.useEffect)(() => {
     const handleKeyDown = (e3) => {
       if (!isModKeyKeyboardEvent(e3) || e3.repeat)
         return;
@@ -101870,6 +103062,7 @@ function InkSvgCanvas(props) {
   }, []);
   const strokes = storeRef.current.getAll();
   const cameraTransform = `scale(${camera.zoom}) translate(${camera.x}, ${camera.y})`;
+  const showSelectionVisuals = tool === "select";
   const containerRect = containerRef.current?.getBoundingClientRect() ?? null;
   const visiblePageRect = containerRect ? visiblePageRectFromContainer(camera, containerRect) : void 0;
   const getCachedApproxStrokeBounds = (stroke) => {
@@ -101894,7 +103087,7 @@ function InkSvgCanvas(props) {
     isEmbedded: !!props.isEmbedded,
     hasDedicatedVerticalTouchPan: false
   });
-  return /* @__PURE__ */ import_react137.default.createElement("div", {
+  return /* @__PURE__ */ import_react138.default.createElement("div", {
     ref: canvasWrapperRef,
     className: "ink-svg-canvas-wrapper",
     style: {
@@ -101902,7 +103095,7 @@ function InkSvgCanvas(props) {
       height: "100%",
       position: "relative"
     }
-  }, /* @__PURE__ */ import_react137.default.createElement(FingerBlocker, {
+  }, /* @__PURE__ */ import_react138.default.createElement(FingerBlocker, {
     wrapperRef: canvasWrapperRef,
     touchGestureMode: inkTouchGestureMode,
     forwardPenToCanvas: !props.isBooxInputLocked,
@@ -101912,7 +103105,7 @@ function InkSvgCanvas(props) {
     onPanGestureEnd: props.onPanGestureEnd,
     onEmbedTwoFingerGestureEnd: !writingMode ? handleEmbedTwoFingerGestureEnd : void 0,
     onTouchGestureSessionStart: cancelPanMomentum
-  }), /* @__PURE__ */ import_react137.default.createElement("div", {
+  }), /* @__PURE__ */ import_react138.default.createElement("div", {
     ref: containerRef,
     className: "ink-svg-canvas-container",
     style: {
@@ -101935,7 +103128,7 @@ function InkSvgCanvas(props) {
     onMouseLeave: () => {
       isPointerOverCanvasRef.current = false;
     }
-  }, /* @__PURE__ */ import_react137.default.createElement("svg", {
+  }, /* @__PURE__ */ import_react138.default.createElement("svg", {
     ref: svgRef,
     className: "ink-svg-canvas",
     style: { width: "100%", height: "100%", display: "block" },
@@ -101943,12 +103136,12 @@ function InkSvgCanvas(props) {
     onPointerMove: handlePointerMove,
     onPointerUp: handlePointerUp,
     onPointerCancel: handlePointerCancel
-  }, !writingMode && gridEnabled && /* @__PURE__ */ import_react137.default.createElement(InkAdaptiveGrid, {
+  }, !writingMode && gridEnabled && /* @__PURE__ */ import_react138.default.createElement(InkAdaptiveGrid, {
     x: camera.x,
     y: camera.y,
     z: camera.zoom,
-    zoomFadeScale: isBooxConnectionEnabled ? INK_GRID_BOOX_ZOOM_FADE_SCALE : 1
-  }), /* @__PURE__ */ import_react137.default.createElement("g", {
+    zoomFadeScale: isHighContrastUserInterface ? INK_GRID_GRAYSCALE_SCREEN_ZOOM_FADE_SCALE : 1
+  }), /* @__PURE__ */ import_react138.default.createElement("g", {
     ref: cameraGroupRef,
     transform: cameraTransform
   }, writingMode && (() => {
@@ -101956,7 +103149,6 @@ function InkSvgCanvas(props) {
     const pw = pageWidth;
     const margin = pw * 0.05;
     const lineCount = Math.floor(pageHeightState / lh);
-    const guideLineStrokeWidth = (isBooxConnectionEnabled ? 2 : 1) / camera.zoom;
     if (visiblePageRect === null)
       return null;
     let startIndex = 1;
@@ -101970,34 +103162,45 @@ function InkSvgCanvas(props) {
     const lines = [];
     for (let i3 = startIndex; i3 <= endIndex; i3++) {
       const lineY = i3 * lh;
-      lines.push(/* @__PURE__ */ import_react137.default.createElement("line", {
+      lines.push(/* @__PURE__ */ import_react138.default.createElement("line", {
         key: i3,
         className: "ink-writing-guide-line",
+        vectorEffect: "non-scaling-stroke",
         x1: margin,
         y1: lineY,
         x2: pw - margin,
-        y2: lineY,
-        stroke: isBooxConnectionEnabled ? "var(--text-normal)" : "currentColor",
-        strokeOpacity: isBooxConnectionEnabled ? 1 : 0.5,
-        strokeWidth: guideLineStrokeWidth
+        y2: lineY
       }));
     }
     return lines;
-  })(), strokes.map((stroke) => isStrokeVisibleInViewport(stroke) ? /* @__PURE__ */ import_react137.default.createElement(StrokePath, {
+  })(), tool === "select" && selectionChrome && /* @__PURE__ */ import_react138.default.createElement(SelectionBoundsFillUnderlay, {
+    chrome: selectionChrome,
+    preview: selectionPreview,
+    cameraZoom: camera.zoom,
+    dominantHand,
+    writingMode
+  }), strokes.map((stroke) => isStrokeVisibleInViewport(stroke) ? /* @__PURE__ */ import_react138.default.createElement(StrokePath, {
     key: stroke.id,
     stroke,
-    isSelected: selectedIds.has(stroke.id),
+    isSelected: showSelectionVisuals && selectedIds.has(stroke.id),
     pathDCache: strokePathDCacheRef.current
-  }) : null), /* @__PURE__ */ import_react137.default.createElement("path", {
+  }) : null), tool === "select" && selectionChrome && /* @__PURE__ */ import_react138.default.createElement(SelectionOverlay, {
+    overlayRef: selectionOverlayRef,
+    chrome: selectionChrome,
+    preview: selectionPreview,
+    cameraZoom: camera.zoom,
+    dominantHand,
+    writingMode
+  }), /* @__PURE__ */ import_react138.default.createElement("path", {
     ref: liveStrokeRef,
     fill: strokeStyle.color,
     pointerEvents: "none"
   })))));
 }
 function strokePathPropsAreEqual(prev, next) {
-  if (prev.isSelected !== next.isSelected)
-    return false;
   if (prev.pathDCache !== next.pathDCache)
+    return false;
+  if (prev.isSelected !== next.isSelected)
     return false;
   const a3 = prev.stroke;
   const b2 = next.stroke;
@@ -102013,7 +103216,13 @@ function strokePathPropsAreEqual(prev, next) {
     return false;
   return true;
 }
-var StrokePath = (0, import_react137.memo)(function StrokePath2(props) {
+var INK_SELECTED_STROKE_ACCENT_MIX_PERCENT = 60;
+function inkStrokeFillWithSelectionTint(inkColor, isSelected) {
+  if (!isSelected)
+    return inkColor;
+  return `color-mix(in srgb, var(--interactive-accent) ${INK_SELECTED_STROKE_ACCENT_MIX_PERCENT}%, ${inkColor})`;
+}
+var StrokePath = (0, import_react138.memo)(function StrokePath2(props) {
   const { stroke, isSelected, pathDCache } = props;
   let d2 = pathDCache.get(stroke.id);
   if (d2 === void 0) {
@@ -102021,22 +103230,17 @@ var StrokePath = (0, import_react137.memo)(function StrokePath2(props) {
     pathDCache.set(stroke.id, d2);
   }
   const hasOffset = stroke.offset.x !== 0 || stroke.offset.y !== 0;
-  return /* @__PURE__ */ import_react137.default.createElement("g", {
+  return /* @__PURE__ */ import_react138.default.createElement("g", {
     "data-stroke-group": "",
     "data-stroke-id": stroke.id,
     "data-offset-x": stroke.offset.x,
     "data-offset-y": stroke.offset.y,
     transform: hasOffset ? `translate(${stroke.offset.x}, ${stroke.offset.y})` : void 0
-  }, /* @__PURE__ */ import_react137.default.createElement("path", {
+  }, /* @__PURE__ */ import_react138.default.createElement("path", {
+    className: isSelected ? "ink-stroke--selected" : void 0,
     "data-stroke-id": stroke.id,
     d: d2,
-    fill: stroke.style.color
-  }), isSelected && /* @__PURE__ */ import_react137.default.createElement("path", {
-    d: d2,
-    fill: "none",
-    stroke: "rgba(0, 123, 255, 0.6)",
-    strokeWidth: 2,
-    pointerEvents: "none"
+    fill: inkStrokeFillWithSelectionTint(stroke.style.color, isSelected)
   }));
 }, strokePathPropsAreEqual);
 
@@ -102045,8 +103249,42 @@ function resolveInkAutosaveDelayMs(platform2, desktopDelayMs, mobileDelayMs) {
   return platform2.isMobile || platform2.isMobileApp || platform2.isIosApp ? mobileDelayMs : desktopDelayMs;
 }
 
-// src/components/formats/current/writing/writing-editor/writing-editor.tsx
-var import_obsidian28 = require("obsidian");
+// src/logic/utils/use-dedicated-ink-workspace-chrome.ts
+var React110 = __toESM(require_react());
+function useDedicatedInkWorkspaceChrome(leafId, isDedicatedView) {
+  const isWorkspaceChromeHidden = React110.useSyncExternalStore(subscribeInkWorkspaceChrome, () => isDedicatedView && isInkWorkspaceChromeHiddenForLeaf(leafId), () => false);
+  return {
+    isWorkspaceChromeHidden,
+    onEnterWorkspaceChrome: () => {
+      enterInkWorkspaceChromeHidden(leafId, {
+        collapseSidebars: true,
+        openedFromEmbed: false
+      });
+    },
+    onExitWorkspaceChrome: () => {
+      if (wasInkWorkspaceOpenedFromEmbed(leafId)) {
+        const leaf = getGlobals().plugin.app.workspace.getLeafById(leafId);
+        if (leaf && leafHasBackHistory(leaf)) {
+          navigateInkLeafBack(leafId);
+          return;
+        }
+      }
+      exitInkWorkspaceChromeHidden(leafId);
+    }
+  };
+}
+
+// src/logic/utils/reveal-ink-file-in-explorer.ts
+function revealInkFileInExplorer(file) {
+  const { workspace } = getGlobals().plugin.app;
+  workspace.leftSplit.expand();
+  const explorerLeaf = workspace.getLeavesOfType("file-explorer")[0];
+  if (!explorerLeaf)
+    return;
+  void workspace.revealLeaf(explorerLeaf);
+  const explorerView = explorerLeaf.view;
+  explorerView.revealInFolder?.(file);
+}
 
 // src/ink-canvas/utils/stroke-timestamps.ts
 function inkStrokeTimestampsFromBooxPoints(points) {
@@ -102063,50 +103301,50 @@ var WritingEditorWrapper = (props) => {
   const embedsInEditMode = useAtomValue(embedsInEditModeAtom);
   const editorActive = !!props.embedId && embedsInEditMode.has(props.embedId);
   if (editorActive)
-    return /* @__PURE__ */ React105.createElement(WritingEditor, {
+    return /* @__PURE__ */ React111.createElement(WritingEditor, {
       ...props
     });
-  return /* @__PURE__ */ React105.createElement(React105.Fragment, null);
+  return /* @__PURE__ */ React111.createElement(React111.Fragment, null);
 };
 function WritingEditor(props) {
   const dominantHand = useDominantHand();
+  const workspaceChrome = useDedicatedInkWorkspaceChrome(props.workspaceLeafId, !props.embedded);
   const isBooxConnectionEnabled = useBooxConnectionEnabled();
   const isFingerDrawingGloballyEnabled = useFingerDrawingEnabled();
-  const [isFingerDrawingActive, setIsFingerDrawingActive] = React105.useState(false);
-  const [initialSnapshot, setInitialSnapshot] = React105.useState();
-  const [booxConnected, setBooxConnected] = React105.useState(false);
-  const resizePostProcessTimeoutRef = (0, import_react138.useRef)();
-  const shortDelayTimerRef = (0, import_react138.useRef)();
-  const canvasInteractionActiveRef = (0, import_react138.useRef)(false);
-  const hasUnsavedChangesRef = (0, import_react138.useRef)(false);
-  const latestInvitingHeightRef = (0, import_react138.useRef)(0);
-  const editorRef = (0, import_react138.useRef)();
-  const editorWrapperRefEl = (0, import_react138.useRef)(null);
-  const websocketConnectedRef = (0, import_react138.useRef)(false);
-  const [isBooxInputLocked, setIsBooxInputLocked] = React105.useState(false);
-  const activateWritingSessionRef = (0, import_react138.useRef)(null);
-  const adjustThrottleRef = (0, import_react138.useRef)(null);
-  const setBooxOverlayActiveTimerRef = (0, import_react138.useRef)(null);
-  const isViewActiveRef = (0, import_react138.useRef)(true);
-  const pendingNewOverlayRef = (0, import_react138.useRef)(false);
-  const isAndroidDrawingAreaResizingRef = (0, import_react138.useRef)(false);
-  const queuedBooxStrokePayloadsRef = (0, import_react138.useRef)([]);
-  const writingLineHeightRef = (0, import_react138.useRef)(WRITING_LINE_HEIGHT);
-  const transcriptRef = (0, import_react138.useRef)(void 0);
-  const transcriptionSessionRegisteredRef = (0, import_react138.useRef)(false);
-  const [hasTranscript, setHasTranscript] = React105.useState(false);
-  const curHeightRef = (0, import_react138.useRef)(null);
-  const forceNextPageHeightChangeRef = (0, import_react138.useRef)(false);
-  const isLegacyInkFileRef = (0, import_react138.useRef)(false);
-  const dedicatedScrollerRef = (0, import_react138.useRef)(null);
-  const dedicatedPageRef = (0, import_react138.useRef)(null);
-  const [dedicatedPageCssHeightPx, setDedicatedPageCssHeightPx] = React105.useState(null);
-  const dedicatedLastZoomRef = (0, import_react138.useRef)(null);
-  React105.useEffect(() => {
+  const [isFingerDrawingActive, setIsFingerDrawingActive] = React111.useState(false);
+  const [initialSnapshot, setInitialSnapshot] = React111.useState();
+  const [booxConnected, setBooxConnected] = React111.useState(false);
+  const resizePostProcessTimeoutRef = (0, import_react139.useRef)();
+  const shortDelayTimerRef = (0, import_react139.useRef)();
+  const canvasInteractionActiveRef = (0, import_react139.useRef)(false);
+  const hasUnsavedChangesRef = (0, import_react139.useRef)(false);
+  const latestInvitingHeightRef = (0, import_react139.useRef)(0);
+  const editorRef = (0, import_react139.useRef)();
+  const editorWrapperRefEl = (0, import_react139.useRef)(null);
+  const websocketConnectedRef = (0, import_react139.useRef)(false);
+  const [isBooxInputLocked, setIsBooxInputLocked] = React111.useState(false);
+  const activateWritingSessionRef = (0, import_react139.useRef)(null);
+  const adjustThrottleRef = (0, import_react139.useRef)(null);
+  const setBooxOverlayActiveTimerRef = (0, import_react139.useRef)(null);
+  const isViewActiveRef = (0, import_react139.useRef)(true);
+  const pendingNewOverlayRef = (0, import_react139.useRef)(false);
+  const isAndroidDrawingAreaResizingRef = (0, import_react139.useRef)(false);
+  const queuedBooxStrokePayloadsRef = (0, import_react139.useRef)([]);
+  const writingLineHeightRef = (0, import_react139.useRef)(WRITING_LINE_HEIGHT);
+  const transcriptRef = (0, import_react139.useRef)(void 0);
+  const transcriptionSessionRegisteredRef = (0, import_react139.useRef)(false);
+  const [hasTranscript, setHasTranscript] = React111.useState(false);
+  const curHeightRef = (0, import_react139.useRef)(null);
+  const isLegacyInkFileRef = (0, import_react139.useRef)(false);
+  const dedicatedScrollerRef = (0, import_react139.useRef)(null);
+  const dedicatedPageRef = (0, import_react139.useRef)(null);
+  const [dedicatedPageCssHeightPx, setDedicatedPageCssHeightPx] = React111.useState(null);
+  const dedicatedLastZoomRef = (0, import_react139.useRef)(null);
+  React111.useEffect(() => {
     if (!isFingerDrawingGloballyEnabled)
       setIsFingerDrawingActive(false);
   }, [isFingerDrawingGloballyEnabled]);
-  React105.useEffect(() => {
+  React111.useEffect(() => {
     verbose("INK CANVAS WRITING EDITOR mounted");
     logToVault("Ink canvas writing editor mounted: " + props.writingFile.path + (props.embedded ? " [embed]" : " [dedicated]"));
     void fetchFileData();
@@ -102119,7 +103357,7 @@ function WritingEditor(props) {
       });
     };
   }, []);
-  React105.useEffect(() => {
+  React111.useEffect(() => {
     if (!initialSnapshot || !isLegacyInkFileRef.current)
       return;
     showLegacyInkUnlockNotice({
@@ -102128,10 +103366,10 @@ function WritingEditor(props) {
       isEmbedded: props.embedded
     });
   }, [initialSnapshot]);
-  React105.useEffect(() => {
+  React111.useEffect(() => {
     return () => resetTimers();
   }, []);
-  React105.useEffect(() => {
+  React111.useEffect(() => {
     if (!initialSnapshot)
       return;
     if (!getBooxConnectionEnabled())
@@ -102168,7 +103406,6 @@ function WritingEditor(props) {
         setBooxConnected(true);
         setIsBooxInputLocked(true);
         debug("Ink canvas writing: Connected to Boox companion app WebSocket");
-        new import_obsidian28.Notice("Connected to Boox companion app");
         const sent = newAndroidDrawingArea();
         if (sent) {
           pendingNewOverlayRef.current = false;
@@ -102218,7 +103455,7 @@ function WritingEditor(props) {
       unregister2();
     };
   }, [initialSnapshot]);
-  React105.useEffect(() => {
+  React111.useEffect(() => {
     if (!initialSnapshot)
       return;
     if (!getBooxConnectionEnabled())
@@ -102250,7 +103487,7 @@ function WritingEditor(props) {
       visualViewport?.removeEventListener("resize", onVisualViewportChange);
     };
   }, [initialSnapshot, props.embedded]);
-  React105.useEffect(() => {
+  React111.useEffect(() => {
     if (!initialSnapshot)
       return;
     if (!editorWrapperRefEl.current)
@@ -102298,9 +103535,7 @@ function WritingEditor(props) {
         const el = dedicatedScrollerRef.current;
         if (!el)
           return;
-        const pad = MENUBAR_HEIGHT_PX;
-        const contentScrollTop = Math.max(0, prevScrollTop - pad);
-        el.scrollTop = pad + contentScrollTop * (zoom / prevZoom);
+        el.scrollTop = rescaleDedicatedWritingScrollTop(prevScrollTop, prevZoom, zoom, MENUBAR_HEIGHT_PX);
       });
     }
   }
@@ -102448,6 +103683,9 @@ function WritingEditor(props) {
       resizePostProcessTimeoutRef.current = void 0;
     }
   }
+  function shouldSkipBooxEmbedAutoResize() {
+    return getBooxConnectionEnabled();
+  }
   function debouncedEmbedResizePostProcess() {
     cancelDelayedBooxResizePostProcess();
     resizePostProcessTimeoutRef.current = window.setTimeout(() => {
@@ -102455,7 +103693,7 @@ function WritingEditor(props) {
       const editor = editorRef.current;
       if (!editor || !props.embedded)
         return;
-      if (websocketConnectedRef.current && getBooxConnectionEnabled())
+      if (shouldSkipBooxEmbedAutoResize())
         return;
       const invitingHeight = latestInvitingHeightRef.current || getInvitingHeightFromEditor(editor);
       if (!shouldResizeForNewHeight(invitingHeight, curHeightRef.current, props.plugin.settings.writingBufferLines, writingLineHeightRef.current))
@@ -102478,8 +103716,7 @@ function WritingEditor(props) {
     const invitingFromContent = candidateHeightPx > 0 ? candidateHeightPx : getInvitingHeightFromEditor(editor);
     latestInvitingHeightRef.current = invitingFromContent;
     if (props.embedded) {
-      const skipAutoResize = !forceNextPageHeightChangeRef.current && websocketConnectedRef.current && getBooxConnectionEnabled();
-      forceNextPageHeightChangeRef.current = false;
+      const skipAutoResize = !isInitialMount && shouldSkipBooxEmbedAutoResize();
       if (skipAutoResize)
         return;
       if (isInitialMount) {
@@ -102515,6 +103752,8 @@ function WritingEditor(props) {
         pageHeight: editor.getPageHeight(),
         preservePageScroll: false
       });
+      if (scroller)
+        scroller.scrollTop = 0;
     }
   }
   function notifyEmbedResize(pageHeight) {
@@ -102536,7 +103775,7 @@ function WritingEditor(props) {
     resetTimers();
     if (canvasInteractionActiveRef.current)
       return;
-    const delayMs = resolveInkAutosaveDelayMs(import_obsidian27.Platform, WRITE_SHORT_DELAY_MS, WRITE_LONG_DELAY_MS);
+    const delayMs = resolveInkAutosaveDelayMs(import_obsidian28.Platform, WRITE_SHORT_DELAY_MS, WRITE_LONG_DELAY_MS);
     shortDelayTimerRef.current = window.setTimeout(() => {
       void incrementalSave();
     }, delayMs);
@@ -102880,14 +104119,14 @@ function WritingEditor(props) {
     const lineHeight = writingLineHeightRef.current;
     const bufferLines = props.plugin.settings.writingBufferLines;
     const newHeight = editor.getPageHeight() + bufferLines * lineHeight;
-    forceNextPageHeightChangeRef.current = true;
     curHeightRef.current = newHeight;
+    latestInvitingHeightRef.current = newHeight;
     editor.setWritingPageHeight(newHeight);
     notifyEmbedResize(newHeight);
   }
   if (!initialSnapshot)
-    return /* @__PURE__ */ React105.createElement(React105.Fragment, null);
-  const canvas = /* @__PURE__ */ React105.createElement(InkSvgCanvas, {
+    return /* @__PURE__ */ React111.createElement(React111.Fragment, null);
+  const canvas = /* @__PURE__ */ React111.createElement(InkSvgCanvas, {
     initialSnapshot,
     writingMode: true,
     pageWidth: WRITING_PAGE_WIDTH,
@@ -102913,14 +104152,13 @@ function WritingEditor(props) {
     transcribeMenuOption,
     ...props.extendedMenu ?? []
   ];
-  return /* @__PURE__ */ React105.createElement(React105.Fragment, null, /* @__PURE__ */ React105.createElement("div", {
+  return /* @__PURE__ */ React111.createElement(React111.Fragment, null, /* @__PURE__ */ React111.createElement("div", {
     ref: editorWrapperRefEl,
     className: (0, import_classnames37.default)([
       "ddc_ink_writing-editor",
       "ddc_ink_editor-wrapper--loading",
       !props.embedded && "ddc_ink_dedicated-editor",
-      dominantHand === "left" && "ink_dominant-hand_left",
-      isBooxConnectionEnabled && "ddc_ink_boox-eink"
+      dominantHand === "left" && "ink_dominant-hand_left"
     ]),
     style: { height: "100%", position: "relative" },
     tabIndex: props.embedded ? void 0 : 0,
@@ -102942,10 +104180,10 @@ function WritingEditor(props) {
         editor.redo();
       }
     }
-  }, props.embedded ? canvas : /* @__PURE__ */ React105.createElement("div", {
+  }, props.embedded ? canvas : /* @__PURE__ */ React111.createElement("div", {
     ref: dedicatedScrollerRef,
     className: "ddc_ink_writing-dedicated-scroller"
-  }, /* @__PURE__ */ React105.createElement("div", {
+  }, /* @__PURE__ */ React111.createElement("div", {
     ref: dedicatedPageRef,
     className: "ddc_ink_writing-dedicated-page",
     style: {
@@ -102953,29 +104191,33 @@ function WritingEditor(props) {
       paddingTop: MENUBAR_HEIGHT_PX,
       boxSizing: "content-box"
     }
-  }, canvas)), /* @__PURE__ */ React105.createElement(PrimaryMenuBar, null, /* @__PURE__ */ React105.createElement(InkCanvasDrawingMenu, {
+  }, canvas)), /* @__PURE__ */ React111.createElement(PrimaryMenuBar, null, /* @__PURE__ */ React111.createElement(InkCanvasDrawingMenu, {
     getEditor: getEditor2,
     onStoreChange: handleStoreChange,
     onActivateTool: handleBooxActivateTool,
     onExpandClick: props.embedded ? props.onOpenInDedicatedView : void 0,
+    onEnterWorkspaceChrome: props.embedded ? void 0 : workspaceChrome.onEnterWorkspaceChrome,
+    onExitWorkspaceChrome: props.embedded ? void 0 : workspaceChrome.onExitWorkspaceChrome,
+    isWorkspaceChromeHidden: workspaceChrome.isWorkspaceChromeHidden,
+    onLocateFile: props.embedded ? void 0 : () => revealInkFileInExplorer(props.writingFile),
     showFingerDrawingToggle: isFingerDrawingGloballyEnabled,
     isFingerDrawingActive,
     onFingerDrawingToggle: () => setIsFingerDrawingActive((active) => !active),
     embedId: props.embedded && props.embedId ? props.embedId : void 0,
     workspaceLeafId: props.embedded && props.workspaceLeafId ? props.workspaceLeafId : void 0,
     plugin: props.embedded ? props.plugin : void 0
-  }), props.embedded && /* @__PURE__ */ React105.createElement(extended_writing_menu_default, {
+  }), props.embedded && /* @__PURE__ */ React111.createElement(extended_writing_menu_default, {
     onLockClick: () => props.closeEditor?.(),
     menuOptions: overflowMenuOptions
-  }), !props.embedded && /* @__PURE__ */ React105.createElement(extended_writing_menu_default, {
+  }), !props.embedded && /* @__PURE__ */ React111.createElement(extended_writing_menu_default, {
     menuOptions: overflowMenuOptions
-  })), /* @__PURE__ */ React105.createElement(SecondaryMenuBar, null, /* @__PURE__ */ React105.createElement(InkCanvasModifyMenu, {
+  })), /* @__PURE__ */ React111.createElement(SecondaryMenuBar, null, /* @__PURE__ */ React111.createElement(InkCanvasModifyMenu, {
     getEditor: getEditor2,
     onStoreChange: handleStoreChange,
     embedId: props.embedded && props.embedId ? props.embedId : void 0,
     workspaceLeafId: props.embedded && props.workspaceLeafId ? props.workspaceLeafId : void 0,
     plugin: props.embedded ? props.plugin : void 0
-  }), props.embedded && booxConnected && /* @__PURE__ */ React105.createElement(ExpandLinesButton, {
+  }), props.embedded && isBooxConnectionEnabled && /* @__PURE__ */ React111.createElement(ExpandLinesButton, {
     onExpandLines: expandWritingLinesByOne
   }))));
 }
@@ -103236,7 +104478,8 @@ var WritingView = class extends import_obsidian30.TextFileView {
       host.className = "ink-writing-view-host";
       this.hostEl = host;
       this.root = (0, import_client2.createRoot)(host);
-      this.root.render(/* @__PURE__ */ React106.createElement(WritingEditor, {
+      applyPendingInkWorkspaceChromeHide(this.leaf.id);
+      this.root.render(/* @__PURE__ */ React112.createElement(WritingEditor, {
         plugin: this.plugin,
         workspaceLeafId: this.leaf.id,
         writingFile: this.file,
@@ -103353,70 +104596,71 @@ var WritingView = class extends import_obsidian30.TextFileView {
     }
     recordInkCloseAndMaybeShowAccountNotice(this.plugin);
     this.clear();
+    exitInkWorkspaceChromeHidden(this.leaf.id);
     restoreSidebarsAfterInkView();
     return await super.onClose();
   }
 };
 
 // src/components/formats/current/drawing/drawing-view/drawing-view.tsx
-var import_obsidian33 = require("obsidian");
-var React113 = __toESM(require_react());
+var import_obsidian32 = require("obsidian");
+var React118 = __toESM(require_react());
 var import_client3 = __toESM(require_client());
 
 // src/components/formats/current/drawing/drawing-editor/drawing-editor.tsx
-var React112 = __toESM(require_react());
-var import_react139 = __toESM(require_react());
+var React117 = __toESM(require_react());
+var import_react140 = __toESM(require_react());
 var import_obsidian31 = require("obsidian");
 var import_classnames39 = __toESM(require_classnames());
 
 // src/graphics/icons/lock-frame-icon.tsx
-var React107 = __toESM(require_react());
-var LockFrameIcon = (props) => /* @__PURE__ */ React107.createElement("svg", {
+var React113 = __toESM(require_react());
+var LockFrameIcon = (props) => /* @__PURE__ */ React113.createElement("svg", {
   xmlns: "http://www.w3.org/2000/svg",
   height: 24,
   viewBox: "1.5 1.5 21 21",
   width: 24,
   fill: "currentColor",
   ...props
-}, /* @__PURE__ */ React107.createElement("path", {
+}, /* @__PURE__ */ React113.createElement("path", {
   fillRule: "evenodd",
   clipRule: "evenodd",
   d: "M16.459314346313477,1.8955078125C16.459314346313477,1.40093994140625,16.860254287719727,1,17.354822158813477,1C20.472558975219727,1,23.000024795532227,3.5274658203125,23.000024795532227,6.64520263671875C23.000024795532227,7.13983154296875,22.599084854125977,7.540771484375,22.104455947875977,7.540771484375C21.609888076782227,7.540771484375,21.208948135375977,7.13983154296875,21.208948135375977,6.64520263671875C21.208948135375977,4.5166015625,19.483362197875977,2.79107666015625,17.354822158813477,2.79107666015625C16.860254287719727,2.79107666015625,16.459314346313477,2.39013671875,16.459314346313477,1.8955078125Z"
-}), /* @__PURE__ */ React107.createElement("path", {
+}), /* @__PURE__ */ React113.createElement("path", {
   fillRule: "evenodd",
   clipRule: "evenodd",
   d: "M7.540795803070068,22.1044921875C7.540795803070068,22.59906005859375,7.139855861663818,23,6.645226955413818,23C3.5274291038513184,23,1.000024437904358,20.47259521484375,1.000024437904358,17.354736328125C1.000024437904358,16.86016845703125,1.400964379310608,16.459228515625,1.895532250404358,16.459228515625C2.3901000022888184,16.459228515625,2.7910399436950684,16.86016845703125,2.7910399436950684,17.354736328125C2.7910399436950684,19.4833984375,4.516625881195068,21.20892333984375,6.645226955413818,21.20892333984375C7.139855861663818,21.20892333984375,7.540795803070068,21.60986328125,7.540795803070068,22.1044921875Z"
-}), /* @__PURE__ */ React107.createElement("path", {
+}), /* @__PURE__ */ React113.createElement("path", {
   fillRule: "evenodd",
   clipRule: "evenodd",
   d: "M22.104455947875977,16.459228515625C22.599084854125977,16.459228515625,23.000024795532227,16.86016845703125,23.000024795532227,17.354736328125C23.000024795532227,20.47259521484375,20.472558975219727,23,17.354822158813477,23C16.860254287719727,23,16.459314346313477,22.59906005859375,16.459314346313477,22.1044921875C16.459314346313477,21.60986328125,16.860254287719727,21.20892333984375,17.354822158813477,21.20892333984375C19.483362197875977,21.20892333984375,21.208948135375977,19.4833984375,21.208948135375977,17.354736328125C21.208948135375977,16.86016845703125,21.609888076782227,16.459228515625,22.104455947875977,16.459228515625Z"
-}), /* @__PURE__ */ React107.createElement("path", {
+}), /* @__PURE__ */ React113.createElement("path", {
   fillRule: "evenodd",
   clipRule: "evenodd",
   d: "M1.895532250404358,7.540771484375C1.400903344154358,7.540771484375,0.9999634027481079,7.13983154296875,0.9999634027481079,6.64520263671875C0.9999634027481079,3.5274658203125,3.5274291038513184,1,6.645226955413818,1C7.139794826507568,1,7.540734767913818,1.40093994140625,7.540734767913818,1.8955078125C7.540734767913818,2.39013671875,7.139794826507568,2.79107666015625,6.645226955413818,2.79107666015625C4.516625881195068,2.79107666015625,2.7910399436950684,4.5166015625,2.7910399436950684,6.64520263671875C2.7910399436950684,7.13983154296875,2.3901000022888184,7.540771484375,1.895532250404358,7.540771484375Z"
-}), /* @__PURE__ */ React107.createElement("path", {
+}), /* @__PURE__ */ React113.createElement("path", {
   d: "M7.750024318695068,18.6826171875C7.360436916351318,18.6826171875,7.026940822601318,18.54388427734375,6.749413967132568,18.26641845703125C6.472070217132568,17.989013671875,6.333337306976318,17.655517578125,6.333337306976318,17.265869140625L6.333337306976318,10.1826171875C6.333337306976318,9.79296875,6.472070217132568,9.45947265625,6.749413967132568,9.18206787109375C7.026940822601318,8.90460205078125,7.360436916351318,8.765869140625,7.750024318695068,8.765869140625L8.458337783813477,8.765869140625L8.458337783813477,7.3492431640625C8.458337783813477,6.36932373046875,8.803613662719727,5.5341796875,9.494287490844727,4.843505859375C10.184900283813477,4.15289306640625,11.020105361938477,3.8076171875,12.000024795532227,3.8076171875C12.979883193969727,3.8076171875,13.815088272094727,4.15289306640625,14.505701065063477,4.843505859375C15.196374893188477,5.5341796875,15.541650772094727,6.36932373046875,15.541650772094727,7.3492431640625L15.541650772094727,8.765869140625L16.250024795532227,8.765869140625C16.639551162719727,8.765869140625,16.973047256469727,8.90460205078125,17.250574111938477,9.18206787109375C17.527917861938477,9.45947265625,17.666650772094727,9.79296875,17.666650772094727,10.1826171875L17.666650772094727,17.265869140625C17.666650772094727,17.655517578125,17.527917861938477,17.989013671875,17.250574111938477,18.26641845703125C16.973047256469727,18.54388427734375,16.639551162719727,18.6826171875,16.250024795532227,18.6826171875L7.750024318695068,18.6826171875ZM7.750024318695068,17.265869140625L16.250024795532227,17.265869140625L16.250024795532227,10.1826171875L7.750024318695068,10.1826171875L7.750024318695068,17.265869140625ZM13.000574111938477,14.72479248046875C13.277917861938477,14.447265625,13.416650772094727,14.11383056640625,13.416650772094727,13.7242431640625C13.416650772094727,13.33465576171875,13.277917861938477,13.001220703125,13.000574111938477,12.72369384765625C12.723047256469727,12.44635009765625,12.389551162719727,12.3076171875,12.000024795532227,12.3076171875C11.610437393188477,12.3076171875,11.276941299438477,12.44635009765625,10.999414443969727,12.72369384765625C10.722070693969727,13.001220703125,10.583337783813477,13.33465576171875,10.583337783813477,13.7242431640625C10.583337783813477,14.11383056640625,10.722070693969727,14.447265625,10.999414443969727,14.72479248046875C11.276941299438477,15.00213623046875,11.610437393188477,15.140869140625,12.000024795532227,15.140869140625C12.389551162719727,15.140869140625,12.723047256469727,15.00213623046875,13.000574111938477,14.72479248046875ZM9.875024795532227,8.765869140625L14.125024795532227,8.765869140625L14.125024795532227,7.3492431640625C14.125024795532227,6.759033203125,13.918359756469727,6.2572021484375,13.505212783813477,5.843994140625C13.092004776000977,5.430908203125,12.590234756469727,5.2242431640625,12.000024795532227,5.2242431640625C11.409753799438477,5.2242431640625,10.907983779907227,5.430908203125,10.494775772094727,5.843994140625C10.081628799438477,6.2572021484375,9.875024795532227,6.759033203125,9.875024795532227,7.3492431640625L9.875024795532227,8.765869140625Z"
 }));
 
 // src/components/jsx-components/extended-drawing-menu/extended-drawing-menu.tsx
-var React108 = __toESM(require_react());
+var React114 = __toESM(require_react());
 var ExtendedDrawingMenu = (props) => {
   const showSaveCamera = props.isSaveCameraEnabled === true;
-  return /* @__PURE__ */ React108.createElement(React108.Fragment, null, /* @__PURE__ */ React108.createElement("div", {
+  return /* @__PURE__ */ React114.createElement(React114.Fragment, null, /* @__PURE__ */ React114.createElement("div", {
     className: "ink_extended-writing-menu"
-  }, (showSaveCamera || props.onLockClick) && /* @__PURE__ */ React108.createElement("div", {
+  }, (showSaveCamera || props.onLockClick) && /* @__PURE__ */ React114.createElement("div", {
     className: "ddc_ink_btn-group ddc_ink_btn-group--lock"
-  }, props.onLockClick && /* @__PURE__ */ React108.createElement(TooltipButton, {
+  }, props.onLockClick && /* @__PURE__ */ React114.createElement(TooltipButton, {
     tooltip: showSaveCamera ? "Abandon framing" : "Finish editing",
     className: "ddc_ink_btn-group__btn",
     onClick: () => props.onLockClick?.()
-  }, /* @__PURE__ */ React108.createElement(CheckIcon, null)), showSaveCamera && props.onSaveCameraClick && /* @__PURE__ */ React108.createElement(TooltipButton, {
+  }, /* @__PURE__ */ React114.createElement(CheckIcon, null)), showSaveCamera && props.onSaveCameraClick && /* @__PURE__ */ React114.createElement(TooltipButton, {
     tooltip: "Saving framing",
     className: "ddc_ink_btn-group__btn ddc_ink_btn-group__btn--accent ddc_ink_btn-group__btn--frame",
     onClick: () => props.onSaveCameraClick?.()
-  }, /* @__PURE__ */ React108.createElement(LockFrameIcon, null), /* @__PURE__ */ React108.createElement("span", {
+  }, /* @__PURE__ */ React114.createElement(LockFrameIcon, null), /* @__PURE__ */ React114.createElement("span", {
     className: "ddc_ink_btn-group__btn-label"
-  }, "Save framing"))), /* @__PURE__ */ React108.createElement(overflow_menu_default, {
+  }, "Save framing"))), /* @__PURE__ */ React114.createElement(overflow_menu_default, {
     menuOptions: props.menuOptions
   })));
 };
@@ -103424,38 +104668,22 @@ var extended_drawing_menu_default = ExtendedDrawingMenu;
 
 // src/components/jsx-components/resize-handle/resize-handle.tsx
 var import_classnames38 = __toESM(require_classnames());
-var React110 = __toESM(require_react());
-
-// src/graphics/icons/resize-diagonal-icon.tsx
-var React109 = __toESM(require_react());
-var ResizeDiagonalIcon = (props) => /* @__PURE__ */ React109.createElement("svg", {
-  xmlns: "http://www.w3.org/2000/svg",
-  height: "1em",
-  viewBox: "0 0 24 24",
-  width: "1em",
-  ...props
-}, /* @__PURE__ */ React109.createElement("path", {
-  d: "M19.071 12.414a1 1 0 0 1 1 1v5.657a1 1 0 0 1-1 1h-5.657a1 1 0 0 1 0-2h4.657v-4.657a1 1 0 0 1 1-1ZM3.929 4.929a1 1 0 0 1 1-1h5.657a1 1 0 0 1 0 2H5.929v4.657a1 1 0 0 1-2 0V4.929Z"
-}), /* @__PURE__ */ React109.createElement("path", {
-  d: "M4.222 4.222a.999.999 0 0 1 1.414 0l14.142 14.142a.999.999 0 1 1-1.414 1.414L4.222 5.636a.999.999 0 0 1 0-1.414Z"
-}));
-
-// src/components/jsx-components/resize-handle/resize-handle.tsx
+var React115 = __toESM(require_react());
 function getHorzResizeDiff(movementX, dominantHand) {
   const sign = dominantHand === "left" ? -1 : 1;
   return movementX * 2 * sign;
 }
 var ResizeHandle = (props) => {
   const dominantHand = useDominantHand();
-  const lastPointerXPosition = React110.useRef();
-  const lastPointerYPosition = React110.useRef();
-  return /* @__PURE__ */ React110.createElement("button", {
+  const lastPointerXPosition = React115.useRef();
+  const lastPointerYPosition = React115.useRef();
+  return /* @__PURE__ */ React115.createElement("button", {
     className: (0, import_classnames38.default)([
       "ddc_ink_resize-handle",
       dominantHand === "left" && "ddc_ink_resize-handle--left"
     ]),
     onPointerDown: startResizing
-  }, /* @__PURE__ */ React110.createElement(ResizeDiagonalIcon, null));
+  }, /* @__PURE__ */ React115.createElement(ResizeDiagonalIcon, null));
   function startResizing(e3) {
     props.onResizeStart?.();
     activeDocument.addEventListener("mousemove", handleMouseResizing);
@@ -103493,11 +104721,8 @@ var ResizeHandle = (props) => {
   }
 };
 
-// src/components/formats/current/drawing/drawing-editor/drawing-editor.tsx
-var import_obsidian32 = require("obsidian");
-
 // src/components/formats/current/drawing/drawing-editor/use-drawing-embed-toolbar-compact.ts
-var React111 = __toESM(require_react());
+var React116 = __toESM(require_react());
 
 // src/logic/utils/toolbar-cluster-overlap.ts
 function isVisibleToolbarClusterRect(rect) {
@@ -103539,8 +104764,8 @@ function readToolbarClusterRects(menuBarEl) {
   };
 }
 function useDrawingEmbedToolbarCompact(editorWrapperRef, options) {
-  const isCompactRef = React111.useRef(false);
-  React111.useLayoutEffect(() => {
+  const isCompactRef = React116.useRef(false);
+  React116.useLayoutEffect(() => {
     if (!options.enabled)
       return;
     const editorEl = editorWrapperRef.current;
@@ -103616,37 +104841,38 @@ var DrawingEditorWrapper = (props) => {
   const embedsInEditMode = useAtomValue(embedsInEditModeAtom_v2);
   const editorActive = !!props.embedId && embedsInEditMode.has(props.embedId);
   if (editorActive)
-    return /* @__PURE__ */ React112.createElement(DrawingEditor, {
+    return /* @__PURE__ */ React117.createElement(DrawingEditor, {
       ...props
     });
-  return /* @__PURE__ */ React112.createElement(React112.Fragment, null);
+  return /* @__PURE__ */ React117.createElement(React117.Fragment, null);
 };
 function DrawingEditor(props) {
   const dominantHand = useDominantHand();
+  const workspaceChrome = useDedicatedInkWorkspaceChrome(props.workspaceLeafId, !props.embedded);
   const isBooxConnectionEnabled = useBooxConnectionEnabled();
   const isFingerDrawingGloballyEnabled = useFingerDrawingEnabled();
-  const [isFingerDrawingActive, setIsFingerDrawingActive] = React112.useState(false);
-  const [initialSnapshot, setInitialSnapshot] = React112.useState();
-  const shortDelayTimerRef = (0, import_react139.useRef)();
-  const canvasInteractionActiveRef = (0, import_react139.useRef)(false);
-  const hasUnsavedChangesRef = (0, import_react139.useRef)(false);
-  const editorRef = (0, import_react139.useRef)();
-  const editorWrapperRefEl = (0, import_react139.useRef)(null);
-  const websocketConnectedRef = (0, import_react139.useRef)(false);
-  const [isBooxInputLocked, setIsBooxInputLocked] = React112.useState(false);
-  const activateDrawingSessionRef = (0, import_react139.useRef)(null);
-  const adjustThrottleRef = (0, import_react139.useRef)(null);
-  const setBooxOverlayActiveTimerRef = (0, import_react139.useRef)(null);
-  const isViewActiveRef = (0, import_react139.useRef)(true);
-  const pendingNewOverlayRef = (0, import_react139.useRef)(false);
-  const [isSaveCameraEnabled, setIsSaveCameraEnabled] = React112.useState(false);
-  const isEmbedResizeGestureActiveRef = (0, import_react139.useRef)(false);
-  const hasHandledInitialCameraRef = (0, import_react139.useRef)(false);
-  const isLegacyInkFileRef = (0, import_react139.useRef)(false);
-  const transcriptRef = (0, import_react139.useRef)(void 0);
-  const transcriptionSessionRegisteredRef = (0, import_react139.useRef)(false);
-  const [hasTranscript, setHasTranscript] = React112.useState(false);
-  React112.useEffect(() => {
+  const [isFingerDrawingActive, setIsFingerDrawingActive] = React117.useState(false);
+  const [initialSnapshot, setInitialSnapshot] = React117.useState();
+  const shortDelayTimerRef = (0, import_react140.useRef)();
+  const canvasInteractionActiveRef = (0, import_react140.useRef)(false);
+  const hasUnsavedChangesRef = (0, import_react140.useRef)(false);
+  const editorRef = (0, import_react140.useRef)();
+  const editorWrapperRefEl = (0, import_react140.useRef)(null);
+  const websocketConnectedRef = (0, import_react140.useRef)(false);
+  const [isBooxInputLocked, setIsBooxInputLocked] = React117.useState(false);
+  const activateDrawingSessionRef = (0, import_react140.useRef)(null);
+  const adjustThrottleRef = (0, import_react140.useRef)(null);
+  const setBooxOverlayActiveTimerRef = (0, import_react140.useRef)(null);
+  const isViewActiveRef = (0, import_react140.useRef)(true);
+  const pendingNewOverlayRef = (0, import_react140.useRef)(false);
+  const [isSaveCameraEnabled, setIsSaveCameraEnabled] = React117.useState(false);
+  const isEmbedResizeGestureActiveRef = (0, import_react140.useRef)(false);
+  const hasHandledInitialCameraRef = (0, import_react140.useRef)(false);
+  const isLegacyInkFileRef = (0, import_react140.useRef)(false);
+  const transcriptRef = (0, import_react140.useRef)(void 0);
+  const transcriptionSessionRegisteredRef = (0, import_react140.useRef)(false);
+  const [hasTranscript, setHasTranscript] = React117.useState(false);
+  React117.useEffect(() => {
     verbose("INK CANVAS EDITOR mounted");
     logToVault("Ink canvas editor mounted: " + props.drawingFile.path + (props.embedded ? " [embed]" : " [dedicated]"));
     void fetchFileData();
@@ -103659,7 +104885,7 @@ function DrawingEditor(props) {
       });
     };
   }, []);
-  React112.useEffect(() => {
+  React117.useEffect(() => {
     if (!isFingerDrawingGloballyEnabled)
       setIsFingerDrawingActive(false);
   }, [isFingerDrawingGloballyEnabled]);
@@ -103668,7 +104894,7 @@ function DrawingEditor(props) {
     isSaveCameraEnabled,
     showFingerDrawingToggle: isFingerDrawingGloballyEnabled
   });
-  React112.useEffect(() => {
+  React117.useEffect(() => {
     if (!initialSnapshot || !isLegacyInkFileRef.current)
       return;
     showLegacyInkUnlockNotice({
@@ -103677,12 +104903,12 @@ function DrawingEditor(props) {
       isEmbedded: props.embedded
     });
   }, [initialSnapshot]);
-  React112.useEffect(() => {
+  React117.useEffect(() => {
     return () => {
       resetTimers();
     };
   }, []);
-  React112.useEffect(() => {
+  React117.useEffect(() => {
     if (!initialSnapshot)
       return;
     const inkPlugin = getGlobals().plugin;
@@ -103700,7 +104926,6 @@ function DrawingEditor(props) {
         websocketConnectedRef.current = true;
         setIsBooxInputLocked(true);
         debug("Ink canvas: Connected to Boox companion app WebSocket");
-        new import_obsidian32.Notice("Connected to Boox companion app");
         const sent = newAndroidDrawingArea();
         if (sent) {
           pendingNewOverlayRef.current = false;
@@ -103747,7 +104972,7 @@ function DrawingEditor(props) {
       unregister2();
     };
   }, [initialSnapshot]);
-  React112.useEffect(() => {
+  React117.useEffect(() => {
     if (!initialSnapshot)
       return;
     if (!editorWrapperRefEl.current)
@@ -103779,7 +105004,7 @@ function DrawingEditor(props) {
       visualViewport?.removeEventListener("resize", onVisualViewportChange);
     };
   }, [initialSnapshot]);
-  React112.useEffect(() => {
+  React117.useEffect(() => {
     if (!initialSnapshot)
       return;
     if (!editorWrapperRefEl.current)
@@ -104267,19 +105492,18 @@ function DrawingEditor(props) {
     return true;
   }
   if (!initialSnapshot)
-    return /* @__PURE__ */ React112.createElement(React112.Fragment, null);
-  return /* @__PURE__ */ React112.createElement(React112.Fragment, null, /* @__PURE__ */ React112.createElement("div", {
+    return /* @__PURE__ */ React117.createElement(React117.Fragment, null);
+  return /* @__PURE__ */ React117.createElement(React117.Fragment, null, /* @__PURE__ */ React117.createElement("div", {
     ref: editorWrapperRefEl,
     className: (0, import_classnames39.default)([
       "ddc_ink_drawing-editor",
       "ddc_ink_editor-wrapper--loading",
       !props.embedded && "ddc_ink_dedicated-editor",
-      dominantHand === "left" && "ink_dominant-hand_left",
-      isBooxConnectionEnabled && "ddc_ink_boox-eink"
+      dominantHand === "left" && "ink_dominant-hand_left"
     ]),
     style: { height: "100%", position: "relative" },
     tabIndex: props.embedded ? void 0 : 0
-  }, /* @__PURE__ */ React112.createElement(InkSvgCanvas, {
+  }, /* @__PURE__ */ React117.createElement(InkSvgCanvas, {
     initialSnapshot,
     onEditorReady: handleEditorReady,
     onChange: handleStoreChange,
@@ -104308,31 +105532,35 @@ function DrawingEditor(props) {
     isFingerDrawingActive,
     blockObsidianPenGestures: !!props.embedded || isBooxInputLocked,
     onBooxEmbedGeometryChange: props.embedded && isBooxInputLocked ? repositionBooxOverlayAfterEmbedGeometryChange : void 0
-  }), /* @__PURE__ */ React112.createElement(PrimaryMenuBar, null, /* @__PURE__ */ React112.createElement(InkCanvasDrawingMenu, {
+  }), /* @__PURE__ */ React117.createElement(PrimaryMenuBar, null, /* @__PURE__ */ React117.createElement(InkCanvasDrawingMenu, {
     getEditor: getEditor2,
     onStoreChange: handleStoreChange,
     onActivateTool: handleBooxActivateTool,
     onExpandClick: props.embedded ? () => props.onOpenInDedicatedView?.() : void 0,
+    onEnterWorkspaceChrome: props.embedded ? void 0 : workspaceChrome.onEnterWorkspaceChrome,
+    onExitWorkspaceChrome: props.embedded ? void 0 : workspaceChrome.onExitWorkspaceChrome,
+    isWorkspaceChromeHidden: workspaceChrome.isWorkspaceChromeHidden,
+    onLocateFile: props.embedded ? void 0 : () => revealInkFileInExplorer(props.drawingFile),
     showFingerDrawingToggle: isFingerDrawingGloballyEnabled,
     isFingerDrawingActive,
     onFingerDrawingToggle: () => setIsFingerDrawingActive((active) => !active),
     embedId: props.embedId,
     workspaceLeafId: props.workspaceLeafId,
     plugin: getGlobals().plugin
-  }), props.embedded && /* @__PURE__ */ React112.createElement(extended_drawing_menu_default, {
+  }), props.embedded && /* @__PURE__ */ React117.createElement(extended_drawing_menu_default, {
     onSaveCameraClick: handleSaveCameraPosition,
     isSaveCameraEnabled,
     onLockClick: () => props.closeEditor?.(),
     menuOptions: customExtendedMenu
-  }), !props.embedded && /* @__PURE__ */ React112.createElement(extended_drawing_menu_default, {
+  }), !props.embedded && /* @__PURE__ */ React117.createElement(extended_drawing_menu_default, {
     menuOptions: customExtendedMenu
-  })), /* @__PURE__ */ React112.createElement(SecondaryMenuBar, null, /* @__PURE__ */ React112.createElement(InkCanvasModifyMenu, {
+  })), /* @__PURE__ */ React117.createElement(SecondaryMenuBar, null, /* @__PURE__ */ React117.createElement(InkCanvasModifyMenu, {
     getEditor: getEditor2,
     onStoreChange: handleStoreChange,
     embedId: props.embedded && props.embedId ? props.embedId : void 0,
     workspaceLeafId: props.embedded && props.workspaceLeafId ? props.workspaceLeafId : void 0,
     plugin: props.embedded ? getGlobals().plugin : void 0
-  })), props.resizeEmbed && /* @__PURE__ */ React112.createElement(ResizeHandle, {
+  })), props.resizeEmbed && /* @__PURE__ */ React117.createElement(ResizeHandle, {
     resizeEmbed,
     onResizeStart,
     onResizeEnd
@@ -104390,12 +105618,12 @@ function registerDrawingView(plugin) {
     if (!leaf)
       return;
     const view = leaf.view;
-    if (view instanceof import_obsidian33.FileView && view.file) {
+    if (view instanceof import_obsidian32.FileView && view.file) {
       await ensureThemedNativeInkSvgView(plugin, leaf, view.file);
     }
   }));
 }
-var DrawingView = class extends import_obsidian33.TextFileView {
+var DrawingView = class extends import_obsidian32.TextFileView {
   constructor(leaf, plugin) {
     super(leaf);
     this.editorControls = null;
@@ -104418,7 +105646,8 @@ var DrawingView = class extends import_obsidian33.TextFileView {
       host.className = "ink-drawing-view-host";
       this.hostEl = host;
       this.root = (0, import_client3.createRoot)(host);
-      const editorElement = /* @__PURE__ */ React113.createElement(DrawingEditor, {
+      applyPendingInkWorkspaceChromeHide(this.leaf.id);
+      const editorElement = /* @__PURE__ */ React118.createElement(DrawingEditor, {
         onReady: () => {
         },
         workspaceLeafId: this.leaf.id,
@@ -104443,7 +105672,7 @@ var DrawingView = class extends import_obsidian33.TextFileView {
         ],
         saveControlsReference: this.registerEditorControls
       });
-      this.root.render(/* @__PURE__ */ React113.createElement(Provider, null, editorElement));
+      this.root.render(/* @__PURE__ */ React118.createElement(Provider, null, editorElement));
       if (!this.leafChangeListenerRegistered) {
         this.leafChangeListenerRegistered = true;
         this.registerEvent(this.plugin.app.workspace.on("active-leaf-change", (leaf) => {
@@ -104499,6 +105728,7 @@ var DrawingView = class extends import_obsidian33.TextFileView {
     }
     recordInkCloseAndMaybeShowAccountNotice(this.plugin);
     this.clear();
+    exitInkWorkspaceChromeHidden(this.leaf.id);
     restoreSidebarsAfterInkView();
     return await super.onClose();
   }
@@ -104513,11 +105743,12 @@ async function openInActiveView(fileRef) {
   const leaf = workspace.getLeaf();
   await leaf.openFile(fileRef);
 }
-async function openInkFileInView(fileRef, viewType) {
+async function openInkFileInView(fileRef, viewType, options) {
   const plugin = getGlobals().plugin;
   const { workspace } = plugin.app;
   const leaf = workspace.getLeaf();
   const type = viewType === "inkDrawing" ? DRAWING_VIEW_TYPE : WRITING_VIEW_TYPE;
+  const collapseSidebars = options?.collapseSidebars !== false;
   const inkViewAlreadyOpen = [
     ...workspace.getLeavesOfType(DRAWING_VIEW_TYPE),
     ...workspace.getLeavesOfType(WRITING_VIEW_TYPE)
@@ -104527,7 +105758,7 @@ async function openInkFileInView(fileRef, viewType) {
     state: { file: fileRef.path },
     active: true
   });
-  if (!inkViewAlreadyOpen) {
+  if (collapseSidebars && !inkViewAlreadyOpen) {
     plugin.inkViewSidebarState = {
       leftWasCollapsed: workspace.leftSplit.collapsed,
       rightWasCollapsed: workspace.rightSplit.collapsed
@@ -104535,6 +105766,10 @@ async function openInkFileInView(fileRef, viewType) {
     workspace.leftSplit.collapse();
     workspace.rightSplit.collapse();
   }
+}
+async function openInkFileInViewAndLocate(fileRef, viewType) {
+  await openInkFileInView(fileRef, viewType, { collapseSidebars: false });
+  revealInkFileInExplorer(fileRef);
 }
 function restoreSidebarsAfterInkView() {
   const plugin = getGlobals().plugin;
@@ -104558,29 +105793,29 @@ function restoreSidebarsAfterInkView() {
 }
 
 // src/components/formats/current/drawing/drawing-embed/drawing-embed.tsx
-var import_obsidian34 = require("obsidian");
+var import_obsidian33 = require("obsidian");
 var import_classnames41 = __toESM(require_classnames());
 
 // src/components/formats/current/drawing/drawing-embed-preview/drawing-embed-preview.tsx
 var import_classnames40 = __toESM(require_classnames());
-var React114 = __toESM(require_react());
+var React119 = __toESM(require_react());
 var DrawingEmbedPreviewWrapper = (props) => {
   const embedsInEditMode = useAtomValue(embedsInEditModeAtom_v2);
   const previewActive = !props.embedId || !embedsInEditMode.has(props.embedId);
   if (previewActive) {
-    return /* @__PURE__ */ React114.createElement(DrawingEmbedPreview, {
+    return /* @__PURE__ */ React119.createElement(DrawingEmbedPreview, {
       ...props
     });
   } else {
-    return /* @__PURE__ */ React114.createElement(React114.Fragment, null);
+    return /* @__PURE__ */ React119.createElement(React119.Fragment, null);
   }
 };
 var DrawingEmbedPreview = (props) => {
   const { plugin } = getGlobals();
-  const containerElRef = React114.useRef(null);
-  const [fileSrc, setFileSrc] = React114.useState(null);
+  const containerElRef = React119.useRef(null);
+  const [fileSrc, setFileSrc] = React119.useState(null);
   const hasStrokes = useInkFileHasStrokes(props.embeddedFile, plugin.app.vault);
-  React114.useEffect(() => {
+  React119.useEffect(() => {
     verbose("PREVIEW mounted");
     refreshSrc();
     const onModify = (modifiedFile) => {
@@ -104596,7 +105831,7 @@ var DrawingEmbedPreview = (props) => {
       plugin.app.vault.offref(eventRef);
     };
   }, [props.embeddedFile]);
-  return /* @__PURE__ */ React114.createElement(React114.Fragment, null, /* @__PURE__ */ React114.createElement("div", {
+  return /* @__PURE__ */ React119.createElement(React119.Fragment, null, /* @__PURE__ */ React119.createElement("div", {
     ref: containerElRef,
     className: (0, import_classnames40.default)([
       "ddc_ink_drawing-embed-preview",
@@ -104610,7 +105845,7 @@ var DrawingEmbedPreview = (props) => {
       pointerEvents: "all"
     },
     onClick: props.onClick
-  }, fileSrc && /* @__PURE__ */ React114.createElement(React114.Fragment, null, /* @__PURE__ */ React114.createElement(InlineSVG, {
+  }, fileSrc && /* @__PURE__ */ React119.createElement(React119.Fragment, null, /* @__PURE__ */ React119.createElement(InlineSVG, {
     src: fileSrc,
     style: {
       width: "100%",
@@ -104655,23 +105890,23 @@ var anyDrawingEmbedInEditModeAtom_v2 = atom((get) => {
 });
 function DrawingEmbed(props) {
   const isBooxConnectionEnabled = useBooxConnectionEnabled();
-  const embedContainerElRef = (0, import_react140.useRef)(null);
-  const resizeContainerElRef = (0, import_react140.useRef)(null);
-  const editorControlsRef = (0, import_react140.useRef)();
-  const embedWidthRef = (0, import_react140.useRef)(props.embedSettings.embedDisplay.width || DRAWING_INITIAL_WIDTH);
-  const embedAspectRatioRef = (0, import_react140.useRef)(props.embedSettings.embedDisplay.aspectRatio || DRAWING_INITIAL_ASPECT_RATIO);
-  const didExplicitSaveEmbedSettingsRef = (0, import_react140.useRef)(false);
-  const [savedEmbedSettings, setSavedEmbedSettings] = React115.useState(props.embedSettings);
-  const resizeStartWidthRef = (0, import_react140.useRef)(0);
-  const resizeStartAspectRatioRef = (0, import_react140.useRef)(0);
-  const [drawingFormat, setDrawingFormat] = React115.useState("unknown");
-  const [transcriptHeightPx, setTranscriptHeightPx] = React115.useState(0);
+  const embedContainerElRef = (0, import_react141.useRef)(null);
+  const resizeContainerElRef = (0, import_react141.useRef)(null);
+  const editorControlsRef = (0, import_react141.useRef)();
+  const embedWidthRef = (0, import_react141.useRef)(props.embedSettings.embedDisplay.width || DRAWING_INITIAL_WIDTH);
+  const embedAspectRatioRef = (0, import_react141.useRef)(props.embedSettings.embedDisplay.aspectRatio || DRAWING_INITIAL_ASPECT_RATIO);
+  const didExplicitSaveEmbedSettingsRef = (0, import_react141.useRef)(false);
+  const [savedEmbedSettings, setSavedEmbedSettings] = React120.useState(props.embedSettings);
+  const resizeStartWidthRef = (0, import_react141.useRef)(0);
+  const resizeStartAspectRatioRef = (0, import_react141.useRef)(0);
+  const [drawingFormat, setDrawingFormat] = React120.useState("unknown");
+  const [transcriptHeightPx, setTranscriptHeightPx] = React120.useState(0);
   const setEmbedsInEditMode = useSetAtom(embedsInEditModeAtom_v2);
   const embedsInEditMode = useAtomValue(embedsInEditModeAtom_v2);
   const isThisEmbedEditing = !!(props.embedId && embedsInEditMode.has(props.embedId));
   const transcript = useInkFileTranscript(props.embeddedFile);
   const { hasTranscript, showTranscript } = useLockedInkTranscriptMode(props.embeddedFile?.path, transcript, isThisEmbedEditing);
-  const showTranscriptRef = (0, import_react140.useRef)(false);
+  const showTranscriptRef = (0, import_react141.useRef)(false);
   showTranscriptRef.current = showTranscript;
   let resizeHeightPx = embedWidthRef.current / embedAspectRatioRef.current;
   const transcriptHeightIsReady = showTranscript && transcriptHeightPx > 0;
@@ -104691,7 +105926,7 @@ function DrawingEmbed(props) {
       height: transcriptHeightIsReady ? resizeHeightPx + "px" : "auto"
     };
   }
-  React115.useLayoutEffect(() => {
+  React120.useLayoutEffect(() => {
     const embedEl = embedContainerElRef.current;
     const resizeContainerEl = resizeContainerElRef.current;
     if (!embedEl)
@@ -104711,7 +105946,7 @@ function DrawingEmbed(props) {
       resizeContainerEl.removeAttribute("data-ink-display-mode");
     }
   }, [showTranscript]);
-  React115.useEffect(() => {
+  React120.useEffect(() => {
     if (!props.embeddedFile)
       return;
     void detectFormat(props.embeddedFile);
@@ -104733,7 +105968,7 @@ function DrawingEmbed(props) {
       setDrawingFormat("legacyInk");
     }
   }
-  React115.useEffect(() => {
+  React120.useEffect(() => {
     if (embedShouldActivateImmediately() && props.embedId) {
       window.setTimeout(() => {
         void switchToEditMode();
@@ -104745,7 +105980,7 @@ function DrawingEmbed(props) {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  React115.useEffect(() => {
+  React120.useEffect(() => {
     if (!props.workspaceLeafId)
       return;
     const plugin = getGlobals().plugin;
@@ -104776,7 +106011,7 @@ function DrawingEmbed(props) {
   function handleCopyEmbed(_source) {
     const embedStr = props.getEmbedMarkdown?.() ?? null;
     if (!embedStr) {
-      new import_obsidian34.Notice("Could not read embed Markdown to copy");
+      new import_obsidian33.Notice("Could not read embed Markdown to copy");
       return;
     }
     void copyEmbedMarkdownToClipboard(embedStr);
@@ -104807,13 +106042,13 @@ function DrawingEmbed(props) {
   function handleCopyTranscript() {
     const text = transcript?.trim() ?? "";
     if (!text) {
-      new import_obsidian34.Notice("No transcript to copy");
+      new import_obsidian33.Notice("No transcript to copy");
       return;
     }
     void navigator.clipboard.writeText(text).then(() => {
-      new import_obsidian34.Notice("Transcript copied to clipboard");
+      new import_obsidian33.Notice("Transcript copied to clipboard");
     }).catch(() => {
-      new import_obsidian34.Notice("Failed to copy transcript to clipboard");
+      new import_obsidian33.Notice("Failed to copy transcript to clipboard");
     });
   }
   async function updateTranscriptFromLockedEmbed() {
@@ -104837,7 +106072,7 @@ function DrawingEmbed(props) {
       {
         text: "Open drawing",
         action: () => {
-          void openInDedicatedView();
+          void openInDedicatedView({ enterFullScreen: false });
         }
       },
       { separator: true }
@@ -104857,7 +106092,7 @@ function DrawingEmbed(props) {
     {
       text: "Open drawing",
       action: async () => {
-        await openInDedicatedView();
+        await openInDedicatedView({ enterFullScreen: false });
       }
     },
     { separator: true },
@@ -104905,20 +106140,20 @@ function DrawingEmbed(props) {
     }
   ].filter(Boolean);
   if (!props.embeddedFile) {
-    return /* @__PURE__ */ React115.createElement(React115.Fragment, null, /* @__PURE__ */ React115.createElement("div", {
+    return /* @__PURE__ */ React120.createElement(React120.Fragment, null, /* @__PURE__ */ React120.createElement("div", {
       className: "ddc_ink_embed ddc_ink_drawing-embed"
-    }, /* @__PURE__ */ React115.createElement("div", {
+    }, /* @__PURE__ */ React120.createElement("div", {
       className: "ddc_ink_pending-banner ddc_ink_pending-banner--not-found"
-    }, /* @__PURE__ */ React115.createElement("span", {
+    }, /* @__PURE__ */ React120.createElement("span", {
       className: "ddc_ink_pending-banner__title"
-    }, "Drawing file not found: ", props.partialEmbedFilepath), /* @__PURE__ */ React115.createElement("div", {
+    }, "Drawing file not found: ", props.partialEmbedFilepath), /* @__PURE__ */ React120.createElement("div", {
       className: "ddc_ink_pending-banner__actions"
-    }, /* @__PURE__ */ React115.createElement("button", {
+    }, /* @__PURE__ */ React120.createElement("button", {
       className: "ddc_ink_pending-banner__btn ddc_ink_pending-banner__btn--primary",
       onClick: () => props.locateFile?.()
     }, "Locate file")))));
   }
-  return /* @__PURE__ */ React115.createElement(React115.Fragment, null, /* @__PURE__ */ React115.createElement("div", {
+  return /* @__PURE__ */ React120.createElement(React120.Fragment, null, /* @__PURE__ */ React120.createElement("div", {
     ref: embedContainerElRef,
     className: (0, import_classnames41.default)([
       "ddc_ink_embed",
@@ -104930,19 +106165,19 @@ function DrawingEmbed(props) {
       paddingTop: "1em",
       paddingBottom: "1em"
     }
-  }, props.isPendingPaste && props.embeddedFile && /* @__PURE__ */ React115.createElement("div", {
+  }, props.isPendingPaste && props.embeddedFile && /* @__PURE__ */ React120.createElement("div", {
     className: "ddc_ink_pending-banner"
-  }, /* @__PURE__ */ React115.createElement("span", {
+  }, /* @__PURE__ */ React120.createElement("span", {
     className: "ddc_ink_pending-banner__title"
-  }, "Copied embed \u2014 reference source or duplicate?"), /* @__PURE__ */ React115.createElement("div", {
+  }, "Copied embed \u2014 reference source or duplicate?"), /* @__PURE__ */ React120.createElement("div", {
     className: "ddc_ink_pending-banner__actions"
-  }, /* @__PURE__ */ React115.createElement("button", {
+  }, /* @__PURE__ */ React120.createElement("button", {
     className: "ddc_ink_pending-banner__btn ddc_ink_pending-banner__btn--primary",
     onClick: () => props.resolveAsReference?.()
-  }, "Reference existing file"), /* @__PURE__ */ React115.createElement("button", {
+  }, "Reference existing file"), /* @__PURE__ */ React120.createElement("button", {
     className: "ddc_ink_pending-banner__btn ddc_ink_pending-banner__btn--primary",
     onClick: () => void props.resolveAsDuplicate?.()
-  }, "Make duplicate"))), props.embeddedFile && /* @__PURE__ */ React115.createElement("div", {
+  }, "Make duplicate"))), props.embeddedFile && /* @__PURE__ */ React120.createElement("div", {
     className: (0, import_classnames41.default)([
       "ddc_ink_resize-container",
       isBooxConnectionEnabled && "ddc_ink_resize-container--boox"
@@ -104950,17 +106185,17 @@ function DrawingEmbed(props) {
     ref: resizeContainerElRef,
     "data-ink-display-mode": showTranscript ? "text" : void 0,
     style: resizeContainerStyle
-  }, showTranscript && transcript && /* @__PURE__ */ React115.createElement(EmbedPreviewContextMenu, {
+  }, showTranscript && transcript && /* @__PURE__ */ React120.createElement(EmbedPreviewContextMenu, {
     menuOptions: lockedEmbedMenuOptions(true),
     layout: "content"
-  }, /* @__PURE__ */ React115.createElement(InkTranscriptView, {
+  }, /* @__PURE__ */ React120.createElement(InkTranscriptView, {
     app: getGlobals().plugin.app,
     markdown: transcript,
     sourcePath: props.sourceMdFile?.path ?? "",
     onHeightChange: applyTranscriptHeight
-  })), !showTranscript && /* @__PURE__ */ React115.createElement(EmbedPreviewContextMenu, {
+  })), !showTranscript && /* @__PURE__ */ React120.createElement(EmbedPreviewContextMenu, {
     menuOptions: lockedEmbedMenuOptions(hasTranscript)
-  }, /* @__PURE__ */ React115.createElement(DrawingEmbedPreviewWrapper, {
+  }, /* @__PURE__ */ React120.createElement(DrawingEmbedPreviewWrapper, {
     embedId: props.embedId,
     embeddedFile: props.embeddedFile,
     embedSettings: savedEmbedSettings,
@@ -104968,11 +106203,11 @@ function DrawingEmbed(props) {
     },
     onClick: props.isPendingPaste ? () => {
     } : () => void switchToEditMode()
-  })), !isThisEmbedEditing && /* @__PURE__ */ React115.createElement(InkEmbedTranscriptControls, {
+  })), !isThisEmbedEditing && /* @__PURE__ */ React120.createElement(InkEmbedTranscriptControls, {
     filePath: props.embeddedFile.path,
     inkIconKind: "drawing",
     hasTranscript
-  }), (drawingFormat === "ink-canvas" || drawingFormat === "legacyInk") && /* @__PURE__ */ React115.createElement(DrawingEditorWrapper, {
+  }), (drawingFormat === "ink-canvas" || drawingFormat === "legacyInk") && /* @__PURE__ */ React120.createElement(DrawingEditorWrapper, {
     embedId: props.embedId,
     workspaceLeafId: props.workspaceLeafId,
     onReady: () => {
@@ -105118,9 +106353,10 @@ function DrawingEmbed(props) {
       });
     }
   }
-  async function openInDedicatedView() {
+  async function openInDedicatedView(options) {
     if (!props.embeddedFile)
       return;
+    const enterFullScreen = options?.enterFullScreen !== false;
     dismissLegacyInkNoticesForFile(props.embeddedFile.path);
     if (editorControlsRef.current) {
       await editorControlsRef.current.saveAndHalt();
@@ -105134,7 +106370,21 @@ function DrawingEmbed(props) {
       });
     }
     editorControlsRef.current = void 0;
-    await openInkFileInView(props.embeddedFile, "inkDrawing");
+    if (enterFullScreen) {
+      requestInkWorkspaceChromeForNextDedicatedView();
+    }
+    try {
+      if (enterFullScreen) {
+        await openInkFileInView(props.embeddedFile, "inkDrawing");
+      } else {
+        await openInkFileInViewAndLocate(props.embeddedFile, "inkDrawing");
+      }
+    } catch (error2) {
+      if (enterFullScreen) {
+        cancelPendingInkWorkspaceChromeHide();
+      }
+      throw error2;
+    }
   }
   async function saveAndSwitchToPreviewMode() {
     verbose(["Remove embed from edit mode", props.embedId]);
@@ -105208,23 +106458,23 @@ function preventCodeMirrorHandlingWidgetsEvents(selector = ".ddc_ink_widget-root
 }
 
 // src/logic/utils/open-ink-file-picker.ts
-var import_obsidian36 = require("obsidian");
+var import_obsidian35 = require("obsidian");
 
 // src/components/dom-components/modals/svg-picker-modal/svg-picker-modal.ts
-var import_obsidian35 = require("obsidian");
+var import_obsidian34 = require("obsidian");
 var MAX_CONCURRENT_PREVIEW_LOADS = 4;
 var PREVIEW_ROOT_MARGIN = "120px 0px";
 function fileMatchesQuery(file, query) {
   const trimmed = query.trim();
   if (trimmed === "")
     return true;
-  const searchFn = (0, import_obsidian35.prepareFuzzySearch)(trimmed);
+  const searchFn = (0, import_obsidian34.prepareFuzzySearch)(trimmed);
   return searchFn(file.basename) !== null || searchFn(file.path) !== null;
 }
 function filterFiles(files, query) {
   return files.filter((file) => fileMatchesQuery(file, query));
 }
-var SvgFilePickerModal = class extends import_obsidian35.Modal {
+var SvgFilePickerModal = class extends import_obsidian34.Modal {
   constructor(app, options) {
     super(app);
     this.searchQuery = "";
@@ -105464,7 +106714,7 @@ var SvgFilePickerModal = class extends import_obsidian35.Modal {
     this.statusEl = contentEl.createDiv({ cls: "ink-svg-picker-status" });
     this.updateStatusText();
     const searchContainer = contentEl.createDiv({ cls: "ink-svg-picker-search" });
-    this.searchComponent = new import_obsidian35.SearchComponent(searchContainer);
+    this.searchComponent = new import_obsidian34.SearchComponent(searchContainer);
     this.searchComponent.setPlaceholder("Search by filename...");
     this.searchComponent.setValue(this.searchQuery);
     this.sectionsContainer = contentEl.createDiv({ cls: "ink-svg-picker-sections" });
@@ -105501,12 +106751,12 @@ function extractEmbedPathsFromNote(content, fileType) {
   return paths;
 }
 function resolvePathToCanonical(vault, metadataCache, linkpath, sourcePath) {
-  const normalized = (0, import_obsidian36.normalizePath)(linkpath);
+  const normalized = (0, import_obsidian35.normalizePath)(linkpath);
   const resolved = metadataCache.getFirstLinkpathDest(normalized, sourcePath);
-  if (resolved instanceof import_obsidian36.TFile)
+  if (resolved instanceof import_obsidian35.TFile)
     return resolved.path;
   const byPath = vault.getAbstractFileByPath(normalized);
-  if (byPath instanceof import_obsidian36.TFile)
+  if (byPath instanceof import_obsidian35.TFile)
     return byPath.path;
   return null;
 }
@@ -105603,10 +106853,10 @@ async function openInkFilePicker(plugin, fileType, title, onChoose, options) {
   const svgFiles = allFiles.filter((file) => file.extension === "svg");
   const fileTypeLabel = fileType === "inkWriting" ? "writing" : "drawing";
   if (svgFiles.length === 0) {
-    new import_obsidian36.Notice(`No ${fileTypeLabel} SVGs found`);
+    new import_obsidian35.Notice(`No ${fileTypeLabel} SVGs found`);
     return;
   }
-  const effectiveSource = options?.sourceFile ?? plugin.app.workspace.getActiveViewOfType(import_obsidian36.MarkdownView)?.file ?? plugin.app.workspace.getActiveFile();
+  const effectiveSource = options?.sourceFile ?? plugin.app.workspace.getActiveViewOfType(import_obsidian35.MarkdownView)?.file ?? plugin.app.workspace.getActiveFile();
   const noteContent = options?.noteContent ?? null;
   verbose(["[On Current Page] effectiveSource", {
     effectiveSource: effectiveSource?.path ?? null,
@@ -105629,7 +106879,7 @@ async function openInkFilePicker(plugin, fileType, title, onChoose, options) {
     return;
   if (validFiles.length === 0) {
     modal.close();
-    new import_obsidian36.Notice(`No ${fileTypeLabel} SVGs found`);
+    new import_obsidian35.Notice(`No ${fileTypeLabel} SVGs found`);
     return;
   }
   const sections = await buildSectionedFiles(plugin, validFiles, fileType, effectiveSource ?? null, noteContent);
@@ -105639,14 +106889,14 @@ async function openInkFilePicker(plugin, fileType, title, onChoose, options) {
 }
 
 // src/logic/undo-redo/workspace-leaf-from-cm.ts
-var import_obsidian37 = require("obsidian");
+var import_obsidian36 = require("obsidian");
 function getWorkspaceLeafForEditorView(plugin, editorView) {
   let found = null;
   plugin.app.workspace.iterateAllLeaves((leaf) => {
     if (found)
       return;
     const view = leaf.view;
-    if (view instanceof import_obsidian37.MarkdownView) {
+    if (view instanceof import_obsidian36.MarkdownView) {
       const cm = view.editor.cm;
       if (cm === editorView) {
         found = leaf;
@@ -105790,9 +107040,9 @@ var DrawingEmbedWidget = class extends import_view2.WidgetType {
     const hostLeaf = getWorkspaceLeafForEditorView(plugin, view);
     const workspaceLeafId = hostLeaf?.id ?? "";
     this.updateHighlightState(view, rootEl);
-    root.render(/* @__PURE__ */ React116.createElement(Provider, {
+    root.render(/* @__PURE__ */ React121.createElement(Provider, {
       store: getDefaultStore()
-    }, /* @__PURE__ */ React116.createElement(DrawingEmbed, {
+    }, /* @__PURE__ */ React121.createElement(DrawingEmbed, {
       workspaceLeafId,
       embedId: this.id,
       embeddedFile: this.embeddedFile,
@@ -105913,7 +107163,7 @@ var DrawingEmbedWidget = class extends import_view2.WidgetType {
     const duplicatedFile = await duplicateDrawingFile(plugin, this.embeddedFile, this.mdFile);
     if (!duplicatedFile)
       return;
-    new import_obsidian38.Notice("Drawing file duplicated");
+    new import_obsidian37.Notice("Drawing file duplicated");
     await this.replaceEmbedAfterConversion(view, duplicatedFile, "inkDrawing");
   }
   async replaceEmbedAfterConversion(view, finalFile, toType) {
@@ -106064,12 +107314,12 @@ var embedStateField = import_state32.StateField.define({
   },
   update(prevEmbeds, transaction2) {
     const { plugin } = getGlobals();
-    const activeView = plugin.app.workspace.getActiveViewOfType(import_obsidian38.MarkdownView);
+    const activeView = plugin.app.workspace.getActiveViewOfType(import_obsidian37.MarkdownView);
     const activeEditor = activeView?.editor;
     if (!activeEditor)
       return prevEmbeds;
     const cmEditorView = activeEditor.cm;
-    const isLivePreview = cmEditorView.state.field(import_obsidian38.editorLivePreviewField);
+    const isLivePreview = cmEditorView.state.field(import_obsidian37.editorLivePreviewField);
     if (!isLivePreview)
       return import_view2.Decoration.none;
     const firstRun = prevEmbeds.size === 0;
@@ -106161,7 +107411,7 @@ var embedStateField = import_state32.StateField.define({
 });
 function updateWidgetHighlights(transaction2, decorations) {
   const { plugin } = getGlobals();
-  const activeView = plugin.app.workspace.getActiveViewOfType(import_obsidian38.MarkdownView);
+  const activeView = plugin.app.workspace.getActiveViewOfType(import_obsidian37.MarkdownView);
   const activeEditor = activeView?.editor;
   if (!activeEditor)
     return;
@@ -106214,7 +107464,7 @@ function drawingEmbedExtension() {
 }
 function refreshDrawingEmbedsNow(viewportFrom, options) {
   const { plugin } = getGlobals();
-  const activeView = plugin.app.workspace.getActiveViewOfType(import_obsidian38.MarkdownView);
+  const activeView = plugin.app.workspace.getActiveViewOfType(import_obsidian37.MarkdownView);
   const editor = activeView?.editor;
   if (!editor)
     return;
@@ -106329,7 +107579,7 @@ function detectMarkdownEmbedLink(mdFile, previewLinkStartNode, transaction2) {
   const startOfReplacement = previewLinkStartNode.from;
   const endOfReplacement = settingsUrlEndNode.to;
   const { embedSettings, isPendingPaste } = parseSettingsFromUrl(urlAndSettings);
-  const embeddedFile = plugin.app.metadataCache.getFirstLinkpathDest((0, import_obsidian38.normalizePath)(previewPartialFilepath), mdFile.path);
+  const embeddedFile = plugin.app.metadataCache.getFirstLinkpathDest((0, import_obsidian37.normalizePath)(previewPartialFilepath), mdFile.path);
   return {
     embedLinkInfo: {
       startPosition: startOfReplacement,
@@ -106346,8 +107596,8 @@ function detectMarkdownEmbedLink(mdFile, previewLinkStartNode, transaction2) {
 var import_language2 = require("@codemirror/language");
 var import_state33 = require("@codemirror/state");
 var import_view3 = require("@codemirror/view");
-var import_obsidian39 = require("obsidian");
-var React117 = __toESM(require_react());
+var import_obsidian38 = require("obsidian");
+var React122 = __toESM(require_react());
 var import_client5 = __toESM(require_client());
 var refreshEmbedsEffectWriting = import_state33.StateEffect.define();
 var WritingEmbedWidget = class extends import_view3.WidgetType {
@@ -106393,9 +107643,9 @@ var WritingEmbedWidget = class extends import_view3.WidgetType {
     } else {
       rootEl.style.removeProperty("min-height");
     }
-    root.render(/* @__PURE__ */ React117.createElement(Provider, {
+    root.render(/* @__PURE__ */ React122.createElement(Provider, {
       store: getDefaultStore()
-    }, /* @__PURE__ */ React117.createElement(WritingEmbed, {
+    }, /* @__PURE__ */ React122.createElement(WritingEmbed, {
       plugin,
       workspaceLeafId,
       embedId: this.id,
@@ -106456,7 +107706,7 @@ var WritingEmbedWidget = class extends import_view3.WidgetType {
     let height;
     if (this.embedSettings?.embedDisplay?.aspectRatio) {
       const { plugin } = getGlobals();
-      const activeView = plugin.app.workspace.getActiveViewOfType(import_obsidian39.MarkdownView);
+      const activeView = plugin.app.workspace.getActiveViewOfType(import_obsidian38.MarkdownView);
       const activeEditor = activeView?.editor;
       if (activeEditor) {
         const cmEditorView = activeEditor.cm;
@@ -106563,7 +107813,7 @@ var WritingEmbedWidget = class extends import_view3.WidgetType {
     const duplicatedFile = await duplicateWritingFile(plugin, this.embeddedFile, this.mdFile);
     if (!duplicatedFile)
       return;
-    new import_obsidian39.Notice("Writing file duplicated");
+    new import_obsidian38.Notice("Writing file duplicated");
     await this.replaceEmbedAfterConversion(view, duplicatedFile, "inkWriting");
   }
   async replaceEmbedAfterConversion(view, finalFile, toType) {
@@ -106644,12 +107894,12 @@ var embedStateFieldWriting = import_state33.StateField.define({
   },
   update(prevEmbeds, transaction2) {
     const { plugin } = getGlobals();
-    const activeView = plugin.app.workspace.getActiveViewOfType(import_obsidian39.MarkdownView);
+    const activeView = plugin.app.workspace.getActiveViewOfType(import_obsidian38.MarkdownView);
     const activeEditor = activeView?.editor;
     if (!activeEditor)
       return prevEmbeds;
     const cmEditorView = activeEditor.cm;
-    const isLivePreview = cmEditorView.state.field(import_obsidian39.editorLivePreviewField);
+    const isLivePreview = cmEditorView.state.field(import_obsidian38.editorLivePreviewField);
     if (!isLivePreview)
       return import_view3.Decoration.none;
     const firstRun = prevEmbeds.size === 0;
@@ -106741,7 +107991,7 @@ var embedStateFieldWriting = import_state33.StateField.define({
 });
 function updateWidgetHighlightsWriting(transaction2, decorations) {
   const { plugin } = getGlobals();
-  const activeView = plugin.app.workspace.getActiveViewOfType(import_obsidian39.MarkdownView);
+  const activeView = plugin.app.workspace.getActiveViewOfType(import_obsidian38.MarkdownView);
   const activeEditor = activeView?.editor;
   if (!activeEditor)
     return;
@@ -106794,7 +108044,7 @@ function writingEmbedExtension() {
 }
 function refreshWritingEmbedsNow(viewportFrom, options) {
   const { plugin } = getGlobals();
-  const activeView = plugin.app.workspace.getActiveViewOfType(import_obsidian39.MarkdownView);
+  const activeView = plugin.app.workspace.getActiveViewOfType(import_obsidian38.MarkdownView);
   const editor = activeView?.editor;
   if (!editor)
     return;
@@ -106894,7 +108144,7 @@ function detectMarkdownEmbedLinkWriting(mdFile, previewLinkStartNode, transactio
   const startOfReplacement = previewLinkStartNode.from;
   const endOfReplacement = settingsUrlEndNode.to;
   const { embedSettings, isPendingPaste } = parseSettingsFromUrl(urlAndSettings);
-  const embeddedFile = plugin.app.metadataCache.getFirstLinkpathDest((0, import_obsidian39.normalizePath)(previewPartialFilepath), mdFile.path);
+  const embeddedFile = plugin.app.metadataCache.getFirstLinkpathDest((0, import_obsidian38.normalizePath)(previewPartialFilepath), mdFile.path);
   return {
     embedLinkInfo: {
       startPosition: startOfReplacement,
@@ -106925,12 +108175,12 @@ function refreshLivePreviewEmbedsWhenReady(plugin) {
   let attempt = 0;
   const tryRefresh = () => {
     attempt += 1;
-    const markdownView = plugin.app.workspace.getActiveViewOfType(import_obsidian40.MarkdownView);
+    const markdownView = plugin.app.workspace.getActiveViewOfType(import_obsidian39.MarkdownView);
     if (!markdownView || markdownView.getMode() !== "source")
       return;
     const editor = markdownView.editor;
     const cmView = editor?.cm;
-    const isLivePreview = cmView?.state.field(import_obsidian40.editorLivePreviewField) ?? false;
+    const isLivePreview = cmView?.state.field(import_obsidian39.editorLivePreviewField) ?? false;
     if (!cmView || !isLivePreview) {
       if (attempt < LIVE_PREVIEW_EMBED_REFRESH_MAX_ATTEMPTS) {
         window.requestAnimationFrame(tryRefresh);
@@ -106995,7 +108245,7 @@ async function migrateLegacyInkFileOnOpen(plugin, legacyFile) {
 }
 async function runLegacyInkMigrationFromNotice(plugin, legacyFile, options) {
   const migrationResult = await migrateLegacyInkFileOnOpen(plugin, legacyFile);
-  new import_obsidian41.Notice("Migrated to the new SVG format.");
+  new import_obsidian40.Notice("Migrated to the new SVG format.");
   if (options?.isEmbedded)
     return;
   await openInkFileInView(migrationResult.openedFile, migrationResult.viewType);
@@ -107043,7 +108293,7 @@ function showLegacyInkUnlockNotice(context) {
         });
         dismissLegacyInkNoticesForFile(context.legacyFile.path);
       } catch (err) {
-        new import_obsidian42.Notice("Migration failed: " + String(err));
+        new import_obsidian41.Notice("Migration failed: " + String(err));
       } finally {
         primaryBtnEl.disabled = false;
         primaryBtnEl.setText("Migrate to new format");
@@ -107057,7 +108307,7 @@ function showLegacyInkUnlockNotice(context) {
 }
 
 // src/components/formats/v1-code-blocks/writing/tldraw-writing-editor/finger-blocker/finger-blocker.tsx
-var React118 = __toESM(require_react());
+var React123 = __toESM(require_react());
 var INK_FINGER_BLOCKER_TOUCH_NONE_CLASS2 = "ink-finger-blocker--touch-none";
 var INK_FINGER_BLOCKER_TOUCH_PAN_XY_CLASS2 = "ink-finger-blocker--touch-pan-xy";
 function setFingerBlockerTouchMode2(blockerElement, mode) {
@@ -107070,23 +108320,23 @@ function setFingerBlockerTouchMode2(blockerElement, mode) {
 var POLL_INTERVAL_MS3 = 100;
 var MAX_POLL_RETRIES2 = 200;
 function FingerBlocker2({ getTlEditor, wrapperRef, enableTwoFingerGestures, onVerticalTouchPan }) {
-  const blockerRef = React118.useRef(null);
-  const pointerDownRef = React118.useRef(false);
-  const recentPenInputRef = React118.useRef(false);
-  const isPenDownRef = React118.useRef(false);
-  const lockedScrollPosRef = React118.useRef(null);
-  const activeScrollerRef = React118.useRef(null);
-  const currentTldrawToolIdRef = React118.useRef(null);
-  const tldrawToolCleanupMap = React118.useRef(/* @__PURE__ */ new Map());
-  const activeTouchPointerDataRef = React118.useRef(/* @__PURE__ */ new Map());
-  const twoFingerModeActiveRef = React118.useRef(false);
-  const prevTwoFingerMidpointRef = React118.useRef({ x: 0, y: 0 });
-  const prevTwoFingerDistanceRef = React118.useRef(0);
-  const prevCameraLockedRef = React118.useRef(false);
-  const twoFingerVerticalPanActiveRef = React118.useRef(false);
-  const prevVerticalPanMidpointRef = React118.useRef({ x: 0, y: 0 });
-  const onVerticalTouchPanRef = React118.useRef(onVerticalTouchPan);
-  React118.useEffect(() => {
+  const blockerRef = React123.useRef(null);
+  const pointerDownRef = React123.useRef(false);
+  const recentPenInputRef = React123.useRef(false);
+  const isPenDownRef = React123.useRef(false);
+  const lockedScrollPosRef = React123.useRef(null);
+  const activeScrollerRef = React123.useRef(null);
+  const currentTldrawToolIdRef = React123.useRef(null);
+  const tldrawToolCleanupMap = React123.useRef(/* @__PURE__ */ new Map());
+  const activeTouchPointerDataRef = React123.useRef(/* @__PURE__ */ new Map());
+  const twoFingerModeActiveRef = React123.useRef(false);
+  const prevTwoFingerMidpointRef = React123.useRef({ x: 0, y: 0 });
+  const prevTwoFingerDistanceRef = React123.useRef(0);
+  const prevCameraLockedRef = React123.useRef(false);
+  const twoFingerVerticalPanActiveRef = React123.useRef(false);
+  const prevVerticalPanMidpointRef = React123.useRef({ x: 0, y: 0 });
+  const onVerticalTouchPanRef = React123.useRef(onVerticalTouchPan);
+  React123.useEffect(() => {
     onVerticalTouchPanRef.current = onVerticalTouchPan;
   }, [onVerticalTouchPan]);
   const getWrapper = () => {
@@ -107128,7 +108378,7 @@ function FingerBlocker2({ getTlEditor, wrapperRef, enableTwoFingerGestures, onVe
       active.blur();
     }
   };
-  React118.useEffect(() => {
+  React123.useEffect(() => {
     const element = blockerRef.current;
     if (!element)
       return;
@@ -107432,7 +108682,7 @@ function FingerBlocker2({ getTlEditor, wrapperRef, enableTwoFingerGestures, onVe
       element.removeEventListener("touchcancel", handleTouchEnd, { capture: true });
     };
   }, [enableTwoFingerGestures, onVerticalTouchPan]);
-  React118.useEffect(() => {
+  React123.useEffect(() => {
     const scroller = getScroller();
     if (!scroller)
       return;
@@ -107553,7 +108803,7 @@ function FingerBlocker2({ getTlEditor, wrapperRef, enableTwoFingerGestures, onVe
       }
     };
   };
-  React118.useEffect(() => {
+  React123.useEffect(() => {
     let storeListenerCleanup = null;
     const stopPolling = listenForEditorToBecomeAvailable(getTlEditor, () => {
       const editor = getTlEditor();
@@ -107584,7 +108834,7 @@ function FingerBlocker2({ getTlEditor, wrapperRef, enableTwoFingerGestures, onVe
       tldrawToolCleanupMap.current.clear();
     };
   }, [getTlEditor]);
-  return /* @__PURE__ */ React118.createElement("div", {
+  return /* @__PURE__ */ React123.createElement("div", {
     ref: blockerRef,
     style: {
       position: "absolute",
@@ -107605,11 +108855,11 @@ function FingerBlocker2({ getTlEditor, wrapperRef, enableTwoFingerGestures, onVe
 var TldrawWritingEditorWrapper_v1 = (props) => {
   const editorActive = useAtomValue(editorActiveAtom_v1);
   if (editorActive) {
-    return /* @__PURE__ */ React119.createElement(TldrawWritingEditor_v1, {
+    return /* @__PURE__ */ React124.createElement(TldrawWritingEditor_v1, {
       ...props
     });
   } else {
-    return /* @__PURE__ */ React119.createElement(React119.Fragment, null);
+    return /* @__PURE__ */ React124.createElement(React124.Fragment, null);
   }
 };
 var MyCustomShapes_v1 = [WritingContainerUtil_v1, WritingLinesUtil_v1];
@@ -107617,22 +108867,22 @@ var tlOptions_v1 = {
   defaultSvgPadding: 0
 };
 function TldrawWritingEditor_v1(props) {
-  const [tlEditorSnapshot, setTlEditorSnapshot] = React119.useState();
+  const [tlEditorSnapshot, setTlEditorSnapshot] = React124.useState();
   const setEmbedState = useSetAtom(embedStateAtom_v1);
-  const shortDelayPostProcessTimeoutRef = (0, import_react141.useRef)();
-  const longDelayPostProcessTimeoutRef = (0, import_react141.useRef)();
-  const tlEditorRef = (0, import_react141.useRef)();
-  const tlEditorWrapperElRef = (0, import_react141.useRef)(null);
+  const shortDelayPostProcessTimeoutRef = (0, import_react142.useRef)();
+  const longDelayPostProcessTimeoutRef = (0, import_react142.useRef)();
+  const tlEditorRef = (0, import_react142.useRef)();
+  const tlEditorWrapperElRef = (0, import_react142.useRef)(null);
   const { stashStaleContent, unstashStaleContent } = useStash(props.plugin);
-  const cameraLimitsRef = (0, import_react141.useRef)();
-  React119.useEffect(() => {
+  const cameraLimitsRef = (0, import_react142.useRef)();
+  React124.useEffect(() => {
     verbose("EDITOR mounted");
     void fetchFileData();
     return () => {
       verbose("EDITOR unmounting");
     };
   }, []);
-  React119.useEffect(() => {
+  React124.useEffect(() => {
     if (!tlEditorSnapshot)
       return;
     showLegacyInkUnlockNotice({
@@ -107642,7 +108892,7 @@ function TldrawWritingEditor_v1(props) {
     });
   }, [tlEditorSnapshot]);
   if (!tlEditorSnapshot)
-    return /* @__PURE__ */ React119.createElement(React119.Fragment, null);
+    return /* @__PURE__ */ React124.createElement(React124.Fragment, null);
   verbose("EDITOR snapshot loaded");
   const defaultComponents = {
     Scribble: TldrawScribble,
@@ -107805,7 +109055,7 @@ function TldrawWritingEditor_v1(props) {
   const getTlEditor = () => {
     return tlEditorRef.current;
   };
-  return /* @__PURE__ */ React119.createElement(React119.Fragment, null, /* @__PURE__ */ React119.createElement("div", {
+  return /* @__PURE__ */ React124.createElement(React124.Fragment, null, /* @__PURE__ */ React124.createElement("div", {
     ref: tlEditorWrapperElRef,
     className: (0, import_classnames42.default)([
       "ddc_ink_writing-editor",
@@ -107815,7 +109065,7 @@ function TldrawWritingEditor_v1(props) {
       height: "100%",
       position: "relative"
     }
-  }, /* @__PURE__ */ React119.createElement(TldrawEditor, {
+  }, /* @__PURE__ */ React124.createElement(TldrawEditor, {
     options: tlOptions_v1,
     shapeUtils: [...defaultShapeUtils, ...MyCustomShapes_v1],
     tools: [...defaultTools, ...defaultShapeTools],
@@ -107824,13 +109074,13 @@ function TldrawWritingEditor_v1(props) {
     components: defaultComponents,
     onMount: handleMount,
     autoFocus: false
-  }), /* @__PURE__ */ React119.createElement(FingerBlocker2, {
+  }), /* @__PURE__ */ React124.createElement(FingerBlocker2, {
     getTlEditor,
     wrapperRef: tlEditorWrapperElRef
-  }), /* @__PURE__ */ React119.createElement(PrimaryMenuBar, null, /* @__PURE__ */ React119.createElement(WritingMenu, {
+  }), /* @__PURE__ */ React124.createElement(PrimaryMenuBar, null, /* @__PURE__ */ React124.createElement(WritingMenu, {
     getTlEditor,
     onStoreChange: (tlEditor) => queueOrRunStorePostProcesses(tlEditor)
-  }), props.embedded && props.extendedMenu && /* @__PURE__ */ React119.createElement(extended_writing_menu_default, {
+  }), props.embedded && props.extendedMenu && /* @__PURE__ */ React124.createElement(extended_writing_menu_default, {
     onLockClick: () => void props.closeEditor?.(),
     menuOptions: props.extendedMenu
   }))));
@@ -107845,28 +109095,28 @@ function TldrawWritingEditor_v1(props) {
 
 // src/components/formats/v1-code-blocks/writing/writing-embed-preview/writing-embed-preview.tsx
 var import_classnames43 = __toESM(require_classnames());
-var React120 = __toESM(require_react());
+var React125 = __toESM(require_react());
 var WritingEmbedPreviewWrapper_v1 = (props) => {
   const previewActive = useAtomValue(previewActiveAtom);
   if (previewActive) {
-    return /* @__PURE__ */ React120.createElement(WritingEmbedPreview_v1, {
+    return /* @__PURE__ */ React125.createElement(WritingEmbedPreview_v1, {
       ...props
     });
   } else {
-    return /* @__PURE__ */ React120.createElement(React120.Fragment, null);
+    return /* @__PURE__ */ React125.createElement(React125.Fragment, null);
   }
 };
 var WritingEmbedPreview_v1 = (props) => {
-  const containerElRef = React120.useRef(null);
+  const containerElRef = React125.useRef(null);
   const setEmbedState = useSetAtom(embedStateAtom_v1);
-  const [fileSrc, setFileSrc] = React120.useState(empty_writing_embed_default);
-  React120.useEffect(() => {
+  const [fileSrc, setFileSrc] = React125.useState(empty_writing_embed_default);
+  React125.useEffect(() => {
     void fetchFileData();
     return () => {
     };
   });
   const isImg = fileSrc.slice(0, 4) === "data";
-  return /* @__PURE__ */ React120.createElement(React120.Fragment, null, /* @__PURE__ */ React120.createElement("div", {
+  return /* @__PURE__ */ React125.createElement(React125.Fragment, null, /* @__PURE__ */ React125.createElement("div", {
     ref: containerElRef,
     className: (0, import_classnames43.default)([
       "ddc_ink_writing-embed-preview",
@@ -107878,7 +109128,7 @@ var WritingEmbedPreview_v1 = (props) => {
       width: "100%"
     },
     onClick: props.onClick
-  }, isImg && /* @__PURE__ */ React120.createElement(React120.Fragment, null, /* @__PURE__ */ React120.createElement("img", {
+  }, isImg && /* @__PURE__ */ React125.createElement(React125.Fragment, null, /* @__PURE__ */ React125.createElement("img", {
     src: fileSrc,
     style: {
       width: "100%",
@@ -107886,7 +109136,7 @@ var WritingEmbedPreview_v1 = (props) => {
       pointerEvents: "all"
     },
     onLoad
-  })), !isImg && /* @__PURE__ */ React120.createElement(React120.Fragment, null, /* @__PURE__ */ React120.createElement(InlineSVG, {
+  })), !isImg && /* @__PURE__ */ React125.createElement(React125.Fragment, null, /* @__PURE__ */ React125.createElement(InlineSVG, {
     src: fileSrc,
     style: {
       width: "100%",
@@ -107937,11 +109187,11 @@ var editorActiveAtom_v1 = atom((get) => {
   return embedState !== "preview" /* preview */;
 });
 function WritingEmbed_v1(props) {
-  const embedContainerElRef = (0, import_react142.useRef)(null);
-  const resizeContainerElRef = (0, import_react142.useRef)(null);
-  const editorControlsRef = (0, import_react142.useRef)();
+  const embedContainerElRef = (0, import_react143.useRef)(null);
+  const resizeContainerElRef = (0, import_react143.useRef)(null);
+  const editorControlsRef = (0, import_react143.useRef)();
   const setEmbedState = useSetAtom(embedStateAtom_v1);
-  React121.useEffect(() => {
+  React126.useEffect(() => {
     if (embedShouldActivateImmediately()) {
       window.setTimeout(() => {
         switchToEditMode();
@@ -107956,7 +109206,7 @@ function WritingEmbed_v1(props) {
       }
     }
   ];
-  return /* @__PURE__ */ React121.createElement(React121.Fragment, null, /* @__PURE__ */ React121.createElement("div", {
+  return /* @__PURE__ */ React126.createElement(React126.Fragment, null, /* @__PURE__ */ React126.createElement("div", {
     ref: embedContainerElRef,
     className: (0, import_classnames44.default)([
       "ddc_ink_embed",
@@ -107966,15 +109216,15 @@ function WritingEmbed_v1(props) {
       paddingTop: "1em",
       paddingBottom: "0.5em"
     }
-  }, /* @__PURE__ */ React121.createElement("div", {
+  }, /* @__PURE__ */ React126.createElement("div", {
     className: "ddc_ink_resize-container",
     ref: resizeContainerElRef
-  }, /* @__PURE__ */ React121.createElement(WritingEmbedPreviewWrapper_v1, {
+  }, /* @__PURE__ */ React126.createElement(WritingEmbedPreviewWrapper_v1, {
     plugin: props.plugin,
     onResize: (height) => resizeContainer(height),
     writingFile: props.writingFileRef,
     onClick: () => switchToEditMode()
-  }), /* @__PURE__ */ React121.createElement(TldrawWritingEditorWrapper_v1, {
+  }), /* @__PURE__ */ React126.createElement(TldrawWritingEditorWrapper_v1, {
     plugin: props.plugin,
     onResize: (height) => resizeContainer(height),
     writingFile: props.writingFileRef,
@@ -108022,7 +109272,7 @@ function registerWritingEmbed_v1(plugin) {
     }
   });
 }
-var WritingEmbedWidget_v1 = class extends import_obsidian43.MarkdownRenderChild {
+var WritingEmbedWidget_v1 = class extends import_obsidian42.MarkdownRenderChild {
   constructor(el, plugin, embedData, embedCtrls) {
     super(el);
     this.save = async (pageData) => {
@@ -108042,7 +109292,7 @@ var WritingEmbedWidget_v1 = class extends import_obsidian43.MarkdownRenderChild 
   async mountWritingEmbed() {
     const v3 = this.plugin.app.vault;
     const abstractFile = v3.getAbstractFileByPath(this.embedData.filepath);
-    this.fileRef = abstractFile instanceof import_obsidian43.TFile ? abstractFile : null;
+    this.fileRef = abstractFile instanceof import_obsidian42.TFile ? abstractFile : null;
     if (!this.fileRef) {
       this.el.createEl("p").textContent = "Ink writing file not found: " + this.embedData.filepath;
       return;
@@ -108060,7 +109310,7 @@ var WritingEmbedWidget_v1 = class extends import_obsidian43.MarkdownRenderChild 
     }
     if (!this.root)
       this.root = (0, import_client6.createRoot)(this.el);
-    this.root.render(/* @__PURE__ */ React122.createElement(Provider, null, /* @__PURE__ */ React122.createElement(WritingEmbed_v1, {
+    this.root.render(/* @__PURE__ */ React127.createElement(Provider, null, /* @__PURE__ */ React127.createElement(WritingEmbed_v1, {
       plugin: this.plugin,
       writingFileRef: this.fileRef,
       pageData,
@@ -108122,15 +109372,15 @@ var insertNewWritingFile = async (plugin, editor) => {
 };
 
 // src/components/formats/v1-code-blocks/writing/writing-view/writing-view.tsx
-var import_obsidian44 = require("obsidian");
-var React123 = __toESM(require_react());
+var import_obsidian43 = require("obsidian");
+var React128 = __toESM(require_react());
 var import_client7 = __toESM(require_client());
 var WRITING_VIEW_V1_TYPE = "ink_writing-v1-view";
 function registerWritingView_v1(plugin) {
   plugin.registerView(WRITING_VIEW_V1_TYPE, (leaf) => new WritingView_v1(leaf, plugin));
   plugin.registerExtensions([WRITE_FILE_V1_EXT], WRITING_VIEW_V1_TYPE);
 }
-var WritingView_v1 = class extends import_obsidian44.TextFileView {
+var WritingView_v1 = class extends import_obsidian43.TextFileView {
   constructor(leaf, plugin) {
     super(leaf);
     this.tldrawControls = {};
@@ -108147,7 +109397,7 @@ var WritingView_v1 = class extends import_obsidian44.TextFileView {
       if (this.root)
         this.clear();
       this.root = (0, import_client7.createRoot)(viewContent);
-      this.root.render(/* @__PURE__ */ React123.createElement(TldrawWritingEditor_v1, {
+      this.root.render(/* @__PURE__ */ React128.createElement(TldrawWritingEditor_v1, {
         plugin: this.plugin,
         writingFile: this.file,
         save: this.saveFile,
@@ -108195,19 +109445,19 @@ var insertExistingDrawingFile = async (plugin, editor) => {
 };
 
 // src/components/formats/v1-code-blocks/drawing/drawing-view/drawing-view.tsx
-var import_obsidian45 = require("obsidian");
-var React129 = __toESM(require_react());
+var import_obsidian44 = require("obsidian");
+var React134 = __toESM(require_react());
 var import_client8 = __toESM(require_client());
 
 // src/components/formats/v1-code-blocks/drawing/tldraw-drawing-editor/tldraw-drawing-editor.tsx
-var import_react144 = __toESM(require_react());
-var React128 = __toESM(require_react());
+var import_react145 = __toESM(require_react());
+var React133 = __toESM(require_react());
 
 // src/components/jsx-components/drawing-menu/drawing-menu.tsx
-var React124 = __toESM(require_react());
+var React129 = __toESM(require_react());
 var import_classnames45 = __toESM(require_classnames());
-var DrawingMenu = React124.forwardRef((props, ref) => {
-  const [curTool, setCurTool] = React124.useState("draw" /* draw */);
+var DrawingMenu = React129.forwardRef((props, ref) => {
+  const [curTool, setCurTool] = React129.useState("draw" /* draw */);
   function activateSelectTool() {
     const editor = props.getTlEditor();
     if (!editor)
@@ -108232,27 +109482,27 @@ var DrawingMenu = React124.forwardRef((props, ref) => {
     setCurTool("eraser" /* eraser */);
     props.onActivateTool?.("eraser");
   }
-  return /* @__PURE__ */ React124.createElement(React124.Fragment, null, /* @__PURE__ */ React124.createElement("div", {
+  return /* @__PURE__ */ React129.createElement(React129.Fragment, null, /* @__PURE__ */ React129.createElement("div", {
     ref,
     className: (0, import_classnames45.default)([
       "ink_menu-bar",
       "ink_menu-bar_full"
     ])
-  }, /* @__PURE__ */ React124.createElement("div", {
+  }, /* @__PURE__ */ React129.createElement("div", {
     className: "ink_tool-menu"
-  }, /* @__PURE__ */ React124.createElement(TooltipButton, {
+  }, /* @__PURE__ */ React129.createElement(TooltipButton, {
     tooltip: "Select",
     onClick: activateSelectTool,
     disabled: curTool === "select" /* select */
-  }, /* @__PURE__ */ React124.createElement(SelectIcon, null)), /* @__PURE__ */ React124.createElement(TooltipButton, {
+  }, /* @__PURE__ */ React129.createElement(SelectIcon, null)), /* @__PURE__ */ React129.createElement(TooltipButton, {
     tooltip: "Draw",
     onClick: activateDrawTool,
     disabled: curTool === "draw" /* draw */
-  }, /* @__PURE__ */ React124.createElement(DrawIcon, null)), /* @__PURE__ */ React124.createElement(TooltipButton, {
+  }, /* @__PURE__ */ React129.createElement(DrawIcon, null)), /* @__PURE__ */ React129.createElement(TooltipButton, {
     tooltip: "Erase",
     onClick: activateEraseTool,
     disabled: curTool === "eraser" /* eraser */
-  }, /* @__PURE__ */ React124.createElement(EraseIcon, null))), /* @__PURE__ */ React124.createElement("div", {
+  }, /* @__PURE__ */ React129.createElement(EraseIcon, null))), /* @__PURE__ */ React129.createElement("div", {
     className: "ink_other-menu"
   })));
 });
@@ -108262,33 +109512,33 @@ var drawing_menu_default = DrawingMenu;
 var import_classnames48 = __toESM(require_classnames());
 
 // src/components/formats/v1-code-blocks/drawing/drawing-embed-editor/drawing-embed.tsx
-var React126 = __toESM(require_react());
-var import_react143 = __toESM(require_react());
+var React131 = __toESM(require_react());
+var import_react144 = __toESM(require_react());
 
 // src/components/formats/v1-code-blocks/drawing/drawing-embed-preview/drawing-embed-preview.tsx
 var import_classnames46 = __toESM(require_classnames());
-var React125 = __toESM(require_react());
+var React130 = __toESM(require_react());
 var DrawingEmbedPreviewWrapper_v1 = (props) => {
   const previewActive = useAtomValue(previewActiveAtom2);
   if (previewActive) {
-    return /* @__PURE__ */ React125.createElement(DrawingEmbedPreview_v1, {
+    return /* @__PURE__ */ React130.createElement(DrawingEmbedPreview_v1, {
       ...props
     });
   } else {
-    return /* @__PURE__ */ React125.createElement(React125.Fragment, null);
+    return /* @__PURE__ */ React130.createElement(React130.Fragment, null);
   }
 };
 var DrawingEmbedPreview_v1 = (props) => {
-  const containerElRef = React125.useRef(null);
+  const containerElRef = React130.useRef(null);
   const setEmbedState = useSetAtom(embedStateAtom);
-  const [fileSrc, setFileSrc] = React125.useState(empty_drawing_embed_default);
-  React125.useEffect(() => {
+  const [fileSrc, setFileSrc] = React130.useState(empty_drawing_embed_default);
+  React130.useEffect(() => {
     void fetchFileData();
     return () => {
     };
   });
   const isImg = fileSrc.slice(0, 4) === "data";
-  return /* @__PURE__ */ React125.createElement(React125.Fragment, null, /* @__PURE__ */ React125.createElement("div", {
+  return /* @__PURE__ */ React130.createElement(React130.Fragment, null, /* @__PURE__ */ React130.createElement("div", {
     ref: containerElRef,
     className: (0, import_classnames46.default)([
       "ddc_ink_drawing-embed-preview",
@@ -108302,7 +109552,7 @@ var DrawingEmbedPreview_v1 = (props) => {
       pointerEvents: "all"
     },
     onClick: props.onClick
-  }, isImg && /* @__PURE__ */ React125.createElement("img", {
+  }, isImg && /* @__PURE__ */ React130.createElement("img", {
     src: fileSrc,
     style: {
       height: "100%",
@@ -108310,7 +109560,7 @@ var DrawingEmbedPreview_v1 = (props) => {
       pointerEvents: "all"
     },
     onLoad
-  }), !isImg && /* @__PURE__ */ React125.createElement(InlineSVG, {
+  }), !isImg && /* @__PURE__ */ React130.createElement(InlineSVG, {
     src: fileSrc,
     style: {
       maxWidth: "100%",
@@ -108345,13 +109595,13 @@ var editorActiveAtom = atom((get) => {
   return embedState !== "preview" /* preview */;
 });
 function DrawingEmbed_v1(props) {
-  const embedContainerElRef = (0, import_react143.useRef)(null);
-  const resizeContainerElRef = (0, import_react143.useRef)(null);
-  const editorControlsRef = (0, import_react143.useRef)();
-  const embedWidthRef = (0, import_react143.useRef)(props.width || DRAWING_INITIAL_WIDTH);
-  const embedAspectRatioRef = (0, import_react143.useRef)(props.aspectRatio || DRAWING_INITIAL_ASPECT_RATIO);
+  const embedContainerElRef = (0, import_react144.useRef)(null);
+  const resizeContainerElRef = (0, import_react144.useRef)(null);
+  const editorControlsRef = (0, import_react144.useRef)();
+  const embedWidthRef = (0, import_react144.useRef)(props.width || DRAWING_INITIAL_WIDTH);
+  const embedAspectRatioRef = (0, import_react144.useRef)(props.aspectRatio || DRAWING_INITIAL_ASPECT_RATIO);
   const setEmbedState = useSetAtom(embedStateAtom);
-  React126.useEffect(() => {
+  React131.useEffect(() => {
     if (embedShouldActivateImmediately()) {
       window.setTimeout(() => {
         switchToEditMode();
@@ -108377,7 +109627,7 @@ function DrawingEmbed_v1(props) {
       }
     }
   ];
-  return /* @__PURE__ */ React126.createElement(React126.Fragment, null, /* @__PURE__ */ React126.createElement("div", {
+  return /* @__PURE__ */ React131.createElement(React131.Fragment, null, /* @__PURE__ */ React131.createElement("div", {
     ref: embedContainerElRef,
     className: (0, import_classnames47.default)([
       "ddc_ink_embed",
@@ -108387,7 +109637,7 @@ function DrawingEmbed_v1(props) {
       paddingTop: "1em",
       paddingBottom: "0.5em"
     }
-  }, /* @__PURE__ */ React126.createElement("div", {
+  }, /* @__PURE__ */ React131.createElement("div", {
     className: "ddc_ink_resize-container",
     ref: resizeContainerElRef,
     style: {
@@ -108397,13 +109647,13 @@ function DrawingEmbed_v1(props) {
       left: "50%",
       translate: "-50%"
     }
-  }, /* @__PURE__ */ React126.createElement(DrawingEmbedPreviewWrapper_v1, {
+  }, /* @__PURE__ */ React131.createElement(DrawingEmbedPreviewWrapper_v1, {
     plugin: props.plugin,
     onReady: () => {
     },
     drawingFile: props.drawingFileRef,
     onClick: () => switchToEditMode()
-  }), /* @__PURE__ */ React126.createElement(TldrawDrawingEditorWrapper_v1, {
+  }), /* @__PURE__ */ React131.createElement(TldrawDrawingEditorWrapper_v1, {
     onReady: () => {
     },
     plugin: props.plugin,
@@ -108471,7 +109721,7 @@ function DrawingEmbed_v1(props) {
 var drawing_embed_default = DrawingEmbed_v1;
 
 // src/components/formats/v1-code-blocks/drawing/tldraw-drawing-editor/finger-blocker/finger-blocker.tsx
-var React127 = __toESM(require_react());
+var React132 = __toESM(require_react());
 var INK_FINGER_BLOCKER_TOUCH_NONE_CLASS3 = "ink-finger-blocker--touch-none";
 var INK_FINGER_BLOCKER_TOUCH_PAN_XY_CLASS3 = "ink-finger-blocker--touch-pan-xy";
 function setFingerBlockerTouchMode3(blockerElement, mode) {
@@ -108484,23 +109734,23 @@ function setFingerBlockerTouchMode3(blockerElement, mode) {
 var POLL_INTERVAL_MS4 = 100;
 var MAX_POLL_RETRIES3 = 200;
 function FingerBlocker3({ getTlEditor, wrapperRef, enableTwoFingerGestures, onVerticalTouchPan }) {
-  const blockerRef = React127.useRef(null);
-  const pointerDownRef = React127.useRef(false);
-  const recentPenInputRef = React127.useRef(false);
-  const isPenDownRef = React127.useRef(false);
-  const lockedScrollPosRef = React127.useRef(null);
-  const activeScrollerRef = React127.useRef(null);
-  const currentTldrawToolIdRef = React127.useRef(null);
-  const tldrawToolCleanupMap = React127.useRef(/* @__PURE__ */ new Map());
-  const activeTouchPointerDataRef = React127.useRef(/* @__PURE__ */ new Map());
-  const twoFingerModeActiveRef = React127.useRef(false);
-  const prevTwoFingerMidpointRef = React127.useRef({ x: 0, y: 0 });
-  const prevTwoFingerDistanceRef = React127.useRef(0);
-  const prevCameraLockedRef = React127.useRef(false);
-  const twoFingerVerticalPanActiveRef = React127.useRef(false);
-  const prevVerticalPanMidpointRef = React127.useRef({ x: 0, y: 0 });
-  const onVerticalTouchPanRef = React127.useRef(onVerticalTouchPan);
-  React127.useEffect(() => {
+  const blockerRef = React132.useRef(null);
+  const pointerDownRef = React132.useRef(false);
+  const recentPenInputRef = React132.useRef(false);
+  const isPenDownRef = React132.useRef(false);
+  const lockedScrollPosRef = React132.useRef(null);
+  const activeScrollerRef = React132.useRef(null);
+  const currentTldrawToolIdRef = React132.useRef(null);
+  const tldrawToolCleanupMap = React132.useRef(/* @__PURE__ */ new Map());
+  const activeTouchPointerDataRef = React132.useRef(/* @__PURE__ */ new Map());
+  const twoFingerModeActiveRef = React132.useRef(false);
+  const prevTwoFingerMidpointRef = React132.useRef({ x: 0, y: 0 });
+  const prevTwoFingerDistanceRef = React132.useRef(0);
+  const prevCameraLockedRef = React132.useRef(false);
+  const twoFingerVerticalPanActiveRef = React132.useRef(false);
+  const prevVerticalPanMidpointRef = React132.useRef({ x: 0, y: 0 });
+  const onVerticalTouchPanRef = React132.useRef(onVerticalTouchPan);
+  React132.useEffect(() => {
     onVerticalTouchPanRef.current = onVerticalTouchPan;
   }, [onVerticalTouchPan]);
   const getWrapper = () => {
@@ -108542,7 +109792,7 @@ function FingerBlocker3({ getTlEditor, wrapperRef, enableTwoFingerGestures, onVe
       active.blur();
     }
   };
-  React127.useEffect(() => {
+  React132.useEffect(() => {
     const element = blockerRef.current;
     if (!element)
       return;
@@ -108846,7 +110096,7 @@ function FingerBlocker3({ getTlEditor, wrapperRef, enableTwoFingerGestures, onVe
       element.removeEventListener("touchcancel", handleTouchEnd, { capture: true });
     };
   }, [enableTwoFingerGestures, onVerticalTouchPan]);
-  React127.useEffect(() => {
+  React132.useEffect(() => {
     const scroller = getScroller();
     if (!scroller)
       return;
@@ -108967,7 +110217,7 @@ function FingerBlocker3({ getTlEditor, wrapperRef, enableTwoFingerGestures, onVe
       }
     };
   };
-  React127.useEffect(() => {
+  React132.useEffect(() => {
     let storeListenerCleanup = null;
     const stopPolling = listenForEditorToBecomeAvailable(getTlEditor, () => {
       const editor = getTlEditor();
@@ -108998,7 +110248,7 @@ function FingerBlocker3({ getTlEditor, wrapperRef, enableTwoFingerGestures, onVe
       tldrawToolCleanupMap.current.clear();
     };
   }, [getTlEditor]);
-  return /* @__PURE__ */ React127.createElement("div", {
+  return /* @__PURE__ */ React132.createElement("div", {
     ref: blockerRef,
     style: {
       position: "absolute",
@@ -109019,31 +110269,31 @@ function FingerBlocker3({ getTlEditor, wrapperRef, enableTwoFingerGestures, onVe
 var TldrawDrawingEditorWrapper_v1 = (props) => {
   const editorActive = useAtomValue(editorActiveAtom);
   if (editorActive) {
-    return /* @__PURE__ */ React128.createElement(TldrawDrawingEditor_v1, {
+    return /* @__PURE__ */ React133.createElement(TldrawDrawingEditor_v1, {
       ...props
     });
   } else {
-    return /* @__PURE__ */ React128.createElement(React128.Fragment, null);
+    return /* @__PURE__ */ React133.createElement(React133.Fragment, null);
   }
 };
 var tlOptions_v12 = {
   defaultSvgPadding: 10
 };
 function TldrawDrawingEditor_v1(props) {
-  const [tlEditorSnapshot, setTlEditorSnapshot] = React128.useState();
+  const [tlEditorSnapshot, setTlEditorSnapshot] = React133.useState();
   const setEmbedState = useSetAtom(embedStateAtom);
-  const shortDelayPostProcessTimeoutRef = (0, import_react144.useRef)();
-  const longDelayPostProcessTimeoutRef = (0, import_react144.useRef)();
-  const tlEditorRef = (0, import_react144.useRef)();
-  const editorWrapperRefEl = (0, import_react144.useRef)(null);
-  React128.useEffect(() => {
+  const shortDelayPostProcessTimeoutRef = (0, import_react145.useRef)();
+  const longDelayPostProcessTimeoutRef = (0, import_react145.useRef)();
+  const tlEditorRef = (0, import_react145.useRef)();
+  const editorWrapperRefEl = (0, import_react145.useRef)(null);
+  React133.useEffect(() => {
     verbose("EDITOR mounted");
     void fetchFileData();
     return () => {
       verbose("EDITOR unmounting");
     };
   }, []);
-  React128.useEffect(() => {
+  React133.useEffect(() => {
     if (!tlEditorSnapshot)
       return;
     showLegacyInkUnlockNotice({
@@ -109053,7 +110303,7 @@ function TldrawDrawingEditor_v1(props) {
     });
   }, [tlEditorSnapshot]);
   if (!tlEditorSnapshot)
-    return /* @__PURE__ */ React128.createElement(React128.Fragment, null);
+    return /* @__PURE__ */ React133.createElement(React133.Fragment, null);
   verbose("EDITOR snapshot loaded");
   const defaultComponents = {
     Scribble: TldrawScribble,
@@ -109215,7 +110465,7 @@ function TldrawDrawingEditor_v1(props) {
     },
     ...props.extendedMenu || []
   ];
-  return /* @__PURE__ */ React128.createElement(React128.Fragment, null, /* @__PURE__ */ React128.createElement("div", {
+  return /* @__PURE__ */ React133.createElement(React133.Fragment, null, /* @__PURE__ */ React133.createElement("div", {
     ref: editorWrapperRefEl,
     className: (0, import_classnames48.default)([
       "ddc_ink_drawing-editor",
@@ -109225,7 +110475,7 @@ function TldrawDrawingEditor_v1(props) {
       height: "100%",
       position: "relative"
     }
-  }, /* @__PURE__ */ React128.createElement(TldrawEditor, {
+  }, /* @__PURE__ */ React133.createElement(TldrawEditor, {
     options: tlOptions_v12,
     shapeUtils: [...defaultShapeUtils],
     tools: [...defaultTools, ...defaultShapeTools],
@@ -109234,18 +110484,18 @@ function TldrawDrawingEditor_v1(props) {
     components: defaultComponents,
     onMount: handleMount,
     autoFocus: false
-  }), /* @__PURE__ */ React128.createElement(FingerBlocker3, {
+  }), /* @__PURE__ */ React133.createElement(FingerBlocker3, {
     getTlEditor,
     wrapperRef: editorWrapperRefEl
-  }), /* @__PURE__ */ React128.createElement(PrimaryMenuBar, null, /* @__PURE__ */ React128.createElement(drawing_menu_default, {
+  }), /* @__PURE__ */ React133.createElement(PrimaryMenuBar, null, /* @__PURE__ */ React133.createElement(drawing_menu_default, {
     getTlEditor,
     onStoreChange: (tlEditor) => queueOrRunStorePostProcesses(tlEditor)
-  }), props.embedded && props.extendedMenu && /* @__PURE__ */ React128.createElement(extended_drawing_menu_default, {
+  }), props.embedded && props.extendedMenu && /* @__PURE__ */ React133.createElement(extended_drawing_menu_default, {
     onLockClick: () => void props.closeEditor?.(),
     menuOptions: customExtendedMenu
-  }), !props.embedded && props.extendedMenu && /* @__PURE__ */ React128.createElement(extended_drawing_menu_default, {
+  }), !props.embedded && props.extendedMenu && /* @__PURE__ */ React133.createElement(extended_drawing_menu_default, {
     menuOptions: customExtendedMenu
-  }))), props.resizeEmbed && /* @__PURE__ */ React128.createElement(ResizeHandle, {
+  }))), props.resizeEmbed && /* @__PURE__ */ React133.createElement(ResizeHandle, {
     resizeEmbed
   }));
   function resizeEmbed(pxWidthDiff, pxHeightDiff) {
@@ -109264,7 +110514,7 @@ function registerDrawingView_v1(plugin) {
   plugin.registerView(DRAWING_VIEW_V1_TYPE, (leaf) => new DrawingView_v1(leaf, plugin));
   plugin.registerExtensions([DRAW_FILE_V1_EXT], DRAWING_VIEW_V1_TYPE);
 }
-var DrawingView_v1 = class extends import_obsidian45.TextFileView {
+var DrawingView_v1 = class extends import_obsidian44.TextFileView {
   constructor(leaf, plugin) {
     super(leaf);
     this.getDisplayText = () => {
@@ -109280,7 +110530,7 @@ var DrawingView_v1 = class extends import_obsidian45.TextFileView {
       if (this.root)
         this.clear();
       this.root = (0, import_client8.createRoot)(viewContent);
-      this.root.render(/* @__PURE__ */ React129.createElement(Provider, null, /* @__PURE__ */ React129.createElement(TldrawDrawingEditor_v1, {
+      this.root.render(/* @__PURE__ */ React134.createElement(Provider, null, /* @__PURE__ */ React134.createElement(TldrawDrawingEditor_v1, {
         plugin: this.plugin,
         onReady: () => {
         },
@@ -109307,8 +110557,8 @@ var DrawingView_v1 = class extends import_obsidian45.TextFileView {
 };
 
 // src/components/formats/v1-code-blocks/drawing/widgets/drawing-embed-widget.tsx
-var import_obsidian46 = require("obsidian");
-var React130 = __toESM(require_react());
+var import_obsidian45 = require("obsidian");
+var React135 = __toESM(require_react());
 var import_client9 = __toESM(require_client());
 function registerDrawingEmbed_v1(plugin) {
   plugin.registerMarkdownCodeBlockProcessor(DRAW_EMBED_KEY, (source, el, ctx) => {
@@ -109340,7 +110590,7 @@ function updateEmbed_v1(plugin, ctx, el, embedData) {
   cmEditor.replaceRange(stringifyEmbedData(embedData), embedStart, embedEnd);
   cmEditor.setCursor(embedStart);
 }
-var DrawingEmbedWidget_v1 = class extends import_obsidian46.MarkdownRenderChild {
+var DrawingEmbedWidget_v1 = class extends import_obsidian45.MarkdownRenderChild {
   constructor(el, plugin, embedData, embedCtrls, updateEmbed) {
     super(el);
     this.save = async (pageData) => {
@@ -109369,7 +110619,7 @@ var DrawingEmbedWidget_v1 = class extends import_obsidian46.MarkdownRenderChild 
   async mountDrawingEmbed() {
     const v3 = this.plugin.app.vault;
     const abstractFile = v3.getAbstractFileByPath(this.embedData.filepath);
-    this.fileRef = abstractFile instanceof import_obsidian46.TFile ? abstractFile : null;
+    this.fileRef = abstractFile instanceof import_obsidian45.TFile ? abstractFile : null;
     if (!this.fileRef) {
       this.el.createEl("p").textContent = "Ink drawing file not found.";
       return;
@@ -109377,7 +110627,7 @@ var DrawingEmbedWidget_v1 = class extends import_obsidian46.MarkdownRenderChild 
     const pageDataStr = await v3.read(this.fileRef);
     const pageData = JSON.parse(pageDataStr);
     this.root = (0, import_client9.createRoot)(this.el);
-    this.root.render(/* @__PURE__ */ React130.createElement(Provider, null, /* @__PURE__ */ React130.createElement(drawing_embed_default, {
+    this.root.render(/* @__PURE__ */ React135.createElement(Provider, null, /* @__PURE__ */ React135.createElement(drawing_embed_default, {
       plugin: this.plugin,
       drawingFileRef: this.fileRef,
       pageData,
@@ -109439,10 +110689,10 @@ var threads_default = '<svg width="100" height="100" viewBox="0 0 13 15" fill="n
 var twitter_default = '<svg width="100" height="100" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">\n<path d="M14.6288 2.14845C14.094 2.38083 13.5281 2.53393 12.9491 2.60291C13.5576 2.24658 14.0153 1.68049 14.2362 1.01081C13.6608 1.34722 13.0324 1.58327 12.3779 1.70883C12.1023 1.41998 11.7708 1.19019 11.4036 1.03342C11.0364 0.876661 10.6412 0.796203 10.2419 0.796941C8.62549 0.796941 7.31735 2.08607 7.31735 3.6752C7.31621 3.89624 7.34154 4.11663 7.3928 4.33164C6.23368 4.2773 5.09867 3.98161 4.06037 3.46349C3.02208 2.94537 2.10336 2.21622 1.36301 1.32269C1.10328 1.76055 0.965917 2.26014 0.965284 2.76925C0.965284 3.76728 1.48598 4.64947 2.27223 5.16631C1.8064 5.15525 1.35012 5.03196 0.942115 4.8069V4.84254C0.942115 6.2386 1.95203 7.4 3.28868 7.66436C3.03733 7.73137 2.77831 7.76532 2.51818 7.76536C2.33359 7.76568 2.14943 7.74777 1.96837 7.71189C2.33996 8.85547 3.42146 9.68717 4.70256 9.71093C3.66157 10.5132 2.38351 10.9468 1.06925 10.9436C0.83596 10.9433 0.602892 10.9294 0.371216 10.902C1.70822 11.7558 3.26238 12.2074 4.8487 12.203C10.2357 12.203 13.1787 7.81585 13.1787 4.01085C13.1787 3.88609 13.1755 3.76134 13.1695 3.63955C13.7407 3.23323 14.2349 2.72829 14.6288 2.14845Z" fill="white"/>\n</svg>\n';
 
 // src/components/formats/current/reading-mode/register-reading-mode-ink-embeds.ts
-var import_obsidian49 = require("obsidian");
+var import_obsidian48 = require("obsidian");
 
 // src/logic/utils/detect-reading-mode-ink-embed.ts
-var import_obsidian47 = require("obsidian");
+var import_obsidian46 = require("obsidian");
 var INK_READING_PROCESSED_ATTR = "data-ink-reading-processed";
 var INK_READING_ACTIVE_ATTR = "data-ink-reading-active";
 var INK_READING_MOUNTING_ATTR = "data-ink-reading-mounting";
@@ -109474,7 +110724,7 @@ function findReadingModeInkEmbedCandidates(app, rootEl, sourcePath) {
         return;
       const settingsHref = editLinkEl.getAttribute("href") ?? "";
       const { embedSettings, isPendingPaste } = parseSettingsFromUrl(settingsHref);
-      const embeddedFile = app.metadataCache.getFirstLinkpathDest((0, import_obsidian47.normalizePath)(partialEmbedFilepath), sourcePath);
+      const embeddedFile = app.metadataCache.getFirstLinkpathDest((0, import_obsidian46.normalizePath)(partialEmbedFilepath), sourcePath);
       candidates.push({
         embedKind,
         embedMarkerEl,
@@ -109589,11 +110839,11 @@ function vaultRelativePathFromObsidianResource(url) {
 }
 
 // src/components/formats/current/reading-mode/ink-reading-embed-host.tsx
-var import_obsidian48 = require("obsidian");
-var React131 = __toESM(require_react());
+var import_obsidian47 = require("obsidian");
+var React136 = __toESM(require_react());
 var import_client10 = __toESM(require_client());
 var import_classnames49 = __toESM(require_classnames());
-var InkReadingEmbedHost = class extends import_obsidian48.MarkdownRenderChild {
+var InkReadingEmbedHost = class extends import_obsidian47.MarkdownRenderChild {
   constructor(containerEl, params) {
     super(containerEl);
     this.params = params;
@@ -109607,7 +110857,7 @@ var InkReadingEmbedHost = class extends import_obsidian48.MarkdownRenderChild {
     this.containerEl.setAttribute(INK_READING_ACTIVE_ATTR, "true");
     applyReadingModeAncestorStyling(this.containerEl, this.params.embedKind);
     this.reactRoot = (0, import_client10.createRoot)(this.containerEl);
-    this.reactRoot.render(/* @__PURE__ */ React131.createElement(InkReadingEmbedContent, {
+    this.reactRoot.render(/* @__PURE__ */ React136.createElement(InkReadingEmbedContent, {
       plugin: this.params.plugin,
       embedKind: this.params.embedKind,
       embeddedFile: this.params.embeddedFile,
@@ -109673,9 +110923,9 @@ var InkReadingEmbedHost = class extends import_obsidian48.MarkdownRenderChild {
   }
 };
 var InkReadingEmbedContent = (props) => {
-  const embedContainerElRef = React131.useRef(null);
-  const resizeContainerElRef = React131.useRef(null);
-  const [transcriptHeightPx, setTranscriptHeightPx] = React131.useState(0);
+  const embedContainerElRef = React136.useRef(null);
+  const resizeContainerElRef = React136.useRef(null);
+  const [transcriptHeightPx, setTranscriptHeightPx] = React136.useState(0);
   const embedWidth = props.embedSettings.embedDisplay.width || DRAWING_INITIAL_WIDTH;
   const embedAspectRatio = props.embedSettings.embedDisplay.aspectRatio || DEFAULT_EMBED_SETTINGS.embedDisplay.aspectRatio;
   const transcript = useInkFileTranscript(props.embeddedFile);
@@ -109703,7 +110953,7 @@ var InkReadingEmbedContent = (props) => {
       height: `${transcriptHeightPx}px`
     };
   }
-  React131.useLayoutEffect(() => {
+  React136.useLayoutEffect(() => {
     const embedEl = embedContainerElRef.current;
     const resizeContainerEl = resizeContainerElRef.current;
     if (!embedEl)
@@ -109735,11 +110985,11 @@ var InkReadingEmbedContent = (props) => {
   ]);
   if (!props.embeddedFile) {
     const notFoundLabel = props.embedKind === "drawing" ? "Drawing" : "Writing";
-    return /* @__PURE__ */ React131.createElement("div", {
+    return /* @__PURE__ */ React136.createElement("div", {
       className: (0, import_classnames49.default)("ddc_ink_embed", embedOuterClass(props.embedKind))
-    }, /* @__PURE__ */ React131.createElement("div", {
+    }, /* @__PURE__ */ React136.createElement("div", {
       className: "ddc_ink_pending-banner ddc_ink_pending-banner--not-found"
-    }, /* @__PURE__ */ React131.createElement("span", {
+    }, /* @__PURE__ */ React136.createElement("span", {
       className: "ddc_ink_pending-banner__title"
     }, notFoundLabel, " file not found: ", props.partialEmbedFilepath)));
   }
@@ -109750,7 +111000,7 @@ var InkReadingEmbedContent = (props) => {
     if (!props.sourcePath)
       return null;
     const file = props.plugin.app.vault.getAbstractFileByPath(props.sourcePath);
-    if (file instanceof import_obsidian48.TFile)
+    if (file instanceof import_obsidian47.TFile)
       return file;
     return null;
   }
@@ -109766,13 +111016,13 @@ var InkReadingEmbedContent = (props) => {
   function handleCopyTranscript() {
     const text = transcript?.trim() ?? "";
     if (!text) {
-      new import_obsidian48.Notice("No transcript to copy");
+      new import_obsidian47.Notice("No transcript to copy");
       return;
     }
     void navigator.clipboard.writeText(text).then(() => {
-      new import_obsidian48.Notice("Transcript copied to clipboard");
+      new import_obsidian47.Notice("Transcript copied to clipboard");
     }).catch(() => {
-      new import_obsidian48.Notice("Failed to copy transcript to clipboard");
+      new import_obsidian47.Notice("Failed to copy transcript to clipboard");
     });
   }
   async function updateTranscriptFromLockedEmbed() {
@@ -109786,7 +111036,7 @@ var InkReadingEmbedContent = (props) => {
   async function handleCopyEmbed() {
     const line = await embedLineFromNote();
     if (!line) {
-      new import_obsidian48.Notice("Could not read embed Markdown to copy");
+      new import_obsidian47.Notice("Could not read embed Markdown to copy");
       return;
     }
     await copyEmbedMarkdownToClipboard(line);
@@ -109794,7 +111044,7 @@ var InkReadingEmbedContent = (props) => {
   function handleDeleteEmbed() {
     const sourceFile = sourceNoteFile();
     if (!sourceFile) {
-      new import_obsidian48.Notice("Could not find the note for this embed");
+      new import_obsidian47.Notice("Could not find the note for this embed");
       return;
     }
     openRemoveEmbedFlow(props.plugin, embeddedFile, sourceFile, embedType, () => {
@@ -109822,7 +111072,7 @@ var InkReadingEmbedContent = (props) => {
       {
         text: isDrawing ? "Open drawing" : "Open writing",
         action: () => {
-          void openInkFileInView(embeddedFile, embedType);
+          void openInkFileInViewAndLocate(embeddedFile, embedType);
         }
       },
       { separator: true }
@@ -109849,30 +111099,30 @@ var InkReadingEmbedContent = (props) => {
     });
     return options;
   }
-  return /* @__PURE__ */ React131.createElement("div", {
+  return /* @__PURE__ */ React136.createElement("div", {
     ref: embedContainerElRef,
     className: (0, import_classnames49.default)("ddc_ink_embed", embedOuterClass(props.embedKind)),
     style: {
       paddingTop: "1em",
       paddingBottom: "0.5em"
     }
-  }, /* @__PURE__ */ React131.createElement("div", {
+  }, /* @__PURE__ */ React136.createElement("div", {
     ref: resizeContainerElRef,
     className: "ddc_ink_resize-container",
     "data-ink-display-mode": showTranscript ? "text" : void 0,
     style: resizeStyle
-  }, showTranscript && transcript && /* @__PURE__ */ React131.createElement(EmbedPreviewContextMenu, {
+  }, showTranscript && transcript && /* @__PURE__ */ React136.createElement(EmbedPreviewContextMenu, {
     menuOptions: lockedEmbedMenuOptions(true),
     layout: "content"
-  }, /* @__PURE__ */ React131.createElement(InkTranscriptView, {
+  }, /* @__PURE__ */ React136.createElement(InkTranscriptView, {
     app: props.plugin.app,
     markdown: transcript,
     sourcePath: props.sourcePath ?? "",
     parentComponent: props.markdownComponent,
     onHeightChange: applyTranscriptHeight
-  })), !showTranscript && props.embedKind === "drawing" && /* @__PURE__ */ React131.createElement(EmbedPreviewContextMenu, {
+  })), !showTranscript && props.embedKind === "drawing" && /* @__PURE__ */ React136.createElement(EmbedPreviewContextMenu, {
     menuOptions: lockedEmbedMenuOptions(hasTranscript)
-  }, /* @__PURE__ */ React131.createElement(DrawingEmbedPreview, {
+  }, /* @__PURE__ */ React136.createElement(DrawingEmbedPreview, {
     key: props.embeddedFile.path,
     embeddedFile: props.embeddedFile,
     embedSettings: props.embedSettings,
@@ -109880,16 +111130,16 @@ var InkReadingEmbedContent = (props) => {
     },
     onClick: () => {
     }
-  })), !showTranscript && props.embedKind !== "drawing" && /* @__PURE__ */ React131.createElement(EmbedPreviewContextMenu, {
+  })), !showTranscript && props.embedKind !== "drawing" && /* @__PURE__ */ React136.createElement(EmbedPreviewContextMenu, {
     menuOptions: lockedEmbedMenuOptions(hasTranscript)
-  }, /* @__PURE__ */ React131.createElement(WritingEmbedPreview, {
+  }, /* @__PURE__ */ React136.createElement(WritingEmbedPreview, {
     plugin: props.plugin,
     writingFile: props.embeddedFile,
     onResize: () => {
     },
     onClick: () => {
     }
-  })), props.embeddedFile && /* @__PURE__ */ React131.createElement(InkEmbedTranscriptControls, {
+  })), props.embeddedFile && /* @__PURE__ */ React136.createElement(InkEmbedTranscriptControls, {
     filePath: props.embeddedFile.path,
     inkIconKind: props.embedKind === "drawing" ? "drawing" : "writing",
     hasTranscript
@@ -109984,7 +111234,7 @@ function registerReadingModeInkEmbeds(plugin) {
     refreshScheduled = true;
     queueMicrotask(() => {
       refreshScheduled = false;
-      const markdownView = plugin.app.workspace.getActiveViewOfType(import_obsidian49.MarkdownView);
+      const markdownView = plugin.app.workspace.getActiveViewOfType(import_obsidian48.MarkdownView);
       if (!markdownView)
         return;
       if (markdownView.getMode() === "preview") {
@@ -110034,7 +111284,7 @@ function processReadingModeInkEmbedsInRoot(plugin, rootEl, context) {
   });
 }
 function remountStaleReadingEmbedHostsInActivePreview(plugin) {
-  const markdownView = plugin.app.workspace.getActiveViewOfType(import_obsidian49.MarkdownView);
+  const markdownView = plugin.app.workspace.getActiveViewOfType(import_obsidian48.MarkdownView);
   if (!markdownView || markdownView.getMode() !== "preview")
     return;
   const sourcePath = markdownView.file?.path;
@@ -110086,7 +111336,7 @@ function readReadingEmbedHostParams(plugin, hostEl, fallbackSourcePath) {
     return null;
   }
   const sourcePath = hostEl.dataset[INK_READING_SOURCE_PATH_DATA] || fallbackSourcePath;
-  const embeddedFile = plugin.app.metadataCache.getFirstLinkpathDest((0, import_obsidian49.normalizePath)(partialEmbedFilepath), sourcePath);
+  const embeddedFile = plugin.app.metadataCache.getFirstLinkpathDest((0, import_obsidian48.normalizePath)(partialEmbedFilepath), sourcePath);
   return {
     plugin,
     embedKind,
@@ -110151,8 +111401,8 @@ function registerPasteEmbedHandler(plugin) {
 }
 
 // src/components/dom-components/modals/migration-modal/migration-modal.ts
-var import_obsidian50 = require("obsidian");
-var MigrationModal = class extends import_obsidian50.Modal {
+var import_obsidian49 = require("obsidian");
+var MigrationModal = class extends import_obsidian49.Modal {
   constructor(plugin, onPermanentMigrationFinished) {
     super(plugin.app);
     this.phase = 0 /* Scanning */;
@@ -110464,8 +111714,8 @@ var MigrationModal = class extends import_obsidian50.Modal {
 };
 
 // src/components/dom-components/modals/tldraw-svg-migration-modal/tldraw-svg-migration-modal.ts
-var import_obsidian51 = require("obsidian");
-var TldrawSvgMigrationModal = class extends import_obsidian51.Modal {
+var import_obsidian50 = require("obsidian");
+var TldrawSvgMigrationModal = class extends import_obsidian50.Modal {
   constructor(plugin) {
     super(plugin.app);
     this.scanResult = null;
@@ -110641,7 +111891,7 @@ var TldrawSvgMigrationModal = class extends import_obsidian51.Modal {
 };
 
 // src/logic/undo-redo/keyboard-handler.ts
-var import_obsidian52 = require("obsidian");
+var import_obsidian51 = require("obsidian");
 function formatStackForLog2(snapshot) {
   return "[" + snapshot.map((e3) => {
     if (e3.type === "obsidian")
@@ -110718,7 +111968,7 @@ function handleKeydown(plugin, event) {
 function executeUnifiedUndo(plugin, leafId, activeEmbedId) {
   syncObsidianOnlyBeforeKeyboard(leafId);
   if (isUndoStackEmpty(leafId)) {
-    new import_obsidian52.Notice(EMPTY_UNDO_MESSAGE);
+    new import_obsidian51.Notice(EMPTY_UNDO_MESSAGE);
     return;
   }
   const entry = popUndo(leafId);
@@ -110794,11 +112044,11 @@ function registerUnifiedUndoRedo(plugin) {
 }
 
 // src/logic/undo-redo/unified-commands.ts
-var import_obsidian53 = require("obsidian");
+var import_obsidian52 = require("obsidian");
 var COMMAND_UNIFIED_UNDO_ID = "unified-undo";
 var COMMAND_UNIFIED_REDO_ID = "unified-redo";
 function createSyntheticUndoRedoKeyboardEvent(shiftKey) {
-  const isMacLikePlatform = import_obsidian53.Platform.isMacOS || import_obsidian53.Platform.isIosApp;
+  const isMacLikePlatform = import_obsidian52.Platform.isMacOS || import_obsidian52.Platform.isIosApp;
   return new KeyboardEvent("keydown", {
     key: "z",
     code: "KeyZ",
@@ -110816,7 +112066,7 @@ function executeOrDispatchUnifiedUndoRedo(plugin, shiftKey) {
   const wasHandledByUnifiedKeydownHandler = dispatchSyntheticUndoRedoKeydown(shiftKey) === false;
   if (wasHandledByUnifiedKeydownHandler)
     return;
-  const editor = plugin.app.workspace.getActiveViewOfType(import_obsidian53.MarkdownView)?.editor;
+  const editor = plugin.app.workspace.getActiveViewOfType(import_obsidian52.MarkdownView)?.editor;
   if (!editor)
     return;
   if (shiftKey)
@@ -110865,7 +112115,7 @@ var draw_paste_default = '<svg\n    viewBox="2 2 21 21"\n    xmlns="http://www.w
 var link_account_user_default = '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">\n	<g fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">\n		<circle cx="50" cy="32" r="17" />\n		<path d="M18 84v-6a32 32 0 0 1 64 0v6" />\n	</g>\n</svg>\n';
 
 // src/connections/boox/boox-connection.ts
-var import_obsidian54 = require("obsidian");
+var import_obsidian53 = require("obsidian");
 var INK_LOG_PREFIX = "[Ink]";
 var INK_BRIDGE_WEBSOCKET_PORT = 8080;
 var INK_BRIDGE_PROTOCOL_VERSION = 1;
@@ -111047,7 +112297,7 @@ var BooxConnection = class {
     });
     console.debug(INK_LOG_PREFIX, MSG_BOOX_COMPANION_NOT_FOUND);
     logToVault("Boox companion not found on port " + INK_BRIDGE_WEBSOCKET_PORT);
-    if (import_obsidian54.Platform.isMobileApp || import_obsidian54.Platform.isMobile) {
+    if (import_obsidian53.Platform.isMobileApp || import_obsidian53.Platform.isMobile) {
       console.debug(INK_LOG_PREFIX, "Boox tip: Start or restore eInk Bridge on this tablet so its foreground service and loopback WebSocket are up; Obsidian Ink only connects over ws://127.0.0.1.");
     }
     throw new Error("WebSocket connection failed");
@@ -111440,7 +112690,7 @@ function migrate_0_4_0_to_0_5_0(oldSettings) {
 }
 
 // src/logic/utils/cursor-debug-ingest.ts
-var import_obsidian55 = require("obsidian");
+var import_obsidian54 = require("obsidian");
 var INK_DEBUG_INGEST_URL_LOCAL_STORAGE_KEY = "ink-debug-ingest-url";
 var INK_CURSOR_DEBUG_VAULT_NDJSON_PATH = ".ink-cursor-debug.ndjson";
 var INK_WINDOWS_STARTUP_DEBUG_RUN_ID = "windows-startup-crash";
@@ -111509,12 +112759,12 @@ function collectInkHostProbe() {
     bakedIngestPath,
     ingestUrl: resolveIngestUrl(),
     language: typeof navigator !== "undefined" ? navigator.language : null,
-    isWin: import_obsidian55.Platform.isWin,
-    isMacOS: import_obsidian55.Platform.isMacOS,
-    isLinux: import_obsidian55.Platform.isLinux,
-    isDesktop: import_obsidian55.Platform.isDesktop,
-    isMobile: import_obsidian55.Platform.isMobile,
-    isMobileApp: import_obsidian55.Platform.isMobileApp
+    isWin: import_obsidian54.Platform.isWin,
+    isMacOS: import_obsidian54.Platform.isMacOS,
+    isLinux: import_obsidian54.Platform.isLinux,
+    isDesktop: import_obsidian54.Platform.isDesktop,
+    isMobile: import_obsidian54.Platform.isMobile,
+    isMobileApp: import_obsidian54.Platform.isMobileApp
   };
   try {
     const inkProcess = window.process;
@@ -111558,7 +112808,7 @@ function postCursorDebugIngest(entry) {
   if (!ingestUrl)
     return;
   postCursorDebugIngestSync(ingestUrl, sessionId, line);
-  void (0, import_obsidian55.requestUrl)({
+  void (0, import_obsidian54.requestUrl)({
     url: ingestUrl,
     method: "POST",
     headers: {
@@ -111595,7 +112845,7 @@ async function runInkOnloadStep(stepName, runStep) {
     message: `onload step ok: ${stepName}`
   });
 }
-var InkPlugin = class extends import_obsidian56.Plugin {
+var InkPlugin = class extends import_obsidian55.Plugin {
   constructor() {
     super(...arguments);
     this.inkViewSidebarState = null;
@@ -111623,6 +112873,12 @@ var InkPlugin = class extends import_obsidian56.Plugin {
       await runInkOnloadStep("loadSettings", async () => {
         await this.loadSettings();
       });
+      await runInkOnloadStep("highContrastUserInterfaceBodyClass", () => {
+        applyHighContrastUserInterfaceBodyClass();
+        this.unsubscribeHighContrastUserInterfaceBodyClass = subscribeDeviceSettingsChanged(() => {
+          applyHighContrastUserInterfaceBodyClass();
+        });
+      });
       await runInkOnloadStep("booxConnection", () => {
         this.booxConnection = new BooxConnection(() => ({
           booxConnectionEnabled: getBooxConnectionEnabled()
@@ -111638,24 +112894,24 @@ var InkPlugin = class extends import_obsidian56.Plugin {
       });
       logToVault(`Plugin loaded. writing=${this.settings.writingEnabled}, drawing=${this.settings.drawingEnabled}, boox=${getBooxConnectionEnabled()}`);
       await runInkOnloadStep("addIcons", () => {
-        (0, import_obsidian56.addIcon)("write_default", write_default_default);
-        (0, import_obsidian56.addIcon)("write_existing", write_existing_default);
-        (0, import_obsidian56.addIcon)("write_paste", write_paste_default);
-        (0, import_obsidian56.addIcon)("draw_default", draw_default_default);
-        (0, import_obsidian56.addIcon)("draw_existing", draw_existing_default);
-        (0, import_obsidian56.addIcon)("draw_paste", draw_paste_default);
-        (0, import_obsidian56.addIcon)("bluesky", bluesky_default);
-        (0, import_obsidian56.addIcon)("mastodon", mastodon_default);
-        (0, import_obsidian56.addIcon)("threads", threads_default);
-        (0, import_obsidian56.addIcon)("twitter", twitter_default);
-        (0, import_obsidian56.addIcon)("ddc_ink_link_account_user", link_account_user_default);
+        (0, import_obsidian55.addIcon)("write_default", write_default_default);
+        (0, import_obsidian55.addIcon)("write_existing", write_existing_default);
+        (0, import_obsidian55.addIcon)("write_paste", write_paste_default);
+        (0, import_obsidian55.addIcon)("draw_default", draw_default_default);
+        (0, import_obsidian55.addIcon)("draw_existing", draw_existing_default);
+        (0, import_obsidian55.addIcon)("draw_paste", draw_paste_default);
+        (0, import_obsidian55.addIcon)("bluesky", bluesky_default);
+        (0, import_obsidian55.addIcon)("mastodon", mastodon_default);
+        (0, import_obsidian55.addIcon)("threads", threads_default);
+        (0, import_obsidian55.addIcon)("twitter", twitter_default);
+        (0, import_obsidian55.addIcon)("ddc_ink_link_account_user", link_account_user_default);
       });
       const inkProcessEnv = window.process?.env;
       const emulateMobileRequested = inkProcessEnv?.INK_EMULATE_MOBILE === "true";
       const mobileEmulationReloadGuardKey = "__inkMobileEmulationReloadInProgress";
       const appWithMobileEmulation = this.app;
       const canEmulateMobile = typeof appWithMobileEmulation.emulateMobile === "function";
-      const alreadyInMobileMode = !!(import_obsidian56.Platform.isMobile || import_obsidian56.Platform.isMobileApp || appWithMobileEmulation.isMobile);
+      const alreadyInMobileMode = !!(import_obsidian55.Platform.isMobile || import_obsidian55.Platform.isMobileApp || appWithMobileEmulation.isMobile);
       const mobileEmulationReloadInProgress = window.localStorage.getItem(mobileEmulationReloadGuardKey) === "true";
       if (emulateMobileRequested && canEmulateMobile && !alreadyInMobileMode && !mobileEmulationReloadInProgress) {
         window.localStorage.setItem(mobileEmulationReloadGuardKey, "true");
@@ -111747,6 +113003,10 @@ var InkPlugin = class extends import_obsidian56.Plugin {
       message: "plugin unloading"
     });
     logToVault("Plugin unloaded");
+    releaseInkWorkspaceChromeOnPluginUnload();
+    releaseHighContrastUserInterfaceBodyClassOnPluginUnload();
+    this.unsubscribeHighContrastUserInterfaceBodyClass?.();
+    this.unsubscribeHighContrastUserInterfaceBodyClass = void 0;
     shutdownHandwritingTranscriptionQueue();
     this.booxConnection?.dispose();
   }
@@ -111787,7 +113047,7 @@ var InkPlugin = class extends import_obsidian56.Plugin {
     resetExperimentalDeviceSettingsToDefault();
     this.booxConnection.onSettingsChanged();
     await this.saveSettings();
-    new import_obsidian56.Notice("Ink plugin settings reset");
+    new import_obsidian55.Notice("Ink plugin settings reset");
   }
   setBooxConnectionEnabledForTests(enabled) {
     setBooxConnectionEnabled(enabled);

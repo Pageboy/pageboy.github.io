@@ -6,7 +6,7 @@ image: https://live.staticflickr.com/65535/51574765439_fda0792291_3k.jpg
 tags:
   - art
   - square-series
-published: true
-updated: 2025-11-05
+published: false
+updated: 2026-10-19
 ---
 The tide pushes up the beach and covers the sand we remembered. Sea shows the sky colours but sand yellows are still just there between the ripples. The water is lapping gentle waves with light catching the edges.

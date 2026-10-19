@@ -1,6 +1,6 @@
 ---
 date: 2026-07-13
-updated: 2026-07-13
+updated: 2026-10-19
 title: Lacecap Hydrangea
 image: https://live.staticflickr.com/65535/55390560433_0ec1b70a4b_b.jpg
 layout: art
@@ -13,7 +13,7 @@ caption: Magenta-pink of the Lacecap
 forsale:
 published: true
 flickr_share: https://flic.kr/p/2soF6QD
-nft: https://opensea.io/item/ethereum/0xc23d44ad0140e5b6332fc7ce32f48ce75b0a4017/5
+nft:
 ---
 Exotic plants add richness to our daily walks through the neighbourhood. Where front gardens have not been surrendered to large cars—a growing trend with the rise of electric vehicles—colourful blooms spill over fences, releasing their fragrance as we pass.
 

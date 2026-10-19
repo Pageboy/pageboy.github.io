@@ -11,13 +11,24 @@
             "id": "67e00a65d9daee33",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "bases/Portfolio.base",
-                "viewName": "Table"
+                "file": "_articles/colour-search-november.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-table",
-              "title": "Portfolio"
+              "icon": "lucide-file",
+              "title": "colour-search-november"
             }
           }
         ]
@@ -202,8 +213,8 @@
   },
   "active": "67e00a65d9daee33",
   "lastOpenFiles": [
-    "_articles/projects.md",
     "bases/Portfolio.base",
+    "_articles/projects.md",
     "pages/projects.md",
     "pages/newsletters.md",
     "pages/blog.md",
@@ -240,7 +251,6 @@
     "_portfolio/lenten-rose.md",
     "_portfolio/hibiscus.md",
     "_portfolio/marigold.md",
-    "_portfolio/lantana.md",
     "newsletters/Untitled.canvas",
     "newsletters/November 2025.canvas",
     "_site/Untitled.canvas",

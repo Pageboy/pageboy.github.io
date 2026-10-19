@@ -30,8 +30,34 @@
               "icon": "lucide-file",
               "title": "cv"
             }
+          },
+          {
+            "id": "c088dd7f6f69e488",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.14.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.14.4"
+            }
+          },
+          {
+            "id": "085a46a263b9f851",
+            "type": "leaf",
+            "state": {
+              "type": "bases",
+              "state": {
+                "file": "bases/Portfolio.base",
+                "viewName": "Table"
+              },
+              "icon": "lucide-table",
+              "title": "Portfolio"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -215,13 +241,15 @@
       "content-publisher:Publish to Substack": false
     }
   },
-  "active": "3cf21be821776c12",
+  "active": "085a46a263b9f851",
   "lastOpenFiles": [
+    "_portfolio/peacock-flower.md",
+    "bases/Portfolio.base",
+    "_portfolio/lacecap-hydrangea.md",
     "pages/statement.md",
     "pages/cv.md",
     "_portfolio/firethorn.md",
     "_portfolio/agapanthus-at-monserrate.md",
-    "bases/Portfolio.base",
     "uploads/artwork/firethorn.jpg",
     "_site/uploads/artwork/55559014099_56040beaf2_c.jpg",
     "_portfolio/beach-zones-beach-tones.md",
@@ -229,7 +257,6 @@
     "_portfolio/bougainvillea.md",
     "obsidian_templates/photograph.md",
     "uploads/artwork/55559014099_56040beaf2_c.jpg",
-    "_portfolio/lacecap-hydrangea.md",
     "_site/uploads/artwork/agapanthus-studio.jpg",
     "uploads/artwork/agapanthus-studio.jpg",
     "_portfolio/olive-arcs.md",
@@ -257,7 +284,6 @@
     "pages/perspectief.md",
     "_projects/folding-geometry.md",
     "pages/earlywork.md",
-    "_projects/leiden_oxford.md",
     "_site/projects/folding_pieces/index.html",
     "_site/projects/folding_pieces",
     "_site/uploads/artwork",

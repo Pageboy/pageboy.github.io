@@ -8,8 +8,8 @@ forsale:
 tags:
   - art
   - landscape
-published: true
-updated: 2025-11-05
+published: false
+updated: 2026-10-19
 ---
 Bracken brown on the forest floor with last years leaves crunching on the walking ground. 
 
