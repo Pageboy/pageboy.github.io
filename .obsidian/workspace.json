@@ -57,7 +57,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -241,10 +241,10 @@
       "content-publisher:Publish to Substack": false
     }
   },
-  "active": "085a46a263b9f851",
+  "active": "c088dd7f6f69e488",
   "lastOpenFiles": [
-    "_portfolio/peacock-flower.md",
     "bases/Portfolio.base",
+    "_portfolio/peacock-flower.md",
     "_portfolio/lacecap-hydrangea.md",
     "pages/statement.md",
     "pages/cv.md",
@@ -283,7 +283,6 @@
     "pages/perspectiefgallery.md",
     "pages/perspectief.md",
     "_projects/folding-geometry.md",
-    "pages/earlywork.md",
     "_site/projects/folding_pieces/index.html",
     "_site/projects/folding_pieces",
     "_site/uploads/artwork",
