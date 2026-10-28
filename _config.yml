@@ -74,7 +74,7 @@ defaults:
       flickr_album:
 baseurl:
 url: https://www.chrisjennings.net
-description: This website shows the art work that the artist Chris Jennings is currently working on as well as the review of previous projects amd exhibitions. The site also includes photographs which are posted in a seperate section. There are links to various articles and an explanation of the rationale for the works created.
+description: Chris Jennings is a mixed media artist living in the United Kingdom. He searches out colours with his camera, drawing on the hues of flowers, trees, sky and water, then combines them with geometric forms that respond to the shapes and colours in the image. Using digital techniques he merges photograph and abstract form, printing the results with museum quality pigment ink and mounting them onto wood panels, sometimes adding acrylic colour and texture or joining several panels together.
 avatar: assets/img/home.png
 favicon: assets/img/logo.png
 flickr_key: 6a751024fcc480f70610ed1f98220880

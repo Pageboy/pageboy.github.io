@@ -32,28 +32,27 @@
             }
           },
           {
-            "id": "c088dd7f6f69e488",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.14.4"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.14.4"
-            }
-          },
-          {
             "id": "085a46a263b9f851",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "bases/Portfolio.base",
-                "viewName": "Table"
+                "file": "_photographs/hanging-chain.md",
+                "mode": "preview",
+                "source": true,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-table",
-              "title": "Portfolio"
+              "icon": "lucide-file",
+              "title": "hanging-chain"
             }
           }
         ],
@@ -241,8 +240,11 @@
       "content-publisher:Publish to Substack": false
     }
   },
-  "active": "c088dd7f6f69e488",
+  "active": "085a46a263b9f851",
   "lastOpenFiles": [
+    "pages/about.md",
+    "_photographs/hanging-chain.md",
+    "uploads/photos/hangingchain.jpg",
     "bases/Portfolio.base",
     "_portfolio/peacock-flower.md",
     "_portfolio/lacecap-hydrangea.md",
@@ -264,7 +266,6 @@
     "uploads/artwork/olive-arcs-onthewall.jpg",
     "_site/uploads/artwork/olive-arcs-studio.jpg",
     "_portfolio/palmatum.md",
-    "_site/uploads/artwork/N72_2734.jpg",
     "_portfolio/smoke-tree.md",
     "_portfolio/buckeye-botanised.md",
     "_portfolio/berberis.md",
@@ -282,7 +283,6 @@
     "_photographs/travels-in-cambodia.md",
     "pages/perspectiefgallery.md",
     "pages/perspectief.md",
-    "_projects/folding-geometry.md",
     "_site/projects/folding_pieces/index.html",
     "_site/projects/folding_pieces",
     "_site/uploads/artwork",
