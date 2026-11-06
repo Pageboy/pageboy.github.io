@@ -14,11 +14,9 @@ views:
       - tags
       - nft
     sort:
-      - property: date
+      - property: file.name
         direction: ASC
       - property: title
-        direction: ASC
-      - property: file.name
         direction: ASC
     columnSize:
       file.name: 231

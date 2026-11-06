@@ -1,6 +1,6 @@
 ---
 date: 2026-10-12
-updated: 2026-10-12
+updated: 2026-11-06
 title: Firethorn
 image: /uploads/artwork/firethorn.jpg
 layout: art
@@ -19,4 +19,8 @@ On a walk along the river with my camera, I am searching for colours.
 
 I find this extraordinary burst of red and orange in the hedgerow. Before using this photograph in my composition I do a little research online and discover that these appear to be two varieties of Firethorn (_Pyracantha_) growing side by side: one laden with vivid orange pomes, the other with brilliant red ones.
 
+**UV varnished archival ink on fine art paper bonded to a panel 565mm x 565mm**
+
 <!--and-->
+
+![Firethorn in the Studio](../uploads/photos/firethorn_studio.jpg)

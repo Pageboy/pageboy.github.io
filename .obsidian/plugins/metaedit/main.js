@@ -32,21 +32,21 @@ __export(main_exports, {
   default: () => MetaEdit
 });
 module.exports = __toCommonJS(main_exports);
-var import_obsidian25 = require("obsidian");
+var import_obsidian24 = require("obsidian");
 
 // src/Settings/metaEditSettingsTab.ts
-var import_obsidian3 = require("obsidian");
+var import_obsidian5 = require("obsidian");
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/version.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/version.js
 var PUBLIC_VERSION = "5";
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/disclose-version.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/disclose-version.js
 var _a;
 if (typeof window !== "undefined") {
   ((_a = window.__svelte ?? (window.__svelte = {})).v ?? (_a.v = /* @__PURE__ */ new Set())).add(PUBLIC_VERSION);
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/constants.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/constants.js
 var EACH_ITEM_REACTIVE = 1;
 var EACH_INDEX_REACTIVE = 1 << 1;
 var EACH_IS_CONTROLLED = 1 << 2;
@@ -78,7 +78,7 @@ var NAMESPACE_HTML = "http://www.w3.org/1999/xhtml";
 var node_env = globalThis.process?.env?.NODE_ENV;
 var dev_fallback_default = node_env && !node_env.toLowerCase().startsWith("prod");
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/shared/utils.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/shared/utils.js
 var is_array = Array.isArray;
 var index_of = Array.prototype.indexOf;
 var includes = Array.prototype.includes;
@@ -108,7 +108,7 @@ function deferred() {
   return { promise, resolve, reject };
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/constants.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/constants.js
 var DERIVED = 1 << 1;
 var EFFECT = 1 << 2;
 var RENDER_EFFECT = 1 << 3;
@@ -117,6 +117,7 @@ var BLOCK_EFFECT = 1 << 4;
 var BRANCH_EFFECT = 1 << 5;
 var ROOT_EFFECT = 1 << 6;
 var BOUNDARY_EFFECT = 1 << 7;
+var PAUSED = 1 << 8;
 var CONNECTED = 1 << 9;
 var CLEAN = 1 << 10;
 var DIRTY = 1 << 11;
@@ -131,11 +132,11 @@ var HEAD_EFFECT = 1 << 18;
 var EFFECT_PRESERVED = 1 << 19;
 var USER_EFFECT = 1 << 20;
 var EFFECT_OFFSCREEN = 1 << 25;
-var WAS_MARKED = 1 << 16;
 var REACTION_IS_UPDATING = 1 << 21;
 var ASYNC = 1 << 22;
 var ERROR_VALUE = 1 << 23;
 var STATE_SYMBOL = /* @__PURE__ */ Symbol("$state");
+var COMPONENT_SYMBOL = /* @__PURE__ */ Symbol("component");
 var LEGACY_PROPS = /* @__PURE__ */ Symbol("legacy props");
 var LOADING_ATTR_SYMBOL = /* @__PURE__ */ Symbol("");
 var PROXY_PATH_SYMBOL = /* @__PURE__ */ Symbol("proxy path");
@@ -159,7 +160,169 @@ var IS_XHTML = (
 var TEXT_NODE = 3;
 var COMMENT_NODE = 8;
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/shared/errors.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/warnings.js
+var bold = "font-weight: bold";
+var normal = "font-weight: normal";
+function await_reactivity_loss(name) {
+  if (dev_fallback_default) {
+    console.warn(`%c[svelte] await_reactivity_loss
+%cDetected reactivity loss when reading \`${name}\`. This happens when state is read in an async function after an earlier \`await\`
+https://svelte.dev/e/await_reactivity_loss`, bold, normal);
+  } else {
+    console.warn(`https://svelte.dev/e/await_reactivity_loss`);
+  }
+}
+function await_waterfall(name, location) {
+  if (dev_fallback_default) {
+    console.warn(`%c[svelte] await_waterfall
+%cAn async derived, \`${name}\` (${location}) was not read immediately after it resolved. This often indicates an unnecessary waterfall, which can slow down your app
+https://svelte.dev/e/await_waterfall`, bold, normal);
+  } else {
+    console.warn(`https://svelte.dev/e/await_waterfall`);
+  }
+}
+function derived_inert() {
+  if (dev_fallback_default) {
+    console.warn(`%c[svelte] derived_inert
+%cReading a derived belonging to a now-destroyed effect may result in stale values
+https://svelte.dev/e/derived_inert`, bold, normal);
+  } else {
+    console.warn(`https://svelte.dev/e/derived_inert`);
+  }
+}
+function hydration_attribute_changed(attribute, html2, value) {
+  if (dev_fallback_default) {
+    console.warn(`%c[svelte] hydration_attribute_changed
+%cThe \`${attribute}\` attribute on \`${html2}\` changed its value between server and client renders. The client value, \`${value}\`, will be ignored in favour of the server value
+https://svelte.dev/e/hydration_attribute_changed`, bold, normal);
+  } else {
+    console.warn(`https://svelte.dev/e/hydration_attribute_changed`);
+  }
+}
+function hydration_mismatch(location) {
+  if (dev_fallback_default) {
+    console.warn(
+      `%c[svelte] hydration_mismatch
+%c${location ? `Hydration failed because the initial UI does not match what was rendered on the server. The error occurred near ${location}` : "Hydration failed because the initial UI does not match what was rendered on the server"}
+https://svelte.dev/e/hydration_mismatch`,
+      bold,
+      normal
+    );
+  } else {
+    console.warn(`https://svelte.dev/e/hydration_mismatch`);
+  }
+}
+function lifecycle_double_unmount() {
+  if (dev_fallback_default) {
+    console.warn(`%c[svelte] lifecycle_double_unmount
+%cTried to unmount a component that was not mounted
+https://svelte.dev/e/lifecycle_double_unmount`, bold, normal);
+  } else {
+    console.warn(`https://svelte.dev/e/lifecycle_double_unmount`);
+  }
+}
+function state_proxy_equality_mismatch(operator) {
+  if (dev_fallback_default) {
+    console.warn(`%c[svelte] state_proxy_equality_mismatch
+%cReactive \`$state(...)\` proxies and the values they proxy have different identities. Because of this, comparisons with \`${operator}\` will produce unexpected results
+https://svelte.dev/e/state_proxy_equality_mismatch`, bold, normal);
+  } else {
+    console.warn(`https://svelte.dev/e/state_proxy_equality_mismatch`);
+  }
+}
+function svelte_boundary_reset_noop() {
+  if (dev_fallback_default) {
+    console.warn(`%c[svelte] svelte_boundary_reset_noop
+%cA \`<svelte:boundary>\` \`reset\` function only resets the boundary the first time it is called
+https://svelte.dev/e/svelte_boundary_reset_noop`, bold, normal);
+  } else {
+    console.warn(`https://svelte.dev/e/svelte_boundary_reset_noop`);
+  }
+}
+
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/dom/hydration.js
+var hydrating = false;
+function set_hydrating(value) {
+  hydrating = value;
+}
+var hydrate_node;
+function set_hydrate_node(node) {
+  if (node === null) {
+    hydration_mismatch();
+    throw HYDRATION_ERROR;
+  }
+  return hydrate_node = node;
+}
+function hydrate_next() {
+  return set_hydrate_node(get_next_sibling(hydrate_node));
+}
+function reset(node) {
+  if (!hydrating) return;
+  if (get_next_sibling(hydrate_node) !== null) {
+    hydration_mismatch();
+    throw HYDRATION_ERROR;
+  }
+  hydrate_node = node;
+}
+function next(count = 1) {
+  if (hydrating) {
+    var i = count;
+    var node = hydrate_node;
+    while (i--) {
+      node = /** @type {TemplateNode} */
+      get_next_sibling(node);
+    }
+    hydrate_node = node;
+  }
+}
+function skip_nodes(remove = true) {
+  var depth = 0;
+  var node = hydrate_node;
+  while (true) {
+    if (node.nodeType === COMMENT_NODE) {
+      var data = (
+        /** @type {Comment} */
+        node.data
+      );
+      if (data === HYDRATION_END) {
+        if (depth === 0) return node;
+        depth -= 1;
+      } else if (data === HYDRATION_START || data === HYDRATION_START_ELSE || // "[1", "[2", etc. for if blocks
+      data[0] === "[" && !isNaN(Number(data.slice(1)))) {
+        depth += 1;
+      }
+    }
+    var next2 = (
+      /** @type {TemplateNode} */
+      get_next_sibling(node)
+    );
+    if (remove) node.remove();
+    node = next2;
+  }
+}
+function read_hydration_instruction(node) {
+  if (!node || node.nodeType !== COMMENT_NODE) {
+    hydration_mismatch();
+    throw HYDRATION_ERROR;
+  }
+  return (
+    /** @type {Comment} */
+    node.data
+  );
+}
+
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/reactivity/equality.js
+function equals(value) {
+  return value === this.v;
+}
+function safe_not_equal(a, b) {
+  return a != a ? b == b : a !== b || a !== null && typeof a === "object" || typeof a === "function";
+}
+function safe_equals(value) {
+  return !safe_not_equal(value, this.v);
+}
+
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/shared/errors.js
 function invariant_violation(message) {
   if (dev_fallback_default) {
     const error = new Error(`invariant_violation
@@ -172,7 +335,7 @@ https://svelte.dev/e/invariant_violation`);
   }
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/errors.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/errors.js
 function async_derived_orphan() {
   if (dev_fallback_default) {
     const error = new Error(`async_derived_orphan
@@ -350,320 +513,12 @@ https://svelte.dev/e/svelte_boundary_reset_onerror`);
   }
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/warnings.js
-var bold = "font-weight: bold";
-var normal = "font-weight: normal";
-function await_reactivity_loss(name) {
-  if (dev_fallback_default) {
-    console.warn(`%c[svelte] await_reactivity_loss
-%cDetected reactivity loss when reading \`${name}\`. This happens when state is read in an async function after an earlier \`await\`
-https://svelte.dev/e/await_reactivity_loss`, bold, normal);
-  } else {
-    console.warn(`https://svelte.dev/e/await_reactivity_loss`);
-  }
-}
-function await_waterfall(name, location) {
-  if (dev_fallback_default) {
-    console.warn(`%c[svelte] await_waterfall
-%cAn async derived, \`${name}\` (${location}) was not read immediately after it resolved. This often indicates an unnecessary waterfall, which can slow down your app
-https://svelte.dev/e/await_waterfall`, bold, normal);
-  } else {
-    console.warn(`https://svelte.dev/e/await_waterfall`);
-  }
-}
-function derived_inert() {
-  if (dev_fallback_default) {
-    console.warn(`%c[svelte] derived_inert
-%cReading a derived belonging to a now-destroyed effect may result in stale values
-https://svelte.dev/e/derived_inert`, bold, normal);
-  } else {
-    console.warn(`https://svelte.dev/e/derived_inert`);
-  }
-}
-function hydration_attribute_changed(attribute, html2, value) {
-  if (dev_fallback_default) {
-    console.warn(`%c[svelte] hydration_attribute_changed
-%cThe \`${attribute}\` attribute on \`${html2}\` changed its value between server and client renders. The client value, \`${value}\`, will be ignored in favour of the server value
-https://svelte.dev/e/hydration_attribute_changed`, bold, normal);
-  } else {
-    console.warn(`https://svelte.dev/e/hydration_attribute_changed`);
-  }
-}
-function hydration_mismatch(location) {
-  if (dev_fallback_default) {
-    console.warn(
-      `%c[svelte] hydration_mismatch
-%c${location ? `Hydration failed because the initial UI does not match what was rendered on the server. The error occurred near ${location}` : "Hydration failed because the initial UI does not match what was rendered on the server"}
-https://svelte.dev/e/hydration_mismatch`,
-      bold,
-      normal
-    );
-  } else {
-    console.warn(`https://svelte.dev/e/hydration_mismatch`);
-  }
-}
-function lifecycle_double_unmount() {
-  if (dev_fallback_default) {
-    console.warn(`%c[svelte] lifecycle_double_unmount
-%cTried to unmount a component that was not mounted
-https://svelte.dev/e/lifecycle_double_unmount`, bold, normal);
-  } else {
-    console.warn(`https://svelte.dev/e/lifecycle_double_unmount`);
-  }
-}
-function select_multiple_invalid_value() {
-  if (dev_fallback_default) {
-    console.warn(`%c[svelte] select_multiple_invalid_value
-%cThe \`value\` property of a \`<select multiple>\` element should be an array, but it received a non-array value. The selection will be kept as is.
-https://svelte.dev/e/select_multiple_invalid_value`, bold, normal);
-  } else {
-    console.warn(`https://svelte.dev/e/select_multiple_invalid_value`);
-  }
-}
-function state_proxy_equality_mismatch(operator) {
-  if (dev_fallback_default) {
-    console.warn(`%c[svelte] state_proxy_equality_mismatch
-%cReactive \`$state(...)\` proxies and the values they proxy have different identities. Because of this, comparisons with \`${operator}\` will produce unexpected results
-https://svelte.dev/e/state_proxy_equality_mismatch`, bold, normal);
-  } else {
-    console.warn(`https://svelte.dev/e/state_proxy_equality_mismatch`);
-  }
-}
-function state_proxy_unmount() {
-  if (dev_fallback_default) {
-    console.warn(`%c[svelte] state_proxy_unmount
-%cTried to unmount a state proxy, rather than a component
-https://svelte.dev/e/state_proxy_unmount`, bold, normal);
-  } else {
-    console.warn(`https://svelte.dev/e/state_proxy_unmount`);
-  }
-}
-function svelte_boundary_reset_noop() {
-  if (dev_fallback_default) {
-    console.warn(`%c[svelte] svelte_boundary_reset_noop
-%cA \`<svelte:boundary>\` \`reset\` function only resets the boundary the first time it is called
-https://svelte.dev/e/svelte_boundary_reset_noop`, bold, normal);
-  } else {
-    console.warn(`https://svelte.dev/e/svelte_boundary_reset_noop`);
-  }
-}
-
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/hydration.js
-var hydrating = false;
-function set_hydrating(value) {
-  hydrating = value;
-}
-var hydrate_node;
-function set_hydrate_node(node) {
-  if (node === null) {
-    hydration_mismatch();
-    throw HYDRATION_ERROR;
-  }
-  return hydrate_node = node;
-}
-function hydrate_next() {
-  return set_hydrate_node(get_next_sibling(hydrate_node));
-}
-function reset(node) {
-  if (!hydrating) return;
-  if (get_next_sibling(hydrate_node) !== null) {
-    hydration_mismatch();
-    throw HYDRATION_ERROR;
-  }
-  hydrate_node = node;
-}
-function next(count = 1) {
-  if (hydrating) {
-    var i = count;
-    var node = hydrate_node;
-    while (i--) {
-      node = /** @type {TemplateNode} */
-      get_next_sibling(node);
-    }
-    hydrate_node = node;
-  }
-}
-function skip_nodes(remove = true) {
-  var depth = 0;
-  var node = hydrate_node;
-  while (true) {
-    if (node.nodeType === COMMENT_NODE) {
-      var data = (
-        /** @type {Comment} */
-        node.data
-      );
-      if (data === HYDRATION_END) {
-        if (depth === 0) return node;
-        depth -= 1;
-      } else if (data === HYDRATION_START || data === HYDRATION_START_ELSE || // "[1", "[2", etc. for if blocks
-      data[0] === "[" && !isNaN(Number(data.slice(1)))) {
-        depth += 1;
-      }
-    }
-    var next2 = (
-      /** @type {TemplateNode} */
-      get_next_sibling(node)
-    );
-    if (remove) node.remove();
-    node = next2;
-  }
-}
-function read_hydration_instruction(node) {
-  if (!node || node.nodeType !== COMMENT_NODE) {
-    hydration_mismatch();
-    throw HYDRATION_ERROR;
-  }
-  return (
-    /** @type {Comment} */
-    node.data
-  );
-}
-
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/reactivity/equality.js
-function equals(value) {
-  return value === this.v;
-}
-function safe_not_equal(a, b) {
-  return a != a ? b == b : a !== b || a !== null && typeof a === "object" || typeof a === "function";
-}
-function safe_equals(value) {
-  return !safe_not_equal(value, this.v);
-}
-
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/flags/index.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/flags/index.js
 var async_mode_flag = false;
 var legacy_mode_flag = false;
 var tracing_mode_flag = false;
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/shared/warnings.js
-var bold2 = "font-weight: bold";
-var normal2 = "font-weight: normal";
-function state_snapshot_uncloneable(properties) {
-  if (dev_fallback_default) {
-    console.warn(
-      `%c[svelte] state_snapshot_uncloneable
-%c${properties ? `The following properties cannot be cloned with \`$state.snapshot\` \u2014 the return value contains the originals:
-
-${properties}` : "Value cannot be cloned with `$state.snapshot` \u2014 the original value was returned"}
-https://svelte.dev/e/state_snapshot_uncloneable`,
-      bold2,
-      normal2
-    );
-  } else {
-    console.warn(`https://svelte.dev/e/state_snapshot_uncloneable`);
-  }
-}
-
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/shared/clone.js
-var empty = [];
-function snapshot(value, skip_warning = false, no_tojson = false) {
-  if (dev_fallback_default && !skip_warning) {
-    const paths = [];
-    const copy = clone(value, /* @__PURE__ */ new Map(), "", paths, null, no_tojson);
-    if (paths.length === 1 && paths[0] === "") {
-      state_snapshot_uncloneable();
-    } else if (paths.length > 0) {
-      const slice = paths.length > 10 ? paths.slice(0, 7) : paths.slice(0, 10);
-      const excess = paths.length - slice.length;
-      let uncloned = slice.map((path) => `- <value>${path}`).join("\n");
-      if (excess > 0) uncloned += `
-- ...and ${excess} more`;
-      state_snapshot_uncloneable(uncloned);
-    }
-    return copy;
-  }
-  return clone(value, /* @__PURE__ */ new Map(), "", empty, null, no_tojson);
-}
-function clone(value, cloned, path, paths, original = null, no_tojson = false) {
-  if (typeof value === "object" && value !== null) {
-    var unwrapped = cloned.get(value);
-    if (unwrapped !== void 0) return unwrapped;
-    if (value instanceof Map) return (
-      /** @type {Snapshot<T>} */
-      new Map(value)
-    );
-    if (value instanceof Set) return (
-      /** @type {Snapshot<T>} */
-      new Set(value)
-    );
-    if (is_array(value)) {
-      var copy = (
-        /** @type {Snapshot<any>} */
-        Array(value.length)
-      );
-      cloned.set(value, copy);
-      if (original !== null) {
-        cloned.set(original, copy);
-      }
-      for (var i = 0; i < value.length; i += 1) {
-        var element2 = value[i];
-        if (i in value) {
-          copy[i] = clone(element2, cloned, dev_fallback_default ? `${path}[${i}]` : path, paths, null, no_tojson);
-        }
-      }
-      return copy;
-    }
-    if (get_prototype_of(value) === object_prototype) {
-      copy = {};
-      cloned.set(value, copy);
-      if (original !== null) {
-        cloned.set(original, copy);
-      }
-      for (var key2 of Object.keys(value)) {
-        copy[key2] = clone(
-          // @ts-expect-error
-          value[key2],
-          cloned,
-          dev_fallback_default ? `${path}.${key2}` : path,
-          paths,
-          null,
-          no_tojson
-        );
-      }
-      return copy;
-    }
-    if (value instanceof Date) {
-      return (
-        /** @type {Snapshot<T>} */
-        structuredClone(value)
-      );
-    }
-    if (typeof /** @type {T & { toJSON?: any } } */
-    value.toJSON === "function" && !no_tojson) {
-      return clone(
-        /** @type {T & { toJSON(): any } } */
-        value.toJSON(),
-        cloned,
-        dev_fallback_default ? `${path}.toJSON()` : path,
-        paths,
-        // Associate the instance with the toJSON clone
-        value
-      );
-    }
-  }
-  if (value instanceof EventTarget) {
-    return (
-      /** @type {Snapshot<T>} */
-      value
-    );
-  }
-  try {
-    return (
-      /** @type {Snapshot<T>} */
-      structuredClone(value)
-    );
-  } catch (e) {
-    if (dev_fallback_default) {
-      paths.push(path);
-    }
-    return (
-      /** @type {Snapshot<T>} */
-      value
-    );
-  }
-}
-
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dev/tracing.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/dev/tracing.js
 var tracing_expressions = null;
 function tag(source2, label) {
   source2.label = label;
@@ -675,7 +530,7 @@ function tag_proxy(value, label) {
   return value;
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/shared/dev.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/shared/dev.js
 function get_error(label) {
   const error = new Error();
   const stack2 = get_stack();
@@ -725,7 +580,7 @@ function invariant(condition, message) {
   if (!condition) invariant_violation(message);
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/context.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/context.js
 var component_context = null;
 function set_component_context(context) {
   component_context = context;
@@ -777,14 +632,17 @@ function pop(component2) {
   if (dev_fallback_default) {
     dev_current_component_function = component_context?.function ?? null;
   }
-  return component2 ?? /** @type {T} */
-  {};
+  return mark_as_component(component2);
+}
+function mark_as_component(component2 = {}) {
+  define_property(component2, COMPONENT_SYMBOL, { value: true });
+  return component2;
 }
 function is_runes() {
   return !legacy_mode_flag || component_context !== null && component_context.l === null;
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/task.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/dom/task.js
 var micro_tasks = [];
 function run_micro_tasks() {
   var tasks = micro_tasks;
@@ -806,80 +664,7 @@ function flush_tasks() {
   }
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/error-handling.js
-var adjustments = /* @__PURE__ */ new WeakMap();
-function handle_error(error) {
-  var effect2 = active_effect;
-  if (effect2 === null) {
-    active_reaction.f |= ERROR_VALUE;
-    return error;
-  }
-  if (dev_fallback_default && error instanceof Error && !adjustments.has(error)) {
-    adjustments.set(error, get_adjustments(error, effect2));
-  }
-  if ((effect2.f & REACTION_RAN) === 0 && (effect2.f & EFFECT) === 0) {
-    if (dev_fallback_default && !effect2.parent && error instanceof Error) {
-      apply_adjustments(error);
-    }
-    throw error;
-  }
-  invoke_error_boundary(error, effect2);
-}
-function invoke_error_boundary(error, effect2) {
-  if (effect2 !== null && (effect2.f & DESTROYED) !== 0) {
-    return;
-  }
-  while (effect2 !== null) {
-    if ((effect2.f & BOUNDARY_EFFECT) !== 0) {
-      if ((effect2.f & REACTION_RAN) === 0) {
-        throw error;
-      }
-      try {
-        effect2.b.error(error);
-        return;
-      } catch (e) {
-        error = e;
-      }
-    }
-    effect2 = effect2.parent;
-  }
-  if (dev_fallback_default && error instanceof Error) {
-    apply_adjustments(error);
-  }
-  throw error;
-}
-function get_adjustments(error, effect2) {
-  const message_descriptor = get_descriptor(error, "message");
-  if (message_descriptor && !message_descriptor.configurable) return;
-  var indent = is_firefox ? "  " : "	";
-  var component_stack = `
-${indent}in ${effect2.fn?.name || "<unknown>"}`;
-  var context = effect2.ctx;
-  while (context !== null) {
-    component_stack += `
-${indent}in ${context.function?.[FILENAME].split("/").pop()}`;
-    context = context.p;
-  }
-  return {
-    message: error.message + `
-${component_stack}
-`,
-    stack: error.stack?.split("\n").filter((line) => !line.includes("svelte/src/internal")).join("\n")
-  };
-}
-function apply_adjustments(error) {
-  const adjusted = adjustments.get(error);
-  if (adjusted) {
-    define_property(error, "message", {
-      value: adjusted.message
-    });
-    define_property(error, "stack", {
-      value: adjusted.stack
-    });
-  }
-}
-
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/reactivity/status.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/reactivity/status.js
 var STATUS_MASK = ~(DIRTY | MAYBE_DIRTY | CLEAN);
 function set_signal_status(signal, status) {
   signal.f = signal.f & STATUS_MASK | status;
@@ -892,496 +677,73 @@ function update_derived_status(derived2) {
   }
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/reactivity/utils.js
-function clear_marked(deps) {
-  if (deps === null) return;
-  for (const dep of deps) {
-    if ((dep.f & DERIVED) === 0 || (dep.f & WAS_MARKED) === 0) {
-      continue;
-    }
-    dep.f ^= WAS_MARKED;
-    clear_marked(
-      /** @type {Derived} */
-      dep.deps
-    );
-  }
-}
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/reactivity/utils.js
 function defer_effect(effect2, dirty_effects, maybe_dirty_effects) {
   if ((effect2.f & DIRTY) !== 0) {
     dirty_effects.add(effect2);
   } else if ((effect2.f & MAYBE_DIRTY) !== 0) {
     maybe_dirty_effects.add(effect2);
   }
-  clear_marked(effect2.deps);
   set_signal_status(effect2, CLEAN);
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/reactivity/store.js
-var legacy_is_updating_store = false;
-var is_store_binding = false;
-function capture_store_binding(fn) {
-  var previous_is_store_binding = is_store_binding;
-  try {
-    is_store_binding = false;
-    return [fn(), is_store_binding];
-  } finally {
-    is_store_binding = previous_is_store_binding;
-  }
-}
-
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/reactivity/create-subscriber.js
-function createSubscriber(start) {
-  let subscribers = 0;
-  let version = source(0);
-  let stop;
-  if (dev_fallback_default) {
-    tag(version, "createSubscriber version");
-  }
-  return () => {
-    if (effect_tracking()) {
-      get2(version);
-      render_effect(() => {
-        if (subscribers === 0) {
-          stop = untrack(() => start(() => increment(version)));
-        }
-        subscribers += 1;
-        return () => {
-          queue_micro_task(() => {
-            subscribers -= 1;
-            if (subscribers === 0) {
-              stop?.();
-              stop = void 0;
-              increment(version);
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/dom/elements/misc.js
+var listening_to_form_reset = false;
+function add_form_reset_listener() {
+  if (!listening_to_form_reset) {
+    listening_to_form_reset = true;
+    document.addEventListener(
+      "reset",
+      (evt) => {
+        Promise.resolve().then(() => {
+          if (!evt.defaultPrevented) {
+            for (
+              const e of
+              /**@type {HTMLFormElement} */
+              evt.target.elements
+            ) {
+              e[FORM_RESET_HANDLER]?.();
             }
-          });
-        };
-      });
-    }
-  };
+          }
+        });
+      },
+      // In the capture phase to guarantee we get noticed of it (no possibility of stopPropagation)
+      { capture: true }
+    );
+  }
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/blocks/boundary.js
-var flags = EFFECT_TRANSPARENT | EFFECT_PRESERVED;
-function boundary(node, props, children, transform_error) {
-  new Boundary(node, props, children, transform_error);
-}
-var _anchor, _hydrate_open, _props, _children, _effect, _main_effect, _pending_effect, _failed_effect, _offscreen_fragment, _local_pending_count, _pending_count, _pending_count_update_queued, _dirty_effects, _maybe_dirty_effects, _effect_pending, _effect_pending_subscriber, _Boundary_instances, hydrate_resolved_content_fn, hydrate_failed_content_fn, hydrate_pending_content_fn, render_fn, resolve_fn, run_fn, update_pending_count_fn, handle_error_fn;
-var Boundary = class {
-  /**
-   * @param {TemplateNode} node
-   * @param {BoundaryProps} props
-   * @param {((anchor: Node) => void)} children
-   * @param {((error: unknown) => unknown) | undefined} [transform_error]
-   */
-  constructor(node, props, children, transform_error) {
-    __privateAdd(this, _Boundary_instances);
-    /** @type {Boundary | null} */
-    __publicField(this, "parent");
-    __publicField(this, "is_pending", false);
-    /**
-     * API-level transformError transform function. Transforms errors before they reach the `failed` snippet.
-     * Inherited from parent boundary, or defaults to identity.
-     * @type {(error: unknown) => unknown}
-     */
-    __publicField(this, "transform_error");
-    /** @type {TemplateNode} */
-    __privateAdd(this, _anchor);
-    /** @type {TemplateNode | null} */
-    __privateAdd(this, _hydrate_open, hydrating ? hydrate_node : null);
-    /** @type {BoundaryProps} */
-    __privateAdd(this, _props);
-    /** @type {((anchor: Node) => void)} */
-    __privateAdd(this, _children);
-    /** @type {Effect} */
-    __privateAdd(this, _effect);
-    /** @type {Effect | null} */
-    __privateAdd(this, _main_effect, null);
-    /** @type {Effect | null} */
-    __privateAdd(this, _pending_effect, null);
-    /** @type {Effect | null} */
-    __privateAdd(this, _failed_effect, null);
-    /** @type {DocumentFragment | null} */
-    __privateAdd(this, _offscreen_fragment, null);
-    __privateAdd(this, _local_pending_count, 0);
-    __privateAdd(this, _pending_count, 0);
-    __privateAdd(this, _pending_count_update_queued, false);
-    /** @type {Set<Effect>} */
-    __privateAdd(this, _dirty_effects, /* @__PURE__ */ new Set());
-    /** @type {Set<Effect>} */
-    __privateAdd(this, _maybe_dirty_effects, /* @__PURE__ */ new Set());
-    /**
-     * A source containing the number of pending async deriveds/expressions.
-     * Only created if `$effect.pending()` is used inside the boundary,
-     * otherwise updating the source results in needless `Batch.ensure()`
-     * calls followed by no-op flushes
-     * @type {Source<number> | null}
-     */
-    __privateAdd(this, _effect_pending, null);
-    __privateAdd(this, _effect_pending_subscriber, createSubscriber(() => {
-      __privateSet(this, _effect_pending, source(__privateGet(this, _local_pending_count)));
-      if (dev_fallback_default) {
-        tag(__privateGet(this, _effect_pending), "$effect.pending()");
-      }
-      return () => {
-        __privateSet(this, _effect_pending, null);
-      };
-    }));
-    __privateSet(this, _anchor, node);
-    __privateSet(this, _props, props);
-    __privateSet(this, _children, (anchor) => {
-      var effect2 = (
-        /** @type {Effect} */
-        active_effect
-      );
-      effect2.b = this;
-      effect2.f |= BOUNDARY_EFFECT;
-      children(anchor);
-    });
-    this.parent = /** @type {Effect} */
-    active_effect.b;
-    this.transform_error = transform_error ?? this.parent?.transform_error ?? ((e) => e);
-    __privateSet(this, _effect, block(() => {
-      if (hydrating) {
-        const comment2 = (
-          /** @type {Comment} */
-          __privateGet(this, _hydrate_open)
-        );
-        hydrate_next();
-        const server_rendered_pending = comment2.data === HYDRATION_START_ELSE;
-        const server_rendered_failed = comment2.data.startsWith(HYDRATION_START_FAILED);
-        if (server_rendered_failed) {
-          const serialized_error = JSON.parse(comment2.data.slice(HYDRATION_START_FAILED.length));
-          __privateMethod(this, _Boundary_instances, hydrate_failed_content_fn).call(this, serialized_error);
-        } else if (server_rendered_pending) {
-          __privateMethod(this, _Boundary_instances, hydrate_pending_content_fn).call(this);
-        } else {
-          __privateMethod(this, _Boundary_instances, hydrate_resolved_content_fn).call(this);
-        }
-      } else {
-        __privateMethod(this, _Boundary_instances, render_fn).call(this);
-      }
-    }, flags));
-    if (hydrating) {
-      __privateSet(this, _anchor, hydrate_node);
-    }
-  }
-  /**
-   * Defer an effect inside a pending boundary until the boundary resolves
-   * @param {Effect} effect
-   */
-  defer_effect(effect2) {
-    defer_effect(effect2, __privateGet(this, _dirty_effects), __privateGet(this, _maybe_dirty_effects));
-  }
-  /**
-   * Returns `false` if the effect exists inside a boundary whose pending snippet is shown
-   * @returns {boolean}
-   */
-  is_rendered() {
-    return !this.is_pending && (!this.parent || this.parent.is_rendered());
-  }
-  has_pending_snippet() {
-    return !!__privateGet(this, _props).pending;
-  }
-  /**
-   * Update the source that powers `$effect.pending()` inside this boundary,
-   * and controls when the current `pending` snippet (if any) is removed.
-   * Do not call from inside the class
-   * @param {1 | -1} d
-   * @param {Batch} batch
-   */
-  update_pending_count(d, batch) {
-    __privateMethod(this, _Boundary_instances, update_pending_count_fn).call(this, d, batch);
-    __privateSet(this, _local_pending_count, __privateGet(this, _local_pending_count) + d);
-    if (!__privateGet(this, _effect_pending) || __privateGet(this, _pending_count_update_queued)) return;
-    __privateSet(this, _pending_count_update_queued, true);
-    queue_micro_task(() => {
-      __privateSet(this, _pending_count_update_queued, false);
-      if (__privateGet(this, _effect_pending)) {
-        internal_set(__privateGet(this, _effect_pending), __privateGet(this, _local_pending_count));
-      }
-    });
-  }
-  get_effect_pending() {
-    __privateGet(this, _effect_pending_subscriber).call(this);
-    return get2(
-      /** @type {Source<number>} */
-      __privateGet(this, _effect_pending)
-    );
-  }
-  /** @param {unknown} error */
-  error(error) {
-    if (!__privateGet(this, _props).onerror && !__privateGet(this, _props).failed) {
-      throw error;
-    }
-    if (current_batch?.is_fork) {
-      if (__privateGet(this, _main_effect)) current_batch.skip_effect(__privateGet(this, _main_effect));
-      if (__privateGet(this, _pending_effect)) current_batch.skip_effect(__privateGet(this, _pending_effect));
-      if (__privateGet(this, _failed_effect)) current_batch.skip_effect(__privateGet(this, _failed_effect));
-      current_batch.oncommit(() => {
-        __privateMethod(this, _Boundary_instances, handle_error_fn).call(this, error);
-      });
-    } else {
-      __privateMethod(this, _Boundary_instances, handle_error_fn).call(this, error);
-    }
-  }
-};
-_anchor = new WeakMap();
-_hydrate_open = new WeakMap();
-_props = new WeakMap();
-_children = new WeakMap();
-_effect = new WeakMap();
-_main_effect = new WeakMap();
-_pending_effect = new WeakMap();
-_failed_effect = new WeakMap();
-_offscreen_fragment = new WeakMap();
-_local_pending_count = new WeakMap();
-_pending_count = new WeakMap();
-_pending_count_update_queued = new WeakMap();
-_dirty_effects = new WeakMap();
-_maybe_dirty_effects = new WeakMap();
-_effect_pending = new WeakMap();
-_effect_pending_subscriber = new WeakMap();
-_Boundary_instances = new WeakSet();
-hydrate_resolved_content_fn = function() {
-  try {
-    __privateSet(this, _main_effect, branch(() => __privateGet(this, _children).call(this, __privateGet(this, _anchor))));
-  } catch (error) {
-    this.error(error);
-  }
-};
-/**
- * @param {unknown} error The deserialized error from the server's hydration comment
- */
-hydrate_failed_content_fn = function(error) {
-  const failed = __privateGet(this, _props).failed;
-  if (!failed) return;
-  __privateSet(this, _failed_effect, branch(() => {
-    failed(
-      __privateGet(this, _anchor),
-      () => error,
-      () => () => {
-      }
-    );
-  }));
-};
-hydrate_pending_content_fn = function() {
-  const pending3 = __privateGet(this, _props).pending;
-  if (!pending3) return;
-  this.is_pending = true;
-  __privateSet(this, _pending_effect, branch(() => pending3(__privateGet(this, _anchor))));
-  queue_micro_task(() => {
-    var fragment = __privateSet(this, _offscreen_fragment, document.createDocumentFragment());
-    var anchor = create_text();
-    fragment.append(anchor);
-    __privateSet(this, _main_effect, __privateMethod(this, _Boundary_instances, run_fn).call(this, () => {
-      return branch(() => __privateGet(this, _children).call(this, anchor));
-    }));
-    if (__privateGet(this, _pending_count) === 0) {
-      __privateGet(this, _anchor).before(fragment);
-      __privateSet(this, _offscreen_fragment, null);
-      pause_effect(
-        /** @type {Effect} */
-        __privateGet(this, _pending_effect),
-        () => {
-          __privateSet(this, _pending_effect, null);
-        }
-      );
-      __privateMethod(this, _Boundary_instances, resolve_fn).call(
-        this,
-        /** @type {Batch} */
-        current_batch
-      );
-    }
-  });
-};
-render_fn = function() {
-  try {
-    this.is_pending = this.has_pending_snippet();
-    __privateSet(this, _pending_count, 0);
-    __privateSet(this, _local_pending_count, 0);
-    __privateSet(this, _main_effect, branch(() => {
-      __privateGet(this, _children).call(this, __privateGet(this, _anchor));
-    }));
-    if (__privateGet(this, _pending_count) > 0) {
-      var fragment = __privateSet(this, _offscreen_fragment, document.createDocumentFragment());
-      move_effect(__privateGet(this, _main_effect), fragment);
-      const pending3 = (
-        /** @type {(anchor: Node) => void} */
-        __privateGet(this, _props).pending
-      );
-      __privateSet(this, _pending_effect, branch(() => pending3(__privateGet(this, _anchor))));
-    } else {
-      __privateMethod(this, _Boundary_instances, resolve_fn).call(
-        this,
-        /** @type {Batch} */
-        current_batch
-      );
-    }
-  } catch (error) {
-    this.error(error);
-  }
-};
-/**
- * @param {Batch} batch
- */
-resolve_fn = function(batch) {
-  this.is_pending = false;
-  batch.transfer_effects(__privateGet(this, _dirty_effects), __privateGet(this, _maybe_dirty_effects));
-};
-/**
- * @template T
- * @param {() => T} fn
- */
-run_fn = function(fn) {
-  var previous_effect = active_effect;
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/dom/elements/bindings/shared.js
+function without_reactive_context(fn) {
   var previous_reaction = active_reaction;
-  var previous_ctx = component_context;
-  set_active_effect(__privateGet(this, _effect));
-  set_active_reaction(__privateGet(this, _effect));
-  set_component_context(__privateGet(this, _effect).ctx);
+  var previous_effect = active_effect;
+  set_active_reaction(null);
+  set_active_effect(null);
   try {
-    Batch.ensure();
     return fn();
-  } catch (e) {
-    handle_error(e);
-    return null;
   } finally {
-    set_active_effect(previous_effect);
     set_active_reaction(previous_reaction);
-    set_component_context(previous_ctx);
+    set_active_effect(previous_effect);
   }
-};
-/**
- * Updates the pending count associated with the currently visible pending snippet,
- * if any, such that we can replace the snippet with content once work is done
- * @param {1 | -1} d
- * @param {Batch} batch
- */
-update_pending_count_fn = function(d, batch) {
-  var _a2;
-  if (!this.has_pending_snippet()) {
-    if (this.parent) {
-      __privateMethod(_a2 = this.parent, _Boundary_instances, update_pending_count_fn).call(_a2, d, batch);
-    }
-    return;
+}
+function listen_to_event_and_reset_event(element2, event2, handler, on_reset = handler) {
+  element2.addEventListener(event2, () => without_reactive_context(handler));
+  const prev = (
+    /** @type {any} */
+    element2[FORM_RESET_HANDLER]
+  );
+  if (prev) {
+    element2[FORM_RESET_HANDLER] = () => {
+      prev();
+      on_reset(true);
+    };
+  } else {
+    element2[FORM_RESET_HANDLER] = () => on_reset(true);
   }
-  __privateSet(this, _pending_count, __privateGet(this, _pending_count) + d);
-  if (__privateGet(this, _pending_count) === 0) {
-    __privateMethod(this, _Boundary_instances, resolve_fn).call(this, batch);
-    if (__privateGet(this, _pending_effect)) {
-      pause_effect(__privateGet(this, _pending_effect), () => {
-        __privateSet(this, _pending_effect, null);
-      });
-    }
-    if (__privateGet(this, _offscreen_fragment)) {
-      __privateGet(this, _anchor).before(__privateGet(this, _offscreen_fragment));
-      __privateSet(this, _offscreen_fragment, null);
-    }
-  }
-};
-/**
- * @param {unknown} error
- */
-handle_error_fn = function(error) {
-  if (__privateGet(this, _main_effect)) {
-    destroy_effect(__privateGet(this, _main_effect));
-    __privateSet(this, _main_effect, null);
-  }
-  if (__privateGet(this, _pending_effect)) {
-    destroy_effect(__privateGet(this, _pending_effect));
-    __privateSet(this, _pending_effect, null);
-  }
-  if (__privateGet(this, _failed_effect)) {
-    destroy_effect(__privateGet(this, _failed_effect));
-    __privateSet(this, _failed_effect, null);
-  }
-  if (hydrating) {
-    set_hydrate_node(
-      /** @type {TemplateNode} */
-      __privateGet(this, _hydrate_open)
-    );
-    next();
-    set_hydrate_node(skip_nodes());
-  }
-  var onerror = __privateGet(this, _props).onerror;
-  let failed = __privateGet(this, _props).failed;
-  var did_reset = false;
-  var calling_on_error = false;
-  const reset2 = () => {
-    if (did_reset) {
-      svelte_boundary_reset_noop();
-      return;
-    }
-    did_reset = true;
-    if (calling_on_error) {
-      svelte_boundary_reset_onerror();
-    }
-    if (__privateGet(this, _failed_effect) !== null) {
-      pause_effect(__privateGet(this, _failed_effect), () => {
-        __privateSet(this, _failed_effect, null);
-      });
-    }
-    __privateMethod(this, _Boundary_instances, run_fn).call(this, () => {
-      __privateMethod(this, _Boundary_instances, render_fn).call(this);
-    });
-  };
-  const handle_error_result = (transformed_error) => {
-    try {
-      calling_on_error = true;
-      onerror?.(transformed_error, reset2);
-      calling_on_error = false;
-    } catch (error2) {
-      invoke_error_boundary(error2, __privateGet(this, _effect) && __privateGet(this, _effect).parent);
-    }
-    if (failed) {
-      __privateSet(this, _failed_effect, __privateMethod(this, _Boundary_instances, run_fn).call(this, () => {
-        try {
-          return branch(() => {
-            var effect2 = (
-              /** @type {Effect} */
-              active_effect
-            );
-            effect2.b = this;
-            effect2.f |= BOUNDARY_EFFECT;
-            failed(
-              __privateGet(this, _anchor),
-              () => transformed_error,
-              () => reset2
-            );
-          });
-        } catch (error2) {
-          invoke_error_boundary(
-            error2,
-            /** @type {Effect} */
-            __privateGet(this, _effect).parent
-          );
-          return null;
-        }
-      }));
-    }
-  };
-  queue_micro_task(() => {
-    var result;
-    try {
-      result = this.transform_error(error);
-    } catch (e) {
-      invoke_error_boundary(e, __privateGet(this, _effect) && __privateGet(this, _effect).parent);
-      return;
-    }
-    if (result !== null && typeof result === "object" && typeof /** @type {any} */
-    result.then === "function") {
-      result.then(
-        handle_error_result,
-        /** @param {unknown} e */
-        (e) => invoke_error_boundary(e, __privateGet(this, _effect) && __privateGet(this, _effect).parent)
-      );
-    } else {
-      handle_error_result(result);
-    }
-  });
-};
+  add_form_reset_listener();
+}
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/reactivity/async.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/reactivity/async.js
 function flatten(blockers, sync, async2, fn) {
   const d = is_runes() ? derived : derived_safe_equal;
   var pending3 = blockers.filter((b) => !b.settled);
@@ -1423,6 +785,10 @@ function flatten(blockers, sync, async2, fn) {
   }
   if (blocker_promise) {
     blocker_promise.then(() => {
+      if ((parent.f & DESTROYED) !== 0) {
+        decrement_pending();
+        return;
+      }
       restore();
       run3();
       unset_context();
@@ -1459,7 +825,9 @@ function capture() {
     }
   };
 }
+var restored = false;
 function unset_context(deactivate_batch = true) {
+  restored = false;
   set_active_effect(null);
   set_active_reaction(null);
   set_component_context(null);
@@ -1488,7 +856,7 @@ function increment_pending() {
   };
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/reactivity/deriveds.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/reactivity/deriveds.js
 var reactivity_loss_tracker = null;
 function set_reactivity_loss_tracker(v) {
   reactivity_loss_tracker = v;
@@ -1697,7 +1065,6 @@ function execute_derived(derived2) {
         derived_references_self();
       }
       stack.push(derived2);
-      derived2.f &= ~WAS_MARKED;
       destroy_derived_effects(derived2);
       value = update_reaction(derived2);
     } finally {
@@ -1707,7 +1074,6 @@ function execute_derived(derived2) {
     }
   } else {
     try {
-      derived2.f &= ~WAS_MARKED;
       destroy_derived_effects(derived2);
       value = update_reaction(derived2);
     } finally {
@@ -1749,9 +1115,13 @@ function freeze_derived_effects(derived2) {
   for (const e of derived2.effects) {
     if (e.teardown || e.ac) {
       e.teardown?.();
-      e.ac?.abort(STALE_REACTION);
+      if (e.ac !== null) {
+        without_reactive_context(() => {
+          e.ac.abort(STALE_REACTION);
+          e.ac = null;
+        });
+      }
       if (e.fn !== null) e.teardown = noop;
-      e.ac = null;
       remove_reactions(e, 0);
       destroy_effect_children(e);
     }
@@ -1766,7 +1136,7 @@ function unfreeze_derived_effects(derived2) {
   }
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/reactivity/batch.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/reactivity/batch.js
 var first_batch = null;
 var last_batch = null;
 var current_batch = null;
@@ -1780,7 +1150,7 @@ var legacy_updates = null;
 var flush_count = 0;
 var source_stacks = /* @__PURE__ */ new Set();
 var uid = 1;
-var _started, _prev, _next, _commit_callbacks, _discard_callbacks, _pending, _blocking_pending, _deferred, _roots, _new_effects, _dirty_effects2, _maybe_dirty_effects2, _skipped_branches, _unskipped_branches, _decrement_queued, _Batch_instances, is_deferred_fn, process_fn, traverse_fn, find_earlier_batch_fn, merge_fn, defer_effects_fn, commit_fn, unlink_fn;
+var _started, _prev, _next, _commit_callbacks, _discard_callbacks, _pending, _blocking_pending, _deferred, _scheduled, _new_effects, _dirty_effects, _maybe_dirty_effects, _skipped_branches, _unskipped_branches, _decrement_queued, _Batch_instances, is_deferred_fn, resolve_fn, process_fn, traverse_fn, find_earlier_batch_fn, merge_fn, defer_effects_fn, commit_fn, unlink_fn;
 var _Batch = class _Batch {
   constructor() {
     __privateAdd(this, _Batch_instances);
@@ -1834,10 +1204,17 @@ var _Batch = class _Batch {
      */
     __privateAdd(this, _deferred, null);
     /**
-     * The root effects that need to be flushed
+     * Effects that were scheduled in this batch but not yet 'resolved' into the
+     * root effects that need to be flushed. Resolving — the upwards traversal that
+     * marks the path to each effect on the shared effect tree (see #resolve) — is
+     * deferred until the batch is processed, so that the markers are created and
+     * consumed within a single traversal. Scheduling into other batches (which can
+     * happen concurrently, e.g. while a batch is committed) can therefore never
+     * observe (and be confused by) this batch's markers.
+     * May contain duplicates — deduplication happens during resolving
      * @type {Effect[]}
      */
-    __privateAdd(this, _roots, []);
+    __privateAdd(this, _scheduled, []);
     /**
      * Effects created while this batch was active.
      * @type {Effect[]}
@@ -1847,12 +1224,12 @@ var _Batch = class _Batch {
      * Deferred effects (which run after async work has completed) that are DIRTY
      * @type {Set<Effect>}
      */
-    __privateAdd(this, _dirty_effects2, /* @__PURE__ */ new Set());
+    __privateAdd(this, _dirty_effects, /* @__PURE__ */ new Set());
     /**
      * Deferred effects that are MAYBE_DIRTY
      * @type {Set<Effect>}
      */
-    __privateAdd(this, _maybe_dirty_effects2, /* @__PURE__ */ new Set());
+    __privateAdd(this, _maybe_dirty_effects, /* @__PURE__ */ new Set());
     /**
      * A map of branches that still exist, but will be destroyed when this batch
      * is committed — we skip over these during `process`.
@@ -2012,10 +1389,10 @@ var _Batch = class _Batch {
    */
   transfer_effects(dirty_effects, maybe_dirty_effects) {
     for (const e of dirty_effects) {
-      __privateGet(this, _dirty_effects2).add(e);
+      __privateGet(this, _dirty_effects).add(e);
     }
     for (const e of maybe_dirty_effects) {
-      __privateGet(this, _maybe_dirty_effects2).add(e);
+      __privateGet(this, _maybe_dirty_effects).add(e);
     }
     dirty_effects.clear();
     maybe_dirty_effects.clear();
@@ -2084,24 +1461,7 @@ var _Batch = class _Batch {
       effect2.b.defer_effect(effect2);
       return;
     }
-    var e = effect2;
-    while (e.parent !== null) {
-      e = e.parent;
-      var flags2 = e.f;
-      if (collected_effects !== null && e === active_effect) {
-        if (async_mode_flag) return;
-        if ((active_reaction === null || (active_reaction.f & DERIVED) === 0) && !legacy_is_updating_store) {
-          return;
-        }
-      }
-      if ((flags2 & (ROOT_EFFECT | BRANCH_EFFECT)) !== 0) {
-        if ((flags2 & CLEAN) === 0) {
-          return;
-        }
-        e.f ^= CLEAN;
-      }
-    }
-    __privateGet(this, _roots).push(e);
+    __privateGet(this, _scheduled).push(effect2);
   }
 };
 _started = new WeakMap();
@@ -2112,10 +1472,10 @@ _discard_callbacks = new WeakMap();
 _pending = new WeakMap();
 _blocking_pending = new WeakMap();
 _deferred = new WeakMap();
-_roots = new WeakMap();
+_scheduled = new WeakMap();
 _new_effects = new WeakMap();
-_dirty_effects2 = new WeakMap();
-_maybe_dirty_effects2 = new WeakMap();
+_dirty_effects = new WeakMap();
+_maybe_dirty_effects = new WeakMap();
 _skipped_branches = new WeakMap();
 _unskipped_branches = new WeakMap();
 _decrement_queued = new WeakMap();
@@ -2138,40 +1498,73 @@ is_deferred_fn = function() {
   }
   return false;
 };
+/**
+ * Convert the effects that were scheduled in this batch into the root effects
+ * that need to be traversed, marking the path to each effect (by clearing the
+ * `CLEAN` flag on ancestor branches) so that the traversal can find them.
+ * This happens right before traversal rather than at scheduling time, so that
+ * the markers left on the (shared) effect tree are created and consumed within
+ * a single traversal — scheduling into other batches can never observe them
+ * @returns {Effect[]}
+ */
+resolve_fn = function() {
+  var roots = [];
+  for (const effect2 of __privateGet(this, _scheduled)) {
+    if ((effect2.f & DESTROYED) !== 0 || (effect2.f & (DIRTY | MAYBE_DIRTY)) === 0) continue;
+    var e = effect2;
+    var covered = false;
+    while (e.parent !== null) {
+      e = e.parent;
+      var flags2 = e.f;
+      if ((flags2 & (ROOT_EFFECT | BRANCH_EFFECT)) !== 0) {
+        if ((flags2 & CLEAN) === 0) {
+          covered = true;
+          break;
+        }
+        e.f ^= CLEAN;
+      }
+    }
+    if (!covered) {
+      roots.push(e);
+    }
+  }
+  __privateSet(this, _scheduled, []);
+  return roots;
+};
 process_fn = function() {
   var _a2, _b, _c;
   __privateSet(this, _started, true);
-  if (flush_count++ > 1e3) {
-    __privateMethod(this, _Batch_instances, unlink_fn).call(this);
-    infinite_loop_guard();
-  }
   if (dev_fallback_default) {
     for (const value of this.current.keys()) {
       source_stacks.add(value);
     }
   }
-  for (const e of __privateGet(this, _dirty_effects2)) {
-    __privateGet(this, _maybe_dirty_effects2).delete(e);
+  for (const e of __privateGet(this, _dirty_effects)) {
+    __privateGet(this, _maybe_dirty_effects).delete(e);
     set_signal_status(e, DIRTY);
     this.schedule(e);
   }
-  for (const e of __privateGet(this, _maybe_dirty_effects2)) {
+  for (const e of __privateGet(this, _maybe_dirty_effects)) {
     set_signal_status(e, MAYBE_DIRTY);
     this.schedule(e);
   }
-  const roots = __privateGet(this, _roots);
-  __privateSet(this, _roots, []);
   this.apply();
   var effects = collected_effects = [];
   var render_effects = [];
   var updates = legacy_updates = [];
-  for (const root7 of roots) {
-    try {
-      __privateMethod(this, _Batch_instances, traverse_fn).call(this, root7, effects, render_effects);
-    } catch (e) {
-      reset_all(root7);
-      if (!__privateMethod(this, _Batch_instances, is_deferred_fn).call(this)) this.discard();
-      throw e;
+  while (__privateGet(this, _scheduled).length > 0) {
+    if (flush_count++ > 1e3) {
+      __privateMethod(this, _Batch_instances, unlink_fn).call(this);
+      infinite_loop_guard();
+    }
+    for (const root4 of __privateMethod(this, _Batch_instances, resolve_fn).call(this)) {
+      try {
+        __privateMethod(this, _Batch_instances, traverse_fn).call(this, root4, effects, render_effects);
+      } catch (e) {
+        reset_all(root4);
+        if (!__privateMethod(this, _Batch_instances, is_deferred_fn).call(this)) this.discard();
+        throw e;
+      }
     }
   }
   current_batch = null;
@@ -2202,8 +1595,8 @@ process_fn = function() {
     __privateMethod(_b = earlier_batch, _Batch_instances, merge_fn).call(_b, this);
     return;
   }
-  __privateGet(this, _dirty_effects2).clear();
-  __privateGet(this, _maybe_dirty_effects2).clear();
+  __privateGet(this, _dirty_effects).clear();
+  __privateGet(this, _maybe_dirty_effects).clear();
   for (const fn of __privateGet(this, _commit_callbacks)) fn(this);
   __privateGet(this, _commit_callbacks).clear();
   previous_batch = this;
@@ -2216,22 +1609,25 @@ process_fn = function() {
     /** @type {unknown} */
     current_batch
   );
-  if (__privateGet(this, _pending) === 0 && (__privateGet(this, _roots).length === 0 || next_batch !== null)) {
+  if (__privateGet(this, _pending) === 0 && (__privateGet(this, _scheduled).length === 0 || next_batch !== null)) {
     __privateMethod(this, _Batch_instances, unlink_fn).call(this);
     if (async_mode_flag) {
       __privateMethod(this, _Batch_instances, commit_fn).call(this);
       current_batch = next_batch;
     }
   }
-  if (__privateGet(this, _roots).length > 0) {
+  if (__privateGet(this, _scheduled).length > 0) {
     if (next_batch !== null) {
-      const batch2 = next_batch;
-      __privateGet(batch2, _roots).push(...__privateGet(this, _roots).filter((r) => !__privateGet(batch2, _roots).includes(r)));
+      for (const e of __privateGet(this, _scheduled)) {
+        __privateGet(next_batch, _scheduled).push(e);
+      }
+      __privateSet(this, _scheduled, []);
     } else {
       next_batch = this;
     }
   }
   if (next_batch !== null) {
+    old_values.clear();
     __privateMethod(_c = next_batch, _Batch_instances, process_fn).call(_c);
   }
 };
@@ -2242,9 +1638,9 @@ process_fn = function() {
  * @param {Effect[]} effects
  * @param {Effect[]} render_effects
  */
-traverse_fn = function(root7, effects, render_effects) {
-  root7.f ^= CLEAN;
-  var effect2 = root7.first;
+traverse_fn = function(root4, effects, render_effects) {
+  root4.f ^= CLEAN;
+  var effect2 = root4.first;
   while (effect2 !== null) {
     var flags2 = effect2.f;
     var is_branch = (flags2 & (BRANCH_EFFECT | ROOT_EFFECT)) !== 0;
@@ -2258,7 +1654,7 @@ traverse_fn = function(root7, effects, render_effects) {
       } else if (async_mode_flag && (flags2 & (RENDER_EFFECT | MANAGED_EFFECT)) !== 0) {
         render_effects.push(effect2);
       } else if (is_dirty(effect2)) {
-        if ((flags2 & BLOCK_EFFECT) !== 0) __privateGet(this, _maybe_dirty_effects2).add(effect2);
+        if ((flags2 & BLOCK_EFFECT) !== 0) __privateGet(this, _maybe_dirty_effects).add(effect2);
         update_effect(effect2);
       }
       var child2 = effect2.first;
@@ -2307,10 +1703,13 @@ merge_fn = function(batch) {
     if (d) deferred2.promise.then(d.resolve).catch(d.reject);
   }
   batch.async_deriveds.clear();
-  this.transfer_effects(__privateGet(batch, _dirty_effects2), __privateGet(batch, _maybe_dirty_effects2));
+  this.transfer_effects(__privateGet(batch, _dirty_effects), __privateGet(batch, _maybe_dirty_effects));
   const mark = (value) => {
     var reactions = value.reactions;
     if (reactions === null) return;
+    if ((value.f & DERIVED) !== 0 && (value.f & (DIRTY | MAYBE_DIRTY)) === 0) {
+      return;
+    }
     for (const reaction of reactions) {
       var flags2 = reaction.f;
       if ((flags2 & DERIVED) !== 0) {
@@ -2324,7 +1723,7 @@ merge_fn = function(batch) {
           reaction
         );
         if (flags2 & (ASYNC | BLOCK_EFFECT) && !this.async_deriveds.has(effect2)) {
-          __privateGet(this, _maybe_dirty_effects2).delete(effect2);
+          __privateGet(this, _maybe_dirty_effects).delete(effect2);
           set_signal_status(effect2, DIRTY);
           this.schedule(effect2);
         }
@@ -2344,11 +1743,11 @@ merge_fn = function(batch) {
  */
 defer_effects_fn = function(effects) {
   for (var i = 0; i < effects.length; i += 1) {
-    defer_effect(effects[i], __privateGet(this, _dirty_effects2), __privateGet(this, _maybe_dirty_effects2));
+    defer_effect(effects[i], __privateGet(this, _dirty_effects), __privateGet(this, _maybe_dirty_effects));
   }
 };
 commit_fn = function() {
-  var _a2;
+  var _a2, _b;
   for (let batch = first_batch; batch !== null; batch = __privateGet(batch, _next)) {
     var is_earlier = batch.id < this.id;
     var sources = [];
@@ -2384,7 +1783,7 @@ commit_fn = function() {
       }
     } else if (sources.length > 0) {
       if (dev_fallback_default && !__privateGet(batch, _decrement_queued)) {
-        invariant(__privateGet(batch, _roots).length === 0, "Batch has scheduled roots");
+        invariant(__privateGet(batch, _scheduled).length === 0, "Batch has scheduled effects");
       }
       if (is_earlier) {
         for (const unskipped of __privateGet(this, _unskipped_branches)) {
@@ -2417,17 +1816,16 @@ commit_fn = function() {
               set_signal_status(effect2, DIRTY);
               batch.schedule(effect2);
             } else {
-              __privateGet(batch, _dirty_effects2).add(effect2);
+              __privateGet(batch, _dirty_effects).add(effect2);
             }
           }
         }
       }
-      if (__privateGet(batch, _roots).length > 0 && !__privateGet(batch, _decrement_queued)) {
+      if (__privateGet(batch, _scheduled).length > 0 && !__privateGet(batch, _decrement_queued)) {
         batch.apply();
-        for (var root7 of __privateGet(batch, _roots)) {
-          __privateMethod(_a2 = batch, _Batch_instances, traverse_fn).call(_a2, root7, [], []);
+        for (var root4 of __privateMethod(_a2 = batch, _Batch_instances, resolve_fn).call(_a2)) {
+          __privateMethod(_b = batch, _Batch_instances, traverse_fn).call(_b, root4, [], []);
         }
-        __privateSet(batch, _roots, []);
       }
       batch.deactivate();
     }
@@ -2452,13 +1850,13 @@ unlink_fn = function() {
 var Batch = _Batch;
 function flushSync(fn) {
   var was_flushing_sync = is_flushing_sync;
+  var prev_previous_batch = previous_batch;
+  previous_batch = null;
   is_flushing_sync = true;
   try {
     var result;
     if (fn) {
-      if (current_batch !== null && !current_batch.is_fork) {
-        current_batch.flush();
-      }
+      flushSync();
       result = fn();
     }
     while (true) {
@@ -2473,6 +1871,7 @@ function flushSync(fn) {
     }
   } finally {
     is_flushing_sync = was_flushing_sync;
+    previous_batch = prev_previous_batch;
   }
 }
 function infinite_loop_guard() {
@@ -2623,7 +2022,7 @@ function reset_all(effect2) {
   }
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/reactivity/sources.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/reactivity/sources.js
 var eager_effects = /* @__PURE__ */ new Set();
 var old_values = /* @__PURE__ */ new Map();
 function set_eager_effects(v) {
@@ -2685,9 +2084,15 @@ function set(source2, value, should_proxy = false) {
   }
   return internal_set(source2, new_value, legacy_updates);
 }
+var seen = null;
+var count_deps = 0;
 function internal_set(source2, value, updated_during_traversal = null) {
   if (!source2.equals(value)) {
-    old_values.set(source2, is_destroying_effect ? value : source2.v);
+    if (is_destroying_effect) {
+      old_values.set(source2, value);
+    } else if (!old_values.has(source2)) {
+      old_values.set(source2, source2.v);
+    }
     var batch = Batch.ensure();
     batch.capture(source2, value);
     if (dev_fallback_default) {
@@ -2727,7 +2132,10 @@ function internal_set(source2, value, updated_during_traversal = null) {
       }
     }
     source2.wv = increment_write_version();
+    seen = null;
+    count_deps = 0;
     mark_reactions(source2, DIRTY, updated_during_traversal);
+    seen = null;
     if (is_runes() && active_effect !== null && (active_effect.f & CLEAN) !== 0 && (active_effect.f & (BRANCH_EFFECT | ROOT_EFFECT)) === 0) {
       if (untracked_writes === null) {
         set_untracked_writes([source2]);
@@ -2767,6 +2175,12 @@ function mark_reactions(signal, status, updated_during_traversal) {
   if (reactions === null) return;
   var runes = is_runes();
   var length = reactions.length;
+  count_deps += length;
+  if (count_deps > 1e5 && seen === null) seen = /* @__PURE__ */ new Set();
+  if (seen !== null) {
+    if (seen.has(signal)) return;
+    seen.add(signal);
+  }
   for (var i = 0; i < length; i++) {
     var reaction = reactions[i];
     var flags2 = reaction.f;
@@ -2786,12 +2200,7 @@ function mark_reactions(signal, status, updated_during_traversal) {
         reaction
       );
       batch_values?.delete(derived2);
-      if ((flags2 & WAS_MARKED) === 0) {
-        if (flags2 & CONNECTED && (active_effect === null || (active_effect.f & REACTION_IS_UPDATING) === 0)) {
-          reaction.f |= WAS_MARKED;
-        }
-        mark_reactions(derived2, MAYBE_DIRTY, updated_during_traversal);
-      }
+      mark_reactions(derived2, MAYBE_DIRTY, updated_during_traversal);
     } else if (not_dirty) {
       var effect2 = (
         /** @type {Effect} */
@@ -2809,10 +2218,10 @@ function mark_reactions(signal, status, updated_during_traversal) {
   }
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/proxy.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/proxy.js
 var regex_is_valid_identifier = /^[a-zA-Z_$][a-zA-Z_$0-9]*$/;
 function proxy(value) {
-  if (typeof value !== "object" || value === null || STATE_SYMBOL in value) {
+  if (typeof value !== "object" || value === null || STATE_SYMBOL in value || COMPONENT_SYMBOL in value) {
     return value;
   }
   const prototype = get_prototype_of(value);
@@ -2924,20 +2333,23 @@ function proxy(value) {
           sources.set(prop2, s);
         }
         if (s !== void 0) {
-          var v = get2(s);
+          var v = get(s);
           return v === UNINITIALIZED ? void 0 : v;
         }
         return Reflect.get(target, prop2, receiver);
       },
       getOwnPropertyDescriptor(target, prop2) {
+        this.has?.(target, prop2);
         var descriptor = Reflect.getOwnPropertyDescriptor(target, prop2);
-        if (descriptor && "value" in descriptor) {
-          var s = sources.get(prop2);
-          if (s) descriptor.value = get2(s);
-        } else if (descriptor === void 0) {
-          var source2 = sources.get(prop2);
-          var value2 = source2?.v;
-          if (source2 !== void 0 && value2 !== UNINITIALIZED) {
+        var s = sources.get(prop2);
+        if (s !== void 0) {
+          var value2 = get(s);
+          if (value2 === UNINITIALIZED) {
+            return void 0;
+          }
+          if (descriptor && "value" in descriptor) {
+            descriptor.value = value2;
+          } else {
             return {
               enumerable: true,
               configurable: true,
@@ -2966,7 +2378,7 @@ function proxy(value) {
             });
             sources.set(prop2, s);
           }
-          var value2 = get2(s);
+          var value2 = get(s);
           if (value2 === UNINITIALIZED) {
             return false;
           }
@@ -3025,7 +2437,7 @@ function proxy(value) {
         return true;
       },
       ownKeys(target) {
-        get2(version);
+        get(version);
         var own_keys = Reflect.ownKeys(target).filter((key3) => {
           var source3 = sources.get(key3);
           return source3 === void 0 || source3.v !== UNINITIALIZED;
@@ -3056,9 +2468,6 @@ function get_proxied_value(value) {
   } catch {
   }
   return value;
-}
-function is(a, b) {
-  return Object.is(get_proxied_value(a), get_proxied_value(b));
 }
 var ARRAY_MUTATING_METHODS = /* @__PURE__ */ new Set([
   "copyWithin",
@@ -3091,7 +2500,7 @@ function inspectable_array(array) {
   });
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dev/equality.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/dev/equality.js
 function init_array_prototype_warnings() {
   const array_prototype2 = Array.prototype;
   const cleanup = Array.__svelte_cleanup;
@@ -3142,7 +2551,7 @@ function init_array_prototype_warnings() {
   };
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/operations.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/dom/operations.js
 var $window;
 var $document;
 var is_firefox;
@@ -3233,6 +2642,14 @@ function first_child(node, is_text = false) {
   }
   return hydrate_node;
 }
+function only_child(node, is_text = false) {
+  if (!hydrating) {
+    return /* @__PURE__ */ get_first_child(node);
+  }
+  var first = child(node, is_text);
+  reset(node);
+  return first;
+}
 function sibling(node, count = 1, is_text = false) {
   let next_sibling = hydrating ? hydrate_node : node;
   var last_sibling;
@@ -3303,63 +2720,83 @@ function merge_text_nodes(text2) {
   }
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/elements/misc.js
-var listening_to_form_reset = false;
-function add_form_reset_listener() {
-  if (!listening_to_form_reset) {
-    listening_to_form_reset = true;
-    document.addEventListener(
-      "reset",
-      (evt) => {
-        Promise.resolve().then(() => {
-          if (!evt.defaultPrevented) {
-            for (
-              const e of
-              /**@type {HTMLFormElement} */
-              evt.target.elements
-            ) {
-              e[FORM_RESET_HANDLER]?.();
-            }
-          }
-        });
-      },
-      // In the capture phase to guarantee we get noticed of it (no possibility of stopPropagation)
-      { capture: true }
-    );
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/error-handling.js
+var adjustments = /* @__PURE__ */ new WeakMap();
+function handle_error(error) {
+  var effect2 = active_effect;
+  if (effect2 === null) {
+    active_reaction.f |= ERROR_VALUE;
+    return error;
+  }
+  if (dev_fallback_default && error instanceof Error && !adjustments.has(error)) {
+    adjustments.set(error, get_adjustments(error, effect2));
+  }
+  if ((effect2.f & REACTION_RAN) === 0 && (effect2.f & EFFECT) === 0) {
+    if (dev_fallback_default && !effect2.parent && error instanceof Error) {
+      apply_adjustments(error);
+    }
+    throw error;
+  }
+  invoke_error_boundary(error, effect2);
+}
+function invoke_error_boundary(error, effect2) {
+  if (error === HYDRATION_ERROR) {
+    throw error;
+  }
+  if (effect2 !== null && (effect2.f & DESTROYED) !== 0) {
+    return;
+  }
+  while (effect2 !== null) {
+    if ((effect2.f & BOUNDARY_EFFECT) !== 0 && (effect2.f & (DESTROYED | DESTROYING)) === 0) {
+      if ((effect2.f & REACTION_RAN) === 0) {
+        throw error;
+      }
+      try {
+        effect2.b.error(error);
+        return;
+      } catch (e) {
+        error = e;
+      }
+    }
+    effect2 = effect2.parent;
+  }
+  if (dev_fallback_default && error instanceof Error) {
+    apply_adjustments(error);
+  }
+  throw error;
+}
+function get_adjustments(error, effect2) {
+  const message_descriptor = get_descriptor(error, "message");
+  if (message_descriptor && !message_descriptor.configurable) return;
+  var indent = is_firefox ? "  " : "	";
+  var component_stack = `
+${indent}in ${effect2.fn?.name || "<unknown>"}`;
+  var context = effect2.ctx;
+  while (context !== null) {
+    component_stack += `
+${indent}in ${context.function?.[FILENAME].split("/").pop()}`;
+    context = context.p;
+  }
+  return {
+    message: error.message + `
+${component_stack}
+`,
+    stack: error.stack?.split("\n").filter((line) => !line.includes("svelte/src/internal")).join("\n")
+  };
+}
+function apply_adjustments(error) {
+  const adjusted = adjustments.get(error);
+  if (adjusted) {
+    define_property(error, "message", {
+      value: adjusted.message
+    });
+    define_property(error, "stack", {
+      value: adjusted.stack
+    });
   }
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/elements/bindings/shared.js
-function without_reactive_context(fn) {
-  var previous_reaction = active_reaction;
-  var previous_effect = active_effect;
-  set_active_reaction(null);
-  set_active_effect(null);
-  try {
-    return fn();
-  } finally {
-    set_active_reaction(previous_reaction);
-    set_active_effect(previous_effect);
-  }
-}
-function listen_to_event_and_reset_event(element2, event2, handler, on_reset = handler) {
-  element2.addEventListener(event2, () => without_reactive_context(handler));
-  const prev = (
-    /** @type {any} */
-    element2[FORM_RESET_HANDLER]
-  );
-  if (prev) {
-    element2[FORM_RESET_HANDLER] = () => {
-      prev();
-      on_reset(true);
-    };
-  } else {
-    element2[FORM_RESET_HANDLER] = () => on_reset(true);
-  }
-  add_form_reset_listener();
-}
-
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/reactivity/effects.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/reactivity/effects.js
 function validate_effect(rune) {
   if (active_effect === null) {
     if (active_reaction === null) {
@@ -3518,7 +2955,7 @@ function render_effect(fn, flags2 = 0) {
 function template_effect(fn, sync = [], async2 = [], blockers = []) {
   flatten(blockers, sync, async2, (values) => {
     create_effect(RENDER_EFFECT, () => {
-      fn(...values.map(get2));
+      fn(...values.map(get));
     });
   });
 }
@@ -3541,6 +2978,8 @@ function execute_effect_teardown(effect2) {
     set_active_reaction(null);
     try {
       teardown2.call(null);
+    } catch (error) {
+      invoke_error_boundary(error, effect2.parent);
     } finally {
       set_is_destroying_effect(previously_destroying_effect);
       set_active_reaction(previous_reaction);
@@ -3627,6 +3066,7 @@ function unlink_effect(effect2) {
 }
 function pause_effect(effect2, callback, destroy = true) {
   var transitions = [];
+  effect2.f |= PAUSED;
   pause_children(effect2, transitions, true);
   var fn = () => {
     if (destroy) destroy_effect(effect2);
@@ -3667,9 +3107,11 @@ function pause_children(effect2, transitions, local) {
   }
 }
 function resume_effect(effect2) {
+  effect2.f &= ~PAUSED;
   resume_children(effect2, true);
 }
 function resume_children(effect2, local) {
+  if ((effect2.f & PAUSED) !== 0) return;
   if ((effect2.f & INERT) === 0) return;
   effect2.f ^= INERT;
   if ((effect2.f & CLEAN) === 0) {
@@ -3703,11 +3145,10 @@ function move_effect(effect2, fragment) {
   }
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/legacy.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/legacy.js
 var captured_signals = null;
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/runtime.js
-var is_updating_effect = false;
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/runtime.js
 var is_destroying_effect = false;
 function set_is_destroying_effect(value) {
   is_destroying_effect = value;
@@ -3723,7 +3164,7 @@ function set_active_effect(effect2) {
 }
 var current_sources = null;
 function push_reaction_value(value) {
-  if (active_reaction !== null && (!async_mode_flag || (active_reaction.f & DERIVED) !== 0)) {
+  if (active_reaction !== null && (!async_mode_flag && (active_reaction.f & REACTION_IS_UPDATING) !== 0 || (active_reaction.f & DERIVED) !== 0)) {
     (current_sources ?? (current_sources = /* @__PURE__ */ new Set())).add(value);
   }
 }
@@ -3746,9 +3187,6 @@ function is_dirty(reaction) {
   var flags2 = reaction.f;
   if ((flags2 & DIRTY) !== 0) {
     return true;
-  }
-  if (flags2 & DERIVED) {
-    reaction.f &= ~WAS_MARKED;
   }
   if ((flags2 & MAYBE_DIRTY) !== 0) {
     var dependencies = (
@@ -3779,7 +3217,7 @@ function is_dirty(reaction) {
   }
   return false;
 }
-function schedule_possible_effect_self_invalidation(signal, effect2, root7 = true) {
+function schedule_possible_effect_self_invalidation(signal, effect2, root4 = true) {
   var reactions = signal.reactions;
   if (reactions === null) return;
   if (!async_mode_flag && current_sources !== null && current_sources.has(signal)) {
@@ -3795,7 +3233,7 @@ function schedule_possible_effect_self_invalidation(signal, effect2, root7 = tru
         false
       );
     } else if (effect2 === reaction) {
-      if (root7) {
+      if (root4) {
         set_signal_status(reaction, DIRTY);
       } else if ((reaction.f & CLEAN) !== 0) {
         set_signal_status(reaction, MAYBE_DIRTY);
@@ -3808,7 +3246,6 @@ function schedule_possible_effect_self_invalidation(signal, effect2, root7 = tru
   }
 }
 function update_reaction(reaction) {
-  var _a2;
   var previous_deps = new_deps;
   var previous_skipped_deps = skipped_deps;
   var previous_untracked_writes = untracked_writes;
@@ -3841,32 +3278,9 @@ function update_reaction(reaction) {
     );
     var result = fn();
     reaction.f |= REACTION_RAN;
-    var deps = reaction.deps;
-    var is_fork = current_batch?.is_fork;
-    if (new_deps !== null) {
-      var i;
-      if (!is_fork) {
-        remove_reactions(reaction, skipped_deps);
-      }
-      if (deps !== null && skipped_deps > 0) {
-        deps.length = skipped_deps + new_deps.length;
-        for (i = 0; i < new_deps.length; i++) {
-          deps[skipped_deps + i] = new_deps[i];
-        }
-      } else {
-        reaction.deps = deps = new_deps;
-      }
-      if (effect_tracking() && (reaction.f & CONNECTED) !== 0) {
-        for (i = skipped_deps; i < deps.length; i++) {
-          ((_a2 = deps[i]).reactions ?? (_a2.reactions = [])).push(reaction);
-        }
-      }
-    } else if (!is_fork && deps !== null && skipped_deps < deps.length) {
-      remove_reactions(reaction, skipped_deps);
-      deps.length = skipped_deps;
-    }
+    var deps = update_dependencies(reaction);
     if (is_runes() && untracked_writes !== null && !untracking && deps !== null && (reaction.f & (DERIVED | MAYBE_DIRTY | DIRTY)) === 0) {
-      for (i = 0; i < /** @type {Source[]} */
+      for (var i = 0; i < /** @type {Source[]} */
       untracked_writes.length; i++) {
         schedule_possible_effect_self_invalidation(
           untracked_writes[i],
@@ -3901,6 +3315,7 @@ function update_reaction(reaction) {
     }
     return result;
   } catch (error) {
+    update_dependencies(reaction);
     return handle_error(error);
   } finally {
     reaction.f ^= REACTION_IS_UPDATING;
@@ -3913,6 +3328,34 @@ function update_reaction(reaction) {
     untracking = previous_untracking;
     update_version = previous_update_version;
   }
+}
+function update_dependencies(reaction) {
+  var _a2;
+  var deps = reaction.deps;
+  var is_fork = current_batch?.is_fork;
+  if (new_deps !== null) {
+    var i;
+    if (!is_fork) {
+      remove_reactions(reaction, skipped_deps);
+    }
+    if (deps !== null && skipped_deps > 0) {
+      deps.length = skipped_deps + new_deps.length;
+      for (i = 0; i < new_deps.length; i++) {
+        deps[skipped_deps + i] = new_deps[i];
+      }
+    } else {
+      reaction.deps = deps = new_deps;
+    }
+    if (effect_tracking() && (reaction.f & CONNECTED) !== 0) {
+      for (i = skipped_deps; i < deps.length; i++) {
+        ((_a2 = deps[i]).reactions ?? (_a2.reactions = [])).push(reaction);
+      }
+    }
+  } else if (!is_fork && deps !== null && skipped_deps < deps.length) {
+    remove_reactions(reaction, skipped_deps);
+    deps.length = skipped_deps;
+  }
+  return deps;
 }
 function remove_reaction(signal, dependency) {
   let reactions = dependency.reactions;
@@ -3938,10 +3381,16 @@ function remove_reaction(signal, dependency) {
     );
     if ((derived2.f & CONNECTED) !== 0) {
       derived2.f ^= CONNECTED;
-      derived2.f &= ~WAS_MARKED;
     }
     if (derived2.v !== UNINITIALIZED) {
       update_derived_status(derived2);
+    }
+    if (derived2.ac !== null) {
+      without_reactive_context(() => {
+        derived2.ac.abort(STALE_REACTION);
+        derived2.ac = null;
+        set_signal_status(derived2, DIRTY);
+      });
     }
     freeze_derived_effects(derived2);
     remove_reactions(derived2, 0);
@@ -3961,9 +3410,7 @@ function update_effect(effect2) {
   }
   set_signal_status(effect2, CLEAN);
   var previous_effect = active_effect;
-  var was_updating_effect = is_updating_effect;
   active_effect = effect2;
-  is_updating_effect = true;
   if (dev_fallback_default) {
     var previous_component_fn = dev_current_component_function;
     set_dev_current_component_function(effect2.component_function);
@@ -3992,7 +3439,6 @@ function update_effect(effect2) {
       }
     }
   } finally {
-    is_updating_effect = was_updating_effect;
     active_effect = previous_effect;
     if (dev_fallback_default) {
       set_dev_current_component_function(previous_component_fn);
@@ -4010,7 +3456,7 @@ async function tick() {
   await Promise.resolve();
   flushSync();
 }
-function get2(signal) {
+function get(signal) {
   var flags2 = signal.f;
   var is_derived = (flags2 & DERIVED) !== 0;
   captured_signals?.add(signal);
@@ -4092,7 +3538,7 @@ function get2(signal) {
       old_values.set(derived2, value);
       return value;
     }
-    var should_connect = (derived2.f & CONNECTED) === 0 && !untracking && active_reaction !== null && (is_updating_effect || (active_reaction.f & CONNECTED) !== 0);
+    var should_connect = (derived2.f & CONNECTED) === 0 && !untracking && active_reaction !== null && (active_reaction.f & CONNECTED) !== 0;
     var is_new = (derived2.f & REACTION_RAN) === 0;
     if (is_dirty(derived2)) {
       if (should_connect) {
@@ -4117,7 +3563,12 @@ function reconnect(derived2) {
   derived2.f |= CONNECTED;
   if (derived2.deps === null) return;
   for (const dep of derived2.deps) {
-    (dep.reactions ?? (dep.reactions = [])).push(derived2);
+    var reactions = dep.reactions;
+    if (reactions === null) {
+      dep.reactions = [derived2];
+    } else if (!includes.call(reactions, derived2)) {
+      reactions.push(derived2);
+    }
     if ((dep.f & DERIVED) !== 0 && (dep.f & CONNECTED) === 0) {
       unfreeze_derived_effects(
         /** @type {Derived} */
@@ -4199,7 +3650,7 @@ function deep_read(value, visited = /* @__PURE__ */ new Set()) {
   }
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/elements/events.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/dom/elements/events.js
 var event_symbol = /* @__PURE__ */ Symbol("events");
 var all_registered_events = /* @__PURE__ */ new Set();
 var root_event_handles = /* @__PURE__ */ new Set();
@@ -4215,8 +3666,11 @@ function create_event(event_name, dom, handler, options = {}) {
     }
   }
   if (event_name.startsWith("pointer") || event_name.startsWith("touch") || event_name === "wheel") {
+    target_handler.__removed = false;
     queue_micro_task(() => {
-      dom.addEventListener(event_name, target_handler, options);
+      if (!target_handler.__removed) {
+        dom.addEventListener(event_name, target_handler, options);
+      }
     });
   } else {
     dom.addEventListener(event_name, target_handler, options);
@@ -4231,6 +3685,7 @@ function event(event_name, dom, handler, capture2, passive2) {
   dom === document || // Firefox has quirky behavior, it can happen that we still get "canplay" events when the element is already removed
   dom instanceof HTMLMediaElement) {
     teardown(() => {
+      target_handler.__removed = true;
       dom.removeEventListener(event_name, target_handler, options);
     });
   }
@@ -4247,6 +3702,7 @@ function delegate(events) {
   }
 }
 var last_propagated_event = null;
+var last_propagated_event_clear_scheduled = false;
 function handle_event_propagation(event2) {
   var handler_element = this;
   var owner_document = (
@@ -4260,6 +3716,13 @@ function handle_event_propagation(event2) {
     path[0] || event2.target
   );
   last_propagated_event = event2;
+  if (!last_propagated_event_clear_scheduled) {
+    last_propagated_event_clear_scheduled = true;
+    setTimeout(() => {
+      last_propagated_event_clear_scheduled = false;
+      last_propagated_event = null;
+    });
+  }
   var path_idx = 0;
   var handled_at = last_propagated_event === event2 && event2[event_symbol];
   if (handled_at) {
@@ -4333,7 +3796,7 @@ function handle_event_propagation(event2) {
   }
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/reconciler.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/dom/reconciler.js
 var policy = (
   // We gotta write it like this because after downleveling the pure comment may end up in the wrong location
   globalThis?.window?.trustedTypes && /* @__PURE__ */ globalThis.window.trustedTypes.createPolicy("svelte-trusted-html", {
@@ -4355,7 +3818,7 @@ function create_fragment_from_html(html2) {
   return elem.content;
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/template.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/dom/template.js
 function assign_nodes(start, end) {
   var effect2 = (
     /** @type {Effect} */
@@ -4381,24 +3844,24 @@ function from_html(content, flags2) {
       if (!is_fragment) node = /** @type {TemplateNode} */
       get_first_child(node);
     }
-    var clone2 = (
+    var clone = (
       /** @type {TemplateNode} */
       use_import_node || is_firefox ? document.importNode(node, true) : node.cloneNode(true)
     );
     if (is_fragment) {
       var start = (
         /** @type {TemplateNode} */
-        get_first_child(clone2)
+        get_first_child(clone)
       );
       var end = (
         /** @type {TemplateNode} */
-        clone2.lastChild
+        clone.lastChild
       );
       assign_nodes(start, end);
     } else {
-      assign_nodes(clone2, clone2);
+      assign_nodes(clone, clone);
     }
-    return clone2;
+    return clone;
   };
 }
 function append(anchor, dom) {
@@ -4422,7 +3885,7 @@ function append(anchor, dom) {
   );
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/utils.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/utils.js
 var DOM_BOOLEAN_ATTRIBUTES = [
   "allowfullscreen",
   "async",
@@ -4504,7 +3967,500 @@ var RUNES = (
   ]
 );
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/render.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/reactivity/create-subscriber.js
+function createSubscriber(start) {
+  let subscribers = 0;
+  let version = source(0);
+  let stop;
+  if (dev_fallback_default) {
+    tag(version, "createSubscriber version");
+  }
+  return () => {
+    if (effect_tracking()) {
+      get(version);
+      render_effect(() => {
+        if (subscribers === 0) {
+          stop = untrack(() => start(() => increment(version)));
+        }
+        subscribers += 1;
+        return () => {
+          queue_micro_task(() => {
+            subscribers -= 1;
+            if (subscribers === 0) {
+              stop?.();
+              stop = void 0;
+              increment(version);
+            }
+          });
+        };
+      });
+    }
+  };
+}
+
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/dom/blocks/boundary.js
+var flags = EFFECT_TRANSPARENT | EFFECT_PRESERVED;
+function boundary(node, props, children, transform_error) {
+  new Boundary(node, props, children, transform_error);
+}
+var _anchor, _hydrate_open, _props, _children, _effect, _main_effect, _pending_effect, _failed_effect, _offscreen_fragment, _local_pending_count, _pending_count, _pending_count_update_queued, _dirty_effects2, _maybe_dirty_effects2, _effect_pending, _effect_pending_subscriber, _Boundary_instances, hydrate_resolved_content_fn, hydrate_failed_content_fn, create_reset_fn, is_destroyed_fn, hydrate_pending_content_fn, render_fn, resolve_fn2, run_fn, update_pending_count_fn, handle_error_fn;
+var Boundary = class {
+  /**
+   * @param {TemplateNode} node
+   * @param {BoundaryProps} props
+   * @param {((anchor: Node) => void)} children
+   * @param {((error: unknown) => unknown) | undefined} [transform_error]
+   */
+  constructor(node, props, children, transform_error) {
+    __privateAdd(this, _Boundary_instances);
+    /** @type {Boundary | null} */
+    __publicField(this, "parent");
+    __publicField(this, "is_pending", false);
+    /**
+     * API-level transformError transform function. Transforms errors before they reach the `failed` snippet.
+     * Inherited from parent boundary, or defaults to identity.
+     * @type {(error: unknown) => unknown}
+     */
+    __publicField(this, "transform_error");
+    /** @type {TemplateNode} */
+    __privateAdd(this, _anchor);
+    /** @type {TemplateNode | null} */
+    __privateAdd(this, _hydrate_open, hydrating ? hydrate_node : null);
+    /** @type {BoundaryProps} */
+    __privateAdd(this, _props);
+    /** @type {((anchor: Node) => void)} */
+    __privateAdd(this, _children);
+    /** @type {Effect} */
+    __privateAdd(this, _effect);
+    /** @type {Effect | null} */
+    __privateAdd(this, _main_effect, null);
+    /** @type {Effect | null} */
+    __privateAdd(this, _pending_effect, null);
+    /** @type {Effect | null} */
+    __privateAdd(this, _failed_effect, null);
+    /** @type {DocumentFragment | null} */
+    __privateAdd(this, _offscreen_fragment, null);
+    __privateAdd(this, _local_pending_count, 0);
+    __privateAdd(this, _pending_count, 0);
+    __privateAdd(this, _pending_count_update_queued, false);
+    /** @type {Set<Effect>} */
+    __privateAdd(this, _dirty_effects2, /* @__PURE__ */ new Set());
+    /** @type {Set<Effect>} */
+    __privateAdd(this, _maybe_dirty_effects2, /* @__PURE__ */ new Set());
+    /**
+     * A source containing the number of pending async deriveds/expressions.
+     * Only created if `$effect.pending()` is used inside the boundary,
+     * otherwise updating the source results in needless `Batch.ensure()`
+     * calls followed by no-op flushes
+     * @type {Source<number> | null}
+     */
+    __privateAdd(this, _effect_pending, null);
+    __privateAdd(this, _effect_pending_subscriber, createSubscriber(() => {
+      __privateSet(this, _effect_pending, source(__privateGet(this, _local_pending_count)));
+      if (dev_fallback_default) {
+        tag(__privateGet(this, _effect_pending), "$effect.pending()");
+      }
+      return () => {
+        __privateSet(this, _effect_pending, null);
+      };
+    }));
+    __privateSet(this, _anchor, node);
+    __privateSet(this, _props, props);
+    __privateSet(this, _children, (anchor) => {
+      var effect2 = (
+        /** @type {Effect} */
+        active_effect
+      );
+      effect2.b = this;
+      effect2.f |= BOUNDARY_EFFECT;
+      children(anchor);
+    });
+    this.parent = /** @type {Effect} */
+    active_effect.b;
+    this.transform_error = transform_error ?? this.parent?.transform_error ?? ((e) => e);
+    __privateSet(this, _effect, block(() => {
+      if (hydrating) {
+        const comment_data = read_hydration_instruction(
+          /** @type {TemplateNode} */
+          __privateGet(this, _hydrate_open)
+        );
+        hydrate_next();
+        const server_rendered_pending = comment_data === HYDRATION_START_ELSE;
+        const server_rendered_failed = comment_data.startsWith(HYDRATION_START_FAILED);
+        if (server_rendered_failed) {
+          const serialized_error = JSON.parse(comment_data.slice(HYDRATION_START_FAILED.length));
+          __privateMethod(this, _Boundary_instances, hydrate_failed_content_fn).call(this, serialized_error);
+        } else if (server_rendered_pending) {
+          __privateMethod(this, _Boundary_instances, hydrate_pending_content_fn).call(this);
+        } else {
+          __privateMethod(this, _Boundary_instances, hydrate_resolved_content_fn).call(this);
+        }
+      } else {
+        __privateMethod(this, _Boundary_instances, render_fn).call(this);
+      }
+    }, flags));
+    if (hydrating) {
+      __privateSet(this, _anchor, hydrate_node);
+    }
+  }
+  /**
+   * Defer an effect inside a pending boundary until the boundary resolves
+   * @param {Effect} effect
+   */
+  defer_effect(effect2) {
+    defer_effect(effect2, __privateGet(this, _dirty_effects2), __privateGet(this, _maybe_dirty_effects2));
+  }
+  /**
+   * Returns `false` if the effect exists inside a boundary whose pending snippet is shown
+   * @returns {boolean}
+   */
+  is_rendered() {
+    return !this.is_pending && (!this.parent || this.parent.is_rendered());
+  }
+  has_pending_snippet() {
+    return !!__privateGet(this, _props).pending;
+  }
+  /**
+   * Update the source that powers `$effect.pending()` inside this boundary,
+   * and controls when the current `pending` snippet (if any) is removed.
+   * Do not call from inside the class
+   * @param {1 | -1} d
+   * @param {Batch} batch
+   */
+  update_pending_count(d, batch) {
+    __privateMethod(this, _Boundary_instances, update_pending_count_fn).call(this, d, batch);
+    __privateSet(this, _local_pending_count, __privateGet(this, _local_pending_count) + d);
+    if (!__privateGet(this, _effect_pending) || __privateGet(this, _pending_count_update_queued)) return;
+    __privateSet(this, _pending_count_update_queued, true);
+    queue_micro_task(() => {
+      __privateSet(this, _pending_count_update_queued, false);
+      if (__privateGet(this, _effect_pending)) {
+        internal_set(__privateGet(this, _effect_pending), __privateGet(this, _local_pending_count));
+      }
+    });
+  }
+  get_effect_pending() {
+    __privateGet(this, _effect_pending_subscriber).call(this);
+    return get(
+      /** @type {Source<number>} */
+      __privateGet(this, _effect_pending)
+    );
+  }
+  /** @param {unknown} error */
+  error(error) {
+    if (error === HYDRATION_ERROR) {
+      throw error;
+    }
+    if (!__privateGet(this, _props).onerror && !__privateGet(this, _props).failed) {
+      throw error;
+    }
+    if (current_batch?.is_fork) {
+      if (__privateGet(this, _main_effect)) current_batch.skip_effect(__privateGet(this, _main_effect));
+      if (__privateGet(this, _pending_effect)) current_batch.skip_effect(__privateGet(this, _pending_effect));
+      if (__privateGet(this, _failed_effect)) current_batch.skip_effect(__privateGet(this, _failed_effect));
+      current_batch.oncommit(() => {
+        if (!__privateMethod(this, _Boundary_instances, is_destroyed_fn).call(this)) __privateMethod(this, _Boundary_instances, handle_error_fn).call(this, error);
+      });
+    } else {
+      __privateMethod(this, _Boundary_instances, handle_error_fn).call(this, error);
+    }
+  }
+};
+_anchor = new WeakMap();
+_hydrate_open = new WeakMap();
+_props = new WeakMap();
+_children = new WeakMap();
+_effect = new WeakMap();
+_main_effect = new WeakMap();
+_pending_effect = new WeakMap();
+_failed_effect = new WeakMap();
+_offscreen_fragment = new WeakMap();
+_local_pending_count = new WeakMap();
+_pending_count = new WeakMap();
+_pending_count_update_queued = new WeakMap();
+_dirty_effects2 = new WeakMap();
+_maybe_dirty_effects2 = new WeakMap();
+_effect_pending = new WeakMap();
+_effect_pending_subscriber = new WeakMap();
+_Boundary_instances = new WeakSet();
+hydrate_resolved_content_fn = function() {
+  try {
+    __privateSet(this, _main_effect, branch(() => __privateGet(this, _children).call(this, __privateGet(this, _anchor))));
+  } catch (error) {
+    this.error(error);
+  }
+};
+/**
+ * @param {unknown} error The deserialized error from the server's hydration comment
+ */
+hydrate_failed_content_fn = function(error) {
+  const failed = __privateGet(this, _props).failed;
+  const { reset: reset2, invoke_onerror } = __privateMethod(this, _Boundary_instances, create_reset_fn).call(this, error);
+  queue_micro_task(invoke_onerror);
+  if (!failed) return;
+  __privateSet(this, _failed_effect, branch(() => {
+    failed(
+      __privateGet(this, _anchor),
+      () => error,
+      () => reset2
+    );
+  }));
+};
+/**
+ * Creates the `reset` function for a failed boundary, along with a function
+ * that invokes `onerror` with it (if provided)
+ * @param {unknown} error
+ * @returns {{ reset: () => void, invoke_onerror: () => void }}
+ */
+create_reset_fn = function(error) {
+  var did_reset = false;
+  var calling_on_error = false;
+  const reset2 = () => {
+    if (__privateMethod(this, _Boundary_instances, is_destroyed_fn).call(this)) return;
+    if (did_reset) {
+      svelte_boundary_reset_noop();
+      return;
+    }
+    did_reset = true;
+    if (calling_on_error) {
+      svelte_boundary_reset_onerror();
+    }
+    if (__privateGet(this, _failed_effect) !== null) {
+      pause_effect(__privateGet(this, _failed_effect), () => {
+        __privateSet(this, _failed_effect, null);
+      });
+    }
+    __privateMethod(this, _Boundary_instances, run_fn).call(this, () => {
+      __privateMethod(this, _Boundary_instances, render_fn).call(this);
+    });
+  };
+  const invoke_onerror = () => {
+    if (__privateMethod(this, _Boundary_instances, is_destroyed_fn).call(this)) return;
+    try {
+      calling_on_error = true;
+      __privateGet(this, _props).onerror?.(error, reset2);
+      calling_on_error = false;
+    } catch (err) {
+      invoke_error_boundary(err, __privateGet(this, _effect) && __privateGet(this, _effect).parent);
+    }
+  };
+  return { reset: reset2, invoke_onerror };
+};
+is_destroyed_fn = function() {
+  return (__privateGet(this, _effect).f & (DESTROYED | DESTROYING)) !== 0;
+};
+hydrate_pending_content_fn = function() {
+  const pending3 = __privateGet(this, _props).pending;
+  if (!pending3) return;
+  this.is_pending = true;
+  __privateSet(this, _pending_effect, branch(() => pending3(__privateGet(this, _anchor))));
+  queue_micro_task(() => {
+    if (__privateMethod(this, _Boundary_instances, is_destroyed_fn).call(this)) return;
+    var fragment = __privateSet(this, _offscreen_fragment, document.createDocumentFragment());
+    var anchor = create_text();
+    var handled = false;
+    fragment.append(anchor);
+    __privateSet(this, _main_effect, __privateMethod(this, _Boundary_instances, run_fn).call(this, () => {
+      try {
+        return branch(() => __privateGet(this, _children).call(this, anchor));
+      } catch (error) {
+        try {
+          this.error(error);
+          handled = true;
+        } catch (error2) {
+          invoke_error_boundary(error2, __privateGet(this, _effect).parent);
+        }
+        return null;
+      }
+    }));
+    if (__privateGet(this, _main_effect) === null) {
+      __privateSet(this, _offscreen_fragment, null);
+      if (handled) __privateMethod(this, _Boundary_instances, resolve_fn2).call(
+        this,
+        /** @type {Batch} */
+        current_batch
+      );
+      return;
+    }
+    if (__privateGet(this, _pending_count) === 0) {
+      __privateGet(this, _anchor).before(fragment);
+      __privateSet(this, _offscreen_fragment, null);
+      pause_effect(
+        /** @type {Effect} */
+        __privateGet(this, _pending_effect),
+        () => {
+          __privateSet(this, _pending_effect, null);
+        }
+      );
+      __privateMethod(this, _Boundary_instances, resolve_fn2).call(
+        this,
+        /** @type {Batch} */
+        current_batch
+      );
+    }
+  });
+};
+render_fn = function() {
+  try {
+    this.is_pending = this.has_pending_snippet();
+    __privateSet(this, _pending_count, 0);
+    __privateSet(this, _local_pending_count, 0);
+    __privateSet(this, _main_effect, branch(() => {
+      __privateGet(this, _children).call(this, __privateGet(this, _anchor));
+    }));
+    if (__privateGet(this, _pending_count) > 0) {
+      var fragment = __privateSet(this, _offscreen_fragment, document.createDocumentFragment());
+      move_effect(__privateGet(this, _main_effect), fragment);
+      const pending3 = (
+        /** @type {(anchor: Node) => void} */
+        __privateGet(this, _props).pending
+      );
+      __privateSet(this, _pending_effect, branch(() => pending3(__privateGet(this, _anchor))));
+    } else {
+      __privateMethod(this, _Boundary_instances, resolve_fn2).call(
+        this,
+        /** @type {Batch} */
+        current_batch
+      );
+    }
+  } catch (error) {
+    this.error(error);
+  }
+};
+/**
+ * @param {Batch} batch
+ */
+resolve_fn2 = function(batch) {
+  this.is_pending = false;
+  batch.transfer_effects(__privateGet(this, _dirty_effects2), __privateGet(this, _maybe_dirty_effects2));
+};
+/**
+ * @template T
+ * @param {() => T} fn
+ */
+run_fn = function(fn) {
+  var previous_effect = active_effect;
+  var previous_reaction = active_reaction;
+  var previous_ctx = component_context;
+  set_active_effect(__privateGet(this, _effect));
+  set_active_reaction(__privateGet(this, _effect));
+  set_component_context(__privateGet(this, _effect).ctx);
+  try {
+    Batch.ensure();
+    return fn();
+  } finally {
+    set_active_effect(previous_effect);
+    set_active_reaction(previous_reaction);
+    set_component_context(previous_ctx);
+  }
+};
+/**
+ * Updates the pending count associated with the currently visible pending snippet,
+ * if any, such that we can replace the snippet with content once work is done
+ * @param {1 | -1} d
+ * @param {Batch} batch
+ */
+update_pending_count_fn = function(d, batch) {
+  var _a2;
+  if (!this.has_pending_snippet()) {
+    if (this.parent) {
+      __privateMethod(_a2 = this.parent, _Boundary_instances, update_pending_count_fn).call(_a2, d, batch);
+    }
+    return;
+  }
+  __privateSet(this, _pending_count, __privateGet(this, _pending_count) + d);
+  if (__privateGet(this, _pending_count) === 0) {
+    __privateMethod(this, _Boundary_instances, resolve_fn2).call(this, batch);
+    if (__privateGet(this, _pending_effect)) {
+      pause_effect(__privateGet(this, _pending_effect), () => {
+        __privateSet(this, _pending_effect, null);
+      });
+    }
+    if (__privateGet(this, _offscreen_fragment)) {
+      __privateGet(this, _anchor).before(__privateGet(this, _offscreen_fragment));
+      __privateSet(this, _offscreen_fragment, null);
+    }
+  }
+};
+/**
+ * @param {unknown} error
+ */
+handle_error_fn = function(error) {
+  if (__privateGet(this, _main_effect)) {
+    destroy_effect(__privateGet(this, _main_effect));
+    __privateSet(this, _main_effect, null);
+  }
+  if (__privateGet(this, _pending_effect)) {
+    destroy_effect(__privateGet(this, _pending_effect));
+    __privateSet(this, _pending_effect, null);
+  }
+  if (__privateGet(this, _failed_effect)) {
+    destroy_effect(__privateGet(this, _failed_effect));
+    __privateSet(this, _failed_effect, null);
+  }
+  if (hydrating) {
+    set_hydrate_node(
+      /** @type {TemplateNode} */
+      __privateGet(this, _hydrate_open)
+    );
+    next();
+    set_hydrate_node(skip_nodes());
+  }
+  let failed = __privateGet(this, _props).failed;
+  const handle_error_result = (transformed_error) => {
+    if (__privateMethod(this, _Boundary_instances, is_destroyed_fn).call(this)) return;
+    const { reset: reset2, invoke_onerror } = __privateMethod(this, _Boundary_instances, create_reset_fn).call(this, transformed_error);
+    invoke_onerror();
+    if (failed && !__privateMethod(this, _Boundary_instances, is_destroyed_fn).call(this)) {
+      __privateSet(this, _failed_effect, __privateMethod(this, _Boundary_instances, run_fn).call(this, () => {
+        try {
+          return branch(() => {
+            var effect2 = (
+              /** @type {Effect} */
+              active_effect
+            );
+            effect2.b = this;
+            effect2.f |= BOUNDARY_EFFECT;
+            failed(
+              __privateGet(this, _anchor),
+              () => transformed_error,
+              () => reset2
+            );
+          });
+        } catch (error2) {
+          invoke_error_boundary(
+            error2,
+            /** @type {Effect} */
+            __privateGet(this, _effect).parent
+          );
+          return null;
+        }
+      }));
+    }
+  };
+  queue_micro_task(() => {
+    if (__privateMethod(this, _Boundary_instances, is_destroyed_fn).call(this)) return;
+    var result;
+    try {
+      result = this.transform_error(error);
+    } catch (e) {
+      invoke_error_boundary(e, __privateGet(this, _effect) && __privateGet(this, _effect).parent);
+      return;
+    }
+    if (result !== null && typeof result === "object" && typeof /** @type {any} */
+    result.then === "function") {
+      result.then(
+        handle_error_result,
+        /** @param {unknown} e */
+        (e) => invoke_error_boundary(e, __privateGet(this, _effect) && __privateGet(this, _effect).parent)
+      );
+    } else {
+      handle_error_result(result);
+    }
+  });
+};
+
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/render.js
 var should_intro = true;
 function set_text(text2, value) {
   var _a2;
@@ -4594,7 +4550,7 @@ function _mount(Component, { target, anchor, props = {}, events, context, intro 
           );
         }
         should_intro = intro;
-        component2 = Component(anchor_node2, props) || {};
+        component2 = Component(anchor_node2, props) || mark_as_component();
         should_intro = true;
         if (hydrating) {
           active_effect.nodes.end = hydrate_node;
@@ -4672,16 +4628,12 @@ function unmount(component2, options) {
     return fn(options);
   }
   if (dev_fallback_default) {
-    if (STATE_SYMBOL in component2) {
-      state_proxy_unmount();
-    } else {
-      lifecycle_double_unmount();
-    }
+    lifecycle_double_unmount();
   }
   return Promise.resolve();
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/blocks/branches.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/dom/blocks/branches.js
 var _batches, _onscreen, _offscreen, _outroing, _transition, _commit, _discard;
 var BranchManager = class {
   /**
@@ -4862,7 +4814,7 @@ _transition = new WeakMap();
 _commit = new WeakMap();
 _discard = new WeakMap();
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/index-client.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/index-client.js
 if (dev_fallback_default) {
   let throw_rune_error = function(rune) {
     if (!(rune in globalThis)) {
@@ -4890,7 +4842,7 @@ if (dev_fallback_default) {
   throw_rune_error("$bindable");
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dev/css.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/dev/css.js
 var all_styles = /* @__PURE__ */ new Map();
 function register_style(hash2, style) {
   var styles = all_styles.get(hash2);
@@ -4901,7 +4853,7 @@ function register_style(hash2, style) {
   styles.add(style);
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/blocks/if.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/dom/blocks/if.js
 function if_block(node, fn, elseif = false) {
   var marker;
   if (hydrating) {
@@ -4940,7 +4892,7 @@ function if_block(node, fn, elseif = false) {
   }, flags2);
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/blocks/each.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/dom/blocks/each.js
 function pause_effects(state2, to_destroy, controlled_anchor) {
   var transitions = [];
   var length = to_destroy.length;
@@ -4973,7 +4925,7 @@ function pause_effects(state2, to_destroy, controlled_anchor) {
     );
   }
   if (remaining === 0) {
-    var fast_path = transitions.length === 0 && controlled_anchor !== null;
+    var fast_path = transitions.length === 0 && controlled_anchor !== null && state2.pending.size === 0;
     if (fast_path) {
       var anchor = (
         /** @type {Element} */
@@ -5046,7 +4998,6 @@ function each(node, flags2, get_collection, get_key, render_fn2, fallback_fn = n
   if (dev_fallback_default) {
     tag(each_array, "{#each ...}");
   }
-  var array;
   var pending3 = /* @__PURE__ */ new Map();
   var first_run = true;
   function commit(batch) {
@@ -5054,6 +5005,7 @@ function each(node, flags2, get_collection, get_key, render_fn2, fallback_fn = n
       return;
     }
     state2.pending.delete(batch);
+    var array = get(each_array);
     state2.fallback = fallback2;
     reconcile(state2, array, anchor, flags2, get_key);
     if (fallback2 !== null) {
@@ -5075,8 +5027,10 @@ function each(node, flags2, get_collection, get_key, render_fn2, fallback_fn = n
     state2.pending.delete(batch);
   }
   var effect2 = block(() => {
-    array = /** @type {V[]} */
-    get2(each_array);
+    var array = (
+      /** @type {V[]} */
+      get(each_array)
+    );
     var length = array.length;
     let mismatch = false;
     if (hydrating) {
@@ -5170,7 +5124,7 @@ function each(node, flags2, get_collection, get_key, render_fn2, fallback_fn = n
     if (mismatch) {
       set_hydrating(true);
     }
-    get2(each_array);
+    get(each_array);
   });
   var state2 = { effect: effect2, flags: flags2, items, pending: pending3, outrogroups: null, fallback: fallback2 };
   first_run = false;
@@ -5189,7 +5143,7 @@ function reconcile(state2, array, anchor, flags2, get_key) {
   var length = array.length;
   var items = state2.items;
   var current = skip_to_branch(state2.effect.first);
-  var seen;
+  var seen2;
   var prev = null;
   var to_animate;
   var matched = [];
@@ -5250,7 +5204,7 @@ function reconcile(state2, array, anchor, flags2, get_key) {
       }
     }
     if (effect2 !== current) {
-      if (seen !== void 0 && seen.has(effect2)) {
+      if (seen2 !== void 0 && seen2.has(effect2)) {
         if (matched.length < stashed.length) {
           var start = stashed[0];
           var j;
@@ -5261,7 +5215,7 @@ function reconcile(state2, array, anchor, flags2, get_key) {
             move(matched[j], start, anchor);
           }
           for (j = 0; j < stashed.length; j += 1) {
-            seen.delete(stashed[j]);
+            seen2.delete(stashed[j]);
           }
           link(state2, a.prev, b.next);
           link(state2, prev, a);
@@ -5272,7 +5226,7 @@ function reconcile(state2, array, anchor, flags2, get_key) {
           matched = [];
           stashed = [];
         } else {
-          seen.delete(effect2);
+          seen2.delete(effect2);
           move(effect2, current, anchor);
           link(state2, effect2.prev, effect2.next);
           link(state2, effect2, prev === null ? state2.effect.first : prev.next);
@@ -5284,7 +5238,7 @@ function reconcile(state2, array, anchor, flags2, get_key) {
       matched = [];
       stashed = [];
       while (current !== null && current !== effect2) {
-        (seen ?? (seen = /* @__PURE__ */ new Set())).add(current);
+        (seen2 ?? (seen2 = /* @__PURE__ */ new Set())).add(current);
         stashed.push(current);
         current = skip_to_branch(current.next);
       }
@@ -5309,10 +5263,10 @@ function reconcile(state2, array, anchor, flags2, get_key) {
       state2.outrogroups = null;
     }
   }
-  if (current !== null || seen !== void 0) {
+  if (current !== null || seen2 !== void 0) {
     var to_destroy = [];
-    if (seen !== void 0) {
-      for (effect2 of seen) {
+    if (seen2 !== void 0) {
+      for (effect2 of seen2) {
         if ((effect2.f & INERT) === 0) {
           to_destroy.push(effect2);
         }
@@ -5414,19 +5368,20 @@ function validate_each_keys(array, key_fn) {
   }
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/css.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/dom/css.js
 function append_styles(anchor, css) {
   effect(() => {
-    var root7 = anchor.getRootNode();
+    anchor = active_effect?.parent?.nodes?.start ?? anchor;
+    var root4 = anchor.getRootNode();
     var target = (
       /** @type {ShadowRoot} */
-      root7.host ? (
+      root4.host ? (
         /** @type {ShadowRoot} */
-        root7
+        root4
       ) : (
         /** @type {Document} */
-        root7.head ?? /** @type {Document} */
-        root7.ownerDocument.head
+        root4.head ?? /** @type {Document} */
+        root4.ownerDocument.head
       )
     );
     if (!target.querySelector("#" + css.hash)) {
@@ -5441,7 +5396,7 @@ function append_styles(anchor, css) {
   });
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/elements/actions.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/dom/elements/actions.js
 function action(dom, action2, get_value) {
   effect(() => {
     var payload = untrack(() => action2(dom, get_value?.()) || {});
@@ -5470,7 +5425,7 @@ function action(dom, action2, get_value) {
   });
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/shared/attributes.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/shared/attributes.js
 var whitespace = [..." 	\n\r\f\xA0\v\uFEFF"];
 function to_class(value, hash2, directives) {
   var classname = value == null ? "" : "" + value;
@@ -5498,7 +5453,7 @@ function to_class(value, hash2, directives) {
   return classname === "" ? null : classname;
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/elements/class.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/dom/elements/class.js
 function set_class(dom, is_html, value, hash2, prev_classes, next_classes) {
   var prev = (
     /** @type {any} */
@@ -5527,102 +5482,16 @@ function set_class(dom, is_html, value, hash2, prev_classes, next_classes) {
   return next_classes;
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/elements/bindings/select.js
-function select_option(select, value, mounting = false) {
-  if (select.multiple) {
-    if (value == void 0) {
-      return;
-    }
-    if (!is_array(value)) {
-      return select_multiple_invalid_value();
-    }
-    for (var option of select.options) {
-      option.selected = value.includes(get_option_value(option));
-    }
-    return;
-  }
-  for (option of select.options) {
-    var option_value = get_option_value(option);
-    if (is(option_value, value)) {
-      option.selected = true;
-      return;
-    }
-  }
-  if (!mounting || value !== void 0) {
-    select.selectedIndex = -1;
-  }
-}
-function init_select(select) {
-  var observer = new MutationObserver(() => {
-    select_option(select, select.__value);
-  });
-  observer.observe(select, {
-    // Listen to option element changes
-    childList: true,
-    subtree: true,
-    // because of <optgroup>
-    // Listen to option element value attribute changes
-    // (doesn't get notified of select value changes,
-    // because that property is not reflected as an attribute)
-    attributes: true,
-    attributeFilter: ["value"]
-  });
-  teardown(() => {
-    observer.disconnect();
-  });
-}
-function bind_select_value(select, get3, set2 = get3) {
-  var batches = /* @__PURE__ */ new WeakSet();
-  var mounting = true;
-  listen_to_event_and_reset_event(select, "change", (is_reset) => {
-    var query = is_reset ? "[selected]" : ":checked";
-    var value;
-    if (select.multiple) {
-      value = [].map.call(select.querySelectorAll(query), get_option_value);
-    } else {
-      var selected_option = select.querySelector(query) ?? // will fall back to first non-disabled option if no option is selected
-      select.querySelector("option:not([disabled])");
-      value = selected_option && get_option_value(selected_option);
-    }
-    set2(value);
-    select.__value = value;
-    if (current_batch !== null) {
-      batches.add(current_batch);
-    }
-  });
-  effect(() => {
-    var value = get3();
-    if (select === document.activeElement) {
-      var batch = (
-        /** @type {Batch} */
-        async_mode_flag ? previous_batch : current_batch
-      );
-      if (batches.has(batch)) {
-        return;
-      }
-    }
-    select_option(select, value, mounting);
-    if (mounting && value === void 0) {
-      var selected_option = select.querySelector(":checked");
-      if (selected_option !== null) {
-        value = get_option_value(selected_option);
-        set2(value);
-      }
-    }
-    select.__value = value;
-    mounting = false;
-  });
-  init_select(select);
-}
-function get_option_value(option) {
-  if ("__value" in option) {
-    return option.__value;
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/dom/elements/bindings/select.js
+function set_selected(option, selected) {
+  if (selected) {
+    if (!option.hasAttribute("selected")) option.setAttribute("selected", "");
   } else {
-    return option.value;
+    option.removeAttribute("selected");
   }
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/elements/attributes.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/dom/elements/attributes.js
 var IS_CUSTOM_ELEMENT = /* @__PURE__ */ Symbol("is custom element");
 var IS_HTML = /* @__PURE__ */ Symbol("is html");
 var LINK_TAG = IS_XHTML ? "link" : "LINK";
@@ -5666,15 +5535,6 @@ function set_checked(element2, checked) {
   }
   element2.checked = checked;
 }
-function set_selected(element2, selected) {
-  if (selected) {
-    if (!element2.hasAttribute("selected")) {
-      element2.setAttribute("selected", "");
-    }
-  } else {
-    element2.removeAttribute("selected");
-  }
-}
 function set_attribute2(element2, attribute, value, skip_warning) {
   var attributes = get_attributes(element2);
   if (hydrating) {
@@ -5692,7 +5552,7 @@ function set_attribute2(element2, attribute, value, skip_warning) {
   }
   if (value == null) {
     element2.removeAttribute(attribute);
-  } else if (typeof value !== "string" && get_setters(element2).includes(attribute)) {
+  } else if (typeof value !== "string" && get_setters(element2).has(attribute)) {
     element2[attribute] = value;
   } else {
     element2.setAttribute(attribute, value);
@@ -5714,7 +5574,7 @@ function get_setters(element2) {
   var cache_key = element2.getAttribute("is") || element2.nodeName;
   var setters = setters_cache.get(cache_key);
   if (setters) return setters;
-  setters_cache.set(cache_key, setters = []);
+  setters_cache.set(cache_key, setters = /* @__PURE__ */ new Set());
   var descriptors;
   var proto = element2;
   var element_proto = Element.prototype;
@@ -5723,7 +5583,7 @@ function get_setters(element2) {
     for (var key2 in descriptors) {
       if (descriptors[key2].set && // better safe than sorry, we don't want spread attributes to mess with HTML content
       key2 !== "innerHTML" && key2 !== "textContent" && key2 !== "innerText") {
-        setters.push(key2);
+        setters.add(key2);
       }
     }
     proto = get_prototype_of(proto);
@@ -5760,7 +5620,7 @@ function srcset_url_equal(element2, srcset) {
   );
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/elements/bindings/input.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/dom/elements/bindings/input.js
 function bind_value(input, get3, set2 = get3) {
   var batches = /* @__PURE__ */ new WeakSet();
   listen_to_event_and_reset_event(input, "input", async (is_reset) => {
@@ -5854,11 +5714,11 @@ function to_number(value) {
   return value === "" ? null : +value;
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/elements/bindings/this.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/dom/elements/bindings/this.js
 function is_bound_this(bound_value, element_or_component) {
   return bound_value === element_or_component || bound_value?.[STATE_SYMBOL] === element_or_component;
 }
-function bind_this(element_or_component = {}, update2, get_value, get_parts) {
+function bind_this(element_or_component = mark_as_component(), update2, get_value, get_parts) {
   var component_effect = (
     /** @type {ComponentContext} */
     component_context.r
@@ -5902,7 +5762,19 @@ function bind_this(element_or_component = {}, update2, get_value, get_parts) {
   return element_or_component;
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/reactivity/props.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/reactivity/store.js
+var is_store_binding = false;
+function capture_store_binding(fn) {
+  var previous_is_store_binding = is_store_binding;
+  try {
+    is_store_binding = false;
+    return [fn(), is_store_binding];
+  } finally {
+    is_store_binding = previous_is_store_binding;
+  }
+}
+
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/reactivity/props.js
 function prop(props, key2, flags2, fallback2) {
   var runes = !legacy_mode_flag || (flags2 & PROPS_IS_RUNES) !== 0;
   var bindable = (flags2 & PROPS_IS_BINDABLE) !== 0;
@@ -5922,7 +5794,7 @@ function prop(props, key2, flags2, fallback2) {
         /** @type {() => V} */
         fallback2
       ));
-      return get2(fallback_signal);
+      return get(fallback_signal);
     }
     if (fallback_dirty) {
       fallback_dirty = false;
@@ -6009,7 +5881,7 @@ function prop(props, key2, flags2, fallback2) {
   if (dev_fallback_default) {
     d.label = key2;
   }
-  if (bindable) get2(d);
+  if (bindable) get(d);
   var parent_effect = (
     /** @type {Effect} */
     active_effect
@@ -6018,7 +5890,7 @@ function prop(props, key2, flags2, fallback2) {
     /** @type {() => V} */
     (function(value, mutation) {
       if (arguments.length > 0) {
-        const new_value = mutation ? get2(d) : runes && bindable ? proxy(value) : value;
+        const new_value = mutation ? get(d) : runes && bindable ? proxy(value) : value;
         set(d, new_value);
         overridden = true;
         if (fallback_value !== void 0) {
@@ -6029,12 +5901,12 @@ function prop(props, key2, flags2, fallback2) {
       if (is_destroying_effect && overridden || (parent_effect.f & DESTROYED) !== 0) {
         return d.v;
       }
-      return get2(d);
+      return get(d);
     })
   );
 }
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/legacy/legacy-client.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/legacy/legacy-client.js
 function createClassComponent(options) {
   return new Svelte4Component(options);
 }
@@ -6060,11 +5932,11 @@ var Svelte4Component = class {
       { ...options.props || {}, $$events: {} },
       {
         get(target, prop2) {
-          return get2(sources.get(prop2) ?? add_source(prop2, Reflect.get(target, prop2)));
+          return get(sources.get(prop2) ?? add_source(prop2, Reflect.get(target, prop2)));
         },
         has(target, prop2) {
           if (prop2 === LEGACY_PROPS) return true;
-          get2(sources.get(prop2) ?? add_source(prop2, Reflect.get(target, prop2)));
+          get(sources.get(prop2) ?? add_source(prop2, Reflect.get(target, prop2)));
           return Reflect.has(target, prop2);
         },
         set(target, prop2, value) {
@@ -6134,7 +6006,7 @@ var Svelte4Component = class {
 _events = new WeakMap();
 _instance = new WeakMap();
 
-// node_modules/.pnpm/svelte@5.56.4_@typescript-eslint+types@8.63.0/node_modules/svelte/src/internal/client/dom/elements/custom-element.js
+// node_modules/.pnpm/svelte@5.57.2_@typescript-eslint+types@8.71.2/node_modules/svelte/src/internal/client/dom/elements/custom-element.js
 var SvelteElement;
 if (typeof HTMLElement === "function") {
   SvelteElement = class extends HTMLElement {
@@ -6355,87 +6227,6 @@ function get_custom_elements_slots(element2) {
   return result;
 }
 
-// src/Types/progressPropertyOptions.ts
-var ProgressPropertyOptions = /* @__PURE__ */ ((ProgressPropertyOptions2) => {
-  ProgressPropertyOptions2["TaskTotal"] = "Total Tasks";
-  ProgressPropertyOptions2["TaskComplete"] = "Completed Tasks";
-  ProgressPropertyOptions2["TaskIncomplete"] = "Incomplete Tasks";
-  return ProgressPropertyOptions2;
-})(ProgressPropertyOptions || {});
-
-// src/Modals/ProgressPropertiesSettingModal/ProgressPropertiesModalContent.svelte
-var root = from_html(`<option></option>`);
-var root_1 = from_html(`<tr><td><input type="text" placeholder="Property name"/></td><td><select class="svelte-1eh4i7q"></select></td><td><input type="button" class="not-a-button" value="\u274C"/></td></tr>`);
-var root_2 = from_html(`<div class="centerSettingContent"><table style="width: 100%"><thead><tr><th>Name</th><th>Type</th></tr></thead><tbody></tbody></table> <div class="buttonContainer svelte-1eh4i7q"><button class="mod-cta svelte-1eh4i7q">Add</button></div></div>`);
-var $$css = {
-  hash: "svelte-1eh4i7q",
-  code: ".buttonContainer.svelte-1eh4i7q {display:flex;justify-content:center;margin-top:1rem;}select.svelte-1eh4i7q {border-radius:4px;width:100%;height:30px;border:1px solid #dbdbdc;color:#383a42;background-color:#fff;padding:3px;}button.svelte-1eh4i7q {margin-left:5px;margin-right:5px;font-size:15px;}"
-};
-function ProgressPropertiesModalContent($$anchor, $$props) {
-  push($$props, true);
-  append_styles($$anchor, $$css);
-  const options = Object.keys(ProgressPropertyOptions).map((k) => ProgressPropertyOptions[k]);
-  let initialProperties = prop($$props, "properties", 19, () => []);
-  let properties = state(proxy(untrack(() => initialProperties().map((property) => ({ ...property })))));
-  function saveProperties() {
-    $$props.save(snapshot(get2(properties)));
-  }
-  function addNewProperty() {
-    const newProp = { name: "", type: "Total Tasks" /* TaskTotal */ };
-    set(properties, [...get2(properties), newProp], true);
-    saveProperties();
-  }
-  function removeProperty(property) {
-    set(properties, get2(properties).filter((prop2) => prop2 !== property), true);
-    saveProperties();
-  }
-  var div = root_2();
-  var table = child(div);
-  var tbody = sibling(child(table));
-  each(tbody, 20, () => get2(properties), (property) => property, ($$anchor2, property, $$index_1) => {
-    var tr = root_1();
-    var td = child(tr);
-    var input = child(td);
-    remove_input_defaults(input);
-    reset(td);
-    var td_1 = sibling(td);
-    var select = child(td_1);
-    each(select, 20, () => options, (text2) => text2, ($$anchor3, text2) => {
-      var option = root();
-      var option_value = {};
-      template_effect(() => {
-        set_attribute2(option, "label", text2);
-        if (option_value !== (option_value = text2)) {
-          option.value = (option.__value = text2) ?? "";
-        }
-      });
-      append($$anchor3, option);
-    });
-    reset(select);
-    reset(td_1);
-    var td_2 = sibling(td_1);
-    var input_1 = child(td_2);
-    reset(td_2);
-    reset(tr);
-    delegated("change", input, saveProperties);
-    bind_value(input, () => property.name, ($$value) => property.name = $$value);
-    delegated("change", select, saveProperties);
-    bind_select_value(select, () => property.type, ($$value) => property.type = $$value);
-    delegated("click", input_1, () => removeProperty(property));
-    append($$anchor2, tr);
-  });
-  reset(tbody);
-  reset(table);
-  var div_1 = sibling(table, 2);
-  var button = child(div_1);
-  reset(div_1);
-  reset(div);
-  delegated("click", button, addNewProperty);
-  append($$anchor, div);
-  pop();
-}
-delegate(["change", "click"]);
-
 // src/Modals/AutoPropertiesSettingModal/AutoPropertiesModalContent.svelte
 var import_obsidian = require("obsidian");
 
@@ -6454,12 +6245,12 @@ function isMultiAutoProperty(autoProp, editMode, propertyName) {
 }
 function normalizeChoices(choices) {
   if (!choices) return [];
-  const seen = /* @__PURE__ */ new Set();
+  const seen2 = /* @__PURE__ */ new Set();
   const out = [];
   for (const raw of choices) {
     const choice = (raw ?? "").trim();
-    if (choice === "" || seen.has(choice)) continue;
-    seen.add(choice);
+    if (choice === "" || seen2.has(choice)) continue;
+    seen2.add(choice);
     out.push(choice);
   }
   return out;
@@ -6485,13 +6276,13 @@ function withChoicesPasted(choices, index2, tokens) {
   return [...before, ...inserted, ...after];
 }
 function cloneAutoProperty(property) {
-  const clone2 = {
+  const clone = {
     name: property.name,
     choices: Array.isArray(property.choices) ? [...property.choices] : []
   };
-  if (property.description !== void 0) clone2.description = property.description;
-  if (property.type !== void 0) clone2.type = property.type;
-  return clone2;
+  if (property.description !== void 0) clone.description = property.description;
+  if (property.type !== void 0) clone.type = property.type;
+  return clone;
 }
 function cloneAutoProperties(properties) {
   if (!Array.isArray(properties)) return [];
@@ -6663,11 +6454,11 @@ function toValueArray(content) {
   return splitCommaSeparatedValues(splitValue).map((s) => s.trim()).filter(Boolean);
 }
 function multiSelectOptions(autoProp, currentValue) {
-  const seen = /* @__PURE__ */ new Set();
+  const seen2 = /* @__PURE__ */ new Set();
   const out = [];
   for (const value of [...toValueArray(currentValue), ...normalizeChoices(autoProp.choices)]) {
-    if (!seen.has(value)) {
-      seen.add(value);
+    if (!seen2.has(value)) {
+      seen2.add(value);
       out.push(value);
     }
   }
@@ -6684,18 +6475,18 @@ function withChoiceAdded(autoProp, value) {
 }
 
 // src/Modals/AutoPropertiesSettingModal/AutoPropertiesModalContent.svelte
-var root2 = from_html(`<p class="metaedit-empty svelte-1i9u2va">No auto properties yet. Add one to define a reusable set of values for a property.</p>`);
-var root_12 = from_html(`<option> </option>`);
-var root_22 = from_html(`<div class="metaedit-ap-choice svelte-1i9u2va"><input type="text" placeholder="Value (or paste a list)" class="svelte-1i9u2va"/> <button class="clickable-icon metaedit-ap-icon svelte-1i9u2va" aria-label="Remove value"><span></span></button></div>`);
+var root = from_html(`<p class="metaedit-empty svelte-1i9u2va">No auto properties yet. Add one to define a reusable set of values for a property.</p>`);
+var root_1 = from_html(`<option> </option>`);
+var root_2 = from_html(`<div class="metaedit-ap-choice svelte-1i9u2va"><input type="text" placeholder="Value (or paste a list)" class="svelte-1i9u2va"/> <button class="clickable-icon metaedit-ap-icon svelte-1i9u2va" aria-label="Remove value"><span></span></button></div>`);
 var root_3 = from_html(`<div class="metaedit-ap-card svelte-1i9u2va"><div class="metaedit-ap-header svelte-1i9u2va"><input class="metaedit-ap-name svelte-1i9u2va" type="text" placeholder="Property name"/> <select class="dropdown metaedit-ap-type svelte-1i9u2va" aria-label="How many values this property holds"></select> <button class="clickable-icon metaedit-ap-icon svelte-1i9u2va" aria-label="Remove this auto property"><span></span></button></div> <input class="metaedit-ap-description svelte-1i9u2va" type="text" placeholder="Description (shown when you pick a value) - optional"/> <div class="metaedit-ap-values svelte-1i9u2va"><span class="metaedit-ap-label svelte-1i9u2va">Values</span> <!> <button class="metaedit-ap-add-value svelte-1i9u2va"><span></span> Add value</button></div></div>`);
 var root_4 = from_html(`<div class="metaedit-auto-properties svelte-1i9u2va"><!> <!> <div class="metaedit-ap-footer svelte-1i9u2va"><button class="mod-cta">Add auto property</button></div></div>`);
-var $$css2 = {
+var $$css = {
   hash: "svelte-1i9u2va",
   code: ".metaedit-auto-properties.svelte-1i9u2va {display:flex;flex-direction:column;gap:0.75rem;margin-top:0.5rem;}.metaedit-empty.svelte-1i9u2va {color:var(--text-muted);text-align:center;margin:0.5rem 0;}.metaedit-ap-card.svelte-1i9u2va {display:flex;flex-direction:column;gap:0.5rem;padding:0.75rem;border:1px solid var(--background-modifier-border);border-radius:var(--radius-m, 8px);background-color:var(--background-secondary);}.metaedit-ap-header.svelte-1i9u2va {display:flex;gap:0.5rem;align-items:center;}.metaedit-ap-name.svelte-1i9u2va {flex:1 1 auto;min-width:0;font-weight:var(--font-semibold, 600);}.metaedit-ap-type.svelte-1i9u2va {flex:0 0 auto;}.metaedit-ap-description.svelte-1i9u2va {width:100%;}.metaedit-ap-values.svelte-1i9u2va {display:flex;flex-direction:column;gap:0.35rem;}.metaedit-ap-label.svelte-1i9u2va {color:var(--text-muted);font-size:var(--font-ui-smaller, 0.8em);}.metaedit-ap-choice.svelte-1i9u2va {display:flex;gap:0.5rem;align-items:center;}.metaedit-ap-choice.svelte-1i9u2va input:where(.svelte-1i9u2va) {flex:1 1 auto;min-width:0;}.metaedit-ap-icon.svelte-1i9u2va {flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;}.metaedit-ap-add-value.svelte-1i9u2va {display:inline-flex;align-items:center;gap:0.35rem;align-self:flex-start;background:transparent;box-shadow:none;color:var(--text-muted);padding:0.25rem 0.4rem;cursor:pointer;}.metaedit-ap-add-value.svelte-1i9u2va:hover {color:var(--text-normal);}.metaedit-ap-footer.svelte-1i9u2va {display:flex;justify-content:center;margin-top:0.25rem;}"
 };
 function AutoPropertiesModalContent($$anchor, $$props) {
   push($$props, true);
-  append_styles($$anchor, $$css2);
+  append_styles($$anchor, $$css);
   let initialAutoProperties = prop($$props, "autoProperties", 19, () => []);
   const types = ["Single", "Multi"];
   let nextPropertyId = 0;
@@ -6733,13 +6524,13 @@ function AutoPropertiesModalContent($$anchor, $$props) {
   function addNewProperty() {
     const property = { name: "", choices: [""], type: "Single" };
     const entry = createEditableAutoProperty(cloneAutoProperty(property));
-    const index2 = get2(autoProperties).length;
-    set(autoProperties, [...get2(autoProperties), entry], true);
+    const index2 = get(autoProperties).length;
+    set(autoProperties, [...get(autoProperties), entry], true);
     persist({ kind: "addProperty", index: index2, property });
   }
   function removeProperty(entry, index2) {
     const target = targetFor(entry, index2);
-    set(autoProperties, get2(autoProperties).filter((candidate) => candidate !== entry), true);
+    set(autoProperties, get(autoProperties).filter((candidate) => candidate !== entry), true);
     persist({ kind: "removeProperty", target });
   }
   function removeChoice(entry, propertyIndex, choiceIndex) {
@@ -6818,31 +6609,30 @@ function AutoPropertiesModalContent($$anchor, $$props) {
   var node_1 = child(div);
   {
     var consequent = ($$anchor2) => {
-      var p = root2();
+      var p = root();
       append($$anchor2, p);
     };
     if_block(node_1, ($$render) => {
-      if (get2(autoProperties).length === 0) $$render(consequent);
+      if (get(autoProperties).length === 0) $$render(consequent);
     });
   }
   var node_2 = sibling(node_1, 2);
-  each(node_2, 19, () => get2(autoProperties), (entry) => entry.id, ($$anchor2, entry, propertyIndex) => {
-    const property = user_derived(() => get2(entry).property);
+  each(node_2, 19, () => get(autoProperties), (entry) => entry.id, ($$anchor2, entry, propertyIndex) => {
+    const property = user_derived(() => get(entry).property);
     var div_1 = root_3();
     var div_2 = child(div_1);
     var input = child(div_2);
     remove_input_defaults(input);
     var select = sibling(input, 2);
     each(select, 20, () => types, (t) => t, ($$anchor3, t) => {
-      var option = root_12();
-      var text2 = child(option, true);
-      reset(option);
+      var option = root_1();
+      var text2 = only_child(option, true);
       var option_value = {};
       template_effect(() => {
-        set_selected(option, (get2(property).type ?? "Single") === t);
+        set_selected(option, (get(property).type ?? "Single") === t);
         set_text(text2, t);
         if (option_value !== (option_value = t)) {
-          option.value = (option.__value = t) ?? "";
+          option.value = (option.__value = option_value) ?? "";
         }
       });
       append($$anchor3, option);
@@ -6857,8 +6647,8 @@ function AutoPropertiesModalContent($$anchor, $$props) {
     remove_input_defaults(input_1);
     var div_3 = sibling(input_1, 2);
     var node_3 = sibling(child(div_3), 2);
-    each(node_3, 16, () => indexes(get2(property).choices), (i) => i, ($$anchor3, i) => {
-      var div_4 = root_22();
+    each(node_3, 16, () => indexes(get(property).choices), (i) => i, ($$anchor3, i) => {
+      var div_4 = root_2();
       var input_2 = child(div_4);
       remove_input_defaults(input_2);
       var button_1 = sibling(input_2, 2);
@@ -6866,11 +6656,11 @@ function AutoPropertiesModalContent($$anchor, $$props) {
       action(span_1, ($$node, $$action_arg) => icon?.($$node, $$action_arg), () => "x");
       reset(button_1);
       reset(div_4);
-      template_effect(() => set_value(input_2, get2(property).choices[i]));
-      delegated("input", input_2, (e) => get2(property).choices[i] = e.currentTarget.value);
-      delegated("change", input_2, (e) => setChoice(get2(entry), get2(propertyIndex), i, e.currentTarget.value));
-      event("paste", input_2, (e) => pasteChoices(get2(entry), get2(propertyIndex), i, e));
-      delegated("click", button_1, () => removeChoice(get2(entry), get2(propertyIndex), i));
+      template_effect(() => set_value(input_2, get(property).choices[i]));
+      delegated("input", input_2, (e) => get(property).choices[i] = e.currentTarget.value);
+      delegated("change", input_2, (e) => setChoice(get(entry), get(propertyIndex), i, e.currentTarget.value));
+      event("paste", input_2, (e) => pasteChoices(get(entry), get(propertyIndex), i, e));
+      delegated("click", button_1, () => removeChoice(get(entry), get(propertyIndex), i));
       append($$anchor3, div_4);
     });
     var button_2 = sibling(node_3, 2);
@@ -6881,21 +6671,20 @@ function AutoPropertiesModalContent($$anchor, $$props) {
     reset(div_3);
     reset(div_1);
     template_effect(() => {
-      set_value(input, get2(property).name);
-      set_value(input_1, get2(property).description ?? "");
+      set_value(input, get(property).name);
+      set_value(input_1, get(property).description ?? "");
     });
-    delegated("input", input, (e) => get2(property).name = e.currentTarget.value);
-    delegated("change", input, (e) => setName(get2(entry), get2(propertyIndex), e.currentTarget.value));
-    delegated("change", select, (e) => setType(get2(entry), get2(propertyIndex), e.currentTarget.value));
-    delegated("click", button, () => removeProperty(get2(entry), get2(propertyIndex)));
-    delegated("input", input_1, (e) => get2(property).description = e.currentTarget.value);
-    delegated("change", input_1, (e) => setDescription(get2(entry), get2(propertyIndex), e.currentTarget.value));
-    delegated("click", button_2, () => addChoice(get2(entry), get2(propertyIndex)));
+    delegated("input", input, (e) => get(property).name = e.currentTarget.value);
+    delegated("change", input, (e) => setName(get(entry), get(propertyIndex), e.currentTarget.value));
+    delegated("change", select, (e) => setType(get(entry), get(propertyIndex), e.currentTarget.value));
+    delegated("click", button, () => removeProperty(get(entry), get(propertyIndex)));
+    delegated("input", input_1, (e) => get(property).description = e.currentTarget.value);
+    delegated("change", input_1, (e) => setDescription(get(entry), get(propertyIndex), e.currentTarget.value));
+    delegated("click", button_2, () => addChoice(get(entry), get(propertyIndex)));
     append($$anchor2, div_1);
   });
   var div_5 = sibling(node_2, 2);
-  var button_3 = child(div_5);
-  reset(div_5);
+  var button_3 = only_child(div_5);
   reset(div);
   delegated("click", button_3, addNewProperty);
   append($$anchor, div);
@@ -6903,463 +6692,11 @@ function AutoPropertiesModalContent($$anchor, $$props) {
 }
 delegate(["input", "change", "click"]);
 
-// src/Modals/KanbanHelperSetting/KanbanHelperSettingSuggester.ts
+// src/Modals/GenericPrompt/GenericPrompt.ts
+var import_obsidian3 = require("obsidian");
+
+// src/Modals/GenericPrompt/genericTextSuggester.ts
 var import_obsidian2 = require("obsidian");
-var KanbanHelperSettingSuggester = class extends import_obsidian2.AbstractInputSuggest {
-  constructor(app, inputEl, boards) {
-    super(app, inputEl);
-    this.inputEl = inputEl;
-    this.boards = boards;
-    this.onSelect((item) => this.acceptSuggestion(item));
-  }
-  getSuggestions(inputStr) {
-    const inputLowerCase = inputStr.toLowerCase();
-    return this.boards.filter((board) => board.basename.toLowerCase().includes(inputLowerCase));
-  }
-  acceptSuggestion(item) {
-    this.setValue(item.basename);
-    this.inputEl.trigger("input");
-    this.close();
-  }
-  renderSuggestion(value, el) {
-    if (value)
-      el.setText(value.basename);
-  }
-};
-
-// src/logger/logManager.ts
-var _LogManager = class _LogManager {
-  register(logger) {
-    _LogManager.loggers.push(logger);
-    return this;
-  }
-  logError(message) {
-    _LogManager.loggers.forEach((logger) => logger.logError(message));
-    throw new Error();
-  }
-  logWarning(message) {
-    _LogManager.loggers.forEach((logger) => logger.logError(message));
-  }
-  logMessage(message) {
-    _LogManager.loggers.forEach((logger) => logger.logMessage(message));
-  }
-};
-_LogManager.loggers = [];
-var LogManager = _LogManager;
-var log = new LogManager();
-
-// src/Modals/KanbanHelperSetting/KanbanHelperSettingContent.svelte
-var root3 = from_html(`<tr><td><input type="button" value="\u274C" class="not-a-button"/></td><td> </td><td><input type="text" placeholder="Property name"/></td><td> </td></tr>`);
-var root_13 = from_html(`<div class="centerSettingContent"><table style="width: 100%"><thead><tr><th></th><th>Board</th><th>Property in link</th><th>Possible values</th></tr></thead><tbody></tbody></table> <input type="text"/> <div class="buttonContainer svelte-pptp52"><button class="mod-cta svelte-pptp52">Add</button></div></div>`);
-var $$css3 = {
-  hash: "svelte-pptp52",
-  code: ".buttonContainer.svelte-pptp52 {display:flex;justify-content:center;margin-top:1rem;}button.svelte-pptp52 {margin-left:5px;margin-right:5px;font-size:15px;}"
-};
-function KanbanHelperSettingContent($$anchor, $$props) {
-  push($$props, true);
-  append_styles($$anchor, $$css3);
-  let initialKanbanProperties = prop($$props, "kanbanProperties", 19, () => []);
-  const initialApp = untrack(() => $$props.app);
-  const initialBoards = untrack(() => $$props.boards);
-  let kanbanProperties = state(proxy(untrack(() => initialKanbanProperties().map((property) => ({ ...property })))));
-  let suggestEl = state(void 0);
-  let suggester;
-  let inputValue = state("");
-  let didInitialise = false;
-  user_effect(() => {
-    const el = get2(suggestEl);
-    if (!el || didInitialise) return;
-    didInitialise = true;
-    suggester = new KanbanHelperSettingSuggester(initialApp, el, initialBoards);
-    return () => {
-      suggester?.close();
-      suggester = void 0;
-    };
-  });
-  function saveProperties() {
-    $$props.save(snapshot(get2(kanbanProperties)));
-  }
-  function addNewProperty() {
-    const board = initialBoards.find((board2) => board2.basename === get2(inputValue));
-    if (!board) return;
-    const exists = !!get2(kanbanProperties).find((kp) => kp.boardName === board.basename);
-    if (exists) return;
-    set(
-      kanbanProperties,
-      [
-        ...get2(kanbanProperties),
-        { property: "", boardName: board.basename }
-      ],
-      true
-    );
-    saveProperties();
-  }
-  function removeProperty(i) {
-    set(kanbanProperties, get2(kanbanProperties).filter((_, index2) => index2 !== i), true);
-    saveProperties();
-  }
-  function getHeadingsInBoard(boardName) {
-    const file = initialBoards.find((board) => board.basename === boardName);
-    if (!file) {
-      log.logWarning(`file ${boardName} not found.`);
-      return "FILE NOT FOUND";
-    }
-    const headings = initialApp.metadataCache.getFileCache(file)?.headings;
-    if (!headings) return "";
-    return headings.map((heading) => heading.heading).join(", ");
-  }
-  var div = root_13();
-  var table = child(div);
-  var tbody = sibling(child(table));
-  each(tbody, 23, () => get2(kanbanProperties), (kanbanProperty) => kanbanProperty.boardName, ($$anchor2, kanbanProperty, i) => {
-    var tr = root3();
-    var td = child(tr);
-    var input = child(td);
-    reset(td);
-    var td_1 = sibling(td);
-    var text2 = child(td_1, true);
-    reset(td_1);
-    var td_2 = sibling(td_1);
-    var input_1 = child(td_2);
-    remove_input_defaults(input_1);
-    reset(td_2);
-    var td_3 = sibling(td_2);
-    var text_1 = child(td_3, true);
-    reset(td_3);
-    reset(tr);
-    template_effect(
-      ($0) => {
-        set_text(text2, get2(kanbanProperty).boardName);
-        set_text(text_1, $0);
-      },
-      [() => getHeadingsInBoard(get2(kanbanProperty).boardName)]
-    );
-    delegated("click", input, () => removeProperty(get2(i)));
-    delegated("change", input_1, saveProperties);
-    bind_value(input_1, () => get2(kanbanProperty).property, ($$value) => get2(kanbanProperty).property = $$value);
-    append($$anchor2, tr);
-  });
-  reset(tbody);
-  reset(table);
-  var input_2 = sibling(table, 2);
-  remove_input_defaults(input_2);
-  bind_this(input_2, ($$value) => set(suggestEl, $$value), () => get2(suggestEl));
-  var div_1 = sibling(input_2, 2);
-  var button = child(div_1);
-  reset(div_1);
-  reset(div);
-  bind_value(input_2, () => get2(inputValue), ($$value) => set(inputValue, $$value));
-  delegated("click", button, addNewProperty);
-  append($$anchor, div);
-  pop();
-}
-delegate(["click", "change"]);
-
-// src/Modals/shared/SingleValueTableEditorContent.svelte
-var root4 = from_html(`<tr><td><input type="button" value="\u274C" class="not-a-button"/></td><td><input style="width: 100%;" type="text" placeholder="Property name"/></td></tr>`);
-var root_14 = from_html(`<div class="centerSettingContent"><table style="width: 100%"><thead><tr><th></th><th>Property</th></tr></thead><tbody></tbody></table> <div class="buttonContainer svelte-158j4ih"><button class="mod-cta svelte-158j4ih">Add</button></div></div>`);
-var $$css4 = {
-  hash: "svelte-158j4ih",
-  code: ".buttonContainer.svelte-158j4ih {display:flex;justify-content:center;margin-top:1rem;}button.svelte-158j4ih {margin-left:5px;margin-right:5px;font-size:15px;}"
-};
-function SingleValueTableEditorContent($$anchor, $$props) {
-  push($$props, true);
-  append_styles($$anchor, $$css4);
-  let initialProperties = prop($$props, "properties", 19, () => []);
-  let properties = state(proxy(untrack(() => [...initialProperties()])));
-  let propertyIndexes = user_derived(() => get2(properties).map((_, i) => i));
-  function saveProperties() {
-    $$props.save(snapshot(get2(properties)));
-  }
-  function addNewProperty() {
-    set(properties, [...get2(properties), ""], true);
-    saveProperties();
-  }
-  function removeProperty(i) {
-    set(properties, get2(properties).filter((_, index2) => index2 !== i), true);
-    saveProperties();
-  }
-  var div = root_14();
-  var table = child(div);
-  var tbody = sibling(child(table));
-  each(tbody, 20, () => get2(propertyIndexes), (i) => i, ($$anchor2, i) => {
-    var tr = root4();
-    var td = child(tr);
-    var input = child(td);
-    reset(td);
-    var td_1 = sibling(td);
-    var input_1 = child(td_1);
-    remove_input_defaults(input_1);
-    reset(td_1);
-    reset(tr);
-    delegated("click", input, () => removeProperty(i));
-    delegated("change", input_1, saveProperties);
-    bind_value(input_1, () => get2(properties)[i], ($$value) => get2(properties)[i] = $$value);
-    append($$anchor2, tr);
-  });
-  reset(tbody);
-  reset(table);
-  var div_1 = sibling(table, 2);
-  var button = child(div_1);
-  reset(div_1);
-  reset(div);
-  delegated("click", button, addNewProperty);
-  append($$anchor, div);
-  pop();
-}
-delegate(["click", "change"]);
-
-// src/svelteMount.ts
-function mountSvelteComponent(component2, target, props) {
-  return mount(
-    component2,
-    { target, props }
-  );
-}
-function unmountSvelteComponent(component2) {
-  if (!component2) return;
-  void unmount(component2);
-}
-
-// src/Settings/metaEditSettingsTab.ts
-function toggleHiddenEl(el, hidden) {
-  if (!el) return hidden;
-  el.classList.toggle("metaedit-hidden", !hidden);
-  return !hidden;
-}
-var MetaEditSettingsTab = class extends import_obsidian3.PluginSettingTab {
-  constructor(app, plugin) {
-    super(app, plugin);
-    this.svelteElements = [];
-    this.plugin = plugin;
-  }
-  display() {
-    const { containerEl } = this;
-    this.destroySvelteElements();
-    containerEl.empty();
-    new import_obsidian3.Setting(containerEl).setName("MetaEdit Settings").setHeading();
-    this.addProgressPropertiesSetting(containerEl);
-    this.addAutoPropertiesSetting(containerEl);
-    this.addEditMetaMenuSetting(containerEl);
-    this.addEditModeSetting(containerEl);
-    this.addKanbanHelperSetting(containerEl);
-    this.addUIElementsSetting(containerEl);
-  }
-  addProgressPropertiesSetting(containerEl) {
-    let hidden = true;
-    const setting = new import_obsidian3.Setting(containerEl).setName("Progress Properties").setDesc("Update properties automatically.").addToggle((toggle) => {
-      toggle.setTooltip("Toggle Progress Properties").setValue(this.plugin.settings.ProgressProperties.enabled).onChange(async (value) => {
-        if (value === this.plugin.settings.ProgressProperties.enabled) return;
-        this.plugin.settings.ProgressProperties.enabled = value;
-        this.plugin.toggleAutomators();
-        await this.plugin.saveSettings();
-      });
-    });
-    const div = setting.settingEl.createDiv({ cls: "metaedit-hidden" });
-    setting.settingEl.classList.add("metaedit-setting-with-details");
-    setting.addExtraButton((button) => button.onClick(() => hidden = toggleHiddenEl(div, hidden)));
-    const modal = mountSvelteComponent(
-      ProgressPropertiesModalContent,
-      div,
-      {
-        properties: this.plugin.settings.ProgressProperties.properties,
-        save: async (progressProperties) => {
-          this.plugin.settings.ProgressProperties.properties = progressProperties;
-          await this.plugin.saveSettings();
-        }
-      }
-    );
-    this.svelteElements.push(modal);
-  }
-  addAutoPropertiesSetting(containerEl) {
-    let hidden = true;
-    const setting = new import_obsidian3.Setting(containerEl).setName("Auto Properties").setDesc("Quick switch for values you know the value of.").addToggle((toggle) => {
-      toggle.setTooltip("Toggle Auto Properties").setValue(this.plugin.settings.AutoProperties.enabled).onChange(async (value) => {
-        if (value === this.plugin.settings.AutoProperties.enabled) return;
-        this.plugin.settings.AutoProperties.enabled = value;
-        await this.plugin.saveSettings();
-      });
-    });
-    const div = setting.settingEl.createDiv({ cls: "metaedit-hidden" });
-    setting.settingEl.classList.add("metaedit-setting-with-details");
-    setting.addExtraButton((b) => b.onClick(() => hidden = toggleHiddenEl(div, hidden)));
-    const modal = mountSvelteComponent(
-      AutoPropertiesModalContent,
-      div,
-      {
-        autoProperties: this.plugin.settings.AutoProperties.properties,
-        save: (operation) => this.saveAutoPropertiesOperation(operation)
-      }
-    );
-    this.svelteElements.push(modal);
-  }
-  async saveAutoPropertiesOperation(operation) {
-    try {
-      await this.plugin.updateSettings(() => {
-        const previousAutoProperties = this.plugin.settings.AutoProperties.properties;
-        const nextAutoProperties = applyAutoPropertySettingsOperation(previousAutoProperties, operation);
-        if (nextAutoProperties === false) return false;
-        this.plugin.settings.AutoProperties.properties = nextAutoProperties;
-        return () => {
-          if (this.plugin.settings.AutoProperties.properties === nextAutoProperties) {
-            this.plugin.settings.AutoProperties.properties = previousAutoProperties;
-          }
-        };
-      });
-    } catch (error) {
-      const reason = error instanceof Error ? error.message : String(error);
-      new import_obsidian3.Notice(`MetaEdit could not save the Auto Properties setting: ${reason}`);
-    }
-  }
-  addEditMetaMenuSetting(containerEl) {
-    let hidden = true;
-    const setting = new import_obsidian3.Setting(containerEl).setName("Edit Meta menu").setDesc("Control what the 'Edit Meta' menu lists. Enable it, then use the gear to hide specific properties by name or all of a note's file tags.").addToggle((toggle) => {
-      toggle.setTooltip("Toggle menu filtering").setValue(this.plugin.settings.IgnoredProperties.enabled).onChange(async (value) => {
-        if (value === this.plugin.settings.IgnoredProperties.enabled) return;
-        this.plugin.settings.IgnoredProperties.enabled = value;
-        await this.plugin.saveSettings();
-        this.display();
-      });
-    });
-    const div = this.plugin.settings.IgnoredProperties.enabled ? setting.settingEl.createDiv({ cls: "metaedit-hidden" }) : void 0;
-    if (div) setting.settingEl.classList.add("metaedit-setting-with-details");
-    setting.addExtraButton((b) => b.onClick(() => hidden = toggleHiddenEl(div, hidden)));
-    if (div) {
-      new import_obsidian3.Setting(div).setName("Hide file tags").setDesc("Hide the note's #tags from the menu, leaving only frontmatter and inline fields. A frontmatter 'tags' property stays editable.").addToggle((toggle) => {
-        toggle.setTooltip("Toggle hiding file tags").setValue(this.plugin.settings.IgnoredProperties.hideFileTags).onChange(async (value) => {
-          if (value === this.plugin.settings.IgnoredProperties.hideFileTags) return;
-          this.plugin.settings.IgnoredProperties.hideFileTags = value;
-          await this.plugin.saveSettings();
-        });
-      });
-      div.createEl("p", { text: "Hide specific properties by name:", cls: "metaedit-table-label" });
-      const modal = mountSvelteComponent(
-        SingleValueTableEditorContent,
-        div,
-        {
-          properties: this.plugin.settings.IgnoredProperties.properties,
-          save: async (ignoredProperties) => {
-            this.plugin.settings.IgnoredProperties.properties = ignoredProperties;
-            await this.plugin.saveSettings();
-          }
-        }
-      );
-      this.svelteElements.push(modal);
-    }
-  }
-  addEditModeSetting(containerEl) {
-    let bDivToggle = true;
-    let extraButtonEl;
-    const df = new DocumentFragment();
-    df.createEl("p", { text: "Single: property values are just one value. " });
-    df.createEl("p", { text: "Multi: properties are arrays. " });
-    df.createEl("p", { text: "Some Multi: all options are single, except those specified in the settings (click button)." });
-    const setting = new import_obsidian3.Setting(containerEl).setName("Edit Mode").setDesc(df);
-    const div = setting.settingEl.createDiv({ cls: "metaedit-hidden" });
-    setting.settingEl.classList.add("metaedit-setting-with-details");
-    setting.addDropdown((dropdown) => {
-      dropdown.addOption("All Single" /* AllSingle */, "All Single" /* AllSingle */).addOption("All Multi" /* AllMulti */, "All Multi" /* AllMulti */).addOption("Some Multi" /* SomeMulti */, "Some Multi" /* SomeMulti */).setValue(this.plugin.settings.EditMode.mode).onChange(async (value) => {
-        switch (value) {
-          case "All Multi" /* AllMulti */:
-            this.plugin.settings.EditMode.mode = "All Multi" /* AllMulti */;
-            toggleHiddenEl(extraButtonEl, false);
-            bDivToggle = toggleHiddenEl(div, false);
-            break;
-          case "All Single" /* AllSingle */:
-            this.plugin.settings.EditMode.mode = "All Single" /* AllSingle */;
-            toggleHiddenEl(extraButtonEl, false);
-            bDivToggle = toggleHiddenEl(div, false);
-            break;
-          case "Some Multi" /* SomeMulti */:
-            this.plugin.settings.EditMode.mode = "Some Multi" /* SomeMulti */;
-            toggleHiddenEl(extraButtonEl, true);
-            break;
-        }
-        await this.plugin.saveSettings();
-      });
-    }).addExtraButton((b) => {
-      extraButtonEl = b.extraSettingsEl;
-      b.setTooltip("Configure which properties are Multi.");
-      return b.onClick(() => bDivToggle = toggleHiddenEl(div, bDivToggle));
-    });
-    if (this.plugin.settings.EditMode.mode != "Some Multi" /* SomeMulti */) {
-      toggleHiddenEl(extraButtonEl, false);
-    }
-    const modal = mountSvelteComponent(
-      SingleValueTableEditorContent,
-      div,
-      {
-        properties: this.plugin.settings.EditMode.properties,
-        save: async (properties) => {
-          this.plugin.settings.EditMode.properties = properties;
-          await this.plugin.saveSettings();
-        }
-      }
-    );
-    this.svelteElements.push(modal);
-  }
-  hide() {
-    this.destroySvelteElements();
-    return super.hide();
-  }
-  destroySvelteElements() {
-    this.svelteElements.forEach(unmountSvelteComponent);
-    this.svelteElements = [];
-  }
-  addKanbanHelperSetting(containerEl) {
-    let hidden = true;
-    const setting = new import_obsidian3.Setting(containerEl).setName("Kanban Board Helper").setDesc("Update properties in links in kanban boards automatically when a card is moved to a new lane.").addToggle((toggle) => {
-      toggle.setTooltip("Toggle Kanban Helper").setValue(this.plugin.settings.KanbanHelper.enabled).onChange(async (value) => {
-        if (value === this.plugin.settings.KanbanHelper.enabled) return;
-        this.plugin.settings.KanbanHelper.enabled = value;
-        this.plugin.toggleAutomators();
-        await this.plugin.saveSettings();
-      });
-    });
-    const div = setting.settingEl.createDiv({ cls: "metaedit-hidden" });
-    setting.settingEl.classList.add("metaedit-setting-with-details");
-    setting.addExtraButton((button) => button.onClick(() => hidden = toggleHiddenEl(div, hidden)));
-    const modal = mountSvelteComponent(
-      KanbanHelperSettingContent,
-      div,
-      {
-        kanbanProperties: this.plugin.settings.KanbanHelper.boards,
-        boards: this.plugin.getFilesWithProperty("kanban-plugin"),
-        app: this.app,
-        save: async (kanbanProperties) => {
-          this.plugin.settings.KanbanHelper.boards = kanbanProperties;
-          await this.plugin.saveSettings();
-        }
-      }
-    );
-    this.svelteElements.push(modal);
-  }
-  addUIElementsSetting(containerEl) {
-    new import_obsidian3.Setting(containerEl).setName("UI Elements").setDesc("Toggle UI elements: the 'Edit Meta' right-click menu option.").addToggle((toggle) => {
-      toggle.setTooltip("Toggle UI elements").setValue(this.plugin.settings.UIElements.enabled).onChange(async (value) => {
-        if (value === this.plugin.settings.UIElements.enabled) return;
-        this.plugin.settings.UIElements.enabled = value;
-        if (value) {
-          this.plugin.linkMenu.registerEvent();
-        } else {
-          this.plugin.linkMenu.unregisterEvent();
-        }
-        await this.plugin.saveSettings();
-      });
-    });
-  }
-};
-
-// src/Modals/metaEditSuggester.ts
-var import_obsidian4 = require("obsidian");
-
-// src/constants.ts
-var newDataView = "New Dataview field";
-var newYaml = "New YAML property";
-var MAIN_SUGGESTER_OPTIONS = [
-  { key: newYaml, content: newYaml, type: 3 /* Option */ },
-  { key: newDataView, content: newDataView, type: 3 /* Option */ }
-];
 
 // src/Modals/GenericPrompt/valueSuggest.ts
 var ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
@@ -7489,6 +6826,31 @@ function getMetadataTypeManager(app) {
   return app.metadataTypeManager ?? null;
 }
 
+// src/Modals/GenericPrompt/genericTextSuggester.ts
+var GenericTextSuggester = class extends import_obsidian2.AbstractInputSuggest {
+  constructor(app, inputEl, items) {
+    super(app, inputEl);
+    this.inputEl = inputEl;
+    this.items = items;
+    this.onSelect((item) => this.acceptSuggestion(item));
+  }
+  getSuggestions(inputStr) {
+    return filterSuggestions(this.items, inputStr);
+  }
+  acceptSuggestion(item) {
+    this.setValue(item);
+    this.inputEl.trigger("input");
+    this.close();
+  }
+  renderSuggestion(value, el) {
+    if (value)
+      el.setText(value);
+  }
+  refreshSuggestions() {
+    this.inputEl.trigger("input");
+  }
+};
+
 // src/Modals/GenericPrompt/promptValueContext.ts
 var pending2 = null;
 function setPendingValueContext(context) {
@@ -7499,6 +6861,538 @@ function consumePendingValueContext() {
   pending2 = null;
   return context;
 }
+
+// src/Modals/GenericPrompt/GenericPromptContent.svelte
+var root2 = from_html(`<input class="metaEditPromptInput metadata-input metadata-input-text mod-date" style="width: 100%;" type="date"/>`);
+var root_12 = from_html(`<input class="metaEditPromptInput metadata-input metadata-input-text mod-datetime" style="width: 100%;" type="datetime-local"/>`);
+var root_22 = from_html(`<input class="metaEditPromptInput" style="width: 100%;" type="text"/>`);
+var root_32 = from_html(`<div class="metaEditPrompt"><h1 style="text-align: center"> </h1> <!></div>`);
+function GenericPromptContent($$anchor, $$props) {
+  push($$props, true);
+  let header = prop($$props, "header", 3, ""), placeholder = prop($$props, "placeholder", 3, ""), propValue = prop($$props, "value", 3, ""), suggestValues = prop($$props, "suggestValues", 19, () => []);
+  const initialApp = untrack(() => $$props.app);
+  const initialSuggestValues = untrack(() => suggestValues());
+  const initialValue = untrack(() => propValue());
+  let value = state(proxy(initialValue));
+  let suggester;
+  let inputEl = state(void 0);
+  const context = consumePendingValueContext();
+  const hasExplicitSuggestions = Array.isArray(initialSuggestValues) && initialSuggestValues.length > 0;
+  const dateInputType = !hasExplicitSuggestions && context ? getDateInputType(context.app, context.key, initialValue, context.type) : null;
+  const datetimeStep = dateInputType === "datetime" && /T\d{2}:\d{2}:\d{2}/.test(initialValue) ? "1" : void 0;
+  let didInitialise = false;
+  user_effect(() => {
+    const el = get(inputEl);
+    if (!el || didInitialise) return;
+    didInitialise = true;
+    let suggestions = [];
+    if (!dateInputType) {
+      suggestions = hasExplicitSuggestions ? initialSuggestValues : context ? getValueSuggestions(context.app, context.key, context.type, context.tagMode) : [];
+    }
+    el.focus();
+    if (!dateInputType) el.select();
+    if (!dateInputType && suggestions.length > 0) {
+      suggester = new GenericTextSuggester(initialApp, el, suggestions);
+    }
+    if (suggester && !initialValue) suggester.refreshSuggestions();
+    return () => {
+      suggester?.close();
+      suggester = void 0;
+    };
+  });
+  function submit(evt) {
+    if (evt.key === "Enter") {
+      evt.preventDefault();
+      $$props.onSubmit(get(value));
+    }
+  }
+  var div = root_32();
+  var h1 = child(div);
+  var text2 = only_child(h1, true);
+  var node = sibling(h1, 2);
+  {
+    var consequent = ($$anchor2) => {
+      var input = root2();
+      remove_input_defaults(input);
+      bind_this(input, ($$value) => set(inputEl, $$value), () => get(inputEl));
+      delegated("keydown", input, submit);
+      bind_value(input, () => get(value), ($$value) => set(value, $$value));
+      append($$anchor2, input);
+    };
+    var consequent_1 = ($$anchor2) => {
+      var input_1 = root_12();
+      remove_input_defaults(input_1);
+      bind_this(input_1, ($$value) => set(inputEl, $$value), () => get(inputEl));
+      template_effect(() => set_attribute2(input_1, "step", datetimeStep));
+      delegated("keydown", input_1, submit);
+      bind_value(input_1, () => get(value), ($$value) => set(value, $$value));
+      append($$anchor2, input_1);
+    };
+    var alternate = ($$anchor2) => {
+      var input_2 = root_22();
+      remove_input_defaults(input_2);
+      bind_this(input_2, ($$value) => set(inputEl, $$value), () => get(inputEl));
+      template_effect(() => set_attribute2(input_2, "placeholder", placeholder()));
+      delegated("keydown", input_2, submit);
+      bind_value(input_2, () => get(value), ($$value) => set(value, $$value));
+      append($$anchor2, input_2);
+    };
+    if_block(node, ($$render) => {
+      if (dateInputType === "date") $$render(consequent);
+      else if (dateInputType === "datetime") $$render(consequent_1, 1);
+      else $$render(alternate, -1);
+    });
+  }
+  reset(div);
+  template_effect(() => set_text(text2, header()));
+  append($$anchor, div);
+  pop();
+}
+delegate(["keydown"]);
+
+// src/svelteMount.ts
+function mountSvelteComponent(component2, target, props) {
+  return mount(component2, { target, props });
+}
+function unmountSvelteComponent(component2) {
+  if (!component2) return;
+  void unmount(component2);
+}
+
+// src/Modals/GenericPrompt/GenericPrompt.ts
+var GenericPrompt = class _GenericPrompt extends import_obsidian3.Modal {
+  constructor(app, header, placeholder, value, suggestValues) {
+    super(app);
+    this.didSubmit = false;
+    this.modalContent = mountSvelteComponent(
+      GenericPromptContent,
+      this.contentEl,
+      {
+        app,
+        header,
+        placeholder,
+        value,
+        suggestValues,
+        onSubmit: (input) => {
+          this.input = input;
+          this.didSubmit = true;
+          this.close();
+        }
+      }
+    );
+    this.waitForClose = new Promise(
+      (resolve) => {
+        this.resolvePromise = resolve;
+      }
+    );
+    this.open();
+  }
+  static Prompt(app, header, placeholder, value, suggestValues) {
+    const newPromptModal = new _GenericPrompt(app, header, placeholder, value, suggestValues);
+    return newPromptModal.waitForClose;
+  }
+  onOpen() {
+    super.onOpen();
+    const modalPrompt = activeDocument.querySelector(".metaEditPrompt");
+    const modalInput = modalPrompt?.querySelector(".metaEditPromptInput");
+    modalInput?.focus();
+    if (modalInput?.type === "text") modalInput.select();
+  }
+  onClose() {
+    super.onClose();
+    unmountSvelteComponent(this.modalContent);
+    if (!this.didSubmit) this.resolvePromise(null);
+    else this.resolvePromise(this.input);
+  }
+};
+
+// src/Modals/GenericSuggester/GenericSuggester.ts
+var import_obsidian4 = require("obsidian");
+var GenericSuggester = class _GenericSuggester extends import_obsidian4.FuzzySuggestModal {
+  constructor(app, displayItems, items) {
+    super(app);
+    this.displayItems = displayItems;
+    this.items = items;
+    this.didChoose = false;
+    this.promise = new Promise(
+      (resolve) => this.resolvePromise = resolve
+    );
+    this.open();
+  }
+  static Suggest(app, displayItems, items) {
+    const newSuggester = new _GenericSuggester(app, displayItems, items);
+    return newSuggester.promise;
+  }
+  getItemText(item) {
+    return this.displayItems[this.items.indexOf(item)];
+  }
+  getItems() {
+    return this.items;
+  }
+  onChooseItem(item, _evt) {
+    this.didChoose = true;
+    this.resolvePromise(item);
+  }
+  onClose() {
+    super.onClose();
+    queueMicrotask(() => {
+      if (!this.didChoose) this.resolvePromise("");
+    });
+  }
+};
+
+// src/Settings/metaEditSettingsTab.ts
+var controls = {
+  "UIElements.enabled": {
+    get: (s) => s.UIElements.enabled,
+    set: (s, v) => s.UIElements.enabled = v === true,
+    apply: (plugin) => plugin.settings.UIElements.enabled ? plugin.linkMenu.registerEvent() : plugin.linkMenu.unregisterEvent()
+  },
+  "EditMode.mode": {
+    get: (s) => s.EditMode.mode,
+    set: (s, v) => s.EditMode.mode = v
+  },
+  "IgnoredProperties.enabled": {
+    get: (s) => s.IgnoredProperties.enabled,
+    set: (s, v) => s.IgnoredProperties.enabled = v === true
+  },
+  "IgnoredProperties.hideFileTags": {
+    get: (s) => s.IgnoredProperties.hideFileTags,
+    set: (s, v) => s.IgnoredProperties.hideFileTags = v === true
+  },
+  "AutoProperties.enabled": {
+    get: (s) => s.AutoProperties.enabled,
+    set: (s, v) => s.AutoProperties.enabled = v === true
+  },
+  "ProgressProperties.enabled": {
+    get: (s) => s.ProgressProperties.enabled,
+    set: (s, v) => s.ProgressProperties.enabled = v === true,
+    apply: (plugin) => plugin.toggleAutomators()
+  },
+  "KanbanHelper.enabled": {
+    get: (s) => s.KanbanHelper.enabled,
+    set: (s, v) => s.KanbanHelper.enabled = v === true,
+    apply: (plugin) => plugin.toggleAutomators()
+  }
+};
+function isControlKey(key2) {
+  return Object.prototype.hasOwnProperty.call(controls, key2);
+}
+var progressTypeLabels = {
+  ["Total Tasks" /* TaskTotal */]: "Total tasks",
+  ["Completed Tasks" /* TaskComplete */]: "Completed tasks",
+  ["Incomplete Tasks" /* TaskIncomplete */]: "Incomplete tasks"
+};
+function removeEntry(entries, entry) {
+  const index2 = entry === void 0 ? -1 : entries.indexOf(entry);
+  if (index2 !== -1) entries.splice(index2, 1);
+}
+var SvelteSettingPage = class extends import_obsidian5.SettingPage {
+  constructor(mountContent) {
+    super();
+    this.mountContent = mountContent;
+    this.mounted = null;
+  }
+  display() {
+    unmountSvelteComponent(this.mounted);
+    this.containerEl.empty();
+    this.mounted = this.mountContent(this.containerEl);
+  }
+  hide() {
+    unmountSvelteComponent(this.mounted);
+    this.mounted = null;
+    super.hide();
+  }
+};
+var MetaEditSettingsTab = class extends import_obsidian5.PluginSettingTab {
+  constructor(app, plugin) {
+    super(app, plugin);
+    this.plugin = plugin;
+    this.signature = this.structureSignature();
+  }
+  /**
+   * Obsidian renders from a snapshot of getSettingDefinitions() until update()
+   * rebuilds it. Rebuild after any settings write - from this tab, the API, or a
+   * prompt - that adds, removes, or retypes a list entry, but not on toggles or
+   * while typing, so a rebuild never steals focus.
+   */
+  syncWithSettings() {
+    const next2 = this.structureSignature();
+    if (next2 === this.signature) return;
+    this.signature = next2;
+    this.update();
+  }
+  structureSignature() {
+    const s = this.plugin.settings;
+    return JSON.stringify([
+      s.EditMode.properties,
+      s.IgnoredProperties.properties,
+      s.ProgressProperties.properties,
+      s.AutoProperties.properties.length,
+      s.KanbanHelper.boards.map((board) => board.boardName)
+    ]);
+  }
+  getControlValue(key2) {
+    return isControlKey(key2) ? controls[key2].get(this.plugin.settings) : void 0;
+  }
+  async setControlValue(key2, value) {
+    if (!isControlKey(key2)) return;
+    const control = controls[key2];
+    const saved = await this.persist((settings) => {
+      const previous = control.get(settings);
+      control.set(settings, value);
+      return () => control.set(settings, previous);
+    });
+    if (saved) control.apply?.(this.plugin);
+    this.refreshDomState();
+  }
+  getSettingDefinitions() {
+    const settings = this.plugin.settings;
+    const count = (items) => () => String(items().length);
+    return [
+      {
+        type: "group",
+        heading: "Editing",
+        items: [
+          {
+            name: "Edit mode",
+            desc: "Whether property values are saved as one value or as a list.",
+            control: {
+              type: "dropdown",
+              key: "EditMode.mode",
+              options: {
+                ["All Single" /* AllSingle */]: "One value",
+                ["All Multi" /* AllMulti */]: "List",
+                ["Some Multi" /* SomeMulti */]: "List for chosen properties"
+              }
+            }
+          },
+          {
+            type: "page",
+            name: "List properties",
+            visible: () => settings.EditMode.mode === "Some Multi" /* SomeMulti */,
+            displayValue: count(() => settings.EditMode.properties),
+            items: [this.propertyNameList((s) => s.EditMode.properties)]
+          },
+          {
+            name: "Auto properties",
+            desc: "Pick from preset values when you edit these properties.",
+            control: { type: "toggle", key: "AutoProperties.enabled" }
+          },
+          {
+            type: "page",
+            name: "Preset values",
+            visible: () => settings.AutoProperties.enabled,
+            displayValue: count(() => settings.AutoProperties.properties),
+            page: () => new SvelteSettingPage((target) => mountSvelteComponent(
+              AutoPropertiesModalContent,
+              target,
+              {
+                autoProperties: settings.AutoProperties.properties,
+                save: (operation) => this.saveAutoPropertiesOperation(operation)
+              }
+            ))
+          }
+        ]
+      },
+      {
+        type: "group",
+        heading: "Menu",
+        items: [
+          {
+            name: "Right-click menu",
+            desc: "Show Edit Meta when you right-click a note or link.",
+            control: { type: "toggle", key: "UIElements.enabled" }
+          },
+          {
+            name: "Hide properties",
+            desc: "Leave chosen properties out of the property menu.",
+            control: { type: "toggle", key: "IgnoredProperties.enabled" }
+          },
+          {
+            name: "Hide file tags",
+            desc: "A frontmatter tags property stays in the menu.",
+            visible: () => settings.IgnoredProperties.enabled,
+            control: { type: "toggle", key: "IgnoredProperties.hideFileTags" }
+          },
+          {
+            type: "page",
+            name: "Hidden properties",
+            visible: () => settings.IgnoredProperties.enabled,
+            displayValue: count(() => settings.IgnoredProperties.properties),
+            items: [this.propertyNameList((s) => s.IgnoredProperties.properties)]
+          }
+        ]
+      },
+      {
+        type: "group",
+        heading: "Automation",
+        items: [
+          {
+            name: "Progress properties",
+            desc: "Keep task counts in a note's properties up to date.",
+            control: { type: "toggle", key: "ProgressProperties.enabled" }
+          },
+          {
+            type: "page",
+            name: "Tracked task counts",
+            visible: () => settings.ProgressProperties.enabled,
+            displayValue: count(() => settings.ProgressProperties.properties),
+            items: [this.progressPropertyList()]
+          },
+          {
+            name: "Kanban board helper",
+            desc: "When a card moves to another lane, update a property in the note it links to.",
+            control: { type: "toggle", key: "KanbanHelper.enabled" }
+          },
+          {
+            type: "page",
+            name: "Boards",
+            visible: () => settings.KanbanHelper.enabled,
+            displayValue: count(() => settings.KanbanHelper.boards),
+            items: [this.kanbanBoardList()]
+          }
+        ]
+      }
+    ];
+  }
+  propertyNameList(list) {
+    const names = [...list(this.plugin.settings)];
+    return {
+      type: "list",
+      emptyState: "No properties yet.",
+      addItem: {
+        name: "Add property",
+        action: async () => {
+          const name = (await GenericPrompt.Prompt(this.app, "Property name"))?.trim();
+          if (!name || names.includes(name)) return;
+          await this.editList(list, (entries) => entries.push(name));
+        }
+      },
+      onDelete: (index2) => void this.editList(list, (entries) => removeEntry(entries, names[index2])),
+      items: names.map((name) => ({ name }))
+    };
+  }
+  progressPropertyList() {
+    const list = (settings) => settings.ProgressProperties.properties;
+    const properties = [...list(this.plugin.settings)];
+    return {
+      type: "list",
+      emptyState: "No task counts yet.",
+      addItem: {
+        name: "Add property",
+        action: async () => {
+          const name = (await GenericPrompt.Prompt(this.app, "Property name"))?.trim();
+          if (!name || properties.some((property) => property.name === name)) return;
+          await this.editList(list, (entries) => entries.push({ name, type: "Total Tasks" /* TaskTotal */ }));
+        }
+      },
+      onDelete: (index2) => void this.editList(list, (entries) => removeEntry(entries, properties[index2])),
+      items: properties.map((property) => ({
+        name: property.name,
+        render: (setting) => {
+          setting.addDropdown((dropdown) => dropdown.addOptions(progressTypeLabels).setValue(property.type).onChange((value) => void this.persist(() => {
+            const previous = property.type;
+            property.type = value;
+            return () => property.type = previous;
+          })));
+        }
+      }))
+    };
+  }
+  kanbanBoardList() {
+    const list = (settings) => settings.KanbanHelper.boards;
+    const boards = [...list(this.plugin.settings)];
+    return {
+      type: "list",
+      emptyState: "No boards yet.",
+      addItem: {
+        name: "Add board",
+        action: async () => {
+          const candidates = this.plugin.getFilesWithProperty("kanban-plugin").map((file) => file.basename).filter((name) => !boards.some((board) => board.boardName === name));
+          if (candidates.length === 0) {
+            new import_obsidian5.Notice("MetaEdit found no other Kanban boards in this vault.");
+            return;
+          }
+          const boardName = await GenericSuggester.Suggest(this.app, candidates, candidates);
+          if (!boardName) return;
+          await this.editList(list, (entries) => entries.push({ boardName, property: "" }));
+        }
+      },
+      onDelete: (index2) => void this.editList(list, (entries) => removeEntry(entries, boards[index2])),
+      items: boards.map((board) => ({
+        name: board.boardName,
+        render: (setting) => {
+          setting.setDesc(this.kanbanLanes(board.boardName));
+          setting.addText((text2) => text2.setPlaceholder("Property in linked notes").setValue(board.property).onChange((value) => void this.persist(() => {
+            const previous = board.property;
+            board.property = value.trim();
+            return () => board.property = previous;
+          })));
+        }
+      }))
+    };
+  }
+  kanbanLanes(boardName) {
+    const file = this.plugin.getFilesWithProperty("kanban-plugin").find((board) => board.basename === boardName);
+    if (!file) return "Board not found.";
+    const lanes = this.app.metadataCache.getFileCache(file)?.headings?.map((heading) => heading.heading) ?? [];
+    return lanes.length > 0 ? `Lanes: ${lanes.join(", ")}` : "No lanes yet.";
+  }
+  /**
+   * Save a settings change through the serialized writer. `mutate` returns how to
+   * undo it; a failed save undoes it and re-renders, so memory and the tab match
+   * disk. Returns whether the change reached disk.
+   */
+  async persist(mutate2) {
+    try {
+      await this.plugin.updateSettings(() => mutate2(this.plugin.settings));
+      return true;
+    } catch (error) {
+      const reason = error instanceof Error ? error.message : String(error);
+      new import_obsidian5.Notice(`MetaEdit could not save the setting: ${reason}`);
+      this.update();
+      return false;
+    }
+  }
+  editList(list, change) {
+    return this.persist((settings) => {
+      const entries = list(settings);
+      const previous = [...entries];
+      change(entries);
+      return () => entries.splice(0, entries.length, ...previous);
+    });
+  }
+  async saveAutoPropertiesOperation(operation) {
+    try {
+      await this.plugin.updateSettings(() => {
+        const previousAutoProperties = this.plugin.settings.AutoProperties.properties;
+        const nextAutoProperties = applyAutoPropertySettingsOperation(previousAutoProperties, operation);
+        if (nextAutoProperties === false) return false;
+        this.plugin.settings.AutoProperties.properties = nextAutoProperties;
+        return () => {
+          if (this.plugin.settings.AutoProperties.properties === nextAutoProperties) {
+            this.plugin.settings.AutoProperties.properties = previousAutoProperties;
+          }
+        };
+      });
+    } catch (error) {
+      const reason = error instanceof Error ? error.message : String(error);
+      new import_obsidian5.Notice(`MetaEdit could not save the Auto Properties setting: ${reason}`);
+    }
+  }
+};
+
+// src/Modals/metaEditSuggester.ts
+var import_obsidian6 = require("obsidian");
+
+// src/constants.ts
+var newDataView = "New Dataview field";
+var newYaml = "New YAML property";
+var MAIN_SUGGESTER_OPTIONS = [
+  { key: newYaml, content: newYaml, type: 3 /* Option */ },
+  { key: newDataView, content: newDataView, type: 3 /* Option */ }
+];
 
 // src/Modals/menuFilter.ts
 function filterMenuItems(data, opts) {
@@ -7544,15 +7438,15 @@ function formatYamlPath(path) {
     return label ? `${label}.${segment}` : segment;
   }, "");
 }
-function getYamlPath(root7, path) {
+function getYamlPath(root4, path) {
   const resolvedPath = parseYamlPath(path);
-  let current = root7;
+  let current = root4;
   for (const segment of resolvedPath) {
     current = readYamlPathSegment(current, segment, formatYamlPath(resolvedPath));
   }
   return current;
 }
-function setYamlPath(root7, path, value, options = {}) {
+function setYamlPath(root4, path, value, options = {}) {
   const resolvedPath = parseYamlPath(path);
   for (const segment of resolvedPath) {
     if (typeof segment === "string" && isReservedFrontmatterKey(segment)) {
@@ -7561,7 +7455,7 @@ function setYamlPath(root7, path, value, options = {}) {
       );
     }
   }
-  let current = root7;
+  let current = root4;
   for (let idx = 0; idx < resolvedPath.length; idx++) {
     const segment = resolvedPath[idx];
     const isLeaf = idx === resolvedPath.length - 1;
@@ -7677,7 +7571,7 @@ var DELETE_PROPERTY_ICON = "trash-2";
 var TRANSFORM_PROPERTY_ICON = "replace";
 var DELETE_PROPERTY_TOOLTIP = "Delete property";
 var TRANSFORM_PROPERTY_TOOLTIP = "Transform to YAML \u21C4 Dataview";
-var MetaEditSuggester = class _MetaEditSuggester extends import_obsidian4.FuzzySuggestModal {
+var MetaEditSuggester = class _MetaEditSuggester extends import_obsidian6.FuzzySuggestModal {
   constructor(app, plugin, data, file, controller) {
     super(app);
     this.file = file;
@@ -7758,7 +7652,7 @@ var MetaEditSuggester = class _MetaEditSuggester extends import_obsidian4.FuzzyS
       const { item: property } = item;
       if (!_MetaEditSuggester.canStructureEdit(property)) return;
       if (property.type !== 0 /* YAML */ && isReservedFrontmatterKey(property.key)) {
-        new import_obsidian4.Notice(`MetaEdit: "${property.key}" is a reserved property name and can't be a YAML property.`);
+        new import_obsidian6.Notice(`MetaEdit: "${property.key}" is a reserved property name and can't be a YAML property.`);
         this.close();
         return;
       }
@@ -7770,7 +7664,7 @@ var MetaEditSuggester = class _MetaEditSuggester extends import_obsidian4.FuzzyS
         }
       } catch (error) {
         const reason = error instanceof Error ? error.message : String(error);
-        new import_obsidian4.Notice(`MetaEdit could not transform '${property.key}': ${reason}. It may have been removed - reopen the note to check.`);
+        new import_obsidian6.Notice(`MetaEdit could not transform '${property.key}': ${reason}. It may have been removed - reopen the note to check.`);
       } finally {
         this.close();
       }
@@ -7789,8 +7683,8 @@ var MetaEditSuggester = class _MetaEditSuggester extends import_obsidian4.FuzzyS
     itemButton.type = "button";
     itemButton.classList.add("clickable-icon", "metaedit-suggester-action-button");
     itemButton.setAttribute("aria-label", tooltip);
-    (0, import_obsidian4.setIcon)(itemButton, iconName);
-    (0, import_obsidian4.setTooltip)(itemButton, tooltip);
+    (0, import_obsidian6.setIcon)(itemButton, iconName);
+    (0, import_obsidian6.setTooltip)(itemButton, tooltip);
     itemButton.addEventListener("click", callback);
   }
   static canStructureEdit(property) {
@@ -7812,7 +7706,7 @@ var MetaEditSuggester = class _MetaEditSuggester extends import_obsidian4.FuzzyS
 };
 
 // src/parser.ts
-var import_obsidian5 = require("obsidian");
+var import_obsidian7 = require("obsidian");
 var INLINE_FIELD_WRAPPERS = Object.freeze({ "[": "]", "(": ")" });
 var FULL_LINE_PREFIX = /^\s*(?:>\s+)*(?:[-*+]\s+|\d+[.)]\s+)?/;
 var CODE_FENCE = /^\s{0,3}(`{3,}|~{3,})/;
@@ -7970,13 +7864,13 @@ var MetaEditParser = class {
     const frontmatterInfo = this.getFrontmatterInfo(content);
     if (!frontmatterInfo?.exists) return null;
     try {
-      return (0, import_obsidian5.parseYaml)(frontmatterInfo.frontmatter);
+      return (0, import_obsidian7.parseYaml)(frontmatterInfo.frontmatter);
     } catch {
       return null;
     }
   }
   getFrontmatterInfo(content) {
-    const info = (0, import_obsidian5.getFrontMatterInfo)(content);
+    const info = (0, import_obsidian7.getFrontMatterInfo)(content);
     const legacyDotInfo = this.getLegacyDotCloseFrontmatterInfo(content);
     if (legacyDotInfo && (!info.exists || legacyDotInfo.contentStart < info.contentStart))
       return legacyDotInfo;
@@ -8195,217 +8089,38 @@ var MetaEditParser = class {
   }
 };
 
-// src/Modals/GenericPrompt/GenericPrompt.ts
-var import_obsidian7 = require("obsidian");
-
-// src/Modals/GenericPrompt/genericTextSuggester.ts
-var import_obsidian6 = require("obsidian");
-var GenericTextSuggester = class extends import_obsidian6.AbstractInputSuggest {
-  constructor(app, inputEl, items) {
-    super(app, inputEl);
-    this.inputEl = inputEl;
-    this.items = items;
-    this.onSelect((item) => this.acceptSuggestion(item));
-  }
-  getSuggestions(inputStr) {
-    return filterSuggestions(this.items, inputStr);
-  }
-  acceptSuggestion(item) {
-    this.setValue(item);
-    this.inputEl.trigger("input");
-    this.close();
-  }
-  renderSuggestion(value, el) {
-    if (value)
-      el.setText(value);
-  }
-  refreshSuggestions() {
-    this.inputEl.trigger("input");
-  }
-};
-
-// src/Modals/GenericPrompt/GenericPromptContent.svelte
-var root5 = from_html(`<input class="metaEditPromptInput metadata-input metadata-input-text mod-date" style="width: 100%;" type="date"/>`);
-var root_15 = from_html(`<input class="metaEditPromptInput metadata-input metadata-input-text mod-datetime" style="width: 100%;" type="datetime-local"/>`);
-var root_23 = from_html(`<input class="metaEditPromptInput" style="width: 100%;" type="text"/>`);
-var root_32 = from_html(`<div class="metaEditPrompt"><h1 style="text-align: center"> </h1> <!></div>`);
-function GenericPromptContent($$anchor, $$props) {
-  push($$props, true);
-  let header = prop($$props, "header", 3, ""), placeholder = prop($$props, "placeholder", 3, ""), propValue = prop($$props, "value", 3, ""), suggestValues = prop($$props, "suggestValues", 19, () => []);
-  const initialApp = untrack(() => $$props.app);
-  const initialSuggestValues = untrack(() => suggestValues());
-  const initialValue = untrack(() => propValue());
-  let value = state(proxy(initialValue));
-  let suggester;
-  let inputEl = state(void 0);
-  const context = consumePendingValueContext();
-  const hasExplicitSuggestions = Array.isArray(initialSuggestValues) && initialSuggestValues.length > 0;
-  const dateInputType = !hasExplicitSuggestions && context ? getDateInputType(context.app, context.key, initialValue, context.type) : null;
-  const datetimeStep = dateInputType === "datetime" && /T\d{2}:\d{2}:\d{2}/.test(initialValue) ? "1" : void 0;
-  let didInitialise = false;
-  user_effect(() => {
-    const el = get2(inputEl);
-    if (!el || didInitialise) return;
-    didInitialise = true;
-    let suggestions = [];
-    if (!dateInputType) {
-      suggestions = hasExplicitSuggestions ? initialSuggestValues : context ? getValueSuggestions(context.app, context.key, context.type, context.tagMode) : [];
-    }
-    el.focus();
-    if (!dateInputType) el.select();
-    if (!dateInputType && suggestions.length > 0) {
-      suggester = new GenericTextSuggester(initialApp, el, suggestions);
-    }
-    if (suggester && !initialValue) suggester.refreshSuggestions();
-    return () => {
-      suggester?.close();
-      suggester = void 0;
-    };
-  });
-  function submit(evt) {
-    if (evt.key === "Enter") {
-      evt.preventDefault();
-      $$props.onSubmit(get2(value));
-    }
-  }
-  var div = root_32();
-  var h1 = child(div);
-  var text2 = child(h1, true);
-  reset(h1);
-  var node = sibling(h1, 2);
-  {
-    var consequent = ($$anchor2) => {
-      var input = root5();
-      remove_input_defaults(input);
-      bind_this(input, ($$value) => set(inputEl, $$value), () => get2(inputEl));
-      delegated("keydown", input, submit);
-      bind_value(input, () => get2(value), ($$value) => set(value, $$value));
-      append($$anchor2, input);
-    };
-    var consequent_1 = ($$anchor2) => {
-      var input_1 = root_15();
-      remove_input_defaults(input_1);
-      bind_this(input_1, ($$value) => set(inputEl, $$value), () => get2(inputEl));
-      template_effect(() => set_attribute2(input_1, "step", datetimeStep));
-      delegated("keydown", input_1, submit);
-      bind_value(input_1, () => get2(value), ($$value) => set(value, $$value));
-      append($$anchor2, input_1);
-    };
-    var alternate = ($$anchor2) => {
-      var input_2 = root_23();
-      remove_input_defaults(input_2);
-      bind_this(input_2, ($$value) => set(inputEl, $$value), () => get2(inputEl));
-      template_effect(() => set_attribute2(input_2, "placeholder", placeholder()));
-      delegated("keydown", input_2, submit);
-      bind_value(input_2, () => get2(value), ($$value) => set(value, $$value));
-      append($$anchor2, input_2);
-    };
-    if_block(node, ($$render) => {
-      if (dateInputType === "date") $$render(consequent);
-      else if (dateInputType === "datetime") $$render(consequent_1, 1);
-      else $$render(alternate, -1);
-    });
-  }
-  reset(div);
-  template_effect(() => set_text(text2, header()));
-  append($$anchor, div);
-  pop();
-}
-delegate(["keydown"]);
-
-// src/Modals/GenericPrompt/GenericPrompt.ts
-var GenericPrompt = class _GenericPrompt extends import_obsidian7.Modal {
-  constructor(app, header, placeholder, value, suggestValues) {
-    super(app);
-    this.didSubmit = false;
-    this.modalContent = mountSvelteComponent(
-      GenericPromptContent,
-      this.contentEl,
-      {
-        app,
-        header,
-        placeholder,
-        value,
-        suggestValues,
-        onSubmit: (input) => {
-          this.input = input;
-          this.didSubmit = true;
-          this.close();
-        }
-      }
-    );
-    this.waitForClose = new Promise(
-      (resolve) => {
-        this.resolvePromise = resolve;
-      }
-    );
-    this.open();
-  }
-  static Prompt(app, header, placeholder, value, suggestValues) {
-    const newPromptModal = new _GenericPrompt(app, header, placeholder, value, suggestValues);
-    return newPromptModal.waitForClose;
-  }
-  onOpen() {
-    super.onOpen();
-    const modalPrompt = activeDocument.querySelector(".metaEditPrompt");
-    const modalInput = modalPrompt?.querySelector(".metaEditPromptInput");
-    modalInput?.focus();
-    if (modalInput?.type === "text") modalInput.select();
-  }
-  onClose() {
-    super.onClose();
-    unmountSvelteComponent(this.modalContent);
-    if (!this.didSubmit) this.resolvePromise(null);
-    else this.resolvePromise(this.input);
-  }
-};
-
-// src/Modals/GenericSuggester/GenericSuggester.ts
-var import_obsidian8 = require("obsidian");
-var GenericSuggester = class _GenericSuggester extends import_obsidian8.FuzzySuggestModal {
-  constructor(app, displayItems, items) {
-    super(app);
-    this.displayItems = displayItems;
-    this.items = items;
-    this.didChoose = false;
-    this.promise = new Promise(
-      (resolve) => this.resolvePromise = resolve
-    );
-    this.open();
-  }
-  static Suggest(app, displayItems, items) {
-    const newSuggester = new _GenericSuggester(app, displayItems, items);
-    return newSuggester.promise;
-  }
-  getItemText(item) {
-    return this.displayItems[this.items.indexOf(item)];
-  }
-  getItems() {
-    return this.items;
-  }
-  onChooseItem(item, _evt) {
-    this.didChoose = true;
-    this.resolvePromise(item);
-  }
-  onClose() {
-    super.onClose();
-    queueMicrotask(() => {
-      if (!this.didChoose) this.resolvePromise("");
-    });
-  }
-};
-
 // src/metaController.ts
-var import_obsidian16 = require("obsidian");
+var import_obsidian15 = require("obsidian");
+
+// src/logger/logManager.ts
+var _LogManager = class _LogManager {
+  register(logger) {
+    _LogManager.loggers.push(logger);
+    return this;
+  }
+  logError(message) {
+    _LogManager.loggers.forEach((logger) => logger.logError(message));
+    throw new Error();
+  }
+  logWarning(message) {
+    _LogManager.loggers.forEach((logger) => logger.logWarning(message));
+  }
+  logMessage(message) {
+    _LogManager.loggers.forEach((logger) => logger.logMessage(message));
+  }
+};
+_LogManager.loggers = [];
+var LogManager = _LogManager;
+var log = new LogManager();
 
 // src/Modals/AutoPropertyValueModal/AutoPropertyValueModal.ts
-var import_obsidian10 = require("obsidian");
+var import_obsidian9 = require("obsidian");
 
 // src/Modals/AutoPropertyValueModal/AutoPropertyValueModalContent.svelte
-var import_obsidian9 = require("obsidian");
-var root6 = from_html(`<div class="metaedit-ap-prompt-desc svelte-rukrzs"> </div>`);
-var root_16 = from_html(`<span class="metaedit-ap-prompt-tag svelte-rukrzs">new</span>`);
-var root_24 = from_html(`<label class="metaedit-ap-prompt-row metaedit-ap-prompt-check svelte-rukrzs"><input type="checkbox" class="svelte-rukrzs"/> <span class="metaedit-ap-prompt-row-label svelte-rukrzs"> </span> <!></label>`);
+var import_obsidian8 = require("obsidian");
+var root3 = from_html(`<div class="metaedit-ap-prompt-desc svelte-rukrzs"> </div>`);
+var root_13 = from_html(`<span class="metaedit-ap-prompt-tag svelte-rukrzs">new</span>`);
+var root_23 = from_html(`<label class="metaedit-ap-prompt-row metaedit-ap-prompt-check svelte-rukrzs"><input type="checkbox" class="svelte-rukrzs"/> <span class="metaedit-ap-prompt-row-label svelte-rukrzs"> </span> <!></label>`);
 var root_33 = from_html(`<div class="metaedit-ap-prompt-empty svelte-rukrzs">No values yet - type one above and press Enter.</div>`);
 var root_42 = from_html(`<label class="metaedit-ap-prompt-savenew svelte-rukrzs"><input type="checkbox"/> Also add new values to this property's choice list</label>`);
 var root_5 = from_html(`<input class="metaedit-ap-prompt-input svelte-rukrzs" type="text" placeholder="Type a value and press Enter to add it"/> <div class="metaedit-ap-prompt-list svelte-rukrzs" role="listbox" aria-multiselectable="true"></div> <!> <div class="metaedit-ap-prompt-actions svelte-rukrzs"><button class="mod-cta">Confirm</button></div>`, 1);
@@ -8414,13 +8129,13 @@ var root_7 = from_html(`<button><!> <span class="metaedit-ap-prompt-row-label sv
 var root_8 = from_html(`<div class="metaedit-ap-prompt-empty svelte-rukrzs">No choices defined - type a value and press Enter.</div>`);
 var root_9 = from_html(`<input class="metaedit-ap-prompt-input svelte-rukrzs" type="text" placeholder="Pick a value, or type a new one"/> <div class="metaedit-ap-prompt-list svelte-rukrzs" role="listbox"></div>`, 1);
 var root_10 = from_html(`<div class="metaedit-ap-prompt svelte-rukrzs"><div class="metaedit-ap-prompt-head svelte-rukrzs"><div class="metaedit-ap-prompt-title svelte-rukrzs"> </div> <!></div> <!></div>`);
-var $$css5 = {
+var $$css2 = {
   hash: "svelte-rukrzs",
   code: ".metaedit-ap-prompt.svelte-rukrzs {display:flex;flex-direction:column;gap:0.6rem;}.metaedit-ap-prompt-head.svelte-rukrzs {display:flex;flex-direction:column;gap:0.15rem;}.metaedit-ap-prompt-title.svelte-rukrzs {font-size:var(--font-ui-large, 1.1em);font-weight:var(--font-semibold, 600);color:var(--text-normal);}.metaedit-ap-prompt-desc.svelte-rukrzs {color:var(--text-muted);font-size:var(--font-ui-small, 0.85em);line-height:1.4;}.metaedit-ap-prompt-input.svelte-rukrzs {width:100%;}.metaedit-ap-prompt-list.svelte-rukrzs {display:flex;flex-direction:column;gap:2px;max-height:16rem;overflow-y:auto;}.metaedit-ap-prompt-row.svelte-rukrzs {display:flex;align-items:center;gap:0.5rem;width:100%;text-align:left;padding:0.4rem 0.55rem;border-radius:var(--radius-s, 4px);background:transparent;box-shadow:none;color:var(--text-normal);cursor:pointer;font-size:var(--font-ui-medium, 1em);}.metaedit-ap-prompt-row.is-selected.svelte-rukrzs {background-color:var(--background-modifier-hover);}.metaedit-ap-prompt-action.svelte-rukrzs {color:var(--text-muted);}.metaedit-ap-prompt-check.svelte-rukrzs {cursor:pointer;}.metaedit-ap-prompt-check.svelte-rukrzs input:where(.svelte-rukrzs) {margin:0;}.metaedit-ap-prompt-row-icon.svelte-rukrzs {display:inline-flex;align-items:center;}.metaedit-ap-prompt-row-label.svelte-rukrzs {flex:1 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}.metaedit-ap-prompt-tag.svelte-rukrzs {flex:0 0 auto;font-size:var(--font-ui-smaller, 0.75em);color:var(--text-accent);border:1px solid var(--background-modifier-border);border-radius:var(--radius-s, 4px);padding:0 0.3rem;}.metaedit-ap-prompt-empty.svelte-rukrzs {color:var(--text-muted);padding:0.4rem 0.55rem;font-size:var(--font-ui-small, 0.85em);}.metaedit-ap-prompt-savenew.svelte-rukrzs {display:flex;align-items:center;gap:0.45rem;color:var(--text-muted);font-size:var(--font-ui-small, 0.85em);cursor:pointer;}.metaedit-ap-prompt-actions.svelte-rukrzs {display:flex;justify-content:flex-end;}"
 };
 function AutoPropertyValueModalContent($$anchor, $$props) {
   push($$props, true);
-  append_styles($$anchor, $$css5);
+  append_styles($$anchor, $$css2);
   let isMulti = prop($$props, "isMulti", 3, false), currentValue = prop($$props, "currentValue", 3, null);
   const initialAutoProperty = untrack(() => $$props.autoProperty);
   const initialIsMulti = untrack(() => isMulti());
@@ -8431,16 +8146,16 @@ function AutoPropertyValueModalContent($$anchor, $$props) {
   let highlight = state(0);
   function icon(node, name) {
     node.textContent = "";
-    (0, import_obsidian9.setIcon)(node, name);
+    (0, import_obsidian8.setIcon)(node, name);
     return {};
   }
-  let trimmedQuery = user_derived(() => get2(query).trim());
-  let filtered = user_derived(() => choices.filter((c) => c.toLowerCase().includes(get2(trimmedQuery).toLowerCase())));
-  let exactMatch = user_derived(() => choices.some((c) => c.toLowerCase() === get2(trimmedQuery).toLowerCase()));
-  let singleItems = user_derived(() => buildSingleItems(get2(filtered), get2(trimmedQuery), get2(exactMatch)));
+  let trimmedQuery = user_derived(() => get(query).trim());
+  let filtered = user_derived(() => choices.filter((c) => c.toLowerCase().includes(get(trimmedQuery).toLowerCase())));
+  let exactMatch = user_derived(() => choices.some((c) => c.toLowerCase() === get(trimmedQuery).toLowerCase()));
+  let singleItems = user_derived(() => buildSingleItems(get(filtered), get(trimmedQuery), get(exactMatch)));
   user_effect(() => {
-    const maxHighlight = Math.max(0, get2(singleItems).length - 1);
-    if (get2(highlight) > maxHighlight) set(highlight, maxHighlight, true);
+    const maxHighlight = Math.max(0, get(singleItems).length - 1);
+    if (get(highlight) > maxHighlight) set(highlight, maxHighlight, true);
   });
   function buildSingleItems(matches, q, exact) {
     const items = matches.map((c) => ({ kind: "choice", value: c, label: c }));
@@ -8467,32 +8182,32 @@ function AutoPropertyValueModalContent($$anchor, $$props) {
   function onSingleKeydown(e) {
     if (e.key === "ArrowDown") {
       e.preventDefault();
-      set(highlight, Math.min(get2(highlight) + 1, get2(singleItems).length - 1), true);
+      set(highlight, Math.min(get(highlight) + 1, get(singleItems).length - 1), true);
     } else if (e.key === "ArrowUp") {
       e.preventDefault();
-      set(highlight, Math.max(get2(highlight) - 1, 0), true);
+      set(highlight, Math.max(get(highlight) - 1, 0), true);
     } else if (e.key === "Enter") {
       e.preventDefault();
-      if (get2(singleItems).length > 0) chooseSingle(get2(singleItems)[get2(highlight)]);
-      else if (get2(trimmedQuery) !== "") $$props.onSubmit(get2(trimmedQuery));
+      if (get(singleItems).length > 0) chooseSingle(get(singleItems)[get(highlight)]);
+      else if (get(trimmedQuery) !== "") $$props.onSubmit(get(trimmedQuery));
     }
   }
   let options = state(proxy(untrack(() => initialIsMulti ? multiSelectOptions(initialAutoProperty, initialCurrentValue) : [])));
   let checkedValues = state(proxy(untrack(() => toValueArray(initialCurrentValue))));
   let saveNew = state(false);
-  let newCheckedValues = user_derived(() => get2(options).filter((o) => get2(checkedValues).includes(o) && !choices.includes(o)));
+  let newCheckedValues = user_derived(() => get(options).filter((o) => get(checkedValues).includes(o) && !choices.includes(o)));
   function toggleCheck(value) {
     set(
       checkedValues,
-      get2(checkedValues).includes(value) ? get2(checkedValues).filter((checkedValue) => checkedValue !== value) : [...get2(checkedValues), value],
+      get(checkedValues).includes(value) ? get(checkedValues).filter((checkedValue) => checkedValue !== value) : [...get(checkedValues), value],
       true
     );
   }
   function addMultiValue() {
-    const value = get2(query).trim();
+    const value = get(query).trim();
     if (value === "") return;
-    if (!get2(options).includes(value)) set(options, [...get2(options), value], true);
-    if (!get2(checkedValues).includes(value)) set(checkedValues, [...get2(checkedValues), value], true);
+    if (!get(options).includes(value)) set(options, [...get(options), value], true);
+    if (!get(checkedValues).includes(value)) set(checkedValues, [...get(checkedValues), value], true);
     set(query, "");
   }
   function onMultiAddKeydown(e) {
@@ -8502,15 +8217,15 @@ function AutoPropertyValueModalContent($$anchor, $$props) {
     }
   }
   async function confirmMulti() {
-    const result = get2(options).filter((o) => get2(checkedValues).includes(o));
-    if (get2(saveNew) && get2(newCheckedValues).length > 0) {
-      await persistChoices(get2(newCheckedValues));
+    const result = get(options).filter((o) => get(checkedValues).includes(o));
+    if (get(saveNew) && get(newCheckedValues).length > 0) {
+      await persistChoices(get(newCheckedValues));
     }
     $$props.onSubmit(result);
   }
   let didFocus = false;
   user_effect(() => {
-    const el = get2(inputEl);
+    const el = get(inputEl);
     if (!el || didFocus) return;
     didFocus = true;
     el.focus();
@@ -8518,14 +8233,12 @@ function AutoPropertyValueModalContent($$anchor, $$props) {
   var div = root_10();
   var div_1 = child(div);
   var div_2 = child(div_1);
-  var text2 = child(div_2, true);
-  reset(div_2);
+  var text2 = only_child(div_2, true);
   var node_1 = sibling(div_2, 2);
   {
     var consequent = ($$anchor2) => {
-      var div_3 = root6();
-      var text_1 = child(div_3, true);
-      reset(div_3);
+      var div_3 = root3();
+      var text_1 = only_child(div_3, true);
       template_effect(() => set_text(text_1, initialAutoProperty.description));
       append($$anchor2, div_3);
     };
@@ -8540,29 +8253,28 @@ function AutoPropertyValueModalContent($$anchor, $$props) {
       var fragment = root_5();
       var input = first_child(fragment);
       remove_input_defaults(input);
-      bind_this(input, ($$value) => set(inputEl, $$value), () => get2(inputEl));
+      bind_this(input, ($$value) => set(inputEl, $$value), () => get(inputEl));
       var div_4 = sibling(input, 2);
       each(
         div_4,
         20,
-        () => get2(options),
+        () => get(options),
         (option) => option,
         ($$anchor3, option) => {
-          var label = root_24();
+          var label = root_23();
           var input_1 = child(label);
           remove_input_defaults(input_1);
           var span = sibling(input_1, 2);
-          var text_2 = child(span, true);
-          reset(span);
+          var text_2 = only_child(span, true);
           var node_3 = sibling(span, 2);
           {
             var consequent_1 = ($$anchor4) => {
-              var span_1 = root_16();
+              var span_1 = root_13();
               append($$anchor4, span_1);
             };
             var d = user_derived(() => !choices.includes(option));
             if_block(node_3, ($$render) => {
-              if (get2(d)) $$render(consequent_1);
+              if (get(d)) $$render(consequent_1);
             });
           }
           reset(label);
@@ -8571,7 +8283,7 @@ function AutoPropertyValueModalContent($$anchor, $$props) {
               set_checked(input_1, $0);
               set_text(text_2, option);
             },
-            [() => get2(checkedValues).includes(option)]
+            [() => get(checkedValues).includes(option)]
           );
           delegated("change", input_1, () => toggleCheck(option));
           append($$anchor3, label);
@@ -8590,18 +8302,17 @@ function AutoPropertyValueModalContent($$anchor, $$props) {
           remove_input_defaults(input_2);
           next();
           reset(label_1);
-          bind_checked(input_2, () => get2(saveNew), ($$value) => set(saveNew, $$value));
+          bind_checked(input_2, () => get(saveNew), ($$value) => set(saveNew, $$value));
           append($$anchor3, label_1);
         };
         if_block(node_4, ($$render) => {
-          if (get2(newCheckedValues).length > 0) $$render(consequent_2);
+          if (get(newCheckedValues).length > 0) $$render(consequent_2);
         });
       }
       var div_6 = sibling(node_4, 2);
-      var button = child(div_6);
-      reset(div_6);
+      var button = only_child(div_6);
       delegated("keydown", input, onMultiAddKeydown);
-      bind_value(input, () => get2(query), ($$value) => set(query, $$value));
+      bind_value(input, () => get(query), ($$value) => set(query, $$value));
       delegated("click", button, confirmMulti);
       append($$anchor2, fragment);
     };
@@ -8609,12 +8320,12 @@ function AutoPropertyValueModalContent($$anchor, $$props) {
       var fragment_1 = root_9();
       var input_3 = first_child(fragment_1);
       remove_input_defaults(input_3);
-      bind_this(input_3, ($$value) => set(inputEl, $$value), () => get2(inputEl));
+      bind_this(input_3, ($$value) => set(inputEl, $$value), () => get(inputEl));
       var div_7 = sibling(input_3, 2);
       each(
         div_7,
         23,
-        () => get2(singleItems),
+        () => get(singleItems),
         (item) => item.kind + item.value,
         ($$anchor3, item, i) => {
           var button_1 = root_7();
@@ -8632,23 +8343,22 @@ function AutoPropertyValueModalContent($$anchor, $$props) {
               append($$anchor4, span_3);
             };
             if_block(node_5, ($$render) => {
-              if (get2(item).kind === "save") $$render(consequent_4);
-              else if (get2(item).kind === "use") $$render(consequent_5, 1);
+              if (get(item).kind === "save") $$render(consequent_4);
+              else if (get(item).kind === "use") $$render(consequent_5, 1);
             });
           }
           var span_4 = sibling(node_5, 2);
-          var text_3 = child(span_4, true);
-          reset(span_4);
+          var text_3 = only_child(span_4, true);
           reset(button_1);
           template_effect(() => {
             classes = set_class(button_1, 1, "metaedit-ap-prompt-row svelte-rukrzs", null, classes, {
-              "is-selected": get2(i) === get2(highlight),
-              "metaedit-ap-prompt-action": get2(item).kind !== "choice"
+              "is-selected": get(i) === get(highlight),
+              "metaedit-ap-prompt-action": get(item).kind !== "choice"
             });
-            set_text(text_3, get2(item).label);
+            set_text(text_3, get(item).label);
           });
-          delegated("click", button_1, () => chooseSingle(get2(item)));
-          event("mouseenter", button_1, () => set(highlight, get2(i), true));
+          delegated("click", button_1, () => chooseSingle(get(item)));
+          event("mouseenter", button_1, () => set(highlight, get(i), true));
           append($$anchor3, button_1);
         },
         ($$anchor3) => {
@@ -8658,7 +8368,7 @@ function AutoPropertyValueModalContent($$anchor, $$props) {
       );
       reset(div_7);
       delegated("keydown", input_3, onSingleKeydown);
-      bind_value(input_3, () => get2(query), ($$value) => set(query, $$value));
+      bind_value(input_3, () => get(query), ($$value) => set(query, $$value));
       append($$anchor2, fragment_1);
     };
     if_block(node_2, ($$render) => {
@@ -8674,7 +8384,7 @@ function AutoPropertyValueModalContent($$anchor, $$props) {
 delegate(["keydown", "change", "click"]);
 
 // src/Modals/AutoPropertyValueModal/AutoPropertyValueModal.ts
-var AutoPropertyValueModal = class _AutoPropertyValueModal extends import_obsidian10.Modal {
+var AutoPropertyValueModal = class _AutoPropertyValueModal extends import_obsidian9.Modal {
   constructor(app, autoProperty, options) {
     super(app);
     this.result = null;
@@ -8815,7 +8525,7 @@ function applyMultiValueEdit(base, edit) {
 }
 
 // src/Modals/NativePropertyPrompt/NativePropertyPrompt.ts
-var import_obsidian14 = require("obsidian");
+var import_obsidian13 = require("obsidian");
 
 // src/typedProperties/nativePropertyTypes.ts
 var STANDARD_NATIVE_PROPERTY_TYPES = [
@@ -9094,31 +8804,22 @@ function getMetadataTypeManager2(app) {
 }
 
 // src/Modals/NativeWidgetHost.ts
-var import_obsidian12 = require("obsidian");
+var import_obsidian11 = require("obsidian");
 
 // src/Modals/NativePropertyPrompt/nativeWikilinkSuggester.ts
-var import_obsidian11 = require("obsidian");
+var import_obsidian10 = require("obsidian");
 var WIKILINK_QUERY = /\[\[([^\]]*)$/;
-var NativeWikilinkSuggester = class extends import_obsidian11.AbstractInputSuggest {
+var NativeWikilinkSuggester = class extends import_obsidian10.AbstractInputSuggest {
   constructor(app, inputEl, sourcePath) {
-    const mirrorHost = inputEl.parentElement ?? inputEl;
-    const mirrorEl = mirrorHost.createEl("input", {
-      cls: "metaedit-native-wikilink-suggest-mirror",
-      type: "text"
-    });
-    super(app, mirrorEl);
+    super(app, inputEl);
     this.inputEl = inputEl;
     this.sourcePath = sourcePath;
-    this.onInput = () => this.refreshFromContent();
-    this.mirrorEl = mirrorEl;
-    this.mirrorEl.tabIndex = -1;
-    this.mirrorEl.setAttribute("aria-hidden", "true");
-    this.inputEl.addEventListener("input", this.onInput);
-    this.inputEl.addEventListener("keyup", this.onInput);
     this.onSelect((suggestion) => this.acceptSuggestion(suggestion));
   }
-  getSuggestions(query) {
-    const normalized = query.toLowerCase();
+  getSuggestions(text2) {
+    const match = text2.match(WIKILINK_QUERY);
+    if (!match) return [];
+    const normalized = (match[1] ?? "").toLowerCase();
     return this.readLinkSuggestions().filter((suggestion) => {
       const path = suggestion.path ?? suggestion.file?.basename ?? "";
       const alias = suggestion.alias ?? "";
@@ -9132,28 +8833,6 @@ var NativeWikilinkSuggester = class extends import_obsidian11.AbstractInputSugge
   selectSuggestion(value, _evt) {
     this.acceptSuggestion(value);
   }
-  destroy() {
-    this.inputEl.removeEventListener("input", this.onInput);
-    this.inputEl.removeEventListener("keyup", this.onInput);
-    this.close();
-    this.mirrorEl.remove();
-  }
-  refreshFromContent() {
-    const match = this.currentQuery();
-    if (!match) {
-      this.close();
-      return;
-    }
-    this.mirrorEl.value = match.query;
-    this.mirrorEl.focus();
-    this.mirrorEl.trigger("input");
-  }
-  currentQuery() {
-    const text2 = this.inputEl.textContent ?? "";
-    const match = text2.match(WIKILINK_QUERY);
-    if (!match) return null;
-    return { query: match[1] ?? "" };
-  }
   acceptSuggestion(suggestion) {
     if (!suggestion.file) return;
     const link2 = this.app.fileManager.generateMarkdownLink(
@@ -9162,7 +8841,7 @@ var NativeWikilinkSuggester = class extends import_obsidian11.AbstractInputSugge
       "",
       suggestion.alias
     );
-    this.inputEl.textContent = link2;
+    this.setValue(link2);
     this.inputEl.focus();
     this.inputEl.trigger("input");
     this.close();
@@ -9346,7 +9025,7 @@ var NativeWidgetHost = class {
       cls: "metaedit-native-property-error",
       text: `MetaEdit could not render Obsidian's native editor for '${this.key}'.`
     });
-    new import_obsidian12.Notice(`MetaEdit could not render Obsidian's native editor for '${this.key}': ${reason}`);
+    new import_obsidian11.Notice(`MetaEdit could not render Obsidian's native editor for '${this.key}': ${reason}`);
     void widget;
   }
   installAliasesWikilinkFallback(type) {
@@ -9354,7 +9033,7 @@ var NativeWidgetHost = class {
     const inputEl = this.hostEl.querySelector(".multi-select-input[contenteditable='true']");
     if (!inputEl) return;
     const suggester = new NativeWikilinkSuggester(this.app, inputEl, this.sourcePath);
-    this.perMountCleanup.push(() => suggester.destroy());
+    this.perMountCleanup.push(() => suggester.close());
   }
   trackDomActivity() {
     const markEdited = (evt) => {
@@ -9380,10 +9059,10 @@ var NativeWidgetHost = class {
     this.hostEl.empty();
   }
   closeWidgetLifecycle(value) {
-    const seen = /* @__PURE__ */ new Set();
+    const seen2 = /* @__PURE__ */ new Set();
     const visit = (candidate) => {
-      if (!candidate || seen.has(candidate)) return;
-      seen.add(candidate);
+      if (!candidate || seen2.has(candidate)) return;
+      seen2.add(candidate);
       const owner = candidate;
       for (const method of ["close", "destroy", "unload"]) {
         const fn = owner[method];
@@ -9423,7 +9102,7 @@ function isEditingKey(evt) {
 }
 
 // src/Modals/TypePill.ts
-var import_obsidian13 = require("obsidian");
+var import_obsidian12 = require("obsidian");
 var FALLBACK_ICONS = {
   text: "text",
   multitext: "list",
@@ -9451,16 +9130,16 @@ var TypePill = class {
     this.type = type;
     this.locked = locked;
     const label = this.labelFor(type);
-    (0, import_obsidian13.setIcon)(this.iconEl, this.iconIdFor(type));
+    (0, import_obsidian12.setIcon)(this.iconEl, this.iconIdFor(type));
     this.labelEl.setText(label);
     this.buttonEl.toggleClass("is-locked", locked);
     this.buttonEl.disabled = locked;
-    (0, import_obsidian13.setTooltip)(this.buttonEl, locked ? `${label} (fixed for this property)` : this.opts.tooltip);
+    (0, import_obsidian12.setTooltip)(this.buttonEl, locked ? `${label} (fixed for this property)` : this.opts.tooltip);
   }
   openMenu() {
     if (this.opts.beforeOpen && !this.opts.beforeOpen()) return;
     if (this.locked) return;
-    const menu = new import_obsidian13.Menu();
+    const menu = new import_obsidian12.Menu();
     for (const choice of NATIVE_TYPE_CHOICES) {
       menu.addItem((item) => {
         item.setTitle(choice.label);
@@ -9495,9 +9174,13 @@ var RESERVED_TYPE_KEYS = /* @__PURE__ */ new Set(["aliases", "cssclasses"]);
 function isReservedTypeKey(key2) {
   return isTagsKey(key2) || RESERVED_TYPE_KEYS.has(key2.toLowerCase());
 }
-var NativePropertyPrompt = class _NativePropertyPrompt extends import_obsidian14.Modal {
+var NativePropertyPrompt = class _NativePropertyPrompt extends import_obsidian13.Modal {
   constructor(app, file, property) {
     super(app);
+    // onOpen() focuses the value editor. Obsidian 1.13+ (undocumented flag) would then
+    // move focus to the first focusable element, the type pill, orphaning the value
+    // autocomplete popover.
+    this.hasInitialInputFocus = false;
     this.typePill = null;
     // The type the property resolved to when the prompt opened; null when the
     // native widgets are unavailable (fallback editor), which also disables the
@@ -9518,7 +9201,7 @@ var NativePropertyPrompt = class _NativePropertyPrompt extends import_obsidian14
       this.resolvePromise = resolve;
     });
     this.contentEl.addClass("metaedit-native-property-prompt");
-    new import_obsidian14.Setting(this.contentEl).setHeading().setName(`Edit ${property.key}`);
+    new import_obsidian13.Setting(this.contentEl).setHeading().setName(`Edit ${property.key}`);
     const rowEl = this.contentEl.createDiv({ cls: "metadata-property metaedit-native-property-row" });
     const resolution = resolveNativeProperty(app, property);
     const canSwitchType = resolution.kind === "native" && canAssignVaultPropertyType(app);
@@ -9547,7 +9230,7 @@ var NativePropertyPrompt = class _NativePropertyPrompt extends import_obsidian14
     } else {
       this.host.mountFallback(resolution.reason, property.content);
     }
-    new import_obsidian14.Setting(this.contentEl).addButton((button) => {
+    new import_obsidian13.Setting(this.contentEl).addButton((button) => {
       this.saveButton = button;
       button.setButtonText("Save").setCta().setDisabled(this.host.renderFailed).onClick(() => this.submit());
     }).addButton((button) => {
@@ -9594,7 +9277,7 @@ var NativePropertyPrompt = class _NativePropertyPrompt extends import_obsidian14
   submit() {
     this.host.flushFocus();
     if (this.host.valueSource === "native" && this.host.didEditDom && !this.host.didReceiveChange) {
-      new import_obsidian14.Notice(`MetaEdit did not receive a value from Obsidian's native editor for '${this.property.key}'. Nothing was written.`);
+      new import_obsidian13.Notice(`MetaEdit did not receive a value from Obsidian's native editor for '${this.property.key}'. Nothing was written.`);
       return;
     }
     const typeChanged = this.originalType !== null && this.host.type !== this.originalType;
@@ -9611,7 +9294,7 @@ var NativePropertyPrompt = class _NativePropertyPrompt extends import_obsidian14
     }
     const normalized = normalizeWidgetValue(this.host.type, this.host.value, this.host.valueSource);
     if (normalized.ok === false) {
-      new import_obsidian14.Notice(`MetaEdit could not update '${this.property.key}': ${normalized.reason}`);
+      new import_obsidian13.Notice(`MetaEdit could not update '${this.property.key}': ${normalized.reason}`);
       return;
     }
     const changed = !frontmatterValuesEqual(normalized.value, this.property.content);
@@ -9640,10 +9323,13 @@ var NativePropertyPrompt = class _NativePropertyPrompt extends import_obsidian14
 };
 
 // src/Modals/FluidPropertyCreatePrompt/FluidPropertyCreatePrompt.ts
-var import_obsidian15 = require("obsidian");
-var FluidPropertyCreatePrompt = class _FluidPropertyCreatePrompt extends import_obsidian15.Modal {
+var import_obsidian14 = require("obsidian");
+var FluidPropertyCreatePrompt = class _FluidPropertyCreatePrompt extends import_obsidian14.Modal {
   constructor(app, options) {
     super(app);
+    // onOpen() focuses the key input. Obsidian 1.13+ (undocumented flag) would then
+    // move focus to the first focusable element, the type pill.
+    this.hasInitialInputFocus = false;
     this.addButton = null;
     this.pinnedType = false;
     this.autoPropertyKey = false;
@@ -9658,7 +9344,7 @@ var FluidPropertyCreatePrompt = class _FluidPropertyCreatePrompt extends import_
     });
     this.modalEl.addClass("metaedit-fluid-create-modal");
     this.contentEl.addClass("metaedit-fluid-create");
-    new import_obsidian15.Setting(this.contentEl).setHeading().setName("New property");
+    new import_obsidian14.Setting(this.contentEl).setHeading().setName("New property");
     const rowEl = this.contentEl.createDiv({ cls: "metadata-property metaedit-fluid-create-row" });
     this.typePill = new TypePill({
       app,
@@ -9714,7 +9400,7 @@ var FluidPropertyCreatePrompt = class _FluidPropertyCreatePrompt extends import_
     this.resolveOnce();
   }
   buildFooter() {
-    new import_obsidian15.Setting(this.contentEl).addExtraButton((button) => button.setIcon("info").setDisabled(true).setTooltip("\u2318/Ctrl+\u21B5 to add \xB7 \u2318/Ctrl+Y to change type")).addButton((button) => {
+    new import_obsidian14.Setting(this.contentEl).addExtraButton((button) => button.setIcon("info").setDisabled(true).setTooltip("\u2318/Ctrl+\u21B5 to add \xB7 \u2318/Ctrl+Y to change type")).addButton((button) => {
       this.addButton = button;
       button.setButtonText("Add").setCta().onClick(() => this.commit());
     }).addButton((button) => button.setButtonText("Cancel").onClick(() => this.cancel()));
@@ -9870,17 +9556,17 @@ var FluidPropertyCreatePrompt = class _FluidPropertyCreatePrompt extends import_
       return;
     }
     if (this.host.renderFailed) {
-      new import_obsidian15.Notice(`MetaEdit could not render an editor for '${key2}'. Nothing was written.`);
+      new import_obsidian14.Notice(`MetaEdit could not render an editor for '${key2}'. Nothing was written.`);
       return;
     }
     this.host.flushFocus();
     if (this.host.valueSource === "native" && this.host.didEditDom && !this.host.didReceiveChange) {
-      new import_obsidian15.Notice(`MetaEdit did not receive a value from Obsidian's native editor for '${key2}'. Nothing was written.`);
+      new import_obsidian14.Notice(`MetaEdit did not receive a value from Obsidian's native editor for '${key2}'. Nothing was written.`);
       return;
     }
     const normalized = normalizeWidgetValue(this.host.type, this.host.value, this.host.valueSource);
     if (normalized.ok === false) {
-      new import_obsidian15.Notice(`MetaEdit could not create '${key2}': ${normalized.reason}`);
+      new import_obsidian14.Notice(`MetaEdit could not create '${key2}': ${normalized.reason}`);
       return;
     }
     this.finish({
@@ -9957,7 +9643,7 @@ var MetaController = class {
       });
     });
     if (propertyExists) {
-      new import_obsidian16.Notice(`Frontmatter in file '${file.name}' already has property '${propName}'. Will not add.`);
+      new import_obsidian15.Notice(`Frontmatter in file '${file.name}' already has property '${propName}'. Will not add.`);
     }
   }
   /**
@@ -9990,7 +9676,7 @@ var MetaController = class {
       return;
     }
     if (this.isYamlParentContainer(property)) {
-      new import_obsidian16.Notice(`Nested YAML parent '${property.key}' cannot be edited as a text value.`);
+      new import_obsidian15.Notice(`Nested YAML parent '${property.key}' cannot be edited as a text value.`);
       return;
     }
     if (this.getActiveAutoProperty(property.key)) {
@@ -10045,7 +9731,7 @@ var MetaController = class {
     const newToken = computeTagRewrite(tag2, input, mode);
     if (!newToken || newToken === tag2) return;
     if (!isValidTagToken(normalizeTagToken(newToken))) {
-      new import_obsidian16.Notice(`'${input.trim()}' is not a valid tag name. Tags cannot contain spaces or commas.`);
+      new import_obsidian15.Notice(`'${input.trim()}' is not a valid tag name. Tags cannot contain spaces or commas.`);
       return;
     }
     await this.updatePropertyFromUi(property, newToken, file);
@@ -10107,7 +9793,7 @@ var MetaController = class {
       await this.createNativeYamlProperty(result.key, result.value, file);
     } catch (error) {
       const reason = error instanceof Error ? error.message : String(error);
-      new import_obsidian16.Notice(`MetaEdit could not add '${result.key}': ${reason}`);
+      new import_obsidian15.Notice(`MetaEdit could not add '${result.key}': ${reason}`);
     }
   }
   /**
@@ -10133,12 +9819,12 @@ var MetaController = class {
       });
     });
     if (propertyExists) {
-      new import_obsidian16.Notice(`Frontmatter in file '${file.name}' already has property '${key2}'. Will not add.`);
+      new import_obsidian15.Notice(`Frontmatter in file '${file.name}' already has property '${key2}'. Will not add.`);
     }
   }
   async deleteProperty(property, file) {
     if (property.type === 0 /* YAML */ && (property.isNested || property.isVirtual)) {
-      new import_obsidian16.Notice(`Nested YAML property '${property.key}' cannot be deleted by MetaEdit yet.`);
+      new import_obsidian15.Notice(`Nested YAML property '${property.key}' cannot be deleted by MetaEdit yet.`);
       return;
     }
     await this.enqueueFileWrite(file, async () => {
@@ -10205,7 +9891,7 @@ var MetaController = class {
   async assignPropertyType(key2, type) {
     const assigned = await assignVaultPropertyType(this.app, key2, type);
     if (!assigned) {
-      new import_obsidian16.Notice(`MetaEdit updated '${key2}', but could not change its property type in this Obsidian version.`);
+      new import_obsidian15.Notice(`MetaEdit updated '${key2}', but could not change its property type in this Obsidian version.`);
       log.logMessage(`metadataTypeManager.setType unavailable or failed while setting '${key2}' to '${type}'.`);
     }
   }
@@ -10293,7 +9979,7 @@ var MetaController = class {
       });
     } catch (error) {
       const reason = error instanceof Error ? error.message : String(error);
-      new import_obsidian16.Notice(`MetaEdit could not save the Auto Property choice: ${reason}`);
+      new import_obsidian15.Notice(`MetaEdit could not save the Auto Property choice: ${reason}`);
       log.logMessage(`MetaEdit could not save Auto Property choices for '${autoProp.name}': ${reason}`);
     }
   }
@@ -10427,7 +10113,7 @@ var MetaController = class {
       return true;
     } catch (error) {
       const reason = error instanceof Error ? error.message : String(error);
-      new import_obsidian16.Notice(`MetaEdit could not update '${property.key}': ${reason}`);
+      new import_obsidian15.Notice(`MetaEdit could not update '${property.key}': ${reason}`);
       log.logMessage(`MetaEdit could not update '${property.key}': ${reason}`);
       return false;
     }
@@ -10452,7 +10138,7 @@ var MetaController = class {
       return true;
     } catch (error) {
       const reason = error instanceof Error ? error.message : String(error);
-      new import_obsidian16.Notice(`MetaEdit could not update '${property.key}': ${reason}`);
+      new import_obsidian15.Notice(`MetaEdit could not update '${property.key}': ${reason}`);
       log.logMessage(`MetaEdit could not update '${property.key}': ${reason}`);
       return false;
     }
@@ -10517,7 +10203,7 @@ var MetaController = class {
     await this.app.fileManager.processFrontMatter(file, update2);
   }
   async enqueueFileWrite(file, task) {
-    const key2 = (0, import_obsidian16.normalizePath)(file.path);
+    const key2 = (0, import_obsidian15.normalizePath)(file.path);
     const previous = fileWriteQueues.get(key2) ?? Promise.resolve();
     const queued = previous.catch(() => void 0).then(task);
     fileWriteQueues.set(key2, queued);
@@ -10532,11 +10218,11 @@ var MetaController = class {
 };
 
 // src/bulk/bulkMetadataEditor.ts
-var import_obsidian18 = require("obsidian");
+var import_obsidian17 = require("obsidian");
 
 // src/bulk/BulkOptionModal.ts
-var import_obsidian17 = require("obsidian");
-var BulkOptionModal = class _BulkOptionModal extends import_obsidian17.Modal {
+var import_obsidian16 = require("obsidian");
+var BulkOptionModal = class _BulkOptionModal extends import_obsidian16.Modal {
   constructor(app, config) {
     super(app);
     this.config = config;
@@ -10656,12 +10342,12 @@ function toArray(value) {
   return [value];
 }
 function uniqueConcat(base, additions) {
-  const seen = new Set(base.map(dedupeKey));
+  const seen2 = new Set(base.map(dedupeKey));
   const out = base.slice();
   for (const candidate of additions) {
     const key2 = dedupeKey(candidate);
-    if (!seen.has(key2)) {
-      seen.add(key2);
+    if (!seen2.has(key2)) {
+      seen2.add(key2);
       out.push(candidate);
     }
   }
@@ -10707,9 +10393,9 @@ var BulkMetadataEditor = class {
   collectFromSelection(files) {
     const collected = [];
     for (const file of files) {
-      if (file instanceof import_obsidian18.TFile) {
+      if (file instanceof import_obsidian17.TFile) {
         if (file.extension === "md") collected.push(file);
-      } else if (file instanceof import_obsidian18.TFolder) {
+      } else if (file instanceof import_obsidian17.TFolder) {
         collected.push(...this.markdownFilesIn(file));
       }
     }
@@ -10722,7 +10408,7 @@ var BulkMetadataEditor = class {
    */
   async run(files, scopeLabel) {
     if (files.length === 0) {
-      new import_obsidian18.Notice("MetaEdit: no markdown notes to edit here.");
+      new import_obsidian17.Notice("MetaEdit: no markdown notes to edit here.");
       return;
     }
     const noteWord = files.length === 1 ? "note" : "notes";
@@ -10733,7 +10419,7 @@ var BulkMetadataEditor = class {
     ).catch(() => null))?.trim();
     if (!key2) return;
     if (isReservedFrontmatterKey(key2)) {
-      new import_obsidian18.Notice(`MetaEdit: "${key2}" is a reserved property name and can't be used.`);
+      new import_obsidian17.Notice(`MetaEdit: "${key2}" is a reserved property name and can't be used.`);
       return;
     }
     const rawValue = await GenericPrompt.Prompt(this.app, `Value for "${key2}"`, "Value").catch(
@@ -10779,7 +10465,7 @@ var BulkMetadataEditor = class {
       }
     }
     const summary = await this.apply(files, key2, rawValue, policy2);
-    new import_obsidian18.Notice(formatSummary(summary, key2), 1e4);
+    new import_obsidian17.Notice(formatSummary(summary, key2), 1e4);
   }
   /** Apply the property to every note, isolating per-note failures. */
   async apply(files, key2, rawValue, policy2) {
@@ -10826,9 +10512,9 @@ var BulkMetadataEditor = class {
   markdownFilesIn(folder) {
     const files = [];
     for (const child2 of folder.children) {
-      if (child2 instanceof import_obsidian18.TFile) {
+      if (child2 instanceof import_obsidian17.TFile) {
         if (child2.extension === "md") files.push(child2);
-      } else if (child2 instanceof import_obsidian18.TFolder) {
+      } else if (child2 instanceof import_obsidian17.TFolder) {
         files.push(...this.markdownFilesIn(child2));
       }
     }
@@ -10858,7 +10544,7 @@ var BulkMetadataEditor = class {
     if (end === -1) return null;
     let parsed;
     try {
-      parsed = (0, import_obsidian18.parseYaml)(lines.slice(1, end).join("\n"));
+      parsed = (0, import_obsidian17.parseYaml)(lines.slice(1, end).join("\n"));
     } catch {
       return null;
     }
@@ -10937,7 +10623,7 @@ function migrateIgnoredProperties(loaded, settings) {
 }
 
 // src/Modals/LinkMenu.ts
-var import_obsidian19 = require("obsidian");
+var import_obsidian18 = require("obsidian");
 var LinkMenu = class {
   constructor(plugin) {
     this.plugin = plugin;
@@ -10965,11 +10651,11 @@ var LinkMenu = class {
   onMenuOpenCallback(menu, file, source2) {
     const bCorrectSource = source2 === "link-context-menu" || source2 === "calendar-context-menu" || source2 == "file-explorer-context-menu";
     if (bCorrectSource) {
-      if (file instanceof import_obsidian19.TFile && file.extension === "md") {
+      if (file instanceof import_obsidian18.TFile && file.extension === "md") {
         this.targetFile = file;
         this.addFileOptions(menu);
       }
-      if (file instanceof import_obsidian19.TFolder && this.folderHasMarkdown(file)) {
+      if (file instanceof import_obsidian18.TFolder && this.folderHasMarkdown(file)) {
         this.targetFolder = file;
         this.addFolderOptions(menu);
       }
@@ -10978,7 +10664,7 @@ var LinkMenu = class {
   onFilesMenuOpenCallback(menu, files, source2) {
     if (source2 !== "file-explorer-context-menu") return;
     if (!Array.isArray(files) || files.length === 0) return;
-    const hasMarkdown = files.some((f) => f instanceof import_obsidian19.TFile && f.extension === "md" || f instanceof import_obsidian19.TFolder && this.folderHasMarkdown(f));
+    const hasMarkdown = files.some((f) => f instanceof import_obsidian18.TFile && f.extension === "md" || f instanceof import_obsidian18.TFolder && this.folderHasMarkdown(f));
     if (!hasMarkdown) return;
     menu.addItem((item) => {
       item.setIcon("pencil");
@@ -10991,7 +10677,7 @@ var LinkMenu = class {
   // The bulk flow recurses into subfolders, so the menu must appear whenever a
   // folder contains markdown at any depth - not only as a direct child.
   folderHasMarkdown(folder) {
-    return folder.children?.some((child2) => child2 instanceof import_obsidian19.TFile && child2.extension === "md" || child2 instanceof import_obsidian19.TFolder && this.folderHasMarkdown(child2)) ?? false;
+    return folder.children?.some((child2) => child2 instanceof import_obsidian18.TFile && child2.extension === "md" || child2 instanceof import_obsidian18.TFolder && this.folderHasMarkdown(child2)) ?? false;
   }
   addFileOptions(menu) {
     menu.addItem((item) => {
@@ -11014,7 +10700,7 @@ var LinkMenu = class {
 };
 
 // src/MetaEditApi.ts
-var import_obsidian20 = require("obsidian");
+var import_obsidian19 = require("obsidian");
 var MetaEditApi = class {
   constructor(plugin) {
     this.plugin = plugin;
@@ -11052,11 +10738,11 @@ var MetaEditApi = class {
   }
   getFileFromTFileOrPath(file) {
     let targetFile;
-    if (file instanceof import_obsidian20.TFile)
+    if (file instanceof import_obsidian19.TFile)
       targetFile = file;
     if (typeof file === "string") {
       const abstractFile = this.plugin.app.vault.getAbstractFileByPath(file);
-      if (abstractFile instanceof import_obsidian20.TFile) {
+      if (abstractFile instanceof import_obsidian19.TFile) {
         targetFile = abstractFile;
       }
     }
@@ -11193,7 +10879,7 @@ var MetaEditApi = class {
         eventQueues.delete(file.path);
       });
       const renameEventRef = this.plugin.app.vault.on("rename", (file, oldPath) => {
-        if (!(file instanceof import_obsidian20.TFile)) return;
+        if (!(file instanceof import_obsidian19.TFile)) return;
         const previousProperties = previousPropertiesByPath.get(oldPath);
         previousPropertiesByPath.delete(oldPath);
         if (previousProperties) {
@@ -11219,13 +10905,13 @@ var MetaEditApi = class {
   }
   cloneAutoProperties(autoProperties) {
     return autoProperties.map((autoProperty) => {
-      const clone2 = {
+      const clone = {
         name: autoProperty.name,
         choices: [...autoProperty.choices]
       };
-      if (autoProperty.description !== void 0) clone2.description = autoProperty.description;
-      if (autoProperty.type !== void 0) clone2.type = autoProperty.type;
-      return clone2;
+      if (autoProperty.description !== void 0) clone.description = autoProperty.description;
+      if (autoProperty.type !== void 0) clone.type = autoProperty.type;
+      return clone;
     });
   }
   validateAutoProperties(autoProperties) {
@@ -11259,16 +10945,16 @@ var MetaEditApi = class {
   }
   cloneProperties(properties) {
     return properties.map((property) => {
-      const clone2 = {
+      const clone = {
         key: property.key,
         type: property.type,
         content: this.cloneValue(property.content)
       };
-      if (property.path) clone2.path = [...property.path];
-      if (property.rootKey !== void 0) clone2.rootKey = property.rootKey;
-      if (property.isNested !== void 0) clone2.isNested = property.isNested;
-      if (property.isVirtual !== void 0) clone2.isVirtual = property.isVirtual;
-      return clone2;
+      if (property.path) clone.path = [...property.path];
+      if (property.rootKey !== void 0) clone.rootKey = property.rootKey;
+      if (property.isNested !== void 0) clone.isNested = property.isNested;
+      if (property.isVirtual !== void 0) clone.isVirtual = property.isVirtual;
+      return clone;
     });
   }
   getPropertiesFromEvent(data, cache) {
@@ -11293,16 +10979,16 @@ var MetaEditApi = class {
       return value.map((item) => this.cloneValue(item));
     }
     if (value && typeof value === "object") {
-      const clone2 = {};
+      const clone = {};
       for (const [key2, item] of Object.entries(value)) {
-        Object.defineProperty(clone2, key2, {
+        Object.defineProperty(clone, key2, {
           value: this.cloneValue(item),
           enumerable: true,
           configurable: true,
           writable: true
         });
       }
-      return clone2;
+      return clone;
     }
     return value;
   }
@@ -11320,7 +11006,7 @@ var MetaEditApi = class {
 };
 
 // src/utility.ts
-var import_obsidian21 = require("obsidian");
+var import_obsidian20 = require("obsidian");
 function getActiveMarkdownFile(app) {
   const activeFile = app.workspace.getActiveFile();
   const activeMarkdownFile = abstractFileToMarkdownTFile(activeFile);
@@ -11331,7 +11017,7 @@ function getActiveMarkdownFile(app) {
   return activeMarkdownFile;
 }
 function abstractFileToMarkdownTFile(file) {
-  if (file instanceof import_obsidian21.TFile && file.extension === "md")
+  if (file instanceof import_obsidian20.TFile && file.extension === "md")
     return file;
   return null;
 }
@@ -11365,7 +11051,7 @@ var ConsoleErrorLogger = class extends MetaEditLogger {
   logMessage(logMsg) {
     const log2 = this.getMetaEditError(logMsg, "LOG" /* Log */);
     this.addMessageToErrorLog(log2);
-    console.log(this.formatOutputString(log2));
+    console.debug(this.formatOutputString(log2));
   }
   addMessageToErrorLog(error) {
     this.ErrorLog.push(error);
@@ -11373,7 +11059,7 @@ var ConsoleErrorLogger = class extends MetaEditLogger {
 };
 
 // src/logger/guiLogger.ts
-var import_obsidian22 = require("obsidian");
+var import_obsidian21 = require("obsidian");
 var GuiLogger = class extends MetaEditLogger {
   constructor(plugin) {
     super();
@@ -11381,11 +11067,11 @@ var GuiLogger = class extends MetaEditLogger {
   }
   logError(msg) {
     const error = this.getMetaEditError(msg, "ERROR" /* Error */);
-    new import_obsidian22.Notice(this.formatOutputString(error));
+    new import_obsidian21.Notice(this.formatOutputString(error));
   }
   logWarning(msg) {
     const warning = this.getMetaEditError(msg, "WARNING" /* Warning */);
-    new import_obsidian22.Notice(this.formatOutputString(warning));
+    new import_obsidian21.Notice(this.formatOutputString(warning));
   }
   logMessage(_msg) {
   }
@@ -11418,7 +11104,7 @@ var UniqueQueue = class {
 };
 
 // src/automators/onFileModifyAutomatorManager.ts
-var import_obsidian23 = require("obsidian");
+var import_obsidian22 = require("obsidian");
 
 // src/updatedFileCache.ts
 var UpdatedFileCache = class {
@@ -11455,7 +11141,7 @@ var OnFileModifyAutomatorManager = class {
     this.updatedFileCache = new UpdatedFileCache();
     this.automators = [];
     this.notifyDelay = 5e3;
-    this.notifyAutomators = (0, import_obsidian23.debounce)(async () => {
+    this.notifyAutomators = (0, import_obsidian22.debounce)(async () => {
       while (!this.updateFileQueue.isEmpty()) {
         const file = this.updateFileQueue.dequeue();
         for (const automator of this.automators) {
@@ -11473,11 +11159,7 @@ var OnFileModifyAutomatorManager = class {
     return this;
   }
   attach(automator) {
-    const isExist = this.automators.some((tAuto) => tAuto.type === automator.type);
-    if (isExist) {
-      log.logWarning(`a ${automator.type} automator is already attached.`);
-      return this;
-    }
+    if (this.automators.some((tAuto) => tAuto.type === automator.type)) return this;
     this.automators.push(automator);
     return this;
   }
@@ -11552,7 +11234,7 @@ var SettingsWriter = class {
 };
 
 // src/automators/onFileModifyAutomators/kanbanHelper.ts
-var import_obsidian24 = require("obsidian");
+var import_obsidian23 = require("obsidian");
 
 // src/automators/onFileModifyAutomators/onFileModifyAutomator.ts
 var OnFileModifyAutomator = class {
@@ -11664,8 +11346,8 @@ var KanbanHelper = class extends OnFileModifyAutomator {
     } catch {
     }
     normalized = normalized.replace(/^\/+/, "");
-    normalized = (0, import_obsidian24.normalizePath)(normalized);
-    return (0, import_obsidian24.getLinkpath)(normalized);
+    normalized = (0, import_obsidian23.normalizePath)(normalized);
+    return (0, import_obsidian23.getLinkpath)(normalized);
   }
   buildLinkpathCandidates(linkpath) {
     const withoutExtension = this.stripMarkdownExtension(linkpath);
@@ -11736,17 +11418,19 @@ var ProgressPropertyHelper = class extends OnFileModifyAutomator {
 };
 
 // src/main.ts
-var MetaEdit = class extends import_obsidian25.Plugin {
+var MetaEdit = class extends import_obsidian24.Plugin {
   constructor() {
     super(...arguments);
     // Every settings write - the settings tab, the API, and the controller's Auto
     // Property choice persistence - runs through this one serialization point, so two
     // concurrent writers can't lost-update a shared in-memory snapshot and two disk
     // flushes can't complete out of order.
-    this.settingsWriter = new SettingsWriter(() => this.saveData(this.settings));
+    this.settingsWriter = new SettingsWriter(async () => {
+      await this.saveData(this.settings);
+      this.settingsTab?.syncWithSettings();
+    });
   }
   async onload() {
-    console.log("Loading MetaEdit");
     this.controller = new MetaController(this.app, this);
     this.bulkEditor = new BulkMetadataEditor(this.app, this);
     await this.loadSettings();
@@ -11759,7 +11443,8 @@ var MetaEdit = class extends import_obsidian25.Plugin {
         await this.runMetaEditForFile(file);
       }
     });
-    this.addSettingTab(new MetaEditSettingsTab(this.app, this));
+    this.settingsTab = new MetaEditSettingsTab(this.app, this);
+    this.addSettingTab(this.settingsTab);
     this.linkMenu = new LinkMenu(this);
     if (this.settings.UIElements.enabled) {
       this.linkMenu.registerEvent();
@@ -11786,7 +11471,6 @@ var MetaEdit = class extends import_obsidian25.Plugin {
     suggester.open();
   }
   onunload() {
-    console.log("Unloading MetaEdit");
     this.linkMenu.unregisterEvent();
   }
   async loadSettings() {
