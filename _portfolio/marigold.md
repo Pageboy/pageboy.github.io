@@ -1,8 +1,8 @@
 ---
 date: 2026-05-05
-updated: 2026-06-25
+updated: 2026-11-10
 title: Marigold
-image: https://live.staticflickr.com/65535/55249275617_d5cf29827f_b.jpg
+image: /uploads/artwork/55249275617_d5cf29827f_b.jpg
 layout: art
 tags:
   - art
@@ -28,4 +28,4 @@ Their brightness immediately draws the eye, prompting a simple question: why are
 
 What first appears ornamental reveals itself, on closer inspection, to be entirely at home in a garden devoted to healing.
 
-![Marigold in the Studio](https://live.staticflickr.com/65535/55250603970_772fab8dd7_h.jpg)
+![Marigold in the Studio](/uploads/artwork/marigold_studio.jpg)
