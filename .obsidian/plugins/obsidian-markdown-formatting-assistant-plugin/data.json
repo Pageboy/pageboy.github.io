@@ -9,7 +9,7 @@
     {
       "name": "textEdit",
       "active": true,
-      "visible": false
+      "visible": true
     },
     {
       "name": "tables",
@@ -19,7 +19,7 @@
     {
       "name": "html",
       "active": true,
-      "visible": true
+      "visible": false
     },
     {
       "name": "latex",

@@ -1,0 +1,13 @@
+{
+  "sessionSecretId": "obsidian-to-substack-session",
+  "defaultLanguage": "en",
+  "translationLanguages": [
+    "en",
+    "es",
+    "de",
+    "it",
+    "pt",
+    "fr"
+  ],
+  "removeTrailingTags": false
+}

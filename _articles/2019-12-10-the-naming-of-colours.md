@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Naming of Colours
+subtitle: Observing the nuances and shades
 date: 2019-12-10T19:03:00.000Z
 image: /uploads/img_0578.jpg
 caption: Farrow and Ball colour chart
@@ -9,7 +10,7 @@ tags:
   - observations
   - photography
 published: true
-updated: 2025-11-05
+updated: 2026-11-16
 ---
 We might say "I like your blue sweater". But we could instead say "I really love your "Pavilion Blue" sweater. Of course we would need to have memorised the *Farrow & Ball* colour card and have been brainwashed with these named colours.
 

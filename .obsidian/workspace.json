@@ -8,36 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "3cf21be821776c12",
+            "id": "8d26912798901be8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pages/cv.md",
-                "mode": "preview",
-                "source": true,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "cv"
-            }
-          },
-          {
-            "id": "085a46a263b9f851",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_portfolio/firethorn.md",
+                "file": "_portfolio/smoke-bush.md",
                 "mode": "source",
                 "source": true,
                 "backlinks": true,
@@ -52,35 +28,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "firethorn"
-            }
-          },
-          {
-            "id": "b99da4e0ca04084d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_portfolio/marigold.md",
-                "mode": "preview",
-                "source": true,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "marigold"
+              "title": "smoke-bush"
             }
           }
         ],
-        "currentTab": 2
+        "stacked": true
       }
     ],
     "direction": "vertical"
@@ -230,7 +182,7 @@
             }
           },
           {
-            "id": "399f0b6da580786c",
+            "id": "d4a4dbe84bf71040",
             "type": "leaf",
             "state": {
               "type": "side-panel-control-view",
@@ -244,8 +196,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300.5,
-    "collapsed": true
+    "width": 300.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -264,30 +215,41 @@
       "content-publisher:Publish to Substack": false
     }
   },
-  "active": "b99da4e0ca04084d",
+  "active": "8d26912798901be8",
   "lastOpenFiles": [
-    "uploads/year-end-shapes_53414403540_o 2.jpg",
-    "uploads/wisteriacloseup 2.jpg",
-    "uploads/wisteria-wisdom_52949871112_o 2.jpg",
-    "uploads/wheat-waiting_53131838849_o 2.jpg",
-    "uploads/wheat-sweep_52224174283_o 2.jpg",
-    "uploads/wisteriacolours 2.jpg",
-    "uploads/z-form 2.jpg",
-    "uploads/years-end-colours_53401628496_o 2.jpg",
-    "uploads/photos/51988695356_fc1e02a98d_h.jpg",
-    "uploads/photos/doorway-in-brasenose-lane-oxford_54905796569_o.jpg",
-    "uploads/photos/gateway-to-lewes-castle-sussex_54880270322_o.jpg",
-    "_portfolio/marigold.md",
+    "obsidian_templates/blog.md",
+    "_portfolio/smoke-bush.md",
+    "_layouts/subscribe copy.html",
+    "_photographs/the-oxford-ox.md",
+    "_site/uploads/artwork/smokebush_studio.jpg",
+    "uploads/artwork/smokebush_studio.jpg",
+    "_site/uploads/artwork/smokebush_studio-2.jpg",
+    "uploads/artwork/smokebush_studio-2.jpg",
     "bases/Portfolio.base",
+    "_articles/2019-12-10-the-naming-of-colours.md",
+    "_portfolio/marigold.md",
+    "_site/portfolio/smoke-bush/index.html",
+    "_site/portfolio/smoke-bush",
+    "_site/photographs/hanging-chain/index.html",
+    "_site/photographs/hanging-chain",
+    "_site/portfolio/firethorn/index.html",
+    "_site/portfolio/firethorn",
+    "_site/uploads/z-form 2.jpg",
+    "_site/uploads/years-end-colours_53401628496_o 2.jpg",
+    "_site/uploads/year-end-shapes_53414403540_o 2.jpg",
+    "_site/uploads/wisteriacolours 2.jpg",
+    "_site/uploads/wisteriacloseup 2.jpg",
+    "_site/uploads/wisteria-wisdom_52949871112_o 2.jpg",
+    "_photographs/hanging-chain.md",
+    "bases/Photographs.base",
+    "pages/cv.md",
+    "_portfolio/firethorn.md",
     "_portfolio/bougainvillea.md",
     "_portfolio/peacock-flower.md",
     "_portfolio/california-poppy-arc.md",
-    "_photographs/hanging-chain.md",
     "pages/about.md",
     "_portfolio/lacecap-hydrangea.md",
     "pages/statement.md",
-    "pages/cv.md",
-    "_portfolio/firethorn.md",
     "_portfolio/agapanthus-at-monserrate.md",
     "_portfolio/beach-zones-beach-tones.md",
     "obsidian_templates/photograph.md",
@@ -300,18 +262,7 @@
     "_portfolio/haws-in-the-hedge.md",
     "_portfolio/moorblues.md",
     "bases/Projects.base",
-    "bases/Articles.base",
-    "bases/Untitled.base",
     "_articles/projects.md",
-    "bases/Photographs.base",
-    "_portfolio/lenten-rose.md",
-    "_photographs/travels-in-mexico.md",
-    "_photographs/arched-doorway-st-gabriels-church.md",
-    "_site/projects/folding_pieces/index.html",
-    "_site/projects/folding_pieces",
-    "_site/uploads/artwork",
-    "_site/uploads/photos/tobeadjusted",
-    "uploads/photos/tobeadjusted",
     "newsletters/November 2025.canvas",
     "newsletters/Untitled 1.canvas",
     "docs/private/Teaching_Hold/Multiplatform Publishing/Assignment1.canvas",

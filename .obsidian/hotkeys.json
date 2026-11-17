@@ -55,5 +55,13 @@
       ],
       "key": "A"
     }
+  ],
+  "permalink-opener:open-prod-url": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "O"
+    }
   ]
 }

@@ -4,5 +4,6 @@
   "accentColor": "#ff6a00",
   "textFontFamily": "Avenir",
   "interfaceFontFamily": "Avenir",
-  "theme": "obsidian"
+  "theme": "obsidian",
+  "showRibbon": true
 }

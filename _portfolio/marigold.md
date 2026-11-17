@@ -1,6 +1,6 @@
 ---
 date: 2026-05-05
-updated: 2026-11-10
+updated: 2026-11-16
 title: Marigold
 image: /uploads/artwork/55249275617_d5cf29827f_b.jpg
 layout: art
@@ -12,8 +12,8 @@ solo: false
 caption:
 forsale:
 published: true
-flickr_share: https://flic.kr/p/2sbbYMx
-nft: https://opensea.io/item/ethereum/0xc23d44ad0140e5b6332fc7ce32f48ce75b0a4017/3
+flickr_share:
+nft:
 ---
 In the herb gardens of Abbaye de Fontfroide near Narbonne in southern France, marigolds—_les soucis_—grow in profusion, their vivid orange blooms set against a tapestry of other medicinal plants.
 
