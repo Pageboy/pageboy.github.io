@@ -270,7 +270,7 @@
     "_articles/2022-08-09-beale-to-oxford.md": "a6d5cab067325e98e79e4ef63de378df9621d7dd45140dec87101c179b6f9fb1",
     "_articles/2022-03-07-back-in-the-water.md": "d2e192879591091b260f18ce2ec58eb3c9f734cf6745eb52b45d0c3ada3cebba",
     "_articles/2022-07-14-abingdon-to-wallingford.md": "fd2fe5e88fe5de211a64f93400eed7cd26f8e70e5f49a04f0692c695465b3c16",
-    "_photographs/bridges-on-the-thames.md": "fe0c3abe47394a1c14ea12bf099eecdca6dffdca207aa3bdf13c3e6036b297dc",
+    "_photographs/bridges-on-the-thames.md": "5a6d79d9c3c1b32d890508c164d2c9e1c402d7ada4665a4dff02c590a19f6c76",
     "_photographs/deli_at_mccormaigs.md": "801b9896bda5d4a397d5a293b4d0e3e33a730c3cfe338a59f9844df091ec8aab",
     "_photographs/elephant-in-sri-lanka.md": "a5ad7f70fe96a7e8a8cd9e7a40892b506dbcd8ee7fb1b90e8c69293bf4d272a9",
     "_photographs/five-stones-and-chalk-lines.md": "a35b9e85f22aa3aef55ecd3d650250eaada4033005029c152b218c94ea3c1a4e",
@@ -295,7 +295,7 @@
     "pages/blog.md": "f6b0f96d285a178417f8816cd1f66dda8ca4e9fd2234767f06bfed4634811192",
     "_portfolio/wisteria-autumn.md": "8fb7b71bf95fe357558240ad3ba98a596ba92649ba6d13c0d2f5bbcb71261577",
     "_articles/colour-search-november.md": "4de936ff243a5a8d1af6eab8ca145e6dcbf1095211f76f6a05c983b16dbcbbaa",
-    "_photographs/cornmarket-street.md": "3609f3fd8c085c85f9a353326fff5025746dbb366cdc82164b1a3be3e4bac47d",
+    "_photographs/cornmarket-street.md": "c32a4ee7f3cccbd37e20514fd03e87466528b4f7c55cd3fa937d6316482ca6cb",
     "_portfolio/sumac-tree.md": "0251d600aa09ae12bc22920bcb2264e19b683b283e5c58c71265f4281fda2d0e",
     "_photographs/oxford-wall-with-random-repairs.md": "5d9dda7257485fc6292909e1936bb314d92b6f88047f1ada43f68919401c0804",
     "_portfolio/apple-drop.md": "af5e806f032594c02bac97f8ee07831dc159dddd6f9f7a21d57ae0ffe5b3bcbc",
@@ -386,6 +386,10 @@
     "pages/home.md": "b36a2026bebb9b89761a33bf76280d55460b564e2ef084a91bddd39e2adf340e",
     "_portfolio/firethorn.md": "e49d1f554454f13922270c0aa6652ad6407023f19384fc84f3e0dbb2534169a7",
     "_photographs/hanging-chain.md": "b10972f9c3760485ca47def3d0bd50462ab2e9a0cbdae498bd6f1a0a5e0dc86c",
-    "_portfolio/smoke-bush.md": "6a4a1658b04fe124d5cada010ae8b78cf9bb556d85a0afee7da22836c37296f0"
+    "_portfolio/smoke-bush.md": "6a4a1658b04fe124d5cada010ae8b78cf9bb556d85a0afee7da22836c37296f0",
+    "daily/18-11-2026.md": "8631bae76b66f38174b6de24eda73f216ba5a4e058c8c0e68b14a334b56d36ad",
+    "daily/19-11-2026.md": "ff33fe669781ee58230af56bf9645f55d48351462e876f1b2a130ba235e819e8",
+    "daily/20-11-2026.md": "e9c6a09c1830d46621879b68cf5003867f13665fa89cd5108bf436fc5c36d13f",
+    "_photographs/leaves-grounded.md": "fce29f52e3a8b9a452f547913db2d96ce96d9b674be02bafbd60daafdc2a57cc"
   }
 }

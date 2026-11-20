@@ -1,4 +1,5 @@
 {
   "format": "DD-MM-YYYY",
-  "folder": "/daily"
+  "folder": "/daily",
+  "template": "obsidian_templates/daily-note.md"
 }

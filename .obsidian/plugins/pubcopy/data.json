@@ -1,9 +1,0 @@
-{
-  "stripFrontmatter": false,
-  "stripTags": true,
-  "stripWikilinks": true,
-  "imageHandling": "always-url",
-  "tableHandling": "list",
-  "showNotification": true,
-  "lastRunVersion": "1.7.0"
-}

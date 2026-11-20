@@ -7,10 +7,12 @@ caption: Clifton Hampden
 flickr_album: "72157719717623568"
 tags:
 published: true
-updated: 2026-10-03
+updated: 2026-11-18
 ---
 See a gallery of other bridge photos and a video on the Thames.
 
 <div class="video-box"><iframe width="560" height="315" src="https://www.youtube.com/embed/lC_SCysva5Y?rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+
 
 Here is a video from my YouTube channel that shows Thames bridges between Windsor and Oxford.
