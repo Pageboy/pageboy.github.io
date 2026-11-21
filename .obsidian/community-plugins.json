@@ -16,5 +16,6 @@
   "copy-as-html",
   "to-substack",
   "simple-image-inserter",
-  "ink"
+  "ink",
+  "local-media-embedder"
 ]

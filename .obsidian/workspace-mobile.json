@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "e8f33b115a669ac9",
+        "id": "b1edd7d9b11c40c1",
         "type": "tabs",
         "children": [
           {
-            "id": "d44177a68bcaf577",
+            "id": "f0ec8c688a58ed03",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_projects/images-of-book-pages.md",
-                "mode": "source",
+                "file": "_photographs/five-photos-from-a-forest-walk.md",
+                "mode": "preview",
                 "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -28,59 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "images-of-book-pages"
-            }
-          },
-          {
-            "id": "54f69c56cf814ce2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_projects/images-of-book-pages.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "images-of-book-pages"
-            }
-          },
-          {
-            "id": "4ea2a5ca23f9da62",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "obsidian_templates/portfolio.md",
-                "mode": "source",
-                "source": true,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "portfolio"
+              "title": "five-photos-from-a-forest-walk"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -160,7 +111,8 @@
       }
     ],
     "currentTab": 0,
-    "pinned": true
+    "pinned": true,
+    "pinnedSize": 379.63228196364946
   },
   "right": {
     "id": "4b2f3a5ba6f88a0d",
@@ -232,7 +184,7 @@
         }
       },
       {
-        "id": "f6b6506a1553bd3e",
+        "id": "a031b83fca6100b1",
         "type": "leaf",
         "state": {
           "type": "side-panel-control-view",
@@ -260,8 +212,26 @@
       "templates:Insert template": false
     }
   },
-  "active": "4ea2a5ca23f9da62",
+  "active": "f0ec8c688a58ed03",
   "lastOpenFiles": [
+    "_site/photographs/five-photos-from-a-forest-walk/index.html",
+    "_site/photographs/five-photos-from-a-forest-walk",
+    "uploads/photos/wythamwoods_211126.jpg",
+    "_photographs/five-photos-from-a-forest-walk.md",
+    "uploads/photos/wythamwoods_211126-2.jpg",
+    "uploads/wythamwoods_211126-2.jpg",
+    "uploads/temp-1795282215688.jpg",
+    "uploads/temp-1795282213364.jpg",
+    "_site/uploads/temp-1795282191189.jpg",
+    "uploads/temp-1795282212157.jpg",
+    "uploads/temp-1795282211005.jpg",
+    "uploads/temp-1795282191189.jpg",
+    "uploads/photos/ground-leaves-8.jpg",
+    "daily/21-11-2026.md",
+    "obsidian_templates/portfolio.md",
+    "_site/daily/21-11-2026/index.html",
+    "_site/daily/21-11-2026",
+    "uploads/private",
     "obsidian_templates/photograph.md",
     "obsidian_templates/newsletters.md",
     "obsidian_templates/blog.md",
@@ -290,24 +260,6 @@
     "_site/daily/23-02-2023.md",
     "_site/daily/14-02-2023.md",
     "_site/daily/11-03-2023.md",
-    "_site/daily/19-02-2023.md",
-    "_site/daily/april-3-2022.md",
-    "_site/daily/05-03-2023.md",
-    "_site/daily/14-03-2023.md",
-    "_site/daily/19-11-2026",
-    "_site/daily/18-11-2026",
-    "_site/daily",
-    "_site/uploads/photos/ground-leaves.jpg",
-    "_site/uploads/photos/ground-leaves-9.jpg",
-    "_site/uploads/photos/ground-leaves-8.jpg",
-    "_site/uploads/photos/ground-leaves-3.jpg",
-    "_site/uploads/photos/ground-leaves-2.jpg",
-    "_site/uploads/photos/ground-leaves-5.jpg",
-    "_site/uploads/photos/ground-leaves-4.jpg",
-    "_site/uploads/photos/ground-leaves-6.jpg",
-    "_site/uploads/photos/ground-leaves-7.jpg",
-    "_site/uploads/IMG_5383.jpeg",
-    "uploads/artwork",
     "newsletters/Untitled.canvas",
     "newsletters/November 2025.canvas",
     "_site/Untitled.canvas",
