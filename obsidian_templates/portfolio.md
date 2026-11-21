@@ -2,6 +2,7 @@
 date:
 updated:
 title:
+metadescription:
 image:
 layout: art
 tags:

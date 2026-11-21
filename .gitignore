@@ -15,4 +15,6 @@ _site/*
 gemfile
 Gemfile
 Gemfile.lock
+/obsidian_templates/
 /daily/
+/uploads/private/

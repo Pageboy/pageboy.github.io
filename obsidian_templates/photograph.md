@@ -2,7 +2,7 @@
 date:
 updated:
 title:
-subtitle:
+metadescription:
 image:
 caption:
 source:

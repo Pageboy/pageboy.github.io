@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "9a2cda75958018f1",
+        "id": "e8f33b115a669ac9",
         "type": "tabs",
         "children": [
           {
-            "id": "67e00a65d9daee33",
+            "id": "d44177a68bcaf577",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "daily/20-11-2026.md",
+                "file": "_projects/images-of-book-pages.md",
                 "mode": "source",
                 "source": true,
                 "backlinks": true,
@@ -24,14 +24,63 @@
                   "showSearch": false,
                   "searchQuery": "",
                   "backlinkCollapsed": false,
-                  "unlinkedCollapsed": false
+                  "unlinkedCollapsed": true
                 }
               },
               "icon": "lucide-file",
-              "title": "20-11-2026"
+              "title": "images-of-book-pages"
+            }
+          },
+          {
+            "id": "54f69c56cf814ce2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_projects/images-of-book-pages.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "images-of-book-pages"
+            }
+          },
+          {
+            "id": "4ea2a5ca23f9da62",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "obsidian_templates/portfolio.md",
+                "mode": "source",
+                "source": true,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "portfolio"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -110,7 +159,8 @@
         }
       }
     ],
-    "currentTab": 0
+    "currentTab": 0,
+    "pinned": true
   },
   "right": {
     "id": "4b2f3a5ba6f88a0d",
@@ -210,54 +260,54 @@
       "templates:Insert template": false
     }
   },
-  "active": "67e00a65d9daee33",
+  "active": "4ea2a5ca23f9da62",
   "lastOpenFiles": [
-    "daily/19-11-2026.md",
+    "obsidian_templates/photograph.md",
+    "obsidian_templates/newsletters.md",
+    "obsidian_templates/blog.md",
+    "_projects/images-of-book-pages.md",
+    "_projects/www.substack.com.md",
+    "_projects/stoneandmirrors.md",
+    "_projects/leiden_oxford.md",
+    "_projects/typographyseen.md",
     "daily/20-11-2026.md",
-    "daily/18-11-2026.md",
-    "uploads/IMG_5383.jpeg",
-    "daily/photos",
-    "daily/photosuntitled",
-    "daily/untitled",
-    "daily/artwork/olive-arcs-studio.jpg",
-    "daily/artwork/palmatum-studio.jpg",
-    "daily/artwork/53058778522_45dbf9474b_h.jpg",
-    "daily/artwork/53299807933_9663242d3d_h.jpg",
-    "daily/artwork/54997377525_5407f9dcb9_h.jpg",
-    "daily/artwork/agapanthus-studio.jpg",
-    "daily/artwork/55161772980_c90257ab8b_h.jpg",
-    "daily/artwork/55559014099_56040beaf2_c.jpg",
-    "daily/artwork/55143985876_35d73640a4_h.jpg",
-    "daily/artwork",
-    "obsidian_templates/daily-note-2.md",
-    "obsidian_templates/daily-note.md",
-    "_portfolio/lacecap-hydrangea.md",
-    "obsidian_templates/daily.md",
-    "daily/untitled.md",
-    "uploads/Ink/Drawing",
-    "uploads/Ink",
-    "_photographs/bridges-on-the-thames.md",
-    "_photographs/cornmarket-street.md",
-    "_articles/2019-06-09-canopy_fixings.md",
-    "daily/08-08-2023.md",
-    "daily/16-02-2023.md",
-    "daily/21-02-2023.md",
-    "daily/02-03-2023.md",
-    "daily/02-02-2023.md",
-    "daily/19-09-2023.md",
-    "daily/26-04-2024.md",
-    "daily/13-02-2023.md",
-    "daily/23-02-2023.md",
-    "daily/14-02-2023.md",
-    "daily/11-03-2023.md",
-    "daily/19-02-2023.md",
-    "daily/april-3-2022.md",
-    "daily/05-03-2023.md",
-    "daily/14-03-2023.md",
-    "daily",
-    "bases/Portfolio.base",
-    "_site/portfolio/haws-in-the-hedge/index.html",
-    "_site/portfolio/haws-in-the-hedge",
+    "daily/19-11-2026.md",
+    "_photographs/leaves-grounded.md",
+    "_site/photographs/leaves-grounded/index.html",
+    "_site/photographs/leaves-grounded",
+    "_site/daily/20-11-2026/index.html",
+    "_site/daily/19-11-2026/index.html",
+    "_site/daily/18-11-2026/index.html",
+    "_site/daily/08-08-2023.md",
+    "_site/daily/16-02-2023.md",
+    "_site/daily/21-02-2023.md",
+    "_site/daily/02-03-2023.md",
+    "_site/daily/02-02-2023.md",
+    "_site/daily/19-09-2023.md",
+    "_site/daily/26-04-2024.md",
+    "_site/daily/20-11-2026",
+    "_site/daily/13-02-2023.md",
+    "_site/daily/23-02-2023.md",
+    "_site/daily/14-02-2023.md",
+    "_site/daily/11-03-2023.md",
+    "_site/daily/19-02-2023.md",
+    "_site/daily/april-3-2022.md",
+    "_site/daily/05-03-2023.md",
+    "_site/daily/14-03-2023.md",
+    "_site/daily/19-11-2026",
+    "_site/daily/18-11-2026",
+    "_site/daily",
+    "_site/uploads/photos/ground-leaves.jpg",
+    "_site/uploads/photos/ground-leaves-9.jpg",
+    "_site/uploads/photos/ground-leaves-8.jpg",
+    "_site/uploads/photos/ground-leaves-3.jpg",
+    "_site/uploads/photos/ground-leaves-2.jpg",
+    "_site/uploads/photos/ground-leaves-5.jpg",
+    "_site/uploads/photos/ground-leaves-4.jpg",
+    "_site/uploads/photos/ground-leaves-6.jpg",
+    "_site/uploads/photos/ground-leaves-7.jpg",
+    "_site/uploads/IMG_5383.jpeg",
+    "uploads/artwork",
     "newsletters/Untitled.canvas",
     "newsletters/November 2025.canvas",
     "_site/Untitled.canvas",

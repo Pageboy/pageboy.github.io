@@ -1,5 +1,5 @@
 {
-  "sessionSecretId": "obsidian-to-substack-session",
+  "sessionSecretId": "substack-session",
   "defaultLanguage": "en",
   "translationLanguages": [
     "en",
@@ -9,5 +9,7 @@
     "pt",
     "fr"
   ],
-  "removeTrailingTags": false
+  "removeTrailingTags": false,
+  "mastodonServer": "",
+  "mastodonSecretId": ""
 }

@@ -15,5 +15,6 @@
   "pretty-properties",
   "copy-as-html",
   "to-substack",
-  "simple-image-inserter"
+  "simple-image-inserter",
+  "ink"
 ]

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_photographs/leaves-grounded.md",
+                "file": "_projects/stoneandmirrors.md",
                 "mode": "preview",
                 "source": true,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "leaves-grounded"
+              "title": "stoneandmirrors"
             }
           }
         ],
@@ -217,7 +217,11 @@
   },
   "active": "e496a8e2c45111b4",
   "lastOpenFiles": [
+    "obsidian_templates/daily-note.md",
     "_photographs/leaves-grounded.md",
+    "uploads/private",
+    "uploads/untitled folder",
+    "_projects/www.substack.com.md",
     "_site/photographs/leaves-grounded/index.html",
     "_site/photographs/leaves-grounded",
     "_portfolio/smoke-bush.md",
@@ -257,7 +261,6 @@
     "_site/daily/15-03-2023.md",
     "_site/daily/15-02-2023.md",
     "_site/daily/14-03-2023.md",
-    "_site/daily/14-02-2023.md",
     "newsletters/November 2025.canvas",
     "newsletters/Untitled 1.canvas",
     "docs/private/Teaching_Hold/Multiplatform Publishing/Assignment1.canvas",
