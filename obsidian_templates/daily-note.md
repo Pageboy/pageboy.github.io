@@ -1,16 +1,27 @@
+---
+title:
+date: 2026-11-22T12:15:00
+updated:
+tags:
+  - daily-note
+---
 
 # {{date:dddd, MMMM D, YYYY}}
 
-## Health
+> [!attention]+ Health
+> How do I feel
 
-## Artwork
+> [!example]+ Artwork
+> Ideas
 
-## Photo
+> [!abstract]+ daily Photo
+> Gimme a picture
+> 
 
-## Boat
+> [!help]+ Boat
+> Any news on the boat
+> 
 
-## Tasks
+> [!tldr]+ Tasks
+> - [ ] 
 
-- [ ] 
-- [ ] 
-- [ ] 
