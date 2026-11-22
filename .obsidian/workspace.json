@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "daily/21-11-2026.md",
-                "mode": "source",
+                "file": "daily/22-11-2026.md",
+                "mode": "preview",
                 "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "21-11-2026"
+              "title": "22-11-2026"
             }
           }
         ],
@@ -217,6 +217,11 @@
   },
   "active": "e496a8e2c45111b4",
   "lastOpenFiles": [
+    "daily/21-11-2026.md",
+    "_site/uploads/IMG_5383.jpeg",
+    "uploads/IMG_5383.jpeg",
+    "_site/articles/my-work-at-art-expo-bruxelles/index.html",
+    "_site/articles/my-work-at-art-expo-bruxelles",
     "_site/uploads/IMG_0302.jpeg",
     "uploads/IMG_0302.jpeg",
     "_site/uploads/IMG_0303.jpeg",
@@ -225,11 +230,8 @@
     "uploads/IMG_0304.jpeg",
     "_site/uploads/IMG_0305.jpeg",
     "uploads/IMG_0305.jpeg",
-    "_site/uploads/IMG_0306.jpeg",
-    "uploads/IMG_0306.jpeg",
     "_articles/my-work-at-art-expo-bruxelles.md",
     "_articles/untitled.md",
-    "_site/uploads/private/ARTBOXY-6ada0258a5cbc8c6eacafff2.jpeg",
     "_site/uploads/private",
     "_site/daily/22-11-2026/index.html",
     "_site/daily/22-11-2026",
@@ -243,13 +245,10 @@
     "_site/daily/21-11-2026",
     "_site/daily/21-11-2026.md",
     "_projects/stoneandmirrors.md",
-    "daily/21-11-2026.md",
     "obsidian_templates/daily-note.md",
     "_photographs/leaves-grounded.md",
     "uploads/private",
-    "uploads/untitled folder",
     "_projects/www.substack.com.md",
-    "_site/photographs/leaves-grounded/index.html",
     "_portfolio/smoke-bush.md",
     "_site/daily/april-3-2022.md",
     "_site/daily/31-01-2023.md",
