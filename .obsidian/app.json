@@ -33,7 +33,10 @@
     "editor:configure-toolbar",
     "obsidian-markdown-formatting-assistant-plugin:open-callouts-selector",
     "editor:insert-callout",
-    "editor:insert-footnote"
+    "editor:insert-footnote",
+    "editor:insert-table",
+    "editor:table-row-before",
+    "editor:table-row-after"
   ],
   "mobilePullAction": "obsidian-markdown-formatting-assistant-plugin:open-command-selector",
   "showUnsupportedFiles": true,
@@ -46,5 +49,6 @@
     "margin": "0",
     "downscalePercent": 72
   },
-  "newFileLocation": "current"
+  "newFileLocation": "current",
+  "strictLineBreaks": true
 }

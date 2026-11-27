@@ -23,6 +23,9 @@ __export(main_exports, {
 });
 module.exports = __toCommonJS(main_exports);
 
+// plugin/development.ts
+var installDevelopment = () => Promise.resolve();
+
 // locales/en.json
 var en_default = {
   pluginName: "To Substack",
@@ -329,232 +332,16 @@ function t(key, parameters = {}, language = locale) {
 }
 
 // plugin/main.ts
-var import_obsidian6 = require("obsidian");
+var import_obsidian7 = require("obsidian");
 
 // icon.svg
 var icon_default = '<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="currentColor" stroke="none">\n  <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/>\n</svg>\n';
 
-// plugin/post.ts
-var import_obsidian3 = require("obsidian");
-
-// plugin/mastodon.ts
-var import_obsidian = require("obsidian");
-var SCOPES = "read:accounts write:statuses write:media";
-var MastodonError = class extends Error {
-};
-function isRecord(value) {
-  return !!value && typeof value === "object" && !Array.isArray(value);
-}
-function isSecret(value) {
-  return typeof value === "string" && !!value && Array.from(value).every((character) => character.charCodeAt(0) > 32 && character.charCodeAt(0) < 127);
-}
-function normalizeMastodonServer(value) {
-  try {
-    const url = new URL(value.includes("://") ? value.trim() : `https://${value.trim()}`);
-    if (url.protocol !== "https:" || url.username || url.password || url.pathname !== "/" || url.search || url.hash)
-      throw new Error();
-    return url.origin;
-  } catch (e) {
-    throw new MastodonError(t("mastodonInvalidServer"));
-  }
-}
-async function request(server, path, options = {}, token, timeoutMs = 15e3) {
-  const origin = normalizeMastodonServer(server);
-  if (token !== void 0 && !isSecret(token))
-    throw new MastodonError(t("mastodonSessionExpired"));
-  let timeout;
-  const uncertain = path === "/api/v1/statuses" && options.method === "POST";
-  try {
-    const response = await Promise.race([(0, import_obsidian.requestUrl)({
-      ...options,
-      url: origin + path,
-      throw: false,
-      headers: { "Content-Type": "application/json", ...options.headers, ...token ? { Authorization: `Bearer ${token}` } : {} }
-    }), new Promise((_resolve, reject) => {
-      timeout = window.setTimeout(() => reject(new MastodonError(t(uncertain ? "mastodonPublicationUncertain" : "mastodonConnectionFailed"))), timeoutMs);
-    })]);
-    if (response.status === 401 || response.status === 403)
-      throw new MastodonError(t("mastodonSessionExpired"));
-    if (response.status < 200 || response.status >= 300)
-      throw new MastodonError(t(uncertain ? "mastodonPublicationUncertain" : "mastodonConnectionFailed"));
-    return response;
-  } catch (error) {
-    if (error instanceof MastodonError)
-      throw error;
-    throw new MastodonError(t(uncertain ? "mastodonPublicationUncertain" : "mastodonConnectionFailed"));
-  } finally {
-    if (timeout !== void 0)
-      window.clearTimeout(timeout);
-  }
-}
-function json(response) {
-  try {
-    const value = response.json;
-    return value;
-  } catch (e) {
-    throw new MastodonError(t("mastodonConnectionFailed"));
-  }
-}
-function randomSecret() {
-  return Array.from(window.crypto.getRandomValues(new Uint8Array(32)), (byte) => byte.toString(16).padStart(2, "0")).join("");
-}
-async function beginMastodonLogin(value, redirectUri) {
-  const server = normalizeMastodonServer(value);
-  const application = json(await request(server, "/api/v1/apps", { method: "POST", body: JSON.stringify({ client_name: "To Substack", redirect_uris: redirectUri, scopes: SCOPES, website: "https://github.com/tcrouzet/obsidian-to-substack" }) }));
-  if (!isRecord(application) || !isSecret(application.client_id) || !isSecret(application.client_secret))
-    throw new MastodonError(t("mastodonConnectionFailed"));
-  const state = randomSecret();
-  const verifier = randomSecret();
-  const digest = await window.crypto.subtle.digest("SHA-256", new TextEncoder().encode(verifier));
-  const challenge = (0, import_obsidian.arrayBufferToBase64)(digest).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
-  const url = new URL("/oauth/authorize", server);
-  for (const [key, entry] of Object.entries({ client_id: application.client_id, redirect_uri: redirectUri, response_type: "code", scope: SCOPES, state, code_challenge: challenge, code_challenge_method: "S256" }))
-    url.searchParams.set(key, entry);
-  return { server, clientId: application.client_id, clientSecret: application.client_secret, redirectUri, state, verifier, createdAt: Date.now(), authorizationUrl: url.href };
-}
-async function completeMastodonLogin(login, params) {
-  if (params.state !== login.state || Date.now() - login.createdAt > 10 * 60 * 1e3 || params.error || !isSecret(params.code))
-    throw new MastodonError(t("mastodonAuthorizationFailed"));
-  const token = json(await request(login.server, "/oauth/token", { method: "POST", body: JSON.stringify({ grant_type: "authorization_code", client_id: login.clientId, client_secret: login.clientSecret, redirect_uri: login.redirectUri, code: params.code, code_verifier: login.verifier }) }));
-  if (!isRecord(token) || !isSecret(token.access_token))
-    throw new MastodonError(t("mastodonAuthorizationFailed"));
-  const session = { server: login.server, accessToken: token.access_token, clientId: login.clientId, clientSecret: login.clientSecret, account: "" };
-  try {
-    const account = json(await request(login.server, "/api/v1/accounts/verify_credentials", {}, token.access_token));
-    if (!isRecord(account) || typeof account.id !== "string" || typeof account.acct !== "string" || !account.acct.trim())
-      throw new MastodonError(t("mastodonAuthorizationFailed"));
-    session.account = account.acct.includes("@") ? account.acct : `${account.acct}@${new URL(login.server).host}`;
-    return session;
-  } catch (error) {
-    await revokeMastodonSession(session).catch(() => {
-    });
-    throw error;
-  }
-}
-function parseMastodonSession(value) {
-  try {
-    const session = JSON.parse(value);
-    if (!isRecord(session) || typeof session.server !== "string" || !isSecret(session.accessToken) || !isSecret(session.clientId) || !isSecret(session.clientSecret) || typeof session.account !== "string" || !session.account)
-      throw new Error();
-    return { server: normalizeMastodonServer(session.server), accessToken: session.accessToken, clientId: session.clientId, clientSecret: session.clientSecret, account: session.account };
-  } catch (e) {
-    throw new MastodonError(t("mastodonSessionExpired"));
-  }
-}
-async function revokeMastodonSession(session) {
-  await request(session.server, "/oauth/revoke", { method: "POST", body: JSON.stringify({ client_id: session.clientId, client_secret: session.clientSecret, token: session.accessToken }) });
-}
-function mastodonStatusText(body, maxCharacters, reservedPerUrl) {
-  const plain = (node) => {
-    var _a, _b, _c;
-    if (node.type === "image2")
-      return "";
-    if (node.type === "hardBreak")
-      return "\n";
-    if (node.text !== void 0) {
-      const href = (_c = (_b = (_a = node.marks) == null ? void 0 : _a.find((mark) => mark.type === "link")) == null ? void 0 : _b.attrs) == null ? void 0 : _c.href;
-      return href && /^https?:\/\//.test(href) ? `${href === node.text ? "" : node.text + " "}${href} ` : node.text;
-    }
-    const separator = ["doc", "blockquote", "bulletList", "orderedList", "listItem"].includes(node.type) ? "\n\n" : "";
-    return (node.content || []).map(plain).filter((text2) => text2 !== "").join(separator);
-  };
-  const text = plain(body).trim();
-  const tokens = text.match(/(?:https?:\/\/|www\.)\S+|[\s\S]/gu) || [];
-  const isUrl = (token) => /^(?:https?:\/\/|www\.)/.test(token);
-  const cost = (token) => {
-    var _a;
-    return isUrl(token) ? reservedPerUrl + (((_a = token.match(/[.,;:!?)\]}>"']+$/)) == null ? void 0 : _a[0].length) || 0) : 1;
-  };
-  if (tokens.reduce((sum, token) => sum + cost(token), 0) <= maxCharacters)
-    return text;
-  const links = [...new Set(tokens.filter(isUrl))];
-  const suffix = links.length ? `
-
-${links.join("\n")}` : "";
-  const budget = maxCharacters - links.reduce((sum, url) => sum + cost(url), 0) - (links.length ? links.length + 1 : 0) - 3;
-  if (budget < 0)
-    throw new MastodonError(t("mastodonTooManyLinks"));
-  let shortened = "";
-  let used = 0;
-  for (const token of tokens) {
-    if (isUrl(token))
-      continue;
-    if (used + cost(token) > budget)
-      break;
-    shortened += token;
-    used += cost(token);
-  }
-  return `${shortened.replace(/\s+$/, "")}...${suffix}`;
-}
-async function publishMastodonNote(session, body, sourceUrl) {
-  if (!/^https:\/\/substack\.com\/note\/c-[1-9][0-9]*$/.test(sourceUrl))
-    throw new MastodonError(t("mastodonPublicationUncertain"));
-  const instance = json(await request(session.server, "/api/v2/instance", {}, session.accessToken));
-  const configuration = isRecord(instance) && isRecord(instance.configuration) ? instance.configuration : null;
-  const statuses = configuration && isRecord(configuration.statuses) ? configuration.statuses : null;
-  const media = configuration && isRecord(configuration.media_attachments) ? configuration.media_attachments : null;
-  if (!statuses || !media || typeof statuses.max_characters !== "number" || !Number.isSafeInteger(statuses.max_characters) || statuses.max_characters <= 0 || typeof statuses.max_media_attachments !== "number" || !Number.isSafeInteger(statuses.max_media_attachments) || statuses.max_media_attachments < 0 || typeof statuses.characters_reserved_per_url !== "number" || !Number.isSafeInteger(statuses.characters_reserved_per_url) || statuses.characters_reserved_per_url < 0 || typeof media.image_size_limit !== "number" || !Number.isSafeInteger(media.image_size_limit) || media.image_size_limit <= 0 || !Array.isArray(media.supported_mime_types) || !media.supported_mime_types.every((mime) => typeof mime === "string"))
-    throw new MastodonError(t("mastodonInstanceUnsupported"));
-  const status = mastodonStatusText(body, statuses.max_characters, statuses.characters_reserved_per_url);
-  const images = /* @__PURE__ */ new Map();
-  const collect = (node) => {
-    var _a;
-    if (node.type === "image2" && typeof ((_a = node.attrs) == null ? void 0 : _a.src) === "string" && !images.has(node.attrs.src))
-      images.set(node.attrs.src, typeof node.attrs.alt === "string" ? node.attrs.alt : "");
-    for (const child of node.content || [])
-      collect(child);
-  };
-  collect(body);
-  if (images.size > statuses.max_media_attachments)
-    throw new MastodonError(t("mastodonTooManyImages", { limit: String(statuses.max_media_attachments) }));
-  const supportedMimeTypes = media.supported_mime_types;
-  const imageSizeLimit = media.image_size_limit;
-  const prepared = [...images].map(([src, alt]) => {
-    const match = src.match(/^data:(image\/[a-z0-9.+-]+);base64,([a-z0-9+/]+={0,2})$/i);
-    const mime = match == null ? void 0 : match[1].toLowerCase().replace("image/jpg", "image/jpeg");
-    if (!match || !mime || !supportedMimeTypes.includes(mime))
-      throw new MastodonError(t("mastodonImageUnsupported"));
-    const bytes = (0, import_obsidian.base64ToArrayBuffer)(match[2]);
-    if (bytes.byteLength > imageSizeLimit)
-      throw new MastodonError(t("mastodonImageTooLarge"));
-    return { bytes, mime, alt };
-  });
-  const mediaIds = [];
-  for (const image of prepared) {
-    const form = new FormData();
-    form.append("file", new Blob([image.bytes], { type: image.mime }), `image.${image.mime.split("/")[1].split("+")[0]}`);
-    form.append("description", Array.from(image.alt).slice(0, typeof media.description_limit === "number" ? media.description_limit : 1500).join(""));
-    const encoded = new Request(`${session.server}/api/v2/media`, { method: "POST", body: form });
-    let attachment = json(await request(session.server, "/api/v2/media", { method: "POST", headers: { "Content-Type": encoded.headers.get("Content-Type") || "" }, body: await encoded.arrayBuffer() }, session.accessToken, 3e4));
-    if (!isRecord(attachment) || typeof attachment.id !== "string" || !/^[0-9]+$/.test(attachment.id))
-      throw new MastodonError(t("mastodonImageFailed"));
-    const id = attachment.id;
-    const deadline = Date.now() + 6e4;
-    while (isRecord(attachment) && !attachment.url && Date.now() < deadline) {
-      await new Promise((resolve) => window.setTimeout(resolve, 500));
-      attachment = json(await request(session.server, `/api/v1/media/${id}`, {}, session.accessToken, Math.max(1, Math.min(15e3, deadline - Date.now()))));
-    }
-    if (!isRecord(attachment) || attachment.id !== id || typeof attachment.url !== "string" || !attachment.url)
-      throw new MastodonError(t("mastodonImageFailed"));
-    mediaIds.push(id);
-  }
-  try {
-    const result = json(await request(session.server, "/api/v1/statuses", { method: "POST", headers: { "Idempotency-Key": `to-substack-note-${sourceUrl.slice(sourceUrl.lastIndexOf("-") + 1)}` }, body: JSON.stringify({ status, media_ids: mediaIds }) }, session.accessToken));
-    if (!isRecord(result) || typeof result.id !== "string" || !/^[0-9]+$/.test(result.id) || typeof result.url !== "string")
-      throw new Error();
-    const url = new URL(result.url);
-    if (url.origin !== normalizeMastodonServer(session.server) || url.username || url.password)
-      throw new Error();
-    return url.href;
-  } catch (error) {
-    if (error instanceof MastodonError)
-      throw error;
-    throw new MastodonError(t("mastodonPublicationUncertain"));
-  }
-}
+// plugin/images.ts
+var import_obsidian2 = require("obsidian");
 
 // plugin/substack.ts
-var import_obsidian2 = require("obsidian");
+var import_obsidian = require("obsidian");
 var SubstackError = class extends Error {
   constructor(message, status) {
     super(message);
@@ -576,17 +363,17 @@ function normalizeSession(value) {
     throw new SubstackError(t("invalidSession"));
   return `substack.sid=${session}`;
 }
-function isRecord2(value) {
+function isRecord(value) {
   return typeof value === "object" && value !== null && !Array.isArray(value);
 }
 function parseAccount(value) {
-  if (!isRecord2(value) || !Array.isArray(value.publicationUsers)) {
+  if (!isRecord(value) || !Array.isArray(value.publicationUsers)) {
     throw new SubstackError(t("unexpectedProfile"));
   }
   const newsletters = /* @__PURE__ */ new Map();
   for (const membership of value.publicationUsers) {
-    const publication = isRecord2(membership) ? membership.publication : void 0;
-    if (!isRecord2(publication) || typeof publication.subdomain !== "string" || !/^[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$/.test(publication.subdomain)) {
+    const publication = isRecord(membership) ? membership.publication : void 0;
+    if (!isRecord(publication) || typeof publication.subdomain !== "string" || !/^[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$/.test(publication.subdomain)) {
       throw new SubstackError(t("invalidNewsletterResponse"));
     }
     newsletters.set(publication.subdomain, {
@@ -599,7 +386,7 @@ function parseAccount(value) {
     newsletters: [...newsletters.values()]
   };
 }
-async function request2(session, options, timeoutMs = 15e3) {
+async function request(session, options, timeoutMs = 15e3) {
   const cookie = normalizeSession(session);
   const publishingNote = options.url === "https://substack.com/api/v1/comment/feed";
   const publishingDraft = options.method === "POST" && options.url.endsWith("/publish");
@@ -607,7 +394,7 @@ async function request2(session, options, timeoutMs = 15e3) {
   let response;
   let timeout;
   try {
-    response = await Promise.race([(0, import_obsidian2.requestUrl)({
+    response = await Promise.race([(0, import_obsidian.requestUrl)({
       ...options,
       headers: { "Content-Type": "application/json", ...options.headers, Cookie: cookie },
       throw: false
@@ -651,18 +438,18 @@ async function request2(session, options, timeoutMs = 15e3) {
   }
 }
 async function getAccount(session) {
-  return parseAccount(await request2(session, { url: "https://substack.com/api/v1/user/profile/self", method: "GET" }));
+  return parseAccount(await request(session, { url: "https://substack.com/api/v1/user/profile/self", method: "GET" }));
 }
 async function getSections(session, newsletter) {
   if (!/^[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$/.test(newsletter.subdomain))
     throw new SubstackError(t("invalidNewsletter"));
-  const result = await request2(session, { url: `https://${newsletter.subdomain}.substack.com/api/v1/publication/sections`, method: "GET" });
-  const sections = Array.isArray(result) ? result : isRecord2(result) ? result.sections : void 0;
+  const result = await request(session, { url: `https://${newsletter.subdomain}.substack.com/api/v1/publication/sections`, method: "GET" });
+  const sections = Array.isArray(result) ? result : isRecord(result) ? result.sections : void 0;
   if (!Array.isArray(sections))
     throw new SubstackError(t("categoriesFailed"));
   const available = [];
   for (const section of sections) {
-    if (!isRecord2(section) || typeof section.id !== "number" || !Number.isSafeInteger(section.id) || section.id <= 0 || typeof section.name !== "string" || !section.name.trim())
+    if (!isRecord(section) || typeof section.id !== "number" || !Number.isSafeInteger(section.id) || section.id <= 0 || typeof section.name !== "string" || !section.name.trim())
       throw new SubstackError(t("categoriesFailed"));
     if (section.is_live !== false)
       available.push({ id: section.id, name: section.name });
@@ -675,17 +462,17 @@ async function saveDraftSection(session, newsletter, draftId, sectionId) {
   if (sectionId !== null && (!Number.isSafeInteger(sectionId) || sectionId <= 0))
     throw new SubstackError(t("invalidCategory"));
   const url = `https://${newsletter.subdomain}.substack.com/api/v1/drafts/${draftId}`;
-  const saved = await request2(session, { url, method: "PUT", body: JSON.stringify({ draft_section_id: sectionId, section_chosen: true }) });
-  if (!isRecord2(saved) || String(saved.id) !== draftId || saved.draft_section_id !== sectionId)
+  const saved = await request(session, { url, method: "PUT", body: JSON.stringify({ draft_section_id: sectionId, section_chosen: true }) });
+  if (!isRecord(saved) || String(saved.id) !== draftId || saved.draft_section_id !== sectionId)
     throw new SubstackError(t("categorySaveFailed"));
 }
 async function publishDraft(session, newsletter, draftId, sectionId) {
   await saveDraftSection(session, newsletter, draftId, sectionId);
   const url = `https://${newsletter.subdomain}.substack.com/api/v1/drafts/${draftId}`;
-  await request2(session, { url: `${url}/publish`, method: "POST", body: JSON.stringify({ send: true, share_automatically: false }) });
+  await request(session, { url: `${url}/publish`, method: "POST", body: JSON.stringify({ send: true, share_automatically: false }) });
   try {
-    const published = await request2(session, { url, method: "GET" });
-    if (!isRecord2(published) || String(published.id) !== draftId || published.is_published !== true || typeof published.slug !== "string" || !published.slug.trim())
+    const published = await request(session, { url, method: "GET" });
+    if (!isRecord(published) || String(published.id) !== draftId || published.is_published !== true || typeof published.slug !== "string" || !published.slug.trim())
       throw new Error();
     return `https://${newsletter.subdomain}.substack.com/p/${encodeURIComponent(published.slug)}`;
   } catch (e) {
@@ -737,36 +524,36 @@ async function publishNote(session, body) {
   const attachmentIds = [];
   for (const image of images) {
     try {
-      const uploaded = await request2(session, { url: "https://substack.com/api/v1/image", method: "POST", body: JSON.stringify({ image }) });
-      if (!isRecord2(uploaded) || typeof uploaded.url !== "string")
+      const uploaded = await request(session, { url: "https://substack.com/api/v1/image", method: "POST", body: JSON.stringify({ image }) });
+      if (!isRecord(uploaded) || typeof uploaded.url !== "string")
         throw new Error();
       const url = new URL(uploaded.url);
       if (url.protocol !== "https:" || url.username || url.password)
         throw new Error();
-      const attachment = await request2(session, { url: "https://substack.com/api/v1/comment/attachment", method: "POST", body: JSON.stringify({ type: "image", url: url.href }) });
-      if (!isRecord2(attachment) || !["string", "number"].includes(typeof attachment.id) || !/^[a-zA-Z0-9_-]+$/.test(String(attachment.id)))
+      const attachment = await request(session, { url: "https://substack.com/api/v1/comment/attachment", method: "POST", body: JSON.stringify({ type: "image", url: url.href }) });
+      if (!isRecord(attachment) || !["string", "number"].includes(typeof attachment.id) || !/^[a-zA-Z0-9_-]+$/.test(String(attachment.id)))
         throw new Error();
       attachmentIds.push(attachment.id);
     } catch (e) {
       throw new SubstackError(t("noteImageUploadFailed"));
     }
   }
-  const result = await request2(session, {
+  const result = await request(session, {
     url: "https://substack.com/api/v1/comment/feed",
     method: "POST",
     body: JSON.stringify({ bodyJson, attachmentIds, replyMinimumRole: "everyone" })
   });
-  if (!isRecord2(result) || !["string", "number"].includes(typeof result.id) || !/^[1-9][0-9]*$/.test(String(result.id)))
+  if (!isRecord(result) || !["string", "number"].includes(typeof result.id) || !/^[1-9][0-9]*$/.test(String(result.id)))
     throw new SubstackError(t("notePublicationUncertain"));
   return `https://substack.com/note/c-${String(result.id)}`;
 }
 var DRAFT_LANGUAGES = ["en", "es", "de", "it", "pt", "fr"];
 function isReadyLanguage(edition, language) {
-  if (!isRecord2(edition) || edition.language !== language || typeof edition.draft_body !== "string")
+  if (!isRecord(edition) || edition.language !== language || typeof edition.draft_body !== "string")
     return false;
   try {
     const body = JSON.parse(edition.draft_body);
-    return isRecord2(body) && body.type === "doc" && Array.isArray(body.content);
+    return isRecord(body) && body.type === "doc" && Array.isArray(body.content);
   } catch (e) {
     return false;
   }
@@ -778,34 +565,34 @@ async function activateDraftLanguages(session, newsletter, draftId, onProgress, 
   if (!/^[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$/.test(newsletter.subdomain) || !/^[a-zA-Z0-9_-]+$/.test(draftId))
     throw new SubstackError(t("invalidNewsletter"));
   const baseUrl = `https://${newsletter.subdomain}.substack.com/api/v1`;
-  const settings = await request2(session, { url: `${baseUrl}/publication_settings`, method: "GET" });
-  if (!isRecord2(settings))
+  const settings = await request(session, { url: `${baseUrl}/publication_settings`, method: "GET" });
+  if (!isRecord(settings))
     throw new SubstackError(t("draftLanguagesFailed"));
   if (settings.additional_post_languages_enabled !== true || settings.auto_translate_enabled === false)
     return false;
   const url = `${baseUrl}/drafts/${draftId}`;
-  const draft = await request2(session, { url, method: "GET" });
-  if (!isRecord2(draft) || String(draft.id) !== draftId || !Array.isArray(draft.post_translations))
+  const draft = await request(session, { url, method: "GET" });
+  if (!isRecord(draft) || String(draft.id) !== draftId || !Array.isArray(draft.post_translations))
     throw new SubstackError(t("draftLanguagesFailed"));
-  const detected = draft.language ? draft : await request2(session, { url: `${url}/detect-language`, method: "GET" });
-  if (!isRecord2(detected) || typeof detected.language !== "string" || !/^[a-z]{2}(?:-[a-z]{2,4})?$/.test(detected.language))
+  const detected = draft.language ? draft : await request(session, { url: `${url}/detect-language`, method: "GET" });
+  if (!isRecord(detected) || typeof detected.language !== "string" || !/^[a-z]{2}(?:-[a-z]{2,4})?$/.test(detected.language))
     throw new SubstackError(t("draftLanguagesFailed"));
   const sourceLanguage = detected.language;
   const required = languages.filter((language) => language !== sourceLanguage);
   for (const language of required) {
-    const existing = draft.post_translations.find((edition2) => isRecord2(edition2) && edition2.language === language);
+    const existing = draft.post_translations.find((edition2) => isRecord(edition2) && edition2.language === language);
     if (existing) {
       if (!isReadyLanguage(existing, language))
         throw new SubstackError(t("draftLanguagesFailed"));
       continue;
     }
     onProgress(language);
-    const edition = await request2(session, { url: `${url}/translations/${language}`, method: "POST", body: JSON.stringify({ sourceLanguage }) }, 12e4);
+    const edition = await request(session, { url: `${url}/translations/${language}`, method: "POST", body: JSON.stringify({ sourceLanguage }) }, 12e4);
     if (!isReadyLanguage(edition, language))
       throw new SubstackError(t("draftLanguagesFailed"));
   }
-  const confirmed = await request2(session, { url, method: "GET" });
-  if (!isRecord2(confirmed) || String(confirmed.id) !== draftId || !Array.isArray(confirmed.post_translations))
+  const confirmed = await request(session, { url, method: "GET" });
+  if (!isRecord(confirmed) || String(confirmed.id) !== draftId || !Array.isArray(confirmed.post_translations))
     throw new SubstackError(t("draftLanguagesFailed"));
   const editions = confirmed.post_translations;
   if (!required.every((language) => editions.some((edition) => isReadyLanguage(edition, language))))
@@ -827,8 +614,8 @@ async function createDraft(session, newsletter, post) {
       let url = images.get(src);
       if (!url) {
         try {
-          const response = await request2(session, { url: `${baseUrl}/image`, method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: `image=${encodeURIComponent(src)}` });
-          if (!isRecord2(response) || typeof response.url !== "string")
+          const response = await request(session, { url: `${baseUrl}/image`, method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: `image=${encodeURIComponent(src)}` });
+          if (!isRecord(response) || typeof response.url !== "string")
             throw new Error();
           const destination = new URL(response.url);
           if (destination.protocol !== "https:" || destination.username || destination.password)
@@ -850,7 +637,7 @@ async function createDraft(session, newsletter, post) {
     return result2;
   };
   const body = await upload(post.body);
-  const result = await request2(session, {
+  const result = await request(session, {
     url: `${baseUrl}/drafts`,
     method: "POST",
     body: JSON.stringify({
@@ -864,40 +651,75 @@ async function createDraft(session, newsletter, post) {
       write_comment_permissions: "everyone"
     })
   });
-  if (!isRecord2(result) || !["string", "number"].includes(typeof result.id) || !/^[a-zA-Z0-9_-]+$/.test(String(result.id))) {
+  if (!isRecord(result) || !["string", "number"].includes(typeof result.id) || !/^[a-zA-Z0-9_-]+$/.test(String(result.id))) {
     throw new SubstackError(t("createdDraftUnconfirmed"));
   }
   return `https://${newsletter.subdomain}.substack.com/publish/post/${String(result.id)}`;
 }
 
-// plugin/post.ts
-var NOTE_DESTINATION = ":note";
+// plugin/images.ts
+async function resizeImage(data) {
+  var _a;
+  try {
+    const image = createEl("img");
+    image.src = data;
+    await image.decode();
+    if (!image.naturalWidth || !image.naturalHeight)
+      throw new Error();
+    if (image.naturalWidth <= 1600)
+      return data;
+    const canvas = createEl("canvas");
+    canvas.width = 1600;
+    canvas.height = Math.max(1, Math.round(image.naturalHeight * 1600 / image.naturalWidth));
+    const context = canvas.getContext("2d");
+    if (!context)
+      throw new Error();
+    context.drawImage(image, 0, 0, canvas.width, canvas.height);
+    const mime = ((_a = data.match(/^data:(image\/(?:jpeg|webp));/i)) == null ? void 0 : _a[1].toLowerCase()) || "image/png";
+    return canvas.toDataURL(mime, 0.9);
+  } catch (e) {
+    throw new SubstackError(t("imageEmbedFailed"));
+  }
+}
+async function encodeRemoteImage(link) {
+  var _a;
+  if (/^data:image\//i.test(link))
+    return resizeImage(link);
+  try {
+    const url = new URL(link);
+    if (!["http:", "https:"].includes(url.protocol) || url.username || url.password)
+      throw new Error();
+    const response = await (0, import_obsidian2.requestUrl)({ url: url.href, method: "GET", throw: false });
+    const mime = ((_a = Object.entries(response.headers).find(([name]) => name.toLowerCase() === "content-type")) == null ? void 0 : _a[1].split(";")[0].trim().toLowerCase()) || "";
+    if (response.status < 200 || response.status >= 300 || !/^image\/[a-z0-9.+-]+$/.test(mime) || !response.arrayBuffer.byteLength)
+      throw new Error();
+    return await resizeImage("data:" + mime + ";base64," + (0, import_obsidian2.arrayBufferToBase64)(response.arrayBuffer));
+  } catch (e) {
+    throw new SubstackError(t("imageEmbedFailed"));
+  }
+}
 async function encodeImages(app, file, container) {
   const encoded = /* @__PURE__ */ new Map();
   const encode = async (link) => {
-    var _a;
-    if (/^data:image\//i.test(link))
-      return link;
-    if (/^https?:\/\//i.test(link)) {
+    if (/^data:image\//i.test(link)) {
       let data2 = encoded.get(link);
       if (!data2) {
-        try {
-          const url = new URL(link);
-          if (url.username || url.password)
-            throw new Error();
-          const response = await (0, import_obsidian3.requestUrl)({ url: url.href, method: "GET", throw: false });
-          const mime2 = ((_a = Object.entries(response.headers).find(([name]) => name.toLowerCase() === "content-type")) == null ? void 0 : _a[1].split(";")[0].trim().toLowerCase()) || "";
-          if (response.status < 200 || response.status >= 300 || !/^image\/[a-z0-9.+-]+$/.test(mime2) || !response.arrayBuffer.byteLength)
-            throw new Error();
-          data2 = `data:${mime2};base64,${(0, import_obsidian3.arrayBufferToBase64)(response.arrayBuffer)}`;
-          encoded.set(link, data2);
-        } catch (e) {
-          throw new SubstackError(t("imageEmbedFailed"));
-        }
+        data2 = await resizeImage(link);
+        encoded.set(link, data2);
+        encoded.set(data2, data2);
       }
       return data2;
     }
-    const path = (0, import_obsidian3.getLinkpath)(link);
+    if (/^https?:\/\//i.test(link)) {
+      let data2 = encoded.get(link);
+      if (!data2) {
+        data2 = await encodeRemoteImage(link);
+        encoded.set(link, data2);
+        encoded.set(data2, data2);
+      }
+      return data2;
+    }
+    const path = (0, import_obsidian2.getLinkpath)(link);
     let attachment = app.metadataCache.getFirstLinkpathDest(path, file.path);
     if (!attachment) {
       try {
@@ -925,8 +747,9 @@ async function encodeImages(app, file, container) {
       throw new SubstackError(t("unsupportedImage", { file: attachment.name }));
     let data = encoded.get(attachment.path);
     if (!data) {
-      data = `data:${mime};base64,${(0, import_obsidian3.arrayBufferToBase64)(await app.vault.readBinary(attachment))}`;
+      data = await resizeImage(`data:${mime};base64,${(0, import_obsidian2.arrayBufferToBase64)(await app.vault.readBinary(attachment))}`);
       encoded.set(attachment.path, data);
+      encoded.set(data, data);
     }
     return data;
   };
@@ -939,6 +762,228 @@ async function encodeImages(app, file, container) {
   for (const image of Array.from(container.querySelectorAll("img")))
     image.src = await encode(image.getAttribute("src") || "");
 }
+
+// plugin/post.ts
+var import_obsidian4 = require("obsidian");
+
+// plugin/mastodon.ts
+var import_obsidian3 = require("obsidian");
+var SCOPES = "read:accounts write:statuses write:media";
+var MastodonError = class extends Error {
+};
+function isRecord2(value) {
+  return !!value && typeof value === "object" && !Array.isArray(value);
+}
+function isSecret(value) {
+  return typeof value === "string" && !!value && Array.from(value).every((character) => character.charCodeAt(0) > 32 && character.charCodeAt(0) < 127);
+}
+function normalizeMastodonServer(value) {
+  try {
+    const url = new URL(value.includes("://") ? value.trim() : `https://${value.trim()}`);
+    if (url.protocol !== "https:" || url.username || url.password || url.pathname !== "/" || url.search || url.hash)
+      throw new Error();
+    return url.origin;
+  } catch (e) {
+    throw new MastodonError(t("mastodonInvalidServer"));
+  }
+}
+async function request2(server, path, options = {}, token, timeoutMs = 15e3) {
+  const origin = normalizeMastodonServer(server);
+  if (token !== void 0 && !isSecret(token))
+    throw new MastodonError(t("mastodonSessionExpired"));
+  let timeout;
+  const uncertain = path === "/api/v1/statuses" && options.method === "POST";
+  try {
+    const response = await Promise.race([(0, import_obsidian3.requestUrl)({
+      ...options,
+      url: origin + path,
+      throw: false,
+      headers: { "Content-Type": "application/json", ...options.headers, ...token ? { Authorization: `Bearer ${token}` } : {} }
+    }), new Promise((_resolve, reject) => {
+      timeout = window.setTimeout(() => reject(new MastodonError(t(uncertain ? "mastodonPublicationUncertain" : "mastodonConnectionFailed"))), timeoutMs);
+    })]);
+    if (response.status === 401 || response.status === 403)
+      throw new MastodonError(t("mastodonSessionExpired"));
+    if (response.status < 200 || response.status >= 300)
+      throw new MastodonError(t(uncertain ? "mastodonPublicationUncertain" : "mastodonConnectionFailed"));
+    return response;
+  } catch (error) {
+    if (error instanceof MastodonError)
+      throw error;
+    throw new MastodonError(t(uncertain ? "mastodonPublicationUncertain" : "mastodonConnectionFailed"));
+  } finally {
+    if (timeout !== void 0)
+      window.clearTimeout(timeout);
+  }
+}
+function json(response) {
+  try {
+    const value = response.json;
+    return value;
+  } catch (e) {
+    throw new MastodonError(t("mastodonConnectionFailed"));
+  }
+}
+function randomSecret() {
+  return Array.from(window.crypto.getRandomValues(new Uint8Array(32)), (byte) => byte.toString(16).padStart(2, "0")).join("");
+}
+async function beginMastodonLogin(value, redirectUri) {
+  const server = normalizeMastodonServer(value);
+  const application = json(await request2(server, "/api/v1/apps", { method: "POST", body: JSON.stringify({ client_name: "To Substack", redirect_uris: redirectUri, scopes: SCOPES, website: "https://github.com/tcrouzet/obsidian-to-substack" }) }));
+  if (!isRecord2(application) || !isSecret(application.client_id) || !isSecret(application.client_secret))
+    throw new MastodonError(t("mastodonConnectionFailed"));
+  const state = randomSecret();
+  const verifier = randomSecret();
+  const digest = await window.crypto.subtle.digest("SHA-256", new TextEncoder().encode(verifier));
+  const challenge = (0, import_obsidian3.arrayBufferToBase64)(digest).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+  const url = new URL("/oauth/authorize", server);
+  for (const [key, entry] of Object.entries({ client_id: application.client_id, redirect_uri: redirectUri, response_type: "code", scope: SCOPES, state, code_challenge: challenge, code_challenge_method: "S256" }))
+    url.searchParams.set(key, entry);
+  return { server, clientId: application.client_id, clientSecret: application.client_secret, redirectUri, state, verifier, createdAt: Date.now(), authorizationUrl: url.href };
+}
+async function completeMastodonLogin(login, params) {
+  if (params.state !== login.state || Date.now() - login.createdAt > 10 * 60 * 1e3 || params.error || !isSecret(params.code))
+    throw new MastodonError(t("mastodonAuthorizationFailed"));
+  const token = json(await request2(login.server, "/oauth/token", { method: "POST", body: JSON.stringify({ grant_type: "authorization_code", client_id: login.clientId, client_secret: login.clientSecret, redirect_uri: login.redirectUri, code: params.code, code_verifier: login.verifier }) }));
+  if (!isRecord2(token) || !isSecret(token.access_token))
+    throw new MastodonError(t("mastodonAuthorizationFailed"));
+  const session = { server: login.server, accessToken: token.access_token, clientId: login.clientId, clientSecret: login.clientSecret, account: "" };
+  try {
+    const account = json(await request2(login.server, "/api/v1/accounts/verify_credentials", {}, token.access_token));
+    if (!isRecord2(account) || typeof account.id !== "string" || typeof account.acct !== "string" || !account.acct.trim())
+      throw new MastodonError(t("mastodonAuthorizationFailed"));
+    session.account = account.acct.includes("@") ? account.acct : `${account.acct}@${new URL(login.server).host}`;
+    return session;
+  } catch (error) {
+    await revokeMastodonSession(session).catch(() => {
+    });
+    throw error;
+  }
+}
+function parseMastodonSession(value) {
+  try {
+    const session = JSON.parse(value);
+    if (!isRecord2(session) || typeof session.server !== "string" || !isSecret(session.accessToken) || !isSecret(session.clientId) || !isSecret(session.clientSecret) || typeof session.account !== "string" || !session.account)
+      throw new Error();
+    return { server: normalizeMastodonServer(session.server), accessToken: session.accessToken, clientId: session.clientId, clientSecret: session.clientSecret, account: session.account };
+  } catch (e) {
+    throw new MastodonError(t("mastodonSessionExpired"));
+  }
+}
+async function revokeMastodonSession(session) {
+  await request2(session.server, "/oauth/revoke", { method: "POST", body: JSON.stringify({ client_id: session.clientId, client_secret: session.clientSecret, token: session.accessToken }) });
+}
+function mastodonStatusText(body, maxCharacters, reservedPerUrl) {
+  const plain = (node) => {
+    var _a, _b, _c;
+    if (node.type === "image2")
+      return "";
+    if (node.type === "hardBreak")
+      return "\n";
+    if (node.text !== void 0) {
+      const href = (_c = (_b = (_a = node.marks) == null ? void 0 : _a.find((mark) => mark.type === "link")) == null ? void 0 : _b.attrs) == null ? void 0 : _c.href;
+      return href && /^https?:\/\//.test(href) ? `${href === node.text ? "" : node.text + " "}${href} ` : node.text;
+    }
+    const separator = ["doc", "blockquote", "bulletList", "orderedList", "listItem"].includes(node.type) ? "\n\n" : "";
+    return (node.content || []).map(plain).filter((text2) => text2 !== "").join(separator);
+  };
+  const text = plain(body).trim();
+  const tokens = text.match(/(?:https?:\/\/|www\.)\S+|[\s\S]/gu) || [];
+  const isUrl = (token) => /^(?:https?:\/\/|www\.)/.test(token);
+  const cost = (token) => {
+    var _a;
+    return isUrl(token) ? reservedPerUrl + (((_a = token.match(/[.,;:!?)\]}>"']+$/)) == null ? void 0 : _a[0].length) || 0) : 1;
+  };
+  if (tokens.reduce((sum, token) => sum + cost(token), 0) <= maxCharacters)
+    return text;
+  const links = [...new Set(tokens.filter(isUrl))];
+  const suffix = links.length ? `
+
+${links.join("\n")}` : "";
+  const budget = maxCharacters - links.reduce((sum, url) => sum + cost(url), 0) - (links.length ? links.length + 1 : 0) - 3;
+  if (budget < 0)
+    throw new MastodonError(t("mastodonTooManyLinks"));
+  let shortened = "";
+  let used = 0;
+  for (const token of tokens) {
+    if (isUrl(token))
+      continue;
+    if (used + cost(token) > budget)
+      break;
+    shortened += token;
+    used += cost(token);
+  }
+  return `${shortened.replace(/\s+$/, "")}...${suffix}`;
+}
+async function publishMastodonNote(session, body, sourceUrl) {
+  if (!/^https:\/\/substack\.com\/note\/c-[1-9][0-9]*$/.test(sourceUrl))
+    throw new MastodonError(t("mastodonPublicationUncertain"));
+  const instance = json(await request2(session.server, "/api/v2/instance", {}, session.accessToken));
+  const configuration = isRecord2(instance) && isRecord2(instance.configuration) ? instance.configuration : null;
+  const statuses = configuration && isRecord2(configuration.statuses) ? configuration.statuses : null;
+  const media = configuration && isRecord2(configuration.media_attachments) ? configuration.media_attachments : null;
+  if (!statuses || !media || typeof statuses.max_characters !== "number" || !Number.isSafeInteger(statuses.max_characters) || statuses.max_characters <= 0 || typeof statuses.max_media_attachments !== "number" || !Number.isSafeInteger(statuses.max_media_attachments) || statuses.max_media_attachments < 0 || typeof statuses.characters_reserved_per_url !== "number" || !Number.isSafeInteger(statuses.characters_reserved_per_url) || statuses.characters_reserved_per_url < 0 || typeof media.image_size_limit !== "number" || !Number.isSafeInteger(media.image_size_limit) || media.image_size_limit <= 0 || !Array.isArray(media.supported_mime_types) || !media.supported_mime_types.every((mime) => typeof mime === "string"))
+    throw new MastodonError(t("mastodonInstanceUnsupported"));
+  const status = mastodonStatusText(body, statuses.max_characters, statuses.characters_reserved_per_url);
+  const images = /* @__PURE__ */ new Map();
+  const collect = (node) => {
+    var _a;
+    if (node.type === "image2" && typeof ((_a = node.attrs) == null ? void 0 : _a.src) === "string" && !images.has(node.attrs.src))
+      images.set(node.attrs.src, typeof node.attrs.alt === "string" ? node.attrs.alt : "");
+    for (const child of node.content || [])
+      collect(child);
+  };
+  collect(body);
+  if (images.size > statuses.max_media_attachments)
+    throw new MastodonError(t("mastodonTooManyImages", { limit: String(statuses.max_media_attachments) }));
+  const supportedMimeTypes = media.supported_mime_types;
+  const imageSizeLimit = media.image_size_limit;
+  const prepared = [...images].map(([src, alt]) => {
+    const match = src.match(/^data:(image\/[a-z0-9.+-]+);base64,([a-z0-9+/]+={0,2})$/i);
+    const mime = match == null ? void 0 : match[1].toLowerCase().replace("image/jpg", "image/jpeg");
+    if (!match || !mime || !supportedMimeTypes.includes(mime))
+      throw new MastodonError(t("mastodonImageUnsupported"));
+    const bytes = (0, import_obsidian3.base64ToArrayBuffer)(match[2]);
+    if (bytes.byteLength > imageSizeLimit)
+      throw new MastodonError(t("mastodonImageTooLarge"));
+    return { bytes, mime, alt };
+  });
+  const mediaIds = [];
+  for (const image of prepared) {
+    const form = new FormData();
+    form.append("file", new Blob([image.bytes], { type: image.mime }), `image.${image.mime.split("/")[1].split("+")[0]}`);
+    form.append("description", Array.from(image.alt).slice(0, typeof media.description_limit === "number" ? media.description_limit : 1500).join(""));
+    const encoded = new Request(`${session.server}/api/v2/media`, { method: "POST", body: form });
+    let attachment = json(await request2(session.server, "/api/v2/media", { method: "POST", headers: { "Content-Type": encoded.headers.get("Content-Type") || "" }, body: await encoded.arrayBuffer() }, session.accessToken, 3e4));
+    if (!isRecord2(attachment) || typeof attachment.id !== "string" || !/^[0-9]+$/.test(attachment.id))
+      throw new MastodonError(t("mastodonImageFailed"));
+    const id = attachment.id;
+    const deadline = Date.now() + 6e4;
+    while (isRecord2(attachment) && !attachment.url && Date.now() < deadline) {
+      await new Promise((resolve) => window.setTimeout(resolve, 500));
+      attachment = json(await request2(session.server, `/api/v1/media/${id}`, {}, session.accessToken, Math.max(1, Math.min(15e3, deadline - Date.now()))));
+    }
+    if (!isRecord2(attachment) || attachment.id !== id || typeof attachment.url !== "string" || !attachment.url)
+      throw new MastodonError(t("mastodonImageFailed"));
+    mediaIds.push(id);
+  }
+  try {
+    const result = json(await request2(session.server, "/api/v1/statuses", { method: "POST", headers: { "Idempotency-Key": `to-substack-note-${sourceUrl.slice(sourceUrl.lastIndexOf("-") + 1)}` }, body: JSON.stringify({ status, media_ids: mediaIds }) }, session.accessToken));
+    if (!isRecord2(result) || typeof result.id !== "string" || !/^[0-9]+$/.test(result.id) || typeof result.url !== "string")
+      throw new Error();
+    const url = new URL(result.url);
+    if (url.origin !== normalizeMastodonServer(session.server) || url.username || url.password)
+      throw new Error();
+    return url.href;
+  } catch (error) {
+    if (error instanceof MastodonError)
+      throw error;
+    throw new MastodonError(t("mastodonPublicationUncertain"));
+  }
+}
+
+// plugin/post.ts
+var NOTE_DESTINATION = ":note";
 function inline(node, marks = [], includeCaptions = false) {
   var _a;
   if (node.nodeType === Node.TEXT_NODE)
@@ -1034,19 +1079,19 @@ function blocks(parent, includeCaptions = false) {
 async function preparePost(app, file, options = {}) {
   var _a, _b, _c, _d, _e;
   const markdown = (_a = options.selection) != null ? _a : await app.vault.read(file);
-  const frontmatter = options.selection === void 0 ? (0, import_obsidian3.getFrontMatterInfo)(markdown) : null;
+  const frontmatter = options.selection === void 0 ? (0, import_obsidian4.getFrontMatterInfo)(markdown) : null;
   const container = createDiv();
-  const component = new import_obsidian3.Component();
+  const component = new import_obsidian4.Component();
   component.load();
   try {
     let metadata;
     try {
-      metadata = (frontmatter == null ? void 0 : frontmatter.exists) ? (0, import_obsidian3.parseYaml)(frontmatter.frontmatter) : null;
+      metadata = (frontmatter == null ? void 0 : frontmatter.exists) ? (0, import_obsidian4.parseYaml)(frontmatter.frontmatter) : null;
     } catch (e) {
       throw new SubstackError(t("invalidFrontmatter"));
     }
     const properties = metadata && typeof metadata === "object" && !Array.isArray(metadata) ? metadata : {};
-    await import_obsidian3.MarkdownRenderer.render(app, markdown.slice((_b = frontmatter == null ? void 0 : frontmatter.contentStart) != null ? _b : 0), container, file.path, component);
+    await import_obsidian4.MarkdownRenderer.render(app, markdown.slice((_b = frontmatter == null ? void 0 : frontmatter.contentStart) != null ? _b : 0), container, file.path, component);
     const imageSource = typeof properties.image === "string" ? properties.image.trim() : "";
     const imageCaption = typeof properties.caption === "string" ? properties.caption.trim() : "";
     let cover = imageSource ? container.createEl("img", { attr: { src: imageSource, alt: imageCaption } }) : null;
@@ -1108,7 +1153,7 @@ async function preparePost(app, file, options = {}) {
     component.unload();
   }
 }
-var PostModal = class extends import_obsidian3.Modal {
+var PostModal = class extends import_obsidian4.Modal {
   constructor(plugin, file, selectedMarkdown) {
     super(plugin.app);
     this.plugin = plugin;
@@ -1138,7 +1183,7 @@ var PostModal = class extends import_obsidian3.Modal {
       description.setText(this.selectedMarkdown !== void 0 ? t(mirror ? "publishSelectedTextBoth" : "publishSelectedText") : t(selected === NOTE_DESTINATION ? mirror ? "publishNoteBoth" : "publishNoteFromNote" : "createDraftFromNote", { note: this.file.basename }));
     };
     updateDescription();
-    new import_obsidian3.Setting(this.contentEl).setName(t("destination")).addDropdown((dropdown) => {
+    new import_obsidian4.Setting(this.contentEl).setName(t("destination")).addDropdown((dropdown) => {
       dropdown.selectEl.setAttribute("aria-label", t("destination"));
       dropdown.addOption(NOTE_DESTINATION, t("noteDestination"));
       for (const newsletter of newsletters)
@@ -1150,7 +1195,7 @@ var PostModal = class extends import_obsidian3.Modal {
       });
     });
     const status = this.contentEl.createEl("p", { attr: { role: "status", "aria-live": "polite" } });
-    new import_obsidian3.Setting(this.contentEl).addButton((button) => {
+    new import_obsidian4.Setting(this.contentEl).addButton((button) => {
       submit = button;
       button.setButtonText(t(selected === NOTE_DESTINATION ? "publishNote" : "createDraft")).setCta().onClick(async () => {
         const isNote = selected === NOTE_DESTINATION;
@@ -1230,7 +1275,7 @@ var PostModal = class extends import_obsidian3.Modal {
       openButton == null ? void 0 : openButton.setDisabled(value);
     };
     const showActions = () => {
-      const actions = new import_obsidian3.Setting(this.contentEl);
+      const actions = new import_obsidian4.Setting(this.contentEl);
       actions.addButton((button) => {
         closeButton = button;
         button.setButtonText(t("close")).onClick(() => {
@@ -1292,7 +1337,7 @@ var PostModal = class extends import_obsidian3.Modal {
       categoriesLoaded = true;
       status.empty();
       if (sections.length) {
-        const choice = new import_obsidian3.Setting(this.contentEl).setName(t("category")).addDropdown((dropdown) => {
+        const choice = new import_obsidian4.Setting(this.contentEl).setName(t("category")).addDropdown((dropdown) => {
           category = dropdown;
           dropdown.selectEl.setAttribute("aria-label", t("category"));
           dropdown.addOption(":choose", t("chooseCategory"));
@@ -1335,7 +1380,7 @@ var PostModal = class extends import_obsidian3.Modal {
 };
 
 // plugin/auth.ts
-var import_obsidian4 = require("obsidian");
+var import_obsidian5 = require("obsidian");
 var SubstackLogin = class {
   constructor() {
     this.authWindow = null;
@@ -1361,7 +1406,7 @@ var SubstackLogin = class {
   }
   open() {
     var _a;
-    if (!import_obsidian4.Platform.isDesktopApp) {
+    if (!import_obsidian5.Platform.isDesktopApp) {
       throw new SubstackError(t("mobileSessionRequired"));
     }
     let remote;
@@ -1486,8 +1531,8 @@ var SubstackLogin = class {
 };
 
 // plugin/settings.ts
-var import_obsidian5 = require("obsidian");
-var SubstackSettingTab = class extends import_obsidian5.PluginSettingTab {
+var import_obsidian6 = require("obsidian");
+var SubstackSettingTab = class extends import_obsidian6.PluginSettingTab {
   constructor(app, plugin) {
     super(app, plugin);
     this.icon = "to-substack";
@@ -1519,7 +1564,7 @@ var SubstackSettingTab = class extends import_obsidian5.PluginSettingTab {
             desc: plugin.error || (plugin.hasLoginWindow ? t("emailCodeHelp") : plugin.busy ? t("loadingAccountHelp") : t("connectionHelp")),
             render: (setting) => {
               setting.descEl.setAttribute("role", plugin.error ? "alert" : "status");
-              if (import_obsidian5.Platform.isDesktopApp)
+              if (import_obsidian6.Platform.isDesktopApp)
                 setting.addButton((button) => button.setButtonText(plugin.hasLoginWindow ? t("returnToSignIn") : plugin.account ? t("switchAccount") : t("signIn")).setCta().setDisabled(plugin.busy && !plugin.hasLoginWindow).onClick(() => {
                   void plugin.connect(true);
                 }));
@@ -1619,7 +1664,8 @@ var SubstackSettingTab = class extends import_obsidian5.PluginSettingTab {
               }));
           }
         }]
-      }
+      },
+      ...plugin.developmentSettings()
     ];
   }
 };
@@ -1627,9 +1673,10 @@ var SubstackSettingTab = class extends import_obsidian5.PluginSettingTab {
 // plugin/main.ts
 var SESSION_SECRET = "obsidian-to-substack-session";
 var MASTODON_SECRET = "to-substack-mastodon-session";
-var ToSubstackPlugin = class extends import_obsidian6.Plugin {
+var ToSubstackPlugin = class extends import_obsidian7.Plugin {
   constructor() {
     super(...arguments);
+    this.developmentSettings = () => [];
     this.settings = { sessionSecretId: "", defaultLanguage: "en", translationLanguages: [...DRAFT_LANGUAGES], removeTrailingTags: false, mastodonServer: "", mastodonSecretId: "" };
     this.account = null;
     this.activity = "";
@@ -1642,6 +1689,9 @@ var ToSubstackPlugin = class extends import_obsidian6.Plugin {
     this.operation = 0;
     this.connection = Promise.resolve();
     this.login = new SubstackLogin();
+  }
+  refreshDevelopmentSettings() {
+    this.settingsTab.update();
   }
   get busy() {
     return this.activity !== "";
@@ -1658,10 +1708,10 @@ var ToSubstackPlugin = class extends import_obsidian6.Plugin {
   }
   async onload() {
     var _a;
-    setLocale((0, import_obsidian6.getLanguage)());
-    const appLanguage = (0, import_obsidian6.getLanguage)().toLowerCase().replace(/_/g, "-").split("-")[0];
+    setLocale((0, import_obsidian7.getLanguage)());
+    const appLanguage = (0, import_obsidian7.getLanguage)().toLowerCase().replace(/_/g, "-").split("-")[0];
     this.settings.defaultLanguage = (_a = DRAFT_LANGUAGES.find((language) => language === appLanguage)) != null ? _a : "en";
-    (0, import_obsidian6.addIcon)("to-substack", icon_default);
+    (0, import_obsidian7.addIcon)("to-substack", icon_default);
     const saved = await this.loadData();
     if (saved && typeof saved === "object") {
       const data = saved;
@@ -1691,6 +1741,7 @@ var ToSubstackPlugin = class extends import_obsidian6.Plugin {
       this.mastodonError = t("mastodonSessionExpired");
     }
     this.settingsTab = new SubstackSettingTab(this.app, this);
+    await installDevelopment(this);
     this.addSettingTab(this.settingsTab);
     this.register(() => {
       this.cancelConnection();
@@ -1701,9 +1752,9 @@ var ToSubstackPlugin = class extends import_obsidian6.Plugin {
     });
     this.registerEvent(this.app.workspace.on("file-menu", (menu, file) => {
       var _a2;
-      if (!(file instanceof import_obsidian6.TFile) || file.extension !== "md")
+      if (!(file instanceof import_obsidian7.TFile) || file.extension !== "md")
         return;
-      const view = this.app.workspace.getActiveViewOfType(import_obsidian6.MarkdownView);
+      const view = this.app.workspace.getActiveViewOfType(import_obsidian7.MarkdownView);
       const selection = ((_a2 = view == null ? void 0 : view.file) == null ? void 0 : _a2.path) === file.path ? view.editor.getSelection() || void 0 : void 0;
       menu.addItem((item) => item.setTitle(t("pluginName")).setIcon("to-substack").onClick(() => {
         new PostModal(this, file, selection).open();
@@ -1787,7 +1838,7 @@ var ToSubstackPlugin = class extends import_obsidian6.Plugin {
       this.settings.mastodonSecretId = MASTODON_SECRET;
       this.mastodonAccount = session.account;
       this.mastodonError = "";
-      new import_obsidian6.Notice(t("mastodonConnected", { account: session.account }));
+      new import_obsidian7.Notice(t("mastodonConnected", { account: session.account }));
     } catch (error) {
       if (operation === this.mastodonOperation)
         this.mastodonError = error instanceof MastodonError ? error.message : t("mastodonConnectionFailed");
@@ -1895,14 +1946,14 @@ var ToSubstackPlugin = class extends import_obsidian6.Plugin {
       if (operation === this.operation) {
         this.account = account;
         if (useBrowser)
-          new import_obsidian6.Notice(t("connectionEstablished"));
+          new import_obsidian7.Notice(t("connectionEstablished"));
       }
     } catch (error) {
       if (operation !== this.operation)
         return;
       this.account = null;
       this.error = error instanceof SubstackError ? error.message : t("connectionFailed");
-      new import_obsidian6.Notice(this.error);
+      new import_obsidian7.Notice(this.error);
     } finally {
       if (operation === this.operation) {
         this.activity = "";

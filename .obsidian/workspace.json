@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_articles/my-work-at-art-expo-bruxelles.md",
-                "mode": "source",
+                "file": "daily/25-11-2026.md",
+                "mode": "preview",
                 "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "my-work-at-art-expo-bruxelles"
+              "title": "25-11-2026"
             }
           }
         ],
@@ -177,8 +177,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "icon": "lucide-ghost",
+              "title": "git-view"
             }
           },
           {
@@ -192,7 +192,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -216,23 +216,28 @@
   },
   "active": "e496a8e2c45111b4",
   "lastOpenFiles": [
-    "uploads/IMG_0306.jpeg",
+    "uploads/photos/treesatnight-2.jpeg",
+    "uploads/treesatnight-2.jpeg",
+    "uploads/photos/treesatnight-3.jpeg",
+    "uploads/treesatnight-3.jpeg",
+    "uploads/photos/treesatnight.jpeg",
+    "uploads/treesatnight.jpeg",
+    "uploads/photos/treesatnight-5.jpeg",
+    "uploads/treesatnight-5.jpeg",
+    "uploads/photos/treesatnight-4.jpeg",
+    "uploads/treesatnight-4.jpeg",
+    "_photographs/trees-at-night.md",
+    "_photographs/untitled.md",
+    "daily/26-11-2026.md",
+    "daily/24-11-2026.md",
+    "daily/25-11-2026.md",
+    "uploads/private/IMG_5414.jpeg",
     "_articles/my-work-at-art-expo-bruxelles.md",
     "daily/23-11-2026.md",
     "daily/22-11-2026.md",
     "daily/21-11-2026.md",
-    "_site/uploads/IMG_5383.jpeg",
-    "uploads/IMG_5383.jpeg",
     "_site/articles/my-work-at-art-expo-bruxelles/index.html",
     "_site/articles/my-work-at-art-expo-bruxelles",
-    "_site/uploads/IMG_0302.jpeg",
-    "uploads/IMG_0302.jpeg",
-    "_site/uploads/IMG_0303.jpeg",
-    "uploads/IMG_0303.jpeg",
-    "_site/uploads/IMG_0304.jpeg",
-    "uploads/IMG_0304.jpeg",
-    "_site/uploads/IMG_0305.jpeg",
-    "uploads/IMG_0305.jpeg",
     "_articles/untitled.md",
     "_site/uploads/private",
     "_site/daily/22-11-2026/index.html",
@@ -241,7 +246,6 @@
     "_site/photographs/five-photos-from-a-forest-walk",
     "_photographs/five-photos-from-a-forest-walk.md",
     "_photographs/five-photos-from-a-woods-walk.md",
-    "_photographs/untitled.md",
     "_site/daily/21-11-2026/index.html",
     "_site/daily/21-11-2026",
     "_site/daily/21-11-2026.md",
@@ -258,10 +262,6 @@
     "_site/daily/27-04-2024.md",
     "_site/daily/26-04-2024.md",
     "_site/daily/25-04-2024.md",
-    "_site/daily/25-02-2023.md",
-    "_site/daily/23-02-2023.md",
-    "_site/daily/22-02-2023.md",
-    "_site/daily/21-02-2023.md",
     "newsletters/November 2025.canvas",
     "newsletters/Untitled 1.canvas",
     "docs/private/Teaching_Hold/Multiplatform Publishing/Assignment1.canvas",
